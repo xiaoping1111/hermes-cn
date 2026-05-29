@@ -100,81 +100,38 @@ Hermes 有两种入口：用 `hermes` 启动终端 UI，或运行网关从 Teleg
 | [技能系统](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills) | 过程记忆、技能中心、创建技能 |
 | [记忆](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory) | 持久记忆、用户画像、最佳实践 |
 | [MCP 集成](https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp) | 连接任意 MCP 服务器扩展能力 |
-| [定时调度](https://hermes-agent.nousresearch.com/docs/user-guide/features/cron) | 定时任务与平台投递 |
-| [上下文文件](https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files) | 影响每次对话的项目上下文 |
-| [架构](https://hermes-agent.nousresearch.com/docs/developer-guide/architecture) | 项目结构、代理循环、关键类 |
-| [贡献](https://hermes-agent.nousresearch.com/docs/developer-guide/contributing) | 开发设置、PR 流程、代码风格 |
-| [CLI 参考](https://hermes-agent.nousresearch.com/docs/reference/cli-commands) | 所有命令和标志 |
-| [环境变量](https://hermes-agent.nousresearch.com/docs/reference/environment-variables) | 完整环境变量参考 |
 
 ---
 
-## 从 OpenClaw 迁移
+## 源码阅读指南
 
-如果你来自 OpenClaw，Hermes 可以自动导入你的设置、记忆、技能和 API 密钥。
+为了帮助开发者快速掌握 Hermes 的架构与实现，建议按照以下**“从外到内、从调度到执行”**的逻辑顺序阅读源码。我们在核心文件中增加了详细的中文注释（包含【产品经理理解要点】和【核心工作流程】）。
 
-**首次安装时：** 安装向导（`hermes setup`）会自动检测 `~/.openclaw` 并在配置开始前提供迁移选项。
+### 1. 入口与外壳 (The Entry Point)
+了解用户是如何启动并与 AI 代理交互的。
+- [cli.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/cli.py): 交互式终端界面的总入口，负责处理命令、状态显示和用户交互。
 
-**安装后任意时间：**
+### 2. 核心大脑 (The Orchestrator)
+理解 AI 代理的核心类及其生命周期管理。
+- [run_agent.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/run_agent.py): 定义了核心类 `AIAgent`。这是整个系统的“心脏”，负责协调模型、工具、记忆和上下文。
+- [agent/agent_init.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/agent/agent_init.py): 详细定义了代理启动时的配置参数（模型、Token 限制、重试机制等）。
 
-```bash
-hermes claw migrate              # 交互式迁移（完整预设）
-hermes claw migrate --dry-run    # 预览将要迁移的内容
-hermes claw migrate --preset user-data   # 仅迁移用户数据，不含密钥
-hermes claw migrate --overwrite  # 覆盖已有冲突
-```
+### 3. 运行逻辑 (The Execution Loop)
+深入研究 AI 是如何“思考”并“行动”的。
+- [agent/conversation_loop.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/agent/conversation_loop.py): 实现了“用户提问 -> 模型生成 -> 工具执行 -> 结果反馈”的核心循环。
 
-导入内容：
-- **SOUL.md** — 人格文件
-- **记忆** — MEMORY.md 和 USER.md 条目
-- **技能** — 用户创建的技能 → `~/.hermes/skills/openclaw-imports/`
-- **命令白名单** — 审批模式
-- **消息设置** — 平台配置、允许用户、工作目录
-- **API 密钥** — 白名单中的密钥（Telegram、OpenRouter、OpenAI、Anthropic、ElevenLabs）
-- **TTS 资产** — 工作区音频文件
-- **工作区指令** — AGENTS.md（使用 `--workspace-target`）
+### 4. 工具系统 (The Tooling System)
+了解 AI 如何扩展自己的能力，操作外部世界。
+- [model_tools.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/model_tools.py): 工具分发层，将模型生成的 JSON 指令转换为真实的 Python 函数调用。
+- [toolsets.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/toolsets.py): 工具集的管理与分组。
 
-使用 `hermes claw migrate --help` 查看所有选项，或使用 `openclaw-migration` 技能进行交互式代理引导迁移（含干运行预览）。
+### 5. 上下文与智能 (Context & Intelligence)
+理解长对话如何不丢失记忆，以及 Prompt 是如何生成的。
+- [agent/prompt_builder.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/agent/prompt_builder.py): 动态组装发送给模型的 System Prompt。
+- [agent/context_engine.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/agent/context_engine.py): 上下文管理，负责在 Token 快满时执行压缩总结。
+- [agent/memory_manager.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/agent/memory_manager.py): 负责从数据库加载用户偏好、项目规则和过往经验。
 
----
-
-## 贡献
-
-欢迎贡献！请参阅 [贡献指南](https://hermes-agent.nousresearch.com/docs/developer-guide/contributing) 了解开发设置、代码风格和 PR 流程。
-
-贡献者快速开始——克隆并使用 `setup-hermes.sh`：
-
-```bash
-git clone https://github.com/NousResearch/hermes-agent.git
-cd hermes-agent
-./setup-hermes.sh     # 安装 uv、创建 venv、安装 .[all]、创建符号链接 ~/.local/bin/hermes
-./hermes              # 自动检测 venv，无需先 source
-```
-
-手动安装（等效于上述命令）：
-
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-uv venv venv --python 3.11
-source venv/bin/activate
-uv pip install -e ".[all,dev]"
-python -m pytest tests/ -q
-```
-
----
-
-## 社区
-
-- 💬 [Discord](https://discord.gg/NousResearch)
-- 📚 [技能中心](https://agentskills.io)
-- 🐛 [问题反馈](https://github.com/NousResearch/hermes-agent/issues)
-- 💡 [讨论区](https://github.com/NousResearch/hermes-agent/discussions)
-- 🔌 [HermesClaw](https://github.com/AaronWong1999/hermesclaw) — 社区微信桥接：在同一微信账号上运行 Hermes Agent 和 OpenClaw。
-
----
-
-## 许可证
-
-MIT — 详见 [LICENSE](LICENSE)。
-
-由 [Nous Research](https://nousresearch.com) 构建。
+### 6. 系统支撑 (System Support)
+- [agent/error_classifier.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/agent/error_classifier.py): 负责 API 错误分类与故障切换。
+- [agent/display.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/agent/display.py): 终端 UI 显示组件（如 Spinner 和状态栏）。
+- [tools/terminal_tool.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/tools/terminal_tool.py): 核心工具实现示例，展示 AI 如何执行本地命令。
