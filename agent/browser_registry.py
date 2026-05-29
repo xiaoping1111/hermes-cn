@@ -1,6 +1,15 @@
-"""
+"""浏览器注册表 — 管理可用的云端浏览器服务
+
+【产品经理理解要点】
+管理所有已注册的云端浏览器提供商，决定使用哪一个：
+  - 用户可通过 config.yaml 指定 provider
+  - 未指定时按优先级自动选择（browser-use → browserbase）
+  - 新的浏览器服务可通过插件注册
+
+─────────────────────────────────────────────────────────────────
+
 Browser Provider Registry
-=========================
+========================
 
 Central map of registered cloud browser providers. Populated by plugins at
 import-time via :meth:`PluginContext.register_browser_provider`; consumed by

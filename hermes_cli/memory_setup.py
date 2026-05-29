@@ -1,4 +1,13 @@
-"""hermes memory setup|status — configure memory provider plugins.
+"""记忆服务配置命令
+
+【产品经理理解要点】
+实现 `hermes memory setup/status` 命令，配置 AI 的长期记忆存储后端（如 Honcho 等）。
+- 核心职责：自动检测已安装的记忆供应商插件，通过交互式 UI 选择供应商并配置连接参数
+- 关键概念：记忆供应商=提供 AI 长期记忆存储的外部服务、插件系统自动发现、curses 交互选择
+- 系统定位：AI 记忆能力的配置入口
+
+─────────────────────────────────────────────────────────────────
+hermes memory setup|status — configure memory provider plugins.
 
 Auto-detects installed memory providers via the plugin system.
 Interactive curses-based UI for provider selection, then walks through

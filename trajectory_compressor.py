@@ -1,5 +1,19 @@
 #!/usr/bin/env python3
 """
+轨迹压缩器 (Trajectory Compressor)
+
+【产品经理理解要点】
+这是批量运行器的配套工具——AI 代理执行任务后产生的对话轨迹可能非常长，
+此工具将过长的轨迹压缩到目标 token 预算内，同时保留训练信号质量。
+
+压缩策略：
+  1. 保护开头（系统提示、用户问题、首次回答、首次工具调用）
+  2. 保护结尾（最终动作和结论）
+  3. 只压缩中间部分，用一段摘要替代
+  4. 摘要由另一个 AI 模型生成
+
+使用场景：模型研究团队优化训练数据，非日常使用
+─────────────────────────────────────────────────────────────────
 Trajectory Compressor
 
 Post-processes completed agent trajectories to compress them within a target

@@ -1,4 +1,14 @@
 from __future__ import annotations
+"""Spotifyclient测试
+
+【产品经理理解要点】
+验证工具系统模块中spotify client retries once after 401等11个场景的正确性
+- spotify client retries once after 401的正确性验证
+- normalize spotify uri accepts urls的正确性验证
+- spotify client formats friendly api errors的正确性验证
+- 另有8个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性"""
+
 
 import json
 

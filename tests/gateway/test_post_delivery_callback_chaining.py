@@ -1,4 +1,13 @@
-"""Tests for ``BasePlatformAdapter.register_post_delivery_callback`` chaining.
+"""消息网关测试 - post·delivery·callback·chaining
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for ``BasePlatformAdapter.register_post_delivery_callback`` chaining
+- 核心测试场景: single callback fires、two callbacks chain in order、three callbacks chain in order 等共9个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for ``BasePlatformAdapter.register_post_delivery_callback`` chaining.
 
 When two features want to run after the final response lands on the same
 session (e.g. background-review release + temporary-progress cleanup), the

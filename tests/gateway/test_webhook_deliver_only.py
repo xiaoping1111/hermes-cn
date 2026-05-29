@@ -1,4 +1,13 @@
-"""Tests for the webhook adapter's ``deliver_only`` route mode.
+"""消息网关测试 - Webhook·deliver·only
+
+【产品经理理解要点】
+验证消息网关的Webhook功能
+- 验证的功能: Tests for the webhook adapter's ``deliver_only`` route mode
+- 核心测试场景: post delivers directly without agent、template rendering works、thread id passed through 等共14个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the webhook adapter's ``deliver_only`` route mode.
 
 ``deliver_only`` lets external services (Supabase webhooks, monitoring
 alerts, background jobs, other agents) push plain-text notifications to

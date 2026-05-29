@@ -1,4 +1,7 @@
-"""NovitaAI provider profile."""
+"""【产品经理理解要点】
+NovitaAI模型提供商——接入NovitaAI的GPU云推理服务，提供开源模型的API调用能力。
+─────────────────────────────────────────────────────────────────
+NovitaAI provider profile."""
 
 from providers import register_provider
 from providers.base import ProviderProfile

@@ -1,4 +1,13 @@
-"""Tests for Telegram topic/thread routing fallbacks.
+"""消息网关测试 - Telegram平台·话题管理·降级策略
+
+【产品经理理解要点】
+验证消息网关的Telegram平台话题管理降级策略功能
+- 验证的功能: Tests for Telegram topic/thread routing fallbacks
+- 核心测试场景: non forum group reply thread id does not fork session key、forum group topic message preserves thread session key、forum general topic without message thread id keeps thread context 等共37个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Telegram topic/thread routing fallbacks.
 
 Supergroup forum topics route with ``message_thread_id``. Hermes-created
 private DM topic lanes are different: live Telegram testing showed they only

@@ -1,4 +1,13 @@
-"""Provider/model inventory context — shared substrate for the dashboard
+"""供应商/模型库存上下文
+
+【产品经理理解要点】
+为仪表盘、TUI 和交互式选择器提供统一的供应商/模型列表数据源，消除三处重复代码。
+- 核心职责：合并已认证供应商列表与标准供应商目录，输出带认证状态/模型/警告的统一数据结构
+- 关键概念：已认证供应商=已配置 API Key 的供应商、标准供应商目录=系统预定义的供应商列表、自定义供应商
+- 系统定位：模型选择界面的数据准备层
+
+─────────────────────────────────────────────────────────────────
+Provider/model inventory context — shared substrate for the dashboard
 ``/api/model/options``, the TUI ``model.options``/``model.save_key``
 JSON-RPC handlers, and the interactive picker.
 

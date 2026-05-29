@@ -1,4 +1,14 @@
-"""
+"""共享容器任务ID测试
+
+【产品经理理解要点】
+验证工具系统模块中none task id maps to default等9个场景的正确性
+- none task id maps to default的正确性验证
+- empty task id maps to default的正确性验证
+- literal default stays default的正确性验证
+- 另有6个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
 Regression tests for the shared-container task_id mapping.
 
 The top-level agent and all delegate_task subagents share a single
@@ -12,8 +22,7 @@ every other task_id collapses back to ``"default"``.
 If you change the collapse logic, update both the helper and these
 tests -- see `hermes-agent-dev` skill, "Why do subagents get their own
 containers?" section, and the Container lifecycle paragraph under
-Docker Backend in ``website/docs/user-guide/configuration.md``.
-"""
+Docker Backend in ``website/docs/user-guide/configuration.md``."""
 
 import pytest
 

@@ -1,4 +1,13 @@
-"""Tests for the load_env() process-level cache.
+"""命令行界面测试 - 环境配置·load·缓存机制
+
+【产品经理理解要点】
+验证命令行界面的环境配置缓存机制功能
+- 验证的功能: Tests for the load_env() process-level cache
+- 核心测试场景: load env caches on repeat calls、load env invalidates on mtime bump、invalidate env cache forces reread 等共6个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the load_env() process-level cache.
 
 The cache exists to keep `hermes tools` → "All Platforms" fast: every
 `get_env_value()` lookup used to re-read and re-sanitise the entire

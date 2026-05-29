@@ -1,12 +1,22 @@
-"""Tests for the OpenClaw→Hermes migration hardening features.
+"""OpenClaw迁移加固测试
+
+【产品经理理解要点】
+验证技能系统模块中redact replaces secret by key name等26个场景的正确性
+- redact replaces secret by key name的正确性验证
+- redact replaces secret by value pattern的正确性验证
+- redact handles github token pattern的正确性验证
+- 另有23个测试场景覆盖
+- 影响技能系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the OpenClaw→Hermes migration hardening features.
 
 Covers the changes in the "claw migrate hardening" PR:
   - secret redaction (engine-level, applied to report JSON)
   - warnings[] / next_steps[] on the report
   - blocked-by-earlier-conflict sequencing for config.yaml mutations
   - --json output mode on the migration script
-  - enum-like constants and ItemResult.sensitive field
-"""
+  - enum-like constants and ItemResult.sensitive field"""
 from __future__ import annotations
 
 import importlib.util

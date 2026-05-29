@@ -1,4 +1,14 @@
-"""Tests for gateway/pairing.py — DM pairing security system."""
+"""消息网关测试 - 配对绑定
+
+【产品经理理解要点】
+验证消息网关的配对绑定功能
+- 验证的功能: Tests for gateway/pairing.py — DM pairing security system
+- 核心测试场景: creates parent dirs、sets file permissions、code format 等共29个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for gateway/pairing.py — DM pairing security system.
+"""
 
 import json
 import os

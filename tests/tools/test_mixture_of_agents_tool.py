@@ -1,3 +1,12 @@
+"""多Agent混合工具测试
+
+【产品经理理解要点】
+验证工具系统模块中moa defaults are well formed、reference model retry warnings avoid exc info until termi...、moa top level error logs single traceback on aggregator f...的正确性
+- moa defaults are well formed的正确性验证
+- reference model retry warnings avoid exc info until...的正确性验证
+- moa top level error logs single traceback on...的正确性验证
+- 影响工具系统的可靠性和功能正确性"""
+
 import importlib
 import json
 from types import SimpleNamespace

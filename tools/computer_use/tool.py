@@ -1,4 +1,14 @@
-"""Entry point for the `computer_use` tool.
+"""电脑操控工具入口 — 动作分发与安全审批
+
+【产品经理理解要点】
+本模块是电脑操控功能的"指挥中心"，负责接收AI的操控指令、进行安全检查、审批确认后执行操作。
+- 核心职责：将AI的操控请求（点击/输入/截图等）分发到底层驱动执行
+- 安全机制：危险操作（如删除、登录快捷键）会被硬性拦截；修改类操作需用户审批确认
+- 返回格式：文字类结果返回JSON字符串，截图类结果返回图文混合内容（含截图+元素索引）
+- 业务价值：让AI能像人一样操作电脑上的任何应用，实现自动化办公和跨应用协作
+
+─────────────────────────────────────────────────────────────────
+Entry point for the `computer_use` tool.
 
 Universal (any-model) macOS desktop control via cua-driver's background
 computer-use primitive. Replaces #4562's Anthropic-native `computer_20251124`

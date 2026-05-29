@@ -1,4 +1,13 @@
-"""Tests for busy-session acknowledgment when user sends messages during active agent runs.
+"""消息网关测试 - busy·会话管理·ack
+
+【产品经理理解要点】
+验证消息网关的会话管理功能
+- 验证的功能: Tests for busy-session acknowledgment when user sends messages during active agent runs
+- 核心测试场景: handle message queue mode queues without interrupt、sends ack when agent running、queue mode suppresses interrupt and updates ack 等共15个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for busy-session acknowledgment when user sends messages during active agent runs.
 
 Verifies that users get an immediate status response instead of total silence
 when the agent is working on a task. See PR fix for the @Lonely__MH report.

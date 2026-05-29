@@ -1,4 +1,13 @@
-"""URL safety checks — blocks requests to private/internal network addresses.
+"""URL 安全检查——阻止对内部/私有网络地址的请求
+
+【产品经理理解要点】
+防止 Agent 被恶意提示词引导去访问内网敏感资源（如云服务器元数据接口 169.254.169.254），是 SSRF 攻击防护的核心。
+- 核心职责：DNS 解析后检查目标 IP 是否为私有地址/云元数据端点，拦截对内网的请求
+- 关键业务概念：SSRF 防护——恶意提示可能让 Agent 访问内网窃取云凭据；云元数据端点始终拦截不可豁免
+- 在系统中的位置：所有发出 HTTP 请求的工具（vision_tools、媒体缓存等）的前置安全关卡
+
+─────────────────────────────────────────────────────────────────
+URL safety checks — blocks requests to private/internal network addresses.
 
 Prevents SSRF (Server-Side Request Forgery) where a malicious prompt or
 skill could trick the agent into fetching internal resources like cloud

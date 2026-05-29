@@ -1,4 +1,13 @@
-"""Regression test: `@folder:` completion must only surface directories and
+"""命令行界面测试 - at·context·completion·消息过滤
+
+【产品经理理解要点】
+验证命令行界面的消息过滤功能
+- 验证的功能: Regression test: `@folder:` completion must only surface directories and
+- 核心测试场景: at folder only yields directories、at file only yields files、at folder preserves prefix on empty match 等共5个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression test: `@folder:` completion must only surface directories and
 `@file:` must only surface regular files.
 
 Reported during TUI v2 blitz testing: typing `@folder:` showed .dockerignore,

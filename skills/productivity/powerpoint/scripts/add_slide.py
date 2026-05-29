@@ -1,4 +1,7 @@
-"""Add a new slide to an unpacked PPTX directory.
+"""【产品经理理解要点】
+PPT幻灯片添加工具——向已解包的PPTX目录添加新幻灯片。支持两种方式：(1) 复制已有幻灯片；(2) 基于版式模板创建新幻灯片。
+─────────────────────────────────────────────────────────────────
+Add a new slide to an unpacked PPTX directory.
 
 Usage: python add_slide.py <unpacked_dir> <source>
 

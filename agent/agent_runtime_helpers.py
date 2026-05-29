@@ -1,6 +1,21 @@
-"""Assorted AIAgent runtime helpers — moved out of run_agent.py for clarity.
+"""Agent 运行时辅助函数集 — 从 run_agent.py 提取的各种运行时功能
 
-Each function takes the parent ``AIAgent`` as its first argument
+【产品经理理解要点】
+这个模块是从主 Agent 循环中提取出来的"工具箱"，包含运行时各种辅助功能：
+  - 修复损坏的工具调用参数（AI 有时会生成无效 JSON）
+  - 修复消息序列（确保消息格式符合 API 要求）
+  - 清除 AI 的内部推理内容（不展示给用户）
+  - 凭据池故障恢复（限流时自动切换 Key）
+  - 创建 OpenAI 客户端（支持各种提供商配置）
+  - Anthropic 提示词缓存策略计算
+
+把这些功能从主循环中抽出来，让核心逻辑更清晰。
+
+─────────────────────────────────────────────────────────────────
+
+Assorted AIAgent runtime helpers — moved out of run_agent.py for clarity.
+
+Each function takes the parent ``AIAgent`` as their first argument
 (``agent``) except for the static helpers (``sanitize_tool_call_arguments``,
 ``drop_thinking_only_and_merge_users``) which are stateless.  AIAgent
 keeps thin forwarders for backward compatibility.

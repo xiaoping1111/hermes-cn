@@ -1,4 +1,14 @@
-"""Tests for file path autocomplete in the CLI completer."""
+"""命令行界面测试 - path·completion
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for file path autocomplete in the CLI completer
+- 核心测试场景: relative path、home path、absolute path 等共26个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for file path autocomplete in the CLI completer.
+"""
 
 import os
 from unittest.mock import MagicMock

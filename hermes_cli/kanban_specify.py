@@ -1,4 +1,13 @@
-"""Kanban triage specifier — flesh out a one-liner into a real spec.
+"""看板任务细化器
+
+【产品经理理解要点】
+将 Triage 阶段的简要任务描述，通过 AI 补充为包含目标、方案、验收标准的详细规格。
+- 核心职责：调用辅助 LLM 将简要标题扩展为结构化描述（标题+正文），然后推动任务从 Triage 进入 Todo
+- 关键概念：任务细化=Triage 粗略想法→Todo 可执行规格、单次调用不重试、宽松 JSON 解析
+- 系统定位：任务从想法变为可执行状态的关键一步
+
+─────────────────────────────────────────────────────────────────
+Kanban triage specifier — flesh out a one-liner into a real spec.
 
 Used by ``hermes kanban specify [task_id | --all]``. Takes a task that
 lives in the Triage column (a rough idea, typically only a title), calls

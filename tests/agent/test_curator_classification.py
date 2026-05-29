@@ -1,4 +1,13 @@
-"""Tests for the curator consolidated-vs-pruned classifier.
+"""策展人分类测试
+
+【产品经理理解要点】
+验证策展人的会话分类逻辑，包括标签和类别分配。
+- 会话分类的标签分配
+- 分类规则的正确应用
+- 影响会话搜索和组织的效率
+
+──────────────────────────────────────────────────────────────
+Tests for the curator consolidated-vs-pruned classifier.
 
 The classifier splits skills that disappeared between the before/after
 snapshots into two buckets:

@@ -1,4 +1,14 @@
-"""Tests for the Kanban DB layer (hermes_cli.kanban_db)."""
+"""命令行界面测试 - 看板数据库
+
+【产品经理理解要点】
+验证命令行界面看板数据库的正确性
+- 验证的功能: Tests for the Kanban DB layer (hermes_cli.kanban_db)
+- 核心测试场景: init db is idempotent、init creates expected tables、connect rejects tls record in sqlite header 等共159个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the Kanban DB layer (hermes_cli.kanban_db).
+"""
 
 from __future__ import annotations
 

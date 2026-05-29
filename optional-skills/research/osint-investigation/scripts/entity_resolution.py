@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Cross-source entity resolution (stdlib-only).
+"""跨来源实体消歧
+
+【产品经理理解要点】
+对两个CSV文件中的名称进行交叉匹配，找出可能指向同一实体的记录对。
+- 核心职责：使用精确匹配、词袋模糊匹配、Jaccard重叠加权三种策略进行实体关联
+- 使用场景：将捐款人与合同承包商进行关联分析
+
+─────────────────────────────────────────────────────────────────
+Cross-source entity resolution (stdlib-only).
 
 Given two CSV files with name columns, find candidate matches using three
 tiers of normalization:

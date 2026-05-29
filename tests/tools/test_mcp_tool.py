@@ -1,7 +1,17 @@
-"""Tests for the MCP (Model Context Protocol) client support.
+"""MCP协议tool测试
 
-All tests use mocks -- no real MCP servers or subprocesses are started.
-"""
+【产品经理理解要点】
+验证工具系统模块中no config returns empty等195个场景的正确性
+- no config returns empty的正确性验证
+- valid config parsed的正确性验证
+- mcp servers not dict returns empty的正确性验证
+- 另有192个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the MCP (Model Context Protocol) client support.
+
+All tests use mocks -- no real MCP servers or subprocesses are started."""
 
 import asyncio
 import json

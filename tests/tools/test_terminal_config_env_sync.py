@@ -1,4 +1,15 @@
-"""Regression tests for terminal config -> env-var bridging.
+"""终端配置环境同步测试
+
+【产品经理理解要点】
+验证工具系统模块中cli and gateway env maps agree等5个场景的正确性
+- cli and gateway env maps agree的正确性验证
+- save config set supports critical bridged keys的正确性验证
+- docker run as host user is bridged everywhere的正确性验证
+- 另有2个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for terminal config -> env-var bridging.
 
 terminal_tool._get_env_config() reads ALL terminal settings from os.environ
 (TERMINAL_*).  config.yaml values therefore have to be bridged into env vars
@@ -20,8 +31,7 @@ This test guards against future drift by extracting all three maps via source
 inspection and asserting they all bridge the same set of writable
 ``terminal.*`` keys.  Source inspection (rather than importing the live
 dicts) keeps the test independent of the user's ~/.hermes/config.yaml and
-mirrors the pattern used in tests/hermes_cli/test_config_drift.py.
-"""
+mirrors the pattern used in tests/hermes_cli/test_config_drift.py."""
 
 import ast
 import inspect

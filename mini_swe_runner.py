@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""
+"""SWE运行器（简化版）
+
+【产品经理理解要点】
+使用Hermes Agent的执行环境（本地、Docker、Modal）运行软件工程任务，输出标准轨迹格式。
+- 核心职责：在隔离环境中执行代码任务，记录完整的执行轨迹
+- 执行环境：本地、Docker容器、Modal云平台三种选择
+- 输出格式：Hermes标准轨迹格式，兼容批处理和压缩流程
+- 使用场景：批量评估Agent在SWE-bench等基准上的表现
+
+─────────────────────────────────────────────────────────────────
 SWE Runner with Hermes Trajectory Format
 
 A runner that uses Hermes-Agent's built-in execution environments

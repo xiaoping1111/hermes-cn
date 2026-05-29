@@ -1,4 +1,14 @@
-"""Tests for hermes_logging — centralized logging setup."""
+"""Hermes日志模块测试
+
+【产品经理理解要点】
+验证集中化日志配置，包括文件轮转、权限控制和格式化。
+- 日志文件的轮转和权限设置
+- 多线程安全的日志初始化
+- 影响问题排查和运维监控
+
+──────────────────────────────────────────────────────────────
+Tests for hermes_logging — centralized logging setup.
+"""
 
 import logging
 import os

@@ -1,4 +1,14 @@
-"""Tests for the ContextEngine ABC and plugin slot."""
+"""上下文引擎测试
+
+【产品经理理解要点】
+验证上下文引擎的初始化、工具注入和记忆管理。
+- 引擎组件的正确加载
+- 记忆工具的注入和管理
+- 影响AI对话上下文的管理能力
+
+──────────────────────────────────────────────────────────────
+Tests for the ContextEngine ABC and plugin slot.
+"""
 
 import json
 import pytest

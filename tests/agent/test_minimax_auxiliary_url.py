@@ -1,4 +1,12 @@
-"""Tests for MiniMax auxiliary client URL normalization.
+"""MiniMax辅助URL测试
+
+【产品经理理解要点】
+验证MiniMax辅助模型的URL构建和配置。
+- 辅助URL的正确拼接
+- 影响MiniMax辅助模型的可用性
+
+──────────────────────────────────────────────────────────────
+Tests for MiniMax auxiliary client URL normalization.
 
 MiniMax and MiniMax-CN set inference_base_url to the /anthropic path.
 The auxiliary client uses the OpenAI SDK, which needs /v1 instead.

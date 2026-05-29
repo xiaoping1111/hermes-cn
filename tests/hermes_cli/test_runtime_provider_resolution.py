@@ -1,3 +1,17 @@
+"""命令行界面测试 - runtime·提供商·resolution
+
+【产品经理理解要点】
+验证命令行界面的提供商功能
+- 验证的功能: 运行时模型提供商解析
+- 核心测试场景: resolve runtime provider uses credential pool、resolve runtime provider anthropic pool respects config base url、resolve runtime provider anthropic explicit override skips pool 等共122个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - runtime·自定义模型提供商·resolution
+
+测试CLI命令处理与配置管理中runtime相关的provider相关的resolution功能
+"""
+
 import pytest
 
 from hermes_cli import runtime_provider as rp

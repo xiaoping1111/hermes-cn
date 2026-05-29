@@ -1,4 +1,15 @@
-"""Tests for the broken-set short-circuit added to handle outer-timeout failures.
+"""LSP服务器故障短路测试
+
+【产品经理理解要点】
+验证当语言服务器超时或崩溃时，系统会标记该服务器为"故障"并跳过后续请求，避免每次编辑都重复等待超时。这是一个关键的容错机制，确保一个坏掉的语言服务器不会拖慢整个编辑流程。
+- 验证故障标记按(服务器ID, 项目根目录)维度隔离，不会误伤其他项目
+- 验证超时后同一项目的后续请求直接跳过，不再重复等待
+- 业务影响：如果这些测试失败，语言服务器故障会导致每次编辑都超时，严重影响响应速度
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for the broken-set short-circuit added to handle outer-timeout failures.
 
 When ``snapshot_baseline`` or ``get_diagnostics_sync`` time out from the
 service layer (because a language server hangs during initialize, or

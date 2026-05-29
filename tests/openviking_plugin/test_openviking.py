@@ -1,4 +1,15 @@
-"""Tests for plugins/memory/openviking/__init__.py — URI normalization and payload handling."""
+"""OpenViking安全插件测试
+
+【产品经理理解要点】
+验证OpenViking安全插件模块中normalize summary uri maps pseudo files to parent directory等9个场景的正确性
+- normalize summary uri maps pseudo files to parent...的正确性验证
+- overview read normalizes uri and unwraps result的正确性验证
+- full read keeps original uri的正确性验证
+- 另有6个测试场景覆盖
+- 影响OpenViking安全插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for plugins/memory/openviking/__init__.py — URI normalization and payload handling."""
 
 import json
 

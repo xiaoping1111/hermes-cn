@@ -1,4 +1,13 @@
-"""Regression guard for #14920: wildcard "*" in Discord channel config lists.
+"""消息网关测试 - Discord平台·allowed·频道管理
+
+【产品经理理解要点】
+验证消息网关的Discord平台频道管理功能
+- 验证的功能: Regression guard for #14920: wildcard "*" in Discord channel config lists
+- 核心测试场景: wildcard allows any channel、wildcard in list allows any channel、exact match allowed 等共15个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression guard for #14920: wildcard "*" in Discord channel config lists.
 
 Setting ``allowed_channels: "*"``, ``free_response_channels: "*"``, or
 ``ignored_channels: "*"`` in config (or their ``DISCORD_*_CHANNELS`` env var

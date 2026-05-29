@@ -1,11 +1,21 @@
-"""Integration tests for Discord voice channel audio flow.
+"""语音通道流程测试
+
+【产品经理理解要点】
+验证系统集成模块中valid encrypted packet buffered等34个场景的正确性
+- valid encrypted packet buffered的正确性验证
+- wrong key packet dropped的正确性验证
+- bot ssrc ignored的正确性验证
+- 另有31个测试场景覆盖
+- 影响系统集成的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Integration tests for Discord voice channel audio flow.
 
 Uses real NaCl encryption and Opus codec (no mocks for crypto/codec).
 Does NOT require a Discord connection — tests the VoiceReceiver
 packet processing pipeline end-to-end.
 
-Requires: PyNaCl>=1.5.0, discord.py[voice] (opus codec)
-"""
+Requires: PyNaCl>=1.5.0, discord.py[voice] (opus codec)"""
 
 import struct
 import time

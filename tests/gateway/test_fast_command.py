@@ -1,4 +1,14 @@
-"""Tests for gateway /fast support and Priority Processing routing."""
+"""消息网关测试 - fast·命令处理
+
+【产品经理理解要点】
+验证消息网关的命令处理功能
+- 验证的功能: Tests for gateway /fast support and Priority Processing routing
+- 核心测试场景: turn route injects priority processing without changing runtime、turn route skips priority processing for unsupported models、handle fast command persists config 等共4个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for gateway /fast support and Priority Processing routing.
+"""
 
 import sys
 import threading

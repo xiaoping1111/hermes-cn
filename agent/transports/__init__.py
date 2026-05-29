@@ -1,4 +1,13 @@
-"""Transport layer types and registry for provider response normalization.
+"""传输层注册中心
+
+【产品经理理解要点】
+统一管理所有AI供应商的格式转换适配器，让系统无需关心底层供应商差异。
+- 维护一个"供应商名称→适配器"的注册表，按需加载对应适配器
+- 新增供应商只需注册适配器，无需改动业务代码，支持渐进式迁移
+- 是Hermes多模型支持能力的核心入口
+
+─────────────────────────────────────────────────────────────────
+Transport layer types and registry for provider response normalization.
 
 Usage:
     from agent.transports import get_transport

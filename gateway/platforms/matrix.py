@@ -1,4 +1,14 @@
-"""Matrix gateway adapter.
+"""Matrix 平台适配器
+
+【产品经理理解要点】
+让 Agent 通过 Matrix（开源去中心化通讯协议）与用户交互：
+  - 支持任何 Matrix 服务器（自建或 matrix.org）
+  - 可选端对端加密（E2EE）
+  - 注重隐私和自主托管
+
+─────────────────────────────────────────────────────────────────
+
+Matrix gateway adapter.
 
 Connects to any Matrix homeserver (self-hosted or matrix.org) via the
 mautrix Python SDK.  Supports optional end-to-end encryption (E2EE)

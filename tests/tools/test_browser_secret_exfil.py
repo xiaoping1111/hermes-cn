@@ -1,4 +1,15 @@
-"""Tests for secret exfiltration prevention in browser and web tools."""
+"""浏览器密钥外泄防护测试
+
+【产品经理理解要点】
+验证工具系统模块中blocks api key in url等10个场景的正确性
+- blocks api key in url的正确性验证
+- blocks openrouter key in url的正确性验证
+- allows normal url的正确性验证
+- 另有7个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for secret exfiltration prevention in browser and web tools."""
 
 import json
 from unittest.mock import patch, MagicMock

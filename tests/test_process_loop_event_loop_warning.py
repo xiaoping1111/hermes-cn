@@ -1,4 +1,13 @@
-"""Tests for the process_loop RuntimeWarning fix -- issue #19285.
+"""事件循环警告修复测试
+
+【产品经理理解要点】
+验证非主线程中不再使用get_event_loop()（3.12+会发RuntimeWarning），改用get_running_loop()。
+- 非主线程调用不产生警告
+- 无事件循环时抛RuntimeError而非警告
+- 影响Python 3.12+下的运行清洁度
+
+──────────────────────────────────────────────────────────────
+Tests for the process_loop RuntimeWarning fix -- issue #19285.
 
 In Python 3.10+, calling asyncio.get_event_loop() from a non-main thread
 that has no current event loop emits a DeprecationWarning (3.10/3.11) or

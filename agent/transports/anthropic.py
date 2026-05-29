@@ -1,4 +1,12 @@
-"""Anthropic Messages API transport.
+"""Anthropic Messages API 传输层 — Claude 模型的通信适配
+
+【产品经理理解要点】
+将 Agent 的请求转换为 Anthropic Claude API 格式的传输层实现。
+委托给 anthropic_adapter.py 中已有的函数，只负责格式转换，不管客户端生命周期。
+
+─────────────────────────────────────────────────────────────────
+
+Anthropic Messages API transport.
 
 Delegates to the existing adapter functions in agent/anthropic_adapter.py.
 This transport owns format conversion and normalization — NOT client lifecycle.

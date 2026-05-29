@@ -1,4 +1,14 @@
-"""Tests for agent.error_classifier — structured API error classification."""
+"""API错误分类测试
+
+【产品经理理解要点】
+验证API错误的分类逻辑，将原始错误映射到结构化的故障转移策略。
+- HTTP状态码到错误类别的映射
+- 402付费错误的特殊处理
+- 影响API调用失败时的自动恢复策略
+
+──────────────────────────────────────────────────────────────
+Tests for agent.error_classifier — structured API error classification.
+"""
 
 import pytest
 from agent.error_classifier import (

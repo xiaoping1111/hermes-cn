@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 """
+Chrome DevTools 协议直通工具
+
+【产品经理理解要点】
+提供"万能浏览器操作"逃生舱，让 Agent 能执行标准工具未覆盖的底层浏览器操作（如处理原生弹窗、iframe、Cookie 等）。
+- 核心职责：暴露 browser_cdp 工具，允许发送任意 CDP 命令到浏览器的 DevTools WebSocket 端点
+- 关键业务概念：专业级操作——面向有 CDP 经验的高级用户，需连接 CDP 端点后才能使用
+- 在系统中的位置：浏览器工具族的补充，仅在 CDP 连接可用时注册到工具列表
+
+─────────────────────────────────────────────────────────────────
 Raw Chrome DevTools Protocol (CDP) passthrough tool.
 
 Exposes a single tool, ``browser_cdp``, that sends arbitrary CDP commands to

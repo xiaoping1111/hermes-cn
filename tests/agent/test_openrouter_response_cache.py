@@ -1,4 +1,13 @@
-"""Tests for OpenRouter response caching header injection."""
+"""OpenRouter响应缓存测试
+
+【产品经理理解要点】
+验证OpenRouter响应缓存的存储、命中和失效逻辑。
+- 相同请求的缓存命中
+- 影响API调用成本和响应速度
+
+──────────────────────────────────────────────────────────────
+Tests for OpenRouter response caching header injection.
+"""
 
 from types import SimpleNamespace
 from unittest.mock import patch

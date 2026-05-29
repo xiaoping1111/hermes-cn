@@ -1,4 +1,13 @@
-"""CLI for the Hermes Kanban board — ``hermes kanban …`` subcommand.
+"""看板命令行界面
+
+【产品经理理解要点】
+实现 `hermes kanban` 子命令，管理看板式任务协作系统——创建/分配/分解任务，多 Profile 协同工作。
+- 核心职责：看板任务的完整生命周期管理——创建、分配、分解、指定、诊断、多工作区支持
+- 关键概念：看板=任务管理面板（Triage→Todo→Ready→In Progress→Done）、Profile=独立 AI 工作者、任务分解=将大任务拆为子任务图
+- 系统定位：多 AI 协同工作的任务调度和管理界面
+
+─────────────────────────────────────────────────────────────────
+CLI for the Hermes Kanban board — ``hermes kanban …`` subcommand.
 
 Exposes the full Kanban command surface documented in the design spec
 (``docs/hermes-kanban-v1-spec.pdf``).  All DB work is delegated to

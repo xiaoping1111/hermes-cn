@@ -1,4 +1,15 @@
-"""Tests for the central tool registry."""
+"""注册表测试
+
+【产品经理理解要点】
+验证工具系统模块中register and dispatch等31个场景的正确性
+- register and dispatch的正确性验证
+- dispatch passes args的正确性验证
+- returns openai format的正确性验证
+- 另有28个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the central tool registry."""
 
 import json
 import threading

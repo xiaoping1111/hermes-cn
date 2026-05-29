@@ -1,4 +1,13 @@
-"""E2E tests for gateway slash commands (Telegram, Discord).
+"""端到端集成测试 - 平台命令分发
+
+【产品经理理解要点】
+验证端到端消息通路平台命令分发的正确性
+- 验证的功能: E2E tests for gateway slash commands (Telegram, Discord)
+- 核心测试场景: help returns command list、status shows session info、new resets session 等共18个场景
+- 业务影响: 平台消息通路可能存在集成缺陷，影响真实用户的消息收发体验
+
+─────────────────────────────────────────────────────────────────
+E2E tests for gateway slash commands (Telegram, Discord).
 
 Each test drives a message through the full async pipeline:
     adapter.handle_message(event)

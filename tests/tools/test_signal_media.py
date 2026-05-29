@@ -1,4 +1,15 @@
-"""Tests for Signal media delivery in send_message_tool.py."""
+"""信号媒体测试
+
+【产品经理理解要点】
+验证工具系统模块中send signal basic text without media等8个场景的正确性
+- send signal basic text without media的正确性验证
+- send signal with attachments的正确性验证
+- send signal with missing media file的正确性验证
+- 另有5个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for Signal media delivery in send_message_tool.py."""
 
 import asyncio
 import sys

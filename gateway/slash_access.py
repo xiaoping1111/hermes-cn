@@ -1,4 +1,15 @@
-"""Per-platform slash command access control.
+"""斜杠命令权限控制 — 控制哪些用户能使用哪些斜杠命令
+
+【产品经理理解要点】
+在允许与网关对话的用户中，进一步控制谁能用哪些斜杠命令：
+  - allow_admin_from：管理员，可以用所有斜杠命令
+  - allow_user_from：普通用户，只能用允许的命令
+
+支持 DM 和群组两种场景分别配置权限。
+
+─────────────────────────────────────────────────────────────────
+
+Per-platform slash command access control.
 
 This module sits beside the existing per-platform allowlist (``allow_from``)
 and adds a second axis: of the users who are *allowed to talk to the

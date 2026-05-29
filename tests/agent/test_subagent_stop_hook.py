@@ -1,4 +1,12 @@
-"""Tests for the subagent_stop hook event.
+"""子代理停止钩子测试
+
+【产品经理理解要点】
+验证子代理停止时的钩子清理逻辑。
+- 子代理停止时资源正确释放
+- 影响子代理的干净终止
+
+──────────────────────────────────────────────────────────────
+Tests for the subagent_stop hook event.
 
 Covers wire-up from tools.delegate_tool.delegate_task:
   * fires once per child in both single-task and batch modes

@@ -1,4 +1,12 @@
-"""Shutdown forensics — capture context when the gateway receives SIGTERM/SIGINT.
+"""关停诊断 — 捕获网关收到终止信号时的上下文信息
+
+【产品经理理解要点】
+当网关异常退出时，这个模块快速记录关停原因和上下文（谁触发了、当时在做什么），
+方便事后排查"网关反复崩溃"的问题。记录过程<10ms，不会阻塞关停流程。
+
+─────────────────────────────────────────────────────────────────
+
+Shutdown forensics — capture context when the gateway receives SIGTERM/SIGINT.
 
 The gateway's ``shutdown_signal_handler`` runs synchronously inside the
 asyncio event loop.  We can't safely block it for long, but we DO want a

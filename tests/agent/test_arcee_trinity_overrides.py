@@ -1,4 +1,13 @@
-"""Tests for Arcee Trinity Large Thinking per-model overrides.
+"""Arcee Trinity配置覆盖测试
+
+【产品经理理解要点】
+验证Arcee Trinity模型的配置覆盖逻辑。
+- Trinity特定参数的正确覆盖
+- 覆盖不影响其他模型
+- 影响Arcee Trinity用户的使用体验
+
+──────────────────────────────────────────────────────────────
+Tests for Arcee Trinity Large Thinking per-model overrides.
 
 Arcee Trinity Large Thinking is a reasoning model that wants:
 - Fixed temperature=0.5 (vs the global default)

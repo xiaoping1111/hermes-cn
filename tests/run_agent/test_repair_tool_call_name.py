@@ -1,4 +1,15 @@
-"""Tests for AIAgent._repair_tool_call — tool-name normalization.
+"""工具调用名称修复测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中lowercase already matches等18个场景的正确性
+- lowercase already matches的正确性验证
+- uppercase simple的正确性验证
+- dash to underscore的正确性验证
+- 另有15个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for AIAgent._repair_tool_call — tool-name normalization.
 
 Regression guard for #14784: Claude-style models sometimes emit
 class-like tool-call names (``TodoTool_tool``, ``Patch_tool``,
@@ -7,8 +18,7 @@ class-like tool-call names (``TodoTool_tool``, ``Patch_tool``,
 snake_case name. The repair routine now normalizes CamelCase,
 strips trailing ``_tool`` / ``-tool`` / ``tool`` suffixes (up to
 twice to handle double-tacked suffixes like ``TodoTool_tool``), and
-falls back to fuzzy match.
-"""
+falls back to fuzzy match."""
 from __future__ import annotations
 
 from types import SimpleNamespace

@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""
+"""【产品经理理解要点】
+Parseltongue输入混淆引擎——包含33种文本混淆技术（3个等级），用于测试LLM安全分类器的鲁棒性。从G0DM0D3项目移植。
+产品理解：这是红队测试（安全评估）工具，用于验证模型安全防护的强度，而非攻击工具。
+─────────────────────────────────────────────────────────────────
 Parseltongue v4 — Input Obfuscation Engine
 Ported from G0DM0D3 (elder-plinius/G0DM0D3) JavaScript to Python.
 

@@ -1,4 +1,13 @@
-"""Self-test for the live-system guard fixture in tests/conftest.py.
+"""系统防护自检测试
+
+【产品经理理解要点】
+验证测试套件中的守护机制能防止测试意外终止线上运行的服务进程。
+- 测试中kill/gc等危险操作被拦截
+- 防护覆盖所有信号发送原语
+- 影响开发者本地环境的安全性
+
+──────────────────────────────────────────────────────────────
+Self-test for the live-system guard fixture in tests/conftest.py.
 
 This file is the canary. If anyone removes a guard or weakens it, these
 tests fail. If anyone adds a NEW kill primitive to the codebase without

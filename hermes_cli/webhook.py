@@ -1,4 +1,12 @@
-"""hermes webhook — manage dynamic webhook subscriptions from the CLI.
+"""Webhook 订阅管理
+
+【产品经理理解要点】
+从 CLI 管理动态 Webhook 订阅，让外部服务通过 HTTP 回调触发 Hermes 动作。
+- 支持 subscribe/list/remove/test 四个操作
+- 订阅持久化到 ~/.hermes/webhook_subscriptions.json，网关热重载无需重启
+
+─────────────────────────────────────────────────────────────────
+hermes webhook — manage dynamic webhook subscriptions from the CLI.
 
 Usage:
     hermes webhook subscribe <name> [options]

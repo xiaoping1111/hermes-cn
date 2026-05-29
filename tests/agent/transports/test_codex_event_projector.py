@@ -1,4 +1,17 @@
-"""Tests for CodexEventProjector — codex item/* events → Hermes messages list.
+"""Codex事件投影器测试
+
+【产品经理理解要点】
+验证Codex的item/*事件到Hermes消息列表的投影转换。投影器将codex原生事件（命令执行、代理消息、文件变更、MCP工具调用、推理等）转换为Hermes的assistant/tool消息格式，同时维护角色交替不变量。
+- 验证流式增量事件不产生消息（仅item/completed才物化）
+- 验证命令执行→(assistant工具调用, tool结果)的双消息投影
+- 验证推理内容附加到后续的assistant消息
+- 验证消息角色严格交替，不会出现两个assistant消息连续
+- 业务影响：如果这些测试失败，对话历史格式错误，导致后续API调用被拒绝
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for CodexEventProjector — codex item/* events → Hermes messages list.
 
 Drives projection against fixture notifications captured from codex 0.130.0
 plus synthetic ones for item types we couldn't auth-test live."""

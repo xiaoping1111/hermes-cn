@@ -1,4 +1,13 @@
 """
+工具配置管理
+
+【产品经理理解要点】
+管理 Hermes Agent 各平台可用的工具集（TTS、网页搜索、图片生成、浏览器自动化等）。
+- `hermes tools` 和 `hermes setup tools` 的入口模块
+- 按平台独立启用/禁用工具集，新启用的工具自动引导配置 API Key
+- 支持 Nous 订阅用户的工具网关自动配置
+
+─────────────────────────────────────────────────────────────────
 Unified tool configuration for Hermes Agent.
 
 `hermes tools` and `hermes setup tools` both enter this module.

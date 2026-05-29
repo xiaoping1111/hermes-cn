@@ -1,4 +1,13 @@
-"""Binary file extensions to skip for text-based operations.
+"""二进制文件扩展名清单
+
+【产品经理理解要点】
+定义哪些文件是二进制格式（图片、视频、压缩包等），不应作为文本处理。
+- 核心职责：提供二进制扩展名集合和快速判断函数，文件操作工具据此决定是否跳过文本读取/对比
+- 关键业务概念：PDF 被排除在外——Agent 可能需要读取 PDF 文本内容，因此不算二进制
+- 在系统中的位置：file_operations、fuzzy_match 等文本处理工具的前置过滤层
+
+─────────────────────────────────────────────────────────────────
+Binary file extensions to skip for text-based operations.
 
 These files can't be meaningfully compared as text and are often large.
 Ported from free-code src/constants/files.ts.

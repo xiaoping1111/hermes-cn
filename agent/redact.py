@@ -1,4 +1,19 @@
-"""Regex-based secret redaction for logs and tool output.
+"""敏感信息脱敏 — 自动隐藏日志和输出中的 API Key 和密码
+
+【产品经理理解要点】
+Agent 在运行过程中会记录日志和输出信息，但其中可能包含敏感数据
+（API Key、密码、OAuth 令牌等）。这个模块负责自动将这些敏感信息替换为
+掩码形式，防止泄露：
+
+  - API Key：只保留前6位和后4位，中间替换为 ***
+  - 短令牌（<18字符）：完全替换为 ***
+  - URL 中的敏感参数：自动识别 access_token、api_key 等参数并脱敏
+
+安全底线：哪怕日志文件被泄露，攻击者也无法从中获取有效凭证。
+
+─────────────────────────────────────────────────────────────────
+
+Regex-based secret redaction for logs and tool output.
 
 Applies pattern matching to mask API keys, tokens, and credentials
 before they reach log files, verbose output, or gateway logs.

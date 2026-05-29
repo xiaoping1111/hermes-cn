@@ -1,4 +1,15 @@
-"""Tests for MCP dynamic tool discovery (notifications/tools/list_changed)."""
+"""MCP协议动态发现测试
+
+【产品经理理解要点】
+验证工具系统模块中exposes live server aliases等10个场景的正确性
+- exposes live server aliases的正确性验证
+- nuke and repave的正确性验证
+- dispatches tool list changed的正确性验证
+- 另有7个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for MCP dynamic tool discovery (notifications/tools/list_changed)."""
 
 import asyncio
 from types import SimpleNamespace

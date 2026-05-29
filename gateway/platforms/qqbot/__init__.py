@@ -1,11 +1,16 @@
-"""
+"""QQ 机器人平台包 — QQ 频道/群聊接入
+
+【产品经理理解要点】
+让 Agent 通过 QQ 机器人与用户交互，支持 QQ 频道和群聊。
+从 adapter.py 重新导出主要符号，保持原有导入路径兼容。
+
+─────────────────────────────────────────────────────────────────
+
 QQBot platform package.
 
-Re-exports the main adapter symbols from ``adapter.py`` (the original
-``qqbot.py``) so that **all existing import paths remain unchanged**::
-
-    from gateway.platforms.qqbot import QQAdapter          # works
-    from gateway.platforms.qqbot import check_qq_requirements  # works
+Re-exports the main adapter symbols from ``adapter.py`` so that
+all existing import paths remain unchanged.
+"""
 
 New modules:
     - ``constants`` — shared constants (API URLs, timeouts, message types)

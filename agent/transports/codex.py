@@ -1,4 +1,12 @@
-"""OpenAI Responses API (Codex) transport.
+"""OpenAI Responses API (Codex) 传输层 — Codex 模式的通信适配
+
+【产品经理理解要点】
+将 Agent 的请求转换为 OpenAI Responses API 格式的传输层实现，
+用于 OpenAI Codex 模式。委托给 codex_responses_adapter.py。
+
+─────────────────────────────────────────────────────────────────
+
+OpenAI Responses API (Codex) transport.
 
 Delegates to the existing adapter functions in agent/codex_responses_adapter.py.
 This transport owns format conversion and normalization — NOT client lifecycle,

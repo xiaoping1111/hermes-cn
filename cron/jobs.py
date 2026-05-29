@@ -1,4 +1,12 @@
-"""
+"""定时任务存储 — 管理定时任务的持久化和查询
+
+【产品经理理解要点】
+定时任务的元数据存储在 ~/.hermes/cron/jobs.json，
+执行输出保存在 ~/.hermes/cron/output/{任务ID}/{时间戳}.md。
+支持创建、修改、删除、查询定时任务。
+
+─────────────────────────────────────────────────────────────────
+
 Cron job storage and management.
 
 Jobs are stored in ~/.hermes/cron/jobs.json

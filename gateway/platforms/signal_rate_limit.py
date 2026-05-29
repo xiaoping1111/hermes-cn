@@ -1,4 +1,11 @@
-"""
+"""Signal 附件限流器 — 控制发送媒体文件的频率
+
+【产品经理理解要点】
+Signal 对发送附件有频率限制，超过限制会被拒绝。这个模块用
+令牌桶算法模拟限流规则，确保发送图片/文件时不会触发频率限制。
+
+─────────────────────────────────────────────────────────────────
+
 Signal attachment rate-limit scheduler.
 
 Process-wide token-bucket simulator that mirrors the per-account

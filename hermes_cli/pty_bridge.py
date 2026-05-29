@@ -1,4 +1,13 @@
-"""PTY bridge for `hermes dashboard` chat tab.
+"""PTY 桥接 —— 仪表盘聊天标签页的终端模拟后端
+
+【产品经理理解要点】
+为 Web 仪表盘的聊天功能提供伪终端桥接，将子进程的 ANSI 输出流式传输到浏览器端 xterm.js。
+- 仅支持 POSIX 系统（macOS/Linux），Windows 需通过 WSL 使用
+- 浏览器端获得与 CLI 完全一致的 TUI 体验（斜杠命令、模型选择器等）
+- 支持终端缩放同步和子进程生命周期管理
+
+─────────────────────────────────────────────────────────────────
+PTY bridge for `hermes dashboard` chat tab.
 
 Wraps a child process behind a pseudo-terminal so its ANSI output can be
 streamed to a browser-side terminal emulator (xterm.js) and typed

@@ -1,4 +1,13 @@
-"""Regression tests for the _run_async() event-loop lifecycle.
+"""异步事件循环生命周期测试
+
+【产品经理理解要点】
+验证_run_async()使用持久事件循环替代asyncio.run()，防止'Event loop is closed'错误。
+- 持久事件循环不被asyncio.run()关闭
+- 缓存的异步客户端绑定到正确循环
+- 影响视觉分析等首次异步调用的稳定性
+
+──────────────────────────────────────────────────────────────
+Regression tests for the _run_async() event-loop lifecycle.
 
 These tests verify the fix for GitHub issue #2104:
   "Event loop is closed" after vision_analyze used as first call in session.

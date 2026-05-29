@@ -1,4 +1,12 @@
-"""Abstract base for proxy upstream adapters.
+"""代理上游适配器抽象基类
+
+【产品经理理解要点】
+定义所有代理上游适配器必须实现的接口：定位认证状态、刷新凭证、报告上游 URL、声明允许的请求路径。
+- 代理服务器本身不关心具体供应商，仅依赖此抽象接口
+- 新增供应商只需实现此基类并注册到 adapters/__init__.py
+
+─────────────────────────────────────────────────────────────────
+Abstract base for proxy upstream adapters.
 
 An :class:`UpstreamAdapter` represents one OAuth-authenticated provider the
 local proxy can forward requests to. The adapter is responsible for:

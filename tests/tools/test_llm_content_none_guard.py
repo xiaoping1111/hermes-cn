@@ -1,4 +1,15 @@
-"""Tests for None guard on response.choices[0].message.content.strip().
+"""LLM空内容防护测试
+
+【产品经理理解要点】
+验证工具系统模块中none content raises before fix等28个场景的正确性
+- none content raises before fix的正确性验证
+- none content safe with or guard的正确性验证
+- normal content unaffected的正确性验证
+- 另有25个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for None guard on response.choices[0].message.content.strip().
 
 OpenAI-compatible APIs return ``message.content = None`` when the model
 responds with tool calls only or reasoning-only output (e.g. DeepSeek-R1,
@@ -7,8 +18,7 @@ Qwen-QwQ via OpenRouter with ``reasoning.enabled = True``).  Calling
 
 These tests verify that every call site handles ``content is None`` safely,
 and that ``extract_content_or_reasoning()`` falls back to structured
-reasoning fields when content is empty.
-"""
+reasoning fields when content is empty."""
 
 import asyncio
 import types

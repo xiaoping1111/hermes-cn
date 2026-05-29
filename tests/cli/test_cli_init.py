@@ -1,5 +1,14 @@
-"""Tests for HermesCLI initialization -- catches configuration bugs
-that only manifest at runtime (not in mocked unit tests)."""
+"""CLI初始化测试
+
+【产品经理理解要点】
+验证CLI启动时的初始化流程。
+- 配置加载和验证
+- 影响CLI启动的可靠性
+
+──────────────────────────────────────────────────────────────
+Tests for HermesCLI initialization -- catches configuration bugs
+that only manifest at runtime (not in mocked unit tests).
+"""
 
 import os
 import sys

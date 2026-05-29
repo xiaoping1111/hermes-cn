@@ -1,4 +1,15 @@
-"""Tests for MCP stability fixes — event loop handler, PID tracking, shutdown robustness."""
+"""MCP稳定性测试
+
+【产品经理理解要点】
+验证工具系统模块中suppresses event loop closed等16个场景的正确性
+- suppresses event loop closed的正确性验证
+- forwards other runtime errors的正确性验证
+- forwards non runtime errors的正确性验证
+- 另有13个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for MCP stability fixes — event loop handler, PID tracking, shutdown robustness."""
 
 import asyncio
 import os

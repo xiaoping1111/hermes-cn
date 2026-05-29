@@ -1,4 +1,18 @@
-"""Codex app-server JSON-RPC client.
+"""Codex App Server 客户端 — 通过 Codex 子进程驱动 AI 对话
+
+【产品经理理解要点】
+当使用 Codex App Server 模式时，Agent 不直接调用 OpenAI API，
+而是启动一个 Codex 子进程，通过 JSON-RPC 协议与之通信：
+  1. 启动子进程并握手（initialize）
+  2. 创建对话线程（thread/start）
+  3. 发送用户消息（turn/start）
+  4. 接收流式事件（item/*），直到对话轮次完成（turn/completed）
+
+这是可选模式，需要配置 model.openai_runtime = "codex_app_server" 才会启用。
+
+─────────────────────────────────────────────────────────────────
+
+Codex app-server JSON-RPC client.
 
 Speaks the protocol documented in codex-rs/app-server/README.md (codex 0.125+).
 Transport is newline-delimited JSON-RPC 2.0 over stdio: spawn `codex app-server`,

@@ -1,4 +1,13 @@
-"""Periodic process memory usage logging for the gateway.
+"""内存监控 — 定期记录网关进程的内存使用情况
+
+【产品经理理解要点】
+网关是长时间运行的进程，可能因缓存积累导致内存泄漏。
+这个模块每隔几分钟记录一次进程内存占用，帮助发现缓慢的内存泄漏问题。
+日志格式：[MEMORY] RSS=450MB ...
+
+─────────────────────────────────────────────────────────────────
+
+Periodic process memory usage logging for the gateway.
 
 Ported from cline/cline#10343 (src/standalone/memory-monitor.ts).
 

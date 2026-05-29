@@ -1,5 +1,11 @@
-"""OpenAI image generation backend.
+"""OpenAI图像生成后端
 
+【产品经理理解要点】
+提供基于OpenAI gpt-image-2模型的AI图像生成，支持三个质量层级：low(快速)、medium(默认)、high(最高品质)。
+- 核心功能：文本生成图像，三档质量自动调节
+- 模型：gpt-image-2，不同层级通过参数控制而非不同模型
+
+─────────────────────────────────────────────────────────────────
 Exposes OpenAI's ``gpt-image-2`` model at three quality tiers as an
 :class:`ImageGenProvider` implementation. The tiers are implemented as
 three virtual model IDs so the ``hermes tools`` model picker and the

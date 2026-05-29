@@ -1,4 +1,13 @@
-"""Shared fixtures for gateway tests.
+"""消息网关测试共享配置
+
+【产品经理理解要点】
+为消息网关测试提供共享fixture和模拟配置
+- 验证的功能: Shared fixtures for gateway tests
+- 核心测试场景: 消息网关基础功能验证
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Shared fixtures for gateway tests.
 
 The ``_ensure_telegram_mock`` helper guarantees that a minimal mock of
 the ``telegram`` package is registered in :data:`sys.modules` **before**

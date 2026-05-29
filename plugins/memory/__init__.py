@@ -1,5 +1,13 @@
-"""Memory provider plugin discovery.
+"""记忆供应商插件发现与注册
 
+【产品经理理解要点】
+管理所有记忆供应商插件的发现、注册和调度。记忆系统让AI能够跨会话记住用户偏好和对话历史。
+- 核心职责：扫描并加载内置和用户自定义的记忆供应商插件
+- 内置供应商：supermemory、mem0、honcho、holographic、byterover、hindsight等
+- 扩展机制：用户可在$HERMES_HOME/plugins/下放置自定义记忆供应商
+- 与系统关系：记忆供应商为AI代理提供长期记忆能力，是智能对话的关键基础设施
+
+─────────────────────────────────────────────────────────────────
 Scans two directories for memory provider plugins:
 
 1. Bundled providers: ``plugins/memory/<name>/`` (shipped with hermes-agent)

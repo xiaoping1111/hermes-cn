@@ -1,4 +1,14 @@
-"""
+"""语音合成命令提供者测试
+
+【产品经理理解要点】
+验证工具系统模块中builtin names are never command providers等52个场景的正确性
+- builtin names are never command providers的正确性验证
+- missing provider returns none的正确性验证
+- user declared command provider resolves的正确性验证
+- 另有49个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
 Tests for custom command-type TTS providers.
 
 These tests cover the ``tts.providers.<name>`` registry: built-in
@@ -9,8 +19,7 @@ and max_text_length lookup.
 Nothing here talks to a real TTS engine. The shell command itself is
 portable: we write bytes to ``{output_path}`` using ``python -c`` so
 the tests run identically on Linux, macOS, and (with minor quoting
-differences) Windows.
-"""
+differences) Windows."""
 
 import json
 import os

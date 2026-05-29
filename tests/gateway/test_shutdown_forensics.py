@@ -1,4 +1,14 @@
-"""Tests for gateway.shutdown_forensics — fast snapshot + async diag spawn."""
+"""消息网关测试 - 优雅关闭·forensics
+
+【产品经理理解要点】
+验证消息网关的优雅关闭功能
+- 验证的功能: Tests for gateway.shutdown_forensics — fast snapshot + async diag spawn
+- 核心测试场景: known signals resolve to names、unknown int returns signal num token、none returns unknown 等共30个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for gateway.shutdown_forensics — fast snapshot + async diag spawn.
+"""
 
 from __future__ import annotations
 

@@ -1,4 +1,15 @@
-"""Regression guard for #14782: json.JSONDecodeError must not be classified
+"""JSON解码错误重试测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中json decode error is not local validation等5个场景的正确性
+- json decode error is not local validation的正确性验证
+- unicode encode error is not local validation的正确性验证
+- bare value error is local validation的正确性验证
+- 另有2个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression guard for #14782: json.JSONDecodeError must not be classified
 as a local validation error by the main agent loop.
 
 `json.JSONDecodeError` inherits from `ValueError`. The agent loop's
@@ -14,8 +25,7 @@ any future refactor of that predicate must preserve the invariant:
     JSONDecodeError     → NOT local validation error (retryable)
     UnicodeEncodeError  → NOT local validation error (surrogate path)
     bare ValueError     → IS local validation error (programming bug)
-    bare TypeError      → IS local validation error (programming bug)
-"""
+    bare TypeError      → IS local validation error (programming bug)"""
 from __future__ import annotations
 
 import json

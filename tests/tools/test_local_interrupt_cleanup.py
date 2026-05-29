@@ -1,4 +1,13 @@
-"""Regression tests for _wait_for_process subprocess cleanup on exception exit.
+"""本地中断清理测试
+
+【产品经理理解要点】
+验证工具系统模块中kill process uses cached pgid if wrapper already exited、wait for process kills subprocess on keyboardinterrupt的正确性
+- kill process uses cached pgid if wrapper already...的正确性验证
+- wait for process kills subprocess on keyboardinterrupt的正确性验证
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for _wait_for_process subprocess cleanup on exception exit.
 
 When the poll loop exits via KeyboardInterrupt or SystemExit (SIGTERM via
 cli.py signal handler, SIGINT on the main thread in non-interactive -q mode,
@@ -9,8 +18,7 @@ os.setsid leaves an orphan with PPID=1.
 The live repro that motivated this: hermes chat -q ... 'sleep 300', SIGTERM
 to the python process, sleep 300 survived with PPID=1 for the full 300 s
 because _wait_for_process never got to call _kill_process before python
-died.  See commit message for full context.
-"""
+died.  See commit message for full context."""
 import os
 import signal
 import subprocess

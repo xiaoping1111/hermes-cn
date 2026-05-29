@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Search Wikipedia + Wikidata for an entity (person, company, place, concept).
+"""Wikipedia/Wikidata实体查询
+
+【产品经理理解要点】
+搜索维基百科和维基数据，获取人物、公司、地点等实体的叙述性简介和结构化事实。
+- 核心职责：通过OpenSearch和SPARQL获取实体的传记信息和结构化数据
+- 使用场景：OSINT调查中快速了解某个实体的基本背景
+
+─────────────────────────────────────────────────────────────────
+Search Wikipedia + Wikidata for an entity (person, company, place, concept).
 
 Two free APIs:
   - Wikipedia OpenSearch + REST summary endpoint for narrative bio

@@ -1,6 +1,9 @@
-"""Firecrawl cloud browser provider — plugin form.
+"""Firecrawl云浏览器供应商
 
-Subclasses :class:`agent.browser_provider.BrowserProvider` (the plugin-facing
+【产品经理理解要点】
+Firecrawl的浏览器自动化供应商实现，提供远程云端浏览器实例，可用于网页操作自动化。
+- 核心能力：创建/销毁远程浏览器实例、页面导航与截图
+- 与传统浏览器区别：无需本地浏览器，在Firecrawl云端运行 :class:`agent.browser_provider.BrowserProvider` (the plugin-facing
 ABC introduced in PR #25214). The legacy in-tree module
 ``tools.browser_providers.firecrawl`` was removed in the same PR; this file
 is now the canonical implementation.

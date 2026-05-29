@@ -1,4 +1,15 @@
-"""Tests for probe_mcp_server_tools() in tools.mcp_tool."""
+"""MCP探测测试
+
+【产品经理理解要点】
+验证工具系统模块中returns empty when mcp not available等8个场景的正确性
+- returns empty when mcp not available的正确性验证
+- returns empty when no config的正确性验证
+- returns empty when all servers disabled的正确性验证
+- 另有5个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for probe_mcp_server_tools() in tools.mcp_tool."""
 
 import asyncio
 from types import SimpleNamespace

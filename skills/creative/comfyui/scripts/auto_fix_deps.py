@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""
+"""【产品经理理解要点】
+ComfyUI依赖自动修复——运行check_deps检测缺失依赖后，自动安装缺失的自定义节点和模型。本地服务器直接安装，云端仅提示所需内容。
+─────────────────────────────────────────────────────────────────
 auto_fix_deps.py — Run check_deps.py, then attempt to install whatever is missing.
 
 For local servers:

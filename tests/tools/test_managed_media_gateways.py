@@ -1,3 +1,13 @@
+"""托管媒体网关测试
+
+【产品经理理解要点】
+验证工具系统模块中managed fal submit uses gateway origin and nous token等5个场景的正确性
+- managed fal submit uses gateway origin and nous...的正确性验证
+- managed fal submit reuses cached sync client的正确性验证
+- openai tts uses managed audio gateway when direct...的正确性验证
+- 另有2个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性"""
+
 import sys
 import types
 from importlib.util import module_from_spec, spec_from_file_location

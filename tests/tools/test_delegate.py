@@ -1,13 +1,22 @@
 #!/usr/bin/env python3
-"""
+"""子任务委派测试
+
+【产品经理理解要点】
+验证工具系统模块中always available等135个场景的正确性
+- always available的正确性验证
+- schema valid的正确性验证
+- schema description advertises runtime limits的正确性验证
+- 另有132个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
 Tests for the subagent delegation tool.
 
 Uses mock AIAgent instances to test the delegation logic without
 requiring API keys or real LLM calls.
 
 Run with:  python -m pytest tests/test_delegate.py -v
-   or:     python tests/test_delegate.py
-"""
+   or:     python tests/test_delegate.py"""
 
 import json
 import os

@@ -1,4 +1,13 @@
-"""CLI subcommand: ``hermes send`` — pipe text from shell scripts to any
+"""CLI 子命令: ``hermes send`` —— 从脚本向消息平台发送通知
+
+【产品经理理解要点】
+让运维脚本、定时任务、CI/CD 管道等自动化场景复用 Hermes 已配置的消息平台凭证发送通知。
+- 无需 LLM 和 Agent 循环，快速轻量，纯副作用操作
+- 支持 Telegram/Discord/Slack/Signal 等平台的直接 API 调用
+- 可列出所有可用目标频道，支持管道输入和文件读取
+
+─────────────────────────────────────────────────────────────────
+CLI subcommand: ``hermes send`` — pipe text from shell scripts to any
 configured messaging platform (Telegram, Discord, Slack, Signal, SMS, etc.).
 
 This is a thin wrapper around ``tools.send_message_tool.send_message_tool``

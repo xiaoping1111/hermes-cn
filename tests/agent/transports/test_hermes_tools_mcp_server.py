@@ -1,4 +1,17 @@
-"""Tests for the hermes-tools-as-MCP server module surface.
+"""Hermes工具MCP服务器接口测试
+
+【产品经理理解要点】
+验证codex运行时下Hermes工具通过MCP协议暴露的工具列表。关键约束：不得暴露codex已有的内置工具（terminal/shell/read_file/write_file等），只暴露Hermes独有的工具（网页搜索、浏览器、视觉分析、Kanban看板工具等）。
+- 验证工具列表不包含与codex内置工具冲突的工具
+- 验证需要代理循环上下文的工具（delegate_task/memory/todo等）不被暴露
+- 验证Kanban工作线程和编排器所需的工具已包含
+- 验证MCP SDK不可用时优雅退出
+- 业务影响：如果这些测试失败，codex运行时可能暴露冲突工具导致功能异常，或缺少必要工具导致工作线程卡住
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for the hermes-tools-as-MCP server module surface.
 
 We don't run a live MCP session in unit tests — that requires the codex
 subprocess + client + an event loop. These tests pin the static

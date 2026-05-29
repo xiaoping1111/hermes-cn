@@ -1,4 +1,12 @@
-"""
+"""Hermes CLI 包入口
+
+【产品经理理解要点】
+Hermes 命令行工具的入口模块，定义版本号并确保 Windows 终端使用 UTF-8 编码。
+- 核心职责：初始化 CLI 包、声明版本号（0.14.0）、修复 Windows 中文输出乱码问题
+- 关键概念：hermes chat 交互对话、hermes gateway 消息网关、hermes cron 定时任务
+- 系统定位：用户通过本模块进入 Hermes 的所有命令行功能
+
+─────────────────────────────────────────────────────────────────
 Hermes CLI - Unified command-line interface for Hermes Agent.
 
 Provides subcommands for:

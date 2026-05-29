@@ -1,4 +1,13 @@
-"""CLI handlers for ``hermes migrate ...``.
+"""模型迁移命令
+
+【产品经理理解要点】
+实现 `hermes migrate` 子命令，处理模型退役后的配置自动迁移（如 xAI 模型更名）。
+- 核心职责：检测并修复因模型退役/更名导致的无引用配置，支持 --apply 实际执行或 --dry-run 仅预览
+- 关键概念：模型退役=供应商下架旧模型ID、配置迁移=自动将旧模型引用替换为新模型
+- 系统定位：模型变更时的配置修复工具
+
+─────────────────────────────────────────────────────────────────
+CLI handlers for ``hermes migrate ...``.
 
 Currently exposes only ``hermes migrate xai`` — diagnoses and (with --apply)
 rewrites references to xAI models retired on May 15, 2026.

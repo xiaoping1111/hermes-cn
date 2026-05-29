@@ -1,4 +1,14 @@
-"""Tests for the gateway /debug command."""
+"""消息网关测试 - debug·命令处理
+
+【产品经理理解要点】
+验证消息网关的命令处理功能
+- 验证的功能: Tests for the gateway /debug command
+- 核心测试场景: debug sweeps expired pastes before upload、debug survives sweep failure
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the gateway /debug command.
+"""
 
 from unittest.mock import patch
 

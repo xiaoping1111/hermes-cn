@@ -1,4 +1,14 @@
-"""Tests for cmd_update — branch fallback when remote branch doesn't exist."""
+"""命令行界面测试 - cmd·更新
+
+【产品经理理解要点】
+验证命令行界面的更新功能
+- 验证的功能: Tests for cmd_update — branch fallback when remote branch doesn't exist
+- 核心测试场景: is termux env true for termux prefix、is termux env false for non termux prefix、load installable optional extras supports termux group 等共10个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for cmd_update — branch fallback when remote branch doesn't exist.
+"""
 
 import subprocess
 from types import SimpleNamespace

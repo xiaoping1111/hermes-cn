@@ -1,11 +1,21 @@
-"""Tests for per-turn reasoning extraction in AIAgent.run_conversation.
+"""每轮推理记录测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中simple turn reasoning present等6个场景的正确性
+- simple turn reasoning present的正确性验证
+- simple turn no reasoning的正确性验证
+- tool call turn reasoning on tool call step的正确性验证
+- 另有3个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for per-turn reasoning extraction in AIAgent.run_conversation.
 
 Verifies the reasoning field returned to display layers (CLI reasoning box,
 gateway reasoning footer, TUI reasoning event) only reflects the CURRENT
 turn's reasoning — never leaks from a prior turn — and is picked up
 correctly when reasoning is attached to a tool-calling assistant step
-rather than the final-answer assistant step.
-"""
+rather than the final-answer assistant step."""
 from __future__ import annotations
 
 

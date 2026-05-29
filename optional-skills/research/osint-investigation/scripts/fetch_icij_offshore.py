@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Search ICIJ Offshore Leaks via the bulk CSV database.
+"""ICIJ离岸泄露数据查询
+
+【产品经理理解要点】
+查询ICIJ离岸泄露数据库，追踪离岸公司、代理人和关联网络。
+- 核心职责：搜索离岸公司实体、高管、中介机构信息
+- 数据来源：ICIJ公开的离岸泄露CSV数据集（约70MB）
+- 本地缓存：首次查询后缓存到本地，避免重复下载
+
+─────────────────────────────────────────────────────────────────
+Search ICIJ Offshore Leaks via the bulk CSV database.
 
 The old reconcile endpoint (https://offshoreleaks.icij.org/reconcile) returns
 404 — ICIJ has removed it. The remaining stable access path is the public

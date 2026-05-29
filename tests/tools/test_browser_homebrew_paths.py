@@ -1,4 +1,15 @@
-"""Tests for macOS Homebrew PATH discovery in browser_tool.py."""
+"""浏览器Homebrew路径paths测试
+
+【产品经理理解要点】
+验证工具系统模块中includes termux bin等22个场景的正确性
+- includes termux bin的正确性验证
+- includes termux sbin的正确性验证
+- includes homebrew bin的正确性验证
+- 另有19个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for macOS Homebrew PATH discovery in browser_tool.py."""
 
 import json
 import os

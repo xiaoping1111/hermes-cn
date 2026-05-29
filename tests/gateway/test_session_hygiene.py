@@ -1,4 +1,13 @@
-"""Tests for gateway session hygiene — auto-compression of large sessions.
+"""消息网关测试 - 会话管理·hygiene
+
+【产品经理理解要点】
+验证消息网关的会话管理功能
+- 验证的功能: Tests for gateway session hygiene — auto-compression of large sessions
+- 核心测试场景: session hygiene messages stay in originating topic、session hygiene warns user when compression aborts、session hygiene informs user when aux model fails but recovers 等共23个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for gateway session hygiene — auto-compression of large sessions.
 
 Verifies that the gateway detects pathologically large transcripts and
 triggers auto-compression before running the agent.  (#628)

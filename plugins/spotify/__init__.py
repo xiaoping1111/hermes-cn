@@ -1,5 +1,12 @@
-"""Spotify integration plugin — bundled, auto-loaded.
+"""Spotify音乐控制集成插件
 
+【产品经理理解要点】
+将Spotify音乐控制能力集成到Hermes，注册7个工具（播放控制、设备管理、搜索、播放列表、专辑、音乐库等）。
+- 核心能力：播放/暂停/切歌、搜索歌曲/专辑/艺人、管理播放列表、控制设备
+- 认证：通过hermes auth spotify进行OAuth授权
+- 工具注册：工具始终注册（在hermes tools中可见），但未授权时运行时检查会阻止执行
+
+─────────────────────────────────────────────────────────────────
 Registers 7 tools (playback, devices, queue, search, playlists, albums,
 library) into the ``spotify`` toolset. Each tool's handler is gated by
 ``_check_spotify_available()`` — when the user has not run ``hermes auth

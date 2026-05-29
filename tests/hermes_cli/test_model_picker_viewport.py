@@ -1,4 +1,13 @@
-"""Tests for the prompt_toolkit /model picker scroll viewport.
+"""命令行界面测试 - 模型管理·picker·viewport
+
+【产品经理理解要点】
+验证命令行界面的模型管理功能
+- 验证的功能: Tests for the prompt_toolkit /model picker scroll viewport
+- 核心测试场景: short list no scroll、long list caps visible to chrome budget、cursor past window scrolls down 等共8个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the prompt_toolkit /model picker scroll viewport.
 
 Regression for: when a provider exposes many models (e.g. Ollama Cloud's
 36+), the picker rendered every choice into a Window with no max height,

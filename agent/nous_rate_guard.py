@@ -1,4 +1,19 @@
-"""Cross-session rate limit guard for Nous Portal.
+"""Nous Portal 跨会话限流保护 — 防止限流时重试风暴放大
+
+【产品经理理解要点】
+当 Nous Portal（AI 提供商）返回"限流"(429) 错误时，Agent 的重试机制
+可能会让情况更糟：一次 429 可能触发 3x3=9 次重试，每次都消耗额度。
+
+这个模块通过共享文件记录限流状态，让所有会话（CLI、网关、定时任务）
+在发请求前先检查"当前是否已被限流"，避免"雪上加霜"。
+
+工作原理：
+  第一次429 → 写入限流状态到共享文件 → 其他会话读取后暂停请求
+  → 等限流时间过去 → 清除状态 → 恢复正常请求
+
+─────────────────────────────────────────────────────────────────
+
+Cross-session rate limit guard for Nous Portal.
 
 Writes rate limit state to a shared file so all sessions (CLI, gateway,
 cron, auxiliary) can check whether Nous Portal is currently rate-limited

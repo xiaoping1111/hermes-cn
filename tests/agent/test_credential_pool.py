@@ -1,4 +1,15 @@
-"""Tests for multi-credential runtime pooling and rotation."""
+"""多凭证池化轮转测试
+
+【产品经理理解要点】
+验证多凭证池化机制，包括凭证选择、轮转和自动刷新。
+- 凭证的加权选择和轮转
+- JWT令牌的自动刷新
+- 凭证耗尽时的降级处理
+- 影响高并发场景下的API调用稳定性
+
+──────────────────────────────────────────────────────────────
+Tests for multi-credential runtime pooling and rotation.
+"""
 
 from __future__ import annotations
 

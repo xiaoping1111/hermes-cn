@@ -1,4 +1,12 @@
-"""Tests for cli._cprint's bg-thread cooperation with prompt_toolkit.
+"""Cprint Bg Thread 测试
+
+【产品经理理解要点】
+验证cprint bg thread相关功能的正确性。
+- 相关功能的单元测试覆盖
+- 如果测试失败，对应功能可能异常
+
+──────────────────────────────────────────────────────────────
+Tests for cli._cprint's bg-thread cooperation with prompt_toolkit.
 
 Background: when a prompt_toolkit Application is running, a bg thread that
 calls ``_pt_print`` directly can race with the input-area redraw and the

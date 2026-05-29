@@ -1,11 +1,21 @@
-"""Tests for the web tools provider architecture.
+"""Web搜索提供者测试
+
+【产品经理理解要点】
+验证工具系统模块中cannot instantiate abc directly等14个场景的正确性
+- cannot instantiate abc directly的正确性验证
+- concrete search only provider works的正确性验证
+- concrete multi capability provider works的正确性验证
+- 另有11个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the web tools provider architecture.
 
 Covers:
 - WebSearchProvider / WebExtractProvider ABC enforcement
 - Per-capability backend selection (_get_search_backend, _get_extract_backend)
 - Backward compatibility (web.backend still works as shared fallback)
-- Config keys merge correctly via DEFAULT_CONFIG
-"""
+- Config keys merge correctly via DEFAULT_CONFIG"""
 from __future__ import annotations
 
 import json

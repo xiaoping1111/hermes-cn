@@ -1,4 +1,7 @@
-"""Pytest configuration for the comfyui skill test suite.
+"""【产品经理理解要点】
+ComfyUI技能测试套件的Pytest配置——将scripts/目录加入sys.path以便测试导入，并提供通用测试夹具。
+─────────────────────────────────────────────────────────────────
+Pytest configuration for the comfyui skill test suite.
 
 Adds `scripts/` to sys.path so tests can `from _common import ...`, and
 provides a few common fixtures.

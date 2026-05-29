@@ -1,4 +1,13 @@
-"""Tests for the Windows / Git Bash MSYS-path normalization in
+"""Windows MSYS路径规范化测试
+
+【产品经理理解要点】
+验证Windows下Git Bash MSYS路径到Windows原生路径的自动转换，确保终端命令能正确执行。
+- MSYS路径（如/c/Users/）与Windows路径（如C:\\Users\\）的自动转换
+- 路径验证失败时的降级回退逻辑
+- 影响Windows用户的终端使用体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the Windows / Git Bash MSYS-path normalization in
 ``LocalEnvironment``.
 
 Background

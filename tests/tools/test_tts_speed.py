@@ -1,4 +1,15 @@
-"""Tests for TTS speed configuration across providers."""
+"""语音合成语速测试
+
+【产品经理理解要点】
+验证工具系统模块中default no rate kwarg等19个场景的正确性
+- default no rate kwarg的正确性验证
+- global speed applied的正确性验证
+- provider speed overrides global的正确性验证
+- 另有16个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for TTS speed configuration across providers."""
 
 import asyncio
 from unittest.mock import AsyncMock, MagicMock, patch

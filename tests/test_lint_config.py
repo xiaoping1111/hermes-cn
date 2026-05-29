@@ -1,4 +1,13 @@
-"""Tests for ruff lint config — guards against accidental rule removal.
+"""代码检查配置守卫测试
+
+【产品经理理解要点】
+验证ruff代码检查规则PLW1514（强制指定文件编码）未被意外移除，防止Windows UTF-8回归。
+- PLW1514规则保留在lint选择列表中
+- CI工作流仍执行ruff检查
+- 影响Windows平台的文件编码安全性
+
+──────────────────────────────────────────────────────────────
+Tests for ruff lint config — guards against accidental rule removal.
 
 PLW1514 (unspecified-encoding) was enabled after a debug session on
 Windows turned up three separate UTF-8 regressions in execute_code.

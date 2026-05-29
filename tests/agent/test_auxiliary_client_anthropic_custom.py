@@ -1,4 +1,13 @@
-"""Tests for agent.auxiliary_client._try_custom_endpoint's anthropic_messages branch.
+"""Anthropic自定义辅助客户端测试
+
+【产品经理理解要点】
+验证Anthropic自定义端点的辅助客户端配置和调用。
+- 自定义API端点的正确设置
+- 认证参数的传递
+- 影响企业自部署Claude的可用性
+
+──────────────────────────────────────────────────────────────
+Tests for agent.auxiliary_client._try_custom_endpoint's anthropic_messages branch.
 
 When a user configures a custom endpoint with ``api_mode: anthropic_messages``
 (e.g. MiniMax, Zhipu GLM, LiteLLM in Anthropic-proxy mode), auxiliary tasks

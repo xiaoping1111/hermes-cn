@@ -1,11 +1,21 @@
-"""Regression tests for #17140.
+"""语音合成环境变量降级测试
+
+【产品经理理解要点】
+验证工具系统模块中elevenlabs reads dotenv key等8个场景的正确性
+- elevenlabs reads dotenv key的正确性验证
+- xai reads dotenv key的正确性验证
+- minimax reads dotenv key的正确性验证
+- 另有5个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for #17140.
 
 TTS provider tools must resolve API keys from ``~/.hermes/.env`` (via
 ``hermes_cli.config.get_env_value``) and not only from ``os.environ`` —
 otherwise users who keep their keys in the dotenv file see "API key not set"
 errors even though the key is configured. Same class of bug as #15914 (auth)
-already addressed for ``agent/credential_pool`` and ``hermes_cli/auth``.
-"""
+already addressed for ``agent/credential_pool`` and ``hermes_cli/auth``."""
 
 from unittest.mock import MagicMock, patch
 

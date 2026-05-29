@@ -1,4 +1,13 @@
-"""Tests for /update live streaming, prompt forwarding, and gateway IPC.
+"""消息网关测试 - 更新·流式处理
+
+【产品经理理解要点】
+验证消息网关的更新流式处理功能
+- 验证的功能: Tests for /update live streaming, prompt forwarding, and gateway IPC
+- 核心测试场景: writes prompt file and reads response、prompt file content、timeout returns default 等共21个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for /update live streaming, prompt forwarding, and gateway IPC.
 
 Tests the new --gateway mode for hermes update, including:
 - _gateway_prompt() file-based IPC

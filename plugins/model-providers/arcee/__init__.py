@@ -1,4 +1,7 @@
-"""Arcee AI provider profile."""
+"""【产品经理理解要点】
+Arcee AI模型提供商——接入Arcee AI的模型服务，通过ARCEEAI_API_KEY认证，专注于企业级开源模型。
+─────────────────────────────────────────────────────────────────
+Arcee AI provider profile."""
 
 from providers import register_provider
 from providers.base import ProviderProfile

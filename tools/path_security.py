@@ -1,4 +1,12 @@
-"""Shared path validation helpers for tool implementations.
+"""路径安全验证 — 防止路径遍历攻击
+
+【产品经理理解要点】
+防止 AI 或恶意输入通过 "../" 等路径遍历手段访问不该访问的文件。
+所有涉及文件路径的工具都应使用这个模块验证路径合法性。
+
+─────────────────────────────────────────────────────────────────
+
+Shared path validation helpers for tool implementations.
 
 Extracts the ``resolve() + relative_to()`` and ``..`` traversal check
 patterns previously duplicated across skill_manager_tool, skills_tool,

@@ -1,4 +1,14 @@
-"""Tests for external skill directories (skills.external_dirs config)."""
+"""外部技能加载测试
+
+【产品经理理解要点】
+验证外部技能文件和目录的发现、加载和注册。
+- 外部技能文件的正确发现
+- 技能注册和加载流程
+- 影响用户自定义技能的可用性
+
+──────────────────────────────────────────────────────────────
+Tests for external skill directories (skills.external_dirs config).
+"""
 
 import json
 import os

@@ -1,4 +1,15 @@
-"""Regression test for anthropic_messages truncation continuation.
+"""Anthropic截断续传测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中text only truncation produces text content no tool calls等5个场景的正确性
+- text only truncation produces text content no tool...的正确性验证
+- truncated tool call produces tool calls的正确性验证
+- empty content does not crash的正确性验证
+- 另有2个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression test for anthropic_messages truncation continuation.
 
 When an Anthropic response hits ``stop_reason: max_tokens`` (mapped to
 ``finish_reason == 'length'`` in run_agent), the agent must retry with
@@ -10,8 +21,7 @@ half-finished response with no retry.
 
 We don't exercise the full agent loop here (it's 3000 lines of inference,
 streaming, plugin hooks, etc.) — instead we verify the normalization
-adapter produces exactly the shape the continuation block now consumes.
-"""
+adapter produces exactly the shape the continuation block now consumes."""
 
 from __future__ import annotations
 

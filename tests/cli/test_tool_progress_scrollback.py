@@ -1,4 +1,12 @@
-"""Tests for stacked tool progress scrollback lines in the CLI TUI.
+"""工具进度滚动显示测试
+
+【产品经理理解要点】
+验证工具调用进度信息在终端中的滚动显示逻辑。
+- 进度信息的滚动展示
+- 影响长工具运行的视觉体验
+
+──────────────────────────────────────────────────────────────
+Tests for stacked tool progress scrollback lines in the CLI TUI.
 
 When tool_progress_mode is "all" or "new", _on_tool_progress should print
 persistent lines to scrollback on tool.completed, restoring the stacked

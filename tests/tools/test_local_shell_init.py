@@ -1,10 +1,20 @@
-"""Tests for terminal.shell_init_files / terminal.auto_source_bashrc.
+"""本地Shell初始化测试
+
+【产品经理理解要点】
+验证工具系统模块中auto sources bashrc when present等14个场景的正确性
+- auto sources bashrc when present的正确性验证
+- auto sources profile when present的正确性验证
+- auto sources bash profile when present的正确性验证
+- 另有11个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for terminal.shell_init_files / terminal.auto_source_bashrc.
 
 A bash ``-l -c`` invocation does NOT source ``~/.bashrc``, so tools that
 register themselves there (nvm, asdf, pyenv) stay invisible to the
 environment snapshot built by ``LocalEnvironment.init_session``.  These
-tests verify the config-driven prelude that fixes that.
-"""
+tests verify the config-driven prelude that fixes that."""
 
 import os
 from unittest.mock import patch

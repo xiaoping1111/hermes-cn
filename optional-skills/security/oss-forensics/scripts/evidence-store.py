@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""
+"""OSS取证证据存储管理器
+
+【产品经理理解要点】
+管理开源取证调查的JSON证据库，支持增删查验证和导出。
+- 核心职责：安全存储数字取证证据，追踪完整性哈希，支持全文检索
+- 命令：add添加、list列表、verify哈希校验、query搜索、export导出、summary统计
+
+─────────────────────────────────────────────────────────────────
 OSS Forensics Evidence Store Manager
 Manages a JSON-based evidence store for forensic investigations.
 

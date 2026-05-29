@@ -1,4 +1,13 @@
-"""Regression coverage for xAI OAuth PKCE token exchange (issue #26990).
+"""命令行界面测试 - xAI OAuth认证
+
+【产品经理理解要点】
+验证命令行界面xAI OAuth认证的正确性
+- 验证的功能: Regression coverage for xAI OAuth PKCE token exchange (issue #26990)
+- 核心测试场景: token exchange includes code verifier、token exchange also echoes code challenge for xai、token exchange uses correct grant and client 等共14个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression coverage for xAI OAuth PKCE token exchange (issue #26990).
 
 Issue [#26990] reported that ``hermes auth add xai-oauth`` succeeds at the
 browser-side authorize step but fails at the token endpoint with

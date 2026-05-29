@@ -1,4 +1,14 @@
-"""Regression guard: send_slash_confirm must use format_message + MARKDOWN_V2."""
+"""消息网关测试 - Telegram平台·slash·confirm
+
+【产品经理理解要点】
+验证消息网关的Telegram平台功能
+- 验证的功能: Regression guard: send_slash_confirm must use format_message + MARKDOWN_V2
+- 核心测试场景: uses markdown v2 and escapes special chars、stores slash confirm state、not connected returns failure
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression guard: send_slash_confirm must use format_message + MARKDOWN_V2.
+"""
 
 import sys
 from pathlib import Path

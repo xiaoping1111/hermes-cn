@@ -1,4 +1,14 @@
 from __future__ import annotations
+"""telephony技能测试
+
+【产品经理理解要点】
+验证技能系统模块中save twilio writes env and state等7个场景的正确性
+- save twilio writes env and state的正确性验证
+- upsert env updates existing values的正确性验证
+- messages after checkpoint returns only newer items的正确性验证
+- 另有4个测试场景覆盖
+- 影响技能系统的可靠性和功能正确性"""
+
 
 import importlib.util
 import json

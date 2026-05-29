@@ -1,4 +1,13 @@
-"""Tests for Ollama num_ctx context length detection and injection.
+"""Ollama上下文长度测试
+
+【产品经理理解要点】
+验证Ollama本地模型的上下文长度检测和注入逻辑。
+- 从Ollama API查询num_ctx参数
+- 上下文长度注入到API请求的extra_body
+- 影响Ollama模型的长对话支持
+
+──────────────────────────────────────────────────────────────
+Tests for Ollama num_ctx context length detection and injection.
 
 Covers:
   agent/model_metadata.py — query_ollama_num_ctx()

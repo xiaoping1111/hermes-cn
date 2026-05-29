@@ -1,4 +1,14 @@
-"""Tests for hermes_cli.azure_detect — transport & model auto-detection."""
+"""命令行界面测试 - azure·模式检测
+
+【产品经理理解要点】
+验证命令行界面的模式检测功能
+- 验证的功能: Tests for hermes_cli.azure_detect — transport & model auto-detection
+- 核心测试场景: looks like anthropic path、extract model ids openai shape、extract model ids bad shape returns empty 等共14个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.azure_detect — transport & model auto-detection.
+"""
 
 from __future__ import annotations
 

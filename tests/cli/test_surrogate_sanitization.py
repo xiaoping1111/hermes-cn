@@ -1,4 +1,12 @@
-"""Tests for surrogate character sanitization in user input.
+"""代理字符清洗测试
+
+【产品经理理解要点】
+验证UTF-8代理字符（Surrogate）的清洗逻辑。
+- 代理字符的检测和替换
+- 影响特殊字符输入的兼容性
+
+──────────────────────────────────────────────────────────────
+Tests for surrogate character sanitization in user input.
 
 Surrogates (U+D800..U+DFFF) are invalid in UTF-8 and crash json.dumps()
 inside the OpenAI SDK. They can appear via clipboard paste from rich-text

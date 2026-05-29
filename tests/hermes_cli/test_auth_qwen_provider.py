@@ -1,4 +1,13 @@
-"""Tests for Qwen OAuth provider authentication (hermes_cli/auth.py).
+"""命令行界面测试 - 认证授权·qwen·提供商
+
+【产品经理理解要点】
+验证命令行界面的认证授权提供商功能
+- 验证的功能: Tests for Qwen OAuth provider authentication (hermes_cli/auth.py)
+- 核心测试场景: qwen cli auth path returns expected location、read qwen cli tokens success、read qwen cli tokens missing file 等共29个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for Qwen OAuth provider authentication (hermes_cli/auth.py).
 
 Covers: _qwen_cli_auth_path, _read_qwen_cli_tokens, _save_qwen_cli_tokens,
 _qwen_access_token_is_expiring, _refresh_qwen_cli_tokens,

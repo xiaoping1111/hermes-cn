@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""
+"""【产品经理理解要点】
+ComfyUI环境健康检查——一键验证ComfyUI运行环境是否就绪：CLI工具、服务器连通性、检查点安装、工作流依赖、测试工作流提交回环。
+─────────────────────────────────────────────────────────────────
 health_check.py — One-stop verification that the ComfyUI environment is ready.
 
 Runs through the verification checklist:

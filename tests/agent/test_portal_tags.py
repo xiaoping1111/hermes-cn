@@ -1,4 +1,13 @@
-"""Tests for agent.portal_tags — Nous Portal request tag contract."""
+"""Portal标签测试
+
+【产品经理理解要点】
+验证Portal标签系统的标签管理和展示逻辑。
+- 标签的正确创建和存储
+- 影响内容分类和导航体验
+
+──────────────────────────────────────────────────────────────
+Tests for agent.portal_tags — Nous Portal request tag contract.
+"""
 
 from __future__ import annotations
 

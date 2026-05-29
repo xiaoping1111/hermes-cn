@@ -1,9 +1,19 @@
-"""Comprehensive tests for ANSI escape sequence stripping (ECMA-48).
+"""ANSI转义strip测试
+
+【产品经理理解要点】
+验证工具系统模块中reset等30个场景的正确性
+- reset的正确性验证
+- color的正确性验证
+- truecolor semicolon的正确性验证
+- 另有27个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Comprehensive tests for ANSI escape sequence stripping (ECMA-48).
 
 The strip_ansi function in tools/ansi_strip.py is the source-level fix for
 ANSI codes leaking into the model's context via terminal/execute_code output.
-It must strip ALL terminal escape sequences while preserving legitimate text.
-"""
+It must strip ALL terminal escape sequences while preserving legitimate text."""
 
 from tools.ansi_strip import strip_ansi
 

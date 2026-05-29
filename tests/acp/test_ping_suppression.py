@@ -1,4 +1,13 @@
-"""Tests for acp_adapter.entry._BenignProbeMethodFilter.
+"""ACP Ping抑制测试
+
+【产品经理理解要点】
+验证ACP客户端发送ping请求时不会产生错误日志，抑制良性探测方法的日志噪音。
+- JSON-RPC ping请求产生的错误被过滤
+- 日志中不出现Background task failed
+- 影响ACP运行的日志清洁度
+
+──────────────────────────────────────────────────────────────
+Tests for acp_adapter.entry._BenignProbeMethodFilter.
 
 Covers both the isolated filter logic and the full end-to-end path where a
 client sends a bare JSON-RPC ``ping`` request over stdio and the acp runtime

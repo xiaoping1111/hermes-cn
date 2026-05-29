@@ -1,4 +1,7 @@
-"""Unit tests for _common.py — pure logic only, no network."""
+"""【产品经理理解要点】
+_common.py的单元测试——纯逻辑测试，不涉及网络请求。
+─────────────────────────────────────────────────────────────────
+Unit tests for _common.py — pure logic only, no network."""
 
 from __future__ import annotations
 

@@ -1,4 +1,14 @@
-"""Tests that the background review fork inherits the parent's cached system prompt.
+"""后台审查缓存对齐测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中review fork inherits parent cached system prompt、review fork pins session start and session id、review fork inherits parent toolset config的正确性
+- review fork inherits parent cached system prompt的正确性验证
+- review fork pins session start and session id的正确性验证
+- review fork inherits parent toolset config的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests that the background review fork inherits the parent's cached system prompt.
 
 Regression coverage for issue #25322 (and PR #17276's first root cause): the
 background review's outbound HTTP request must carry the same system bytes as
@@ -8,8 +18,7 @@ Without this, every review rebuilds the system prompt from scratch — fresh
 ``_hermes_now()`` timestamp, fresh ``session_id``, and a different skills
 prompt under the (former) narrow toolset — and the prefix-cache miss costs
 roughly the full uncached system-prompt cost per nudge (~26% end-to-end on
-Sonnet 4.5 per the contributor's measurement).
-"""
+Sonnet 4.5 per the contributor's measurement)."""
 
 from unittest.mock import patch
 

@@ -1,4 +1,12 @@
-"""LM Studio reasoning-effort resolution shared by the chat-completions
+"""LM Studio推理力度适配器
+
+【产品经理理解要点】
+将用户的推理配置映射为LM Studio支持的reasoning_effort值，避免请求报错。
+- 核心职责：根据模型的能力声明，自动调整推理力度参数到合法值
+- 典型场景：用户选择high推理力度，但模型只支持on/off，自动降级为medium
+
+─────────────────────────────────────────────────────────────────
+LM Studio reasoning-effort resolution shared by the chat-completions
 transport and run_agent's iteration-limit summary path.
 
 LM Studio publishes per-model ``capabilities.reasoning.allowed_options`` (e.g.

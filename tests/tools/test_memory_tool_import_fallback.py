@@ -1,4 +1,12 @@
-"""Regression tests for memory-tool import fallbacks."""
+"""记忆工具导入降级测试
+
+【产品经理理解要点】
+验证工具系统模块中memory tool imports without fcntl的正确性
+- memory tool imports without fcntl的正确性验证
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for memory-tool import fallbacks."""
 
 import builtins
 import importlib

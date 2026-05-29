@@ -1,4 +1,12 @@
-"""Target the reclaim race specifically.
+"""并发回收竞争测试
+
+【产品经理理解要点】
+验证压力测试模块中相关功能的正确性
+- 模块功能单元测试覆盖
+- 影响压力测试的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Target the reclaim race specifically.
 
 Workers claim tasks with a 1s TTL but sleep 2s before completing. The
 reclaimer runs every 200ms. Scenario: worker claims, reclaimer expires
@@ -18,8 +26,7 @@ status='running' fails). This is the CORRECT behavior.
 
 Invariant being tested: race between worker.complete and
 dispatcher.reclaim must not produce a double-run-close or other
-inconsistency.
-"""
+inconsistency."""
 
 import json
 import multiprocessing as mp

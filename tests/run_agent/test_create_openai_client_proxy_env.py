@@ -1,4 +1,15 @@
-"""Regression guard: _create_openai_client must honor HTTP(S)_PROXY env vars.
+"""OpenAI客户端代理配置测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中get proxy from env prefers https then http then all等9个场景的正确性
+- get proxy from env prefers https then http...的正确性验证
+- get proxy from env ignores blank values的正确性验证
+- get proxy from env normalizes socks alias的正确性验证
+- 另有6个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression guard: _create_openai_client must honor HTTP(S)_PROXY env vars.
 
 When #11277 re-landed TCP keepalives, ``_create_openai_client`` began passing
 a custom ``transport=httpx.HTTPTransport(...)`` to ``httpx.Client``. httpx only
@@ -16,8 +27,7 @@ while keeping the keepalive-enabled transport in place.
 
 This test pins that the constructed ``httpx.Client`` mounts an ``HTTPProxy``
 pool when a proxy env var is set, AND that the socket-level keepalive
-transport is still installed on the no-proxy default path.
-"""
+transport is still installed on the no-proxy default path."""
 from unittest.mock import patch
 
 import httpx

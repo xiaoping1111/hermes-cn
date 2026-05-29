@@ -1,4 +1,13 @@
-"""Regression tests for ``cmd_whatsapp`` env-var write ordering.
+"""命令行界面测试 - WhatsApp平台·设置·ordering
+
+【产品经理理解要点】
+验证命令行界面的WhatsApp平台设置功能
+- 验证的功能: Regression tests for ``cmd_whatsapp`` env-var write ordering
+- 核心测试场景: aborted setup does not enable whatsapp、existing pairing skip branch enables whatsapp
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression tests for ``cmd_whatsapp`` env-var write ordering.
 
 Before the fix, ``hermes whatsapp`` wrote ``WHATSAPP_ENABLED=true`` at
 step 2 — before npm install (step 4) and before QR pairing (step 6).

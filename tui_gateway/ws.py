@@ -1,4 +1,13 @@
-"""WebSocket transport for the tui_gateway JSON-RPC server.
+"""TUI网关WebSocket传输层
+
+【产品经理理解要点】
+让Dashboard等Web客户端通过WebSocket与Hermes TUI网关通信。
+- 核心职责：复用server.py的完整RPC调度逻辑，通过WebSocket传输层对外服务
+- 协议兼容：与stdio模式完全一致的JSON-RPC协议，无需两套代码
+- 使用场景：Dashboard的Web界面、iOS客户端等非终端前端接入Hermes
+
+─────────────────────────────────────────────────────────────────
+WebSocket transport for the tui_gateway JSON-RPC server.
 
 Reuses :func:`tui_gateway.server.dispatch` verbatim so every RPC method, every
 slash command, every approval/clarify/sudo flow, and every agent event flows

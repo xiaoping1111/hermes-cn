@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Fetch SEC EDGAR filings index for a given CIK or company name.
+"""SEC EDGAR财报查询
+
+【产品经理理解要点】
+查询美国SEC的EDGAR系统中的上市公司财务报告和披露文件。
+- 核心职责：通过CIK或公司名称检索SEC备案文件
+- 使用场景：尽职调查、投资分析中获取公司正式财务披露
+
+─────────────────────────────────────────────────────────────────
+Fetch SEC EDGAR filings index for a given CIK or company name.
 
 SEC requires a User-Agent header with contact info. Set SEC_USER_AGENT,
 e.g. SEC_USER_AGENT="Research example@example.com".

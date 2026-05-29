@@ -1,5 +1,15 @@
 #!/usr/bin/env python3
-"""
+"""读取循环检测测试
+
+【产品经理理解要点】
+验证工具系统模块中first read has no warning等25个场景的正确性
+- first read has no warning的正确性验证
+- second consecutive read no warning的正确性验证
+- third consecutive read has warning的正确性验证
+- 另有22个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
 Tests for the read-loop detection mechanism in file_tools.
 
 Verifies that:
@@ -12,8 +22,7 @@ Verifies that:
 7. notify_other_tool_call resets consecutive counters
 8. Context compression injects file-read history
 
-Run with:  python -m pytest tests/tools/test_read_loop_detection.py -v
-"""
+Run with:  python -m pytest tests/tools/test_read_loop_detection.py -v"""
 
 import json
 import unittest

@@ -1,4 +1,13 @@
-"""Shared curses-based UI components for Hermes CLI.
+"""curses 交互式 UI 组件
+
+【产品经理理解要点】
+提供终端内的键盘导航多选列表，用于 `hermes tools` 和 `hermes skills` 的交互式配置界面。
+- 核心职责：实现终端内的键盘导航选择界面（上下键移动、空格选择、回车确认），无 curses 时降级为数字选择
+- 关键概念：curses 终端 UI、多选清单、输入缓冲区刷新（防止逃逸序列污染后续 input）
+- 系统定位：交互式配置界面的底层 UI 组件
+
+─────────────────────────────────────────────────────────────────
+Shared curses-based UI components for Hermes CLI.
 
 Used by `hermes tools` and `hermes skills` for interactive checklists.
 Provides a curses multi-select with keyboard navigation, plus a

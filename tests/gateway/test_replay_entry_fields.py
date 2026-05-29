@@ -1,4 +1,13 @@
-"""Tests for ``gateway.run._build_replay_entry``.
+"""消息网关测试 - replay·entry·fields
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for ``gateway.run._build_replay_entry``
+- 核心测试场景: user message has only role and content、tool message has only role and content、assistant minimal has only role and content 等共16个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for ``gateway.run._build_replay_entry``.
 
 The gateway rebuilds ``agent_history`` from the persisted transcript on every
 turn (unlike the CLI, which keeps the live in-memory message list).  When a

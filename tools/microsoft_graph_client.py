@@ -1,4 +1,13 @@
-"""Reusable Microsoft Graph REST client helpers."""
+"""Microsoft Graph REST 客户端
+
+【产品经理理解要点】
+封装 Microsoft Graph API 的通用 HTTP 客户端，供邮件、日历等 Office 365 工具复用。
+- 核心职责：提供带自动重试、分页遍历、错误处理的异步 HTTP 客户端
+- 关键业务概念：统一认证流程——所有 Office 365 操作共用同一 Token 提供者，无需各自管理凭据
+- 在系统中的位置：基础设施层，被所有 Microsoft Graph 相关工具依赖
+
+─────────────────────────────────────────────────────────────────
+Reusable Microsoft Graph REST client helpers."""
 
 from __future__ import annotations
 

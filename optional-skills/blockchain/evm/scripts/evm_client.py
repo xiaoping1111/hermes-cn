@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""
+"""EVM区块链查询工具
+
+【产品经理理解要点】
+查询以太坊等EVM链的链上数据，包括余额、交易、Gas费等，纯标准库实现。
+- 核心职责：通过JSON-RPC查询EVM链的账户余额、交易记录、Gas估算等
+- 支持功能：balance、tx、gas、token等查询
+
+─────────────────────────────────────────────────────────────────
 evm_client.py — EVM blockchain CLI tool for the Hermes Agent project.
 Zero external dependencies. Uses stdlib only: urllib, json, argparse, time, os, sys, typing.
 """

@@ -1,11 +1,9 @@
-"""Remote node server.
+"""远程Meet节点服务器
 
-Runs on the machine that will host the Meet bot (typically the user's
-Mac laptop with a signed-in Chrome). Exposes a WebSocket endpoint that
-accepts signed RPC requests and dispatches them to the existing
-``plugins.google_meet.process_manager`` module.
+【产品经理理解要点】
+运行在托管Meet机器人的机器上(通常是用户的Mac笔记本)，暴露WebSocket端点接收签名RPC请求并分发到process_manager。"""
 
-Launched by ``hermes meet node run``.
+from __future__ import annotations
 
 Token handling
 --------------

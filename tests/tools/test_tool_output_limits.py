@@ -1,4 +1,15 @@
-"""Tests for tools.tool_output_limits.
+"""工具输出限制测试
+
+【产品经理理解要点】
+验证工具系统模块中defaults match previous hardcoded values等13个场景的正确性
+- defaults match previous hardcoded values的正确性验证
+- get limits returns defaults when config missing的正确性验证
+- get limits returns defaults when config not a...的正确性验证
+- 另有10个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools.tool_output_limits.
 
 Covers:
 1. Default values when no config is provided.
@@ -10,8 +21,7 @@ Covers:
    file_operations call paths will actually consume.
 
 Port-tracking: anomalyco/opencode PR #23770
-(feat(truncate): allow configuring tool output truncation limits).
-"""
+(feat(truncate): allow configuring tool output truncation limits)."""
 
 from __future__ import annotations
 

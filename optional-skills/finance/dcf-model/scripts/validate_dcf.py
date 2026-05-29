@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""
+"""DCF模型验证脚本
+
+【产品经理理解要点】
+验证Excel DCF估值模型的公式正确性和常见建模错误。
+- 核心职责：检查DCF模型中的公式错误和常见估值陷阱
+
+─────────────────────────────────────────────────────────────────
 DCF Model Validation Script
 Validates Excel DCF models for formula errors and common DCF mistakes
 """

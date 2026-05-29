@@ -1,4 +1,13 @@
-"""Tests for cron job script injection feature.
+"""定时任务测试 - cron·脚本执行
+
+【产品经理理解要点】
+验证定时任务调度引擎的脚本执行功能
+- 验证的功能: Tests for cron job script injection feature
+- 核心测试场景: create job with script、create job without script、create job empty script normalized to none 等共36个场景
+- 业务影响: 定时任务可能无法正确调度执行，影响自动化工作流的可靠性
+
+─────────────────────────────────────────────────────────────────
+Tests for cron job script injection feature.
 
 Tests cover:
 - Script field in job creation / storage / update

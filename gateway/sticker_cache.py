@@ -1,4 +1,13 @@
-"""
+"""贴纸描述缓存 — Telegram 贴纸的视觉描述持久化
+
+【产品经理理解要点】
+Telegram 用户可能发送贴纸表情，Agent 用视觉模型分析贴纸内容并描述。
+同一个贴纸只需要分析一次，后续直接从缓存读取描述。
+
+缓存位置：~/.hermes/sticker_cache.json
+
+─────────────────────────────────────────────────────────────────
+
 Sticker description cache for Telegram.
 
 When users send stickers, we describe them via the vision tool and cache

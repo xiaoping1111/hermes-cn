@@ -1,4 +1,12 @@
-"""Shared CLI output helpers for Hermes CLI modules.
+"""CLI输出辅助工具
+
+【产品经理理解要点】
+提供统一的CLI彩色输出函数，确保所有Hermes CLI模块的提示信息风格一致。
+- 核心职责：封装info/success/warning/error四种消息类型和交互式prompt
+- 设计原因：消除setup.py、tools_config.py等模块间的代码重复
+
+─────────────────────────────────────────────────────────────────
+Shared CLI output helpers for Hermes CLI modules.
 
 Extracts the identical ``print_info/success/warning/error`` and ``prompt()``
 functions previously duplicated across setup.py, tools_config.py,

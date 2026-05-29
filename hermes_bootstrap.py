@@ -1,4 +1,11 @@
-"""Windows UTF-8 bootstrap for Hermes entry points.
+"""Windows UTF-8 启动引导模块（仅影响 Windows，macOS/Linux 无操作）
+
+【产品经理理解要点】
+这是项目的"第一个加载模块"，确保 Windows 上中文等多语言字符能正确显示。
+在 macOS/Linux 上完全不执行任何操作，可以忽略。
+
+─────────────────────────────────────────────────────────────────
+Windows UTF-8 bootstrap for Hermes entry points.
 
 Python on Windows has two long-standing text-encoding footguns:
 

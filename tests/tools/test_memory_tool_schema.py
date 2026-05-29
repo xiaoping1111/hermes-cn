@@ -1,4 +1,14 @@
-"""Schema-shape tests for the built-in memory tool.
+"""记忆工具Schema测试
+
+【产品经理理解要点】
+验证工具系统模块中memory schema has no forbidden top level combinators、memory schema is well formed、memory schema is json serializable的正确性
+- memory schema has no forbidden top level combinators的正确性验证
+- memory schema is well formed的正确性验证
+- memory schema is json serializable的正确性验证
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Schema-shape tests for the built-in memory tool.
 
 The memory tool previously used ``allOf: [{if: ..., then: {required: ...}}]``
 at the top level of ``parameters`` to hint per-action required fields.  That
@@ -14,8 +24,7 @@ form was:
 We now rely on the runtime handler (``memory_tool()`` in ``tools/memory_tool.py``)
 to validate required fields per action and return actionable error messages.
 These tests guard the schema against regressing back to a shape strict
-backends reject.
-"""
+backends reject."""
 
 import json
 

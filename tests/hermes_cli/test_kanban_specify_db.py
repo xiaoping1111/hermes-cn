@@ -1,5 +1,14 @@
-"""Tests for kb.specify_triage_task — the DB-layer atomic promotion
-from the triage column to todo. LLM-free by design."""
+"""命令行界面测试 - 看板管理·specify·数据库
+
+【产品经理理解要点】
+验证命令行界面的看板管理数据库功能
+- 验证的功能: Tests for kb.specify_triage_task — the DB-layer atomic promotio
+- 核心测试场景: specify promotes triage to todo、specify with open parent lands in todo not ready、specify refuses non triage task 等共10个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for kb.specify_triage_task — the DB-layer atomic promotio
+"""
 
 from __future__ import annotations
 

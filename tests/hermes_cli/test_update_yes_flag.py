@@ -1,4 +1,13 @@
-"""Tests for `hermes update --yes / -y` — assume yes for interactive prompts.
+"""命令行界面测试 - 更新·yes·flag
+
+【产品经理理解要点】
+验证命令行界面的更新功能
+- 验证的功能: Tests for `hermes update --yes / -y` — assume yes for interactive prompts
+- 核心测试场景: yes auto migrates without input、no yes flag still prompts in tty
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for `hermes update --yes / -y` — assume yes for interactive prompts.
 
 Covers:
   1. argparse parses the flag

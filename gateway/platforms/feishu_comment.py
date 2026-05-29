@@ -1,4 +1,11 @@
-"""
+"""飞书云文档评论处理 — 处理文档评论事件并自动回复
+
+【产品经理理解要点】
+独立的飞书评论模块，处理云文档上的评论事件（有人评论 → AI 自动回复）。
+从主飞书适配器中分离，避免 feishu.py 过于臃肿。
+
+─────────────────────────────────────────────────────────────────
+
 Feishu/Lark drive document comment handling.
 
 Processes ``drive.notice.comment_add_v1`` events and interacts with the

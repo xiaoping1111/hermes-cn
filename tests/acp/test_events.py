@@ -1,4 +1,15 @@
-"""Tests for acp_adapter.events — callback factories for ACP notifications."""
+"""ACP事件回调测试
+
+【产品经理理解要点】
+验证ACP通知事件的回调工厂函数，包括消息、步骤、思考和工具进度的回调。
+- 消息回调生成AgentMessageChunk
+- 工具进度回调发送ToolCallProgress
+- 回调的引用管理避免内存泄漏
+- 影响ACP客户端的事件通知
+
+──────────────────────────────────────────────────────────────
+Tests for acp_adapter.events — callback factories for ACP notifications.
+"""
 
 import asyncio
 import gc

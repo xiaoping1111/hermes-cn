@@ -1,4 +1,14 @@
-"""Tests for agent.i18n -- catalog parity, fallback, language resolution."""
+"""国际化翻译测试
+
+【产品经理理解要点】
+验证国际化系统的翻译加载和回退逻辑。
+- 翻译文件的正确加载
+- 缺失翻译时的英文回退
+- 影响非英文用户的使用体验
+
+──────────────────────────────────────────────────────────────
+Tests for agent.i18n -- catalog parity, fallback, language resolution.
+"""
 
 from __future__ import annotations
 

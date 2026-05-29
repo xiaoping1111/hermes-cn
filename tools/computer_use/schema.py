@@ -1,4 +1,14 @@
-"""Schema for the generic `computer_use` tool.
+"""电脑操控工具的参数定义 — 模型无关的标准接口
+
+【产品经理理解要点】
+本模块定义了AI调用"电脑操控"功能时需要提供的参数格式，所有支持工具调用的AI模型都能使用。
+- 核心参数：action（动作类型，如截图/点击/输入）、element（元素编号，最可靠的定位方式）、coordinate（像素坐标，备选定位）
+- 三种截图模式：som（截图+编号标注，推荐）、vision（纯截图）、ax（仅文字树，适合纯文字模型）
+- capture_after参数：操作后自动截图，省去一次来回调用，提高效率
+- 业务含义：统一接口让不同AI模型都能操控桌面，无需为每个模型做特殊适配
+
+─────────────────────────────────────────────────────────────────
+Schema for the generic `computer_use` tool.
 
 Model-agnostic. Any tool-calling model can drive this. Vision-capable models
 should prefer `capture(mode='som')` then `click(element=N)` — much more

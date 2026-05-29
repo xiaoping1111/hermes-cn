@@ -1,4 +1,15 @@
-"""Tests for tools/cronjob_tools.py — prompt scanning, schedule/list/remove dispatchers."""
+"""定时任务工具测试
+
+【产品经理理解要点】
+验证工具系统模块中clean prompt passes等36个场景的正确性
+- clean prompt passes的正确性验证
+- prompt injection blocked的正确性验证
+- disregard rules blocked的正确性验证
+- 另有33个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/cronjob_tools.py — prompt scanning, schedule/list/remove dispatchers."""
 
 import json
 import pytest

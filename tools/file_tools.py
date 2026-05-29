@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""File Tools Module - LLM agent file manipulation tools."""
+"""文件操作工具集——LLM Agent 文件读写和搜索
+
+【产品经理理解要点】
+提供 Agent 读取、搜索、编写文件的核心能力，是代码编辑和文件管理场景的基础工具。
+- 核心职责：文件读取（支持分页和行范围）、正则搜索、文件写入/创建、敏感信息脱敏
+- 关键业务概念：安全读取上限——单次读取默认 10 万字符上限防撑爆上下文；二进制文件跳过；敏感信息自动脱敏
+- 在系统中的位置：Agent 文件操作的主要入口，被 delegate_tool 等上层工具依赖
+
+─────────────────────────────────────────────────────────────────
+File Tools Module - LLM agent file manipulation tools."""
 
 import errno
 import json

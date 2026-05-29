@@ -1,4 +1,13 @@
-"""Tests for transcript history offset fix.
+"""消息网关测试 - 脚本执行·offset
+
+【产品经理理解要点】
+验证消息网关的脚本执行功能
+- 验证的功能: Tests for transcript history offset fix
+- 核心测试场景: session meta causes offset mismatch、no session meta same result、multiple session meta larger drift 等共8个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for transcript history offset fix.
 
 Regression tests for a bug where the gateway transcript lost 1 message
 per turn from turn 2 onwards.  The raw transcript history includes

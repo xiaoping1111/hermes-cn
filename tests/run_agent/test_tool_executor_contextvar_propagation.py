@@ -1,4 +1,15 @@
-"""Regression guard for PR #16660 (salvaged as PR #18027): ContextVar
+"""工具执行器上下文变量测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中executor submit without copy context does not propagate等5个场景的正确性
+- executor submit without copy context does not propagate的正确性验证
+- executor submit with copy context run propagates的正确性验证
+- run tool worker sees parent approval session key的正确性验证
+- 另有2个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression guard for PR #16660 (salvaged as PR #18027): ContextVar
 propagation into concurrent tool worker threads.
 
 Background
@@ -27,8 +38,7 @@ two-test pattern: one end-to-end test proves the fix works at the
 call-site level, one documents the Python contract that makes the fix
 necessary. If anyone ever reverts the wrapper, the call-site test
 fails while the contract test keeps passing — a clear diagnostic
-signal for *why* the call-site regressed.
-"""
+signal for *why* the call-site regressed."""
 
 from __future__ import annotations
 

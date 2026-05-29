@@ -1,4 +1,15 @@
-"""Tests for cli.py::_strip_reasoning_tags — specifically the tool-call
+"""推理标签清除CLI测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中tool call block stripped等9个场景的正确性
+- tool call block stripped的正确性验证
+- function calls block stripped的正确性验证
+- gemma function name block stripped的正确性验证
+- 另有6个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for cli.py::_strip_reasoning_tags — specifically the tool-call
 XML stripping added in openclaw/openclaw#67318 port.
 
 The CLI has its own copy of the stripper because it needs to run on the

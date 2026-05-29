@@ -1,11 +1,21 @@
-"""Tests for tools/image_generation_tool.py — FAL multi-model support.
+"""图像生成测试
+
+【产品经理理解要点】
+验证工具系统模块中default model is klein等55个场景的正确性
+- default model is klein的正确性验证
+- default model in catalog的正确性验证
+- all entries have required keys的正确性验证
+- 另有52个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/image_generation_tool.py — FAL multi-model support.
 
 Covers the pure logic of the new wrapper: catalog integrity, the three size
 families (image_size_preset / aspect_ratio / gpt_literal), the supports
 whitelist, default merging, GPT quality override, and model resolution
 fallback. Does NOT exercise fal_client submission — that's covered by
-tests/tools/test_managed_media_gateways.py.
-"""
+tests/tools/test_managed_media_gateways.py."""
 
 from __future__ import annotations
 

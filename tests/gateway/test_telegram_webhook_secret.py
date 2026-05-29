@@ -1,4 +1,13 @@
-"""Tests for GHSA-3vpc-7q5r-276h — Telegram webhook secret required.
+"""消息网关测试 - Telegram平台·Webhook·secret
+
+【产品经理理解要点】
+验证消息网关的Telegram平台Webhook功能
+- 验证的功能: Tests for GHSA-3vpc-7q5r-276h — Telegram webhook secret required
+- 核心测试场景: webhook branch checks secret、guard raises runtime error、guard message includes advisory link 等共5个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for GHSA-3vpc-7q5r-276h — Telegram webhook secret required.
 
 Previously, when TELEGRAM_WEBHOOK_URL was set but TELEGRAM_WEBHOOK_SECRET
 was not, python-telegram-bot received secret_token=None and the webhook

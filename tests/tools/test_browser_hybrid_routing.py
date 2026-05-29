@@ -1,4 +1,15 @@
-"""Tests for hybrid browser-backend routing (LAN/localhost auto-local).
+"""浏览器混合路由routing测试
+
+【产品经理理解要点】
+验证工具系统模块中public url uses bare task id等20个场景的正确性
+- public url uses bare task id的正确性验证
+- localhost routes to local sidecar的正确性验证
+- loopback ipv4 routes to local sidecar的正确性验证
+- 另有17个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for hybrid browser-backend routing (LAN/localhost auto-local).
 
 When a cloud browser provider (Browserbase / Browser-Use / Firecrawl) is
 configured globally, ``browser.auto_local_for_private_urls`` (default True)
@@ -8,8 +19,7 @@ public URLs continue to hit the cloud session in the same conversation.
 
 These tests cover the routing decision layer — session_key selection,
 sidecar detection, last-active-session tracking, and the config toggle.
-The downstream session creation is covered by test_browser_cloud_fallback.py.
-"""
+The downstream session creation is covered by test_browser_cloud_fallback.py."""
 from unittest.mock import Mock
 
 import pytest

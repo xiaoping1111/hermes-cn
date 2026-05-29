@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
-"""
+"""批量执行器测试
+
+【产品经理理解要点】
+验证系统集成模块中相关功能的正确性
+- 模块功能单元测试覆盖
+- 影响系统集成的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
 Test script for batch runner
 
 This script tests the batch runner with a small sample dataset
-to verify functionality before running large batches.
-"""
+to verify functionality before running large batches."""
 
 import pytest
 pytestmark = pytest.mark.integration

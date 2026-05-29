@@ -1,3 +1,17 @@
+"""命令行界面测试 - 设置·提示词处理·menus
+
+【产品经理理解要点】
+验证命令行界面的设置提示词处理功能
+- 验证的功能: 初始化提示词菜单交互
+- 核心测试场景: prompt strips bracketed paste markers、password prompt strips bracketed paste markers、prompt choice uses curses helper 等共5个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - 初始化设置·提示词处理·menus
+
+测试CLI命令处理与配置管理中setup相关的prompt相关的menus功能
+"""
+
 from hermes_cli import setup as setup_mod
 
 

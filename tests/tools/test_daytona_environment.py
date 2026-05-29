@@ -1,4 +1,15 @@
-"""Unit tests for the Daytona cloud sandbox environment backend."""
+"""Daytona沙箱environment测试
+
+【产品经理理解要点】
+验证工具系统模块中default cwd resolves home等26个场景的正确性
+- default cwd resolves home的正确性验证
+- tilde cwd resolves home的正确性验证
+- explicit cwd not overridden的正确性验证
+- 另有23个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Unit tests for the Daytona cloud sandbox environment backend."""
 
 import threading
 from types import SimpleNamespace

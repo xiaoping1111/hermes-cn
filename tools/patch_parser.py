@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 """
+V4A 补丁格式解析器
+
+【产品经理理解要点】
+解析 V4A 统一补丁格式（codex/cline 等编码 Agent 共用），将"增/删/改/移文件"指令转为可执行操作。
+- 核心职责：解析 V4A 补丁文本为结构化操作列表（添加/更新/删除/移动文件），并应用到文件系统
+- 关键业务概念：跨 Agent 兼容——V4A 是 codex、cline 等多种编码 Agent 的通用输出格式，本解析器实现互通
+- 在系统中的位置：文件编辑工具的替代路径，当 LLM 输出 V4A 格式时由此解析和执行
+
+─────────────────────────────────────────────────────────────────
 V4A Patch Format Parser
 
 Parses the V4A patch format used by codex, cline, and other coding agents.

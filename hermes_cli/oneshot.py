@@ -1,4 +1,13 @@
-"""Oneshot (-z) mode: send a prompt, get the final content block, exit.
+"""单次执行模式（-z）：发送一条提示，获取最终回复，退出
+
+【产品经理理解要点】
+非交互式的一次性问答模式，适用于脚本管道、CI/CD 集成等自动化场景。
+- 无 banner、无 spinner、无会话 ID，仅输出 AI 最终文本到 stdout
+- 自动批准所有工具调用（YOLO 模式），无需人工审批
+- 支持指定模型、供应商和工具集
+
+─────────────────────────────────────────────────────────────────
+Oneshot (-z) mode: send a prompt, get the final content block, exit.
 
 Bypasses cli.py entirely.  No banner, no spinner, no session_id line,
 no stderr chatter.  Just the agent's final text to stdout.

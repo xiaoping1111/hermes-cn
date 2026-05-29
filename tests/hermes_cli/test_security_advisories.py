@@ -1,4 +1,13 @@
-"""Tests for hermes_cli.security_advisories.
+"""命令行界面测试 - security·advisories
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for hermes_cli.security_advisories
+- 核心测试场景: no match returns empty list、exact version match、safe version does not match 等共20个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.security_advisories.
 
 The advisory module is the user-facing detection / remediation surface
 for supply-chain attacks (e.g. the Mini Shai-Hulud worm of May 2026 that

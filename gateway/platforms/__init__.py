@@ -1,4 +1,17 @@
-"""
+"""平台适配器集合 — 各通讯平台的消息收发和认证实现
+
+【产品经理理解要点】
+每个平台适配器负责：
+  - 接收来自平台的消息
+  - 将 AI 回复发回平台
+  - 处理平台特有的认证方式
+  - 处理消息格式和媒体文件
+
+支持的平台：Telegram、Discord、WhatsApp、微信、飞书、钉钉、企业微信、
+Signal、Slack、Matrix、QQ、Email、元宝等。
+
+─────────────────────────────────────────────────────────────────
+
 Platform adapters for messaging integrations.
 
 Each adapter handles:

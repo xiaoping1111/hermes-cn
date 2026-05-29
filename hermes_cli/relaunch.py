@@ -1,4 +1,13 @@
 """
+CLI 自重启机制
+
+【产品经理理解要点】
+Hermes 自身进程替换重启，保留关键启动参数（TUI 模式、Profile、Model 等）。
+- 确保 `hermes sessions browse` 等命令重启后不丢失用户的 UI 模式偏好
+- 兼容 nix run 和 python -m 等非 PATH 安装方式
+- POSIX 用 execvp 原地替换进程，Windows 用子进程+退出模拟
+
+─────────────────────────────────────────────────────────────────
 Unified self-relaunch for Hermes CLI.
 
 Preserves critical flags (--tui, --dev, --profile, --model, etc.) across

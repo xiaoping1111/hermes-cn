@@ -1,4 +1,15 @@
-"""Tests for video_analyze tool in tools/vision_tools.py."""
+"""视频分析测试
+
+【产品经理理解要点】
+验证工具系统模块中mp4等29个场景的正确性
+- mp4的正确性验证
+- webm的正确性验证
+- mov的正确性验证
+- 另有26个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for video_analyze tool in tools/vision_tools.py."""
 
 import asyncio
 import json

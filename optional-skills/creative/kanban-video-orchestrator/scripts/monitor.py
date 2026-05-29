@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""
+"""视频制作看板监控脚本
+
+【产品经理理解要点】
+监控视频制作看板的运行状态，自动检测卡住的任务、缺失心跳和依赖死锁。
+- 核心职责：定期轮询看板状态，发现并告警异常任务
+- 使用场景：管理多角色视频制作流水线的健康状态
+
+─────────────────────────────────────────────────────────────────
 Monitor a running video-production kanban. Polls `hermes kanban list` and
 `events` for a tenant and surfaces issues (stuck tasks, missing heartbeats,
 repeated retries, dependency deadlocks).

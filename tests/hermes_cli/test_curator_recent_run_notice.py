@@ -1,4 +1,13 @@
-"""Tests for `_print_curator_recent_run_notice`.
+"""命令行界面测试 - curator·recent·run·notice
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for `_print_curator_recent_run_notice`
+- 核心测试场景: silent when no curator run yet、silent when summary is single line、prints multiline summary with rename map 等共6个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for `_print_curator_recent_run_notice`.
 
 The notice prints the most recent curator run summary on `hermes update`,
 exactly once per run. Show-once is enforced by stamping

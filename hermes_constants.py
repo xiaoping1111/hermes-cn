@@ -1,7 +1,15 @@
-"""Shared constants for Hermes Agent.
+"""Hermes Agent 的共享常量模块。
 
-Import-safe module with no dependencies — can be imported from anywhere
-without risk of circular imports.
+【产品经理理解要点】
+这是整个系统的"配置中心"——所有全局路径、目录位置、环境变量都从这里获取。
+核心概念：
+  - HERMES_HOME：Hermes 的数据主目录，默认 ~/.hermes，所有用户数据都在这里
+  - 配置路径：config.yaml、.env 等文件的位置
+  - 环境检测：自动识别是否运行在 WSL/Docker/Termux(Android) 环境中
+  - 网络偏好：强制 IPv4 等网络配置
+
+这是一个不带任何依赖的、导入安全的模块。可以从任何地方导入，而不会有循环导入的风险。
+它定义了全局路径（如 HERMES_HOME）、配置目录、日志路径以及常用的环境变量键名。
 """
 
 import os

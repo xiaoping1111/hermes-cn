@@ -1,4 +1,25 @@
-"""Unified removal contract for every credential source Hermes reads from.
+"""凭据来源 — 统一管理各种 API Key 的读取和删除
+
+【产品经理理解要点】
+Agent 的 API Key 可以从很多地方获取（环境变量、配置文件、OAuth 登录等），
+就像一个人的门禁卡可以从不同渠道办理一样。这个模块统一管理所有渠道：
+
+凭据来源清单：
+  - 环境变量：如 OPENAI_API_KEY 这样的系统环境变量
+  - Claude Code：自动读取 Claude Code 已保存的凭据
+  - OAuth 登录：通过浏览器登录获取的令牌
+  - 阿里通义千问CLI：读取 qwen-cli 的 OAuth 凭据
+  - GitHub CLI：读取 gh auth 的令牌
+  - 配置文件：用户在 config.yaml 中自定义的提供商
+  - 手动添加：用户通过命令行主动添加
+
+关键功能：删除一个凭据后，不会在下次启动时又自动恢复。
+之前从环境变量、OAuth文件等来源添加的Key，删掉后只要源文件还在就会重新出现，
+这个模块确保删除操作是彻底的。
+
+─────────────────────────────────────────────────────────────────
+
+Unified removal contract for every credential source Hermes reads from.
 
 Hermes seeds its credential pool from many places:
 

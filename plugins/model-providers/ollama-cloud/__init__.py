@@ -1,4 +1,11 @@
-"""Ollama Cloud provider profile."""
+"""Ollama Cloud模型供应商配置
+
+【产品经理理解要点】
+注册Ollama云端推理服务供应商，无需本地GPU即可使用Ollama模型。
+- 供应商：Ollama Cloud，提供云端Ollama模型推理
+- 认证：OLLAMA_API_KEY
+- 辅助模型：nemotron-3-nano:30b
+"""
 
 from providers import register_provider
 from providers.base import ProviderProfile

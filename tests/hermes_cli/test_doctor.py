@@ -1,4 +1,14 @@
-"""Tests for hermes_cli.doctor."""
+"""命令行界面测试 - doctor
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for hermes_cli.doctor
+- 核心测试场景: run doctor sets interactive env for tool checks、check gateway service linger warns when disabled、check gateway service linger skips when service not installed 等共55个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.doctor.
+"""
 
 import os
 import sys

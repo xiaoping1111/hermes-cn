@@ -1,3 +1,17 @@
+"""命令行界面测试 - 环境变量加载
+
+【产品经理理解要点】
+验证命令行界面环境变量加载的正确性
+- 验证的功能: 环境变量加载与优先级
+- 核心测试场景: user env overrides stale shell values、project env overrides stale shell values when user env missing、project env is sanitized before loading 等共5个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - 环境变量加载·loader
+
+测试CLI命令处理与配置管理中env相关的loader功能
+"""
+
 import importlib
 import os
 import sys

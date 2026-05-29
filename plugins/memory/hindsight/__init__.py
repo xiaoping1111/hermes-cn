@@ -1,5 +1,13 @@
-"""Hindsight memory plugin — MemoryProvider interface.
+"""Hindsight记忆供应商 — 知识图谱与多策略检索
 
+【产品经理理解要点】
+提供基于Hindsight的长期记忆服务，包含知识图谱、实体解析和多策略检索能力，支持云端和本地两种模式。
+- 核心能力：知识图谱、实体解析、多策略检索、辩证综合(LLM驱动)
+- 两种模式：云端模式(HINDSIGHT_API_KEY)或本地模式(内嵌daemon)
+- 使用场景：需要深度知识图谱和复杂检索的AI记忆场景
+- 可配置项：recall预算(low/mid/high)、请求超时、daemon空闲超时
+
+─────────────────────────────────────────────────────────────────
 Long-term memory with knowledge graph, entity resolution, and multi-strategy
 retrieval. Supports cloud (API key) and local modes.
 

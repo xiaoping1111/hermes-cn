@@ -1,7 +1,17 @@
-"""Tests for file write safety and HERMES_WRITE_SAFE_ROOT sandboxing.
+"""文件写入安全测试
 
-Based on PR #1085 by ismoilh (salvaged).
-"""
+【产品经理理解要点】
+验证工具系统模块中temp file not denied by default等16个场景的正确性
+- temp file not denied by default的正确性验证
+- ssh key is denied的正确性验证
+- etc shadow is denied的正确性验证
+- 另有13个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for file write safety and HERMES_WRITE_SAFE_ROOT sandboxing.
+
+Based on PR #1085 by ismoilh (salvaged)."""
 
 import os
 from pathlib import Path

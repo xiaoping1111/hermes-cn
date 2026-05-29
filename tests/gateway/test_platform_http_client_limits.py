@@ -1,4 +1,13 @@
-"""Tests for the shared httpx.Limits helper that all long-lived platform
+"""消息网关测试 - platform·http·CLI命令·限制
+
+【产品经理理解要点】
+验证消息网关的CLI命令限制功能
+- 验证的功能: Tests for the shared httpx.Limits helper that all long-lived platform
+- 核心测试场景: returns none when httpx unavailable、default limits tighten keepalive below httpx default、env override keepalive expiry 等共7个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the shared httpx.Limits helper that all long-lived platform
 adapters use to tighten their keep-alive pool.
 
 Context: #18451 — on macOS behind Cloudflare Warp, httpx's default

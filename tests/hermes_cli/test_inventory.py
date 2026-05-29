@@ -1,4 +1,13 @@
-"""Behavior tests for hermes_cli.inventory.
+"""命令行界面测试 - inventory
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Behavior tests for hermes_cli.inventory
+- 核心测试场景: load picker context full dict、load picker context falls back to name when default missing、load picker context string model legacy shape 等共18个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Behavior tests for hermes_cli.inventory.
 
 Locks the invariants the three migrated consumers (web_server.py
 /api/model/options, tui_gateway model.options, tui_gateway model.save_key)

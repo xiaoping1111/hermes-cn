@@ -1,4 +1,13 @@
-"""Tests for IRC gateway configuration via `hermes setup gateway` UI.
+"""命令行界面测试 - 设置·irc
+
+【产品经理理解要点】
+验证命令行界面的设置功能
+- 验证的功能: Tests for IRC gateway configuration via `hermes setup gateway` UI
+- 核心测试场景: irc appears in all platforms、irc status not configured when fresh、irc status configured when env set 等共8个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for IRC gateway configuration via `hermes setup gateway` UI.
 
 Covers the full plugin-platform discovery → status → configure flow so that
 a fresh Hermes install (no state, no env vars) can set up IRC through the

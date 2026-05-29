@@ -1,4 +1,13 @@
-"""Regression tests for the standalone Telegram send path's proxy support.
+"""Telegram消息代理测试
+
+【产品经理理解要点】
+验证工具系统模块中proxy env passed to httpx request、no proxy env uses plain bot的正确性
+- proxy env passed to httpx request的正确性验证
+- no proxy env uses plain bot的正确性验证
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for the standalone Telegram send path's proxy support.
 
 The ``send_message`` tool, when invoked from a process *other than* the
 gateway (agent / TUI / cron), runs ``_send_telegram`` directly instead of
@@ -9,8 +18,7 @@ api.telegram.org is blocked (e.g. RU) the send would just time out with
 ``Telegram send failed: Timed out`` and never show up in ``gateway.log``.
 
 These tests verify that the standalone path now honours ``TELEGRAM_PROXY``
-the same way the gateway adapter (and the Discord standalone path) do.
-"""
+the same way the gateway adapter (and the Discord standalone path) do."""
 
 from __future__ import annotations
 

@@ -1,4 +1,15 @@
-"""Tests for --yolo (HERMES_YOLO_MODE) approval bypass."""
+"""YOLO模式测试
+
+【产品经理理解要点】
+验证工具系统模块中dangerous command blocked normally等11个场景的正确性
+- dangerous command blocked normally的正确性验证
+- dangerous command approved in yolo mode的正确性验证
+- yolo mode works for all patterns的正确性验证
+- 另有8个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for --yolo (HERMES_YOLO_MODE) approval bypass."""
 
 import os
 import pytest

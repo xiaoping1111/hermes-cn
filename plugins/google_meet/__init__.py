@@ -1,5 +1,12 @@
-"""google_meet plugin — let the agent join a Meet call, transcribe it, follow up.
+"""Google Meet会议机器人插件
 
+【产品经理理解要点】
+让AI代理加入Google Meet视频会议，自动转录会议内容并进行后续处理。
+- v1(当前)：通过Playwright无头浏览器加入会议，启用实时字幕，抓取转录内容
+- v2(规划中)：实时双向音频，让AI能在会议中发言
+- 设计原则：仅加入用户明确指定的meet.google.com链接，不自动拨号，不扫描日历
+
+─────────────────────────────────────────────────────────────────
 v1: transcribe-only. Spawns a headless Chromium via Playwright, joins the Meet
 URL, enables live captions, scrapes them into a transcript file. The agent then
 has the transcript in its workspace and can do whatever followup work it needs

@@ -1,4 +1,13 @@
-"""Tests for cronjob no_agent mode — script-driven jobs that skip the LLM.
+"""定时任务测试 - 无代理脚本模式
+
+【产品经理理解要点】
+验证定时任务调度引擎无代理脚本模式的正确性
+- 验证的功能: Tests for cronjob no_agent mode — script-driven jobs that skip the LLM
+- 核心测试场景: create job no agent requires script、create job no agent stores field、create job default is not no agent 等共18个场景
+- 业务影响: 定时任务可能无法正确调度执行，影响自动化工作流的可靠性
+
+─────────────────────────────────────────────────────────────────
+Tests for cronjob no_agent mode — script-driven jobs that skip the LLM.
 
 Covers:
 

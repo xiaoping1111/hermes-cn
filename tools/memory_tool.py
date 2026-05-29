@@ -1,5 +1,20 @@
 #!/usr/bin/env python3
-"""
+"""记忆工具 — 跨会话的持久化记忆管理
+
+【产品经理理解要点】
+让 AI 能记住和遗忘信息，拥有两个记忆存储：
+  - MEMORY.md：AI 的个人笔记（环境信息、项目规范、学到的经验）
+  - USER.md：关于用户的记录（偏好、沟通风格、工作习惯）
+
+关键设计：
+  - 写入立即持久化到磁盘（不怕断电）
+  - 但不立即更新系统提示词（保护缓存性能）
+  - 下次会话启动时加载最新快照
+
+记忆分隔符：§（章节号），每条记忆独立管理（添加、替换、删除）。
+
+─────────────────────────────────────────────────────────────────
+
 Memory Tool Module - Persistent Curated Memory
 
 Provides bounded, file-backed memory that persists across sessions. Two stores:

@@ -1,4 +1,15 @@
-"""Tests for _resolve_path() — TERMINAL_CWD-aware path resolution in file_tools."""
+"""路径解析测试
+
+【产品经理理解要点】
+验证工具系统模块中relative path uses terminal cwd等6个场景的正确性
+- relative path uses terminal cwd的正确性验证
+- absolute path ignores terminal cwd的正确性验证
+- falls back to cwd without terminal cwd的正确性验证
+- 另有3个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for _resolve_path() — TERMINAL_CWD-aware path resolution in file_tools."""
 
 import os
 from pathlib import Path

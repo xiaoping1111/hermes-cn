@@ -1,11 +1,21 @@
-"""Integration tests for Home Assistant (tool + gateway).
+"""高可用集成测试
+
+【产品经理理解要点】
+验证系统集成模块中connect auth subscribe等14个场景的正确性
+- connect auth subscribe的正确性验证
+- connect auth rejected的正确性验证
+- event received and forwarded的正确性验证
+- 另有11个测试场景覆盖
+- 影响系统集成的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Integration tests for Home Assistant (tool + gateway).
 
 Spins up a real in-process fake HA server (HTTP + WebSocket) and exercises
 the full adapter and tool handler paths over real TCP connections.
 No mocks -- only real async I/O against a fake server.
 
-Run with:  uv run pytest tests/integration/test_ha_integration.py -v
-"""
+Run with:  uv run pytest tests/integration/test_ha_integration.py -v"""
 
 import asyncio
 

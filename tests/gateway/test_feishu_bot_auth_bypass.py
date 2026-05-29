@@ -1,4 +1,13 @@
-"""Regression guard for Feishu bot-sender authorization bypass.
+"""消息网关测试 - feishu·机器人过滤·认证授权·bypass
+
+【产品经理理解要点】
+验证消息网关的机器人过滤认证授权功能
+- 验证的功能: Regression guard for Feishu bot-sender authorization bypass
+- 核心测试场景: feishu bot authorized when allow bots mentions、feishu bot authorized when allow bots all、feishu bot NOT authorized when allow bots none 等共6个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression guard for Feishu bot-sender authorization bypass.
 
 Mirrors tests/gateway/test_discord_bot_auth_bypass.py for Platform.FEISHU.
 Without the bypass in gateway/run.py, Feishu bot senders admitted by the

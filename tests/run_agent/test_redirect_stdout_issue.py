@@ -1,10 +1,17 @@
-"""Verify that redirect_stdout in _run_single_child is process-wide.
+"""标准输出重定向测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中redirect stdout affects other threads的正确性
+- redirect stdout affects other threads的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Verify that redirect_stdout in _run_single_child is process-wide.
 
 This demonstrates that contextlib.redirect_stdout changes sys.stdout
 for ALL threads, not just the current one. This means during subagent
 execution, all output from other threads (including the CLI's process_thread)
-is swallowed.
-"""
+is swallowed."""
 
 import contextlib
 import io

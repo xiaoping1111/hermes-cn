@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Fetch OFAC SDN list (CSV format) and normalize.
+"""OFAC制裁名单查询
+
+【产品经理理解要点】
+查询美国财政部OFAC特别指定国民（SDN）制裁名单，检查实体是否受制裁。
+- 核心职责：下载并解析SDN制裁名单CSV，支持姓名搜索
+- 使用场景：合规审查、尽职调查中检查交易对手是否在制裁名单上
+
+─────────────────────────────────────────────────────────────────
+Fetch OFAC SDN list (CSV format) and normalize.
 
 Public endpoint: https://www.treasury.gov/ofac/downloads/sdn.csv
 Format reference: https://ofac.treasury.gov/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists

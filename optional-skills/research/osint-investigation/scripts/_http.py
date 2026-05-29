@@ -1,4 +1,11 @@
-"""Tiny stdlib HTTP helper used by fetch_*.py scripts.
+"""OSINT HTTP请求辅助库
+
+【产品经理理解要点】
+为所有OSINT数据抓取脚本提供统一的HTTP请求封装，含重试和User-Agent管理。
+- 核心职责：封装标准库HTTP请求，提供友好的重试机制和UA标识
+
+─────────────────────────────────────────────────────────────────
+Tiny stdlib HTTP helper used by fetch_*.py scripts.
 
 Provides polite retry + JSON convenience + User-Agent enforcement.
 """

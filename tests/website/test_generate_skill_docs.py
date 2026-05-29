@@ -1,4 +1,15 @@
-"""Tests for website/scripts/generate-skill-docs.py.
+"""技能文档生成测试
+
+【产品经理理解要点】
+验证网站生成模块中code block without box chars is not wrapped等7个场景的正确性
+- code block without box chars is not wrapped的正确性验证
+- code block with box chars gets wrapped的正确性验证
+- multiple code blocks only box ones wrapped的正确性验证
+- 另有4个测试场景覆盖
+- 影响网站生成的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for website/scripts/generate-skill-docs.py.
 
 The generator turns every `skills/**/SKILL.md` into a Docusaurus page before
 the `docs-site-checks` CI workflow runs `ascii-guard lint` on the result. If
@@ -7,8 +18,7 @@ without its own `<!-- ascii-guard-ignore -->` markers, the generator must
 add them defensively — otherwise every PR touching `website/**` fails lint
 on unrelated skill content.
 
-Regression for issue #15305.
-"""
+Regression for issue #15305."""
 
 from __future__ import annotations
 

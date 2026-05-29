@@ -1,11 +1,21 @@
-"""Reproducible perf benchmark for file sync overhead.
+"""文件同步性能测试
+
+【产品经理理解要点】
+验证工具系统模块中echo latency等4个场景的正确性
+- echo latency的正确性验证
+- echo latency的正确性验证
+- sync overhead after interval的正确性验证
+- 另有1个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Reproducible perf benchmark for file sync overhead.
 
 Measures actual env.execute() wall-clock time, no LLM in the loop.
 Run with: uv run pytest tests/tools/test_file_sync_perf.py -v -o "addopts=" -s
 
 Requires backends to be configured (SSH host, Modal creds, etc).
-Skip markers gate each backend.
-"""
+Skip markers gate each backend."""
 
 import statistics
 import time

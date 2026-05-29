@@ -1,4 +1,13 @@
-"""Yuanbao recall: branch A1 (exact id) and A2 (content-match) against DB-only transcripts.
+"""消息网关测试 - 元宝平台·撤回处理·数据库·only
+
+【产品经理理解要点】
+验证消息网关的元宝平台撤回处理数据库功能
+- 验证的功能: Yuanbao recall: branch A1 (exact id) and A2 (content-match) against DB-only transcripts
+- 核心测试场景: recall branch a1 exact id match round trips through db、recall branch a2 content match when no platform id
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Yuanbao recall: branch A1 (exact id) and A2 (content-match) against DB-only transcripts.
 
 state.db persists the platform-side ``message_id`` via the
 ``platform_message_id`` column (added in the salvage of PR #29211) and

@@ -1,8 +1,18 @@
-"""Tests for path traversal prevention in skill_view.
+"""技能视图遍历测试
+
+【产品经理理解要点】
+验证工具系统模块中dotdot in file path等6个场景的正确性
+- dotdot in file path的正确性验证
+- dotdot nested的正确性验证
+- legitimate file still works的正确性验证
+- 另有3个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for path traversal prevention in skill_view.
 
 Regression tests for issue #220: skill_view file_path parameter allowed
-reading arbitrary files (e.g., ~/.hermes/.env) via path traversal.
-"""
+reading arbitrary files (e.g., ~/.hermes/.env) via path traversal."""
 
 import json
 import pytest

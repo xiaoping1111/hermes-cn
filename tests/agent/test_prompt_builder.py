@@ -1,4 +1,14 @@
-"""Tests for agent/prompt_builder.py — context scanning, truncation, skills index."""
+"""提示词构建器测试
+
+【产品经理理解要点】
+验证系统提示词的构建逻辑，包括上下文扫描、截断和技能索引。
+- 上下文文件的扫描和整理
+- 超长内容的截断策略
+- 影响AI的系统提示词质量
+
+──────────────────────────────────────────────────────────────
+Tests for agent/prompt_builder.py — context scanning, truncation, skills index.
+"""
 
 import builtins
 import importlib

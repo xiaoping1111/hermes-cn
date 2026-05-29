@@ -1,4 +1,6 @@
-"""
+"""【产品经理理解要点】
+ComfyUI技能共享逻辑库——为所有ComfyUI脚本提供统一的HTTP传输（重试/退避/流式）、云端检测与端点映射、工作流节点类型目录、API格式校验、安全文件写入和API Key加载。
+─────────────────────────────────────────────────────────────────
 _common.py — Shared logic for ComfyUI skill scripts.
 
 Single source of truth for:

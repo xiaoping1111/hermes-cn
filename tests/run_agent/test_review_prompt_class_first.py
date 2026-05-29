@@ -1,4 +1,15 @@
-"""Behavior tests for the skill review / combined review prompts.
+"""审查提示分类优先测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中skill review prompt biases toward active updates等19个场景的正确性
+- skill review prompt biases toward active updates的正确性验证
+- skill review prompt treats user corrections as skill...的正确性验证
+- skill review prompt prefers loaded skills first的正确性验证
+- 另有16个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Behavior tests for the skill review / combined review prompts.
 
 The review prompts steer the background review agent toward actively updating
 the skill library after most sessions, with a strong bias toward:
@@ -11,8 +22,7 @@ User-preference corrections (style, format, verbosity, legibility) are
 first-class skill signals, not just memory signals.
 
 These tests assert behavioral *instructions* are present — they do NOT
-snapshot the full prompt text (change-detector).
-"""
+snapshot the full prompt text (change-detector)."""
 
 from run_agent import AIAgent
 

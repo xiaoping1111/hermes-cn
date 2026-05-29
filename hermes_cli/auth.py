@@ -1,4 +1,12 @@
-"""
+"""多供应商认证系统
+
+【产品经理理解要点】
+管理 Hermes 对接各家 AI 供应商的登录凭证，支持 OAuth 浏览器登录和 API Key 两种认证方式。
+- 核心职责：统一管理 30+ AI 供应商（Nous、Anthropic、OpenRouter、xAI、DeepSeek 等）的认证状态，自动刷新令牌，凭据池轮转
+- 关键概念：PROVIDER_REGISTRY 供应商注册表、auth.json 持久化存储、OAuth 设备码登录、API Key 认证、凭据池（多 Key 轮转）
+- 系统定位：Hermes 连接外部 AI 服务的鉴权中枢，所有模型请求必须先通过本模块获取有效凭证
+
+─────────────────────────────────────────────────────────────────
 Multi-provider authentication system for Hermes Agent.
 
 Supports OAuth device code flows (Nous Portal, future: OpenAI Codex) and

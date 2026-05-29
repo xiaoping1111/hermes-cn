@@ -1,4 +1,14 @@
-"""Tests for hermes_cli.web_server and related config utilities."""
+"""命令行界面测试 - web·server
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for hermes_cli.web_server and related config utilities
+- 核心测试场景: adds new vars、updates changed vars、removes deleted known vars 等共145个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.web_server and related config utilities.
+"""
 
 import os
 import json

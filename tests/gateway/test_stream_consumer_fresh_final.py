@@ -1,4 +1,13 @@
-"""Regression tests for the fresh-final-for-long-lived-previews path.
+"""消息网关测试 - stream·consumer·fresh·final
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Regression tests for the fresh-final-for-long-lived-previews path
+- 核心测试场景: disabled by default still edits in place、short lived preview edits in place、long lived preview sends fresh final 等共15个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests for the fresh-final-for-long-lived-previews path.
 
 Ported from openclaw/openclaw#72038.  When a streamed preview has been
 visible long enough that the platform's edit timestamp would be

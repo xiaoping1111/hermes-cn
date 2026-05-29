@@ -1,4 +1,7 @@
-"""Thin Spotify Web API helper used by Hermes native tools."""
+"""Spotify Web API轻量客户端
+
+【产品经理理解要点】
+Spotify Web API的薄封装层，为Hermes工具提供搜索、播放控制、播放列表等API调用能力。"""
 
 from __future__ import annotations
 

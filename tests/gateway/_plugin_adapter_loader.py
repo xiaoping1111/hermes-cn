@@ -1,4 +1,13 @@
-"""Shared helper for loading platform-plugin ``adapter.py`` modules in tests.
+"""消息网关测试 - plugin·adapter·loader
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Shared helper for loading platform-plugin ``adapter.py`` modules in tests
+- 核心测试场景: 消息网关基础功能验证
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Shared helper for loading platform-plugin ``adapter.py`` modules in tests.
 
 Every platform plugin under ``plugins/platforms/<name>/`` ships its own
 ``adapter.py``. If two tests independently do::

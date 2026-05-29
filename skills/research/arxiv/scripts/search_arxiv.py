@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Search arXiv and display results in a clean format.
+"""【产品经理理解要点】
+arXiv学术论文搜索工具——按关键词、作者、分类搜索arXiv论文库，返回标题、摘要和链接。支持按日期/相关性排序和限定返回数量。
+─────────────────────────────────────────────────────────────────
+Search arXiv and display results in a clean format.
 
 Usage:
     python search_arxiv.py "GRPO reinforcement learning"

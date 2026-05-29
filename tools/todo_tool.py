@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
-"""
+"""待办工具 — 任务分解和进度追踪
+
+【产品经理理解要点】
+AI 在处理复杂任务时，用待办列表追踪进度：
+  - 把大任务拆解为小步骤
+  - 逐步标记完成
+  - 上下文压缩后自动恢复待办状态
+
+每个会话有一个独立的待办列表，存储在 AIAgent 实例中。
+
+─────────────────────────────────────────────────────────────────
+
 Todo Tool Module - Planning & Task Management
 
 Provides an in-memory task list the agent uses to decompose complex tasks,

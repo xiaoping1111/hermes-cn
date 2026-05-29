@@ -1,8 +1,17 @@
-"""Tests for the /codex-runtime slash-command shared logic.
+"""命令行界面测试 - Codex运行时
+
+【产品经理理解要点】
+验证命令行界面Codex运行时的正确性
+- 验证的功能: Tests for the /codex-runtime slash-command shared logic
+- 核心测试场景: valid args、invalid arg returns error、default when unset 等共20个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the /codex-runtime slash-command shared logic.
 
 These cover the pure-Python state machine; CLI and gateway handlers are
-tested separately because they involve config persistence and prompt
-formatting that's surface-specific."""
+tested separately because they involve config persistence and promp
+"""
 
 from __future__ import annotations
 

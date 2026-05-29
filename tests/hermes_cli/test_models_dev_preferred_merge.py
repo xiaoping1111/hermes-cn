@@ -1,4 +1,13 @@
-"""Tests for the models.dev-preferred merge behavior in provider_model_ids
+"""命令行界面测试 - 模型管理·dev·preferred·merge
+
+【产品经理理解要点】
+验证命令行界面的模型管理功能
+- 验证的功能: Tests for the models.dev-preferred merge behavior in provider_model_ids
+- 核心测试场景: merge empty mdev returns curated、merge mdev raises returns curated、merge mdev first then curated extras 等共11个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the models.dev-preferred merge behavior in provider_model_ids
 and list_authenticated_providers.
 
 These guard the contract:

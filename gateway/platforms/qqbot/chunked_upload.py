@@ -1,4 +1,15 @@
-"""QQ Bot chunked upload flow.
+"""QQ 机器人分块上传模块
+
+【产品经理理解要点】
+解决 QQ 机器人发送大文件（10MB~100MB）的难题，是小文件直接上传方案的补充。
+- 核心职责：将大文件拆分为多个小块，分步上传到腾讯云 COS，最终合并为完整文件
+- 上传流程：①申请上传（获取分块信息和预签名URL）→ ②逐块上传到 COS 并确认 → ③完成上传获取文件凭证
+- 容错机制：单块上传失败自动重试、完成阶段失败自动重试、服务端临时错误可重试
+- 限额保护：每日上传总量超限时友好提示（不盲目重试），单文件超限时提前拦截
+- 业务场景：当 Agent 需要向用户发送较大图片、文档、视频等超出普通消息限制的文件时
+
+─────────────────────────────────────────────────────────────────
+QQ Bot chunked upload flow.
 
 The QQ v2 API caps inline base64 uploads (``file_data`` / ``url``) at ~10 MB.
 For files between 10 MB and ~100 MB we have to use the three-step chunked
@@ -7,11 +18,11 @@ upload flow::
     1. POST /v2/{users|groups}/{id}/upload_prepare
        → returns upload_id, block_size, and an array of pre-signed COS part URLs.
     2. For each part:
-         PUT the part bytes to its pre-signed COS URL,
-         then POST /v2/{users|groups}/{id}/upload_part_finish to acknowledge.
+          PUT the part bytes to its pre-signed COS URL,
+          then POST /v2/{users|groups}/{id}/upload_part_finish to acknowledge.
     3. POST /v2/{users|groups}/{id}/files with {"upload_id": ...}
        → returns the ``file_info`` token the caller uses in a RichMedia
-       message.
+        message.
 
 Error-code semantics (from the QQ Bot v2 API spec):
 

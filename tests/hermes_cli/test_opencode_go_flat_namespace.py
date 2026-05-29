@@ -1,4 +1,13 @@
-"""Tests for opencode-go / opencode-zen flat-namespace model handling.
+"""命令行界面测试 - opencode·go·flat·namespace
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for opencode-go / opencode-zen flat-namespace model handling
+- 核心测试场景: opencode go strips deepseek prefix、opencode go strips minimax prefix、opencode go strips moonshotai prefix 等共12个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for opencode-go / opencode-zen flat-namespace model handling.
 
 OpenCode Go is NOT a vendor/model aggregator like OpenRouter — its
 ``/v1/models`` endpoint returns bare IDs (``minimax-m2.7``, ``deepseek-v4-flash``)

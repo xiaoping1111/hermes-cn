@@ -1,4 +1,13 @@
-"""Tests for the native Google AI Studio Gemini adapter."""
+"""Gemini原生适配器测试
+
+【产品经理理解要点】
+验证Gemini原生API适配器的消息格式转换和流式处理。
+- OpenAI消息到Gemini格式的转换
+- 影响Google Gemini模型调用的正确性
+
+──────────────────────────────────────────────────────────────
+Tests for the native Google AI Studio Gemini adapter.
+"""
 
 from __future__ import annotations
 

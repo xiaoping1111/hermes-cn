@@ -1,4 +1,14 @@
-"""Tests for set_config_value — verifying secrets route to .env and config to config.yaml."""
+"""命令行界面测试 - set·配置管理·value
+
+【产品经理理解要点】
+验证命令行界面的配置管理功能
+- 验证的功能: Tests for set_config_value — verifying secrets route to .env and config to config.yaml
+- 核心测试场景: explicit key routes to env、api key suffix routes to env、case insensitive 等共17个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for set_config_value — verifying secrets route to .env and config to config.yaml.
+"""
 
 import argparse
 import os

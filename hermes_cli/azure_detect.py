@@ -1,4 +1,13 @@
-"""Azure Foundry endpoint auto-detection.
+"""Azure Foundry 端点自动检测
+
+【产品经理理解要点】
+自动识别用户配置的 Azure AI 端点是 OpenAI 格式还是 Anthropic 格式，并探测可用模型列表。
+- 核心职责：通过 HTTP 探测判断 Azure 端点的 API 协议类型（OpenAI chat_completions 或 Anthropic messages），尽力获取可用模型列表和上下文长度
+- 关键概念：API 协议自动检测、Entra ID 无密钥认证模式、Azure 部署模型发现
+- 系统定位：设置向导的辅助模块，帮助用户在配置 Azure 供应商时自动填写正确的参数
+
+─────────────────────────────────────────────────────────────────
+Azure Foundry endpoint auto-detection.
 
 Inspect a Microsoft Foundry / Azure OpenAI endpoint to determine:
   - API transport (OpenAI-style ``chat_completions`` vs

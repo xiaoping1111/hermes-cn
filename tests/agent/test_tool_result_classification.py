@@ -1,4 +1,13 @@
-"""Tests for shared tool result classification helpers."""
+"""工具结果分类测试
+
+【产品经理理解要点】
+验证工具执行结果的分类和评估逻辑。
+- 成功/失败/部分成功的分类
+- 影响AI对工具结果的理解
+
+──────────────────────────────────────────────────────────────
+Tests for shared tool result classification helpers.
+"""
 
 import json
 

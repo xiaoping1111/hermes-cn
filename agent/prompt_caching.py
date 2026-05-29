@@ -1,4 +1,19 @@
-"""Anthropic prompt caching strategy.
+"""提示词缓存策略 — 减少 Anthropic API 的 Token 费用
+
+【产品经理理解要点】
+Anthropic（Claude）的 API 支持"提示词缓存"：如果系统提示词和多轮对话的
+前几轮没有变化，服务器会记住之前处理过的内容，下次调用时不需要重新处理，
+可以节省约 75% 的输入 token 费用。
+
+这个模块决定在消息的哪些位置插入"缓存标记"：
+  - 系统提示词（几乎不变，最值得缓存）
+  - 前3条非系统消息（变化较慢，适合缓存）
+
+就像网页浏览器的缓存：经常访问的页面不需要每次都重新下载。
+
+─────────────────────────────────────────────────────────────────
+
+Anthropic prompt caching strategy.
 
 Single layout: ``system_and_3``. 4 cache_control breakpoints — system
 prompt + last 3 non-system messages, all at the same TTL (5m or 1h).

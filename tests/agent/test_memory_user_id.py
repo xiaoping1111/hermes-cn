@@ -1,4 +1,12 @@
-"""Tests for per-user memory scoping via user_id threading.
+"""记忆用户ID测试
+
+【产品经理理解要点】
+验证记忆系统中用户ID的解析和传递逻辑。
+- 用户ID从配置中的正确提取
+- 影响记忆按用户隔离的准确性
+
+──────────────────────────────────────────────────────────────
+Tests for per-user memory scoping via user_id threading.
 
 Verifies that gateway user_id flows from AIAgent -> MemoryManager -> plugins,
 so each gateway user gets their own memory bucket instead of sharing a static one.

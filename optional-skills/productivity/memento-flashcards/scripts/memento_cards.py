@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Memento card storage, spaced-repetition engine, and CSV I/O.
+"""Memento闪卡存储与间隔重复引擎
+
+【产品经理理解要点】
+管理学习闪卡的存储、间隔重复调度和CSV导入导出。
+- 核心职责：闪卡CRUD、SM-2间隔重复算法、格式转换
+- 输出格式：结构化JSON，便于Agent解析
+
+─────────────────────────────────────────────────────────────────
+Memento card storage, spaced-repetition engine, and CSV I/O.
 
 Stdlib-only. All output is JSON for agent parsing.
 Data file: $HERMES_HOME/skills/productivity/memento-flashcards/data/cards.json

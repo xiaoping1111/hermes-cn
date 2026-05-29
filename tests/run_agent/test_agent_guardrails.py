@@ -1,10 +1,20 @@
-"""Unit tests for AIAgent pre/post-LLM-call guardrails.
+"""Agent安全护栏测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中orphaned result removed等35个场景的正确性
+- orphaned result removed的正确性验证
+- orphaned call gets stub result的正确性验证
+- clean messages pass through的正确性验证
+- 另有32个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Unit tests for AIAgent pre/post-LLM-call guardrails.
 
 Covers three static methods on AIAgent (inspired by PR #1321 — @alireza78a):
   - _sanitize_api_messages()    — Phase 1: orphaned tool pair repair
   - _cap_delegate_task_calls()  — Phase 2a: subagent concurrency limit
-  - _deduplicate_tool_calls()   — Phase 2b: identical call deduplication
-"""
+  - _deduplicate_tool_calls()   — Phase 2b: identical call deduplication"""
 
 import types
 

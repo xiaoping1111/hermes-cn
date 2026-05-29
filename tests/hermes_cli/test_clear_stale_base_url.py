@@ -1,4 +1,14 @@
-"""Tests for _clear_stale_openai_base_url() cleanup after provider switch (#5161)."""
+"""命令行界面测试 - 清除·stale·base·url
+
+【产品经理理解要点】
+验证命令行界面的清除功能
+- 验证的功能: Tests for _clear_stale_openai_base_url() cleanup after provider switch (#5161)
+- 核心测试场景: clears when provider is named、preserves when provider is custom、noop when no openai base url 等共4个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for _clear_stale_openai_base_url() cleanup after provider switch (#5161).
+"""
 
 from __future__ import annotations
 

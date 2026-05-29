@@ -1,4 +1,12 @@
-"""Tests for the on_session_switch hook and session_id propagation.
+"""记忆会话切换测试
+
+【产品经理理解要点】
+验证会话切换时记忆系统的正确隔离和恢复。
+- 切换会话后记忆不混淆
+- 影响多用户/多会话场景的记忆准确性
+
+──────────────────────────────────────────────────────────────
+Tests for the on_session_switch hook and session_id propagation.
 
 Covers #6672: memory providers must be notified when AIAgent.session_id
 rotates mid-process (via /resume, /branch, /reset, /new, or context

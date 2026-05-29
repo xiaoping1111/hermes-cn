@@ -1,7 +1,9 @@
-"""Teams meeting pipeline plugin.
+"""Teams会议流水线插件
 
-Registers only operator-facing CLI surfaces. The agent should invoke these via
-the terminal tool; no model tools are added by this plugin.
+【产品经理理解要点】
+Microsoft Teams会议自动化流水线插件，自动加入会议、转录内容、生成摘要并投递到指定频道。仅注册运维CLI命令。
+- 核心能力：会议自动转录、AI摘要生成、定时排程、Graph订阅管理
+- 使用方式：通过CLI命令操作(hermes teams-pipeline)，Agent通过terminal工具调用
 """
 
 from __future__ import annotations

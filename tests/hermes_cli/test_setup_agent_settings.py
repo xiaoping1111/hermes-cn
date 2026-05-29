@@ -1,4 +1,14 @@
-"""Tests for agent-settings copy in the interactive setup wizard."""
+"""命令行界面测试 - 设置·AI代理·settings
+
+【产品经理理解要点】
+验证命令行界面的设置AI代理功能
+- 验证的功能: Tests for agent-settings copy in the interactive setup wizard
+- 核心测试场景: setup agent settings uses displayed max iterations value、setup agent settings prefers config over stale env
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for agent-settings copy in the interactive setup wizard.
+"""
 
 from hermes_cli.setup import setup_agent_settings
 

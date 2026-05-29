@@ -1,11 +1,21 @@
-"""Regression test for TUI v2 blitz bug: explicit /model --provider switch
+"""模型切换降级裁剪测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中switch drops old primary from fallback chain等4个场景的正确性
+- switch drops old primary from fallback chain的正确性验证
+- switch with empty chain stays empty的正确性验证
+- switch initializes missing fallback attrs的正确性验证
+- 另有1个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression test for TUI v2 blitz bug: explicit /model --provider switch
 silently fell back to the old primary provider on the next turn because the
 fallback chain — seeded from config at agent __init__ — kept entries for the
 provider the user just moved away from.
 
 Reported: "switched from openrouter provider to anthropic api key via hermes
-model and the tui keeps trying openrouter".
-"""
+model and the tui keeps trying openrouter"."""
 
 from unittest.mock import MagicMock, patch
 

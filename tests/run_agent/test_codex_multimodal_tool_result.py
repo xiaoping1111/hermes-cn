@@ -1,4 +1,15 @@
-"""Tests for codex_responses_adapter multimodal tool-result handling.
+"""Codex多模态工具结果测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中list content becomes output array等7个场景的正确性
+- list content becomes output array的正确性验证
+- input image preserves data url的正确性验证
+- string tool content still string output的正确性验证
+- 另有4个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for codex_responses_adapter multimodal tool-result handling.
 
 Tool messages can contain a list of OpenAI-style content parts
 (``[{type:"text"...}, {type:"image_url"...}]``) when the
@@ -7,8 +18,7 @@ This file verifies the Codex Responses adapter:
 
   1. Converts that list into ``function_call_output.output`` as an array of
      ``input_text``/``input_image`` items (not a stringified blob).
-  2. Preserves array-shaped output through the preflight validator.
-"""
+  2. Preserves array-shaped output through the preflight validator."""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""
+"""邮件平台适配器
+
+【产品经理理解要点】
+让用户通过电子邮件与 Agent 交互：
+  - IMAP 接收邮件
+  - SMTP 发送回复
+  - 适合需要正式记录或归档的场景
+
+─────────────────────────────────────────────────────────────────
+
 Email platform adapter for the Hermes gateway.
 
 Allows users to interact with Hermes by sending emails.

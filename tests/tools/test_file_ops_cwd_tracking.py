@@ -1,4 +1,15 @@
-"""Regression tests for cwd-staleness in ShellFileOperations.
+"""文件操作工作目录追踪测试
+
+【产品经理理解要点】
+验证工具系统模块中exec follows env cwd after cd等5个场景的正确性
+- exec follows env cwd after cd的正确性验证
+- patch replace targets live cwd not init cwd的正确性验证
+- explicit cwd arg still wins的正确性验证
+- 另有2个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for cwd-staleness in ShellFileOperations.
 
 The bug: ShellFileOperations captured the terminal env's cwd at __init__
 time and used that stale value for every subsequent _exec() call.  When
@@ -12,8 +23,7 @@ plausible diff, but the user's ``git diff`` showed no change (because
 the patch landed in a different directory's copy of the same file).
 
 Fix: _exec() now prefers the LIVE ``env.cwd`` over the init-time
-``self.cwd``.  Explicit ``cwd`` arg to _exec still wins over both.
-"""
+``self.cwd``.  Explicit ``cwd`` arg to _exec still wins over both."""
 
 from __future__ import annotations
 

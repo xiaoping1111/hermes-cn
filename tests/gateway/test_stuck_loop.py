@@ -1,4 +1,13 @@
-"""Tests for stuck-session loop detection (#7536).
+"""消息网关测试 - stuck·loop
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for stuck-session loop detection (#7536)
+- 核心测试场景: increment creates file、increment accumulates、increment drops inactive sessions 等共9个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for stuck-session loop detection (#7536).
 
 When a session is active across 3+ consecutive gateway restarts (the agent
 gets stuck, gateway restarts, same session gets stuck again), the session

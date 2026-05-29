@@ -1,4 +1,13 @@
-"""Regression tests for /model support of config.yaml custom_providers.
+"""命令行界面测试 - 自定义提供商模型
+
+【产品经理理解要点】
+验证命令行界面自定义提供商模型的正确性
+- 验证的功能: Regression tests for /model support of config.yaml custom_providers
+- 核心测试场景: list authenticated providers includes custom providers、resolve provider full finds named custom provider、switch model accepts explicit named custom provider 等共18个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression tests for /model support of config.yaml custom_providers.
 
 The terminal `hermes model` flow already exposes `custom_providers`, but the
 shared slash-command pipeline (`/model` in CLI/gateway/Telegram) historically

@@ -1,4 +1,13 @@
-"""Regression tests for session-scoped model/provider overrides in gateway agents.
+"""消息网关测试 - 会话管理·模型管理·override·routing
+
+【产品经理理解要点】
+验证消息网关的会话管理模型管理功能
+- 验证的功能: Regression tests for session-scoped model/provider overrides in gateway agents
+- 核心测试场景: run agent prefers session override over global runtime、background task prefers session override over global runtime、gateway auth fallback uses fallback model from config
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests for session-scoped model/provider overrides in gateway agents.
 
 These cover the bug where `/model ...` stored a session override, but fresh
 agent constructions still resolved model/provider from global config/runtime.

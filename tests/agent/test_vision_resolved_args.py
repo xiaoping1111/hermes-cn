@@ -1,4 +1,13 @@
-"""Test that call_llm vision path passes resolved provider args, not raw ones."""
+"""视觉解析参数测试
+
+【产品经理理解要点】
+验证视觉工具调用参数的解析和验证逻辑。
+- 图片URL和base64的正确解析
+- 影响图片识别功能的调用正确性
+
+──────────────────────────────────────────────────────────────
+Test that call_llm vision path passes resolved provider args, not raw ones.
+"""
 
 from unittest.mock import patch, MagicMock
 

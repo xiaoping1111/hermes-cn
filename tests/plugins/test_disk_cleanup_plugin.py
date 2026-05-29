@@ -1,4 +1,15 @@
-"""Tests for the disk-cleanup plugin.
+"""磁盘清理插件测试
+
+【产品经理理解要点】
+验证功能插件模块中accepts path under hermes home等38个场景的正确性
+- accepts path under hermes home的正确性验证
+- rejects outside hermes home的正确性验证
+- accepts tmp hermes prefix的正确性验证
+- 另有35个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the disk-cleanup plugin.
 
 Covers the bundled plugin at ``plugins/disk-cleanup/``:
 
@@ -9,8 +20,7 @@ Covers the bundled plugin at ``plugins/disk-cleanup/``:
     cleanup when anything was tracked during the turn.
   * Slash command handler: status / dry-run / quick / track / forget /
     unknown subcommand behaviours.
-  * Bundled-plugin discovery via ``PluginManager.discover_and_load``.
-"""
+  * Bundled-plugin discovery via ``PluginManager.discover_and_load``."""
 
 import importlib
 import json

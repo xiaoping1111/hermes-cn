@@ -1,4 +1,14 @@
-"""Tests for subprocess.run() timeout coverage in CLI utilities."""
+"""命令行界面测试 - subprocess·超时控制
+
+【产品经理理解要点】
+验证命令行界面的超时控制功能
+- 验证的功能: Tests for subprocess.run() timeout coverage in CLI utilities
+- 核心测试场景: all subprocess run calls have timeout
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for subprocess.run() timeout coverage in CLI utilities.
+"""
 import ast
 from pathlib import Path
 

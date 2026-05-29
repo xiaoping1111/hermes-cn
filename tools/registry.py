@@ -1,4 +1,18 @@
-"""Central registry for all hermes-agent tools.
+"""工具注册中心 — 所有工具的统一注册、查询和调度
+
+【产品经理理解要点】
+每个工具在模块加载时自动注册到这个中心，包括：
+  - 工具名称和描述（告诉 AI 这个工具能做什么）
+  - 参数 schema（告诉 AI 怎么调用）
+  - 处理函数（实际执行工具的逻辑）
+  - 归属工具集（决定哪些场景启用哪些工具）
+
+AI 在对话时只能看到已注册且被启用的工具。注册中心是
+"工具能力数据库"——AI 看到的工具列表、参数格式都来自这里。
+
+─────────────────────────────────────────────────────────────────
+
+Central registry for all hermes-agent tools.
 
 Each tool file calls ``registry.register()`` at module level to declare its
 schema, handler, toolset membership, and availability check.  ``model_tools.py``

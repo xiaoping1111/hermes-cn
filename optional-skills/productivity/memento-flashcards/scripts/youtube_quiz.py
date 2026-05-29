@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Fetch YouTube transcripts for Memento quiz generation.
+"""YouTube视频字幕提取工具
+
+【产品经理理解要点】
+获取YouTube视频的字幕文本，用于生成Memento闪卡测验题目。
+- 核心职责：通过youtube-transcript-api获取视频字幕
+- 注意：仅提取字幕，题目生成由Agent的LLM完成
+
+─────────────────────────────────────────────────────────────────
+Fetch YouTube transcripts for Memento quiz generation.
 
 Requires: pip install youtube-transcript-api
 The quiz question *generation* is done by the agent's LLM — this script only fetches transcripts.

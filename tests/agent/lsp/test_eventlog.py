@@ -1,4 +1,15 @@
-"""Tests for the structured logging dedup model.
+"""LSP结构化日志去重模型测试
+
+【产品经理理解要点】
+验证LSP日志系统的去重机制：在长时间使用中（如1000次文件写入），日志只输出一次INFO级别的"已激活"消息，后续状态保持为DEBUG级别。首见事件提升到INFO/WARNING，重复事件降级为DEBUG，避免日志刷屏。
+- 验证稳态日志不刷屏、状态转换只报告一次、诊断事件始终报告
+- 验证服务器不可用、超时、错误等异常事件按需升级日志级别
+- 业务影响：如果这些测试失败，日志系统可能刷屏或遗漏关键警告，影响问题排查
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for the structured logging dedup model.
 
 The contract: a 1000-write session in one project should emit exactly
 ONE INFO line ("active for <root>") at the default INFO threshold.

@@ -1,5 +1,20 @@
 #!/usr/bin/env python3
 """
+批量代理运行器 (Batch Agent Runner)
+
+【产品经理理解要点】
+这是用于"训练数据生产"的批量执行工具——可以同时用多组 prompt 批量运行 AI 代理，
+收集执行轨迹（trajectory）用于训练下一代工具调用模型。
+核心能力：
+  - 批量执行：从数据集加载 prompt，批量运行代理
+  - 并行处理：多进程同时处理多个 prompt
+  - 断点续跑：支持 checkpoint，中断后可从上次进度恢复
+  - 轨迹保存：保存完整的对话+工具调用轨迹（用于模型训练）
+  - 工具统计：统计每个工具的调用次数、成功率
+  - 推理统计：统计推理（thinking）的覆盖率
+
+使用场景：模型研究团队批量产生训练数据，非日常使用
+─────────────────────────────────────────────────────────────────
 Batch Agent Runner
 
 This module provides parallel batch processing capabilities for running the agent

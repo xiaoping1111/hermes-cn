@@ -1,8 +1,16 @@
-"""Tests that plugin context engines get update_model() called during init.
+"""插件上下文引擎初始化测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中plugin engine gets context length on init、plugin engine update model args的正确性
+- plugin engine gets context length on init的正确性验证
+- plugin engine update model args的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests that plugin context engines get update_model() called during init.
 
 Regression test for #9071 — plugin engines were never initialized with
-context_length, causing the CLI status bar to show 'ctx --'.
-"""
+context_length, causing the CLI status bar to show 'ctx --'."""
 
 from unittest.mock import MagicMock, patch
 

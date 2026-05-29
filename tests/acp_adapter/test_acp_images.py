@@ -1,3 +1,12 @@
+"""ACP适配器图片处理测试
+
+【产品经理理解要点】
+验证ACP图片内容块到OpenAI多模态格式的转换。
+- ImageContentBlock转换为OpenAI image_url格式
+- 混合文本+图片内容的正确处理
+- 影响ACP模式下图片识别功能
+"""
+
 import base64
 
 import pytest

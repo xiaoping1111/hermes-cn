@@ -1,4 +1,13 @@
-"""Migrate Hermes' MCP server config and Codex's installed curated plugins
+"""Codex 运行时插件迁移
+
+【产品经理理解要点】
+当用户切换到 Codex 运行时模式时，将 Hermes 的 MCP 服务器配置和已安装插件同步到 Codex 的配置格式。
+- 核心职责：将 Hermes 的 MCP 服务器配置（YAML）转换为 Codex 格式（TOML），同步已安装的 Curated 插件（Canva/GitHub/Calendar 等）
+- 关键概念：Codex 运行时=AI 操作由 Codex 子进程执行、MCP 服务器配置格式转换、插件市场同步
+- 系统定位：运行时切换的配套迁移工具，确保 Codex 模式下用户已有的工具和插件仍然可用
+
+─────────────────────────────────────────────────────────────────
+Migrate Hermes' MCP server config and Codex's installed curated plugins
 to the format Codex expects in ~/.codex/config.toml.
 
 When the user enables the codex_app_server runtime, the codex subprocess

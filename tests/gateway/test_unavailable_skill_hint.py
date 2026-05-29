@@ -1,4 +1,13 @@
-"""Tests for gateway.run._check_unavailable_skill.
+"""消息网关测试 - 不可用技能提示
+
+【产品经理理解要点】
+验证消息网关不可用技能提示的正确性
+- 验证的功能: Tests for gateway.run._check_unavailable_skill
+- 核心测试场景: frontmatter slug matched even when dir name differs、unknown command still returns none、matched but not disabled returns none 等共5个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for gateway.run._check_unavailable_skill.
 
 Regression coverage for the dir-name-vs-frontmatter-name drift bug.
 The hint function used to compare the skill's parent-directory name

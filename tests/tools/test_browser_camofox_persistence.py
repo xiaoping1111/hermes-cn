@@ -1,9 +1,19 @@
-"""Persistence tests for the Camofox browser backend.
+"""浏览器CamoFox隐身persistence测试
+
+【产品经理理解要点】
+验证工具系统模块中disabled by default等27个场景的正确性
+- disabled by default的正确性验证
+- enabled via config yaml的正确性验证
+- disabled when key missing的正确性验证
+- 另有24个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Persistence tests for the Camofox browser backend.
 
 Tests that managed persistence uses stable identity while default mode
 uses random identity. Camofox automatically maps each userId to a
-dedicated persistent Firefox profile on the server side.
-"""
+dedicated persistent Firefox profile on the server side."""
 
 import json
 from unittest.mock import MagicMock, patch

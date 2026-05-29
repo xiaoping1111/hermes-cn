@@ -1,4 +1,14 @@
-"""
+"""钉钉平台适配器
+
+【产品经理理解要点】
+让 Agent 通过钉钉与用户交互，使用 Stream Mode 实时接收消息：
+  - 无需公网 Webhook，通过长连接接收消息
+  - 支持文字、图片、音频、视频、富文本、文件
+  - 支持群聊 @机器人 触发
+  - 回复使用 Markdown 格式
+
+─────────────────────────────────────────────────────────────────
+
 DingTalk platform adapter using Stream Mode.
 
 Uses dingtalk-stream SDK (>=0.20) for real-time message reception without webhooks.

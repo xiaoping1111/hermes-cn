@@ -1,5 +1,13 @@
-"""SearXNG search — plugin form.
+"""SearXNG搜索供应商 — 自托管元搜索引擎
 
+【产品经理理解要点】
+基于用户自部署的SearXNG实例实现隐私友好的聚合搜索。SearXNG汇聚多个上游搜索引擎的结果，不追踪用户。
+- 核心能力：仅搜索，不支持内容提取
+- 隐私优势：自托管、不追踪、聚合Bing/Google/DuckDuckGo等多个引擎
+- 部署要求：需自建SearXNG实例，通过SEARXNG_URL环境变量配置
+- 结果排序：按SearXNG返回的score字段降序排列
+
+─────────────────────────────────────────────────────────────────
 Subclasses :class:`agent.web_search_provider.WebSearchProvider`. Same JSON
 API call (``/search?format=json``), same result normalization. The legacy
 in-tree module ``tools.web_providers.searxng`` was removed in the same

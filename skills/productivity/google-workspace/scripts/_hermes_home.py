@@ -1,4 +1,7 @@
-"""Resolve HERMES_HOME for standalone skill scripts.
+"""【产品经理理解要点】
+Hermes主目录路径解析模块——为独立运行的技能脚本提供HERMES_HOME路径定位能力，在Hermes进程外也能正确找到配置目录。
+─────────────────────────────────────────────────────────────────
+Resolve HERMES_HOME for standalone skill scripts.
 
 Skill scripts may run outside the Hermes process (e.g. system Python,
 nix env, CI) where ``hermes_constants`` is not importable.  This module

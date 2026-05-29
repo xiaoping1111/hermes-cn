@@ -1,4 +1,15 @@
-"""Tests for tools/file_operations.py — deny list, result dataclasses, helpers."""
+"""文件操作测试
+
+【产品经理理解要点】
+验证工具系统模块中ssh authorized keys denied等54个场景的正确性
+- ssh authorized keys denied的正确性验证
+- ssh id rsa denied的正确性验证
+- netrc denied的正确性验证
+- 另有51个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/file_operations.py — deny list, result dataclasses, helpers."""
 
 import os
 import pytest

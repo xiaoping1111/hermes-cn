@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""Hermes CLI 主入口
+
+【产品经理理解要点】
+Hermes 命令行的主程序入口，负责解析所有子命令并分派到对应处理函数。
+- 核心职责：注册所有子命令（chat/gateway/setup/model/cron/auth/skills 等），解析命令行参数，分派执行
+- 关键概念：子命令分派、全局参数处理（--profile/--version）、自动更新检查、会话管理
+- 系统定位：整个 CLI 的调度中枢，用户输入的最终处理者
+
+─────────────────────────────────────────────────────────────────
 Hermes CLI - Main entry point.
 
 Usage:

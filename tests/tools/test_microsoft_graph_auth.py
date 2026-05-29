@@ -1,4 +1,15 @@
-"""Tests for tools/microsoft_graph_auth.py."""
+"""Microsoft Graph认证测试
+
+【产品经理理解要点】
+验证工具系统模块中from env raises for missing required values等9个场景的正确性
+- from env raises for missing required values的正确性验证
+- from env optional returns none when not configured的正确性验证
+- from env builds normalized credentials的正确性验证
+- 另有6个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/microsoft_graph_auth.py."""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""Tests for fallback-eviction gating on failed runs (#7130).
+"""消息网关测试 - 降级驱逐
+
+【产品经理理解要点】
+验证消息网关降级驱逐的正确性
+- 验证的功能: Tests for fallback-eviction gating on failed runs (#7130)
+- 核心测试场景: failed run does not evict cached agent、successful run allows eviction、none result treated as not failed 等共4个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for fallback-eviction gating on failed runs (#7130).
 
 When a run fails, the gateway must NOT evict the cached agent — doing so
 forces MCP reinit on the next message, creating a CPU-burning restart loop.

@@ -1,4 +1,12 @@
-"""Tests for the /update slash command in the classic CLI and TUI launcher.
+"""更新命令测试
+
+【产品经理理解要点】
+验证/hermes update命令的自更新逻辑。
+- 版本检查和更新触发
+- 影响用户获取最新版本的体验
+
+──────────────────────────────────────────────────────────────
+Tests for the /update slash command in the classic CLI and TUI launcher.
 
 Verifies that ``HermesCLI._handle_update_command`` correctly:
 - Refuses to run under a managed install (Homebrew, Docker, etc.)

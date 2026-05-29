@@ -1,4 +1,13 @@
-"""Interactive prompt callbacks for terminal_tool integration.
+"""终端交互回调
+
+【产品经理理解要点】
+当 AI 助手需要用户确认危险操作、回答澄清问题或输入密钥时，通过本模块弹出交互式提示。
+- 核心职责：处理三类交互场景——澄清问题回调（clarify）、密钥输入回调（secret）、危险命令审批回调（approval）
+- 关键概念：超时机制避免无限等待、审批选项（仅本次/本次会话/始终允许/拒绝）、密钥安全存储到 .env 不暴露给模型
+- 系统定位：AI 操作与用户决策之间的安全阀，确保危险操作必须经过人工确认
+
+─────────────────────────────────────────────────────────────────
+Interactive prompt callbacks for terminal_tool integration.
 
 These bridge terminal_tool's interactive prompts (clarify, sudo, approval)
 into prompt_toolkit's event loop. Each function takes the HermesCLI instance

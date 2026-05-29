@@ -1,4 +1,13 @@
-"""Tests for cross-loop client cache isolation fix (#2681).
+"""跨循环客户端缓存测试
+
+【产品经理理解要点】
+验证跨对话循环的HTTP客户端缓存和复用逻辑。
+- 客户端在循环间的正确缓存
+- 缓存过期后的自动重建
+- 影响API客户端的资源效率
+
+──────────────────────────────────────────────────────────────
+Tests for cross-loop client cache isolation fix (#2681).
 
 Verifies that _get_cached_client() returns different AsyncOpenAI clients
 when called from different event loops, preventing the httpx deadlock

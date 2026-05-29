@@ -1,4 +1,12 @@
-"""Regression tests for the generic unsupported-parameter detector in
+"""不支持参数重试测试
+
+【产品经理理解要点】
+验证当模型不支持某些参数时自动移除并重试的逻辑。
+- 不支持参数的自动检测
+- 影响跨模型调用的兼容性
+
+──────────────────────────────────────────────────────────────
+Regression tests for the generic unsupported-parameter detector in
 ``agent.auxiliary_client``.
 
 The original temperature-specific detector (PR #15621) was generalized so the

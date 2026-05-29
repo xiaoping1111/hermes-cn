@@ -1,3 +1,11 @@
+"""配额命令测试
+
+【产品经理理解要点】
+验证/gquota命令展示API配额和使用量的功能。
+- 配额信息的正确展示
+- 影响用户对额度的了解
+"""
+
 from unittest.mock import MagicMock, patch
 
 

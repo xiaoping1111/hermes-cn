@@ -1,4 +1,7 @@
-"""DeepSeek provider profile.
+"""【产品经理理解要点】
+DeepSeek模型提供商——接入DeepSeek V4系列模型。特别注意：DeepSeek默认开启思维链（thinking mode），会导致工具调用后报"reasoning_content must be passed back"错误。本模块通过关闭thinking模式来规避此问题。
+─────────────────────────────────────────────────────────────────
+DeepSeek provider profile.
 
 DeepSeek's V4 family (and the legacy ``deepseek-reasoner``) defaults to
 thinking-mode ON when ``extra_body.thinking`` is unset.  The API then returns

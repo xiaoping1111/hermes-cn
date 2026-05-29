@@ -1,4 +1,9 @@
-"""Kanban dashboard plugin — backend API routes.
+"""【产品经理理解要点】
+看板（Kanban）仪表盘的后端API接口层——为前端看板页面提供增删改查REST接口。
+核心能力：(1) 看板视图：按状态列（triage→todo→scheduled→ready→running→blocked→review→done）返回任务卡片；(2) 任务CRUD：创建/更新/删除任务，支持拖拽改状态；(3) 评论与关联：任务间父子关系、评论；(4) 批量操作：多选批量改状态/指派；(5) 诊断告警：自动检测异常（幻觉引用、卡死等）并在卡片上标红；(6) Worker监控：实时查看正在执行的Worker进程状态。
+安全性：所有接口需带session token认证，WebSocket通过?token=参数传递。
+─────────────────────────────────────────────────────────────────
+Kanban dashboard plugin — backend API routes.
 
 Mounted at /api/plugins/kanban/ by the dashboard plugin system.
 

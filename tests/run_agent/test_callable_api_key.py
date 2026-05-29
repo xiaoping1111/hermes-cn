@@ -1,4 +1,15 @@
-"""Tests that callable api_key (Entra ID bearer provider) flows through
+"""可调用API密钥测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中callable api key passed to openai constructor等16个场景的正确性
+- callable api key passed to openai constructor的正确性验证
+- callable api key survives normalization的正确性验证
+- string api key still works的正确性验证
+- 另有13个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests that callable api_key (Entra ID bearer provider) flows through
 the agent stack without coercion.
 
 The OpenAI Python SDK accepts ``api_key: str | None | Callable[[], str]``,
@@ -20,8 +31,7 @@ Covered:
     a callable api_key raises (default behaviour) — guards against
     silently leaking ``"<function ...>"`` strings into event logs.
   * ``batch_runner`` strips the callable from the worker config dict
-    so multiprocessing.Pool can pickle the rest.
-"""
+    so multiprocessing.Pool can pickle the rest."""
 
 from __future__ import annotations
 

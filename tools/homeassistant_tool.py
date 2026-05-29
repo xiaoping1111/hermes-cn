@@ -1,4 +1,13 @@
-"""Home Assistant tool for controlling smart home devices via REST API.
+"""智能家居控制工具（Home Assistant）
+
+【产品经理理解要点】
+让 Agent 通过 Home Assistant 控制智能家居设备，如开关灯、调节温度等。
+- 核心职责：提供 4 个工具——查看设备列表、查看设备状态、查看可用服务、调用服务（开/关/调温等）
+- 关键业务概念：安全隔离——屏蔽 shell_command 等高危域，防止 Agent 执行任意命令；仅允许安全的设备控制操作
+- 在系统中的位置：对接 Home Assistant REST API，将智能家居纳入 Agent 可控范围
+
+─────────────────────────────────────────────────────────────────
+Home Assistant tool for controlling smart home devices via REST API.
 
 Registers four LLM-callable tools:
 - ``ha_list_entities`` -- list/filter entities by domain or area

@@ -1,4 +1,13 @@
-"""Tests for /restart idempotency guard against Telegram update re-delivery.
+"""消息网关测试 - 重启恢复·redelivery·消息去重
+
+【产品经理理解要点】
+验证消息网关的重启恢复消息去重功能
+- 验证的功能: Tests for /restart idempotency guard against Telegram update re-delivery
+- 核心测试场景: restart handler writes dedup marker with update id、redelivered restart with same update id is ignored、redelivered restart with older update id is ignored 等共9个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for /restart idempotency guard against Telegram update re-delivery.
 
 When PTB's graceful-shutdown ACK call (the final `get_updates` on exit) fails
 with a network error, Telegram re-delivers the `/restart` message to the new

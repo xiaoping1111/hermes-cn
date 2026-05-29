@@ -1,4 +1,14 @@
-"""Tests for namespaced plugin skill registration and resolution.
+"""插件技能注册测试
+
+【产品经理理解要点】
+验证命名空间化的插件技能注册和解析，确保技能名称不会冲突。
+- 技能命名空间helpers的正确性
+- 注册API和全局注册表的一致性
+- 工具调用的限定名分发
+- 影响第三方插件集成的隔离性
+
+──────────────────────────────────────────────────────────────
+Tests for namespaced plugin skill registration and resolution.
 
 Covers:
 - agent/skill_utils namespace helpers

@@ -1,9 +1,19 @@
-"""Tests for AIAgent._summarize_background_review_actions.
+"""background审查摘要测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中skips prior tool messages by tool call id等8个场景的正确性
+- skips prior tool messages by tool call id的正确性验证
+- includes genuinely new actions的正确性验证
+- falls back to content equality when tool call...的正确性验证
+- 另有5个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for AIAgent._summarize_background_review_actions.
 
 Regression coverage for issue #14944: the background memory/skill review used
 to re-surface tool results that were already present in the conversation
-history before the review started (e.g. an earlier "Cron job '...' created.").
-"""
+history before the review started (e.g. an earlier "Cron job '...' created.")."""
 
 import json
 

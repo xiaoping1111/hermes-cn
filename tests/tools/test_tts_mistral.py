@@ -1,4 +1,15 @@
-"""Tests for the Mistral (Voxtral) TTS provider in tools/tts_tool.py."""
+"""语音合成Mistral测试
+
+【产品经理理解要点】
+验证工具系统模块中missing api key raises value error等13个场景的正确性
+- missing api key raises value error的正确性验证
+- successful generation的正确性验证
+- response format from extension的正确性验证
+- 另有10个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the Mistral (Voxtral) TTS provider in tools/tts_tool.py."""
 
 import base64
 from unittest.mock import MagicMock, patch

@@ -1,4 +1,12 @@
-"""
+"""环境信息导出命令
+
+【产品经理理解要点】
+实现 `hermes dump` 命令，输出纯文本版系统信息，方便复制到 Discord/GitHub 反馈问题。
+- 核心职责：生成无颜色/无特殊字符的纯文本环境摘要（版本/平台/API Key 配置状态/网关状态），适合粘贴到聊天工具
+- 关键概念：纯文本输出（无 ANSI 颜色）、脱敏（API Key 只显示前几位）、一键复制环境上下文
+- 系统定位：用户支持的信息收集工具，比 `hermes doctor` 更轻量
+
+─────────────────────────────────────────────────────────────────
 Dump command for hermes CLI.
 
 Outputs a compact, plain-text summary of the user's Hermes setup

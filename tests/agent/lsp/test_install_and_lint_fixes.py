@@ -1,4 +1,16 @@
-"""Tests for follow-up fixes to the LSP integration (PR after #24168).
+"""LSP集成后续修复测试
+
+【产品经理理解要点】
+验证LSP集成后的三个关键修复：(1)TypeScript语言服务器安装时自动附带TypeScript SDK；(2)bash-language-server安装但缺少shellcheck时显示警告；(3)npx tsc不可用时标记为"跳过"而非"错误"，确保LSP语义诊断层仍可运行。
+- 验证npm安装命令包含必要的依赖包
+- 验证状态命令正确显示后端警告信息
+- 验证不可用的linter被正确分类为跳过而非错误，不阻塞LSP诊断
+- 业务影响：如果这些测试失败，TypeScript/Bash文件的LSP诊断可能无法正常工作
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for follow-up fixes to the LSP integration (PR after #24168).
 
 Covers:
 

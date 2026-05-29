@@ -1,4 +1,13 @@
-"""Regression guard: Codex Cloudflare 403 mitigation headers.
+"""Codex Cloudflare请求头测试
+
+【产品经理理解要点】
+验证Codex API经过Cloudflare时的特殊请求头设置。
+- 必要的自定义请求头被正确添加
+- 请求头不干扰正常API调用
+- 影响Codex模型通过CDN的可达性
+
+──────────────────────────────────────────────────────────────
+Regression guard: Codex Cloudflare 403 mitigation headers.
 
 The ``chatgpt.com/backend-api/codex`` endpoint sits behind a Cloudflare layer
 that whitelists a small set of first-party originators (``codex_cli_rs``,

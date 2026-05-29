@@ -1,4 +1,14 @@
-"""Tests for hermes_bootstrap — Windows UTF-8 stdio shim.
+"""Hermes启动引导测试
+
+【产品经理理解要点】
+验证Windows UTF-8启动修正模块，确保在Windows上正确处理非ASCII字符。
+- Windows环境变量和stdio的UTF-8配置
+- POSIX系统上完全无操作
+- 幂等性：多次调用安全
+- 影响Windows用户的基本可用性
+
+──────────────────────────────────────────────────────────────
+Tests for hermes_bootstrap — Windows UTF-8 stdio shim.
 
 The bootstrap module is imported at the top of every Hermes entry point
 (hermes, hermes-agent, hermes-acp, gateway, batch_runner, cli.py).  It

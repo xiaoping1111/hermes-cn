@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Recalculate an .xlsx file's formulas using LibreOffice headless.
+"""Excel公式重算工具
+
+【产品经理理解要点】
+使用LibreOffice无头模式重新计算Excel文件中的公式，确保公式单元格有正确值。
+- 核心职责：解决openpyxl写入公式但不计算的问题
+- 使用场景：批量生成Excel文件后，需要公式结果而非空值
+
+─────────────────────────────────────────────────────────────────
+Recalculate an .xlsx file's formulas using LibreOffice headless.
 
 Usage: python recalc.py <path.xlsx> [timeout_seconds]
 

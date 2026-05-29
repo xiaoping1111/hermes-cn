@@ -1,4 +1,12 @@
-"""
+"""命令行界面测试 - 技能系统·install·flags
+
+【产品经理理解要点】
+验证命令行界面的技能系统功能
+- 验证的功能: Tests for --yes / --force flag separation in `hermes skills install`
+- 核心测试场景: cli skills install yes sets skip confirm、cli skills install y alias、cli skills install force sets force 等共5个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
 Tests for --yes / --force flag separation in `hermes skills install`.
 
 --yes / -y  → skip_confirm (bypass interactive prompt, needed in TUI mode)

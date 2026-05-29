@@ -1,3 +1,17 @@
+"""命令行界面测试 - 更新·autostash
+
+【产品经理理解要点】
+验证命令行界面的更新功能
+- 验证的功能: 配置更新自动暂存
+- 核心测试场景: stash local changes if needed returns none when tree clean、stash local changes if needed returns specific stash commit、resolve stash selector returns matching entry 等共25个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - 配置更新·autostash
+
+测试CLI命令处理与配置管理中update相关的autostash功能
+"""
+
 from pathlib import Path
 from subprocess import CalledProcessError
 from types import SimpleNamespace

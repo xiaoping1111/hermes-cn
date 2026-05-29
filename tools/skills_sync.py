@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 """
+内置技能同步器
+
+【产品经理理解要点】
+将项目自带的技能文件从代码仓库同步到用户目录，并能智能更新——用户修改过的不会被覆盖。
+- 核心职责：基于清单的增量同步——新增技能自动复制、已有技能按哈希判断是否用户修改过（修改过则跳过更新）
+- 关键业务概念：用户修改保护——如果用户定制了某技能（文件哈希变化），升级时跳过该技能，避免覆盖定制内容
+- 在系统中的位置：Agent 启动时和版本升级时的技能初始化流程
+
+─────────────────────────────────────────────────────────────────
 Skills Sync -- Manifest-based seeding and updating of bundled skills.
 
 Copies bundled skills from the repo's skills/ directory into ~/.hermes/skills/

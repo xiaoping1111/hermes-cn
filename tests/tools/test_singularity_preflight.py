@@ -1,10 +1,20 @@
-"""Tests for Singularity/Apptainer preflight availability check.
+"""Singularity预检测试
+
+【产品经理理解要点】
+验证工具系统模块中prefers apptainer等7个场景的正确性
+- prefers apptainer的正确性验证
+- falls back to singularity的正确性验证
+- raises when neither found的正确性验证
+- 另有4个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for Singularity/Apptainer preflight availability check.
 
 Verifies that a clear error is raised when neither apptainer nor
 singularity is installed, instead of a cryptic FileNotFoundError.
 
-See: https://github.com/NousResearch/hermes-agent/issues/1511
-"""
+See: https://github.com/NousResearch/hermes-agent/issues/1511"""
 
 import subprocess
 from unittest.mock import patch, MagicMock

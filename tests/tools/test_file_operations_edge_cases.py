@@ -1,9 +1,19 @@
-"""Tests for edge cases in tools/file_operations.py.
+"""文件操作边界用例测试
+
+【产品经理理解要点】
+验证工具系统模块中binary extension returns true等35个场景的正确性
+- binary extension returns true的正确性验证
+- text content returns false的正确性验证
+- binary content returns true的正确性验证
+- 另有32个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for edge cases in tools/file_operations.py.
 
 Covers:
 - ``_is_likely_binary()`` content-analysis branch (dead-code removal regression guard)
-- ``_check_lint()`` robustness against file paths containing curly braces
-"""
+- ``_check_lint()`` robustness against file paths containing curly braces"""
 
 import pytest
 from unittest.mock import MagicMock, patch

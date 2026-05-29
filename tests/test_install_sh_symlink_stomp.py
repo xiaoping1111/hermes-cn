@@ -1,4 +1,13 @@
-"""Regression for #21454: re-running install.sh on a symlinked prior install.
+"""安装脚本符号链接覆盖修复测试
+
+【产品经理理解要点】
+验证重复安装时不会覆盖已有的符号链接指向的pip入口点，防止无限递归启动。
+- 旧符号链接被正确替换为普通文件
+- pip入口点不被覆写
+- 影响升级安装后的启动可靠性
+
+──────────────────────────────────────────────────────────────
+Regression for #21454: re-running install.sh on a symlinked prior install.
 
 Older versions of ``install.sh`` created ``$command_link_dir/hermes`` as a
 symlink to the pip-generated entry point at ``$HERMES_BIN`` (i.e.

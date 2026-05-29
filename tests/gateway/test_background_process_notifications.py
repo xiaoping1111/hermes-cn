@@ -1,4 +1,13 @@
-"""Tests for configurable background process notification modes.
+"""消息网关测试 - background·process·通知处理
+
+【产品经理理解要点】
+验证消息网关的通知处理功能
+- 验证的功能: Tests for configurable background process notification modes
+- 核心测试场景: run process watcher respects notification mode、thread id passed to send、no thread id sends no metadata 等共25个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for configurable background process notification modes.
 
 The gateway process watcher pushes status updates to users' chats when
 background terminal commands run.  ``display.background_process_notifications``

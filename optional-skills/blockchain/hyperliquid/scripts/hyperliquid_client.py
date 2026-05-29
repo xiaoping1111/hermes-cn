@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""
+"""Hyperliquid DEX查询工具
+
+【产品经理理解要点】
+查询Hyperliquid去中心化交易所的市场数据和账户信息，纯标准库实现。
+- 核心职责：查询Perp DEX市场、持仓、资金费率、订单簿等
+- 支持功能：dexs、markets、account、positions、funding等查询
+
+─────────────────────────────────────────────────────────────────
 Hyperliquid CLI Tool for Hermes Agent
 -------------------------------------
 Queries the Hyperliquid info endpoint for market and account data.

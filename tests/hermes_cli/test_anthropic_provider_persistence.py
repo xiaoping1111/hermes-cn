@@ -1,4 +1,14 @@
-"""Tests for Anthropic credential persistence helpers."""
+"""命令行界面测试 - anthropic·提供商·持久化
+
+【产品经理理解要点】
+验证命令行界面的提供商持久化功能
+- 验证的功能: Tests for Anthropic credential persistence helpers
+- 核心测试场景: save anthropic oauth token uses token slot and clears api key、use anthropic claude code credentials clears env slots、save anthropic api key uses api key slot and clears token
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for Anthropic credential persistence helpers.
+"""
 
 from hermes_cli.config import load_env
 

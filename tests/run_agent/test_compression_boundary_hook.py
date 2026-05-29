@@ -1,4 +1,14 @@
-"""Test: the context engine is notified of a compression-boundary rollover.
+"""压缩边界钩子测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中on session start called with compression boundary、no hook when no session db、hook failure does not break compression的正确性
+- on session start called with compression boundary的正确性验证
+- no hook when no session db的正确性验证
+- hook failure does not break compression的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Test: the context engine is notified of a compression-boundary rollover.
 
 When _compress_context rotates session_id (compression split), the active
 context engine receives on_session_start(new_sid, boundary_reason="compression",
@@ -8,8 +18,7 @@ DAG lineage across the split instead of treating it as a fresh /new.
 See hermes-lcm#68: after Hermes compresses and mints a new physical session,
 LCM was losing continuity (compression_count: 1, store_messages: 0,
 dag_nodes: 0). With boundary_reason="compression" plugins can distinguish
-this from a real user-initiated /new.
-"""
+this from a real user-initiated /new."""
 
 import os
 import tempfile

@@ -1,4 +1,13 @@
-"""Persistent CDP supervisor for browser dialog + frame detection.
+"""浏览器 CDP 监控器——弹窗和帧管理
+
+【产品经理理解要点】
+在后台持续监听浏览器的弹窗事件和页面帧结构，让 Agent 能感知和处理网页弹窗。
+- 核心职责：为每个浏览器任务维护持久 CDP WebSocket 连接，订阅弹窗和帧事件，提供线程安全的状态快照
+- 关键业务概念：无感监控——不在 Agent 工具列表中可见，但通过 browser_snapshot 和 browser_dialog 间接暴露数据
+- 在系统中的位置：CDP 浏览器后端的底层监控组件，为弹窗工具和快照工具提供数据源
+
+─────────────────────────────────────────────────────────────────
+Persistent CDP supervisor for browser dialog + frame detection.
 
 One ``CDPSupervisor`` runs per Hermes ``task_id`` that has a reachable CDP
 endpoint. It holds a single persistent WebSocket to the backend, subscribes

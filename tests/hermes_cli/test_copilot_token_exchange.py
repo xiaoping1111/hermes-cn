@@ -1,4 +1,14 @@
-"""Tests for Copilot token exchange (raw GitHub token → Copilot API token)."""
+"""命令行界面测试 - Copilot令牌
+
+【产品经理理解要点】
+验证命令行界面Copilot令牌的正确性
+- 验证的功能: Tests for Copilot token exchange (raw GitHub token → Copilot API token)
+- 核心测试场景: exchanges token successfully、caches result、refreshes expired cache 等共12个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for Copilot token exchange (raw GitHub token → Copilot API token).
+"""
 
 from __future__ import annotations
 

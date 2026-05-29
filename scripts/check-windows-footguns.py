@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""Windows跨平台陷阱检测
+
+【产品经理理解要点】
+自动扫描代码中的Windows兼容性问题，防止在三端（Mac/Linux/Windows）运行时出错。
+- 核心职责：grep式扫描常见的Windows兼容性反模式
+- 使用场景：PR提交前运行，低成本捕获跨平台回归
+- 典型问题：硬编码POSIX路径、信号处理未做Windows适配等
+
+─────────────────────────────────────────────────────────────────
 Grep-based checker for Windows cross-platform footguns.
 
 Flags common patterns that break silently on Windows. Run before PRs —

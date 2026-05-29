@@ -1,4 +1,15 @@
-"""Tests for agent/context_compressor.py — compression logic, thresholds, truncation fallback."""
+"""上下文压缩器测试
+
+【产品经理理解要点】
+验证上下文压缩器的压缩逻辑、阈值判定和截断降级。
+- 压缩触发条件的阈值判定
+- 对话消息的有效摘要生成
+- 压缩失败时的截断降级
+- 影响长对话的可持续性
+
+──────────────────────────────────────────────────────────────
+Tests for agent/context_compressor.py — compression logic, thresholds, truncation fallback.
+"""
 
 import pytest
 from unittest.mock import patch, MagicMock

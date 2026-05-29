@@ -1,4 +1,12 @@
 from __future__ import annotations
+"""CLI预加载技能测试
+
+【产品经理理解要点】
+验证启动时预加载技能列表的逻辑。
+- 预加载技能的列表正确
+- 影响技能的首次使用可用性
+"""
+
 
 import importlib
 import os

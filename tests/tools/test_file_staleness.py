@@ -1,12 +1,21 @@
 #!/usr/bin/env python3
-"""
+"""文件过期检测测试
+
+【产品经理理解要点】
+验证工具系统模块中no warning when file unchanged等11个场景的正确性
+- no warning when file unchanged的正确性验证
+- warning when file modified externally的正确性验证
+- no warning when file never read的正确性验证
+- 另有8个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
 Tests for file staleness detection in write_file and patch.
 
 When a file is modified externally between the agent's read and write,
 the write should include a warning so the agent can re-read and verify.
 
-Run with:  python -m pytest tests/tools/test_file_staleness.py -v
-"""
+Run with:  python -m pytest tests/tools/test_file_staleness.py -v"""
 
 import json
 import os

@@ -1,4 +1,14 @@
-"""Regression tests for the Anthropic OAuth PKCE flow.
+"""Anthropic OAuth PKCE认证测试
+
+【产品经理理解要点】
+验证Anthropic的OAuth PKCE认证流程，包括授权码获取和令牌交换。
+- PKCE挑战码和验证码的生成
+- 授权码到令牌的交换
+- 令牌刷新和过期处理
+- 影响Claude用户的OAuth登录
+
+──────────────────────────────────────────────────────────────
+Regression tests for the Anthropic OAuth PKCE flow.
 
 Guards against re-introducing the bug where the PKCE ``code_verifier`` was
 reused as the OAuth ``state`` parameter, leaking the verifier via the

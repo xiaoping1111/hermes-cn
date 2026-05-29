@@ -1,4 +1,15 @@
-"""Tests for optional-skills/productivity/memento-flashcards/scripts/youtube_quiz.py"""
+"""YouTube测验测试
+
+【产品经理理解要点】
+验证技能系统模块中basic等9个场景的正确性
+- basic的正确性验证
+- empty segments的正确性验证
+- whitespace only的正确性验证
+- 另有6个测试场景覆盖
+- 影响技能系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for optional-skills/productivity/memento-flashcards/scripts/youtube_quiz.py"""
 
 import json
 import sys

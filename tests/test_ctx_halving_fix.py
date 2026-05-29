@@ -1,4 +1,13 @@
-"""Tests for the context-halving bugfix.
+"""上下文窗口对半缩减修复测试
+
+【产品经理理解要点】
+验证当API返回'max_tokens过大'错误时，系统正确缩减输出Token上限而非错误地削减上下文窗口。
+- 区分max_tokens（输出上限）和context_length（总上下文）
+- 仅对输出上限做一次覆盖而非永久缩减
+- 影响长回复场景下的对话体验
+
+──────────────────────────────────────────────────────────────
+Tests for the context-halving bugfix.
 
 Background
 ----------

@@ -1,3 +1,17 @@
+"""消息网关测试 - goal·max·turns·配置管理
+
+【产品经理理解要点】
+验证消息网关的配置管理功能
+- 验证的功能: 目标最大轮次配置管理
+- 核心测试场景: gateway goal uses goals max turns from full config
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+消息网关测试 - goal·max·turns·配置更新
+
+测试多平台消息接入与命令分发中goal相关的max相关的turns相关的config功能
+"""
+
 import pytest
 
 from gateway.config import GatewayConfig, Platform, PlatformConfig

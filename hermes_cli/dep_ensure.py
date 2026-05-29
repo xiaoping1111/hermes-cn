@@ -1,4 +1,13 @@
-"""Lazy dependency bootstrapper for non-Python runtime deps.
+"""依赖自动安装引导
+
+【产品经理理解要点】
+检测并提示安装 Hermes 运行所需的外部依赖（如 Node.js、agent-browser），避免硬性报错。
+- 核心职责：非 Python 依赖的检测和安装引导（Node.js 用于 TUI、agent-browser 用于浏览器工具），缺失时给出安装提示
+- 关键概念：懒检测（仅在需要时检查）、安装后端 install.sh（1900 行跨平台安装逻辑）、优雅降级（如 ripgrep 不可用则回退 grep）
+- 系统定位：运行时依赖保障层
+
+─────────────────────────────────────────────────────────────────
+Lazy dependency bootstrapper for non-Python runtime deps.
 
 Detection and prompting live here in Python — not in install.sh — because:
   1. shutil.which() works on every platform; install.sh needs bash.

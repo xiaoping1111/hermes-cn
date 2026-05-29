@@ -1,5 +1,19 @@
 from __future__ import annotations
 
+"""命令行界面测试 - spotify·认证授权
+
+【产品经理理解要点】
+验证命令行界面的认证授权功能
+- 验证的功能: Spotify OAuth认证集成
+- 核心测试场景: store provider state can skip active provider、resolve spotify runtime credentials refreshes without changing active provider、auth spotify status command reports logged in 等共6个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - spotify·OAuth认证
+
+测试CLI命令处理与配置管理中spotify相关的auth功能
+"""
+
 from types import SimpleNamespace
 
 import pytest

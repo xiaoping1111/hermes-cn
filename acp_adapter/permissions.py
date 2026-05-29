@@ -1,4 +1,13 @@
-"""ACP permission bridging for Hermes dangerous-command approvals."""
+"""ACP权限审批模块
+
+【产品经理理解要点】
+当Hermes要执行危险命令（如rm、sudo等）时，通过ACP协议向编辑器请求用户授权。
+- 核心职责：将Hermes的命令审批机制桥接到ACP的权限请求流程
+- 四种审批结果：允许一次、本次会话允许、永久允许、拒绝
+- 安全设计：超时60秒自动拒绝，审批失败默认拒绝
+
+─────────────────────────────────────────────────────────────────
+ACP permission bridging for Hermes dangerous-command approvals."""
 
 from __future__ import annotations
 

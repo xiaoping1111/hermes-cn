@@ -1,4 +1,13 @@
-"""Catalog-API-key fallback for the Copilot ``/model`` picker.
+"""命令行界面测试 - Copilot集成·catalog·OAuth认证·降级策略
+
+【产品经理理解要点】
+验证命令行界面的Copilot集成OAuth认证降级策略功能
+- 验证的功能: Catalog-API-key fallback for the Copilot ``/model`` picker
+- 核心测试场景: env var token wins over pool、falls back to pool oauth token、falls back when env resolution raises 等共9个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Catalog-API-key fallback for the Copilot ``/model`` picker.
 
 Regression for #16708: when the user's only Copilot credential is a
 ``gho_*`` token (typically obtained via device-code login) stored in

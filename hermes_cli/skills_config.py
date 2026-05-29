@@ -1,4 +1,13 @@
 """
+技能配置管理
+
+【产品经理理解要点】
+管理 Hermes Agent 技能（Skill）的启用/禁用状态，支持全局和按平台独立配置。
+- `hermes skills` 命令的入口模块
+- 可全局禁用某些技能，也可为特定平台（如 Telegram）单独禁用
+- 配置存储在 ~/.hermes/config.yaml 的 skills 节点下
+
+─────────────────────────────────────────────────────────────────
 Skills configuration for Hermes Agent.
 `hermes skills` enters this module.
 

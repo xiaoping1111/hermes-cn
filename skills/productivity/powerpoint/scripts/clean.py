@@ -1,4 +1,7 @@
-"""Remove unreferenced files from an unpacked PPTX directory.
+"""【产品经理理解要点】
+PPTX清理工具——移除已解包PPTX目录中的未引用文件，包括孤立幻灯片、关联关系和回收站目录，减小文件体积。
+─────────────────────────────────────────────────────────────────
+Remove unreferenced files from an unpacked PPTX directory.
 
 Usage: python clean.py <unpacked_dir>
 

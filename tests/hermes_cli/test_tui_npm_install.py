@@ -1,4 +1,14 @@
-"""_tui_need_npm_install: auto npm when node_modules is behind the lockfile."""
+"""命令行界面测试 - 终端UI·npm·install
+
+【产品经理理解要点】
+验证命令行界面的终端UI功能
+- 验证的功能: _tui_need_npm_install: auto npm when node_modules is behind the lockfile
+- 核心测试场景: need install when ink missing、no install when lock newer but hidden lock matches、need install when required package missing from hidden lock 等共15个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+_tui_need_npm_install: auto npm when node_modules is behind the lockfile.
+"""
 
 import os
 import types

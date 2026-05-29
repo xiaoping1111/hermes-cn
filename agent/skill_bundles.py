@@ -1,4 +1,24 @@
-"""Skill bundles — aliases that load multiple skills under one slash command.
+"""技能包 — 一条命令同时加载多个技能
+
+【产品经理理解要点】
+技能包（Bundle）是一个"快捷方式"，让用户用一个命令同时加载多个相关技能。
+
+使用场景举例：
+  用户执行 /backend-dev，自动同时加载"代码审查"、"测试驱动开发"、"PR流程"三个技能
+
+工作方式：
+  ┌─────────────────┐      ┌──────────────────────────────────┐
+  │ /backend-dev     │  →   │ 加载 github-code-review 技能      │
+  │ （一个Bundle命令）│      │ 加载 test-driven-development 技能 │
+  └─────────────────┘      │ 加载 github-pr-workflow 技能       │
+                            └──────────────────────────────────┘
+
+存储位置：~/.hermes/skill-bundles/*.yaml，每个文件定义一个技能包
+冲突规则：如果技能包和单个技能同名，技能包优先
+
+─────────────────────────────────────────────────────────────────
+
+Skill bundles — aliases that load multiple skills under one slash command.
 
 A skill bundle is a small YAML file that names a set of skills to load
 together. Invoking ``/<bundle-name>`` from the CLI or gateway loads every

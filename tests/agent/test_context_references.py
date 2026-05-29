@@ -1,4 +1,13 @@
 from __future__ import annotations
+"""上下文引用测试
+
+【产品经理理解要点】
+验证上下文引用的解析和展开逻辑。
+- 引用标记的正确识别
+- 被引用内容的展开和解析
+- 影响对话中跨消息引用的准确性
+"""
+
 
 import asyncio
 import subprocess

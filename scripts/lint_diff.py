@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Diff ruff + ty diagnostic reports between two git refs.
+"""代码检查差异对比工具
+
+【产品经理理解要点】
+对比两个Git分支的ruff和ty代码检查结果，输出变更摘要，用于PR评审。
+- 核心职责：比较新旧代码的诊断报告，标出新增和修复的问题
+- 使用场景：CI流程中运行，结果写入GitHub Step Summary和PR评论
+
+─────────────────────────────────────────────────────────────────
+Diff ruff + ty diagnostic reports between two git refs.
 
 Produces a Markdown summary suitable for `$GITHUB_STEP_SUMMARY` and for PR
 comments. Compares issues by a stable key (file, rule, line) so line-only

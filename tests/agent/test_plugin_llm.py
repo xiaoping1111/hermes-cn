@@ -1,4 +1,12 @@
-"""Unit tests for the plugin LLM facade (``agent.plugin_llm``).
+"""插件LLM集成测试
+
+【产品经理理解要点】
+验证插件通过LLM辅助完成任务的集成流程。
+- 插件调用LLM的正确接口
+- 影响插件的高级智能化功能
+
+──────────────────────────────────────────────────────────────
+Unit tests for the plugin LLM facade (``agent.plugin_llm``).
 
 These tests exercise the trust gate, JSON parsing, schema validation,
 image input encoding, and the auxiliary-client invocation contract.

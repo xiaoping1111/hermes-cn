@@ -1,11 +1,21 @@
-"""Tests for the MCPServerTask reconnect signal.
+"""MCP重连信号测试
+
+【产品经理理解要点】
+验证工具系统模块中reconnect event attribute exists等4个场景的正确性
+- reconnect event attribute exists的正确性验证
+- wait for lifecycle event returns reconnect的正确性验证
+- wait for lifecycle event returns shutdown的正确性验证
+- 另有1个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the MCPServerTask reconnect signal.
 
 When the OAuth layer cannot recover in-place (e.g., external refresh of a
 single-use refresh_token made the SDK's in-memory refresh fail), the tool
 handler signals MCPServerTask to tear down the current MCP session and
 reconnect with fresh credentials. This file exercises the signal plumbing
-in isolation from the full stdio/http transport machinery.
-"""
+in isolation from the full stdio/http transport machinery."""
 import asyncio
 
 import pytest

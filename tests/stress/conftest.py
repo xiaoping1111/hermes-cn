@@ -1,12 +1,20 @@
-"""pytest config for the stress/ subdirectory.
+"""压力测试测试配置
+
+【产品经理理解要点】
+定义压力测试测试的共享fixture和配置。
+- pytest fixture定义
+- 测试数据准备
+- 共享mock配置
+
+─────────────────────────────────────────────────────────────────
+pytest config for the stress/ subdirectory.
 
 These tests are slow (30s+), spawn subprocesses, and are not run by
 default. Enable via `pytest --run-stress` or by running the scripts
 directly.
 
 The scripts are primarily __main__-executable entry points; pytest
-isn't expected to collect individual test functions from them.
-"""
+isn't expected to collect individual test functions from them."""
 import pytest
 
 

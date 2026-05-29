@@ -1,4 +1,13 @@
-"""Tests that `hermes model` always shows the model selection menu for custom
+"""命令行界面测试 - 自定义模型提供商
+
+【产品经理理解要点】
+验证命令行界面自定义模型提供商的正确性
+- 验证的功能: Tests that `hermes model` always shows the model selection menu for custom
+- 核心测试场景: saved model still probes endpoint、can switch to different model、probe failure falls back to saved 等共13个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests that `hermes model` always shows the model selection menu for custom
 providers, even when a model is already saved.
 
 Regression test for the bug where _model_flow_named_custom() returned

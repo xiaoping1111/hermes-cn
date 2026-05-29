@@ -1,4 +1,13 @@
-"""Regression tests for stream consumer thread/topic routing fix.
+"""消息网关测试 - stream·consumer·话题管理·routing
+
+【产品经理理解要点】
+验证消息网关的话题管理功能
+- 验证的功能: Regression tests for stream consumer thread/topic routing fix
+- 核心测试场景: first send uses initial reply to id、first send without initial reply to id、subsequent edits ignore initial reply to id 等共7个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests for stream consumer thread/topic routing fix.
 
 Verifies that GatewayStreamConsumer correctly passes reply_to on the first
 message send, ensuring messages land in the correct topic/thread instead of

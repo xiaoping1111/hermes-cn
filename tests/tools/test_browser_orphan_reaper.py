@@ -1,4 +1,15 @@
-"""Tests for _reap_orphaned_browser_sessions() — kills orphaned agent-browser
+"""浏览器孤儿进程回收器测试
+
+【产品经理理解要点】
+验证工具系统模块中no socket dirs is noop等18个场景的正确性
+- no socket dirs is noop的正确性验证
+- stale dir without pid file is removed的正确性验证
+- stale dir with dead pid is removed的正确性验证
+- 另有15个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for _reap_orphaned_browser_sessions() — kills orphaned agent-browser
 daemons whose Python parent exited without cleaning up."""
 
 import os

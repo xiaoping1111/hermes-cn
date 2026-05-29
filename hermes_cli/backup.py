@@ -1,4 +1,12 @@
-"""
+"""备份与导入命令
+
+【产品经理理解要点】
+提供 Hermes 数据的完整备份和恢复功能，包括全量 ZIP 备份、快速状态快照、更新前自动备份。
+- 核心职责：`hermes backup` 将 ~/.hermes/ 打包为 ZIP 归档，`hermes import` 从归档恢复，支持 SQLite 数据库安全复制
+- 关键概念：快速快照（仅备份关键状态文件）、更新前备份（自动创建恢复点）、迁移前备份、自动清理旧备份
+- 系统定位：数据安全保障层，确保用户在升级或迁移前始终有可回退的快照
+
+─────────────────────────────────────────────────────────────────
 Backup and import commands for hermes CLI.
 
 `hermes backup` creates a zip archive of the entire ~/.hermes/ directory

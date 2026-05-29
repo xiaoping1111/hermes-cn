@@ -1,10 +1,20 @@
-"""Tests for the google_meet node primitive.
+"""Google Meet节点测试
+
+【产品经理理解要点】
+验证功能插件模块中protocol encode decode roundtrip等42个场景的正确性
+- protocol encode decode roundtrip的正确性验证
+- protocol make request autogenerates id的正确性验证
+- protocol make request rejects bad input的正确性验证
+- 另有39个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the google_meet node primitive.
 
 Covers protocol helpers, the file-backed registry, the server's
 token-and-dispatch machinery, a mocked client, and the CLI plumbing.
 We never open a real socket — websockets.serve / websockets.sync.client
-are fully mocked.
-"""
+are fully mocked."""
 
 from __future__ import annotations
 

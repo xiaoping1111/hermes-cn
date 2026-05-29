@@ -1,4 +1,13 @@
 """
+系统状态检查
+
+【产品经理理解要点】
+`hermes status` 命令实现，展示 Hermes 各组件的运行状态。
+- 检查 AI 供应商连接、API Key 配置、网关进程、工具可用性等
+- 直观显示已配置和未配置的项目
+- 是排查问题的首选命令
+
+─────────────────────────────────────────────────────────────────
 Status command for hermes CLI.
 
 Shows the status of all Hermes Agent components.

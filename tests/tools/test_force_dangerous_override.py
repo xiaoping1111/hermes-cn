@@ -1,9 +1,19 @@
-"""Regression tests for skills guard policy precedence.
+"""强制危险覆盖测试
+
+【产品经理理解要点】
+验证工具系统模块中builtin dangerous is allowed by policy等8个场景的正确性
+- builtin dangerous is allowed by policy的正确性验证
+- trusted dangerous is blocked without force的正确性验证
+- force overrides dangerous for community的正确性验证
+- 另有5个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for skills guard policy precedence.
 
 Official/builtin skills should follow the INSTALL_POLICY table even when their
 scan verdict is dangerous, and --force should override blocked verdicts for
-non-builtin sources.
-"""
+non-builtin sources."""
 
 
 def _old_should_allow(verdict, trust_level, force):

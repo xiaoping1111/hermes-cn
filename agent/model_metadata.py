@@ -1,4 +1,22 @@
-"""Model metadata, context lengths, and token estimation utilities.
+"""模型元数据 — 各 AI 模型的上下文长度、Token 估算等基础信息
+
+【产品经理理解要点】
+不同的 AI 模型有不同的"记忆容量"（上下文长度），比如：
+  - GPT-4：128K tokens
+  - Claude 3.5：200K tokens
+  - Gemini Pro：1M tokens
+
+这个模块维护了所有支持模型的上下文长度数据，并提供 Token 估算工具，
+用于判断"对话是否快要超出模型容量，需要压缩了"。
+
+核心功能：
+  - 查询模型的上下文窗口大小
+  - 估算一条消息大约消耗多少 token
+  - 从 OpenRouter 等聚合平台获取最新的模型列表
+
+─────────────────────────────────────────────────────────────────
+
+Model metadata, context lengths, and token estimation utilities.
 
 Pure utility functions with no AIAgent dependency. Used by ContextCompressor
 and run_agent.py for pre-flight context checks.

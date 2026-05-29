@@ -1,4 +1,13 @@
-"""Tests for the curator per-run report writer (run.json + REPORT.md).
+"""策展人报告测试
+
+【产品经理理解要点】
+验证策展人生成的报告格式和内容。
+- 报告格式的正确性
+- 报告数据的完整性
+- 影响用户查看会话摘要的体验
+
+──────────────────────────────────────────────────────────────
+Tests for the curator per-run report writer (run.json + REPORT.md).
 
 Reports live under ``~/.hermes/logs/curator/{YYYYMMDD-HHMMSS}/`` alongside
 the standard log dir, not inside the user's ``skills/`` data directory.

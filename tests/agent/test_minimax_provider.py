@@ -1,4 +1,13 @@
-"""Tests for MiniMax provider hardening — context lengths, thinking, catalog, beta headers, transport."""
+"""MiniMax提供商测试
+
+【产品经理理解要点】
+验证MiniMax提供商的客户端构建和请求处理。
+- MiniMax客户端的正确构建
+- 影响MiniMax模型调用的正确性
+
+──────────────────────────────────────────────────────────────
+Tests for MiniMax provider hardening — context lengths, thinking, catalog, beta headers, transport.
+"""
 
 from unittest.mock import patch
 

@@ -1,4 +1,12 @@
-"""
+"""消息网关测试 - 媒体处理·download·重试机制
+
+【产品经理理解要点】
+验证消息网关的媒体处理重试机制功能
+- 验证的功能: Tests for media download retry logic added in PR #2982
+- 核心测试场景: caches valid jpeg、caches valid png、rejects html content 等共36个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
 Tests for media download retry logic added in PR #2982.
 
 Covers:

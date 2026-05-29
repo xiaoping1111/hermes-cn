@@ -1,5 +1,18 @@
 #!/usr/bin/env python3
-"""
+"""文件操作模块 — 读写文件、搜索代码、打补丁
+
+【产品经理理解要点】
+提供 AI 操作文件的核心能力，支持所有终端后端（本地、Docker、SSH、云沙箱等）：
+  - 读取文件内容
+  - 写入/创建文件
+  - 搜索文件内容（类似 grep）
+  - 修改部分内容（patch 打补丁）
+
+关键设计：所有文件操作最终都通过终端命令执行，
+所以天然支持远程和容器化环境，不限于本地文件系统。
+
+─────────────────────────────────────────────────────────────────
+
 File Operations Module
 
 Provides file manipulation capabilities (read, write, patch, search) that work

@@ -1,4 +1,15 @@
-"""Tests for the SearXNG web search provider.
+"""Web搜索providersSearXNG测试
+
+【产品经理理解要点】
+验证工具系统模块中configured when url set等25个场景的正确性
+- configured when url set的正确性验证
+- not configured when url missing的正确性验证
+- not configured when url empty string的正确性验证
+- 另有22个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the SearXNG web search provider.
 
 Covers:
 - SearXNGWebSearchProvider.is_available() env var gating
@@ -7,8 +18,7 @@ Covers:
 - Score-based sorting and limit truncation
 - _is_backend_available("searxng") integration
 - _get_backend() recognizes "searxng" as a valid configured backend
-- check_web_api_key() includes searxng in availability check
-"""
+- check_web_api_key() includes searxng in availability check"""
 from __future__ import annotations
 
 import json

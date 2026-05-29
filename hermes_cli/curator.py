@@ -1,4 +1,13 @@
-"""CLI subcommand: `hermes curator <subcommand>`.
+"""技能策展人命令
+
+【产品经理理解要点】
+实现 `hermes curator` 子命令，管理 AI 技能的自动推荐和置顶。
+- 核心职责：查看策展状态、触发一次策展运行、暂停/恢复策展、置顶/取消置顶技能
+- 关键概念：策展人=根据使用频率自动推荐技能、技能置顶=强制推荐、技能使用统计
+- 系统定位：技能智能推荐的运维接口
+
+─────────────────────────────────────────────────────────────────
+CLI subcommand: `hermes curator <subcommand>`.
 
 Thin shell around agent/curator.py and tools/skill_usage.py. Renders a status
 table, triggers a run, pauses/resumes, and pins/unpins skills.

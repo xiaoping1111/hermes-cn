@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Fetch federal contracts/awards from USAspending.gov API v2.
+"""美国联邦合同/拨款查询
+
+【产品经理理解要点】
+从USAspending.gov查询联邦政府合同和拨款数据，追踪政府资金流向。
+- 核心职责：查询特定公司或个人获得的联邦合同/拨款
+- 使用场景：OSINT调查中追踪政府合同与利益关联
+
+─────────────────────────────────────────────────────────────────
+Fetch federal contracts/awards from USAspending.gov API v2.
 
 No auth required. POST to /api/v2/search/spending_by_award/ with filters.
 """

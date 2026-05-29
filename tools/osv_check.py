@@ -1,4 +1,13 @@
-"""OSV malware check for MCP extension packages.
+"""MCP 扩展包恶意软件检查（OSV）
+
+【产品经理理解要点】
+在通过 npx/uvx 启动 MCP 服务器之前，自动检查包是否被标记为恶意软件，防止执行有毒的 npm/PyPI 包。
+- 核心职责：查询 Google 维护的 OSV 数据库，仅拦截 MAL-* 恶意标记，普通 CVE 漏洞不阻塞
+- 关键业务概念：失败放行——网络错误时允许通过（宁可误放不可误拦），仅确认恶意才阻断
+- 在系统中的位置：MCP 服务器启动前的安全关卡，保护用户免受供应链攻击
+
+─────────────────────────────────────────────────────────────────
+OSV malware check for MCP extension packages.
 
 Before launching an MCP server via npx/uvx, queries the OSV (Open Source
 Vulnerabilities) API to check if the package has any known malware advisories

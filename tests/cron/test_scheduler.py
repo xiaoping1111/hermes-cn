@@ -1,4 +1,14 @@
-"""Tests for cron/scheduler.py — origin resolution, delivery routing, and error logging."""
+"""定时任务测试 - 调度器
+
+【产品经理理解要点】
+验证定时任务调度引擎的调度器功能
+- 验证的功能: Tests for cron/scheduler.py — origin resolution, delivery routing, and error logging
+- 核心测试场景: full origin、no origin、missing platform 等共111个场景
+- 业务影响: 定时任务可能无法正确调度执行，影响自动化工作流的可靠性
+
+─────────────────────────────────────────────────────────────────
+Tests for cron/scheduler.py — origin resolution, delivery routing, and error logging.
+"""
 
 import json
 import logging

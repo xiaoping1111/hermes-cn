@@ -1,4 +1,13 @@
-"""``hermes debug`` debug tools for Hermes Agent.
+"""调试工具命令
+
+【产品经理理解要点】
+实现 `hermes debug share` 命令，一键收集系统信息和日志上传到粘贴服务，方便用户反馈问题。
+- 核心职责：收集 Hermes 运行环境信息（版本/平台/配置）+ 最近日志，自动脱敏后上传，返回分享链接
+- 关键概念：调试报告=系统信息+日志的压缩包、自动脱敏（移除 API Key 等敏感信息）、粘贴服务上传
+- 系统定位：用户支持与问题排查的快捷工具
+
+─────────────────────────────────────────────────────────────────
+``hermes debug`` debug tools for Hermes Agent.
 
 Currently supports:
     hermes debug share    Upload debug report (system info + logs) to a

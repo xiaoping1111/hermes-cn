@@ -1,8 +1,18 @@
-"""Tests for plugins.google_meet.audio_bridge (v2).
+"""Google Meet音频插件测试
+
+【产品经理理解要点】
+验证功能插件模块中setup linux loads null sink and virtual source等11个场景的正确性
+- setup linux loads null sink and virtual source的正确性验证
+- teardown linux unloads modules in reverse order的正确性验证
+- setup linux parses module id from multi line...的正确性验证
+- 另有8个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for plugins.google_meet.audio_bridge (v2).
 
 Covers the platform gating and pactl / system_profiler plumbing
-without actually invoking those tools on the host.
-"""
+without actually invoking those tools on the host."""
 
 from __future__ import annotations
 

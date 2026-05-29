@@ -1,4 +1,13 @@
-"""Tests for OSError EIO suppression during interrupt shutdown (#13710).
+"""命令行界面测试 - suppress·eio·on·中断处理
+
+【产品经理理解要点】
+验证命令行界面的中断处理功能
+- 验证的功能: Tests for OSError EIO suppression during interrupt shutdown (#13710)
+- 核心测试场景: suppresses event loop closed、suppresses key not registered、suppresses oserror eio 等共15个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for OSError EIO suppression during interrupt shutdown (#13710).
 
 When the user interrupts a running task, prompt_toolkit tries to flush
 stdout during emergency shutdown.  If stdout is already in a broken state

@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Run a real interrupt test with actual AIAgent + delegate child.
+"""中断测试运行器
+
+【产品经理理解要点】
+验证中断机制在真实Agent+子代理场景下的工作状态。
+- 用户中断信号能正确传播到子代理
+- 如果中断失败，用户将无法停止正在运行的长时间任务
+
+──────────────────────────────────────────────────────────────
+Run a real interrupt test with actual AIAgent + delegate child.
 
 Not a pytest test — runs directly as a script for live testing.
 """

@@ -1,4 +1,15 @@
-"""Tests for xAI TTS speech-tag handling."""
+"""语音合成xAI语音标签测试
+
+【产品经理理解要点】
+验证工具系统模块中apply xai auto speech tags adds light pause after first s...等5个场景的正确性
+- apply xai auto speech tags adds light pause...的正确性验证
+- apply xai auto speech tags preserves explicit tags的正确性验证
+- apply xai auto speech tags preserves all documented...的正确性验证
+- 另有2个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for xAI TTS speech-tag handling."""
 
 from unittest.mock import Mock
 

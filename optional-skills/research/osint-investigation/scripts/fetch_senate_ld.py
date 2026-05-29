@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Fetch Senate Lobbying Disclosure (LD-1 / LD-2) filings.
+"""参议院游说披露查询
+
+【产品经理理解要点】
+查询美国参议院的游说活动披露报告，追踪利益集团的游说行为。
+- 核心职责：检索LD-1/LD-2游说披露报告
+- 使用场景：追踪哪些公司在游说什么政策
+
+─────────────────────────────────────────────────────────────────
+Fetch Senate Lobbying Disclosure (LD-1 / LD-2) filings.
 
 Anonymous: 120 req/hour. Token (SENATE_LDA_TOKEN): 1200 req/hour.
 """

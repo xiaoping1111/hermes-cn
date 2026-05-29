@@ -1,4 +1,13 @@
-"""Tests for `_pin_kanban_board_env` helper invoked by `cmd_chat`.
+"""命令行界面测试 - pin·看板管理·board·环境配置
+
+【产品经理理解要点】
+验证命令行界面的看板管理环境配置功能
+- 验证的功能: Tests for `_pin_kanban_board_env` helper invoked by `cmd_chat`
+- 核心测试场景: pin writes resolved board when env unset、pin does not overwrite existing env、pin swallows resolution failures
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for `_pin_kanban_board_env` helper invoked by `cmd_chat`.
 
 Regression coverage for #20074: a chat session must export the active kanban
 board into `HERMES_KANBAN_BOARD` at boot so subprocess shell-outs (e.g.

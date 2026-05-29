@@ -1,4 +1,13 @@
-"""Tests for the decomposer module + `hermes kanban decompose` CLI surface.
+"""命令行界面测试 - 看板管理·decompose
+
+【产品经理理解要点】
+验证命令行界面的看板管理功能
+- 验证的功能: Tests for the decomposer module + `hermes kanban decompose` CLI surface
+- 核心测试场景: decompose with fanout creates children、decompose fanout false assigns default when unassigned、decompose fanout false preserves existing assignee 等共9个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the decomposer module + `hermes kanban decompose` CLI surface.
 
 The auxiliary LLM client is mocked — no network calls. Tests exercise the
 prompt plumbing, response parsing, DB writes (via the real DB helper),

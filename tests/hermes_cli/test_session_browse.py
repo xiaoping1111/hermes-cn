@@ -1,4 +1,13 @@
-"""Tests for the interactive session browser (`hermes sessions browse`).
+"""命令行界面测试 - 会话管理·browse
+
+【产品经理理解要点】
+验证命令行界面的会话管理功能
+- 验证的功能: Tests for the interactive session browser (`hermes sessions browse`)
+- 核心测试场景: empty sessions returns none、returns none when no sessions、fallback mode valid selection 等共33个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the interactive session browser (`hermes sessions browse`).
 
 Covers:
 - _session_browse_picker logic (curses mocked, fallback tested)

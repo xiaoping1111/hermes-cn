@@ -1,12 +1,22 @@
-"""End-to-end integration tests for the MCP OAuth consolidation.
+"""MCP OAuth集成测试
+
+【产品经理理解要点】
+验证工具系统模块中external refresh picked up without restart等5个场景的正确性
+- external refresh picked up without restart的正确性验证
+- handle 401 deduplicates concurrent callers的正确性验证
+- handle 401 returns false when no provider的正确性验证
+- 另有2个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+End-to-end integration tests for the MCP OAuth consolidation.
 
 Exercises the full chain — manager, provider subclass, disk watch, 401
 dedup — with real file I/O and real imports (no transport mocks, no
 subprocesses). These are the tests that would catch Cthulhu's original
 BetterStack bug: an external process rewrites the tokens file on disk,
 and the running Hermes session picks up the new tokens on the next auth
-flow without requiring a restart.
-"""
+flow without requiring a restart."""
 import asyncio
 import json
 import os

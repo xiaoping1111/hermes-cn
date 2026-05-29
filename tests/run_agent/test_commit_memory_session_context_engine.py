@@ -1,11 +1,21 @@
-"""Regression tests for AIAgent.commit_memory_session.
+"""记忆提交会话上下文引擎测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中commit memory session notifies context engine等6个场景的正确性
+- commit memory session notifies context engine的正确性验证
+- commit memory session with no messages passes empty...的正确性验证
+- commit memory session no memory manager still notifies...的正确性验证
+- 另有3个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for AIAgent.commit_memory_session.
 
 Issue #22394: commit_memory_session was calling MemoryManager.on_session_end
 but never ContextEngine.on_session_end. Context engines that accumulate
 per-session state (LCM-style DAGs, summary stores) leaked that state from a
 rotated-out session into whatever continued under the same compressor
-instance.
-"""
+instance."""
 
 from __future__ import annotations
 

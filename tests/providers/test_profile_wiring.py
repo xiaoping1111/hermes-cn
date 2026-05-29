@@ -1,8 +1,18 @@
-"""Profile-path parity tests: verify profile path produces identical output to legacy flags.
+"""配置连线测试
+
+【产品经理理解要点】
+验证模型提供者模块中max tokens match等22个场景的正确性
+- max tokens match的正确性验证
+- temperature omitted的正确性验证
+- max tokens的正确性验证
+- 另有19个测试场景覆盖
+- 影响模型提供者的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Profile-path parity tests: verify profile path produces identical output to legacy flags.
 
 Each test calls build_kwargs twice — once with legacy flags, once with provider_profile —
-and asserts the output is identical. This catches any behavioral drift between the two paths.
-"""
+and asserts the output is identical. This catches any behavioral drift between the two paths."""
 
 import pytest
 from agent.transports.chat_completions import ChatCompletionsTransport

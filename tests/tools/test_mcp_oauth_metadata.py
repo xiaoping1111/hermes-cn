@@ -1,4 +1,15 @@
-"""Tests for OAuth server metadata persistence across process restarts.
+"""MCP OAuth元数据测试
+
+【产品经理理解要点】
+验证工具系统模块中save and load roundtrip等9个场景的正确性
+- save and load roundtrip的正确性验证
+- load missing returns none的正确性验证
+- load corrupt returns none的正确性验证
+- 另有6个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for OAuth server metadata persistence across process restarts.
 
 Covers:
 - :class:`HermesTokenStorage` ``.meta.json`` roundtrip (save / load / remove)
@@ -13,8 +24,7 @@ on-demand and keeps it in memory only. Without disk persistence a restart
 forces the SDK to fall back to guessing ``{server_url}/token``, which returns
 404 on most real providers and triggers a full browser re-auth even when the
 refresh token is still valid. These tests lock in the disk persistence
-layer so refresh across restarts stays quiet.
-"""
+layer so refresh across restarts stays quiet."""
 
 from __future__ import annotations
 

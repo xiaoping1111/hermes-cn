@@ -1,4 +1,15 @@
-"""Tests for the bundled OpenAI image_gen plugin (gpt-image-2, three tiers)."""
+"""OpenAI图像生成提供者测试
+
+【产品经理理解要点】
+验证功能插件模块中name等20个场景的正确性
+- name的正确性验证
+- default model的正确性验证
+- list models three tiers的正确性验证
+- 另有17个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the bundled OpenAI image_gen plugin (gpt-image-2, three tiers)."""
 
 from __future__ import annotations
 

@@ -1,4 +1,15 @@
-"""Tests for context compression persistence in the gateway.
+"""压缩持久化测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中flush after compression with long history等6个场景的正确性
+- flush after compression with long history的正确性验证
+- flush with stale history loses messages的正确性验证
+- history offset zero on session split的正确性验证
+- 另有3个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for context compression persistence in the gateway.
 
 Verifies that when context compression fires during run_conversation(),
 the compressed messages are properly persisted to both SQLite (via the
@@ -13,8 +24,7 @@ Bug scenario (pre-fix):
   5. messages[200:] is empty (only ~30 messages after compression)
   6. Nothing written to new session's SQLite — compressed context lost
   7. Gateway's history_offset was still 200, producing empty new_messages
-  8. Fallback wrote only user/assistant pair — summary lost
-"""
+  8. Fallback wrote only user/assistant pair — summary lost"""
 
 import os
 import tempfile

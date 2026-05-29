@@ -1,4 +1,13 @@
-"""Regression test for issue #27970 Bug 2.
+"""消息网关测试 - 消息发送·语音消息·回复处理·notify
+
+【产品经理理解要点】
+验证消息网关的消息发送语音消息回复处理功能
+- 验证的功能: Regression test for issue #27970 Bug 2
+- 核心测试场景: voice reply marks metadata notify true for dm、voice reply marks existing thread metadata without mutation
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression test for issue #27970 Bug 2.
 
 The auto Telegram voice reply (``GatewayRunner._send_voice_reply``) is the
 final response of a turn. It must mark its metadata as ``notify=True`` so

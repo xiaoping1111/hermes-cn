@@ -1,4 +1,12 @@
-"""Regression tests for classic-CLI mid-run /steer dispatch.
+"""CLI忙碌路径转向测试
+
+【产品经理理解要点】
+验证AI处理中收到转向命令时的行为。
+- 忙碌时转向命令的处理逻辑
+- 影响用户修改AI执行方向的体验
+
+──────────────────────────────────────────────────────────────
+Regression tests for classic-CLI mid-run /steer dispatch.
 
 Background
 ----------

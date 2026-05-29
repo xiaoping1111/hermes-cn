@@ -1,4 +1,14 @@
-"""BlueBubbles iMessage platform adapter.
+"""BlueBubbles iMessage 适配器 — 通过 macOS 服务器收发 iMessage
+
+【产品经理理解要点】
+让 Agent 通过 iMessage 与用户交互（Apple 生态）：
+  - 使用本地 BlueBubbles macOS 服务器
+  - 支持文字、图片、语音、视频、文档
+  - 支持已读回执和输入指示器
+
+─────────────────────────────────────────────────────────────────
+
+BlueBubbles iMessage platform adapter.
 
 Uses the local BlueBubbles macOS server for outbound REST sends and inbound
 webhooks.  Supports text messaging, media attachments (images, voice, video,

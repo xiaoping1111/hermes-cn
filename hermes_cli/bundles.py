@@ -1,4 +1,13 @@
-"""Implementation of the ``hermes bundles`` CLI subcommand.
+"""技能包管理命令
+
+【产品经理理解要点】
+实现 `hermes bundles` 子命令，管理"技能包"——将多个技能打包为一个 /斜杠命令 一键加载。
+- 核心职责：创建/删除/查看/重载技能包（YAML 格式），每个包包含一组技能名和可选的使用说明
+- 关键概念：技能包（bundle）= 多个技能的集合，通过 /包名 一键加载、YAML 配置文件存储
+- 系统定位：技能管理的批量操作层，让用户可以一次启动多个相关技能
+
+─────────────────────────────────────────────────────────────────
+Implementation of the ``hermes bundles`` CLI subcommand.
 
 Mirrors the structure of ``hermes_cli/skills_hub.py`` but for skill
 bundles. Bundles are tiny YAML files that name a set of skills to load

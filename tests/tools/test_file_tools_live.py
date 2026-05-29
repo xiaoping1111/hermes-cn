@@ -1,12 +1,22 @@
-"""Live integration tests for file operations and terminal tools.
+"""文件工具实境测试
+
+【产品经理理解要点】
+验证工具系统模块中echo exact output等51个场景的正确性
+- echo exact output的正确性验证
+- printf no trailing newline的正确性验证
+- exit code propagated的正确性验证
+- 另有48个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Live integration tests for file operations and terminal tools.
 
 These tests run REAL commands through the LocalEnvironment -- no mocks.
 They verify that shell noise is properly filtered, commands actually work,
 and the tool outputs are EXACTLY what the agent would see.
 
 Every test with output validates against a known-good value AND
-asserts zero contamination from shell noise via _assert_clean().
-"""
+asserts zero contamination from shell noise via _assert_clean()."""
 
 import pytest
 

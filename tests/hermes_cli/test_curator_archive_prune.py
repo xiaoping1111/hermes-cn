@@ -1,4 +1,13 @@
-"""Tests for `hermes curator archive` and `hermes curator prune`.
+"""命令行界面测试 - curator·archive·prune
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for `hermes curator archive` and `hermes curator prune`
+- 核心测试场景: archive refuses pinned、archive calls archive skill、archive reports failure 等共13个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for `hermes curator archive` and `hermes curator prune`.
 
 Covers:
 - archive refuses pinned skills with an `unpin` hint

@@ -1,4 +1,13 @@
-"""Tests for /approve and /deny gateway commands.
+"""消息网关测试 - approve·deny·命令处理
+
+【产品经理理解要点】
+验证消息网关的命令处理功能
+- 验证的功能: Tests for /approve and /deny gateway commands
+- 核心测试场景: register and resolve unblocks entry、resolve returns zero when no pending、resolve all unblocks multiple entries 等共21个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for /approve and /deny gateway commands.
 
 Verifies that dangerous command approvals use the blocking gateway approval
 mechanism — the agent thread blocks until the user responds with /approve

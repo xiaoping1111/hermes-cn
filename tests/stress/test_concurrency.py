@@ -1,4 +1,12 @@
-"""Multi-process concurrency stress test for the Kanban kernel.
+"""并发测试
+
+【产品经理理解要点】
+验证压力测试模块中相关功能的正确性
+- 模块功能单元测试覆盖
+- 影响压力测试的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Multi-process concurrency stress test for the Kanban kernel.
 
 5 worker processes race for claims on a shared DB with 100 tasks. Each
 worker loops: claim -> simulate work -> complete. Asserts the invariants
@@ -13,8 +21,7 @@ that make the system worth building:
 
 This test is the primary justification for WAL + CAS-based claim. If it
 passes, the architecture holds. If it fails, we have a real bug to fix
-before anyone runs this in anger.
-"""
+before anyone runs this in anger."""
 
 import json
 import multiprocessing as mp

@@ -1,4 +1,13 @@
-"""Shared runtime provider resolution for CLI, gateway, cron, and helpers."""
+"""运行时供应商解析 —— CLI、网关、定时任务的共享入口
+
+【产品经理理解要点】
+将用户的配置（model.provider、API Key、OAuth 凭证等）解析为运行时可用的供应商连接信息。
+- 支持多种认证方式：API Key、OAuth 设备码、外部进程凭证、AWS SDK 等
+- 处理凭证池轮询和自定义供应商回退逻辑
+- 是所有需要连接 AI 供应商的模块的核心依赖
+
+─────────────────────────────────────────────────────────────────
+Shared runtime provider resolution for CLI, gateway, cron, and helpers."""
 
 from __future__ import annotations
 

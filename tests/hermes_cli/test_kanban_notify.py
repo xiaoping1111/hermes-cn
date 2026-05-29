@@ -1,3 +1,17 @@
+"""命令行界面测试 - 看板管理·notify
+
+【产品经理理解要点】
+验证命令行界面的看板管理功能
+- 验证的功能: 看板通知配置
+- 核心测试场景: notifier unsubs after completed event、notifier unsubs after abnormal events、notifier second blocked delivers 等共10个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - 看板任务管理·notify
+
+测试CLI命令处理与配置管理中kanban相关的notify功能
+"""
+
 import asyncio
 import pytest
 

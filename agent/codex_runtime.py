@@ -1,4 +1,15 @@
-"""Codex API runtime — App Server and Responses-API streaming paths.
+"""Codex 运行时 — OpenAI Codex/ChatGPT 模式的专用执行路径
+
+【产品经理理解要点】
+当用户选择 OpenAI Codex（ChatGPT 账号登录）作为 AI 提供商时，
+需要特殊的通信方式（通过子进程或 Responses API）。这个模块处理 Codex 模式下的：
+  - 通过 Codex App Server 子进程驱动的对话
+  - 通过 Codex Responses API 的流式调用
+  - 首次连接失败后的恢复路径
+
+─────────────────────────────────────────────────────────────────
+
+Codex API runtime — App Server and Responses-API streaming paths.
 
 Extracted from :class:`AIAgent` to keep the agent loop file focused.
 Each function takes the parent ``AIAgent`` as its first argument

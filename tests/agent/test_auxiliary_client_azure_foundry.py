@@ -1,4 +1,13 @@
-"""Tests for auxiliary client routing of the ``azure-foundry`` provider.
+"""Azure Foundry辅助客户端测试
+
+【产品经理理解要点】
+验证Azure Foundry平台的辅助客户端配置和认证。
+- Azure Foundry端点的正确构建
+- Entra ID认证的集成
+- 影响Azure AI平台的辅助模型调用
+
+──────────────────────────────────────────────────────────────
+Tests for auxiliary client routing of the ``azure-foundry`` provider.
 
 Covers the dedicated branch in ``agent.auxiliary_client.resolve_provider_client``
 that delegates to :func:`hermes_cli.runtime_provider._resolve_azure_foundry_runtime`

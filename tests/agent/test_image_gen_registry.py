@@ -1,4 +1,14 @@
-"""Tests for agent/image_gen_registry.py — provider registration & active lookup."""
+"""图片生成注册表测试
+
+【产品经理理解要点】
+验证图片生成工具的提供者注册和调度。
+- 图片生成提供者的注册和发现
+- 提供者选择和降级逻辑
+- 影响AI绘图功能的可用性
+
+──────────────────────────────────────────────────────────────
+Tests for agent/image_gen_registry.py — provider registration & active lookup.
+"""
 
 from __future__ import annotations
 

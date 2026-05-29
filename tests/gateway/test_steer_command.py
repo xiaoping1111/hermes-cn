@@ -1,4 +1,13 @@
-"""Tests for the gateway /steer command handler.
+"""消息网关测试 - steer·命令处理
+
+【产品经理理解要点】
+验证消息网关的命令处理功能
+- 验证的功能: Tests for the gateway /steer command handler
+- 核心测试场景: steer calls agent steer and does not interrupt、steer without payload returns usage、steer with pending sentinel falls back to queue 等共5个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the gateway /steer command handler.
 
 /steer injects a user message into the agent's next tool result without
 interrupting. The gateway runner must:

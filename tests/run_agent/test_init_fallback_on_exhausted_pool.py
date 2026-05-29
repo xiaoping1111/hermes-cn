@@ -1,4 +1,13 @@
-"""Regression test for #17929: AIAgent.__init__ should try fallback_model
+"""资源池耗尽初始化降级测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中init tries fallback when primary returns none、init raises when no fallback configured的正确性
+- init tries fallback when primary returns none的正确性验证
+- init raises when no fallback configured的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression test for #17929: AIAgent.__init__ should try fallback_model
 when primary provider credentials are exhausted."""
 import pytest
 from unittest.mock import patch, MagicMock

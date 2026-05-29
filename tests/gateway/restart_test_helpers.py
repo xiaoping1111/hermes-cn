@@ -1,3 +1,17 @@
+"""网关重启测试辅助工具
+
+【产品经理理解要点】
+验证消息网关测试辅助工具的正确性
+- 验证的功能: 消息网关相关逻辑
+- 核心测试类: RestartAdapter
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+网关重启测试辅助工具
+
+测试多平台消息接入与命令分发中restart相关的test相关的helpers功能
+"""
+
 import asyncio
 from collections import OrderedDict
 from unittest.mock import AsyncMock, MagicMock

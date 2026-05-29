@@ -1,3 +1,17 @@
+"""消息网关测试 - 认证授权·dm·behavior
+
+【产品经理理解要点】
+验证消息网关的认证授权功能
+- 验证的功能: 未授权私聊消息处理行为
+- 核心测试场景: whatsapp lid user matches phone allowlist via session mapping、star wildcard in allowlist authorizes any user、star wildcard works for any platform 等共30个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+消息网关测试 - 认证授权·私聊消息·behavior
+
+测试多平台消息接入与命令分发中unauthorized相关的dm相关的behavior功能
+"""
+
 from types import SimpleNamespace
 from unittest.mock import AsyncMock, MagicMock
 

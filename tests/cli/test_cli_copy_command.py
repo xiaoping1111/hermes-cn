@@ -1,4 +1,13 @@
-"""Tests for CLI /copy command."""
+"""CLI复制命令测试
+
+【产品经理理解要点】
+验证/copy命令将对话内容复制到剪贴板的功能。
+- 复制内容的格式化处理
+- 影响分享对话内容的便捷性
+
+──────────────────────────────────────────────────────────────
+Tests for CLI /copy command.
+"""
 
 from unittest.mock import MagicMock, patch
 

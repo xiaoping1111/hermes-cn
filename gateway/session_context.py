@@ -1,4 +1,13 @@
-"""
+"""会话上下文变量 — 线程安全的会话状态管理
+
+【产品经理理解要点】
+网关同时处理来自不同平台的消息，需要让每条消息"知道"自己属于哪个会话。
+旧方案用全局环境变量存储会话信息，并发时会串数据。
+新方案用 Python 的 contextvars 实现线程安全：每条消息有独立的上下文，
+不会把 Telegram 的会话信息混进 Discord 的处理线程。
+
+─────────────────────────────────────────────────────────────────
+
 Session-scoped context variables for the Hermes gateway.
 
 Replaces the previous ``os.environ``-based session state

@@ -1,4 +1,13 @@
-"""Tests for get_hermes_home() profile-mode fallback warning.
+"""HERMES_HOME配置文件警告测试
+
+【产品经理理解要点】
+验证当配置文件模式生效但HERMES_HOME未设置时，系统能优雅降级并发出警告。
+- 未设置HERMES_HOME时仍返回默认路径
+- 发出一次性警告到stderr
+- 影响多配置文件场景的运维排查
+
+──────────────────────────────────────────────────────────────
+Tests for get_hermes_home() profile-mode fallback warning.
 
 Regression test for https://github.com/NousResearch/hermes-agent/issues/18594.
 

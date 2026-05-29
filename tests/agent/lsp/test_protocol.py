@@ -1,4 +1,15 @@
-"""Tests for the LSP protocol framing layer.
+"""LSP协议帧层测试
+
+【产品经理理解要点】
+验证LSP协议的底层通信格式，包括消息编码（Content-Length帧格式）、消息解码（处理部分读取、EOF、畸形头部）、以及各类协议信封（请求/响应/通知/错误）的构建和分类。协议帧层是LSP通信的基础，格式错误会导致通信静默死锁。
+- 验证消息编码使用紧凑格式和UTF-8、解码能正确处理边界情况
+- 验证超大头部（>8KiB）被拒绝以防止无限循环
+- 业务影响：如果这些测试失败，AI代理与语言服务器之间可能通信失败或死锁
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for the LSP protocol framing layer.
 
 The framer is small but load-bearing — Content-Length parsing is the
 single most common reason for hand-rolled LSP clients to silently

@@ -1,9 +1,19 @@
-"""Tests for tools/schema_sanitizer.py.
+"""Schema清洗器测试
+
+【产品经理理解要点】
+验证工具系统模块中object without properties gets empty properties等40个场景的正确性
+- object without properties gets empty properties的正确性验证
+- nested object without properties gets empty properties的正确性验证
+- bare string object value replaced with schema dict的正确性验证
+- 另有37个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/schema_sanitizer.py.
 
 Targets the known llama.cpp ``json-schema-to-grammar`` failure modes that
 cause ``HTTP 400: Unable to generate parser for this template. ...
-Unrecognized schema: "object"`` errors on local inference backends.
-"""
+Unrecognized schema: "object"`` errors on local inference backends."""
 
 from __future__ import annotations
 

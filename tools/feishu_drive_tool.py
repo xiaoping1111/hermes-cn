@@ -1,4 +1,13 @@
-"""Feishu Drive Tools -- document comment operations via Feishu/Lark API.
+"""飞书云文档评论工具
+
+【产品经理理解要点】
+让 Agent 在飞书云文档中列出、回复和新增评论，实现文档协作的自动化。
+- 核心职责：提供评论列表、回复评论、新增评论三个操作，通过飞书 API 交互
+- 关键业务概念：懒加载 SDK 避免启动延迟；线程级客户端注入保证多会话隔离
+- 在系统中的位置：飞书文档评论事件的工具层，支撑 Agent 参与文档协作场景
+
+─────────────────────────────────────────────────────────────────
+Feishu Drive Tools -- document comment operations via Feishu/Lark API.
 
 Provides tools for listing, replying to, and adding document comments.
 Uses the same lazy-import + BaseRequest pattern as feishu_comment.py.

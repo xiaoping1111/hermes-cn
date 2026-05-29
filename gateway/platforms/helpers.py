@@ -1,4 +1,15 @@
-"""Shared helper classes for gateway platform adapters.
+"""平台适配器共享辅助类 — 消息去重、文本聚合等通用逻辑
+
+【产品经理理解要点】
+多个平台适配器共用的辅助功能：
+  - 消息去重：防止同一消息被处理两次
+  - 文本聚合：快速连续消息合并为一条处理
+  - Markdown 清理：去除平台不支持的格式
+  - 线程参与追踪：记录 AI 是否在某个对话线程中活跃
+
+─────────────────────────────────────────────────────────────────
+
+Shared helper classes for gateway platform adapters.
 
 Extracts common patterns that were duplicated across 5-7 adapters:
 message deduplication, text batch aggregation, markdown stripping,

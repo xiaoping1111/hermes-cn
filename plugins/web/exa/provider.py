@@ -1,5 +1,13 @@
-"""Exa web search + content extraction — plugin form.
+"""Exa语义搜索+内容提取供应商
 
+【产品经理理解要点】
+Exa提供基于语义和神经网络的网络搜索与内容提取，搜索质量高于传统关键词搜索。
+- 搜索：语义/神经网络搜索，返回高相关度结果及亮点摘要
+- 内容提取：批量获取URL的完整文本内容
+- 认证：需要EXA_API_KEY，在https://exa.ai获取（付费，有免费试用）
+- SDK懒加载：通过lazy_deps机制延迟导入exa-py SDK
+
+─────────────────────────────────────────────────────────────────
 Subclasses :class:`agent.web_search_provider.WebSearchProvider`. Uses the
 official Exa SDK (``exa-py``) which is lazy-loaded via
 :func:`tools.lazy_deps.ensure` so that cold-start CLI users don't pay the

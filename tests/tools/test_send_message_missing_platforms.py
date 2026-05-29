@@ -1,4 +1,15 @@
-"""Tests for _send_mattermost, _send_matrix, _send_homeassistant, _send_dingtalk."""
+"""消息发送缺失平台测试
+
+【产品经理理解要点】
+验证工具系统模块中success等19个场景的正确性
+- success的正确性验证
+- http error的正确性验证
+- missing config的正确性验证
+- 另有16个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for _send_mattermost, _send_matrix, _send_homeassistant, _send_dingtalk."""
 
 import asyncio
 import os

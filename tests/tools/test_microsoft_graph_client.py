@@ -1,4 +1,15 @@
-"""Tests for tools/microsoft_graph_client.py."""
+"""Microsoft Graph客户端测试
+
+【产品经理理解要点】
+验证工具系统模块中attaches bearer token header等9个场景的正确性
+- attaches bearer token header的正确性验证
+- retries on rate limit and uses retry after的正确性验证
+- raises api error after retry budget exhausted的正确性验证
+- 另有6个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/microsoft_graph_client.py."""
 
 from __future__ import annotations
 

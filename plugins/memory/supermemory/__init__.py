@@ -1,5 +1,13 @@
-"""Supermemory memory plugin using the MemoryProvider interface.
+"""Supermemory记忆供应商 — 语义长期记忆
 
+【产品经理理解要点】
+提供基于Supermemory的语义长期记忆服务，支持用户画像回忆、语义搜索、自动对话摄取和显式记忆操作。
+- 核心能力：语义搜索、用户画像回忆、显式记忆工具(store/search/forget/profile)、会话结束自动摄取
+- 使用场景：让AI记住用户的历史偏好和对话内容，实现个性化服务
+- 认证：SUPERMEMORY_API_KEY
+- 特性：多容器支持、信任评分、自动去重、配置热更新
+
+─────────────────────────────────────────────────────────────────
 Provides semantic long-term memory with profile recall, semantic search,
 explicit memory tools, cleaned turn capture, and session-end conversation ingest.
 """

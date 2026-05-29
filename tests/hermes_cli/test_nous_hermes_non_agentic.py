@@ -1,4 +1,13 @@
-"""Tests for the Nous-Hermes-3/4 non-agentic warning detector.
+"""命令行界面测试 - nous·hermes·non·AI代理
+
+【产品经理理解要点】
+验证命令行界面的AI代理功能
+- 验证的功能: Tests for the Nous-Hermes-3/4 non-agentic warning detector
+- 核心测试场景: matches real nous hermes chat models、does not match unrelated models、none like inputs are safe
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the Nous-Hermes-3/4 non-agentic warning detector.
 
 Prior to this check, the warning fired on any model whose name contained
 ``"hermes"`` anywhere (case-insensitive). That false-positived on unrelated

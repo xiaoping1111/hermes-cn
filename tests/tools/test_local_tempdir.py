@@ -1,3 +1,12 @@
+"""临时目录测试
+
+【产品经理理解要点】
+验证工具系统模块中uses os tmpdir for session artifacts、prefers backend env tmpdir override、falls back to tempfile when tmp missing的正确性
+- uses os tmpdir for session artifacts的正确性验证
+- prefers backend env tmpdir override的正确性验证
+- falls back to tempfile when tmp missing的正确性验证
+- 影响工具系统的可靠性和功能正确性"""
+
 from unittest.mock import patch
 
 from tools.environments.local import LocalEnvironment

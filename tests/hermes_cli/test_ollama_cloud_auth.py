@@ -1,4 +1,13 @@
-"""Tests for Ollama Cloud authentication and /model switch fixes.
+"""命令行界面测试 - Ollama模型·云端服务·认证授权
+
+【产品经理理解要点】
+验证命令行界面的Ollama模型云端服务认证授权功能
+- 验证的功能: Tests for Ollama Cloud authentication and /model switch fixes
+- 核心测试场景: ollama api key used for ollama endpoint、ollama key not used for non ollama endpoint、direct alias loaded from config 等共31个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for Ollama Cloud authentication and /model switch fixes.
 
 Covers:
 - OLLAMA_API_KEY resolution for custom endpoints pointing to ollama.com

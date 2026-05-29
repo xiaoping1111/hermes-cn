@@ -1,4 +1,13 @@
-"""Tests for defensive bracketed-paste wrapper stripping in the CLI."""
+"""CLI括号粘贴清洗测试
+
+【产品经理理解要点】
+验证终端括号粘贴模式下的输入清洗逻辑。
+- 括号粘贴标记的正确处理
+- 影响从剪贴板粘贴代码的体验
+
+──────────────────────────────────────────────────────────────
+Tests for defensive bracketed-paste wrapper stripping in the CLI.
+"""
 
 from cli import _strip_leaked_bracketed_paste_wrappers
 

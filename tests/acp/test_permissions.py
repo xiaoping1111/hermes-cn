@@ -1,4 +1,15 @@
-"""Tests for acp_adapter.permissions."""
+"""ACP权限管理测试
+
+【产品经理理解要点】
+验证ACP适配器的权限请求回调，将ACP权限模型映射到Hermes审批流程。
+- 允许操作返回approved结果
+- 拒绝操作返回denied结果
+- 危险操作的审批弹窗映射
+- 影响ACP模式下的操作安全性
+
+──────────────────────────────────────────────────────────────
+Tests for acp_adapter.permissions.
+"""
 
 import asyncio
 import inspect

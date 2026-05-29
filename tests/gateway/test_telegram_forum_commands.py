@@ -1,4 +1,14 @@
-"""Tests for lazy forum command registration in TelegramAdapter."""
+"""消息网关测试 - Telegram平台·forum·命令处理
+
+【产品经理理解要点】
+验证消息网关的Telegram平台命令处理功能
+- 验证的功能: Tests for lazy forum command registration in TelegramAdapter
+- 核心测试场景: ensure forum commands skips non forum、ensure forum commands skips already registered、ensure forum commands registers once 等共5个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for lazy forum command registration in TelegramAdapter.
+"""
 
 import asyncio
 from types import SimpleNamespace

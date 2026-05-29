@@ -1,4 +1,13 @@
-"""Helpers for loading Hermes .env files consistently across entrypoints."""
+""".env 文件加载工具
+
+【产品经理理解要点】
+统一加载 ~/.hermes/.env 文件中的环境变量（主要是 API Key），并自动检测和修复非 ASCII 字符问题。
+- 核心职责：从 .env 文件加载环境变量到进程，检测凭证值中的非 ASCII 字符（中文标点等）并发出警告
+- 关键概念：.env 文件=API Key 等敏感配置的存储位置、凭证值必须为纯 ASCII（用于 HTTP 头）
+- 系统定位：所有入口点的环境初始化层
+
+─────────────────────────────────────────────────────────────────
+Helpers for loading Hermes .env files consistently across entrypoints."""
 
 from __future__ import annotations
 

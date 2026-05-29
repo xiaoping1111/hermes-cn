@@ -1,5 +1,20 @@
 #!/usr/bin/env python3
 """
+工具集分布模块 (Toolset Distributions)
+
+【产品经理理解要点】
+这是批量运行器（batch_runner）的配套模块——定义数据生成时各工具集的选用概率。
+每个分布指定：哪些工具集以多少百分比概率被选中。
+
+预定义分布举例：
+  - default：所有工具100%开启
+  - image_gen：重点图片生成（90%），配合视觉和搜索
+  - research：重点网络搜索（90%），配合浏览器和推理
+  - development：重点终端和文件（80%），配合推理
+  - safe：排除终端的安全模式
+
+使用场景：批量数据生产时的实验配置，非日常使用
+─────────────────────────────────────────────────────────────────
 Toolset Distributions Module
 
 This module defines distributions of toolsets for data generation runs.

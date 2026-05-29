@@ -1,4 +1,13 @@
-"""Tests for CLI /status command behavior."""
+"""CLI状态命令测试
+
+【产品经理理解要点】
+验证/status命令展示的系统状态信息。
+- 状态信息的完整性
+- 影响用户查看当前配置和状态
+
+──────────────────────────────────────────────────────────────
+Tests for CLI /status command behavior.
+"""
 from datetime import datetime
 from pathlib import Path
 from types import SimpleNamespace

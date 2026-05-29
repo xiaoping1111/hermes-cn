@@ -1,9 +1,16 @@
-"""
+"""网页搜索提供者抽象基类 — 定义搜索和提取服务的标准接口
+
+【产品经理理解要点】
+定义网页搜索插件必须实现的接口，让不同的搜索服务（Tavily、Exa、Brave 等）
+可以统一接入。通过插件注册，用户可在 config.yaml 中选择搜索和提取分别用什么后端。
+
+─────────────────────────────────────────────────────────────────
+
 Web Search Provider ABC
-=======================
+======================
 
 Defines the pluggable-backend interface for web search and content extraction.
-Providers register instances via ``PluginContext.register_web_search_provider()``;
+Providers register instances via ``PluginContext.register_web_search_provider()`;
 the active one (selected via ``web.search_backend`` / ``web.extract_backend`` /
 ``web.backend`` in ``config.yaml``) services every ``web_search`` /
 ``web_extract`` tool call.

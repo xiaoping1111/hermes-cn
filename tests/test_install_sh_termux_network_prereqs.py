@@ -1,4 +1,14 @@
-"""Regression tests for Termux network prerequisite handling in install.sh."""
+"""Termux网络预依赖测试
+
+【产品经理理解要点】
+验证Termux环境下安装脚本包含必要的网络包和连接性检测。
+- 网络基础包（curl, ca-certificates等）包含在安装列表
+- 网络连接性探测和错误提示
+- 影响Android/Termux用户的安装体验
+
+──────────────────────────────────────────────────────────────
+Regression tests for Termux network prerequisite handling in install.sh.
+"""
 
 from pathlib import Path
 

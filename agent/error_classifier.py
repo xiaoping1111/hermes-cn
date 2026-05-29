@@ -1,4 +1,30 @@
-"""API error classification for smart failover and recovery.
+"""API 错误分类器 — 智能失败恢复策略
+
+【产品经理理解要点】
+当 Agent 调用 AI 模型 API 失败时，这个模块负责判断"为什么会失败"以及"该怎么办"：
+
+错误分类和对应策略：
+  - 认证失败(401/403) → 刷新或切换 API Key
+  - 余额不足(402) → 立即切换到另一个提供商
+  - 限流(429) → 等待一会儿再重试，或切换 Key
+  - 服务器过载(503) → 等待后重试
+  - 超时 → 重建连接重试
+  - 上下文太长(400) → 压缩对话后重试
+
+为什么需要分类？因为不同类型的错误需要不同的处理方式。
+盲目重试可能浪费额度，而应该切换 Key 的情况却一直在等待。
+
+处理流程：
+  API 报错 → 错误分类 → 选择恢复策略 → 自动处理
+                       ├→ 重试（同一个Key）
+                       ├→ 切换Key（同一个提供商）
+                       ├→ 切换提供商
+                       ├→ 压缩对话后重试
+                       └→ 放弃并通知用户
+
+─────────────────────────────────────────────────────────────────
+
+API error classification for smart failover and recovery.
 
 Provides a structured taxonomy of API errors and a priority-ordered
 classification pipeline that determines the correct recovery action

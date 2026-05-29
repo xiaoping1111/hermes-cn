@@ -1,4 +1,15 @@
-"""Tests for optional-skills/productivity/memento-flashcards/scripts/memento_cards.py"""
+"""备忘卡片测试
+
+【产品经理理解要点】
+验证技能系统模块中add creates card等38个场景的正确性
+- add creates card的正确性验证
+- add default collection的正确性验证
+- list all的正确性验证
+- 另有35个测试场景覆盖
+- 影响技能系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for optional-skills/productivity/memento-flashcards/scripts/memento_cards.py"""
 
 import csv
 import json

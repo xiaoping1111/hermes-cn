@@ -1,4 +1,15 @@
-"""Tests for the V4A patch format parser."""
+"""补丁parser测试
+
+【产品经理理解要点】
+验证工具系统模块中basic update等25个场景的正确性
+- basic update的正确性验证
+- multiple hunks的正确性验证
+- add file的正确性验证
+- 另有22个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the V4A patch format parser."""
 
 from types import SimpleNamespace
 

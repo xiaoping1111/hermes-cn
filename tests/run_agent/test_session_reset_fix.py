@@ -1,11 +1,21 @@
-"""Tests for session reset completeness (fixes #2635).
+"""会话重置修复测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中previous summary cleared on reset等4个场景的正确性
+- previous summary cleared on reset的正确性验证
+- user turn count cleared on reset的正确性验证
+- both fields cleared together的正确性验证
+- 另有1个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for session reset completeness (fixes #2635).
 
 /clear and /new must not carry stale state into the next session.
 Two fields were added after reset_session_state() was written and were
 therefore never cleared:
   - ContextCompressor._previous_summary
-  - AIAgent._user_turn_count
-"""
+  - AIAgent._user_turn_count"""
 import sys
 import types
 from pathlib import Path

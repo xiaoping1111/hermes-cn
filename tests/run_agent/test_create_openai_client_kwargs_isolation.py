@@ -1,4 +1,12 @@
-"""Guardrail: _create_openai_client must not mutate its input kwargs.
+"""OpenAI客户端参数隔离测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中create openai client does not mutate input kwargs的正确性
+- create openai client does not mutate input kwargs的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Guardrail: _create_openai_client must not mutate its input kwargs.
 
 #10933 injected an httpx.Client directly into the caller's ``client_kwargs``.
 When the dict was ``self._client_kwargs``, the shared transport was torn down
@@ -8,8 +16,7 @@ with cause ``RuntimeError: Cannot send a request, as the client has been closed`
 on every retry. That PR has since been reverted, but the underlying issue
 (#10324, connections hanging in CLOSE-WAIT) is still open, so another transport
 tweak inside this function is likely. This test pins the contract that the
-function must treat its input dict as read-only.
-"""
+function must treat its input dict as read-only."""
 from unittest.mock import MagicMock, patch
 
 from run_agent import AIAgent

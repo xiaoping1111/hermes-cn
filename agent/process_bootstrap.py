@@ -1,4 +1,13 @@
-"""Process-level bootstrap helpers for ``run_agent``.
+"""进程级启动引导
+
+【产品经理理解要点】
+Agent 进程启动时的三项基础初始化工作，确保系统稳定运行。
+- 延迟加载 OpenAI SDK：首次使用时才导入，节省约 240ms 启动时间
+- 防崩溃标准输出：避免管道断开导致 Agent 进程意外退出
+- HTTP 代理解析：自动读取系统代理配置，支持企业网络环境
+
+─────────────────────────────────────────────────────────────────
+Process-level bootstrap helpers for ``run_agent``.
 
 Three concerns, all tied to ``AIAgent`` boot-time / runtime IO setup:
 

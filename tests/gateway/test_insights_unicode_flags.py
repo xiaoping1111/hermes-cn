@@ -1,4 +1,13 @@
-"""Tests for Unicode dash normalization in /insights command flag parsing.
+"""消息网关测试 - insights·unicode·flags
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for Unicode dash normalization in /insights command flag parsing
+- 核心测试场景: unicode dash normalized、regular hyphens unaffected、bare number still works 等共4个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Unicode dash normalization in /insights command flag parsing.
 
 Telegram on iOS auto-converts -- to em/en dashes. The /insights handler
 normalizes these before parsing --days and --source flags.

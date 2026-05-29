@@ -1,4 +1,17 @@
-"""Shared types for normalized provider responses.
+"""统一响应类型 — 所有 AI 提供商响应的标准化数据结构
+
+【产品经理理解要点】
+不同 AI 提供商返回的数据格式各不相同，Agent 内部需要统一处理。
+这个模块定义了标准化的数据结构，所有提供商的适配器都要把响应转换成这个格式：
+  - NormalizedResponse：标准化响应（文本内容 + 工具调用 + 用量统计）
+  - ToolCall：标准化的工具调用请求
+  - Usage：标准化的 token 用量统计
+
+就像"统一度量衡"——不管原始格式是什么，转换后都一样，简化后续处理。
+
+─────────────────────────────────────────────────────────────────
+
+Shared types for normalized provider responses.
 
 These dataclasses define the canonical shape that all provider adapters
 normalize responses to.  The shared surface is intentionally minimal —

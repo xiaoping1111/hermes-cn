@@ -1,4 +1,13 @@
-"""Tests for slash command prefix matching in HermesCLI.process_command."""
+"""CLI前缀匹配测试
+
+【产品经理理解要点】
+验证斜杠命令的前缀模糊匹配和自动补全。
+- 不完整命令的前缀匹配
+- 影响命令输入的效率
+
+──────────────────────────────────────────────────────────────
+Tests for slash command prefix matching in HermesCLI.process_command.
+"""
 from unittest.mock import MagicMock, patch
 from cli import HermesCLI
 

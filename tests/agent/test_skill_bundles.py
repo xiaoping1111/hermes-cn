@@ -1,4 +1,13 @@
-"""Tests for agent/skill_bundles.py — YAML-defined skill bundles."""
+"""技能包测试
+
+【产品经理理解要点】
+验证技能包的加载、解析和注册逻辑。
+- 技能包manifest的正确解析
+- 影响技能分发的格式兼容性
+
+──────────────────────────────────────────────────────────────
+Tests for agent/skill_bundles.py — YAML-defined skill bundles.
+"""
 
 import os
 from pathlib import Path

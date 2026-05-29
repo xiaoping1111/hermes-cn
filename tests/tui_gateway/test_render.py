@@ -1,4 +1,15 @@
-"""Tests for tui_gateway.render — rendering bridge fallback behavior."""
+"""渲染测试
+
+【产品经理理解要点】
+验证TUI网关模块中render message none without module等7个场景的正确性
+- render message none without module的正确性验证
+- render message formatted的正确性验证
+- render message type error fallback的正确性验证
+- 另有4个测试场景覆盖
+- 影响TUI网关的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tui_gateway.render — rendering bridge fallback behavior."""
 
 from unittest.mock import MagicMock, patch
 

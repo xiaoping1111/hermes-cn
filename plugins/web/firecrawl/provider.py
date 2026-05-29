@@ -1,5 +1,15 @@
-"""Firecrawl web search + extract — plugin form.
+"""Firecrawl搜索+内容提取+网站抓取供应商
 
+【产品经理理解要点】
+Firecrawl是最全面的网络工具供应商，提供搜索、内容提取和异步网站抓取能力，支持直连和托管网关两种认证通道。
+- 搜索：返回相关网页标题、URL和摘要
+- 内容提取：异步逐URL抓取，60秒超时，支持Markdown/HTML格式，含SSRF安全检查和网站策略限制
+- 网站抓取：从种子URL出发自动发现并抓取子页面，每页均做安全策略校验
+- 安全机制：SSRF重定向检查、网站访问策略限制、URL白名单验证
+- 双通道认证：直连API Key或Nous Tool Gateway路由
+- SDK懒加载：延迟导入避免冷启动开销，通过可调用代理模式实现
+
+─────────────────────────────────────────────────────────────────
 Subclasses :class:`agent.web_search_provider.WebSearchProvider`. This is
 the largest provider migrated in this PR; it captures the full inline
 firecrawl implementation that previously lived in tools/web_tools.py:

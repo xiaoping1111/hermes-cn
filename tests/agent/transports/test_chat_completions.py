@@ -1,4 +1,16 @@
-"""Tests for the ChatCompletionsTransport."""
+"""Chat Completions传输层测试
+
+【产品经理理解要点】
+验证OpenAI Chat Completions API的传输适配层，这是最核心的传输层，覆盖多家模型提供者（OpenAI、Gemini、Kimi/Moonshot、LM Studio、Nous、OpenRouter、Ollama等）的特有参数处理和兼容性逻辑。
+- 验证各提供者的特殊参数处理（Gemini思考配置、Kimi推理强度、OpenRouter路由偏好等）
+- 验证消息清洗（移除codex专有字段、tool_name等非标准字段）
+- 验证响应标准化和缓存统计提取
+- 业务影响：如果这些测试失败，特定模型提供者的用户可能遇到请求失败或参数错误
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for the ChatCompletionsTransport."""
 
 import pytest
 from types import SimpleNamespace

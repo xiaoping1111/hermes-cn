@@ -1,4 +1,13 @@
-"""Persistent slash-command worker — one HermesCLI per TUI session.
+"""TUI斜杠命令工作进程
+
+【产品经理理解要点】
+为TUI中的斜杠命令（如/model、/tools）提供持久化的命令执行环境。
+- 核心职责：维护一个常驻的HermesCLI子进程，复用会话状态执行斜杠命令
+- 通信协议：通过stdin/stdout传递JSON格式的命令和结果
+- 设计原因：斜杠命令需要完整的CLI上下文（如模型列表、会话历史），直接子进程复用比每次重建更高效
+
+─────────────────────────────────────────────────────────────────
+Persistent slash-command worker — one HermesCLI per TUI session.
 
 Protocol: reads JSON lines from stdin {id, command}, writes {id, ok, output|error} to stdout.
 """

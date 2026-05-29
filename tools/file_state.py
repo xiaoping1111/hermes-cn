@@ -1,4 +1,16 @@
-"""Cross-agent file state coordination.
+"""文件状态协调 — 防止多个子 Agent 同时修改同一文件导致冲突
+
+【产品经理理解要点】
+当多个子 Agent 并行工作时，可能出现"读写冲突"：
+  - 子 Agent A 读取了文件
+  - 子 Agent B 修改了同一文件
+  - 子 Agent A 又写入文件，覆盖了 B 的修改
+
+这个模块追踪每个文件的读写状态，检测并警告冲突。
+
+─────────────────────────────────────────────────────────────────
+
+Cross-agent file state coordination.
 
 Prevents mangled edits when concurrent subagents (same process, same
 filesystem) touch the same file. Complements the single-agent path-overlap

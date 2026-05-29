@@ -1,4 +1,14 @@
-"""
+"""会话镜像 — 跨平台消息投递时同步上下文
+
+【产品经理理解要点】
+当 AI 通过一个平台（如 CLI）发送消息到另一个平台（如 Telegram）时，
+接收方需要知道发过什么。这个模块在目标会话中追加"投递镜像"记录，
+让接收端的 AI 有完整的上下文。
+
+就像邮件的"转发"功能——收件人能看到原始邮件的内容和来源。
+
+─────────────────────────────────────────────────────────────────
+
 Session mirroring for cross-platform message delivery.
 
 When a message is sent to a platform (via send_message or cron delivery),

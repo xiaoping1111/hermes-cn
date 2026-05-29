@@ -1,4 +1,13 @@
-"""Skill write-origin provenance — ContextVar for distinguishing agent-sediment skill writes from foreground user-directed writes.
+"""技能来源标识——区分 Agent 自创建与用户创建
+
+【产品经理理解要点】
+追踪技能的"创建者身份"，确保后台自我改进流程只清理自己创建的技能，不会误删用户手动创建的。
+- 核心职责：通过 ContextVar 标记当前写操作来源（foreground/background_review），技能创建时记录来源
+- 关键业务概念：来源隔离——后台评审分支自动创建的技能可被自动归档/清理；用户明确要求创建的技能永不被自动清理
+- 在系统中的位置：skill_manager_tool 创建技能时的标记层，被 skill_usage 的生命周期管理引用
+
+─────────────────────────────────────────────────────────────────
+Skill write-origin provenance — ContextVar for distinguishing agent-sediment skill writes from foreground user-directed writes.
 
 The curator only consolidates/prunes skills it autonomously created via the
 background self-improvement review fork. Skills a user asks a foreground

@@ -1,4 +1,13 @@
-"""Tests for SIGHUP protection and stdout mirroring in ``hermes update``.
+"""命令行界面测试 - 更新·hangup·protection
+
+【产品经理理解要点】
+验证命令行界面的更新功能
+- 验证的功能: Tests for SIGHUP protection and stdout mirroring in ``hermes update``
+- 核心测试场景: write mirrors to both original and log、write continues after broken original、write tolerates oserror and valueerror 等共16个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for SIGHUP protection and stdout mirroring in ``hermes update``.
 
 Covers ``_UpdateOutputStream``, ``_install_hangup_protection``, and
 ``_finalize_update_output`` in ``hermes_cli/main.py``.  These exist so

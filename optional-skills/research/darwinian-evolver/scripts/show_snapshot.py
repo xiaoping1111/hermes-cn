@@ -1,4 +1,10 @@
-"""
+"""进化器快照查看工具
+
+【产品经理理解要点】
+读取并展示达尔文进化器的种群快照（pickle文件），查看进化过程中的个体状态。
+- 核心职责：解析迭代快照文件，打印个体的所有字符串属性
+
+─────────────────────────────────────────────────────────────────
 show_snapshot.py — Dump the population from a darwinian-evolver snapshot pickle.
 
 Usage:

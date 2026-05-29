@@ -1,4 +1,12 @@
-"""
+"""元宝Markdown处理测试
+
+【产品经理理解要点】
+验证元宝平台的Markdown消息处理器，包括分块和格式转换。
+- Markdown文本的分块逻辑
+- 代码块和列表的正确处理
+- 影响QQ消息的格式化展示
+
+──────────────────────────────────────────────────────────────
 test_yuanbao_markdown.py - Unit tests for yuanbao_markdown.py
 
 Run (no pytest needed):

@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Central manager for per-server MCP OAuth state.
+"""MCP OAuth 全局状态管理器
+
+【产品经理理解要点】
+统一管理所有 MCP 服务端的 OAuth 状态，解决多会话并发授权、令牌刷新、跨进程同步等复杂问题。
+- 核心职责：跨进程令牌热加载（外部刷新后无需重启）、401 去重并发恢复（N 个并发请求只触发一次重新授权）、重连信号管理
+- 关键业务概念：单例模式——全局唯一管理器，所有 OAuth 操作的唯一入口，替代之前分散在 8 处的逻辑
+- 在系统中的位置：MCP OAuth 的协调中枢，连接 mcp_tool.py、mcp_oauth.py 和 CLI 配置
+
+─────────────────────────────────────────────────────────────────
+Central manager for per-server MCP OAuth state.
 
 One instance shared across the process. Holds per-server OAuth provider
 instances and coordinates:

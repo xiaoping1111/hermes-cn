@@ -1,4 +1,13 @@
-"""Generic slash-command confirmation primitive (gateway-side).
+"""斜杠命令确认机制（网关端）
+
+【产品经理理解要点】
+对有副作用但非破坏性的斜杠命令（如重载 MCP），弹出确认提示让用户知晓并确认，防止误操作。
+- 核心职责：注册待确认命令、阻塞等待用户选择（一次性批准/始终批准/取消）、超时自动过期
+- 关键业务概念：双通道——按钮 UI（Telegram/Discord）和纯文本回退（无富 UI 平台）
+- 在系统中的位置：替代之前直接执行的斜杠命令模式，增加用户确认环节
+
+─────────────────────────────────────────────────────────────────
+Generic slash-command confirmation primitive (gateway-side).
 
 Slash commands that have a non-destructive but expensive side effect worth
 surfacing to the user (currently only ``/reload-mcp``, which invalidates

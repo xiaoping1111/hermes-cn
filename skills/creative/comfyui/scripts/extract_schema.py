@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""
+"""【产品经理理解要点】
+ComfyUI工作流参数提取——分析API格式的工作流，提取可控制的参数（提示词、种子、步数等），支持Flux/SD3/Wan/Hunyuan等主流模型节点。
+─────────────────────────────────────────────────────────────────
 extract_schema.py — Analyze a ComfyUI API-format workflow and extract
 controllable parameters.
 

@@ -1,11 +1,21 @@
-"""Tests for the Kanban tool surface (tools/kanban_tools.py).
+"""看板工具测试
+
+【产品经理理解要点】
+验证工具系统模块中kanban tools hidden without env var等81个场景的正确性
+- kanban tools hidden without env var的正确性验证
+- kanban tools visible with env var的正确性验证
+- kanban worker env overrides profile toolset filter的正确性验证
+- 另有78个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the Kanban tool surface (tools/kanban_tools.py).
 
 Verifies:
   - Tools are gated on HERMES_KANBAN_TASK: a normal chat session sees
     zero kanban tools in its schema; a worker session sees the kanban set.
   - Each handler's happy path.
-  - Error paths (missing required args, bad metadata type, etc).
-"""
+  - Error paths (missing required args, bad metadata type, etc)."""
 from __future__ import annotations
 
 import json

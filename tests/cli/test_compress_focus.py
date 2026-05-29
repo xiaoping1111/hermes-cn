@@ -1,4 +1,13 @@
-"""Tests for /compress <focus> — guided compression with focus topic.
+"""聚焦压缩测试
+
+【产品经理理解要点】
+验证带主题焦点的上下文压缩功能，确保压缩保留与指定主题相关的内容。
+- 焦点主题对压缩摘要内容的影响
+- 非焦点内容的合理裁剪
+- 影响长对话中保留重要上下文的能力
+
+──────────────────────────────────────────────────────────────
+Tests for /compress <focus> — guided compression with focus topic.
 
 Inspired by Claude Code's /compact <focus> feature.
 """

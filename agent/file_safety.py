@@ -1,4 +1,13 @@
-"""Shared file safety rules used by both tools and ACP shims."""
+"""文件安全规则模块
+
+【产品经理理解要点】
+定义哪些文件路径不可被Agent自动修改，防止误操作破坏关键配置。
+- 核心职责：构建禁止写入的路径清单，供工具和ACP适配层共用
+- 保护范围：.hermes目录下的配置文件、.env、SSH密钥等敏感文件
+- 系统定位：所有文件写操作的"安全护栏"
+
+─────────────────────────────────────────────────────────────────
+Shared file safety rules used by both tools and ACP shims."""
 
 from __future__ import annotations
 

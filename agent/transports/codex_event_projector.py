@@ -1,4 +1,22 @@
-"""Projects codex app-server events into Hermes' messages list.
+"""Codex 事件投影器 — 将 Codex 的事件转换为 Agent 内部消息格式
+
+【产品经理理解要点】
+Codex App Server 使用自己的事件格式（userMessage、commandExecution、fileChange 等），
+但 Agent 内部使用 OpenAI 标准的消息格式。这个模块负责翻译：
+
+  Codex 事件类型              → Agent 消息格式
+  ──────────────────────────────────────────────
+  userMessage                 → {role: "user", content}
+  agentMessage                → {role: "assistant", content}
+  commandExecution            → tool_call + tool result
+  fileChange                  → tool_call(apply_patch) + tool result
+  mcpToolCall                 → tool_call(mcp.xxx) + tool result
+
+这样才能让 Agent 的记忆、技能回顾等功能在 Codex 模式下正常工作。
+
+─────────────────────────────────────────────────────────────────
+
+Projects codex app-server events into Hermes' messages list.
 
 The translator that lets Hermes' memory/skill review keep working under the
 Codex runtime: it converts Codex `item/*` notifications into the standard

@@ -1,8 +1,18 @@
-"""Regression tests for Google Workspace OAuth setup.
+"""Google OAuth配置测试
+
+【产品经理理解要点】
+验证技能系统模块中persists state and code verifier for later exchange等15个场景的正确性
+- persists state and code verifier for later exchange的正确性验证
+- reuses saved pkce material for plain code的正确性验证
+- extracts code from redirect url and checks state的正确性验证
+- 另有12个测试场景覆盖
+- 影响技能系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for Google Workspace OAuth setup.
 
 These tests cover the headless/manual auth-code flow where the browser step and
-code exchange happen in separate process invocations.
-"""
+code exchange happen in separate process invocations."""
 
 import importlib.util
 import json

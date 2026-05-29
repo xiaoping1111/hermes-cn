@@ -1,8 +1,15 @@
-"""Test that tool_name is correctly persisted to the session DB for tool-result messages.
+"""工具名称数据库持久化测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中tool name persisted to session db的正确性
+- tool name persisted to session db的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Test that tool_name is correctly persisted to the session DB for tool-result messages.
 
 make_tool_result_message() sets tool_name on every tool-result dict at construction
-time. This test verifies that the value survives the flush path into the session DB.
-"""
+time. This test verifies that the value survives the flush path into the session DB."""
 from unittest.mock import MagicMock, patch
 
 from run_agent import AIAgent

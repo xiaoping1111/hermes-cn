@@ -1,4 +1,13 @@
-"""Tests for the low context length warning in the CLI banner."""
+"""CLI上下文警告测试
+
+【产品经理理解要点】
+验证接近上下文窗口限制时的警告提示逻辑。
+- 上下文使用率超过阈值时发出警告
+- 影响用户对对话长度的感知
+
+──────────────────────────────────────────────────────────────
+Tests for the low context length warning in the CLI banner.
+"""
 
 import os
 from types import SimpleNamespace

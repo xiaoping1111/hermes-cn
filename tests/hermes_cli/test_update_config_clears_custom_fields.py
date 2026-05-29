@@ -1,4 +1,13 @@
-"""Tests for hermes_cli.auth._update_config_for_provider clearing stale fields.
+"""命令行界面测试 - 清除自定义字段
+
+【产品经理理解要点】
+验证命令行界面清除自定义字段的正确性
+- 验证的功能: Tests for hermes_cli.auth._update_config_for_provider clearing stale fields
+- 核心测试场景: switching to openrouter clears api key and api mode、switching to nous clears stale api mode、switching clears codex responses api mode
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.auth._update_config_for_provider clearing stale fields.
 
 When the user switches from a custom provider (e.g. MiniMax with
 ``api_mode: anthropic_messages``, ``api_key: mxp-...``) to a built-in

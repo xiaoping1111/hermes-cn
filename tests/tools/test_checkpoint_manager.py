@@ -1,4 +1,15 @@
-"""Tests for tools/checkpoint_manager.py — CheckpointManager (v2 single-store)."""
+"""检查点管理器测试
+
+【产品经理理解要点】
+验证工具系统模块中store is single shared path等74个场景的正确性
+- store is single shared path的正确性验证
+- project hash deterministic的正确性验证
+- project hash differs per dir的正确性验证
+- 另有71个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/checkpoint_manager.py — CheckpointManager (v2 single-store)."""
 
 import json
 import logging

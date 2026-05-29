@@ -1,4 +1,13 @@
-"""Shared model-switching logic for CLI and gateway /model commands.
+"""模型切换共享逻辑
+
+【产品经理理解要点】
+实现 /model 斜杠命令和 `hermes model` 命令的核心逻辑，处理模型选择和供应商切换。
+- 核心职责：解析模型名称→解析供应商→解析凭证→规范化模型名→查找元数据→构建结果，CLI 和 Gateway 共用
+- 关键概念：模型别名解析、供应商解析、凭证验证、模型名称规范化（按供应商规则）、元数据查找（上下文长度等）
+- 系统定位：模型选择功能的核心执行引擎
+
+─────────────────────────────────────────────────────────────────
+Shared model-switching logic for CLI and gateway /model commands.
 
 Both the CLI (cli.py) and gateway (gateway/run.py) /model handlers
 share the same core pipeline:

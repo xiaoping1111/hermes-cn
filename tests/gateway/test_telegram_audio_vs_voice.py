@@ -1,4 +1,12 @@
-"""
+"""消息网关测试 - Telegram平台·音频处理·vs·语音消息
+
+【产品经理理解要点】
+验证消息网关的Telegram平台音频处理语音消息功能
+- 验证的功能: Tests for #24870 — Telegram: audio file attachments must NOT be routed to STT
+- 核心测试场景: voice message still transcribed、audio attachment skips stt、audio attachment context note format 等共5个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
 Tests for #24870 — Telegram: audio file attachments must NOT be routed to STT.
 
 Telegram distinguishes three kinds of audio payloads:

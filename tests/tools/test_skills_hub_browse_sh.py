@@ -1,4 +1,14 @@
 #!/usr/bin/env python3
+"""skillshub浏览脚本测试
+
+【产品经理理解要点】
+验证工具系统模块中source id等7个场景的正确性
+- source id的正确性验证
+- search returns results的正确性验证
+- search filters by query的正确性验证
+- 另有4个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性"""
+
 
 import unittest
 from unittest.mock import patch

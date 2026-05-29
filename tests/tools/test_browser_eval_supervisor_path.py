@@ -1,10 +1,20 @@
-"""Unit tests for the supervisor-WS fast path in browser_console / _browser_eval.
+"""浏览器执行监管路径测试
+
+【产品经理理解要点】
+验证工具系统模块中primitive result routes through supervisor等14个场景的正确性
+- primitive result routes through supervisor的正确性验证
+- json string result is parsed的正确性验证
+- non json string result kept as string的正确性验证
+- 另有11个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Unit tests for the supervisor-WS fast path in browser_console / _browser_eval.
 
 These exercise the dispatch logic in ``tools.browser_tool._browser_eval`` and
 the response shaping in ``CDPSupervisor.evaluate_runtime`` using mocks — no
 real browser, no real WebSocket.  Real-CDP coverage lives in
-``tests/tools/test_browser_supervisor.py`` (gated on Chrome being installed).
-"""
+``tests/tools/test_browser_supervisor.py`` (gated on Chrome being installed)."""
 from __future__ import annotations
 
 import json

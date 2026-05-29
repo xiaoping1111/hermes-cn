@@ -1,4 +1,12 @@
-"""Tests for the light-mode terminal detection + color remap in cli.py.
+"""CLI浅色模式测试
+
+【产品经理理解要点】
+验证CLI浅色（Light）主题模式的正确显示。
+- 浅色主题下颜色的可读性
+- 影响亮屏环境的用户体验
+
+──────────────────────────────────────────────────────────────
+Tests for the light-mode terminal detection + color remap in cli.py.
 
 Covers the env-override path and the SkinConfig.get_color() wrapper that
 the resize / light-mode salvage installs at module import time.  We don't

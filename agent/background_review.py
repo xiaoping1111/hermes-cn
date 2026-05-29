@@ -1,4 +1,33 @@
-"""Background memory/skill review — fork the agent to evaluate the turn.
+"""后台回顾 — 对话结束后自动反思，保存记忆和更新技能
+
+【产品经理理解要点】
+这是 Agent 的"自我进化"机制。每次与用户对话后，Agent 会在后台自动反思：
+
+  - 记忆回顾：用户有没有透露关于自己的重要信息？（偏好、习惯、身份）
+    → 如果有，自动保存到长期记忆，下次对话就能"记住"
+  - 技能回顾：这次对话有没有学到新的做事方法？
+    → 如果有，自动更新技能库，下次同类任务就能做得更好
+
+为什么需要后台回顾？
+  因为 AI 本身在对话中专注于帮用户解决问题，没有余力思考"我该记住什么"。
+  通过在后台用一个"分身"重新审视整个对话，可以不干扰主流程地实现自我提升。
+
+关键约束：
+  - 后台运行，不阻塞用户的下一次对话
+  - 只能使用记忆和技能管理工具，不能执行其他危险操作
+  - 不修改主对话的任何内容和缓存
+  - 用户完全无感知，除非主动查看记忆/技能
+
+自动进化示意：
+  用户对话 → AI回答 → 对话结束 → 后台分身反思
+                                    ├→ 更新记忆（记住用户是谁）
+                                    └→ 更新技能（记住怎么做事）
+                                           ↓
+                                     下次对话更聪明
+
+─────────────────────────────────────────────────────────────────
+
+Background memory/skill review — fork the agent to evaluate the turn.
 
 After every turn, ``AIAgent.run_conversation`` may call
 :func:`spawn_background_review` to fire off a daemon thread that replays

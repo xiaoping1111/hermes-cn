@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""
+"""健身计算器
+
+【产品经理理解要点】
+提供BMI、TDEE、1RM、宏量营养素、体脂率等多项健身指标计算。
+- 核心职责：计算常见健身指标，输出JSON格式结果
+- 支持命令：bmi、tdee、1rm、macros、bodyfat
+
+─────────────────────────────────────────────────────────────────
 body_calc.py — All-in-one fitness calculator.
 
 Subcommands:

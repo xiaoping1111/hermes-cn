@@ -1,4 +1,13 @@
-"""Hermes CLI skin/theme engine.
+"""Hermes CLI 皮肤/主题引擎
+
+【产品经理理解要点】
+数据驱动的 CLI 视觉主题系统，用户通过 YAML 文件自定义颜色、图标和布局，无需改代码。
+- 皮肤文件存放在 ~/.hermes/skins/，内置多套预设主题
+- 支持自定义 banner 边框色、标题色、提示符样式、工具图标等视觉元素
+- 通过 /skin 命令或 `hermes skin` 子命令切换主题
+
+─────────────────────────────────────────────────────────────────
+Hermes CLI skin/theme engine.
 
 A data-driven skin system that lets users customize the CLI's visual appearance.
 Skins are defined as YAML files in ~/.hermes/skins/ or as built-in presets.

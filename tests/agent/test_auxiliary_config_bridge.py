@@ -1,4 +1,13 @@
-"""Tests for auxiliary model config bridging — verifies that config.yaml values
+"""辅助配置桥接测试
+
+【产品经理理解要点】
+验证辅助模型配置从主配置到辅助客户端的桥接逻辑。
+- 配置参数的正确传递和映射
+- 默认值的合理填充
+- 影响辅助模型的配置一致性
+
+──────────────────────────────────────────────────────────────
+Tests for auxiliary model config bridging — verifies that config.yaml values
 are properly mapped to environment variables by both CLI and gateway loaders.
 
 Also tests the vision_tools and browser_tool model override env vars.

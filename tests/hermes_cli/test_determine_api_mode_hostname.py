@@ -1,4 +1,13 @@
-"""Regression tests for ``determine_api_mode`` hostname handling.
+"""命令行界面测试 - API模式检测
+
+【产品经理理解要点】
+验证命令行界面API模式检测的正确性
+- 验证的功能: Regression tests for ``determine_api_mode`` hostname handling
+- 核心测试场景: native openai url is codex responses、openai host suffix is not codex、openai path segment is not codex 等共7个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression tests for ``determine_api_mode`` hostname handling.
 
 Companion to tests/hermes_cli/test_detect_api_mode_for_url.py — the same
 false-positive class (custom URLs containing ``api.openai.com`` /

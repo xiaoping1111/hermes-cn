@@ -1,4 +1,13 @@
-"""Tests for the 1M-context beta header on AWS Bedrock Claude models.
+"""Bedrock百万上下文测试
+
+【产品经理理解要点】
+验证AWS Bedrock的百万Token上下文窗口配置和触发条件。
+- 大上下文模型名的前缀识别
+- 上下文长度的自动调整
+- 影响长文档处理场景的功能
+
+──────────────────────────────────────────────────────────────
+Tests for the 1M-context beta header on AWS Bedrock Claude models.
 
 Claude Opus 4.6/4.7 and Sonnet 4.6 support a 1M context window, but on AWS
 Bedrock (and Microsoft Foundry) that window is still gated behind the

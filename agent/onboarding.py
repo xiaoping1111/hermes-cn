@@ -1,4 +1,15 @@
-"""
+"""新用户引导 — 首次使用时展示一次性提示
+
+【产品经理理解要点】
+新用户第一次使用 Agent 时，会在关键场景看到一次性提示：
+  - 第一次在 Agent 运行时发送新消息
+  - 第一次遇到长时间运行的工具
+
+每个提示只显示一次（记录在 config.yaml 中），不会重复打扰用户。
+这种"适时引导"比"首次运行问卷"更友好——在用户真正需要帮助时才出现。
+
+─────────────────────────────────────────────────────────────────
+
 Contextual first-touch onboarding hints.
 
 Instead of blocking first-run questionnaires, show a one-time hint the *first*

@@ -1,4 +1,19 @@
-"""Retry utilities — jittered backoff for decorrelated retries.
+"""重试工具 — 带抖动的指数退避策略
+
+【产品经理理解要点】
+当 API 调用因为限流或服务器过载失败时，需要等待一段时间后重试。
+这个模块提供了"科学等待"的策略：
+
+  - 指数退避：每次重试等待的时间翻倍（5秒→10秒→20秒→...）
+  - 随机抖动：在等待时间上加一个随机偏移，避免多个用户同时重试
+
+为什么需要抖动？想象100个用户同时被限流，如果都等待固定10秒后重试，
+10秒后又会同时涌入导致再次限流。随机抖动让每个用户的等待时间略有不同，
+错峰重试，提高成功率。
+
+─────────────────────────────────────────────────────────────────
+
+Retry utilities — jittered backoff for decorrelated retries.
 
 Replaces fixed exponential backoff with jittered delays to prevent
 thundering-herd retry spikes when multiple sessions hit the same

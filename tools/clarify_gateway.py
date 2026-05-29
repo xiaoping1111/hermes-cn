@@ -1,4 +1,13 @@
-"""Gateway-side clarify primitive (blocking event-based queue).
+"""网关端追问/澄清队列
+
+【产品经理理解要点】
+当 Agent 需要向用户提问以澄清意图时，在网关模式下实现"阻塞等待用户回复"的机制。
+- 核心职责：存储待回复的追问请求、阻塞 Agent 线程等待用户响应、支持超时防死锁
+- 关键业务概念：双通道投递——按钮 UI（Telegram/Discord 富交互）和纯文本回退（无富 UI 平台）；会话级隔离
+- 在系统中的位置：clarify 工具在网关模式的后端支撑，CLI 模式下直接用 input() 同步等待
+
+─────────────────────────────────────────────────────────────────
+Gateway-side clarify primitive (blocking event-based queue).
 
 The ``clarify`` tool needs to ask the user a question and block the agent
 thread until they respond.  In CLI mode this is trivial — ``input()`` is

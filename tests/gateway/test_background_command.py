@@ -1,4 +1,13 @@
-"""Tests for /background gateway slash command.
+"""消息网关测试 - 后台命令处理
+
+【产品经理理解要点】
+验证消息网关后台命令处理的正确性
+- 验证的功能: Tests for /background gateway slash command
+- 核心测试场景: no prompt shows usage、bg alias no prompt shows usage、empty prompt shows usage 等共21个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for /background gateway slash command.
 
 Tests the _handle_background_command handler (run a prompt in a separate
 background session) across gateway messenger platforms.

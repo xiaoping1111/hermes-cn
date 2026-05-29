@@ -1,4 +1,14 @@
-"""Tests for Codex auth — tokens stored in Hermes auth store (~/.hermes/auth.json)."""
+"""命令行界面测试 - Codex认证
+
+【产品经理理解要点】
+验证命令行界面Codex认证的正确性
+- 验证的功能: Tests for Codex auth — tokens stored in Hermes auth store (~/.hermes/auth.json)
+- 核心测试场景: read codex tokens success、read codex tokens missing、resolve codex runtime credentials missing access token 等共16个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for Codex auth — tokens stored in Hermes auth store (~/.hermes/auth.json).
+"""
 
 import json
 import time

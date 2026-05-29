@@ -1,4 +1,12 @@
-"""Tests for `/exit --delete` and `/quit --delete` session deletion.
+"""退出删除会话测试
+
+【产品经理理解要点】
+验证退出时选择删除会话的逻辑。
+- 退出时删除会话的确认流程
+- 影响隐私保护的可靠性
+
+──────────────────────────────────────────────────────────────
+Tests for `/exit --delete` and `/quit --delete` session deletion.
 
 Ports the behavior from google-gemini/gemini-cli#19332: running `/exit` or
 `/quit` with the `--delete` flag arms a one-shot `_delete_session_on_exit`

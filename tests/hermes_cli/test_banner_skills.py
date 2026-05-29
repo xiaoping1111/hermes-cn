@@ -1,4 +1,14 @@
-"""Tests for banner get_available_skills() — disabled and platform filtering."""
+"""命令行界面测试 - banner·技能系统
+
+【产品经理理解要点】
+验证命令行界面的技能系统功能
+- 验证的功能: Tests for banner get_available_skills() — disabled and platform filtering
+- 核心测试场景: get available skills delegates to find all skills、get available skills excludes disabled、get available skills empty when no skills 等共5个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for banner get_available_skills() — disabled and platform filtering.
+"""
 
 from unittest.mock import patch
 

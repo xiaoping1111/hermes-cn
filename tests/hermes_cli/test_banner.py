@@ -1,4 +1,14 @@
-"""Tests for banner toolset name normalization and skin color usage."""
+"""命令行界面测试 - banner
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for banner toolset name normalization and skin color usage
+- 核心测试场景: display toolset name strips legacy suffix、display toolset name preserves clean names、display toolset name handles empty 等共6个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for banner toolset name normalization and skin color usage.
+"""
 
 from unittest.mock import patch
 

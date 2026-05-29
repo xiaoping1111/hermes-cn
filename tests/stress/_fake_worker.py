@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
-"""Fake worker process that exercises the real subprocess contract.
+"""模拟Worker测试
+
+【产品经理理解要点】
+验证压力测试模块中相关功能的正确性
+- 模块功能单元测试覆盖
+- 影响压力测试的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Fake worker process that exercises the real subprocess contract.
 
 Reads HERMES_KANBAN_TASK from env, heartbeats periodically, does short
 work, completes via the CLI. Designed to be spawned by the dispatcher
-exactly the way `hermes chat -q` would be, minus the LLM cost.
-"""
+exactly the way `hermes chat -q` would be, minus the LLM cost."""
 
 import json
 import os

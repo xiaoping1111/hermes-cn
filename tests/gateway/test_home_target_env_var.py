@@ -1,4 +1,13 @@
-"""Regression tests for /sethome env-var resolution.
+"""消息网关测试 - home·target·环境配置·var
+
+【产品经理理解要点】
+验证消息网关的环境配置功能
+- 验证的功能: Regression tests for /sethome env-var resolution
+- 核心测试场景: matrix home target env var uses home room、email home target env var uses home address、telegram home target env var uses home channel 等共7个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests for /sethome env-var resolution.
 
 The `/sethome` command writes to a platform's home-target env var. Two platforms
 don't follow the `{PLATFORM}_HOME_CHANNEL` convention: matrix uses

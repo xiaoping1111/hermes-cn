@@ -1,4 +1,18 @@
-"""AWS Bedrock Converse API adapter for Hermes Agent.
+"""AWS Bedrock 适配器 — 通过 AWS 原生 API 调用 Bedrock 上的 AI 模型
+
+【产品经理理解要点】
+AWS Bedrock 是亚马逊的 AI 模型托管平台，提供 Claude、Llama、Mistral 等模型。
+这个适配器让 Agent 可以直接通过 AWS SDK 调用 Bedrock，无需 API Key 管理：
+  - 自动使用 AWS 凭证链（IAM 角色、SSO、环境变量等）
+  - 支持跨区域推理配置（自动切换到有空余容量的区域）
+  - 支持 Bedrock Guardrails（内容安全过滤）
+  - 自动发现可用的基础模型
+
+适合企业用户：使用 AWS 基础设施的公司可以无缝集成，无需额外管理 API Key。
+
+─────────────────────────────────────────────────────────────────
+
+AWS Bedrock Converse API adapter for Hermes Agent.
 
 Provides native integration with Amazon Bedrock using the Converse API,
 bypassing the OpenAI-compatible endpoint in favor of direct AWS SDK calls.

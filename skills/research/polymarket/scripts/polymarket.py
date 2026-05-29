@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Polymarket CLI helper — query prediction market data.
+"""【产品经理理解要点】
+Polymarket预测市场数据查询工具——用于搜索和查看预测市场（如加密货币、政治事件等）的行情数据。
+核心功能：(1) search：按关键词搜索市场；(2) trending：查看热门市场；(3) market：查看单个市场详情；(4) price/book：查看价格和订单簿。
+─────────────────────────────────────────────────────────────────
+Polymarket CLI helper — query prediction market data.
 
 Usage:
     python3 polymarket.py search "bitcoin"

@@ -1,8 +1,18 @@
-"""E2E tests: verify _build_kwargs_from_profile produces correct output.
+"""端到端连线测试
+
+【产品经理理解要点】
+验证模型提供者模块中nvidia gets default max tokens等6个场景的正确性
+- nvidia gets default max tokens的正确性验证
+- nvidia nim alias的正确性验证
+- nvidia model passed的正确性验证
+- 另有3个测试场景覆盖
+- 影响模型提供者的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+E2E tests: verify _build_kwargs_from_profile produces correct output.
 
 These tests call _build_kwargs_from_profile on the transport directly,
-without importing run_agent (which would cause xdist worker contamination).
-"""
+without importing run_agent (which would cause xdist worker contamination)."""
 
 import pytest
 from agent.transports.chat_completions import ChatCompletionsTransport

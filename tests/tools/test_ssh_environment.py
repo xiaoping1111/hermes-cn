@@ -1,4 +1,15 @@
-"""Tests for the SSH remote execution environment backend."""
+"""SSH环境测试
+
+【产品经理理解要点】
+验证工具系统模块中base flags等25个场景的正确性
+- base flags的正确性验证
+- custom port的正确性验证
+- key path的正确性验证
+- 另有22个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the SSH remote execution environment backend."""
 
 import json
 import os

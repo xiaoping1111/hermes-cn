@@ -1,4 +1,12 @@
-"""Tests for the /background indicator in the CLI status bar.
+"""CLI后台状态指示器测试
+
+【产品经理理解要点】
+验证CLI后台任务状态指示器的显示逻辑。
+- 后台任务运行时的状态指示
+- 影响用户对后台任务的感知
+
+──────────────────────────────────────────────────────────────
+Tests for the /background indicator in the CLI status bar.
 
 The classic prompt_toolkit status bar shows `▶ N` when N tasks launched via
 `/background` are still running. Source of truth is `self._background_tasks`

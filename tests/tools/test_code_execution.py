@@ -1,6 +1,15 @@
 #!/usr/bin/env python3
-"""
+"""代码执行测试
 
+【产品经理理解要点】
+验证工具系统模块中available on posix等67个场景的正确性
+- available on posix的正确性验证
+- schema is valid的正确性验证
+- generates all allowed tools的正确性验证
+- 另有64个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
 Tests for the code execution sandbox (programmatic tool calling).
 
 These tests monkeypatch handle_function_call so they don't require API keys
@@ -9,8 +18,7 @@ UDS socket lifecycle, hermes_tools generation, timeout enforcement,
 output capping, tool call counting, and error propagation.
 
 Run with:  python -m pytest tests/test_code_execution.py -v
-   or:     python tests/test_code_execution.py
-"""
+   or:     python tests/test_code_execution.py"""
 
 import pytest
 # pytestmark removed — tests run fine (61 pass, ~99s)

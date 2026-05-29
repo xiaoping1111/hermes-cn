@@ -1,4 +1,16 @@
-"""
+"""事件钩子系统 — 在关键生命周期节点触发自定义处理
+
+【产品经理理解要点】
+用户可以在网关运行的关键节点上执行自定义逻辑，比如：
+  - gateway:startup — 网关启动时
+  - session:start — 新会话创建时
+  - agent:start — AI 开始处理消息时
+  - agent:step — AI 每轮工具调用时
+
+钩子存放在 ~/.hermes/hooks/ 目录，每个钩子包含一个配置文件和一个 Python 处理脚本。
+
+─────────────────────────────────────────────────────────────────
+
 Event Hook System
 
 A lightweight event-driven system that fires handlers at key lifecycle points.

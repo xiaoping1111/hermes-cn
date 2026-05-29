@@ -1,4 +1,14 @@
-"""WeCom callback-mode adapter for self-built enterprise applications.
+"""企业微信回调模式适配器 — 自建应用的 HTTP 回调接入
+
+【产品经理理解要点】
+与 wecom.py（AI 机器人 WebSocket 模式）不同，这个适配器处理
+标准的企业微信回调流程：接收加密 POST、解密消息、异步回复。
+
+适合自建企业应用的场景。
+
+─────────────────────────────────────────────────────────────────
+
+WeCom callback-mode adapter for self-built enterprise applications.
 
 Unlike the bot/websocket adapter in ``wecom.py``, this handles the standard
 WeCom callback flow: WeCom POSTs encrypted XML to an HTTP endpoint, the

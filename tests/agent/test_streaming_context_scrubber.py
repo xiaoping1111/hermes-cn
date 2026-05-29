@@ -1,4 +1,12 @@
-"""Unit tests for StreamingContextScrubber (agent/memory_manager.py).
+"""流式上下文清洗测试
+
+【产品经理理解要点】
+验证流式输出中上下文清洗器的正确工作。
+- 流式内容中的敏感信息实时清洗
+- 影响流式输出的安全性
+
+──────────────────────────────────────────────────────────────
+Unit tests for StreamingContextScrubber (agent/memory_manager.py).
 
 Regression coverage for #5719 — memory-context spans split across stream
 deltas must not leak payload to the UI.  The one-shot sanitize_context()

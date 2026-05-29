@@ -1,4 +1,14 @@
-"""Focused regressions for the Copilot ACP shim safety layer."""
+"""Copilot ACP客户端测试
+
+【产品经理理解要点】
+验证GitHub Copilot的ACP客户端集成。
+- Copilot到ACP的消息格式转换
+- 工具调用的正确转发
+- 影响Copilot用户的工具使用体验
+
+──────────────────────────────────────────────────────────────
+Focused regressions for the Copilot ACP shim safety layer.
+"""
 
 from __future__ import annotations
 

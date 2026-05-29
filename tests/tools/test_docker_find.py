@@ -1,4 +1,15 @@
-"""Tests for tools.environments.docker.find_docker — Docker CLI discovery."""
+"""Docker容器查找工具测试
+
+【产品经理理解要点】
+验证工具系统模块中found via shutil which等9个场景的正确性
+- found via shutil which的正确性验证
+- not in path falls back to known locations的正确性验证
+- returns none when not found的正确性验证
+- 另有6个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools.environments.docker.find_docker — Docker CLI discovery."""
 
 import os
 from unittest.mock import patch

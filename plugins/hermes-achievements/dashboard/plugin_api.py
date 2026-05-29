@@ -1,5 +1,12 @@
-"""Hermes Achievements dashboard plugin backend.
+"""Hermes成就系统Dashboard后端API
 
+【产品经理理解要点】
+Hermes成就系统的Dashboard后端，扫描用户会话历史，统计工具使用、错误、模型切换等指标，计算成就解锁状态。
+- 成就体系：5个层级(Copper/Silver/Gold/Diamond/Olympian)，涵盖自主性、调试、编码、工具掌握等7大类
+- 挂载路径：/api/plugins/hermes-achievements/
+- 扫描策略：增量扫描+检查点缓存，避免重复分析
+
+─────────────────────────────────────────────────────────────────
 Mounted at /api/plugins/hermes-achievements/ by Hermes dashboard.
 """
 from __future__ import annotations

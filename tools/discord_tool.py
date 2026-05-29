@@ -1,4 +1,13 @@
-"""Discord server introspection and management tool.
+"""Discord 服务器管理工具
+
+【产品经理理解要点】
+让 Agent 在 Discord 平台上能查询服务器成员、消息、频道等信息并执行管理操作。
+- 核心职责：提供 Discord REST API 的安全封装，按 Bot 权限级别动态暴露可用操作
+- 关键业务概念：权限感知——自动检测 Bot 的 Privileged Intents，隐藏不具备权限的操作；用户可配置操作白名单
+- 在系统中的位置：仅 Discord 平台网关加载，其他平台零开销
+
+─────────────────────────────────────────────────────────────────
+Discord server introspection and management tool.
 
 Provides the agent with the ability to interact with Discord servers
 when running on the Discord gateway. Uses Discord REST API directly

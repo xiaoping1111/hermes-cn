@@ -1,5 +1,12 @@
-"""Holographic Reduced Representations (HRR) with phase encoding.
+"""全息约简表示(HRR)相位编码引擎
 
+【产品经理理解要点】
+实现HRR向量符号架构，用于将组合结构编码为固定宽度的分布式表示。支持概念的绑定(关联)和解绑(检索)操作。
+- bind(绑定)：循环卷积/相位加法 — 关联两个概念
+- unbind(解绑)：循环相关/相位减法 — 检索绑定的值
+- 用途：实现记忆的组合式检索，如"人+角色→具体关系"
+
+─────────────────────────────────────────────────────────────────
 HRRs are a vector symbolic architecture for encoding compositional structure
 into fixed-width distributed representations. This module uses *phase vectors*:
 each concept is a vector of angles in [0, 2π). The algebraic operations are:

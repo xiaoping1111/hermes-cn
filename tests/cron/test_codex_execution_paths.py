@@ -1,3 +1,17 @@
+"""定时任务测试 - Codex执行路径
+
+【产品经理理解要点】
+验证定时任务调度引擎Codex执行路径的正确性
+- 验证的功能: Codex多执行路径（普通/Unauthorized/限流）的正确调度
+- 核心测试场景: cron run job codex path handles internal 401 refresh、gateway run agent codex path handles internal 401 refresh
+- 业务影响: 定时任务可能无法正确调度执行，影响自动化工作流的可靠性
+
+─────────────────────────────────────────────────────────────────
+定时任务测试 - Codex执行路径·Codex执行路径·paths
+
+测试定时任务调度引擎中codex相关的execution相关的paths功能
+"""
+
 import asyncio
 import sys
 import types

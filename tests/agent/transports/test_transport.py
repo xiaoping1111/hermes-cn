@@ -1,4 +1,16 @@
-"""Tests for the transport ABC, registry, and AnthropicTransport."""
+"""传输层抽象基类、注册表与Anthropic传输层测试
+
+【产品经理理解要点】
+验证传输层的基础架构：抽象基类契约（所有传输层必须实现的方法）、全局注册表（按api_mode查找传输层实例）、以及Anthropic Messages API传输层的具体实现。
+- 验证抽象基类不可直接实例化、子类必须实现所有抽象方法
+- 验证注册表的查找和注册机制
+- 验证Anthropic传输的工具格式转换（function→input_schema）、响应校验和标准化
+- 业务影响：如果这些测试失败，模型提供者的传输层可能无法正确加载或响应解析出错
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for the transport ABC, registry, and AnthropicTransport."""
 
 import pytest
 from types import SimpleNamespace

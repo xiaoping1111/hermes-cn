@@ -1,10 +1,18 @@
-"""Regression test: temp file cleanup when materializing data URLs for vision.
+"""数据URL物化清理测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中b64decode failure does not leak tempfile、successful decode returns path to existing file的正确性
+- b64decode failure does not leak tempfile的正确性验证
+- successful decode returns path to existing file的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression test: temp file cleanup when materializing data URLs for vision.
 
 `_materialize_data_url_for_vision` creates a `NamedTemporaryFile(delete=False)`
 so the path can be handed to vision backends.  If `base64.b64decode` raises on
 a corrupt/unsupported data URL the temp file would otherwise persist forever
-on disk, leaking once per failed call.
-"""
+on disk, leaking once per failed call."""
 
 from __future__ import annotations
 

@@ -1,12 +1,22 @@
-"""Tests for subprocess env sanitization in LocalEnvironment.
+"""本地环境黑名单测试
+
+【产品经理理解要点】
+验证工具系统模块中blocked vars are stripped等18个场景的正确性
+- blocked vars are stripped的正确性验证
+- registry derived vars are stripped的正确性验证
+- non registry provider vars are stripped的正确性验证
+- 另有15个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for subprocess env sanitization in LocalEnvironment.
 
 Verifies that Hermes-managed provider, tool, and gateway env vars are
 stripped from subprocess environments so external CLIs are not silently
 misrouted or handed Hermes secrets.
 
 See: https://github.com/NousResearch/hermes-agent/issues/1002
-See: https://github.com/NousResearch/hermes-agent/issues/1264
-"""
+See: https://github.com/NousResearch/hermes-agent/issues/1264"""
 
 import os
 import threading

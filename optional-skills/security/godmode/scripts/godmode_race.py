@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""
+"""【产品经理理解要点】
+多模型竞速引擎——同时向多个模型发送请求，根据回复质量、过滤程度和速度评分，返回最佳答案。从G0DM0D3项目移植，通过OpenRouter路由。
+产品理解：用于对比不同模型对同一提示的响应差异，是安全评估和模型选型的工具。
+─────────────────────────────────────────────────────────────────
 ULTRAPLINIAN Multi-Model Racing Engine
 Ported from G0DM0D3 (elder-plinius/G0DM0D3).
 

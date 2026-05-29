@@ -1,3 +1,17 @@
+"""命令行界面测试 - 技能系统·hub
+
+【产品经理理解要点】
+验证命令行界面的技能系统功能
+- 验证的功能: 技能中心（Hub）管理
+- 核心测试场景: do list initializes hub dir、do list distinguishes hub builtin and local、do list filter local 等共23个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - 技能系统·hub
+
+测试CLI命令处理与配置管理中skills相关的hub功能
+"""
+
 from io import StringIO
 from unittest.mock import patch
 

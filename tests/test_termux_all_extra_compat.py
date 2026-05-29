@@ -1,4 +1,14 @@
-"""Regression coverage for the Termux broad install profile."""
+"""Termux全功能兼容性测试
+
+【产品经理理解要点】
+验证Termux的全功能安装配置文件排除了已知不可用的可选依赖。
+- termux-all排除了matrix和voice等已知阻塞项
+- 安装脚本优先尝试termux-all再降级
+- 影响Android用户的安装成功率
+
+──────────────────────────────────────────────────────────────
+Regression coverage for the Termux broad install profile.
+"""
 
 from pathlib import Path
 

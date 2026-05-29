@@ -1,4 +1,14 @@
-"""Tests for the startup allowlist warning check in gateway/run.py."""
+"""消息网关测试 - allowlist·startup·check
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for the startup allowlist warning check in gateway/run.py
+- 核心测试场景: no config emits warning、signal group allowed users suppresses warning、telegram allow all users suppresses warning 等共4个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the startup allowlist warning check in gateway/run.py.
+"""
 
 import os
 from unittest.mock import patch

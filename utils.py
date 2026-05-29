@@ -1,4 +1,13 @@
-"""Shared utility functions for hermes-agent."""
+"""Hermes Agent 的共享工具函数库
+
+【产品经理理解要点】
+这里放的是各个模块都会用到的"基础小工具"，核心包括：
+  - 安全写文件：写 JSON/YAML 时先用临时文件再原子替换，防止写到一半崩溃导致文件损坏
+  - 环境变量工具：统一读取布尔值、整数类型的环境变量
+  - 代理/URL 工具：处理网络代理配置和 URL 解析
+  - 通用判断：将 "true"/"1"/"yes" 等字符串统一转为 Python 布尔值
+─────────────────────────────────────────────────────────────────
+Shared utility functions for hermes-agent."""
 
 import json
 import logging

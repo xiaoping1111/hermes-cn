@@ -1,4 +1,14 @@
-"""Tests for network.force_ipv4 — the socket.getaddrinfo monkey-patch."""
+"""IPv4网络优先设置测试
+
+【产品经理理解要点】
+验证强制使用IPv4的DNS解析设置，解决某些网络环境下IPv6连接不稳定的问题。
+- socket.getaddrinfo的monkey-patch正确过滤IPv4
+- 开关控制和环境变量交互
+- 影响双栈网络下的连接稳定性
+
+──────────────────────────────────────────────────────────────
+Tests for network.force_ipv4 — the socket.getaddrinfo monkey-patch.
+"""
 
 import importlib
 import socket

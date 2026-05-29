@@ -1,4 +1,12 @@
-"""WeCom BizMsgCrypt-compatible AES-CBC encryption for callback mode.
+"""企业微信消息加解密 — AES-CBC 加密兼容腾讯官方 SDK
+
+【产品经理理解要点】
+企业微信回调模式需要加解密消息，这个模块实现与腾讯官方 WXBizMsgCrypt
+SDK 相同的加密格式，确保消息传输安全。
+
+─────────────────────────────────────────────────────────────────
+
+WeCom BizMsgCrypt-compatible AES-CBC encryption for callback mode.
 
 Implements the same wire format as Tencent's official ``WXBizMsgCrypt``
 SDK so that WeCom can verify, encrypt, and decrypt callback payloads.

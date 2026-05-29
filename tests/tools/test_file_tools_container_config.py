@@ -1,4 +1,15 @@
-"""Tests for docker container_config key propagation in file_tools."""
+"""文件工具容器配置测试
+
+【产品经理理解要点】
+验证工具系统模块中docker mount cwd to workspace passed等4个场景的正确性
+- docker mount cwd to workspace passed的正确性验证
+- docker forward env passed的正确性验证
+- docker mount cwd defaults to false的正确性验证
+- 另有1个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for docker container_config key propagation in file_tools."""
 
 from unittest.mock import patch, MagicMock
 import tools.file_tools as file_tools

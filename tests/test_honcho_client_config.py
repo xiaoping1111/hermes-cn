@@ -1,4 +1,14 @@
-"""Tests for Honcho client configuration."""
+"""Honcho客户端配置测试
+
+【产品经理理解要点】
+验证Honcho记忆服务的客户端配置，包括API密钥存在时的自动启用逻辑。
+- API密钥存在时自动启用连接
+- 显式禁用配置的优先级
+- 影响记忆功能的自动配置
+
+──────────────────────────────────────────────────────────────
+Tests for Honcho client configuration.
+"""
 
 import json
 import os

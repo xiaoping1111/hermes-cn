@@ -1,4 +1,14 @@
-"""Tests for gateway/channel_directory.py — channel resolution and display."""
+"""消息网关测试 - 频道管理·directory
+
+【产品经理理解要点】
+验证消息网关的频道管理功能
+- 验证的功能: Tests for gateway/channel_directory.py — channel resolution and display
+- 核心测试场景: missing file、valid file、corrupt file 等共33个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for gateway/channel_directory.py — channel resolution and display.
+"""
 
 import asyncio
 import json

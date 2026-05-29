@@ -1,4 +1,15 @@
-"""Tests for the thinking-only assistant message sanitizer.
+"""思考内容清洗器测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中plain assistant reply is not thinking only等25个场景的正确性
+- plain assistant reply is not thinking only的正确性验证
+- assistant with tool calls is not thinking only的正确性验证
+- empty content plus reasoning is thinking only的正确性验证
+- 另有22个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the thinking-only assistant message sanitizer.
 
 Covers _is_thinking_only_assistant() + _drop_thinking_only_and_merge_users()
 in run_agent.py. The sanitizer runs on the per-call api_messages copy and
@@ -8,8 +19,7 @@ alternation is preserved for the provider.
 
 Claude Code uses this exact pattern (filterOrphanedThinkingOnlyMessages +
 mergeAdjacentUserMessages in src/utils/messages.ts). See #16823 for the
-backstory on why the alternative — fabricating "." stub text — was rejected.
-"""
+backstory on why the alternative — fabricating "." stub text — was rejected."""
 
 from run_agent import AIAgent
 

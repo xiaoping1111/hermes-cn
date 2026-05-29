@@ -1,4 +1,15 @@
-"""Tests for cross-edit LSP delta filtering.
+"""跨编辑LSP增量过滤测试
+
+【产品经理理解要点】
+验证代码编辑后诊断结果的增量过滤逻辑：编辑前已存在的错误不应重复报告，只有新出现的错误才应该呈现给AI代理。核心是行号偏移映射——当删除/插入行时，旧错误的行号需要重新映射后才能正确匹配。
+- 验证诊断键包含位置信息，同一错误在不同行是不同的诊断
+- 验证行号偏移映射在删除、插入、替换场景下正确工作
+- 业务影响：如果这些测试失败，AI代理会重复报告已知错误或漏报新错误，影响代码修改质量
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for cross-edit LSP delta filtering.
 
 The delta-filter contract spans three pieces:
 

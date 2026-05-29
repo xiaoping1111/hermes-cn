@@ -1,11 +1,20 @@
-"""Tests for pre_approval_request / post_approval_response plugin hooks.
+"""审批流插件hooks测试
+
+【产品经理理解要点】
+验证工具系统模块中pre and post fire with expected kwargs、deny reported to post hook、plugin hook crash does not break approval的正确性
+- pre and post fire with expected kwargs的正确性验证
+- deny reported to post hook的正确性验证
+- plugin hook crash does not break approval的正确性验证
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for pre_approval_request / post_approval_response plugin hooks.
 
 These hooks fire in tools/approval.py::check_all_command_guards whenever a
 dangerous command needs user approval. They are observer-only (return values
 ignored) and must fire on BOTH the CLI-interactive path and the async gateway
 path, so external tools like macOS notifiers can be alerted regardless of
-which surface the user is on.
-"""
+which surface the user is on."""
 from unittest.mock import patch
 
 import pytest

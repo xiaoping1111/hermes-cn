@@ -1,4 +1,18 @@
-"""Gateway streaming consumer — bridges sync agent callbacks to async platform delivery.
+"""网关流式消费者 — 将 AI 的流式输出实时推送到聊天平台
+
+【产品经理理解要点】
+AI 的回复是"一个字一个字"生成的，这个模块负责把这种逐步生成的内容
+实时推送到聊天平台，让用户看到"打字中"的效果：
+
+  1. AI 产生新文字 → 通过回调传入（线程安全）
+  2. 攒够一定量文字 → 编辑消息更新内容（有频率限制，防止刷屏）
+  3. AI 完成回复 → 发送最终版本
+
+支持 Telegram、Discord、Slack 的"编辑消息"功能实现实时更新。
+
+─────────────────────────────────────────────────────────────────
+
+Gateway streaming consumer — bridges sync agent callbacks to async platform delivery.
 
 The agent fires stream_delta_callback(text) synchronously from its worker thread.
 GatewayStreamConsumer:

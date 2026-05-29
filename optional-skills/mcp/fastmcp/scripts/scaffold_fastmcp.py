@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Copy a FastMCP starter template into a working file."""
+"""FastMCP脚手架生成器
+
+【产品经理理解要点】
+从模板复制FastMCP服务器框架代码，快速创建自定义MCP工具服务。
+- 核心职责：根据选择的模板类型生成MCP服务器初版代码
+
+─────────────────────────────────────────────────────────────────
+Copy a FastMCP starter template into a working file."""
 
 from __future__ import annotations
 

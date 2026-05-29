@@ -1,4 +1,18 @@
-"""Workspace and project-root resolution for LSP.
+"""LSP 工作区检测 — 判断是否在项目目录内，找到项目根目录
+
+【产品经理理解要点】
+Agent 只在 Git 仓库内启动 LSP，避免在用户主目录意外启动后台服务。
+
+两个判断：
+  1. 是否在项目内？检查当前目录是否在 Git 仓库中
+  2. 项目根目录在哪？不同语言有不同的标志文件：
+     Python → pyproject.toml，Rust → Cargo.toml，Go → go.mod 等
+
+从文件路径向上搜索，找到标志文件即确定根目录。
+
+─────────────────────────────────────────────────────────────────
+
+Workspace and project-root resolution for LSP.
 
 Two concerns live here:
 

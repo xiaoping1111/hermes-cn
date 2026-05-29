@@ -1,4 +1,11 @@
-"""
+"""网关运行状态检测 — 判断网关进程是否在运行
+
+【产品经理理解要点】
+通过 PID 文件（~/.hermes/gateway.pid）检测网关进程是否在运行。
+用于 CLI 的 send_message 工具判断网关是否可用。
+
+─────────────────────────────────────────────────────────────────
+
 Gateway runtime status helpers.
 
 Provides PID-file based detection of whether the gateway daemon is running,

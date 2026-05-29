@@ -1,4 +1,14 @@
-"""Tests for hermes_cli.status model/provider display."""
+"""命令行界面测试 - status·模型管理·提供商
+
+【产品经理理解要点】
+验证命令行界面的模型管理提供商功能
+- 验证的功能: Tests for hermes_cli.status model/provider display
+- 核心测试场景: show status displays configured dict model and provider label、show status displays legacy string model and custom endpoint、show status reports managed nous features 等共5个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.status model/provider display.
+"""
 
 from types import SimpleNamespace
 

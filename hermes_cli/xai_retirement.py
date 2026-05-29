@@ -1,4 +1,12 @@
-"""Detect xAI models retired on May 15, 2026.
+"""xAI 模型退役检测
+
+【产品经理理解要点】
+检测用户配置中引用的已退役 xAI 模型（2026年5月15日停服），并提供迁移建议。
+- 纯逻辑无 I/O，可被 `hermes doctor` 和未来的迁移命令复用
+- 根据官方迁移指南推荐替代模型和 reasoning_effort 设置
+
+─────────────────────────────────────────────────────────────────
+Detect xAI models retired on May 15, 2026.
 
 Source: https://docs.x.ai/developers/migration/may-15-retirement
 

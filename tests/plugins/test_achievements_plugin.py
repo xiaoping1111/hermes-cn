@@ -1,4 +1,15 @@
-"""Tests for the bundled hermes-achievements dashboard plugin.
+"""成就系统插件测试
+
+【产品经理理解要点】
+验证功能插件模块中scan sessions default scans all history not first 200等9个场景的正确性
+- scan sessions default scans all history not first...的正确性验证
+- scan sessions explicit positive limit is honored的正确性验证
+- scan sessions zero or negative limit means unlimited的正确性验证
+- 另有6个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the bundled hermes-achievements dashboard plugin.
 
 These target the two behaviors that matter for official integration:
 
@@ -13,8 +24,7 @@ The upstream repo ships its own unittest suite under
 ``plugins/hermes-achievements/tests/`` covering the achievement engine
 internals (tier math, secret-state handling, catalog invariants). These
 tests live at the hermes-agent level and focus on the integration
-contract: the plugin scans ALL of your sessions, not the first 200.
-"""
+contract: the plugin scans ALL of your sessions, not the first 200."""
 from __future__ import annotations
 
 import importlib.util

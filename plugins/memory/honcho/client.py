@@ -1,5 +1,11 @@
-"""Honcho client initialization and configuration.
+"""Honcho客户端初始化与配置
 
+【产品经理理解要点】
+管理Honcho SDK客户端的初始化和配置，支持多级配置文件优先级和主机特定设置。
+- 配置优先级：实例本地→全局→环境变量
+- 主机设置优先级：显式主机字段→全局字段→默认值
+
+─────────────────────────────────────────────────────────────────
 Resolution order for config file:
   1. $HERMES_HOME/honcho.json  (instance-local, enables isolated Hermes instances)
   2. ~/.honcho/config.json     (global, shared across all Honcho-enabled apps)

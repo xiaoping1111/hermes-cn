@@ -1,4 +1,13 @@
-"""Tests for Telegram text message aggregation.
+"""消息网关测试 - Telegram平台·text·批量处理
+
+【产品经理理解要点】
+验证消息网关的Telegram平台批量处理功能
+- 验证的功能: Tests for Telegram text message aggregation
+- 核心测试场景: single message dispatched after delay、split messages aggregated、three way split aggregated 等共5个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Telegram text message aggregation.
 
 When a user sends a long message, Telegram clients split it into multiple
 updates.  The TelegramAdapter should buffer rapid successive text messages

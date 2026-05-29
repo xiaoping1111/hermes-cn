@@ -1,4 +1,13 @@
-"""Helpers for translating OpenAI-style tool schemas to Moonshot's schema subset.
+"""Moonshot(Kimi)工具Schema适配器
+
+【产品经理理解要点】
+解决Moonshot API对JSON Schema的严格限制，自动修补工具定义使其兼容。
+- 核心职责：将标准OpenAI格式转换为Moonshot接受的更严格子集
+- 典型问题：Moonshot拒绝缺少type字段的属性、不允许anyOf与type同级等
+- 用户影响：不使用此适配器，调用Moonshot模型时工具调用会报400错误
+
+─────────────────────────────────────────────────────────────────
+Helpers for translating OpenAI-style tool schemas to Moonshot's schema subset.
 
 Moonshot (Kimi) accepts a stricter subset of JSON Schema than standard OpenAI
 tool calling.  Requests that violate it fail with HTTP 400:

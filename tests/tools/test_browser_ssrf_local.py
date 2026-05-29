@@ -1,4 +1,15 @@
-"""Tests that browser_navigate SSRF checks respect local-backend mode and
+"""浏览器SSRF防护local测试
+
+【产品经理理解要点】
+验证工具系统模块中cloud blocks private url by default等16个场景的正确性
+- cloud blocks private url by default的正确性验证
+- cloud allows private url when setting true的正确性验证
+- cloud allows public url的正确性验证
+- 另有13个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests that browser_navigate SSRF checks respect local-backend mode and
 the allow_private_urls setting.
 
 Local backends (Camofox, headless Chromium without a cloud provider) skip
@@ -6,8 +17,7 @@ SSRF checks entirely — the agent already has full local-network access via
 the terminal tool.
 
 Cloud backends (Browserbase, BrowserUse) enforce SSRF by default.  Users
-can opt out for cloud mode via ``browser.allow_private_urls: true``.
-"""
+can opt out for cloud mode via ``browser.allow_private_urls: true``."""
 
 import json
 

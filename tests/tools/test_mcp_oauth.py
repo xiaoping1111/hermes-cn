@@ -1,4 +1,15 @@
-"""Tests for tools/mcp_oauth.py — OAuth 2.1 PKCE support for MCP servers."""
+"""MCP协议OAuth认证测试
+
+【产品经理理解要点】
+验证工具系统模块中roundtrip tokens等42个场景的正确性
+- roundtrip tokens的正确性验证
+- token file created with 0o600的正确性验证
+- roundtrip client info的正确性验证
+- 另有39个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/mcp_oauth.py — OAuth 2.1 PKCE support for MCP servers."""
 
 import json
 import os

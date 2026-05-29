@@ -1,4 +1,14 @@
-"""Format LSP diagnostics for inclusion in tool output.
+"""LSP 诊断报告格式化 — 将代码检查结果格式化为 Agent 可理解的文本
+
+【产品经理理解要点】
+语言服务器返回的错误信息格式复杂，这个模块将其简化为紧凑的文本摘要：
+  - 只显示错误级别（默认不显示警告和信息，避免干扰）
+  - 按文件分组，每个文件最多显示 20 个错误
+  - 总字符数限制在 4000，防止占用过多上下文
+
+─────────────────────────────────────────────────────────────────
+
+Format LSP diagnostics for inclusion in tool output.
 
 The model sees a compact, severity-filtered, line-bounded summary of
 diagnostics introduced by the latest edit.  Format matches what

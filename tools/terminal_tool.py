@@ -1,5 +1,18 @@
 #!/usr/bin/env python3
-"""
+"""终端工具 — 在多种环境中执行命令
+
+【产品经理理解要点】
+这是 Agent 最核心的工具之一，让 AI 能执行终端命令。支持多种执行环境：
+  - 本地(local)：直接在主机上执行（默认，最快）
+  - Docker：在 Docker 容器中执行（隔离安全）
+  - Modal：在云端执行（弹性扩展）
+  - SSH：在远程服务器执行
+  - Vercel Sandbox：在云端沙箱执行
+
+功能：后台任务、超时控制、危险命令确认、自动清理闲置环境
+
+─────────────────────────────────────────────────────────────────
+
 Terminal Tool Module
 
 A terminal tool that executes commands in local, Docker, Modal, SSH,

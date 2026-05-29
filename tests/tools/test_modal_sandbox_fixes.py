@@ -1,4 +1,15 @@
-"""Tests for Modal sandbox infrastructure fixes (TBLite baseline).
+"""Modal沙箱修复测试
+
+【产品经理理解要点】
+验证工具系统模块中terminal and file toolsets resolve all tools等19个场景的正确性
+- terminal and file toolsets resolve all tools的正确性验证
+- terminal tool present的正确性验证
+- home path replaced for modal的正确性验证
+- 另有16个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for Modal sandbox infrastructure fixes (TBLite baseline).
 
 Covers the bugs discovered while setting up TBLite evaluation:
 1. Tool resolution — terminal + file tools load correctly
@@ -7,7 +18,7 @@ Covers the bugs discovered while setting up TBLite evaluation:
 4. ensurepip fix in Modal image builder
 5. No swe-rex dependency — uses native Modal SDK
 6. /home/ added to host prefix check
-"""
+7. Vercel sandbox cwd normalization"""
 
 import os
 import sys
@@ -100,6 +111,26 @@ class TestCwdHandling:
         monkeypatch.setenv("TERMINAL_CWD", "C:\\Users\\someone\\projects")
         config = _tt_mod._get_env_config()
         assert config["cwd"] == "/root"
+
+    def test_host_path_replaced_for_vercel_sandbox(self, monkeypatch):
+        """Host paths should be discarded for Vercel Sandbox."""
+        monkeypatch.setenv("TERMINAL_ENV", "vercel_sandbox")
+        monkeypatch.setenv("TERMINAL_CWD", "/Users/someone/projects")
+        config = _tt_mod._get_env_config()
+        assert config["cwd"] == "/vercel/sandbox"
+
+    def test_relative_path_replaced_for_vercel_sandbox(self, monkeypatch):
+        """Relative cwd should not map into a remote Vercel sandbox."""
+        monkeypatch.setenv("TERMINAL_ENV", "vercel_sandbox")
+        monkeypatch.setenv("TERMINAL_CWD", "src")
+        config = _tt_mod._get_env_config()
+        assert config["cwd"] == "/vercel/sandbox"
+
+    def test_default_cwd_is_workspace_root_for_vercel_sandbox(self, monkeypatch):
+        monkeypatch.setenv("TERMINAL_ENV", "vercel_sandbox")
+        monkeypatch.delenv("TERMINAL_CWD", raising=False)
+        config = _tt_mod._get_env_config()
+        assert config["cwd"] == "/vercel/sandbox"
 
     @pytest.mark.parametrize("backend", ["modal", "docker", "singularity", "daytona"])
     def test_default_cwd_is_root_for_container_backends(self, backend, monkeypatch):

@@ -1,4 +1,13 @@
-"""Strip ANSI escape sequences from subprocess output.
+"""ANSI 转义序列清除器
+
+【产品经理理解要点】
+清除终端命令输出中的颜色/格式控制码，防止 LLM 把转义字符当成内容写入文件。
+- 核心职责：全面匹配 ECMA-48 规范的 ANSI 转义序列并移除；快速路径检测无转义码时直接返回
+- 关键业务概念：LLM 污染防护——终端彩色输出中的转义码若被 LLM 学习复制，会污染后续生成内容
+- 在系统中的位置：terminal_tool、code_execution_tool、process_registry 的输出后处理环节
+
+─────────────────────────────────────────────────────────────────
+Strip ANSI escape sequences from subprocess output.
 
 Used by terminal_tool, code_execution_tool, and process_registry to clean
 command output before returning it to the model.  This prevents ANSI codes

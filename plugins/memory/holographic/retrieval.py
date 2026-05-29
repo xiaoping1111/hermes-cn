@@ -1,5 +1,11 @@
-"""Hybrid keyword/BM25 retrieval for the memory store.
+"""混合关键词/BM25检索引擎
 
+【产品经理理解要点】
+全息记忆的检索引擎，结合FTS5全文搜索和Jaccard相似度重排序，以及信任加权评分。
+- 检索策略：关键词匹配→语义相似度重排序→信任加权→最终排序
+- 技术实现：FTS5全文搜索 + Jaccard相似度 + 信任评分加权
+
+─────────────────────────────────────────────────────────────────
 Ported from KIK memory_agent.py — combines FTS5 full-text search with
 Jaccard similarity reranking and trust-weighted scoring.
 """

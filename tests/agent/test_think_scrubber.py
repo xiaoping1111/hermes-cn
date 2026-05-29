@@ -1,4 +1,12 @@
-"""Tests for StreamingThinkScrubber.
+"""思维标签清洗测试
+
+【产品经理理解要点】
+验证AI思考内容中特殊标签的清洗逻辑。
+- thinking/reasoning标签的正确提取
+- 影响AI思考过程的展示方式
+
+──────────────────────────────────────────────────────────────
+Tests for StreamingThinkScrubber.
 
 These tests lock in the contract the scrubber must satisfy so downstream
 consumers (ACP, api_server, TTS, CLI, gateway) never see reasoning

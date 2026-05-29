@@ -1,4 +1,13 @@
-"""Shell completion script generation for hermes CLI.
+"""Shell 自动补全脚本生成
+
+【产品经理理解要点】
+为 bash/zsh/fish 生成 Hermes 命令的 Tab 补全脚本，始终与最新命令同步。
+- 核心职责：遍历 argparse 命令树自动生成精准的 Shell 补全脚本，无需手动维护命令列表
+- 关键概念：支持 bash/zsh/fish 三种 Shell、从活的解析器树自动提取子命令和参数
+- 系统定位：提升命令行使用效率的基础设施，通过 `hermes completion bash/zsh/fish` 输出
+
+─────────────────────────────────────────────────────────────────
+Shell completion script generation for hermes CLI.
 
 Walks the live argparse parser tree to generate accurate, always-up-to-date
 completion scripts — no hardcoded subcommand lists, no extra dependencies.

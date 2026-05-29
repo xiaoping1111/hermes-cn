@@ -1,9 +1,18 @@
-"""Regression test: google-workspace SKILL.md must declare required_credential_files.
+"""Google Workspace凭证文件测试
+
+【产品经理理解要点】
+验证技能系统模块中required credential files present in skill md、entries are registered when files exist、missing token is reported的正确性
+- required credential files present in skill md的正确性验证
+- entries are registered when files exist的正确性验证
+- missing token is reported的正确性验证
+- 影响技能系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression test: google-workspace SKILL.md must declare required_credential_files.
 
 PR #9931 accidentally removed the required_credential_files header, which broke
 credential file mounting in Docker/Modal remote backends (#16452). This test
-prevents the regression from silently reappearing.
-"""
+prevents the regression from silently reappearing."""
 
 from __future__ import annotations
 

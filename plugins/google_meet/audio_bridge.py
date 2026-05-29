@@ -1,5 +1,12 @@
-"""Virtual audio bridge for feeding generated speech into Chrome's mic.
+"""虚拟音频桥 — 将AI语音注入Chrome麦克风
 
+【产品经理理解要点】
+v2模块。创建平台特定的虚拟音频设备，使Meet机器人能将AI生成的语音作为麦克风输入。
+- Linux：通过PulseAudio的null-sink创建虚拟音频源
+- macOS：通过BlackHole创建虚拟音频通道
+- 目标：让AI在Google Meet中"说话"
+
+─────────────────────────────────────────────────────────────────
 v2 module. Provisions a platform-specific virtual audio device so the
 Meet bot's Chromium instance can be pointed at an input source we
 control. The OpenAI Realtime client writes PCM bytes into this device;

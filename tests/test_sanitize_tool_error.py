@@ -1,4 +1,14 @@
-"""Tests for `_sanitize_tool_error` in model_tools.
+"""工具错误信息清洗测试
+
+【产品经理理解要点】
+验证工具异常字符串在传递给模型前的清洗逻辑，防止提示注入。
+- 移除XML角色标签和CDATA标记
+- 截断过长的错误信息
+- 清洗Markdown代码围栏
+- 影响AI对工具错误的理解和安全性
+
+──────────────────────────────────────────────────────────────
+Tests for `_sanitize_tool_error` in model_tools.
 
 Ported from ironclaw#1639 — defense-in-depth on tool exception strings before
 they enter the model's `tool` message content. Note that `json.dumps()` in

@@ -1,4 +1,15 @@
-"""Tests for the fuzzy matching module."""
+"""模糊匹配测试
+
+【产品经理理解要点】
+验证工具系统模块中single replacement等34个场景的正确性
+- single replacement的正确性验证
+- no match的正确性验证
+- empty old string的正确性验证
+- 另有31个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the fuzzy matching module."""
 
 from tools.fuzzy_match import fuzzy_find_and_replace
 

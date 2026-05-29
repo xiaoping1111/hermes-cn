@@ -1,5 +1,12 @@
-"""Custom / Ollama (local) provider profile.
+"""自定义/Ollama本地模型供应商配置
 
+【产品经理理解要点】
+注册自定义和本地Ollama模型供应商，覆盖任何注册为provider="custom"的端点。
+- 供应商：Custom，支持任何OpenAI兼容的API端点，包括本地Ollama实例
+- 核心特性：支持Ollama上下文窗口参数(ollama_num_ctx)、可禁用推理配置
+- 使用场景：连接自建模型服务或本地Ollama
+
+─────────────────────────────────────────────────────────────────
 Covers any endpoint registered as provider="custom", including local
 Ollama instances. Key quirks:
   - ollama_num_ctx → extra_body.options.num_ctx (local context window)

@@ -1,4 +1,13 @@
-"""Configurable budget constants for tool result persistence.
+"""工具输出预算配置
+
+【产品经理理解要点】
+控制每个工具返回给 LLM 的数据量上限，防止单次工具调用返回过多内容撑爆上下文窗口。
+- 核心职责：定义三层预算——单次结果上限、单轮对话总预算、摘要预览长度；支持按工具名覆盖
+- 关键业务概念：预算优先级——固定值 > 配置覆盖 > 注册表默认 > 全局默认，read_file 永不持久化（防无限循环）
+- 在系统中的位置：tool_result_storage 的配置源，决定工具结果何时落盘、何时截断
+
+─────────────────────────────────────────────────────────────────
+Configurable budget constants for tool result persistence.
 
 Per-tool resolution: pinned > config overrides > registry > default.
 """

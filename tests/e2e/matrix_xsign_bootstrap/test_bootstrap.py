@@ -1,4 +1,13 @@
-"""End-to-end test for Matrix cross-signing auto-bootstrap.
+"""端到端集成测试 - 初始化引导
+
+【产品经理理解要点】
+验证端到端消息通路的初始化引导功能
+- 验证的功能: End-to-end test for Matrix cross-signing auto-bootstrap
+- 核心测试场景: bootstrap publishes unpadded keys、second startup skips bootstrap、recovery key path takes precedence
+- 业务影响: 平台消息通路可能存在集成缺陷，影响真实用户的消息收发体验
+
+─────────────────────────────────────────────────────────────────
+End-to-end test for Matrix cross-signing auto-bootstrap.
 
 Spins a real Continuwuity homeserver in docker, registers a fresh bot,
 runs the patched ``MatrixAdapter.connect()`` against it, and asserts:

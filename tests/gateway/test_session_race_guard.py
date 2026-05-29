@@ -1,4 +1,13 @@
-"""Tests for the session race guard that prevents concurrent agent runs.
+"""消息网关测试 - 会话管理·race·guard
+
+【产品经理理解要点】
+验证消息网关的会话管理功能
+- 验证的功能: Tests for the session race guard that prevents concurrent agent runs
+- 核心测试场景: sentinel placed before agent setup、sentinel cleaned up after handler returns、sentinel cleaned up on exception 等共14个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the session race guard that prevents concurrent agent runs.
 
 The sentinel-based guard ensures that when _handle_message passes the
 "is an agent already running?" check and proceeds to the slow async

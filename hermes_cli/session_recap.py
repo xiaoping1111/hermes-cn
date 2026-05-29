@@ -1,4 +1,13 @@
-"""Session recap — summarize what's happened in the current session.
+"""会话回顾 —— 快速了解当前会话发生了什么
+
+【产品经理理解要点】
+为多任务用户快速生成本次会话的活动摘要，帮助切换回长时间运行的会话时重新定位上下文。
+- 纯本地计算，无需 LLM 调用，即时免费
+- 统计工具使用频率、编辑过的文件、最近的提问和回复
+- CLI 和所有网关平台通用
+
+─────────────────────────────────────────────────────────────────
+Session recap — summarize what's happened in the current session.
 
 Inspired by Claude Code's `/recap` command (v2.1.114, April 2026), which
 shows a one-line summary of what happened while a terminal was unfocused

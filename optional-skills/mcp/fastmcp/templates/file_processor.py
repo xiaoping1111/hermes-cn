@@ -1,3 +1,11 @@
+"""FastMCP文件处理器模板
+
+【产品经理理解要点】
+FastMCP服务的文件处理模板，可自定义文件读写操作作为MCP工具暴露给Agent。
+- 核心职责：创建文件处理MCP服务器的脚手架代码
+
+─────────────────────────────────────────────────────────────────
+FastMCP file processor server template."""
 from __future__ import annotations
 
 from pathlib import Path

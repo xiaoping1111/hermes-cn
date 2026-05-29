@@ -1,4 +1,15 @@
-"""Tests for Google Workspace gws bridge and CLI wrapper."""
+"""Google Workspace API测试
+
+【产品经理理解要点】
+验证技能系统模块中bridge returns valid token等9个场景的正确性
+- bridge returns valid token的正确性验证
+- bridge refreshes expired token的正确性验证
+- bridge refresh passes timeout to urlopen的正确性验证
+- 另有6个测试场景覆盖
+- 影响技能系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for Google Workspace gws bridge and CLI wrapper."""
 
 import importlib.util
 import json

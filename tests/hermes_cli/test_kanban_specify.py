@@ -1,4 +1,13 @@
-"""Tests for the specifier module + `hermes kanban specify` CLI surface.
+"""命令行界面测试 - 看板管理·specify
+
+【产品经理理解要点】
+验证命令行界面的看板管理功能
+- 验证的功能: Tests for the specifier module + `hermes kanban specify` CLI surface
+- 核心测试场景: extract json blob handles plain json、extract json blob handles fenced json、extract json blob handles prose preamble 等共20个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the specifier module + `hermes kanban specify` CLI surface.
 
 The auxiliary LLM client is mocked — these tests don't hit any network or
 real provider. They exercise the prompt plumbing, response parsing, DB

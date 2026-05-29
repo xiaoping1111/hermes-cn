@@ -1,4 +1,14 @@
-"""Tests for gateway.platforms.feishu — Feishu scan-to-create registration."""
+"""消息网关测试 - feishu·onboard
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for gateway.platforms.feishu — Feishu scan-to-create registration
+- 核心测试场景: post registration returns parsed json、post registration sends form encoded body、init succeeds when client secret supported 等共27个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for gateway.platforms.feishu — Feishu scan-to-create registration.
+"""
 
 import json
 from unittest.mock import patch, MagicMock

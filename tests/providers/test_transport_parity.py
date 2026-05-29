@@ -1,10 +1,20 @@
-"""Parity tests: pin the exact current transport behavior per provider.
+"""传输对齐验证测试
+
+【产品经理理解要点】
+验证模型提供者模块中default max tokens等19个场景的正确性
+- default max tokens的正确性验证
+- user max tokens overrides的正确性验证
+- temperature omitted的正确性验证
+- 另有16个测试场景覆盖
+- 影响模型提供者的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Parity tests: pin the exact current transport behavior per provider.
 
 These tests document the flag-based contract between run_agent.py and
 ChatCompletionsTransport.build_kwargs(). When the next PR wires profiles
 to replace flags, every assertion here must still pass — any failure is
-a behavioral regression.
-"""
+a behavioral regression."""
 
 import pytest
 from agent.transports.chat_completions import ChatCompletionsTransport

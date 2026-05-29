@@ -1,4 +1,13 @@
-"""Tests for the ``transform_tool_result`` plugin hook wired into
+"""工具结果变换钩子测试
+
+【产品经理理解要点】
+验证transform_tool_result插件钩子在工具调用分发时的执行逻辑。
+- 钩子在每次工具调用后执行
+- 变换结果正确传递给后续处理
+- 影响插件处理工具输出的能力
+
+──────────────────────────────────────────────────────────────
+Tests for the ``transform_tool_result`` plugin hook wired into
 ``model_tools.handle_function_call``.
 
 Mirrors the ``transform_terminal_output`` hook tests from Phase 1 but

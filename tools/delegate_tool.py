@@ -1,5 +1,17 @@
 #!/usr/bin/env python3
-"""
+"""任务委托工具 — 生成子 Agent 并行处理子任务
+
+【产品经理理解要点】
+AI 有时需要把一个大任务拆成多个子任务并行执行。这个工具让 AI 能"分身"：
+  - 创建子 Agent：每个子 Agent 有独立的对话、终端会话和工具集
+  - 并行执行：多个子 Agent 同时工作，互不干扰
+  - 安全隔离：子 Agent 不能访问父 Agent 的对话历史
+  - 结果汇总：子任务完成后返回摘要结果给父 Agent
+
+就像经理（父Agent）把任务分配给多个专员（子Agent），各自独立工作。
+
+─────────────────────────────────────────────────────────────────
+
 Delegate Tool -- Subagent Architecture
 
 Spawns child AIAgent instances with isolated context, restricted toolsets,

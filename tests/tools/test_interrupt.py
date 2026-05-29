@@ -1,7 +1,17 @@
-"""Tests for the interrupt system.
+"""中断测试
 
-Run with: python -m pytest tests/test_interrupt.py -v
-"""
+【产品经理理解要点】
+验证工具系统模块中set and check等6个场景的正确性
+- set and check的正确性验证
+- thread safety的正确性验证
+- all tools skipped when interrupted的正确性验证
+- 另有3个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the interrupt system.
+
+Run with: python -m pytest tests/test_interrupt.py -v"""
 
 import queue
 import threading

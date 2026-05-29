@@ -1,4 +1,19 @@
-"""Stream diagnostics — per-attempt counters, exception chains, retry logging.
+"""流式诊断 — 追踪 API 请求中的断流和错误
+
+【产品经理理解要点】
+Agent 与 AI 模型的通信是"流式"的（一个字一个字返回），有时会中途中断。
+这个模块负责记录断流时的详细信息，帮助排查问题：
+
+  - 记录是哪个 CDN 节点服务的请求
+  - 记录收到了多少数据后断流
+  - 记录 HTTP 状态码和错误类型
+  - 提供紧凑格式给用户看、详细格式写入日志
+
+就像网络通话的"通话记录"——记录连接质量、断线时刻，方便排除故障。
+
+─────────────────────────────────────────────────────────────────
+
+Stream diagnostics — per-attempt counters, exception chains, retry logging.
 
 When a streaming chat-completions request dies mid-response, we want to
 know why: which Cloudflare edge served the request, which OpenRouter

@@ -1,4 +1,7 @@
-"""Qwen Portal provider profile."""
+"""【产品经理理解要点】
+通义千问（Qwen）OAuth认证提供商——通过OAuth方式接入阿里云通义千问模型服务，无需手动配置API Key，支持OAuth自动刷新。
+─────────────────────────────────────────────────────────────────
+Qwen Portal provider profile."""
 
 import copy
 from typing import Any

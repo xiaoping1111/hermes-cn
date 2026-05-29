@@ -1,3 +1,17 @@
+"""消息网关测试 - 看板管理·notifier
+
+【产品经理理解要点】
+验证消息网关的看板管理功能
+- 验证的功能: 看板变更通知推送
+- 核心测试场景: kanban notifier dedupes board slugs pointing to same db、kanban notifier claim prevents second watcher send、kanban notifier rewinds claim if adapter disconnects 等共6个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+消息网关测试 - 看板任务管理·notifier
+
+测试多平台消息接入与命令分发中kanban相关的notifier功能
+"""
+
 import asyncio
 from pathlib import Path
 

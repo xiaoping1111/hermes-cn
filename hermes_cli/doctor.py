@@ -1,4 +1,12 @@
-"""
+"""系统诊断命令
+
+【产品经理理解要点】
+实现 `hermes doctor` 命令，一键检查 Hermes 安装和配置是否有问题，类似"体检报告"。
+- 核心职责：检查 API Key 配置、网络连通性、依赖安装、磁盘空间、进程状态等多项健康指标，给出 🟢/🟡/🔴 诊断结果
+- 关键概念：健康检查=逐一验证各模块是否正常、网络连通（OpenRouter/Anthropic/网关端点）、凭证有效性
+- 系统定位：问题排查的首选工具，用户遇到问题时运行 `hermes doctor` 获取诊断
+
+─────────────────────────────────────────────────────────────────
 Doctor command for hermes CLI.
 
 Diagnoses issues with Hermes Agent setup.

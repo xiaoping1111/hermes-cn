@@ -1,4 +1,12 @@
-"""
+"""频道目录 — 缓存每个平台可用的频道/联系人列表
+
+【产品经理理解要点】
+维护一个"通讯录"缓存，记录每个平台上有哪些频道和联系人可发送消息。
+网关启动时构建，每5分钟刷新，保存到 ~/.hermes/channel_directory.json。
+send_message 工具通过它将"友好的频道名"解析为具体的 ID。
+
+─────────────────────────────────────────────────────────────────
+
 Channel directory -- cached map of reachable channels/contacts per platform.
 
 Built on gateway startup, refreshed periodically (every 5 min), and saved to

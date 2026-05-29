@@ -1,4 +1,13 @@
-"""Tests for plugin CLI registration system.
+"""命令行界面测试 - plugin·CLI命令·registration
+
+【产品经理理解要点】
+验证命令行界面的CLI命令功能
+- 验证的功能: Tests for plugin CLI registration system
+- 核心测试场景: registers command、overwrites on duplicate、handler optional 等共8个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for plugin CLI registration system.
 
 Covers:
   - PluginContext.register_cli_command()

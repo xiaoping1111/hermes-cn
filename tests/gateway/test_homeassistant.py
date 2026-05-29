@@ -1,4 +1,13 @@
-"""Tests for the Home Assistant gateway adapter.
+"""消息网关测试 - homeassistant
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for the Home Assistant gateway adapter
+- 核心测试场景: returns false without token、returns true with token、returns false without aiohttp 等共45个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the Home Assistant gateway adapter.
 
 Tests real logic: state change formatting, event filtering pipeline,
 cooldown behavior, config integration, and adapter initialization.

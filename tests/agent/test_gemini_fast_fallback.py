@@ -1,4 +1,13 @@
-"""Regression tests for #13636 — CloudCode / Gemini CLI rate-limit fallback.
+"""Gemini快速回退测试
+
+【产品经理理解要点】
+验证Gemini模型快速失败时的回退逻辑。
+- 快速失败模型的识别
+- 自动回退到备选模型
+- 影响Gemini用户的服务可用性
+
+──────────────────────────────────────────────────────────────
+Regression tests for #13636 — CloudCode / Gemini CLI rate-limit fallback.
 
 _pool_may_recover_from_rate_limit() is the hinge between credential-pool
 rotation and fallback-provider activation.  For CloudCode (Gemini CLI /

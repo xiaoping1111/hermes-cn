@@ -1,4 +1,14 @@
-"""Tests for Discord channel_prompts resolution and injection."""
+"""消息网关测试 - Discord平台·频道管理·提示词处理
+
+【产品经理理解要点】
+验证消息网关的Discord平台频道管理提示词处理功能
+- 验证的功能: Tests for Discord channel_prompts resolution and injection
+- 核心测试场景: retry preserves channel prompt、run agent appends channel prompt to ephemeral system prompt、no prompt returns none 等共10个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Discord channel_prompts resolution and injection.
+"""
 
 import sys
 import threading

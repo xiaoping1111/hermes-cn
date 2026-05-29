@@ -1,4 +1,14 @@
-"""Tests for agent/curator_backup.py — snapshot + rollback of the skills tree."""
+"""策展人备份测试
+
+【产品经理理解要点】
+验证策展人备份功能的创建、恢复和清理逻辑。
+- 备份文件的创建和完整性
+- 从备份恢复的正确性
+- 影响会话数据的安全保护
+
+──────────────────────────────────────────────────────────────
+Tests for agent/curator_backup.py — snapshot + rollback of the skills tree.
+"""
 
 from __future__ import annotations
 

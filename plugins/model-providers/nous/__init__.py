@@ -1,4 +1,11 @@
-"""Nous Portal provider profile."""
+"""Nous Portal模型供应商配置
+
+【产品经理理解要点】
+注册Nous Portal供应商，Hermes自家的模型代理平台，支持产品标签和推理参数定制。
+- 供应商：Nous Portal，Hermes自有的模型代理网关
+- 核心特性：注入产品标签(nous_portal_tags)、支持reasoning_effort推理参数
+- 与系统关系：作为Hermes生态内的统一模型入口之一
+"""
 
 from typing import Any
 

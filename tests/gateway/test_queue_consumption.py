@@ -1,4 +1,13 @@
-"""Tests for /queue message consumption after normal agent completion.
+"""消息网关测试 - queue·consumption
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for /queue message consumption after normal agent completion
+- 核心测试场景: queue stores message in pending、get pending message consumes and clears、dequeue pending event preserves voice media metadata 等共11个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for /queue message consumption after normal agent completion.
 
 Verifies that messages queued via /queue (which store in
 adapter._pending_messages WITHOUT triggering an interrupt) are consumed

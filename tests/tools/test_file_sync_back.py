@@ -1,4 +1,15 @@
-"""Tests for FileSyncManager.sync_back() — pull remote changes to host."""
+"""文件同步回传测试
+
+【产品经理理解要点】
+验证工具系统模块中sync back noop without download fn等18个场景的正确性
+- sync back noop without download fn的正确性验证
+- sync back no changes的正确性验证
+- sync back applies changed file的正确性验证
+- 另有15个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for FileSyncManager.sync_back() — pull remote changes to host."""
 
 import io
 import logging

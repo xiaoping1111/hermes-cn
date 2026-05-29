@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""
+"""USDA营养数据查询
+
+【产品经理理解要点】
+查询USDA FoodData Central数据库，获取食物的详细营养成分信息。
+- 核心职责：搜索食物的营养数据，返回热量、蛋白质、脂肪等
+
+─────────────────────────────────────────────────────────────────
 nutrition_search.py — Search USDA FoodData Central for nutrition info.
 
 Usage:

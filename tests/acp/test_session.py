@@ -1,4 +1,15 @@
-"""Tests for acp_adapter.session — SessionManager and SessionState."""
+"""ACP会话管理测试
+
+【产品经理理解要点】
+验证ACP适配器的SessionManager和SessionState，管理ACP会话的生命周期。
+- 会话创建、使用和关闭
+- 会话状态的持久化和恢复
+- 并发会话的隔离
+- 影响ACP多会话场景的稳定性
+
+──────────────────────────────────────────────────────────────
+Tests for acp_adapter.session — SessionManager and SessionState.
+"""
 
 import contextlib
 import io

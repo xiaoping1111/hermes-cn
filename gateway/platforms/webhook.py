@@ -1,4 +1,15 @@
-"""Generic webhook platform adapter.
+"""通用 Webhook 适配器 — 接收外部服务的 HTTP 回调
+
+【产品经理理解要点】
+让外部服务（GitHub、GitLab、JIRA、Stripe 等）通过 Webhook 触发 Agent：
+  - 接收外部 POST 请求
+  - 验证 HMAC 签名确保安全
+  - 将请求内容转换为 Agent 提示
+  - 将 Agent 回复路由回来源或其他平台
+
+─────────────────────────────────────────────────────────────────
+
+Generic webhook platform adapter.
 
 Runs an aiohttp HTTP server that receives webhook POSTs from external
 services (GitHub, GitLab, JIRA, Stripe, etc.), validates HMAC signatures,

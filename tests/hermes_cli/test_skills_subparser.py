@@ -1,4 +1,14 @@
-"""Test that skills subparser doesn't conflict (regression test for #898)."""
+"""命令行界面测试 - 技能系统·subparser
+
+【产品经理理解要点】
+验证命令行界面的技能系统功能
+- 验证的功能: Test that skills subparser doesn't conflict (regression test for #898)
+- 核心测试场景: no duplicate skills subparser
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Test that skills subparser doesn't conflict (regression test for #898).
+"""
 
 import argparse
 

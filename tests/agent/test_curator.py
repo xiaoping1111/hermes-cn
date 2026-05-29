@@ -1,4 +1,13 @@
-"""Tests for agent/curator.py — orchestrator, idle gating, state transitions.
+"""会话策展人测试
+
+【产品经理理解要点】
+验证会话策展人的调度逻辑、空闲门控和状态转换。
+- 策展任务的触发和调度
+- 空闲时的自动策展门控
+- 影响会话自动整理和分类
+
+──────────────────────────────────────────────────────────────
+Tests for agent/curator.py — orchestrator, idle gating, state transitions.
 
 LLM spawning is never exercised here — `_run_llm_review` is monkeypatched so
 tests run fully offline and the curator module doesn't need real credentials.

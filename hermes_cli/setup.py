@@ -1,4 +1,13 @@
 """
+交互式设置向导
+
+【产品经理理解要点】
+Hermes 首次使用和配置更改的引导式设置向导，分模块独立运行。
+- 五大设置模块：模型与供应商、终端后端、Agent 设置、消息平台、工具配置
+- 引导用户选择 AI 供应商、连接消息平台、启用 TTS/网页搜索等工具
+- 配置存储在 ~/.hermes/ 目录下
+
+─────────────────────────────────────────────────────────────────
 Interactive setup wizard for Hermes Agent.
 
 Modular wizard with independently-runnable sections:

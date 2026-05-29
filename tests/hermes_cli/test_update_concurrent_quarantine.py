@@ -1,4 +1,13 @@
-"""Tests for issue #26670 — concurrent hermes.exe detection and improved
+"""命令行界面测试 - 更新·并发控制·quarantine
+
+【产品经理理解要点】
+验证命令行界面的更新并发控制功能
+- 验证的功能: Tests for issue #26670 — concurrent hermes.exe detection and improved
+- 核心测试场景: detect concurrent returns empty when no other processes、detect concurrent excludes self pid、detect concurrent finds other hermes process 等共13个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for issue #26670 — concurrent hermes.exe detection and improved
 quarantine retry / reboot-deferred fallback during `hermes update` on Windows.
 
 These tests force ``_is_windows`` to return ``True`` via patching so the

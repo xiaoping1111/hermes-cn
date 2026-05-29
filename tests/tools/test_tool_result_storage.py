@@ -1,4 +1,15 @@
-"""Tests for tools/tool_result_storage.py -- 3-layer tool result persistence."""
+"""工具结果存储测试
+
+【产品经理理解要点】
+验证工具系统模块中short content unchanged等49个场景的正确性
+- short content unchanged的正确性验证
+- long content truncated的正确性验证
+- truncates at newline boundary的正确性验证
+- 另有46个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/tool_result_storage.py -- 3-layer tool result persistence."""
 
 import pytest
 from unittest.mock import MagicMock, patch

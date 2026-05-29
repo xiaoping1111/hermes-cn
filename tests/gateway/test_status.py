@@ -1,4 +1,14 @@
-"""Tests for gateway runtime status tracking."""
+"""消息网关测试 - status
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for gateway runtime status tracking
+- 核心测试场景: write pid file records gateway metadata、write pid file is atomic against concurrent writers、get running pid rejects live non gateway pid 等共50个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for gateway runtime status tracking.
+"""
 
 import json
 import os

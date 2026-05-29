@@ -1,5 +1,18 @@
 #!/usr/bin/env python3
-"""
+"""代码执行工具 — 让 AI 编写 Python 脚本批量调用工具
+
+【产品经理理解要点】
+普通模式下 AI 每次只能调用一个工具，效率低。这个工具让 AI 能
+写一个 Python 脚本，在脚本中批量调用其他工具：
+  - AI 生成一个调用多个工具的脚本
+  - 脚本执行时通过 RPC 调用 Agent 的工具
+  - 结果一次性返回
+
+适合需要多步骤操作的场景（如"读取文件→分析→修改→验证"），
+把多轮交互压缩为一轮。
+
+─────────────────────────────────────────────────────────────────
+
 Code Execution Tool -- Programmatic Tool Calling (PTC)
 
 Lets the LLM write a Python script that calls Hermes tools via RPC,

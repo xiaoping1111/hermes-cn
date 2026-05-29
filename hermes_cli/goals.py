@@ -1,4 +1,13 @@
-"""Persistent session goals — the Ralph loop for Hermes.
+"""持久化会话目标——Ralph 循环
+
+【产品经理理解要点】
+实现"设定目标，AI 自动循环执行直到完成"的功能，让 AI 持续工作无需反复催促。
+- 核心职责：用户设定目标后，AI 完成一步会自动判断是否达成目标，未达成则自动继续，直到完成或用尽回合预算
+- 关键概念：目标=跨回合持久化任务、Ralph 循环=自动持续执行、辅助模型判定目标是否达成、用户新消息可中断循环
+- 系统定位：长任务自动化执行引擎
+
+─────────────────────────────────────────────────────────────────
+Persistent session goals — the Ralph loop for Hermes.
 
 A goal is a free-form user objective that stays active across turns. After
 each turn completes, a small judge call asks an auxiliary model "is this

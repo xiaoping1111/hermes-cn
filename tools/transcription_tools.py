@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 """
+语音转文字工具模块
+
+【产品经理理解要点】
+将用户发送的语音消息自动转写为文字，供 LLM 理解和回复，是语音交互链路的核心环节。
+- 核心职责：支持 5 种 STT 后端（本地 faster-whisper、Groq、OpenAI、Mistral、xAI），自动选择可用通道
+- 关键业务概念：本地模式免费零配置，云端模式需 API Key；支持 mp3/mp4/wav/ogg 等 9 种音频格式
+- 在系统中的位置：消息网关收到语音消息时调用此模块转写，再交给对话引擎处理
+
+─────────────────────────────────────────────────────────────────
 Transcription Tools Module
 
 Provides speech-to-text transcription with six providers:

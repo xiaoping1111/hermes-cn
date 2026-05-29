@@ -1,3 +1,11 @@
+"""FastMCP API包装器模板
+
+【产品经理理解要点】
+FastMCP服务的API包装模板，可将任意HTTP API包装为MCP工具暴露给Agent。
+- 核心职责：创建API代理MCP服务器的脚手架代码
+
+─────────────────────────────────────────────────────────────────
+FastMCP API wrapper server template."""
 from __future__ import annotations
 
 import os

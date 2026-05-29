@@ -1,4 +1,13 @@
-"""Gateway runtime-metadata footer.
+"""运行时状态脚注 — 在 AI 回复末尾添加模型信息
+
+【产品经理理解要点】
+可在每条 AI 回复末尾附加一行状态信息，如：
+  "GPT-4o | 上下文45% | /project"
+默认关闭，用户可在 config.yaml 中启用：display.runtime_footer: true
+
+─────────────────────────────────────────────────────────────────
+
+Gateway runtime-metadata footer.
 
 Renders a compact footer showing runtime state (model, context %, cwd) and
 appends it to the FINAL message of an agent turn when enabled.  Off by default

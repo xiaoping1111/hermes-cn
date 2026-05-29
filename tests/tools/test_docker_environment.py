@@ -1,3 +1,11 @@
+"""Docker容器环境测试
+
+【产品经理理解要点】
+验证Docker容器化执行环境的创建、命令执行和资源管理功能。
+- Docker容器的启动和销毁
+- 容器内命令执行和结果返回
+- 影响容器化代码执行的可靠性"""
+
 import logging
 from io import StringIO
 import subprocess

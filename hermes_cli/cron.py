@@ -1,4 +1,12 @@
-"""
+"""定时任务管理命令
+
+【产品经理理解要点】
+实现 `hermes cron` 子命令，管理定时自动执行的 AI 任务（如每日汇报、定期检查等）。
+- 核心职责：创建/编辑/暂停/恢复/立即执行/删除定时任务，查看任务状态
+- 关键概念：cron 任务=按时间表自动运行的 AI 对话、技能预加载、任务调度器
+- 系统定位：自动化能力层，让 Hermes 可以按计划自动执行任务
+
+─────────────────────────────────────────────────────────────────
 Cron subcommand for hermes CLI.
 
 Handles standalone cron management commands like list, create, edit,

@@ -1,12 +1,22 @@
-"""Tests for LocalEnvironment recovery when ``self.cwd`` is deleted.
+"""本地环境工作目录恢复测试
+
+【产品经理理解要点】
+验证工具系统模块中returns cwd when directory exists等9个场景的正确性
+- returns cwd when directory exists的正确性验证
+- walks up to first existing ancestor的正确性验证
+- falls back when path is empty的正确性验证
+- 另有6个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for LocalEnvironment recovery when ``self.cwd`` is deleted.
 
 When a tool call inside the persistent terminal session ``rm -rf``'s its own
 working directory, the next ``subprocess.Popen(..., cwd=self.cwd)`` would
 otherwise raise ``FileNotFoundError`` before bash starts, wedging every
 subsequent terminal/file-tool call until the gateway restarts.
 
-Regression coverage for https://github.com/NousResearch/hermes-agent/issues/17558.
-"""
+Regression coverage for https://github.com/NousResearch/hermes-agent/issues/17558."""
 
 import os
 import shutil

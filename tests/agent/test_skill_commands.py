@@ -1,4 +1,13 @@
-"""Tests for agent/skill_commands.py — skill slash command scanning and platform filtering."""
+"""技能命令测试
+
+【产品经理理解要点】
+验证技能相关的斜杠命令处理逻辑。
+- 技能列表和搜索命令
+- 影响用户管理技能的操作体验
+
+──────────────────────────────────────────────────────────────
+Tests for agent/skill_commands.py — skill slash command scanning and platform filtering.
+"""
 
 import os
 from pathlib import Path

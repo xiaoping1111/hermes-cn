@@ -1,4 +1,16 @@
-"""Dangerous command approval -- detection, prompting, and per-session state.
+"""危险命令审批 — 检测、提示用户确认、自动批准低风险命令
+
+【产品经理理解要点】
+AI 执行删除文件、格式化磁盘等危险命令前，需要用户确认。
+这个模块管理整个审批流程：
+  - 检测危险命令模式（rm -rf、format 等）
+  - CLI 模式下弹交互提示，网关模式下异步确认
+  - 用辅助 AI 自动判断风险等级，低风险命令可自动批准
+  - 用户可把确认过的命令加入白名单，下次不再询问
+
+─────────────────────────────────────────────────────────────────
+
+Dangerous command approval -- detection, prompting, and per-session state.
 
 This module is the single source of truth for the dangerous command system:
 - Pattern detection (DANGEROUS_PATTERNS, detect_dangerous_command)

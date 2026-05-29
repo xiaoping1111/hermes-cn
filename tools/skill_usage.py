@@ -1,4 +1,13 @@
-"""Skill usage telemetry + provenance tracking for the Curator feature.
+"""技能使用遥测与生命周期管理
+
+【产品经理理解要点】
+追踪每个技能的使用频率和时间，自动将长期不用的技能标记为"过时"或"归档"，保持技能列表整洁。
+- 核心职责：记录技能被查看/使用的次数和时间到旁置文件，支持活跃→过时→归档的生命周期自动流转
+- 关键业务概念：旁置存储——使用数据不写入技能内容文件，避免污染用户编辑；归档移动到 .archive/ 目录，不打扰列表
+- 在系统中的位置：Curator 自动化维护功能的数据基础，驱动技能生命周期决策
+
+─────────────────────────────────────────────────────────────────
+Skill usage telemetry + provenance tracking for the Curator feature.
 
 Tracks per-skill usage metadata in a sidecar JSON file (~/.hermes/skills/.usage.json)
 keyed by skill name. Counters are bumped by the existing skill tools (skill_view,

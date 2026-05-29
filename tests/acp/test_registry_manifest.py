@@ -1,4 +1,15 @@
-"""Tests for ACP Registry metadata shipped with Hermes."""
+"""ACP注册表元数据测试
+
+【产品经理理解要点】
+验证ACP注册表的agent.json清单文件格式和内容的正确性。
+- 清单JSON结构的合法性
+- 禁止字段的缺失验证
+- 图标SVG文件的存在和格式
+- 影响ACP市场中的展示正确性
+
+──────────────────────────────────────────────────────────────
+Tests for ACP Registry metadata shipped with Hermes.
+"""
 
 from __future__ import annotations
 

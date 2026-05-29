@@ -1,4 +1,13 @@
-"""Regression tests for TOCTOU-safe credential file writers in ``hermes_cli.auth``.
+"""命令行界面测试 - 认证授权·toctou·file·modes
+
+【产品经理理解要点】
+验证命令行界面的认证授权功能
+- 验证的功能: Regression tests for TOCTOU-safe credential file writers in ``hermes_cli.auth``
+- 核心测试场景: save auth store writes 0o600 with 0o700 parent、save qwen cli tokens writes 0o600 with 0o700 parent、shared nous store writes 0o600 with 0o700 parent 等共4个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression tests for TOCTOU-safe credential file writers in ``hermes_cli.auth``.
 
 Background
 ==========

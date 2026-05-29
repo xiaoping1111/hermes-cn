@@ -1,4 +1,14 @@
-"""Tests for gateway /reasoning command and hot reload behavior."""
+"""消息网关测试 - reasoning·命令处理
+
+【产品经理理解要点】
+验证消息网关的命令处理功能
+- 验证的功能: Tests for gateway /reasoning command and hot reload behavior
+- 核心测试场景: reasoning in help output、reasoning is known command、parse reasoning command args accepts ascii and smart global flags 等共18个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for gateway /reasoning command and hot reload behavior.
+"""
 
 import asyncio
 import inspect

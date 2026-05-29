@@ -1,4 +1,15 @@
-"""Tests for MCP tool structuredContent preservation."""
+"""MCP结构化内容测试
+
+【产品经理理解要点】
+验证工具系统模块中text only result等5个场景的正确性
+- text only result的正确性验证
+- both content and structured的正确性验证
+- both content and structured desktop commander的正确性验证
+- 另有2个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for MCP tool structuredContent preservation."""
 
 import asyncio
 import json

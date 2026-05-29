@@ -1,4 +1,18 @@
-"""Send Message Tool -- cross-channel messaging via platform APIs.
+"""消息发送工具 — 跨平台消息投递
+
+【产品经理理解要点】
+让 AI 能主动向用户或频道发送消息，不限平台：
+  - Telegram 频道/用户
+  - Discord 频道/DM
+  - Slack 频道/DM
+  - 等等
+
+支持列出可投递目标、将友好名称解析为 ID。
+在 CLI 和网关模式下都能使用。
+
+─────────────────────────────────────────────────────────────────
+
+Send Message Tool -- cross-channel messaging via platform APIs.
 
 Sends a message to a user or channel on any connected messaging platform
 (Telegram, Discord, Slack). Supports listing available targets and resolving

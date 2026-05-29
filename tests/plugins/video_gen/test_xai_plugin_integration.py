@@ -1,9 +1,19 @@
-"""Integration tests for the xAI video gen plugin's simplified surface.
+"""xAI视频生成集成测试
+
+【产品经理理解要点】
+验证功能插件模块中text to video hits generations等11个场景的正确性
+- text to video hits generations的正确性验证
+- image to video hits generations的正确性验证
+- text payload has no image field的正确性验证
+- 另有8个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Integration tests for the xAI video gen plugin's simplified surface.
 
 xAI exposes only text-to-video and image-to-video through the unified
 ``video_generate`` tool. We assert the endpoint hit and the payload shape
-because routing is the part most likely to break silently.
-"""
+because routing is the part most likely to break silently."""
 
 from __future__ import annotations
 

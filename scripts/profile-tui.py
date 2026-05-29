@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Drive the Hermes TUI under HERMES_DEV_PERF and summarize the pipeline.
+"""TUI性能分析工具
+
+【产品经理理解要点】
+在性能监控模式下驱动TUI运行，汇总渲染管线数据，用于发现性能瓶颈。
+- 核心职责：自动操作TUI（模拟按键），收集并分析性能日志
+- 典型操作：自动按PageUp键8秒，模拟滚动场景
+- 输出：~/.hermes/perf.log的性能汇总数据
+
+─────────────────────────────────────────────────────────────────
+Drive the Hermes TUI under HERMES_DEV_PERF and summarize the pipeline.
 
 Usage:
   scripts/profile-tui.py [--session SID] [--hold KEY] [--seconds N] [--rate HZ]

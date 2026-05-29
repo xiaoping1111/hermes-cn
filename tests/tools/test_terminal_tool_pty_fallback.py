@@ -1,3 +1,12 @@
+"""终端工具PTY降级测试
+
+【产品经理理解要点】
+验证工具系统模块中command requires pipe stdin detects gh with token、terminal background disables pty for gh with token、terminal background keeps pty for regular interactive com...的正确性
+- command requires pipe stdin detects gh with token的正确性验证
+- terminal background disables pty for gh with token的正确性验证
+- terminal background keeps pty for regular interactive commands的正确性验证
+- 影响工具系统的可靠性和功能正确性"""
+
 import json
 from types import SimpleNamespace
 

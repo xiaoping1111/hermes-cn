@@ -1,4 +1,15 @@
-"""Tests for the computer_use toolset (cua-driver backend, universal schema)."""
+"""计算机使用测试
+
+【产品经理理解要点】
+验证工具系统模块中schema is universal openai function format等40个场景的正确性
+- schema is universal openai function format的正确性验证
+- schema does not use anthropic native types的正确性验证
+- schema supports element and coordinate targeting的正确性验证
+- 另有37个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the computer_use toolset (cua-driver backend, universal schema)."""
 
 from __future__ import annotations
 

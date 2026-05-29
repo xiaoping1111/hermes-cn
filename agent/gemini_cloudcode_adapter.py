@@ -1,4 +1,15 @@
-"""OpenAI-compatible facade that talks to Google's Cloud Code Assist backend.
+"""Google Cloud Code Assist 适配器 — 通过 Google 云端代码助手调用 Gemini
+
+【产品经理理解要点】
+这个适配器让 Agent 通过 Google 的 Cloud Code Assist 服务使用 Gemini 模型。
+相比直接调用 Gemini API，这种方式使用 OAuth 认证，适合已有 Google 账号的用户。
+
+认证方式：OAuth PKCE — 用户通过浏览器登录 Google 账号获取令牌，
+无需手动管理 API Key。
+
+─────────────────────────────────────────────────────────────────
+
+OpenAI-compatible facade that talks to Google's Cloud Code Assist backend.
 
 This adapter lets Hermes use the ``google-gemini-cli`` provider as if it were
 a standard OpenAI-shaped chat completion endpoint, while the underlying HTTP

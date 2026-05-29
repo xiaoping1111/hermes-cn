@@ -1,10 +1,20 @@
-"""Tests for the model-providers plugin discovery system.
+"""插件发现测试
+
+【产品经理理解要点】
+验证模型提供者模块中bundled plugins discovered等4个场景的正确性
+- bundled plugins discovered的正确性验证
+- all 34 profiles register的正确性验证
+- user plugin overrides bundled的正确性验证
+- 另有1个测试场景覆盖
+- 影响模型提供者的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the model-providers plugin discovery system.
 
 Verifies that:
  1. All bundled providers at plugins/model-providers/<name>/ are discovered
  2. User plugins at $HERMES_HOME/plugins/model-providers/<name>/ override bundled
- 3. plugin.yaml manifests with kind=model-provider are correctly categorized
-"""
+ 3. plugin.yaml manifests with kind=model-provider are correctly categorized"""
 
 from __future__ import annotations
 

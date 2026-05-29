@@ -1,4 +1,13 @@
-"""End-to-end tests for inline image inputs on /v1/chat/completions and /v1/responses.
+"""消息网关测试 - api·server·multimodal
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: End-to-end tests for inline image inputs on /v1/chat/completions and /v1/responses
+- 核心测试场景: string passthrough、none returns empty string、text only list collapses to string 等共23个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+End-to-end tests for inline image inputs on /v1/chat/completions and /v1/responses.
 
 Covers the multimodal normalization path added to the API server.  Unlike the
 adapter-level tests that patch ``_run_agent``, these tests patch

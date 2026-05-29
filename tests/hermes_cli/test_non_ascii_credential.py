@@ -1,4 +1,13 @@
-"""Tests for non-ASCII credential detection and sanitization.
+"""命令行界面测试 - non·ascii·凭证管理
+
+【产品经理理解要点】
+验证命令行界面的凭证管理功能
+- 验证的功能: Tests for non-ASCII credential detection and sanitization
+- 核心测试场景: ascii key unchanged、strips unicode v lookalike、strips multiple non ascii 等共12个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for non-ASCII credential detection and sanitization.
 
 Covers the fix for issue #6843 — API keys containing Unicode lookalike
 characters (e.g. ʋ U+028B instead of v) cause UnicodeEncodeError when

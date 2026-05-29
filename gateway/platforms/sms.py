@@ -1,4 +1,14 @@
-"""SMS (Twilio) platform adapter.
+"""SMS (Twilio) 适配器 — 通过短信与用户交互
+
+【产品经理理解要点】
+让 Agent 通过手机短信与用户交互：
+  - 使用 Twilio REST API 发送短信
+  - 通过 Webhook 接收用户回复
+  - 适合没有聊天软件的场景
+
+─────────────────────────────────────────────────────────────────
+
+SMS (Twilio) platform adapter.
 
 Connects to the Twilio REST API for outbound SMS and runs an aiohttp
 webhook server to receive inbound messages.

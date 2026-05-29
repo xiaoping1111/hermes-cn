@@ -1,4 +1,15 @@
-"""Tests for the google_meet plugin.
+"""Google Meet插件测试
+
+【产品经理理解要点】
+验证功能插件模块中is safe meet url accepts standard meet codes等51个场景的正确性
+- is safe meet url accepts standard meet codes的正确性验证
+- is safe meet url rejects non meet urls的正确性验证
+- meeting id extraction的正确性验证
+- 另有48个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the google_meet plugin.
 
 Covers the safety-gated pieces that don't require Playwright:
 
@@ -9,8 +20,7 @@ Covers the safety-gated pieces that don't require Playwright:
   * Process manager refuses unsafe URLs and clears stale state cleanly
   * ``_on_session_end`` hook is defensive (no-ops when no bot active)
 
-Does NOT spawn a real Chromium — we mock ``subprocess.Popen`` where needed.
-"""
+Does NOT spawn a real Chromium — we mock ``subprocess.Popen`` where needed."""
 
 from __future__ import annotations
 

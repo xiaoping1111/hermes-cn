@@ -1,4 +1,17 @@
-"""Tests for the optional codex app-server runtime gate.
+"""Codex应用服务器运行时门控测试
+
+【产品经理理解要点】
+验证Codex CLI作为本地运行时（app-server模式）的启停逻辑：api_mode路由重写、版本检查、进程环境隔离。当用户选择codex_app_server运行时，系统将api_mode从chat_completions重写为codex_app_server，并启动codex子进程作为JSON-RPC服务端。
+- 验证api_mode注册和重写逻辑（仅限OpenAI提供者）
+- 验证codex版本解析和二进制检查
+- 验证子进程环境隔离：保留用户HOME不变，仅设置CODEX_HOME
+- 验证Kanban工作线程的受限沙箱配置
+- 业务影响：如果这些测试失败，codex运行时可能无法启动或环境配置错误导致子工具（gh/git/npm）失效
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for the optional codex app-server runtime gate.
 
 These are unit tests for the api_mode rewriter and the wire-level transport
 module. They do NOT require the `codex` CLI to be installed — that's

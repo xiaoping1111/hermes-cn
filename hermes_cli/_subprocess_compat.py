@@ -1,4 +1,13 @@
-"""Windows subprocess compatibility helpers.
+"""Windows 子进程兼容层
+
+【产品经理理解要点】
+解决 Hermes 在 Windows 上运行子进程时的三大兼容性问题，确保跨平台体验一致。
+- 核心职责：修复 Windows 下 npm 等命令无法执行、后台进程无法脱离控制台、命令行窗口闪烁等问题
+- 关键概念：resolve_node_command 解析 Node 命令路径、windows_detach_flags 让后台进程独立运行、windows_hide_flags 隐藏控制台窗口
+- 系统定位：跨平台基础设施层，在 Linux/macOS 上所有函数为空操作，不影响现有逻辑
+
+─────────────────────────────────────────────────────────────────
+Windows subprocess compatibility helpers.
 
 Hermes is developed on Linux / macOS and tested natively on Windows too.
 Several common subprocess patterns break silently-or-loudly on Windows:

@@ -1,5 +1,13 @@
-"""Kimi / Moonshot provider profiles.
+"""Kimi / Moonshot 模型供应商配置
 
+【产品经理理解要点】
+注册月之暗面(Kimi/Moonshot)的AI模型供应商。支持双端点路由：新版sk-kimi密钥走编码专用API，旧版密钥走标准API。
+- 供应商：Kimi（月之暗面），提供Moonshot系列模型
+- 双端点：sk-kimi-*密钥→api.kimi.com/coding，旧版密钥→api.moonshot.ai/v1
+- 认证：KIMI_API_KEY或MOONSHOT_API_KEY
+- 特点：Kimi编码端点支持服务端管理温度参数（不发送temperature）
+
+─────────────────────────────────────────────────────────────────
 Kimi has dual endpoints:
   - sk-kimi-* keys → api.kimi.com/coding (Anthropic Messages API)
   - legacy keys → api.moonshot.ai/v1 (OpenAI chat completions)

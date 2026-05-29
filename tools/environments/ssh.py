@@ -1,4 +1,14 @@
-"""SSH remote execution environment with ControlMaster connection persistence."""
+"""SSH远程执行环境 — 通过SSH在远程机器上运行命令
+
+【产品经理理解要点】
+本模块通过SSH连接到远程服务器执行命令，适用于需要在专用服务器或内网环境中运行的场景。
+- 连接管理：使用SSH ControlMaster复用连接，避免每次命令都重新握手建立连接
+- 文件同步：自动将技能脚本、凭证文件同步到远程服务器，命令执行后再同步回来
+- 批量传输：大量文件通过tar管道一次性传输，比逐个scp快数倍
+- 适用场景：远程开发机、内网服务器、有固定IP的云端主机
+
+─────────────────────────────────────────────────────────────────
+SSH remote execution environment with ControlMaster connection persistence."""
 
 import hashlib
 import logging

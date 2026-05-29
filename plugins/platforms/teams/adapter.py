@@ -1,6 +1,15 @@
-"""
-Microsoft Teams platform adapter for Hermes Agent.
+"""Microsoft Teams平台适配器
 
+【产品经理理解要点】
+将Hermes AI代理接入Microsoft Teams，实现Teams中的机器人对话能力。这是企业协作场景下的核心平台适配器。
+- 核心能力：在Teams中接收和发送消息，支持私聊、群聊和频道
+- 审批卡片：发送Adaptive Card审批提示，允许/拒绝危险命令执行，支持权限控制
+- 安全机制：用户白名单(TEAMS_ALLOWED_USERS)、Service URL白名单防SSRF、会话ID校验
+- 消息投递：支持Incoming Webhook和Microsoft Graph API两种投递模式
+- 独立发送：支持网关进程外的cron任务通过Bot Framework REST API直接发送消息
+- 交互式设置：hermes setup引导配置Client ID/Secret/Tenant ID
+
+─────────────────────────────────────────────────────────────────
 Uses the microsoft-teams-apps SDK for authentication and activity processing.
 Runs an aiohttp webhook server to receive messages from Teams.
 Proactive messaging (send, typing) uses the SDK's App.send() method.

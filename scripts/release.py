@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Hermes Agent Release Script
+"""Hermes Agent发版脚本
+
+【产品经理理解要点】
+自动生成变更日志并创建GitHub Release，支持CalVer版本号。
+- 核心职责：从Git历史提取变更，按类别归档，生成Markdown格式的Release Note
+- 版本格式：CalVer（日历版本号），如v2026.5.1
+- 使用方式：先预览（dry run），确认后加--publish正式发布
+
+─────────────────────────────────────────────────────────────────
+Hermes Agent Release Script
 
 Generates changelogs and creates GitHub releases with CalVer tags.
 

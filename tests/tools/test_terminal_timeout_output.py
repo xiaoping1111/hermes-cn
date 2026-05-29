@@ -1,4 +1,13 @@
-"""Verify that terminal command timeouts preserve partial output."""
+"""终端超时输出测试
+
+【产品经理理解要点】
+验证工具系统模块中timeout includes partial output、timeout with no output的正确性
+- timeout includes partial output的正确性验证
+- timeout with no output的正确性验证
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Verify that terminal command timeouts preserve partial output."""
 from tools.environments.local import LocalEnvironment
 
 

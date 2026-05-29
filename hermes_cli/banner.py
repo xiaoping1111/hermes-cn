@@ -1,4 +1,13 @@
-"""Welcome banner, ASCII art, skills summary, and update check for the CLI.
+"""欢迎横幅与版本信息
+
+【产品经理理解要点】
+Hermes 启动时显示的欢迎界面，包含品牌 Logo、当前模型、可用工具/技能列表和更新提醒。
+- 核心职责：渲染启动横幅（ASCII 艺术 Logo + 当前模型/工作目录/会话 ID + 可用工具和技能 + 更新提示）
+- 关键概念：皮肤主题（可定制颜色和品牌文字）、非阻塞更新检查（后台线程）、工具集分类展示
+- 系统定位：用户每次启动 Hermes 看到的第一屏，是产品形象和状态概览的展示窗口
+
+─────────────────────────────────────────────────────────────────
+Welcome banner, ASCII art, skills summary, and update check for the CLI.
 
 Pure display functions with no HermesCLI state dependency.
 """

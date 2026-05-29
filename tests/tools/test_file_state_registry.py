@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
-"""Tests for the cross-agent FileStateRegistry (tools/file_state.py).
+"""文件状态注册测试
+
+【产品经理理解要点】
+验证工具系统模块中record read then check stale returns none等16个场景的正确性
+- record read then check stale returns none的正确性验证
+- sibling write flags other agent as stale的正确性验证
+- write without read flagged的正确性验证
+- 另有13个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the cross-agent FileStateRegistry (tools/file_state.py).
 
 Covers the three layers added for safe concurrent subagent file edits:
 
@@ -11,8 +22,7 @@ Plus integration through the real ``read_file_tool`` / ``write_file_tool``
 / ``patch_tool`` handlers so the full hook wiring is exercised.
 
 Run:
-    python -m pytest tests/tools/test_file_state_registry.py -v
-"""
+    python -m pytest tests/tools/test_file_state_registry.py -v"""
 
 from __future__ import annotations
 

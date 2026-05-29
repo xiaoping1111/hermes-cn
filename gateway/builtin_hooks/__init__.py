@@ -1,1 +1,9 @@
-"""Built-in gateway hooks that are always registered."""
+"""内置网关钩子 — 始终注册的默认钩子
+
+【产品经理理解要点】
+网关启动时自动注册的内置钩子，提供基础功能（如启动通知等）。
+
+─────────────────────────────────────────────────────────────────
+
+Built-in gateway hooks that are always registered.
+"""

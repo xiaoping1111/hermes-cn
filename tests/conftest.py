@@ -1,4 +1,14 @@
-"""Shared fixtures for the hermes-agent test suite.
+"""测试套件共享配置
+
+【产品经理理解要点】
+定义测试套件的共享fixture和全局防护，确保所有测试在隔离环境中运行。
+- 所有测试前清除凭证环境变量，防止本地密钥泄露
+- 每个测试使用独立的HERMES_HOME临时目录
+- 设置确定性运行时（UTC时区、固定PYTHONHASHSEED）
+- 如果防护被移除，测试可能误操作线上服务
+
+──────────────────────────────────────────────────────────────
+Shared fixtures for the hermes-agent test suite.
 
 Hermetic-test invariants enforced here (see AGENTS.md for rationale):
 

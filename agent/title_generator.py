@@ -1,4 +1,16 @@
-"""Auto-generate short session titles from the first user/assistant exchange.
+"""会话标题生成器 — 根据对话内容自动生成简短的会话名称
+
+【产品经理理解要点】
+每次新对话开始时，Agent 会根据用户的第一条消息和 AI 的第一条回复，
+自动生成一个简短标题（3-7个词），方便用户在会话列表中快速找到历史对话。
+
+这个操作是异步执行的，不会影响用户收到回复的速度。
+
+例如：用户问"帮我写一个 Python 爬虫" → 自动生成标题 "Python Web Scraper"
+
+─────────────────────────────────────────────────────────────────
+
+Auto-generate short session titles from the first user/assistant exchange.
 
 Runs asynchronously after the first response is delivered so it never
 adds latency to the user-facing reply.

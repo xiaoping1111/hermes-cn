@@ -1,4 +1,13 @@
-"""Tests for agent.gemini_schema — OpenAI→Gemini tool parameter translation."""
+"""Gemini Schema测试
+
+【产品经理理解要点】
+验证Gemini的JSON Schema转换和参数验证。
+- OpenAI工具Schema到Gemini格式的转换
+- 影响Gemini函数调用的准确性
+
+──────────────────────────────────────────────────────────────
+Tests for agent.gemini_schema — OpenAI→Gemini tool parameter translation.
+"""
 
 from agent.gemini_schema import (
     sanitize_gemini_schema,

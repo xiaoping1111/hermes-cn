@@ -1,4 +1,14 @@
-"""AES-256-GCM utilities for QQBot scan-to-configure credential decryption."""
+"""QQBot 扫码配置的加密模块
+
+【产品经理理解要点】
+保障 QQ 机器人扫码绑定流程中密钥的安全传输。
+- 核心职责：生成加密密钥用于绑定流程、解密服务器返回的机器人密钥
+- 安全设计：密钥在本地生成，服务器用此密钥加密后返回敏感信息，全程密钥不明文传输
+- 使用场景：管理员首次配置 QQ 机器人时，通过手机 QQ 扫码完成身份验证和密钥获取
+
+─────────────────────────────────────────────────────────────────
+AES-256-GCM utilities for QQBot scan-to-configure credential decryption.
+"""
 
 from __future__ import annotations
 

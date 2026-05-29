@@ -1,5 +1,12 @@
-"""OpenCode provider profiles (Zen + Go).
+"""OpenCode Zen + Go 模型供应商配置
 
+【产品经理理解要点】
+注册OpenCode平台的两款接入配置：Zen和Go。它们根据不同模型自动路由到最佳API模式。
+- OpenCode Zen：Claude→anthropic_messages模式，GPT-5/Codex→codex_responses模式，其他→chat_completions模式
+- OpenCode Go：MiniMax→anthropic_messages模式，GLM/Kimi→chat_completions模式
+- 按模型自动路由API模式，优化各模型最佳调用方式
+
+─────────────────────────────────────────────────────────────────
 Both use per-model api_mode routing:
   - OpenCode Zen: Claude → anthropic_messages, GPT-5/Codex → codex_responses,
     everything else → chat_completions (this profile)

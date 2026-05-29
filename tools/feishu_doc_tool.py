@@ -1,4 +1,13 @@
-"""Feishu Document Tool -- read document content via Feishu/Lark API.
+"""飞书文档读取工具
+
+【产品经理理解要点】
+让 Agent 读取飞书文档的纯文本内容，用于理解文档上下文后回答用户问题。
+- 核心职责：通过飞书 API 将文档内容转为纯文本，供 LLM 分析
+- 关键业务概念：懒加载 SDK（首次调用时才加载，避免 5 秒启动开销）；线程级客户端注入
+- 在系统中的位置：飞书评论事件的下游工具，当用户在文档评论中 @Bot 时提供文档上下文
+
+─────────────────────────────────────────────────────────────────
+Feishu Document Tool -- read document content via Feishu/Lark API.
 
 Provides ``feishu_doc_read`` for reading document content as plain text.
 Uses the same lazy-import + BaseRequest pattern as feishu_comment.py.

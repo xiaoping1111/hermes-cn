@@ -1,4 +1,7 @@
-"""Merge adjacent runs with identical formatting in DOCX.
+"""【产品经理理解要点】
+DOCX相邻Run合并工具——将格式相同的相邻<w:r>元素合并，清理修订ID和拼写检查标记，优化文档XML结构。
+─────────────────────────────────────────────────────────────────
+Merge adjacent runs with identical formatting in DOCX.
 
 Merges adjacent <w:r> elements that have identical <w:rPr> properties.
 Works on runs in paragraphs and inside tracked changes (<w:ins>, <w:del>).

@@ -1,4 +1,13 @@
-"""Tests that gateway /model switch persists across messages.
+"""消息网关测试 - 模型切换
+
+【产品经理理解要点】
+验证消息网关模型切换的正确性
+- 验证的功能: Tests that gateway /model switch persists across messages
+- 核心测试场景: override replaces all fields、no override returns originals、none values do not overwrite 等共9个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests that gateway /model switch persists across messages.
 
 The gateway /model command stores session overrides in
 ``_session_model_overrides``.  These must:

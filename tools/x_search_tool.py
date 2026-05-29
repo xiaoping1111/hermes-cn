@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""X Search tool backed by xAI's built-in ``x_search`` Responses API tool.
+"""X 搜索工具（基于 xAI Grok）
+
+【产品经理理解要点】
+让 Agent 通过 xAI 的内置搜索功能查询 X/Twitter 上的实时信息和引用来源。
+- 核心职责：调用 xAI Responses API 的 x_search 工具，支持日期范围和账号过滤；标记退化结果（无引用时提醒用户）
+- 关键业务概念：双凭据模式——API Key 或 SuperGrok OAuth 均可；退化检测——带引用的结果才可信，无引用时标注为"模型知识"
+- 在系统中的位置：Web 搜索工具族的一员，专门针对 X 平台实时内容
+
+─────────────────────────────────────────────────────────────────
+X Search tool backed by xAI's built-in ``x_search`` Responses API tool.
 
 Authentication
 --------------

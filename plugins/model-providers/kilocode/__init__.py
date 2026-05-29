@@ -1,4 +1,7 @@
-"""Kilo Code provider profile."""
+"""【产品经理理解要点】
+Kilo Code模型网关提供商——接入Kilo AI的模型网关服务，通过KILOCODE_API_KEY认证，适合代码相关任务。
+─────────────────────────────────────────────────────────────────
+Kilo Code provider profile."""
 
 from providers import register_provider
 from providers.base import ProviderProfile

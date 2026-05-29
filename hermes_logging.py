@@ -1,4 +1,17 @@
-"""Centralized logging setup for Hermes Agent.
+"""Hermes Agent 的集中式日志模块
+
+【产品经理理解要点】
+这是系统的"日志管家"——负责把所有运行记录写到文件里，方便排查问题。
+核心功能：
+  - agent.log：主日志，记录所有代理/工具/会话活动（INFO级别以上）
+  - errors.log：错误日志，只记录警告和错误，用于快速定位问题
+  - gateway.log：网关专属日志（仅网关模式启动时生成）
+  - 敏感信息脱敏：日志自动过滤 API Key 等敏感数据，不会泄露到磁盘
+  - 会话标记：每条日志自动带上 session_id，方便按对话筛选
+
+日志文件位置：~/.hermes/logs/
+─────────────────────────────────────────────────────────────────
+Centralized logging setup for Hermes Agent.
 
 Provides a single ``setup_logging()`` entry point that both the CLI and
 gateway call early in their startup path.  All log files live under

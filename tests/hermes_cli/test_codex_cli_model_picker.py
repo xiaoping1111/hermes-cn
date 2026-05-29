@@ -1,4 +1,13 @@
-"""Regression tests for the /model picker's credential-discovery paths.
+"""命令行界面测试 - Codex运行时·CLI命令·模型管理·picker
+
+【产品经理理解要点】
+验证命令行界面的Codex运行时CLI命令模型管理功能
+- 验证的功能: Regression tests for the /model picker's credential-discovery paths
+- 核心测试场景: normal path still works、codex picker uses live codex catalog、claude code file detected by model picker 等共4个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression tests for the /model picker's credential-discovery paths.
 
 Covers:
  - Normal path (tokens already in Hermes auth store)

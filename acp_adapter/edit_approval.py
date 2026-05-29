@@ -1,4 +1,14 @@
-"""Pre-execution ACP edit approval helpers.
+"""ACP编辑审批模块
+
+【产品经理理解要点】
+在编辑器中使用Hermes修改文件时，此模块控制是否需要用户确认。相当于"安全护栏"。
+- 核心职责：当Hermes要修改文件时，拦截操作并请求用户审批，防止自动修改敏感文件
+- 三种审批策略：ask（每次都问）、workspace_session（工作区内自动通过）、session（本次会话全部自动通过）
+- 安全机制：.env、.ssh等敏感路径无论策略如何都强制审批
+- 使用场景：用户在Zed编辑器中看到Hermes的文件修改diff，点击"允许"或"拒绝"
+
+─────────────────────────────────────────────────────────────────
+Pre-execution ACP edit approval helpers.
 
 This module is intentionally isolated from the generic tool registry.  ACP binds
 an edit approval requester in a ContextVar for the duration of one ACP agent run;

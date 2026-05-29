@@ -1,8 +1,18 @@
-"""Tests for the file tools module (schema, handler wiring, error paths).
+"""文件工具测试
+
+【产品经理理解要点】
+验证工具系统模块中returns file content等29个场景的正确性
+- returns file content的正确性验证
+- custom offset and limit的正确性验证
+- invalid offset and limit are normalized before dispatch的正确性验证
+- 另有26个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the file tools module (schema, handler wiring, error paths).
 
 Tests verify tool schemas, handler dispatch, validation logic, and error
-handling without requiring a running terminal environment.
-"""
+handling without requiring a running terminal environment."""
 
 import json
 import logging

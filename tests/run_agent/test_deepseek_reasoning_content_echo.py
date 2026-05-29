@@ -1,4 +1,15 @@
-"""Regression test: DeepSeek V4 thinking mode reasoning_content echo.
+"""DeepSeek推理内容回显测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中provider deepseek等28个场景的正确性
+- provider deepseek的正确性验证
+- model substring的正确性验证
+- base url host的正确性验证
+- 另有25个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression test: DeepSeek V4 thinking mode reasoning_content echo.
 
 DeepSeek V4-flash / V4-pro thinking mode requires ``reasoning_content`` on
 every assistant message that carries ``tool_calls``. When a persisted
@@ -24,8 +35,7 @@ tightened validation and rejects empty-string reasoning_content with a
 the API"). A space satisfies non-empty checks everywhere without leaking
 fabricated reasoning.
 
-Refs #15250 / #15353 / #17341.
-"""
+Refs #15250 / #15353 / #17341."""
 
 from __future__ import annotations
 

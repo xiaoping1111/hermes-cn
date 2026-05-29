@@ -1,4 +1,13 @@
-"""Agent-facing tool: respond to a native JS dialog captured by the CDP supervisor.
+"""浏览器原生弹窗响应工具
+
+【产品经理理解要点】
+让 Agent 能响应网页上的 JavaScript 弹窗（alert/confirm/prompt/beforeunload），而非被弹窗阻塞。
+- 核心职责：读取 browser_snapshot 中的待处理弹窗列表，调用本工具接受或关闭弹窗
+- 关键业务概念：响应式设计——Agent 先用 snapshot 发现弹窗，再用此工具响应；prompt 弹窗可输入文本
+- 在系统中的位置：CDP 浏览器后端的高级功能，仅在 CDP 连接可用时出现
+
+─────────────────────────────────────────────────────────────────
+Agent-facing tool: respond to a native JS dialog captured by the CDP supervisor.
 
 This tool is response-only — the agent first reads ``pending_dialogs`` from
 ``browser_snapshot`` output, then calls ``browser_dialog(action=...)`` to

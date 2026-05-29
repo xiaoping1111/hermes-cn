@@ -1,4 +1,13 @@
-"""Tests for AWS Bedrock integration in the model picker and provider catalog.
+"""命令行界面测试 - bedrock·模型管理·picker
+
+【产品经理理解要点】
+验证命令行界面的模型管理功能
+- 验证的功能: Tests for AWS Bedrock integration in the model picker and provider catalog
+- 核心测试场景: returns live discovered model ids、region determines model ids、falls back to static list when discovery empty 等共21个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for AWS Bedrock integration in the model picker and provider catalog.
 
 Covers the three paths changed by fix/bedrock-provider-model-ids-live-discovery:
 

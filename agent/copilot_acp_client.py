@@ -1,4 +1,16 @@
-"""OpenAI-compatible shim that forwards Hermes requests to `copilot --acp`.
+"""GitHub Copilot ACP 适配器 — 通过 Copilot 的 ACP 协议调用 AI 模型
+
+【产品经理理解要点】
+这个适配器让 Agent 可以通过 GitHub Copilot 的 ACP（Agent Communication Protocol）
+服务来调用 AI 模型。适合已有 GitHub Copilot 订阅的用户，
+无需额外购买 API 额度就能使用 Agent。
+
+工作方式：每次请求启动一个短生命周期的 ACP 会话，
+将对话发送给 Copilot，收集回复，再转换为 Agent 能理解的格式。
+
+─────────────────────────────────────────────────────────────────
+
+OpenAI-compatible shim that forwards Hermes requests to `copilot --acp`.
 
 This adapter lets Hermes treat the GitHub Copilot ACP server as a chat-style
 backend. Each request starts a short-lived ACP session, sends the formatted

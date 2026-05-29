@@ -1,4 +1,13 @@
 """
+时区感知时钟模块
+
+【产品经理理解要点】
+这是系统的"时钟"——确保定时任务（如 cron）在用户所在时区正确执行。
+配置优先级：
+  1. HERMES_TIMEZONE 环境变量（最高优先级）
+  2. config.yaml 中的 timezone 配置项
+  3. 服务器本地时间（默认兜底）
+─────────────────────────────────────────────────────────────────
 Timezone-aware clock for Hermes.
 
 Provides a single ``now()`` helper that returns a timezone-aware datetime

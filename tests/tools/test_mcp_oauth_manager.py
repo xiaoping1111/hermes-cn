@@ -1,9 +1,19 @@
-"""Tests for the MCP OAuth manager (tools/mcp_oauth_manager.py).
+"""MCP OAuth管理器测试
+
+【产品经理理解要点】
+验证工具系统模块中manager is singleton等7个场景的正确性
+- manager is singleton的正确性验证
+- manager get or build provider caches的正确性验证
+- manager get or build rebuilds on url change的正确性验证
+- 另有4个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the MCP OAuth manager (tools/mcp_oauth_manager.py).
 
 The manager consolidates the eight scattered MCP-OAuth call sites into a
 single object with disk-mtime watch, dedup'd 401 handling, and a provider
-cache. See `tools/mcp_oauth_manager.py` for design rationale.
-"""
+cache. See `tools/mcp_oauth_manager.py` for design rationale."""
 import json
 import os
 import time

@@ -1,4 +1,13 @@
-"""Shared helpers for canonicalising WhatsApp sender identity.
+"""WhatsApp用户身份标准化
+
+【产品经理理解要点】
+解决WhatsApp中同一用户以不同ID格式出现的问题，确保会话和权限判断正确归一。
+- 核心职责：将WhatsApp的LID格式和手机号格式统一为唯一身份标识
+- 影响范围：授权路径（gateway.run）和会话管理（gateway.session）都依赖此模块
+- 关键问题：同一人在对话中可能以999999999999999@lid和15551234567@s.whatsapp.net两种形式出现
+
+─────────────────────────────────────────────────────────────────
+Shared helpers for canonicalising WhatsApp sender identity.
 
 WhatsApp's bridge can surface the same human under two different JID shapes
 within a single conversation:

@@ -1,4 +1,13 @@
-"""Tests for the /branch (/fork) command — session branching.
+"""分支命令测试
+
+【产品经理理解要点】
+验证/branch命令的会话分支创建和切换功能。
+- 分支从当前对话历史创建
+- 分支间的切换和列表展示
+- 影响对话实验和回溯能力
+
+──────────────────────────────────────────────────────────────
+Tests for the /branch (/fork) command — session branching.
 
 Verifies that:
 - Branching creates a new session with copied conversation history

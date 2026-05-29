@@ -1,4 +1,13 @@
-"""Unit tests for gateway.slash_access — per-platform slash command access control.
+"""消息网关测试 - slash·access
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Unit tests for gateway.slash_access — per-platform slash command access control
+- 核心测试场景: empty extra is disabled、disabled policy treats anyone as admin、dm admin list only 等共21个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Unit tests for gateway.slash_access — per-platform slash command access control.
 
 Tests the pure policy resolver (no gateway plumbing). Integration tests that
 exercise the dispatch site live in test_slash_access_dispatch.py.

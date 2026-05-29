@@ -1,4 +1,13 @@
-"""Guards for ``get_external_skills_dirs`` mtime-based memo.
+"""外部技能目录缓存测试
+
+【产品经理理解要点】
+验证外部技能目录的缓存机制，避免重复扫描。
+- 扫描结果的正确缓存
+- 缓存失效后的重新扫描
+- 影响技能加载的性能
+
+──────────────────────────────────────────────────────────────
+Guards for ``get_external_skills_dirs`` mtime-based memo.
 
 ``get_external_skills_dirs()`` is called once per skill during banner
 construction and tool registration — on a typical install that's 120+

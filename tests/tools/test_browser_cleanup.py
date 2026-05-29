@@ -1,4 +1,15 @@
-"""Regression tests for browser session cleanup and screenshot recovery."""
+"""浏览器清理测试
+
+【产品经理理解要点】
+验证工具系统模块中extracts standard absolute path等6个场景的正确性
+- extracts standard absolute path的正确性验证
+- extracts quoted absolute path的正确性验证
+- cleanup browser clears tracking state的正确性验证
+- 另有3个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for browser session cleanup and screenshot recovery."""
 
 from unittest.mock import patch
 

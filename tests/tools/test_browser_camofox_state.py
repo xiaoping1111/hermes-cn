@@ -1,4 +1,15 @@
-"""Tests for Hermes-managed Camofox state helpers."""
+"""浏览器CamoFox隐身state测试
+
+【产品经理理解要点】
+验证工具系统模块中paths are profile scoped等6个场景的正确性
+- paths are profile scoped的正确性验证
+- identity is deterministic的正确性验证
+- identity differs by task的正确性验证
+- 另有3个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for Hermes-managed Camofox state helpers."""
 
 from unittest.mock import patch
 

@@ -1,4 +1,7 @@
-"""Google Gemini provider profiles.
+"""【产品经理理解要点】
+Google Gemini模型提供商——同时支持两种接入方式：(1) Gemini: 通过API Key接入Google AI Studio；(2) google-gemini-cli: 通过OAuth接入Google Cloud Code Assist。两者都使用原生Gemini客户端而非标准OpenAI传输层。
+─────────────────────────────────────────────────────────────────
+Google Gemini provider profiles.
 
 gemini:            Google AI Studio (API key) — uses GeminiNativeClient
 google-gemini-cli: Google Cloud Code Assist (OAuth) — uses GeminiCloudCodeClient

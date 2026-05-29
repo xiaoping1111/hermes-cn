@@ -1,4 +1,13 @@
-"""Tests for kb.decompose_triage_task — the DB-layer atomic fan-out
+"""命令行界面测试 - 看板管理·decompose·数据库
+
+【产品经理理解要点】
+验证命令行界面的看板管理数据库功能
+- 验证的功能: Tests for kb.decompose_triage_task — the DB-layer atomic fan-out
+- 核心测试场景: decompose creates children and promotes root、decompose returns none when task missing、decompose returns none when task not in triage 等共8个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for kb.decompose_triage_task — the DB-layer atomic fan-out
 from the triage column. LLM-free by design.
 """
 

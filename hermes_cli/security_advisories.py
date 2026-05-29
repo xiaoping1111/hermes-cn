@@ -1,4 +1,14 @@
 """
+安全公告检测系统
+
+【产品经理理解要点】
+检测已知的供应链攻击（如 PyPI 恶意包），向用户发出警告并提供修复指引。
+- 每次 CLI 启动时轻量检测，无问题则静默
+- 支持用户确认后消除警告（`hermes doctor --ack <id>`）
+- 24 小时内不重复弹窗，确认后永久静默
+- 新公告只需添加一条记录，无需改代码
+
+─────────────────────────────────────────────────────────────────
 Security advisory checker for Hermes Agent.
 
 Detects known-compromised Python packages installed in the active venv

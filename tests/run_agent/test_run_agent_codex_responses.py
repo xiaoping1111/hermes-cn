@@ -1,3 +1,13 @@
+"""Agent Codex响应处理测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中api mode uses explicit provider when codex等63个场景的正确性
+- api mode uses explicit provider when codex的正确性验证
+- api mode normalizes provider case的正确性验证
+- api mode respects explicit openrouter provider over codex...的正确性验证
+- 另有60个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性"""
+
 import sys
 import types
 from types import SimpleNamespace

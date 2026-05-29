@@ -1,4 +1,15 @@
-"""
+"""Slack 平台适配器
+
+【产品经理理解要点】
+让 Agent 通过 Slack 与用户交互：
+  - 接收频道和私信消息
+  - 发送 AI 回复
+  - 处理斜杠命令
+  - 支持线程回复
+  - 使用 Socket Mode（无需公网入站端口）
+
+─────────────────────────────────────────────────────────────────
+
 Slack platform adapter.
 
 Uses slack-bolt (Python) with Socket Mode for:

@@ -1,4 +1,14 @@
-"""Cua-driver backend (macOS only).
+"""cua-driver后端实现 — macOS后台操控的核心驱动
+
+【产品经理理解要点】
+本模块是电脑操控功能的底层实现，通过cua-driver与macOS系统通信，实现在不抢占用户焦点的情况下操控任何窗口。
+- 核心原理：利用macOS私有SkyLight SPI，将输入事件直接投递到目标进程，无需将窗口置前
+- 通信方式：通过MCP协议（stdio管道）与cua-driver进程通信，异步调用在后台线程执行
+- 关键限制：仅支持macOS；cua-driver使用私有API，可能在macOS系统更新后失效
+- 安装方式：需单独安装cua-driver二进制文件，可通过hermes tools自动安装
+
+─────────────────────────────────────────────────────────────────
+Cua-driver backend (macOS only).
 
 Speaks MCP over stdio to `cua-driver`. The Python `mcp` SDK is async, so we
 run a dedicated asyncio event loop on a background thread and marshal sync

@@ -1,4 +1,15 @@
-"""Regression guard for #15000: --resume <id> after compression loses messages.
+"""会话恢复ID解析测试
+
+【产品经理理解要点】
+验证Hermes状态管理模块中redirects from empty head to descendant with messages等8个场景的正确性
+- redirects from empty head to descendant with messages的正确性验证
+- returns self when session has messages的正确性验证
+- returns self when no descendant has messages的正确性验证
+- 另有5个测试场景覆盖
+- 影响Hermes状态管理的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression guard for #15000: --resume <id> after compression loses messages.
 
 Context compression ends the current session and forks a new child session
 (linked by ``parent_session_id``). The SQLite flush cursor is reset, so
@@ -8,8 +19,7 @@ used to load zero rows and show a blank chat.
 
 ``SessionDB.resolve_resume_session_id()`` walks the parent → child chain
 and redirects to the first descendant that actually has messages. These
-tests pin that behaviour.
-"""
+tests pin that behaviour."""
 import time
 
 import pytest

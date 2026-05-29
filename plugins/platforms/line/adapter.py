@@ -1,6 +1,15 @@
-"""
-LINE Messaging API platform adapter for Hermes Agent.
+"""LINE Messaging API平台适配器
 
+【产品经理理解要点】
+将Hermes AI代理接入LINE消息平台，实现LINE中的智能对话能力。专为LINE的API特性和限制做了深度优化。
+- 核心能力：在LINE中收发文本、图片、语音、视频消息
+- 慢回复按钮：当AI回复较慢时（超过阈值），先发送"点击获取答案"按钮，用户点击后获取缓存结果
+- 安全机制：三重白名单控制（用户/群组/房间），Webhook签名验证
+- 消息优化：自动剥离LINE不支持的Markdown格式、分片发送（每5条一个批次）、字数限制
+- 媒体处理：LINE不接受二进制上传，需通过HTTPS URL提供，内置临时文件服务器
+- 认证：需要LINE_CHANNEL_ACCESS_TOKEN和LINE_CHANNEL_SECRET
+
+─────────────────────────────────────────────────────────────────
 A bundled platform plugin that runs an aiohttp webhook server, accepts LINE
 webhook events (signature-verified), and relays messages to/from the agent
 via the standard ``BasePlatformAdapter`` interface.

@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Generate llms.txt and llms-full.txt for the Hermes docs site.
+"""LLM友好文档生成脚本
+
+【产品经理理解要点】
+生成llms.txt和llms-full.txt，让AI助手和IDE插件能自动发现Hermes文档。
+- 核心职责：将文档站点内容整理为llmstxt.org标准格式的索引文件
+- 业务价值：AI工具可直接读取这些文件获取完整的Hermes使用文档
+- 发布位置：https://hermes-agent.nousresearch.com/docs/llms.txt
+
+─────────────────────────────────────────────────────────────────
+Generate llms.txt and llms-full.txt for the Hermes docs site.
 
 Outputs:
   website/static/llms.txt        — short curated index of the docs, one link per page,

@@ -1,5 +1,19 @@
 from __future__ import annotations
 
+"""命令行界面测试 - 超时控制
+
+【产品经理理解要点】
+验证命令行界面的超时控制功能
+- 验证的功能: CLI超时控制机制
+- 核心测试场景: model timeout override wins、provider timeout used when no model override、model stale timeout override wins 等共12个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - 超时控制
+
+测试CLI命令处理与配置管理中timeouts功能
+"""
+
 import textwrap
 
 from hermes_cli.timeouts import (

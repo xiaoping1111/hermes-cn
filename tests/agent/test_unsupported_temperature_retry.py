@@ -1,4 +1,12 @@
-"""Regression tests for the universal "unsupported temperature" retry in
+"""不支持温度参数重试测试
+
+【产品经理理解要点】
+验证当模型不支持temperature参数时自动移除并重试。
+- temperature不支持时的自动移除
+- 影响不支持温度调节的模型调用
+
+──────────────────────────────────────────────────────────────
+Regression tests for the universal "unsupported temperature" retry in
 ``agent.auxiliary_client``.
 
 Auxiliary callers (context compression, session search,

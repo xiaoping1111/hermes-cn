@@ -1,4 +1,12 @@
-"""
+"""消息网关测试 - 消息发送·图片处理·file
+
+【产品经理理解要点】
+验证消息网关的消息发送图片处理功能
+- 验证的功能: Tests for send_image_file() on Telegram, Discord, and Slack platforms,
+- 核心测试场景: png image extracted、jpg image extracted、webp image extracted 等共23个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
 Tests for send_image_file() on Telegram, Discord, and Slack platforms,
 and MEDIA: .png extraction/routing in the base platform adapter.
 

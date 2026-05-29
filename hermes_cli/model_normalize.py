@@ -1,4 +1,13 @@
-"""Per-provider model name normalization.
+"""按供应商规范化模型名称
+
+【产品经理理解要点】
+不同 AI 供应商对同一模型有不同的命名规则，本模块统一处理这些差异，让用户输入任意格式都能正确调用。
+- 核心职责：将用户输入的模型名转换为各供应商期望的格式（如 Anthropic 用 claude-sonnet-4-6，Copilot 用 claude-sonnet-4.6）
+- 关键概念：聚合器(OpenRouter)用 vendor/model 格式、Anthropic 原生用连字符替代点、Copilot 保留点号、DeepSeek 区分 V3/V4/R1
+- 系统定位：模型调用的名称适配层，确保用户选择模型后正确发送请求
+
+─────────────────────────────────────────────────────────────────
+Per-provider model name normalization.
 
 Different LLM providers expect model identifiers in different formats:
 

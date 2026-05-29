@@ -1,4 +1,13 @@
-"""Tests for transient-error handling in Telegram progress-message editing.
+"""消息网关测试 - Telegram平台·progress·编辑处理·transient
+
+【产品经理理解要点】
+验证消息网关的Telegram平台编辑处理功能
+- 验证的功能: Tests for transient-error handling in Telegram progress-message editing
+- 核心测试场景: transient errors are classified as transient、permanent errors are not transient、send result retryable default is false 等共9个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for transient-error handling in Telegram progress-message editing.
 
 Issue: #27828
 

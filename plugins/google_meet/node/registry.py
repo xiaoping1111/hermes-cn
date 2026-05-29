@@ -1,11 +1,9 @@
-"""Local JSON registry of approved remote meet nodes.
+"""远程Meet节点本地注册表
 
-Lives at ``$HERMES_HOME/workspace/meetings/nodes.json``. The gateway
-consults it to resolve a ``chrome_node`` name to a ``(url, token)`` pair
-before opening a WebSocket to the remote bot host.
+【产品经理理解要点】
+维护已批准的远程Meet节点列表(name→url+token)，存储在$HERMES_HOME/workspace/meetings/nodes.json。"""
 
-Schema
-------
+from __future__ import annotations
     {
       "nodes": {
         "<name>": {

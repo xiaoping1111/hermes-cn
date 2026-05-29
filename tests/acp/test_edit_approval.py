@@ -1,4 +1,14 @@
-"""Tests for ACP pre-edit approval gating."""
+"""ACP编辑审批门控测试
+
+【产品经理理解要点】
+验证ACP模式下文件编辑操作的审批流程，确保敏感编辑需要用户确认。
+- 自动审批和需确认编辑的判断
+- 审批回调的正确设置和清理
+- 影响ACP编辑操作的安全性
+
+──────────────────────────────────────────────────────────────
+Tests for ACP pre-edit approval gating.
+"""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""Shared debug session infrastructure for Hermes tools.
+"""工具调试会话基础设施
+
+【产品经理理解要点】
+为各工具模块提供统一的调试日志能力，通过环境变量按工具开关，关闭时零开销。
+- 核心职责：记录工具调用详情到 JSON 日志文件，供开发者排查问题；按工具名和环境变量隔离调试会话
+- 关键业务概念：按需开启——设置如 WEB_TOOLS_DEBUG=true 时才记录，不影响正常运行性能
+- 在系统中的位置：被 web_tools、vision_tools、mixture_of_agents_tool、image_generation_tool 共用的调试模块
+
+─────────────────────────────────────────────────────────────────
+Shared debug session infrastructure for Hermes tools.
 
 Replaces the identical DEBUG_MODE / _log_debug_call / _save_debug_log /
 get_debug_session_info boilerplate previously duplicated across web_tools,

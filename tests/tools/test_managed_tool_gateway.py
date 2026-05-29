@@ -1,3 +1,13 @@
+"""托管工具网关测试
+
+【产品经理理解要点】
+验证工具系统模块中resolve managed tool gateway derives vendor origin from s...等5个场景的正确性
+- resolve managed tool gateway derives vendor origin from...的正确性验证
+- resolve managed tool gateway uses vendor specific override的正确性验证
+- resolve managed tool gateway is inactive without nous...的正确性验证
+- 另有2个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性"""
+
 import os
 import json
 from datetime import datetime, timedelta, timezone

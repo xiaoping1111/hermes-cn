@@ -1,11 +1,21 @@
-"""Regression tests for the transcription_tools variant of #17140.
+"""语音转写环境变量降级测试
+
+【产品经理理解要点】
+验证工具系统模块中import after config env patch uses restored dotenv loader等10个场景的正确性
+- import after config env patch uses restored dotenv...的正确性验证
+- xai resolver import after config env patch uses...的正确性验证
+- explicit groq sees dotenv的正确性验证
+- 另有7个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for the transcription_tools variant of #17140.
 
 Same class of bug as ``tools/tts_tool.py`` (fixed in PR #17163): the STT
 provider call sites read API keys via ``os.getenv()``, which bypasses
 ``~/.hermes/.env`` entries. These tests confirm each STT provider now
 consults ``get_env_value()`` and the provider auto-detect + explicit
-selection gate (``_get_provider``) do the same.
-"""
+selection gate (``_get_provider``) do the same."""
 
 from unittest.mock import MagicMock, patch
 

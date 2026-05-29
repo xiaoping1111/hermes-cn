@@ -1,4 +1,15 @@
-"""Unit tests for tools/tool_backend_helpers.py.
+"""工具后端辅助测试
+
+【产品经理理解要点】
+验证工具系统模块中disabled when not logged in等45个场景的正确性
+- disabled when not logged in的正确性验证
+- disabled for free tier的正确性验证
+- enabled for paid subscriber的正确性验证
+- 另有42个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Unit tests for tools/tool_backend_helpers.py.
 
 Tests cover:
 - managed_nous_tools_enabled() subscription-based gate
@@ -6,8 +17,7 @@ Tests cover:
 - coerce_modal_mode() / normalize_modal_mode() validation
 - has_direct_modal_credentials() detection
 - resolve_modal_backend_state() backend selection matrix
-- resolve_openai_audio_api_key() priority chain
-"""
+- resolve_openai_audio_api_key() priority chain"""
 
 from __future__ import annotations
 

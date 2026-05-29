@@ -1,4 +1,13 @@
-"""Regression test for the `/model` picker confirmation display.
+"""命令行界面测试 - 模型切换
+
+【产品经理理解要点】
+验证命令行界面模型切换的正确性
+- 验证的功能: Regression test for the `/model` picker confirmation display
+- 核心测试场景: picker path uses provider aware context on codex、picker path shows vendor value when no provider cap、picker path falls back to model info when resolver empty
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression test for the `/model` picker confirmation display.
 
 Bug (April 2026): after choosing a model from the interactive `/model` picker,
 ``HermesCLI._apply_model_switch_result()`` printed ``ModelInfo.context_window``

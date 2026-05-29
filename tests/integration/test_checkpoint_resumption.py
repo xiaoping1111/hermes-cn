@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""
+"""检查点恢复测试
+
+【产品经理理解要点】
+验证系统集成模块中current implementation、interruption and resume、simulated crash的正确性
+- current implementation的正确性验证
+- interruption and resume的正确性验证
+- simulated crash的正确性验证
+- 影响系统集成的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
 Test script to verify checkpoint behavior in batch_runner.py
 
 This script simulates batch processing with intentional failures to test:
@@ -15,8 +24,7 @@ Usage:
     python tests/test_checkpoint_resumption.py --test_fixed
 
     # Run full comparison
-    python tests/test_checkpoint_resumption.py --compare
-"""
+    python tests/test_checkpoint_resumption.py --compare"""
 
 import pytest
 pytestmark = pytest.mark.integration

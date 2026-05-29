@@ -1,4 +1,13 @@
-"""Regression tests for interactive setup provider/model persistence.
+"""命令行界面测试 - 设置·模型管理·提供商
+
+【产品经理理解要点】
+验证命令行界面的设置模型管理提供商功能
+- 验证的功能: Regression tests for interactive setup provider/model persistence
+- 核心测试场景: setup model provider preserves auxiliary choices written by picker、setup keep current custom from config does not fall through、setup keep current config provider uses provider specific model menu 等共15个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression tests for interactive setup provider/model persistence.
 
 Since setup_model_provider delegates to select_provider_and_model()
 from hermes_cli.main, these tests mock the delegation point and verify

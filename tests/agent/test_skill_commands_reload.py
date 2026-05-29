@@ -1,4 +1,12 @@
-"""Tests for ``agent.skill_commands.reload_skills``.
+"""技能命令重载测试
+
+【产品经理理解要点】
+验证运行时重载技能命令的逻辑。
+- 热重载不丢失当前会话状态
+- 影响开发时的技能迭代效率
+
+──────────────────────────────────────────────────────────────
+Tests for ``agent.skill_commands.reload_skills``.
 
 Covers the helper that powers ``/reload-skills`` (CLI + gateway slash command).
 The helper rescans the skills directory and returns a diff of what changed.

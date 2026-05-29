@@ -1,4 +1,14 @@
-"""Tests for Teams pipeline runtime wiring into the gateway."""
+"""消息网关测试 - teams·LINE平台·runtime·wiring
+
+【产品经理理解要点】
+验证消息网关的LINE平台功能
+- 验证的功能: Tests for Teams pipeline runtime wiring into the gateway
+- 核心测试场景: gateway runner wires teams pipeline runtime、gateway runner skips wiring without msgraph adapter、gateway runner skips wiring when teams pipeline plugin disabled 等共7个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Teams pipeline runtime wiring into the gateway.
+"""
 
 from __future__ import annotations
 

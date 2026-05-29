@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Search OpenCorporates company registry data.
+"""OpenCorporates公司注册查询
+
+【产品经理理解要点】
+查询全球130+司法管辖区的公司注册信息，追踪公司关联网络。
+- 核心职责：搜索公司注册数据，获取公司基本信息和关联实体
+- 数据规模：覆盖约2亿家公司
+- 使用场景：OSINT调查中确认公司存在和关联关系
+
+─────────────────────────────────────────────────────────────────
+Search OpenCorporates company registry data.
 
 OpenCorporates aggregates ~200M companies from 130+ jurisdictions. The
 public API requires an API token (free tier: 500 calls/month). Set

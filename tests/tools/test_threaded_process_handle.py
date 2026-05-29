@@ -1,4 +1,15 @@
-"""Tests for _ThreadedProcessHandle — the adapter for SDK backends."""
+"""线程化进程句柄测试
+
+【产品经理理解要点】
+验证工具系统模块中successful execution等12个场景的正确性
+- successful execution的正确性验证
+- nonzero exit code的正确性验证
+- exception in exec fn的正确性验证
+- 另有9个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for _ThreadedProcessHandle — the adapter for SDK backends."""
 
 import threading
 import time

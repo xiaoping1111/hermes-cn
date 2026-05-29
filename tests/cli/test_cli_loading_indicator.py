@@ -1,4 +1,13 @@
-"""Regression tests for loading feedback on slow slash commands."""
+"""CLI加载指示器测试
+
+【产品经理理解要点】
+验证CLI加载和等待状态的动画指示器。
+- 加载指示器的动画帧率
+- 影响等待时的视觉反馈
+
+──────────────────────────────────────────────────────────────
+Regression tests for loading feedback on slow slash commands.
+"""
 
 from unittest.mock import patch
 

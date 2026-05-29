@@ -1,4 +1,15 @@
-"""Tests for FileSyncManager — mtime tracking, deletion detection, transactional rollback."""
+"""文件sync测试
+
+【产品经理理解要点】
+验证工具系统模块中unchanged files not re uploaded等15个场景的正确性
+- unchanged files not re uploaded的正确性验证
+- changed file re uploaded的正确性验证
+- new file detected的正确性验证
+- 另有12个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for FileSyncManager — mtime tracking, deletion detection, transactional rollback."""
 
 import os
 import time

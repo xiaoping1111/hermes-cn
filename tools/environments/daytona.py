@@ -1,4 +1,14 @@
-"""Daytona cloud execution environment.
+"""Daytona云执行环境 — 使用Daytona SDK运行云端沙箱
+
+【产品经理理解要点】
+本模块使用Daytona平台的云沙箱服务执行命令，提供托管式开发环境，适合远程开发和代码执行场景。
+- 沙箱生命周期：支持持久化（停止后可恢复）和临时模式（用完即删）
+- 资源配置：可指定CPU核心数、内存和磁盘大小（磁盘上限10GB）
+- 文件同步：批量上传通过SDK的upload_files一次性HTTP请求完成，比逐文件上传快数十倍
+- 自动恢复：执行命令前自动检测沙箱状态，如已停止则自动重启
+
+─────────────────────────────────────────────────────────────────
+Daytona cloud execution environment.
 
 Uses the Daytona Python SDK to run commands in cloud sandboxes.
 Supports persistent sandboxes: when enabled, sandboxes are stopped on cleanup

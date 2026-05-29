@@ -1,4 +1,13 @@
 from __future__ import annotations
+"""图像生成插件调度测试
+
+【产品经理理解要点】
+验证工具系统模块中dispatch routes to codex provider、dispatch reports missing registered provider、dispatch force refreshes plugins when provider initially ...的正确性
+- dispatch routes to codex provider的正确性验证
+- dispatch reports missing registered provider的正确性验证
+- dispatch force refreshes plugins when provider initially missing的正确性验证
+- 影响工具系统的可靠性和功能正确性"""
+
 
 import json
 import pytest

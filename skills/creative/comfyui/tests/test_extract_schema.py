@@ -1,4 +1,7 @@
-"""Tests for extract_schema.py."""
+"""【产品经理理解要点】
+extract_schema.py的单元测试——验证工作流参数提取逻辑的正确性。
+─────────────────────────────────────────────────────────────────
+Tests for extract_schema.py."""
 
 from __future__ import annotations
 

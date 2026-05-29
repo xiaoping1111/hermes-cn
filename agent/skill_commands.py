@@ -1,4 +1,18 @@
-"""Shared slash command helpers for skills.
+"""技能斜杠命令 — 在 CLI 和网关中统一处理 /技能名 命令
+
+【产品经理理解要点】
+用户在聊天框输入 "/python-expert" 这样的斜杠命令来加载技能。
+这个模块确保无论从 CLI 命令行还是从 Telegram/Discord 等网关，
+斜杠命令的解析和执行逻辑是一致的。
+
+核心功能：
+  - 扫描可用技能，注册斜杠命令（如 /python-expert、/code-review）
+  - 当用户输入斜杠命令时，找到对应的技能并加载其内容
+  - 处理技能名格式化（把空格和特殊字符统一为连字符）
+
+─────────────────────────────────────────────────────────────────
+
+Shared slash command helpers for skills.
 
 Shared between CLI (cli.py) and gateway (gateway/run.py) so both surfaces
 can invoke skills via /skill-name commands.

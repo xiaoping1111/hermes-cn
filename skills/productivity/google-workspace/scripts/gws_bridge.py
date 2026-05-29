@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Bridge between Hermes OAuth token and gws CLI.
+"""【产品经理理解要点】
+Hermes与gws CLI的OAuth令牌桥接——自动刷新过期的Google OAuth令牌，然后将有效令牌传递给gws CLI执行操作。
+─────────────────────────────────────────────────────────────────
+Bridge between Hermes OAuth token and gws CLI.
 
 Refreshes the token if expired, then executes gws with the valid access token.
 """

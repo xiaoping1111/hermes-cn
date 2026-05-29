@@ -1,12 +1,22 @@
-"""Tests for the single-shape session_search tool.
+"""会话搜索测试
+
+【产品经理理解要点】
+验证工具系统模块中schema has required params等38个场景的正确性
+- schema has required params的正确性验证
+- no mode parameter的正确性验证
+- sort enum的正确性验证
+- 另有35个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the single-shape session_search tool.
 
 Three calling shapes:
   1. DISCOVERY — pass query → FTS5 + anchored window + bookends per hit
   2. SCROLL    — pass session_id + around_message_id → just the window
   3. BROWSE    — no args → recent sessions chronologically
 
-All run zero LLM calls.
-"""
+All run zero LLM calls."""
 import json
 import time
 

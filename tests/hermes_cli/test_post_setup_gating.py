@@ -1,4 +1,13 @@
-"""Tests for the post_setup install-state gate in `_toolset_needs_configuration_prompt`.
+"""命令行界面测试 - post·设置·门控策略
+
+【产品经理理解要点】
+验证命令行界面的设置门控策略功能
+- 验证的功能: Tests for the post_setup install-state gate in `_toolset_needs_configuration_prompt`
+- 核心测试场景: cua driver missing forces setup、cua driver installed skips setup、post setup predicate exception does not block 等共5个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the post_setup install-state gate in `_toolset_needs_configuration_prompt`.
 
 Regression coverage for the cua-driver silent-no-op bug (issue #22737).
 

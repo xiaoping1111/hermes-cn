@@ -1,4 +1,14 @@
-"""Tests for agent.async_utils.safe_schedule_threadsafe."""
+"""异步工具函数测试
+
+【产品经理理解要点】
+验证通用的异步工具函数，包括异步执行桥接和并发控制。
+- 异步函数在同步上下文中的正确桥接
+- 并发任务的正确调度
+- 影响异步操作的可靠性
+
+──────────────────────────────────────────────────────────────
+Tests for agent.async_utils.safe_schedule_threadsafe.
+"""
 
 from __future__ import annotations
 

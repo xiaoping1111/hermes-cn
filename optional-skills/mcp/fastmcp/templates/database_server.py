@@ -1,3 +1,11 @@
+"""FastMCP数据库服务器模板
+
+【产品经理理解要点】
+FastMCP服务的SQLite数据库模板，可将数据库查询暴露为MCP工具供Agent使用。
+- 核心职责：创建数据库MCP服务器的脚手架代码
+
+─────────────────────────────────────────────────────────────────
+FastMCP database server template."""
 from __future__ import annotations
 
 import os

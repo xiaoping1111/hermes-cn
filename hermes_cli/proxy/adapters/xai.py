@@ -1,4 +1,12 @@
-"""xAI Grok OAuth upstream adapter."""
+"""xAI Grok OAuth 上游适配器
+
+【产品经理理解要点】
+从凭证池读取 xAI OAuth Token，为代理服务器提供上游 base URL 和 bearer token。
+- 支持 Chat Completions、Responses、Embeddings、Models 等标准路径
+- Token 自动从凭证池刷新
+
+─────────────────────────────────────────────────────────────────
+xAI Grok OAuth upstream adapter."""
 
 from __future__ import annotations
 

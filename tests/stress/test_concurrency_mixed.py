@@ -1,4 +1,12 @@
-"""Harder concurrency stress: mixed operations + larger scale.
+"""并发混合测试
+
+【产品经理理解要点】
+验证压力测试模块中相关功能的正确性
+- 模块功能单元测试覆盖
+- 影响压力测试的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Harder concurrency stress: mixed operations + larger scale.
 
 Scales to 500 tasks, 10 workers, 60s runtime. Each worker randomly:
   - claims + completes (70%)
@@ -11,8 +19,7 @@ and detect_crashed_workers every 200ms, racing against the workers to
 surface TTL + crash detection races.
 
 Pass criteria: runs invariant holds, no double-completions, no orphan
-runs, no SQLite errors escape the retry layer.
-"""
+runs, no SQLite errors escape the retry layer."""
 
 import json
 import multiprocessing as mp

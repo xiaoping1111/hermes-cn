@@ -1,4 +1,14 @@
-"""Regression tests for /retry replacement semantics."""
+"""消息网关测试 - 重试机制·replacement
+
+【产品经理理解要点】
+验证消息网关的重试机制功能
+- 验证的功能: Regression tests for /retry replacement semantics
+- 核心测试场景: gateway retry replaces last user turn in transcript、gateway retry replays original text not retry command
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests for /retry replacement semantics.
+"""
 
 from unittest.mock import AsyncMock, MagicMock
 

@@ -1,4 +1,13 @@
-"""Regression tests for CLI /retry history replacement semantics."""
+"""CLI重试测试
+
+【产品经理理解要点】
+验证/retry命令重新发送上一条消息的逻辑。
+- 重试时重新发送用户消息
+- 影响失败后的快速恢复
+
+──────────────────────────────────────────────────────────────
+Regression tests for CLI /retry history replacement semantics.
+"""
 
 from tests.cli.test_cli_init import _make_cli
 

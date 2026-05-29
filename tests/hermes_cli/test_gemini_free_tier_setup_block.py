@@ -1,4 +1,14 @@
-"""Tests for the Gemini free-tier block in the setup wizard."""
+"""命令行界面测试 - gemini·free·tier·设置·锁机制
+
+【产品经理理解要点】
+验证命令行界面的设置锁机制功能
+- 验证的功能: Tests for the Gemini free-tier block in the setup wizard
+- 核心测试场景: free tier key is blocked、paid tier key proceeds、unknown tier proceeds with warning 等共4个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the Gemini free-tier block in the setup wizard.
+"""
 from __future__ import annotations
 
 from unittest.mock import patch

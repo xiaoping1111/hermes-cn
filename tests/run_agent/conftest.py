@@ -1,4 +1,13 @@
-"""Fast-path fixtures shared across tests/run_agent/.
+"""Agent运行引擎测试配置
+
+【产品经理理解要点】
+定义Agent运行引擎测试的共享fixture和配置。
+- pytest fixture定义
+- 测试数据准备
+- 共享mock配置
+
+─────────────────────────────────────────────────────────────────
+Fast-path fixtures shared across tests/run_agent/.
 
 Many tests in this directory exercise the retry/backoff paths in the
 agent loop. Production code uses ``jittered_backoff(base_delay=5.0)``
@@ -15,8 +24,7 @@ the real ``time.sleep`` for threading coordination or assert that it
 was called with specific values. Tests that want to additionally
 fast-path direct ``time.sleep(N)`` calls in production code should
 monkeypatch ``run_agent.time.sleep`` locally (see
-``test_anthropic_error_handling.py`` for the pattern).
-"""
+``test_anthropic_error_handling.py`` for the pattern)."""
 
 from __future__ import annotations
 

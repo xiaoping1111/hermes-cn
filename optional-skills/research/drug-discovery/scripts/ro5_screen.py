@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""
+"""Lipinski五规则药物筛选
+
+【产品经理理解要点】
+批量查询PubChem API，筛选化合物是否符合类药性五规则（Ro5）和Veber标准。
+- 核心职责：通过化合物名称查询分子属性，判断是否适合口服药物开发
+- 筛选指标：分子量、LogP、氢键供体/受体数、旋转键数、TPSA
+
+─────────────────────────────────────────────────────────────────
 ro5_screen.py — Batch Lipinski Ro5 + Veber screening via PubChem API.
 Usage: python3 ro5_screen.py aspirin ibuprofen paracetamol
 No external dependencies beyond stdlib.

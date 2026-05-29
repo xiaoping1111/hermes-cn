@@ -1,4 +1,6 @@
-"""
+"""【产品经理理解要点】
+G0DM0D3脚本加载器——解决exec作用域问题，将所有红队测试函数（auto_jailbreak、undo_jailbreak等）加载到当前执行环境。
+─────────────────────────────────────────────────────────────────
 Loader for G0DM0D3 scripts. Handles the exec-scoping issues.
 
 Usage in execute_code:

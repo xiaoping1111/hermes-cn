@@ -1,4 +1,13 @@
-"""Tests for opt-in cleanup of temporary progress bubbles.
+"""消息网关测试 - run·清理操作·progress
+
+【产品经理理解要点】
+验证消息网关的清理操作功能
+- 验证的功能: Tests for opt-in cleanup of temporary progress bubbles
+- 核心测试场景: cleanup off by default leaves bubbles、cleanup registers callback and deletes on success、cleanup skipped on failed run 等共5个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for opt-in cleanup of temporary progress bubbles.
 
 When ``display.platforms.<plat>.cleanup_progress: true`` is set for a
 platform whose adapter supports message deletion (e.g. Telegram), the

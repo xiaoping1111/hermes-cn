@@ -1,4 +1,20 @@
-"""Progressive subdirectory hint discovery.
+"""子目录提示发现 — 当 Agent 进入新目录时，自动加载项目说明文件
+
+【产品经理理解要点】
+项目通常在根目录有 AGENTS.md 等说明文件，但子目录也可能有自己的说明。
+当 Agent 在操作文件时进入一个新子目录，这个模块会自动发现并加载该目录
+下的项目说明文件（如 AGENTS.md、.cursorrules），让 AI 了解当前工作的上下文。
+
+好处：不需要修改系统提示词（影响缓存），而是在工具返回结果时附带补充信息。
+
+举例：
+  Agent 读取 /project/src/parser/README.md
+  → 自动也加载 /project/src/parser/AGENTS.md（如果存在）
+  → AI 在处理这个文件时就知道这个子目录的特殊规则
+
+─────────────────────────────────────────────────────────────────
+
+Progressive subdirectory hint discovery.
 
 As the agent navigates into subdirectories via tool calls (read_file, terminal,
 search_files, etc.), this module discovers and loads project context files

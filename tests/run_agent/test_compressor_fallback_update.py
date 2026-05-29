@@ -1,4 +1,13 @@
-"""Tests that _try_activate_fallback updates the context compressor."""
+"""压缩器降级更新测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中compressor updated on fallback、compressor not present does not crash的正确性
+- compressor updated on fallback的正确性验证
+- compressor not present does not crash的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests that _try_activate_fallback updates the context compressor."""
 
 from unittest.mock import MagicMock, patch
 

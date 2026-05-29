@@ -1,4 +1,13 @@
-"""
+"""企业微信平台适配器
+
+【产品经理理解要点】
+让 Agent 通过企业微信与用户交互，使用 AI 机器人 WebSocket 接口：
+  - 认证后订阅消息回调
+  - 接收文字和媒体消息
+  - 发送 Markdown 和原生附件
+
+─────────────────────────────────────────────────────────────────
+
 WeCom (Enterprise WeChat) platform adapter.
 
 Uses the WeCom AI Bot WebSocket gateway for inbound and outbound messages.

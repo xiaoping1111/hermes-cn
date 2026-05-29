@@ -1,4 +1,13 @@
-"""Regression test for #17758 — chained pending-message drains must not
+"""消息网关测试 - pending·drain·no·recursion
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Regression test for #17758 — chained pending-message drains must not
+- 核心测试场景: in band drain does not grow stack、in band drain preserves active session guard、normal path releases session guard 等共5个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression test for #17758 — chained pending-message drains must not
 grow the call stack.
 
 Before the fix, ``_process_message_background`` finished a turn, found a

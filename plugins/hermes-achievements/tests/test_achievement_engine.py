@@ -1,3 +1,10 @@
+"""成就引擎单元测试
+
+【产品经理理解要点】
+测试Hermes成就系统的核心逻辑：工具调用统计、分层成就判定等。
+- 核心职责：验证成就引擎对消息分析、工具识别、错误计数的正确性
+- 测试范围：工具调用统计、分层成就阈值、错误模式检测（如端口冲突）
+"""
 import importlib.util
 import unittest
 from pathlib import Path

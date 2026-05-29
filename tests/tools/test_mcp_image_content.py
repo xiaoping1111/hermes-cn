@@ -1,4 +1,15 @@
-"""Regression tests for MCP ImageContent block handling.
+"""MCP图像内容测试
+
+【产品经理理解要点】
+验证工具系统模块中maps jpeg variants to jpg等9个场景的正确性
+- maps jpeg variants to jpg的正确性验证
+- png falls through to mimetypes的正确性验证
+- unknown defaults to png的正确性验证
+- 另有6个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for MCP ImageContent block handling.
 
 Background
 ==========
@@ -11,8 +22,7 @@ and @gnanirahulnutakki's PR #10848 (both too stale to cherry-pick); this
 test file locks in #10848's approach of plumbing the bytes through
 Hermes' existing ``cache_image_from_bytes`` so a ``MEDIA:<path>`` tag
 goes back to the agent and through to messaging adapters that render
-images natively.
-"""
+images natively."""
 
 from __future__ import annotations
 

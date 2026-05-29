@@ -1,4 +1,15 @@
-"""Tests for the KittenTTS local provider in tools/tts_tool.py."""
+"""语音合成KittenTTS测试
+
+【产品经理理解要点】
+验证工具系统模块中successful wav generation等10个场景的正确性
+- successful wav generation的正确性验证
+- config passes voice speed cleantext的正确性验证
+- default model and voice的正确性验证
+- 另有7个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the KittenTTS local provider in tools/tts_tool.py."""
 
 import json
 from unittest.mock import MagicMock, patch

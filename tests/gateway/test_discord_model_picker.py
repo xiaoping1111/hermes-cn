@@ -1,4 +1,13 @@
-"""Regression tests for the Discord /model picker.
+"""消息网关测试 - Discord平台·模型管理·picker
+
+【产品经理理解要点】
+验证消息网关的Discord平台模型管理功能
+- 验证的功能: Regression tests for the Discord /model picker
+- 核心测试场景: model picker clears controls before running switch callback
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests for the Discord /model picker.
 
 Uses the shared discord mock from tests/gateway/conftest.py (installed
 at collection time via _ensure_discord_mock()). Previously this file

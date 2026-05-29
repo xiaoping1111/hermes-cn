@@ -1,12 +1,22 @@
-"""Tests for notify_on_complete background process feature.
+"""完成通知测试
+
+【产品经理理解要点】
+验证工具系统模块中default false等21个场景的正确性
+- default false的正确性验证
+- set true的正确性验证
+- queue exists的正确性验证
+- 另有18个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for notify_on_complete background process feature.
 
 Covers:
   - ProcessSession.notify_on_complete field
   - ProcessRegistry.completion_queue population on _move_to_finished()
   - Checkpoint persistence of notify_on_complete
   - Terminal tool schema includes notify_on_complete
-  - Terminal tool handler passes notify_on_complete through
-"""
+  - Terminal tool handler passes notify_on_complete through"""
 
 import json
 import os

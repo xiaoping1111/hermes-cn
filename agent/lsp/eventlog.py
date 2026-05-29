@@ -1,4 +1,16 @@
-"""Structured logging with steady-state silence for the LSP layer.
+"""LSP 事件日志 — 结构化日志，常态事件静默，关键事件可见
+
+【产品经理理解要点】
+LSP 在每次文件写入时都会触发事件，频繁操作时日志量很大。
+这个模块定义了日志级别策略：
+  - DEBUG：常规事件（检查无错误、功能未启用等），默认不写入日志
+  - INFO：状态变化（首次启动、首次检测到新错误），记录一次
+
+确保日志可用但不泛滥：用户搜索日志时能找到关键事件，又不会被噪音淹没。
+
+─────────────────────────────────────────────────────────────────
+
+Structured logging with steady-state silence for the LSP layer.
 
 The LSP layer fires on every write_file/patch.  In a busy session
 that's hundreds of events.  We want users to be able to ``rg`` the

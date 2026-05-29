@@ -1,4 +1,15 @@
-"""Integration tests for tools.browser_supervisor.
+"""浏览器监管进程测试
+
+【产品经理理解要点】
+验证工具系统模块中supervisor start and snapshot等22个场景的正确性
+- supervisor start and snapshot的正确性验证
+- main frame alert detection and dismiss的正确性验证
+- iframe contentwindow alert的正确性验证
+- 另有19个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Integration tests for tools.browser_supervisor.
 
 Exercises the supervisor end-to-end against a real local Chrome
 (``--remote-debugging-port``).  Skipped when Chrome is not installed
@@ -9,8 +20,7 @@ thought to model.
 Run manually:
     scripts/run_tests.sh tests/tools/test_browser_supervisor.py
 
-Automated: skipped in CI unless ``HERMES_E2E_BROWSER=1`` is set.
-"""
+Automated: skipped in CI unless ``HERMES_E2E_BROWSER=1`` is set."""
 
 from __future__ import annotations
 

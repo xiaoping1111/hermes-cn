@@ -1,9 +1,19 @@
-"""Tests for ordered provider fallback chain (salvage of PR #1761).
+"""模型提供者降级测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中no fallback等22个场景的正确性
+- no fallback的正确性验证
+- single dict backwards compat的正确性验证
+- list of providers的正确性验证
+- 另有19个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for ordered provider fallback chain (salvage of PR #1761).
 
 Extends the single-fallback tests in test_fallback_model.py to cover
 the new list-based ``fallback_providers`` config format and chain
-advancement through multiple providers.
-"""
+advancement through multiple providers."""
 
 from unittest.mock import MagicMock, patch
 

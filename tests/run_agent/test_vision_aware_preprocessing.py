@@ -1,4 +1,15 @@
-"""Tests for the vision-aware image preprocessing in run_agent.py.
+"""视觉感知预处理测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中no images passes through等15个场景的正确性
+- no images passes through的正确性验证
+- vision capable passes images through的正确性验证
+- non vision replaces images with text的正确性验证
+- 另有12个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the vision-aware image preprocessing in run_agent.py.
 
 Covers:
 
@@ -8,8 +19,7 @@ Covers:
   replacement when the model lacks vision.
 
 * ``_prepare_messages_for_non_vision_model`` — the mirror method for the
-  chat.completions / codex_responses paths. Same contract.
-"""
+  chat.completions / codex_responses paths. Same contract."""
 
 from __future__ import annotations
 

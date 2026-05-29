@@ -1,4 +1,16 @@
-"""Tests for the ``lsp_diagnostics`` field on WriteResult / PatchResult.
+"""LSP诊断字段测试
+
+【产品经理理解要点】
+验证WriteResult/PatchResult结果对象上的lsp_diagnostics字段，该字段将语法检查(lint)和语义诊断(lsp_diagnostics)分离为独立通道，避免LSP输出被混入语法检查结果中。
+- 验证lsp_diagnostics字段在无诊断时省略、有诊断时正确填充
+- 验证语法检查和语义诊断互不干扰，保持独立
+- 验证语法错误时不调用LSP（无法解析的文件不会产生有意义的语义诊断）
+- 业务影响：如果这些测试失败，AI代理可能混淆语法错误和语义错误，给用户错误反馈
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for the ``lsp_diagnostics`` field on WriteResult / PatchResult.
 
 The field exists so the agent can read syntax errors (``lint``) and
 semantic errors (``lsp_diagnostics``) as separate signals rather than

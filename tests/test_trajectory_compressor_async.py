@@ -1,4 +1,13 @@
-"""Tests for trajectory_compressor AsyncOpenAI event loop binding.
+"""轨迹压缩异步客户端测试
+
+【产品经理理解要点】
+验证AsyncOpenAI客户端的懒创建，解决事件循环关闭后客户端不可用的问题。
+- 客户端在每次asyncio.run()时重新绑定循环
+- 不会出现'Event loop is closed'错误
+- 影响批量轨迹压缩的可靠性
+
+──────────────────────────────────────────────────────────────
+Tests for trajectory_compressor AsyncOpenAI event loop binding.
 
 The AsyncOpenAI client was created once at __init__ time and stored as an
 instance attribute. When process_directory() calls asyncio.run() — which

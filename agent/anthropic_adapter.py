@@ -1,4 +1,20 @@
-"""Anthropic Messages API adapter for Hermes Agent.
+"""Anthropic (Claude) API 适配器 — 将 Agent 内部格式转换为 Anthropic API 格式
+
+【产品经理理解要点】
+Agent 内部使用统一的 OpenAI 格式来处理消息，但不同 AI 提供商的 API 格式不同。
+这个适配器负责将 Agent 的请求翻译成 Anthropic (Claude) 能理解的格式，
+并将 Claude 的回复翻译回 Agent 能理解的格式。
+
+就像一个翻译官：Agent 说"中文"，Claude 听"法文"，这个适配器负责翻译。
+
+支持的认证方式：
+  - API Key（sk-ant-api*）
+  - OAuth 令牌（sk-ant-oat*）
+  - Claude Code 凭据
+
+─────────────────────────────────────────────────────────────────
+
+Anthropic Messages API adapter for Hermes Agent.
 
 Translates between Hermes's internal OpenAI-style message format and
 Anthropic's Messages API. Follows the same pattern as the codex_responses

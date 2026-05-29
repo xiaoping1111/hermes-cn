@@ -1,4 +1,13 @@
-"""Regression test for config.yaml `security.redact_secrets: false` toggle.
+"""命令行界面测试 - redact·配置管理·bridge
+
+【产品经理理解要点】
+验证命令行界面的配置管理功能
+- 验证的功能: Regression test for config.yaml `security.redact_secrets: false` toggle
+- 核心测试场景: redact secrets false in config yaml is honored、redact secrets default true when unset、redact secrets true in config yaml is honored 等共4个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression test for config.yaml `security.redact_secrets: false` toggle.
 
 Bug: `agent/redact.py` snapshots `_REDACT_ENABLED` from the env var
 `HERMES_REDACT_SECRETS` at module-import time. `hermes_cli/main.py` at

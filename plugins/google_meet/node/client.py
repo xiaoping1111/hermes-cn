@@ -1,11 +1,9 @@
-"""Gateway-side RPC client for a remote meet node.
+"""网关端远程节点RPC客户端
 
-Each call opens a short-lived synchronous WebSocket to the node, sends
-exactly one request, reads exactly one response, and closes. This keeps
-the client trivial to use from non-async tool handlers and avoids
-maintaining persistent connection state across agent turns.
+【产品经理理解要点】
+网关侧的RPC客户端，每次调用打开一个短生命周期的WebSocket到远程节点，发送请求后读取响应。简洁无状态设计。"""
 
-The ``websockets`` package is an optional dep — we import it lazily so
+from __future__ import annotations
 plugin load doesn't require it.
 """
 

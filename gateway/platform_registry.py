@@ -1,4 +1,15 @@
-"""
+"""平台适配器注册表 — 让新通讯平台通过插件注册自动接入
+
+【产品经理理解要点】
+Agent 支持很多通讯平台（Telegram、Discord、微信等），新平台通过这个注册表接入：
+  - 内置平台（Telegram 等）使用硬编码的代码路径
+  - 插件平台通过 register() 注册，优先查找
+  - 新增平台无需修改核心代码，只需注册适配器
+
+就像"插件市场"——官方内置常用平台，第三方可以自行注册新平台。
+
+─────────────────────────────────────────────────────────────────
+
 Platform Adapter Registry
 
 Allows platform adapters (built-in and plugin) to self-register so the gateway

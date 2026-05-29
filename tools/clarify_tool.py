@@ -1,5 +1,15 @@
 #!/usr/bin/env python3
-"""
+"""澄清工具 — 向用户提问以消除歧义
+
+【产品经理理解要点】
+当 AI 不确定用户的意图时，主动提问澄清：
+  - 选择题：提供多个选项让用户选
+  - 开放问题：让用户自由回答
+
+CLI 模式下支持方向键导航选项，聊天平台上显示编号列表。
+
+─────────────────────────────────────────────────────────────────
+
 Clarify Tool Module - Interactive Clarifying Questions
 
 Allows the agent to present structured multiple-choice questions or open-ended

@@ -1,4 +1,13 @@
-"""Tests for Telegram MarkdownV2 formatting in gateway/platforms/telegram.py.
+"""消息网关测试 - Telegram平台·format
+
+【产品经理理解要点】
+验证消息网关的Telegram平台功能
+- 验证的功能: Tests for Telegram MarkdownV2 formatting in gateway/platforms/telegram.py
+- 核心测试场景: send escapes chunk indicator for markdownv2、escapes all special characters、empty string 等共99个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Telegram MarkdownV2 formatting in gateway/platforms/telegram.py.
 
 Covers: _escape_mdv2 (pure function), format_message (markdown-to-MarkdownV2
 conversion pipeline), and edge cases that could produce invalid MarkdownV2

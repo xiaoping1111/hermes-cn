@@ -1,4 +1,15 @@
-"""Regression tests for capability-gated MCP utility schema registration.
+"""MCP工具能力门控测试
+
+【产品经理理解要点】
+验证工具系统模块中tools only server gets no utility schemas等8个场景的正确性
+- tools only server gets no utility schemas的正确性验证
+- resources only server gets resource stubs only的正确性验证
+- prompts only server gets prompt stubs only的正确性验证
+- 另有5个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for capability-gated MCP utility schema registration.
 
 Background
 ==========
@@ -11,7 +22,7 @@ all four methods on the class — independent of what the remote server
 supports.
 
 Tools-only servers like ``@upstash/context7-mcp`` advertise
-``{\"tools\": {\"listChanged\": true}}`` in their ``initialize`` response —
+``{"tools": {"listChanged": true}}`` in their ``initialize`` response —
 no ``prompts`` or ``resources`` keys — and they return JSON-RPC
 ``-32601 Method not found`` for ``prompts/list``, ``prompts/get``,
 ``resources/list``, ``resources/read``. The model would try the stubs,
@@ -21,8 +32,7 @@ The fix captures the ``InitializeResult`` from
 ``await session.initialize()`` into ``MCPServerTask.initialize_result``
 and gates utility schema registration on the advertised
 ``capabilities.resources`` / ``capabilities.prompts`` sub-objects. See
-#18051 for the reporter's repro (Context7) and analysis.
-"""
+#18051 for the reporter's repro (Context7) and analysis."""
 
 from __future__ import annotations
 

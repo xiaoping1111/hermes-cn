@@ -1,5 +1,11 @@
-"""OpenAI Realtime API WebSocket client + file-queue speaker.
+"""OpenAI Realtime API WebSocket客户端+文件队列扬声器
 
+【产品经理理解要点】
+v2语音桥的输出端：接收文本→发送到OpenAI Realtime API→接收音频增量→写入PCM文件→由音频桥注入Chrome虚拟麦克风。
+- 单会话单WebSocket同步连接
+- websockets包懒加载，不影响核心功能
+
+─────────────────────────────────────────────────────────────────
 This module is the "output" side of the v2 voice bridge: it takes text,
 sends it to the OpenAI Realtime API, receives audio deltas back, and
 appends the PCM bytes to a file. A separate consumer (the audio

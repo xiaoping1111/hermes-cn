@@ -1,4 +1,13 @@
-"""Test that overlay providers with mismatched models.dev keys resolve correctly.
+"""命令行界面测试 - 叠加层标识解析
+
+【产品经理理解要点】
+验证命令行界面叠加层标识解析的正确性
+- 验证的功能: Test that overlay providers with mismatched models.dev keys resolve correctly
+- 核心测试场景: copilot uses hermes slug、copilot no duplicate entries、kimi for coding alias 等共6个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Test that overlay providers with mismatched models.dev keys resolve correctly.
 
 HERMES_OVERLAYS keys may be models.dev IDs (e.g. "github-copilot") while
 _PROVIDER_MODELS and config.yaml use Hermes IDs ("copilot").  The slug

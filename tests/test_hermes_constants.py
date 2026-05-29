@@ -1,4 +1,14 @@
-"""Tests for hermes_constants module."""
+"""Hermes常量模块测试
+
+【产品经理理解要点】
+验证系统常量的正确性，包括默认根目录、容器检测和推理强度参数解析。
+- Docker/自定义部署下的默认路径
+- 推理强度参数的合法值校验
+- 影响系统初始化和配置默认值
+
+──────────────────────────────────────────────────────────────
+Tests for hermes_constants module.
+"""
 
 import os
 from pathlib import Path

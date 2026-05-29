@@ -1,4 +1,13 @@
-"""Regression test for the ``HermesMCPOAuthProvider.async_auth_flow`` bidirectional
+"""MCP OAuth双向认证测试
+
+【产品经理理解要点】
+验证工具系统模块中hermes provider forwards asend values、hermes provider forwards 401 triggers refresh的正确性
+- hermes provider forwards asend values的正确性验证
+- hermes provider forwards 401 triggers refresh的正确性验证
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression test for the ``HermesMCPOAuthProvider.async_auth_flow`` bidirectional
 generator bridge.
 
 PR #11383 introduced a subclass method that wrapped the SDK's ``auth_flow`` with::
@@ -24,8 +33,7 @@ the full ``.asend()`` round-trip — the integration tests in
 ``test_mcp_oauth_integration.py`` stop at ``_initialize()`` and disk-watching.
 
 These tests drive the wrapper through a manual ``.asend()`` sequence to prove
-the bridge forwards responses correctly into the inner SDK generator.
-"""
+the bridge forwards responses correctly into the inner SDK generator."""
 from __future__ import annotations
 
 import pytest

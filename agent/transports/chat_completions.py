@@ -1,4 +1,17 @@
-"""OpenAI Chat Completions transport.
+"""OpenAI Chat Completions 传输层 — 默认的 API 通信格式
+
+【产品经理理解要点】
+这是 Agent 与 AI 模型通信的"默认语言"。约 16 个 OpenAI 兼容的提供商
+（OpenRouter、Nous、DeepSeek、xAI、Kimi、Ollama 等）都使用这个格式。
+
+核心工作：
+  - 消息和工具定义本身就是 OpenAI 格式，几乎不需要转换
+  - 复杂之处在于不同提供商对参数的处理不同（温度设置、reasoning 配置等）
+  - 需要针对特定提供商做"微调"（如 Gemini 的 thinking config、Moonshot 的工具格式）
+
+─────────────────────────────────────────────────────────────────
+
+OpenAI Chat Completions transport.
 
 Handles the default api_mode ('chat_completions') used by ~16 OpenAI-compatible
 providers (OpenRouter, Nous, NVIDIA, Qwen, Ollama, DeepSeek, xAI, Kimi, etc.).
