@@ -1,4 +1,13 @@
-"""Tests for Telegram DM Private Chat Topics (Bot API 9.4).
+"""消息网关测试 - dm·topics
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for Telegram DM Private Chat Topics (Bot API 9.4)
+- 核心测试场景: setup dm topics loads persisted thread ids、setup dm topics creates when no thread id、setup dm topics mixed persisted and new 等共33个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Telegram DM Private Chat Topics (Bot API 9.4).
 
 Covers:
 - _setup_dm_topics: loading persisted thread_ids from config

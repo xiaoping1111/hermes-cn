@@ -1,4 +1,14 @@
-"""Regression tests for gateway /model support of config.yaml custom_providers."""
+"""消息网关测试 - 自定义提供商模型
+
+【产品经理理解要点】
+验证消息网关自定义提供商模型的正确性
+- 验证的功能: Regression tests for gateway /model support of config.yaml custom_providers
+- 核心测试场景: handle model command lists saved custom provider
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests for gateway /model support of config.yaml custom_providers.
+"""
 
 import yaml
 import pytest

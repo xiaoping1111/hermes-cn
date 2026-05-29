@@ -1,4 +1,14 @@
-"""Tests for hermes tools disable/enable/list command (backend)."""
+"""命令行界面测试 - 工具系统·disable·enable
+
+【产品经理理解要点】
+验证命令行界面的工具系统功能
+- 验证的功能: Tests for hermes tools disable/enable/list command (backend)
+- 核心测试场景: disable removes toolset from platform、disable multiple toolsets、disable already absent is idempotent 等共17个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes tools disable/enable/list command (backend).
+"""
 from argparse import Namespace
 from unittest.mock import patch
 

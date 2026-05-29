@@ -1,4 +1,11 @@
-"""
+"""达尔文进化器自定义问题模板
+
+【产品经理理解要点】
+用于快速创建自定义的进化优化问题，只需填写三个核心部分即可运行。
+- 核心职责：提供问题骨架，用户只需定义Organism（个体）、Evaluator（评估器）、Mutator（变异器）
+- 使用场景：需要通过进化算法优化任何自定义目标
+
+─────────────────────────────────────────────────────────────────
 Template: a custom darwinian-evolver problem.
 
 Copy this file, fill in the THREE marked spots (Organism, Evaluator, Mutator),

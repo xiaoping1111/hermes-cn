@@ -1,4 +1,14 @@
-"""Tests for hermes_cli.skin_engine — the data-driven skin/theme system."""
+"""命令行界面测试 - skin·engine
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for hermes_cli.skin_engine — the data-driven skin/theme system
+- 核心测试场景: default skin has required fields、get color with fallback、get branding with fallback 等共33个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.skin_engine — the data-driven skin/theme system.
+"""
 
 import json
 import os

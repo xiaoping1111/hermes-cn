@@ -1,3 +1,13 @@
+"""OpenViking记忆提供者测试
+
+【产品经理理解要点】
+验证功能插件模块中tool search sorts by raw score across buckets等18个场景的正确性
+- tool search sorts by raw score across buckets的正确性验证
+- tool search sorts missing raw score after negative...的正确性验证
+- tool add resource uploads existing local file的正确性验证
+- 另有15个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性"""
+
 import json
 import zipfile
 from types import SimpleNamespace

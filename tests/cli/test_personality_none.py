@@ -1,4 +1,13 @@
-"""Tests for /personality none — clearing personality overlay."""
+"""无个性模式测试
+
+【产品经理理解要点】
+验证禁用AI个性（personality=none）后的行为。
+- 无个性模式下回复风格的变化
+- 影响偏好简洁回复的用户
+
+──────────────────────────────────────────────────────────────
+Tests for /personality none — clearing personality overlay.
+"""
 import pytest
 from unittest.mock import MagicMock, patch, mock_open
 import yaml

@@ -1,4 +1,14 @@
-"""QQBot shared utilities — User-Agent, HTTP helpers, config coercion."""
+"""QQBot 共享工具模块
+
+【产品经理理解要点】
+QQ 机器人平台的辅助工具集，为其他模块提供基础能力。
+- 核心职责：构建 API 请求的 User-Agent 标识、统一 HTTP 请求头、配置值类型转换
+- User-Agent：标识 Agent 版本信息，便于 QQ 平台侧识别和问题排查
+- 配置转换：将用户在配置文件中写入的各种格式（字符串、列表等）统一转为代码可用的列表
+
+─────────────────────────────────────────────────────────────────
+QQBot shared utilities — User-Agent, HTTP helpers, config coercion.
+"""
 
 from __future__ import annotations
 

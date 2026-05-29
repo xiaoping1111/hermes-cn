@@ -1,4 +1,13 @@
-"""Windows-safe stdio configuration.
+"""Windows 安全 stdio 配置
+
+【产品经理理解要点】
+解决 Windows 上 Python 控制台默认编码（cp1252）不支持 Unicode 的问题，
+确保 Hermes 的 banner、工具输出和多语言文本正常显示。
+- 强制 Python 端 UTF-8 编码 + 切换控制台代码页为 65001
+- 非 Windows 平台为空操作，幂等安全
+
+─────────────────────────────────────────────────────────────────
+Windows-safe stdio configuration.
 
 On Windows, Python's ``sys.stdout``/``sys.stderr`` default to the console's
 active code page (often ``cp1252``, sometimes ``cp437``, occasionally ``cp932``

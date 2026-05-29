@@ -1,4 +1,14 @@
-"""Tests for is_provider_explicitly_configured()."""
+"""命令行界面测试 - 认证授权·提供商·gate
+
+【产品经理理解要点】
+验证命令行界面的认证授权提供商功能
+- 验证的功能: Tests for is_provider_explicitly_configured()
+- 核心测试场景: returns false when no config、returns true when active provider matches、returns true when config provider matches 等共6个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for is_provider_explicitly_configured().
+"""
 
 import json
 import os

@@ -1,4 +1,13 @@
-"""hermes hooks — inspect and manage shell-script hooks.
+"""Shell 钩子管理命令
+
+【产品经理理解要点】
+实现 `hermes hooks` 子命令，管理配置文件中定义的 Shell 脚本钩子及其授权。
+- 核心职责：列出钩子定义、测试钩子执行、撤销已授权的钩子、诊断钩子问题
+- 关键概念：钩子=特定事件触发时自动执行的 Shell 脚本、授权白名单=记录用户已批准的钩子、安全审批机制
+- 系统定位：Shell 脚本自动化的安全管理接口
+
+─────────────────────────────────────────────────────────────────
+hermes hooks — inspect and manage shell-script hooks.
 
 Usage::
 

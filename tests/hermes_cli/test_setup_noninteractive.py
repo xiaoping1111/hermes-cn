@@ -1,4 +1,14 @@
-"""Tests for non-interactive setup and first-run headless behavior."""
+"""命令行界面测试 - 设置·noninteractive
+
+【产品经理理解要点】
+验证命令行界面的设置功能
+- 验证的功能: Tests for non-interactive setup and first-run headless behavior
+- 核心测试场景: cmd setup allows noninteractive flag without tty、cmd setup defers no tty handling to setup wizard、non interactive flag skips wizard 等共7个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for non-interactive setup and first-run headless behavior.
+"""
 
 from argparse import Namespace
 from unittest.mock import MagicMock, patch

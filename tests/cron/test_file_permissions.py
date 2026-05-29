@@ -1,4 +1,14 @@
-"""Tests for file permissions hardening on sensitive files."""
+"""定时任务测试 - 文件权限安全
+
+【产品经理理解要点】
+验证定时任务调度引擎文件权限安全的正确性
+- 验证的功能: Tests for file permissions hardening on sensitive files
+- 核心测试场景: ensure dirs sets 0700、save jobs sets 0600、save job output sets 0600 等共8个场景
+- 业务影响: 定时任务可能无法正确调度执行，影响自动化工作流的可靠性
+
+─────────────────────────────────────────────────────────────────
+Tests for file permissions hardening on sensitive files.
+"""
 
 import json
 import os

@@ -1,4 +1,13 @@
-"""Tests for the LINE platform adapter plugin.
+"""消息网关测试 - LINE插件
+
+【产品经理理解要点】
+验证消息网关LINE插件的正确性
+- 验证的功能: Tests for the LINE platform adapter plugin
+- 核心测试场景: valid signature passes、tampered body rejected、wrong secret rejected 等共73个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the LINE platform adapter plugin.
 
 Covers the seven synthesis areas from the PR review:
 

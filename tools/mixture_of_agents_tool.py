@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 """
+多 Agent 混合推理工具（Mixture-of-Agents）
+
+【产品经理理解要点】
+遇到极度复杂的问题时，同时调用多个顶级大模型各自回答，再由聚合模型综合出更优答案——"三个臭皮匠"模式。
+- 核心职责：并行调用多个参考模型生成多样化回答，再由聚合模型综合成高质量输出
+- 关键业务概念：MoA 方法论——参考模型提供不同视角的答案，聚合模型取各家之长合成最优解，专攻高难度推理任务
+- 在系统中的位置：高级推理工具，当单模型无法胜任时由 Agent 主动调用，通过 OpenRouter 调用多模型
+
+─────────────────────────────────────────────────────────────────
 Mixture-of-Agents Tool Module
 
 This module implements the Mixture-of-Agents (MoA) methodology that leverages

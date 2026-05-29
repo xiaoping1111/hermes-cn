@@ -1,4 +1,14 @@
-"""Gateway STT config tests — honor stt.enabled: false from config.yaml."""
+"""消息网关测试 - stt·配置管理
+
+【产品经理理解要点】
+验证消息网关的配置管理功能
+- 验证的功能: Gateway STT config tests — honor stt.enabled: false from config.yaml
+- 核心测试场景: gateway config stt disabled from dict nested、load gateway config bridges stt enabled from config yaml、enrich message with transcription surfaces path when stt disabled 等共6个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Gateway STT config tests — honor stt.enabled: false from config.yaml.
+"""
 
 from pathlib import Path
 from unittest.mock import AsyncMock, patch

@@ -1,4 +1,13 @@
-"""Microsoft Graph app-only authentication helpers."""
+"""Microsoft Graph 应用级认证模块
+
+【产品经理理解要点】
+为 Microsoft Graph API 提供应用级（App-Only）OAuth2 认证，即"无用户登录"的后台访问模式。
+- 核心职责：从环境变量读取租户/应用凭据，自动获取和刷新 Access Token
+- 关键业务概念：App-Only 模式——不依赖用户交互，适合 Agent 后台自动访问邮件、日历等
+- 在系统中的位置：被 microsoft_graph_client.py 调用，是 Office 365 集成的认证基础
+
+─────────────────────────────────────────────────────────────────
+Microsoft Graph app-only authentication helpers."""
 
 from __future__ import annotations
 

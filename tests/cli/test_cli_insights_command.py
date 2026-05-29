@@ -1,3 +1,11 @@
+"""CLI洞察命令测试
+
+【产品经理理解要点】
+验证/insights命令的使用统计和分析展示。
+- 统计数据的正确聚合
+- 影响用户了解自身使用模式
+"""
+
 from unittest.mock import MagicMock, patch
 
 from cli import HermesCLI

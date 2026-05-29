@@ -1,3 +1,11 @@
+"""CLI提供商解析测试
+
+【产品经理理解要点】
+验证CLI启动时模型提供商的自动解析。
+- 从环境变量解析提供商
+- 影响首次启动的配置体验
+"""
+
 import importlib
 import sys
 import types

@@ -1,4 +1,18 @@
-"""Routing helpers for inbound user-attached images.
+"""图片路由 — 决定用户发送的图片如何被 AI 处理
+
+【产品经理理解要点】
+用户发送图片给 Agent 时，有两种处理方式：
+  - 原生模式(native)：将图片直接发送给支持视觉的 AI 模型（如 GPT-4o、Claude 3）
+  - 文本模式(text)：先用视觉模型将图片描述为文字，再把文字给 AI
+
+选择策略（auto 模式）：
+  - AI 模型支持视觉 → 直接发送图片（原生模式，效果最好）
+  - AI 模型不支持视觉 → 先用辅助模型描述图片（文本模式，兼容性好）
+  - 用户可在 config.yaml 中手动指定模式
+
+─────────────────────────────────────────────────────────────────
+
+Routing helpers for inbound user-attached images.
 
 Two modes:
 

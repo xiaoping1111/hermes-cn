@@ -1,4 +1,13 @@
-"""Regression tests: slash commands must bypass the base adapter's active-session guard.
+"""消息网关测试 - 命令处理·bypass·active·会话管理
+
+【产品经理理解要点】
+验证消息网关的命令处理会话管理功能
+- 验证的功能: Regression tests: slash commands must bypass the base adapter's active-session guard
+- 核心测试场景: stop bypasses guard、new bypasses guard、reset bypasses guard 等共27个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests: slash commands must bypass the base adapter's active-session guard.
 
 When an agent is running, the base adapter's Level 1 guard in
 handle_message() intercepts all incoming messages and queues them as

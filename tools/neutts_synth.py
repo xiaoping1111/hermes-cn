@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Standalone NeuTTS synthesis helper.
+"""NeuTTS 语音合成子进程
+
+【产品经理理解要点】
+作为 TTS 工具的独立子进程运行，合成语音后将模型内存随进程释放，避免长期占用 500MB+ 内存。
+- 核心职责：接收文本和参考音频，调用 NeuTTS 模型合成 WAV 音频文件
+- 关键业务概念：进程隔离——TTS 模型很大，放在子进程中用完即退，主进程不会累积内存
+- 在系统中的位置：tts_tool.py 通过 subprocess 调用本模块，是 NeuTTS 合成路径的执行器
+
+─────────────────────────────────────────────────────────────────
+Standalone NeuTTS synthesis helper.
 
 Called by tts_tool.py via subprocess to keep the TTS model (~500MB)
 in a separate process that exits after synthesis — no lingering memory.

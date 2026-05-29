@@ -1,4 +1,14 @@
-"""Tests for utils.atomic_yaml_write — crash-safe YAML file writes."""
+"""命令行界面测试 - 原子操作·yaml·write
+
+【产品经理理解要点】
+验证命令行界面的原子操作功能
+- 验证的功能: Tests for utils.atomic_yaml_write — crash-safe YAML file writes
+- 核心测试场景: writes valid yaml、cleans up temp file on baseexception、appends extra content
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for utils.atomic_yaml_write — crash-safe YAML file writes.
+"""
 
 from pathlib import Path
 from unittest.mock import patch

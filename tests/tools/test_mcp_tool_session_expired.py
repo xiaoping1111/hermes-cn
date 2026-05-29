@@ -1,4 +1,15 @@
-"""Tests for MCP tool-handler transport-session auto-reconnect.
+"""MCP工具会话过期测试
+
+【产品经理理解要点】
+验证工具系统模块中is session expired detects invalid or expired session等15个场景的正确性
+- is session expired detects invalid or expired session的正确性验证
+- is session expired detects expired session variant的正确性验证
+- is session expired detects session not found的正确性验证
+- 另有12个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for MCP tool-handler transport-session auto-reconnect.
 
 When a Streamable HTTP MCP server garbage-collects its server-side
 session (idle TTL, server restart, pod rotation, …) it rejects
@@ -8,8 +19,7 @@ only the transport session state needs rebuilding.
 
 Before the #13383 fix, this class of failure fell through as a plain
 tool error with no recovery path, so every subsequent call on the
-affected MCP server failed until the gateway was manually restarted.
-"""
+affected MCP server failed until the gateway was manually restarted."""
 import json
 import threading
 import time

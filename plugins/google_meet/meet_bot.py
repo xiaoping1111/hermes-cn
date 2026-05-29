@@ -1,5 +1,12 @@
-"""Headless Google Meet bot — Playwright + live-caption scraping.
+"""Google Meet无头机器人 — Playwright+实时字幕抓取
 
+【产品经理理解要点】
+作为独立子进程运行的Meet机器人，通过Playwright控制无头Chrome浏览器加入会议，启用实时字幕并抓取转录。
+- 运行方式：独立子进程，通过文件系统与主进程通信
+- 转录策略：启用Meet内置实时字幕，通过MutationObserver观察DOM变更
+- 数据输出：状态+转录写入$HERMES_HOME/workspace/meetings/<meeting-id>/
+
+─────────────────────────────────────────────────────────────────
 Runs as a standalone subprocess spawned by ``process_manager.py``. Reads config
 from env vars, writes status + transcript to files under
 ``$HERMES_HOME/workspace/meetings/<meeting-id>/``. The main hermes process

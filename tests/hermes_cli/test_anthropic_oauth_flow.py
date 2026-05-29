@@ -1,4 +1,14 @@
-"""Tests for Anthropic OAuth setup flow behavior."""
+"""命令行界面测试 - anthropic·OAuth认证·flow
+
+【产品经理理解要点】
+验证命令行界面的OAuth认证功能
+- 验证的功能: Tests for Anthropic OAuth setup flow behavior
+- 核心测试场景: run anthropic oauth flow prefers claude code credentials、run anthropic oauth flow manual token still persists
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for Anthropic OAuth setup flow behavior.
+"""
 
 from hermes_cli.config import load_env, save_env_value
 

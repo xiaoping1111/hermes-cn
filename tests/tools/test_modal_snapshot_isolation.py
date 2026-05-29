@@ -1,3 +1,13 @@
+"""Modal沙箱快照隔离测试
+
+【产品经理理解要点】
+验证工具系统模块中modal environment migrates legacy snapshot key and uses s...等4个场景的正确性
+- modal environment migrates legacy snapshot key and uses...的正确性验证
+- modal environment prunes stale direct snapshot and retries...的正确性验证
+- modal environment cleanup writes namespaced snapshot key的正确性验证
+- 另有1个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性"""
+
 import json
 import os
 import sys

@@ -1,3 +1,17 @@
+"""消息网关测试 - 群组消息门控
+
+【产品经理理解要点】
+验证消息网关群组消息门控的正确性
+- 验证的功能: Telegram群组消息门控策略
+- 核心测试场景: group messages can be opened via config、unmentioned group messages can be observed without dispatching、observed group context uses shared source and prompt for later mentions 等共35个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+消息网关测试 - Telegram平台适配·群组消息·消息门控
+
+测试多平台消息接入与命令分发中telegram相关的group相关的gating功能
+"""
+
 import asyncio
 import json
 from types import SimpleNamespace

@@ -1,3 +1,12 @@
+"""账户用量查询测试
+
+【产品经理理解要点】
+验证用户账户用量（Token消耗）的查询、汇总和展示逻辑。
+- 账户用量快照和窗口统计的正确性
+- 用量数据的获取和渲染逻辑
+- 影响用户对额度消耗的可视化了解
+"""
+
 from datetime import datetime, timezone
 
 from agent.account_usage import (

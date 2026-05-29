@@ -1,4 +1,14 @@
-"""Tests for empty model fallback — when provider is configured but model is missing."""
+"""空模型回退测试
+
+【产品经理理解要点】
+验证当提供商已配置但模型名为空时，系统能自动回退到该提供商的默认模型。
+- 各提供商的默认模型查找逻辑
+- OpenRouter等动态模型的空值处理
+- 影响配置不完整时系统能否正常启动
+
+──────────────────────────────────────────────────────────────
+Tests for empty model fallback — when provider is configured but model is missing.
+"""
 
 from unittest.mock import MagicMock, patch
 import pytest

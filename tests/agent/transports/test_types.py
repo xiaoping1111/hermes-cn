@@ -1,4 +1,16 @@
-"""Tests for agent/transports/types.py — dataclass construction + helpers."""
+"""传输层数据类型与辅助函数测试
+
+【产品经理理解要点】
+验证传输层的核心数据结构：ToolCall（工具调用）、Usage（Token用量）、NormalizedResponse（标准化响应）的构建和行为，以及build_tool_call和map_finish_reason辅助函数。重点验证向后兼容属性，确保新的dataclass能替代旧的SimpleNamespace。
+- 验证ToolCall的duck-typing兼容性（type/function/call_id/extra_content等属性）
+- 验证NormalizedResponse的provider_data属性透传（reasoning_content/codex_message_items等）
+- 验证finish reason在不同提供者间的映射（如end_turn→stop, tool_use→tool_calls）
+- 业务影响：如果这些测试失败，依赖旧格式的代码（如agent loop消息构建）可能静默丢失数据
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for agent/transports/types.py — dataclass construction + helpers."""
 
 import json
 import pytest

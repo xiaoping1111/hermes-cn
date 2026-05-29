@@ -1,4 +1,7 @@
-"""Vercel AI Gateway provider profile.
+"""【产品经理理解要点】
+Vercel AI Gateway模型网关提供商——通过Vercel AI Gateway路由到多个后端模型，支持属性头传递和推理配置透传。
+─────────────────────────────────────────────────────────────────
+Vercel AI Gateway provider profile.
 
 AI Gateway routes to multiple backends. Hermes sends attribution
 headers and full reasoning config passthrough.

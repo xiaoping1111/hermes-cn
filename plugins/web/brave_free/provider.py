@@ -1,5 +1,13 @@
-"""Brave Search (free tier) — plugin form.
+"""Brave搜索供应商（免费版）
 
+【产品经理理解要点】
+基于Brave Search免费版API实现网络搜索。免费版每月2000次查询，适合低频使用场景。
+- 核心能力：仅搜索，不支持内容提取
+- 免费额度：每月2000次查询，1 QPS
+- 认证：需要BRAVE_SEARCH_API_KEY，在https://brave.com/search/api/免费获取
+- 搭配使用：需搭配Firecrawl/Tavily/Exa等供应商实现web_extract内容提取
+
+─────────────────────────────────────────────────────────────────
 Subclasses :class:`agent.web_search_provider.WebSearchProvider` (the
 plugin-facing ABC). The legacy in-tree module
 ``tools.web_providers.brave_free`` was removed in the same commit that

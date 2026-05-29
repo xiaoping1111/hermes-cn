@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""
+"""【产品经理理解要点】
+地图与地理信息工具——零依赖，基于OpenStreetMap/Nominatim数据，支持地名搜索、逆地理编码、附近POI搜索、路线规划、距离计算、时区查询等功能。
+─────────────────────────────────────────────────────────────────
 maps_client.py - CLI tool for maps, geocoding, routing, POI search, and more.
 Uses only Python stdlib. Data from OpenStreetMap/Nominatim, Overpass API, OSRM,
 and TimeAPI.io.

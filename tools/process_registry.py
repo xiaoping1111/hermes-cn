@@ -1,4 +1,13 @@
 """
+后台进程注册表
+
+【产品经理理解要点】
+管理 Agent 启动的后台进程（如长时间运行的测试、服务器），支持查看输出、等待完成、手动终止，且进程崩溃后可恢复。
+- 核心职责：进程创建与跟踪、输出滚动缓冲（200KB 轮转窗口）、状态轮询、阻塞等待、终止、崩溃恢复
+- 关键业务概念：环境穿透——进程在 Docker/Modal 等沙箱中执行而非宿主机；LRU 淘汰（最多 64 个并发进程）
+- 在系统中的位置：terminal_tool(background=true) 的后端实现，网关重启时通过检查点文件恢复进程状态
+
+─────────────────────────────────────────────────────────────────
 Process Registry -- In-memory registry for managed background processes.
 
 Tracks processes spawned via terminal(background=true), providing:

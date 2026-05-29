@@ -1,4 +1,15 @@
-"""Tests for the X (Twitter) Search tool backed by xAI Responses API.
+"""X搜索工具测试
+
+【产品经理理解要点】
+验证工具系统模块中x search posts responses request等25个场景的正确性
+- x search posts responses request的正确性验证
+- x search rejects conflicting handle filters的正确性验证
+- x search extracts inline url citations的正确性验证
+- 另有22个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the X (Twitter) Search tool backed by xAI Responses API.
 
 Covers:
 - HTTP request shape (URL, headers, payload, model from config)
@@ -6,8 +17,7 @@ Covers:
 - Inline url_citation extraction from message annotations
 - Structured error handling (4xx with code, 5xx retry, ReadTimeout retry)
 - Credential resolution: API key path, OAuth path, both-set preference, none-set
-- check_x_search_requirements gating in registry
-"""
+- check_x_search_requirements gating in registry"""
 
 import json
 

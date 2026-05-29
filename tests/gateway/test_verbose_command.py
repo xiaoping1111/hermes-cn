@@ -1,4 +1,14 @@
-"""Tests for gateway /verbose command (config-gated tool progress cycling)."""
+"""消息网关测试 - verbose·命令处理
+
+【产品经理理解要点】
+验证消息网关的命令处理功能
+- 验证的功能: Tests for gateway /verbose command (config-gated tool progress cycling)
+- 核心测试场景: disabled by default、enabled cycles mode、quoted false keeps command disabled 等共8个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for gateway /verbose command (config-gated tool progress cycling).
+"""
 
 import asyncio
 from unittest.mock import AsyncMock, MagicMock

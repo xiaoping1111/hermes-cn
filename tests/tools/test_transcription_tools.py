@@ -1,9 +1,19 @@
-"""Tests for tools.transcription_tools — three-provider STT pipeline.
+"""语音转写工具测试
+
+【产品经理理解要点】
+验证工具系统模块中groq when key set等95个场景的正确性
+- groq when key set的正确性验证
+- groq explicit no fallback的正确性验证
+- groq nothing available的正确性验证
+- 另有92个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools.transcription_tools — three-provider STT pipeline.
 
 Covers the full provider matrix (local, groq, openai), fallback chains,
 model auto-correction, config loading, validation edge cases, and
-end-to-end dispatch.  All external dependencies are mocked.
-"""
+end-to-end dispatch.  All external dependencies are mocked."""
 
 import os
 import struct

@@ -1,4 +1,13 @@
-"""Tests for BasePlatformAdapter._keep_typing timeout-per-tick behavior.
+"""消息网关测试 - keep·连通检测·超时控制
+
+【产品经理理解要点】
+验证消息网关的连通检测超时控制功能
+- 验证的功能: Tests for BasePlatformAdapter._keep_typing timeout-per-tick behavior
+- 核心测试场景: slow send typing does not block cadence、fast send typing still gets awaited、send typing exception does not kill loop 等共4个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for BasePlatformAdapter._keep_typing timeout-per-tick behavior.
 
 When the gateway is waiting on a long upstream provider response (e.g.
 Anthropic/opus-4.7 first-token latency climbing during an upstream blip),

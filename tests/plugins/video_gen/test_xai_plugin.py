@@ -1,4 +1,15 @@
-"""Smoke tests for the xAI video gen plugin — load & register surface."""
+"""xAI视频生成插件测试
+
+【产品经理理解要点】
+验证功能插件模块中xai provider registers等7个场景的正确性
+- xai provider registers的正确性验证
+- xai capabilities text and image only的正确性验证
+- xai unavailable without key的正确性验证
+- 另有4个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Smoke tests for the xAI video gen plugin — load & register surface."""
 
 from __future__ import annotations
 

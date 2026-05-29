@@ -1,4 +1,15 @@
-"""Contract tests for the container Dockerfile.
+"""DockerfilePID1回收测试
+
+【产品经理理解要点】
+验证工具系统模块中dockerfile installs an init for zombie reaping等7个场景的正确性
+- dockerfile installs an init for zombie reaping的正确性验证
+- dockerfile entrypoint routes through the init的正确性验证
+- dockerfile installs tui dependencies的正确性验证
+- 另有4个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Contract tests for the container Dockerfile.
 
 These tests assert invariants about how the Dockerfile composes its runtime —
 they deliberately avoid snapshotting specific package versions, line numbers,
@@ -9,8 +20,7 @@ the properties required for correct production behaviour:
   subprocesses (MCP stdio servers, git, bun, browser daemons) get reaped
   instead of accumulating as zombies (#15012).
 - Signal forwarding runs through the init so ``docker stop`` triggers
-  hermes's own graceful-shutdown path.
-"""
+  hermes's own graceful-shutdown path."""
 
 from __future__ import annotations
 

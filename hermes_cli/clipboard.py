@@ -1,4 +1,13 @@
-"""Clipboard image extraction for macOS, Windows, Linux, and WSL2.
+"""剪贴板图片提取
+
+【产品经理理解要点】
+支持从系统剪贴板粘贴图片发送给 AI，覆盖 macOS/Windows/Linux/WSL2 四大平台。
+- 核心职责：检测剪贴板是否含图片、将剪贴板图片保存为 PNG 文件供 AI 视觉分析
+- 关键概念：跨平台剪贴板访问（macOS 用 osascript/pngpaste、Windows 用 PowerShell、Linux 用 wl-paste/xclip）
+- 系统定位：多模态交互基础设施，让用户可以直接截屏粘贴与 AI 对话
+
+─────────────────────────────────────────────────────────────────
+Clipboard image extraction for macOS, Windows, Linux, and WSL2.
 
 Provides a single function `save_clipboard_image(dest)` that checks the
 system clipboard for image data, saves it to *dest* as PNG, and returns

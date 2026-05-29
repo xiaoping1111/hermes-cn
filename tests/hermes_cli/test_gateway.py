@@ -1,4 +1,14 @@
-"""Tests for hermes_cli.gateway."""
+"""命令行界面测试 - gateway
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for hermes_cli.gateway
+- 核心测试场景: run gateway exits cleanly on keyboard interrupt、run gateway exits nonzero when start gateway reports failure、run gateway refuses root in official docker 等共33个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.gateway.
+"""
 
 import sys
 from types import ModuleType, SimpleNamespace

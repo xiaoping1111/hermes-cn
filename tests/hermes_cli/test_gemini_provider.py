@@ -1,4 +1,14 @@
-"""Tests for Google AI Studio (Gemini) provider integration."""
+"""命令行界面测试 - gemini·提供商
+
+【产品经理理解要点】
+验证命令行界面的提供商功能
+- 验证的功能: Tests for Google AI Studio (Gemini) provider integration
+- 核心测试场景: gemini in registry、gemini config、gemini env vars 等共46个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for Google AI Studio (Gemini) provider integration.
+"""
 
 import os
 import pytest

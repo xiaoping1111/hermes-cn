@@ -1,4 +1,12 @@
-"""
+"""平台注册中心
+
+【产品经理理解要点】
+Hermes 支持的所有消息平台（CLI、Telegram、Discord、Slack、微信等）的元数据统一注册表。
+- 每个平台包含显示标签和默认工具集名称
+- 支持插件动态注册新平台
+- 是界面展示和工具配置的唯一数据源
+
+─────────────────────────────────────────────────────────────────
 Shared platform registry for Hermes Agent.
 
 Single source of truth for platform metadata consumed by both

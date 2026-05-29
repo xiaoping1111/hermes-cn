@@ -1,3 +1,17 @@
+"""命令行界面测试 - regression·16767
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: 回归测试#16767
+- 核心测试场景: ensure direct aliases mutates in place、chat provider argparse acceptance、resolve named custom runtime honors explicit base url
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - 回归测试·16767
+
+测试CLI命令处理与配置管理中regression相关的16767功能
+"""
+
 import pytest
 import sys
 from unittest.mock import patch

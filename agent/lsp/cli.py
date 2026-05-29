@@ -1,4 +1,16 @@
-"""``hermes lsp`` CLI subcommand.
+"""LSP 命令行工具 — hermes lsp 子命令
+
+【产品经理理解要点】
+用户可以通过命令行管理 LSP 功能：
+  - hermes lsp status：查看各语言服务器状态
+  - hermes lsp install pyright：安装 Python 语言服务器
+  - hermes lsp install-all：安装所有已配置的服务器
+  - hermes lsp restart：重启语言服务器
+  - hermes lsp list：列出所有支持的语言服务器
+
+─────────────────────────────────────────────────────────────────
+
+``hermes lsp`` CLI subcommand.
 
 Subcommands:
 

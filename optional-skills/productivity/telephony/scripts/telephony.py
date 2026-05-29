@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Telephony helper for the Hermes optional telephony skill.
+"""电话技能辅助工具
+
+【产品经理理解要点】
+管理Twilio/Vapi电话服务，支持购买号码、拨打电话、收发短信、配置语音助手。
+- 核心职责：电话号码管理、通话、短信、Vapi语音助手集成
+- 使用场景：用户需要通过Hermes Agent打电话、发短信、管理电话号码
+
+─────────────────────────────────────────────────────────────────
+Telephony helper for the Hermes optional telephony skill.
 
 Capabilities:
 - Persist telephony provider credentials to ~/.hermes/.env

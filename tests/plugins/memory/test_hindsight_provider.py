@@ -1,9 +1,19 @@
-"""Tests for the Hindsight memory provider plugin.
+"""Hindsight记忆提供者测试
+
+【产品经理理解要点】
+验证功能插件模块中normalize retain tags accepts csv and dedupes等96个场景的正确性
+- normalize retain tags accepts csv and dedupes的正确性验证
+- normalize retain tags accepts json array string的正确性验证
+- retain schema has content的正确性验证
+- 另有93个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the Hindsight memory provider plugin.
 
 Tests cover config loading, tool handlers (tags, max_tokens, types),
 prefetch (auto_recall, preamble, query truncation), sync_turn (auto_retain,
-turn counting, tags), and schema completeness.
-"""
+turn counting, tags), and schema completeness."""
 
 import json
 import re

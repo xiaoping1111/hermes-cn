@@ -1,4 +1,13 @@
-"""Test that HMAC signature validation happens BEFORE rate limiting.
+"""消息网关测试 - 速率限制
+
+【产品经理理解要点】
+验证消息网关速率限制的正确性
+- 验证的功能: Test that HMAC signature validation happens BEFORE rate limiting
+- 核心测试场景: invalid signature does not consume rate limit、valid signature still rate limited、mixed valid and invalid signatures
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Test that HMAC signature validation happens BEFORE rate limiting.
 
 This verifies the fix for bug #12544: invalid signature requests must NOT
 consume rate-limit quota. Before the fix, rate limiting was applied before

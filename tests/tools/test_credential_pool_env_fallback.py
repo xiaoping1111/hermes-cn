@@ -1,11 +1,21 @@
-"""Tests for credential_pool .env fallback and auth credential_pool lookup.
+"""凭证pool环境变量降级测试
+
+【产品经理理解要点】
+验证工具系统模块中deepseek key from dotenv only等8个场景的正确性
+- deepseek key from dotenv only的正确性验证
+- openrouter key from dotenv only的正确性验证
+- empty dotenv no entries的正确性验证
+- 另有5个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for credential_pool .env fallback and auth credential_pool lookup.
 
 Covers the fix from #15914 / PR #15920:
 - _seed_from_env reads API keys from ~/.hermes/.env when not in os.environ
 - _resolve_api_key_provider_secret falls back to credential_pool when env vars are empty
 - env vars take priority over .env file (handled by get_env_value itself)
-- env vars take priority over credential pool (fallback only kicks in when env is empty)
-"""
+- env vars take priority over credential pool (fallback only kicks in when env is empty)"""
 
 import os
 from pathlib import Path

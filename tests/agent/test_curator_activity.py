@@ -1,4 +1,14 @@
-"""Regression tests for curator skill activity timestamps."""
+"""策展人活动追踪测试
+
+【产品经理理解要点】
+验证策展人的活动追踪和最近会话的监控。
+- 活动记录的正确写入
+- 最近活动的时间排序
+- 影响会话管理面板的数据展示
+
+──────────────────────────────────────────────────────────────
+Regression tests for curator skill activity timestamps.
+"""
 
 import importlib
 from datetime import datetime, timedelta, timezone

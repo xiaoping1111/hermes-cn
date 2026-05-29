@@ -1,8 +1,18 @@
-"""Tests for transcription_tools.py — local (faster-whisper) and OpenAI providers.
+"""语音转写测试
+
+【产品经理理解要点】
+验证工具系统模块中local when available等26个场景的正确性
+- local when available的正确性验证
+- explicit local no cloud fallback的正确性验证
+- local nothing available的正确性验证
+- 另有23个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for transcription_tools.py — local (faster-whisper) and OpenAI providers.
 
 Tests cover provider selection, config loading, validation, and transcription
-dispatch.  All external dependencies (faster_whisper, openai) are mocked.
-"""
+dispatch.  All external dependencies (faster_whisper, openai) are mocked."""
 
 import json
 import os

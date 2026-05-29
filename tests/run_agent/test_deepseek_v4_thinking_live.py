@@ -1,12 +1,19 @@
-"""Live DeepSeek V4 thinking-mode tool-call replay smoke test.
+"""DeepSeek V4思考模式实境测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中deepseek v4 thinking tool call replay round trip的正确性
+- deepseek v4 thinking tool call replay round trip的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Live DeepSeek V4 thinking-mode tool-call replay smoke test.
 
 Opt-in only:
     HERMES_LIVE_TESTS=1 pytest tests/run_agent/test_deepseek_v4_thinking_live.py -q
 
 Requires DEEPSEEK_API_KEY in the process environment. The key is captured at
 module import time because tests/conftest.py intentionally removes credential
-environment variables before each test body runs.
-"""
+environment variables before each test body runs."""
 
 from __future__ import annotations
 

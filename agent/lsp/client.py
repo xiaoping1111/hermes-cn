@@ -1,4 +1,19 @@
-"""Async LSP client over stdin/stdout.
+"""LSP 异步客户端 — 通过标准输入/输出与语言服务器通信
+
+【产品经理理解要点】
+这个模块实现了一个 LSP 客户端，通过子进程与语言服务器（如 pyright、gopls）
+通信，为代码编辑提供实时语法检查：
+
+  - 打开文件时通知语言服务器
+  - 文件修改后等待新的诊断结果
+  - 查询某个文件的当前诊断（错误、警告）
+
+每个 (语言服务器, 项目根目录) 组合对应一个客户端实例，
+运行在独立的后台事件循环中，不影响主对话流程。
+
+─────────────────────────────────────────────────────────────────
+
+Async LSP client over stdin/stdout.
 
 One :class:`LSPClient` corresponds to one ``(language_server, workspace_root)``
 pair — exactly what OpenCode keys clients on, and the same shape Claude

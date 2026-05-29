@@ -1,10 +1,19 @@
-"""
+"""语音合成Piper测试
+
+【产品经理理解要点】
+验证工具系统模块中piper is a builtin provider等16个场景的正确性
+- piper is a builtin provider的正确性验证
+- piper has a text length cap的正确性验证
+- returns bool without raising的正确性验证
+- 另有13个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
 Tests for the native Piper TTS provider.
 
 These tests pin the resolution / caching / dispatch paths for Piper
 without requiring the ``piper-tts`` package to actually be installed
-(the synthesis step is monkey-patched to avoid needing the ONNX wheel).
-"""
+(the synthesis step is monkey-patched to avoid needing the ONNX wheel)."""
 
 import json
 import os

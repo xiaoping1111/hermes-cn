@@ -1,12 +1,21 @@
-"""
+"""达尔文进化技能测试
+
+【产品经理理解要点】
+验证技能系统模块中skill dir exists等12个场景的正确性
+- skill dir exists的正确性验证
+- skill md present的正确性验证
+- description under 60 chars的正确性验证
+- 另有9个测试场景覆盖
+- 影响技能系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
 Smoke tests for the darwinian-evolver optional skill.
 
 We can't actually run the evolution loop in CI (it needs network + a paid LLM),
 so these tests verify:
   - SKILL.md frontmatter conforms to the hardline format
   - shipped scripts parse as valid Python
-  - the scripts reference the right env var / module paths
-"""
+  - the scripts reference the right env var / module paths"""
 from __future__ import annotations
 
 import ast

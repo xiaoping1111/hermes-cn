@@ -1,10 +1,20 @@
-"""Tests for the bundled ``openai-codex`` image_gen plugin.
+"""OpenAI Codex图像生成测试
+
+【产品经理理解要点】
+验证功能插件模块中name等18个场景的正确性
+- name的正确性验证
+- display name的正确性验证
+- default model的正确性验证
+- 另有15个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the bundled ``openai-codex`` image_gen plugin.
 
 Mirrors ``test_openai_provider.py`` but targets the standalone
 Codex/ChatGPT-OAuth-backed provider that uses the Responses
 ``image_generation`` tool path instead of the ``images.generate`` REST
-endpoint.
-"""
+endpoint."""
 
 from __future__ import annotations
 

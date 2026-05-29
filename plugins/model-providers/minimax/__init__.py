@@ -1,4 +1,7 @@
-"""MiniMax provider profiles (international + China).
+"""【产品经理理解要点】
+MiniMax模型提供商——同时支持国际版和中国版两个端点，使用Anthropic兼容接口格式。MiniMax是国产大模型厂商，擅长长文本处理。
+─────────────────────────────────────────────────────────────────
+MiniMax provider profiles (international + China).
 
 Both use anthropic_messages api_mode — their inference_base_url
 ends with /anthropic which triggers auto-detection to anthropic_messages.

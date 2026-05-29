@@ -1,4 +1,15 @@
-"""Tests for browser_tool.py hardening: caching, security, thread safety, truncation."""
+"""浏览器安全加固测试
+
+【产品经理理解要点】
+验证工具系统模块中no default session timeout等20个场景的正确性
+- no default session timeout的正确性验证
+- browser close schema removed的正确性验证
+- cached after first call的正确性验证
+- 另有17个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for browser_tool.py hardening: caching, security, thread safety, truncation."""
 
 import inspect
 import os

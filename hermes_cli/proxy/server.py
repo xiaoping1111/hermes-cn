@@ -1,4 +1,13 @@
-"""HTTP server that forwards OpenAI-compatible requests to a configured upstream.
+"""代理 HTTP 服务器 —— 透明转发 OpenAI 兼容请求
+
+【产品经理理解要点】
+接收本地请求，替换认证头后转发到上游供应商，原样流式返回响应。
+- 最小化设计：不调解、不记录、不转换请求/响应体
+- 保留 SSE 流式传输，适配 Chat Completions 和 Responses API
+- 支持 Ctrl+C 优雅关闭
+
+─────────────────────────────────────────────────────────────────
+HTTP server that forwards OpenAI-compatible requests to a configured upstream.
 
 Listens on ``http://<host>:<port>/v1/<path>`` and forwards each request to
 ``<upstream-base-url>/<path>`` with the client's ``Authorization`` header

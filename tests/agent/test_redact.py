@@ -1,4 +1,13 @@
-"""Tests for agent.redact -- secret masking in logs and output."""
+"""敏感信息脱敏测试
+
+【产品经理理解要点】
+验证输出中敏感信息（API密钥、令牌等）的脱敏处理。
+- API密钥和令牌的自动检测和遮蔽
+- 影响输出日志和显示的安全性
+
+──────────────────────────────────────────────────────────────
+Tests for agent.redact -- secret masking in logs and output.
+"""
 
 import logging
 import os

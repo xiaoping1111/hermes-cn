@@ -1,5 +1,15 @@
 #!/usr/bin/env python3
-"""
+"""Web工具集成测试
+
+【产品经理理解要点】
+验证系统集成模块中environment等5个场景的正确性
+- environment的正确性验证
+- web search的正确性验证
+- web extract的正确性验证
+- 另有2个测试场景覆盖
+- 影响系统集成的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
 Comprehensive Test Suite for Web Tools Module
 
 This script tests all web tools functionality to ensure they work correctly.
@@ -12,8 +22,7 @@ Usage:
 
 Requirements:
     - PARALLEL_API_KEY or FIRECRAWL_API_KEY environment variable must be set
-    - An auxiliary LLM provider (OPENROUTER_API_KEY or Nous Portal auth) (optional, for LLM tests)
-"""
+    - An auxiliary LLM provider (OPENROUTER_API_KEY or Nous Portal auth) (optional, for LLM tests)"""
 
 import pytest
 pytestmark = pytest.mark.integration

@@ -1,3 +1,13 @@
+"""MCP工具Issue#948测试
+
+【产品经理理解要点】
+验证工具系统模块中resolve stdio command falls back to hermes node bin等4个场景的正确性
+- resolve stdio command falls back to hermes node...的正确性验证
+- resolve stdio command respects explicit empty path的正确性验证
+- format connect error unwraps exception group的正确性验证
+- 另有1个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性"""
+
 import asyncio
 import os
 import sys

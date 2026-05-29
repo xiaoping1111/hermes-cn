@@ -1,4 +1,13 @@
-"""``hermes plugins`` CLI subcommand — install, update, remove, and list plugins.
+"""插件安装与管理命令
+
+【产品经理理解要点】
+`hermes plugins` 子命令的实现——从 Git 仓库安装、更新、移除和列出插件。
+- 支持 Git URL 或 owner/repo 简写安装
+- 安装后自动提示启用，引导填写所需环境变量
+- 提供交互式 UI 启用/禁用插件和选择记忆/上下文引擎供应商
+
+─────────────────────────────────────────────────────────────────
+``hermes plugins`` CLI subcommand — install, update, remove, and list plugins.
 
 Plugins are installed from Git repositories into ``~/.hermes/plugins/``.
 Supports full URLs and ``owner/repo`` shorthand (resolves to GitHub).

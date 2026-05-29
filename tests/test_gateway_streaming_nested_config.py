@@ -1,4 +1,14 @@
-"""Regression test for #25676 — nested gateway.streaming config must be loaded."""
+"""网关流式嵌套配置加载测试
+
+【产品经理理解要点】
+验证gateway.streaming嵌套配置项能被正确加载，而非被扁平配置覆盖。
+- 嵌套YAML配置的深度合并
+- streaming子配置的完整加载
+- 影响网关流式传输功能的正确配置
+
+──────────────────────────────────────────────────────────────
+Regression test for #25676 — nested gateway.streaming config must be loaded.
+"""
 from pathlib import Path
 from unittest.mock import patch, MagicMock
 import json

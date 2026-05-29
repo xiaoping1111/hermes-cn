@@ -1,4 +1,12 @@
-"""End-to-end test simulating CLI interrupt during subagent execution.
+"""CLI中断子代理测试
+
+【产品经理理解要点】
+验证用户在CLI中中断子代理任务的行为。
+- 中断信号传播到子代理
+- 影响用户控制复杂任务的能力
+
+──────────────────────────────────────────────────────────────
+End-to-end test simulating CLI interrupt during subagent execution.
 
 Reproduces the exact scenario:
 1. Parent agent calls delegate_task

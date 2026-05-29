@@ -1,4 +1,13 @@
-"""Tests for the allowed_{channels,chats,rooms} whitelist extension
+"""消息网关测试 - allowed·频道管理·widening
+
+【产品经理理解要点】
+验证消息网关的频道管理功能
+- 验证的功能: Tests for the allowed_{channels,chats,rooms} whitelist extension
+- 核心测试场景: empty is no restriction、list form、csv form 等共27个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the allowed_{channels,chats,rooms} whitelist extension
 added alongside PR #7401 (Slack).
 
 Covers: Telegram, Matrix, Mattermost, DingTalk.

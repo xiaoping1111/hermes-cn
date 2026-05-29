@@ -1,4 +1,13 @@
-"""Integration tests for the generic webhook platform adapter.
+"""消息网关测试 - Webhook·integration
+
+【产品经理理解要点】
+验证消息网关的Webhook功能
+- 验证的功能: Integration tests for the generic webhook platform adapter
+- 核心测试场景: github pr webhook triggers agent、skills injected into prompt、cross platform delivery 等共4个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Integration tests for the generic webhook platform adapter.
 
 These tests exercise end-to-end flows through the webhook adapter:
 1. GitHub PR webhook → agent MessageEvent created

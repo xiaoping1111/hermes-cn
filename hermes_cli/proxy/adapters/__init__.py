@@ -1,4 +1,12 @@
-"""Upstream adapter registry for the local proxy server.
+"""代理上游适配器注册表
+
+【产品经理理解要点】
+管理代理支持的上游供应商适配器，当前注册了 Nous Portal 和 xAI Grok 两个适配器。
+- 每个适配器封装一个供应商的 OAuth 状态和凭证刷新逻辑
+- 通过 `hermes proxy start --provider <name>` 指定使用的适配器
+
+─────────────────────────────────────────────────────────────────
+Upstream adapter registry for the local proxy server.
 
 Each adapter wraps a provider's OAuth state and exposes a uniform interface
 the proxy server can use to forward requests with a freshly-minted bearer

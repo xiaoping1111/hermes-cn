@@ -1,5 +1,14 @@
-"""Tests for _detect_file_drop — file path detection that prevents
-dragged/pasted absolute paths from being mistaken for slash commands."""
+"""CLI文件拖放测试
+
+【产品经理理解要点】
+验证CLI中拖放文件的检测和处理逻辑。
+- 拖入文件路径的类型检测
+- 影响从文件管理器拖入文件的体验
+
+──────────────────────────────────────────────────────────────
+Tests for _detect_file_drop — file path detection that prevents
+dragged/pasted absolute paths from being mistaken for slash commands.
+"""
 
 import os
 import tempfile

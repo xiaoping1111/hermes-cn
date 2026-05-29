@@ -1,4 +1,13 @@
-"""Tests for the approvals.destructive_slash_confirm config gate.
+"""命令行界面测试 - destructive·slash·confirm·gate
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for the approvals.destructive_slash_confirm config gate
+- 核心测试场景: default config has the key、default is true、shape matches other approval keys 等共5个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the approvals.destructive_slash_confirm config gate.
 
 Destructive session slash commands (/clear, /new, /reset, /undo) discard
 conversation state.  This config key (default True) gates a three-option

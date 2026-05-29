@@ -1,4 +1,15 @@
-"""Tests for terminal/file tool availability in local dev environments."""
+"""终端工具依赖检查测试
+
+【产品经理理解要点】
+验证工具系统模块中local backend requirements等6个场景的正确性
+- local backend requirements的正确性验证
+- terminal and file tools resolve for local backend的正确性验证
+- terminal and execute code tools resolve for managed...的正确性验证
+- 另有3个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for terminal/file tool availability in local dev environments."""
 
 import importlib
 

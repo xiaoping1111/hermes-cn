@@ -1,4 +1,14 @@
-"""Regression tests for Nous OAuth refresh + agent-key mint interactions."""
+"""命令行界面测试 - 认证授权·nous·提供商
+
+【产品经理理解要点】
+验证命令行界面的认证授权提供商功能
+- 验证的功能: Regression tests for Nous OAuth refresh + agent-key mint interactions
+- 核心测试场景: resolve nous runtime credentials prefers invoke jwt and mirrors、resolve nous runtime credentials invoke jwt is idempotent、resolve nous runtime credentials trusts invoke jwt exp over stale metadata 等共58个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression tests for Nous OAuth refresh + agent-key mint interactions.
+"""
 
 import base64
 import json

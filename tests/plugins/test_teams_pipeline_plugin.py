@@ -1,4 +1,15 @@
-"""Tests for the Teams pipeline plugin package."""
+"""Teams流水线pipeline插件测试
+
+【产品经理理解要点】
+验证功能插件模块中register adds cli only等11个场景的正确性
+- register adds cli only的正确性验证
+- runtime config uses existing teams platform settings的正确性验证
+- build pipeline runtime reuses existing teams adapter surface的正确性验证
+- 另有8个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the Teams pipeline plugin package."""
 
 from __future__ import annotations
 

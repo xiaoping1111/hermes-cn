@@ -1,4 +1,13 @@
-"""Tests for interrupt handling in concurrent tool execution."""
+"""并发中断测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中concurrent preflight interrupt skips all、clear interrupt clears worker tids的正确性
+- concurrent preflight interrupt skips all的正确性验证
+- clear interrupt clears worker tids的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for interrupt handling in concurrent tool execution."""
 
 import concurrent.futures
 import threading

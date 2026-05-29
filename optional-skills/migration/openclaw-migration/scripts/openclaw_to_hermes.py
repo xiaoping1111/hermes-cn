@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""OpenClaw -> Hermes migration helper.
+"""OpenClaw到Hermes迁移工具
+
+【产品经理理解要点】
+将OpenClaw用户的数据迁移到Hermes Agent，自动映射可转换部分，归档不兼容项供人工审核。
+- 核心职责：自动迁移配置和数据，清晰报告哪些内容需要手动处理
+- 使用场景：从OpenClaw切换到Hermes时的数据迁移
+
+─────────────────────────────────────────────────────────────────
+OpenClaw -> Hermes migration helper.
 
 This script migrates the parts of an OpenClaw user footprint that map cleanly
 into Hermes Agent, archives selected unmapped docs for manual review, and

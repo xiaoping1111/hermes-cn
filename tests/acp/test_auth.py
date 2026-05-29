@@ -1,4 +1,14 @@
-"""Tests for acp_adapter.auth — provider detection."""
+"""ACP提供商检测测试
+
+【产品经理理解要点】
+验证ACP适配器的提供商检测逻辑，确定用户是否配置了可用的AI提供商。
+- 有API密钥时正确识别提供商
+- 无密钥时返回无提供商状态
+- 影响ACP连接时的认证握手
+
+──────────────────────────────────────────────────────────────
+Tests for acp_adapter.auth — provider detection.
+"""
 
 from acp_adapter.auth import (
     TERMINAL_SETUP_AUTH_METHOD_ID,

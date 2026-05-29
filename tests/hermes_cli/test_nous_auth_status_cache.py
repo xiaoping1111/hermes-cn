@@ -1,4 +1,13 @@
-"""Tests for the get_nous_auth_status() process-level cache.
+"""命令行界面测试 - nous·认证授权·status·缓存机制
+
+【产品经理理解要点】
+验证命令行界面的认证授权缓存机制功能
+- 验证的功能: Tests for the get_nous_auth_status() process-level cache
+- 核心测试场景: get nous auth status caches consecutive calls、get nous auth status invalidates on auth file mtime、invalidate nous auth status cache forces recompute 等共4个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the get_nous_auth_status() process-level cache.
 
 The cache avoids re-validating Nous credentials on every menu paint —
 `hermes tools` → "All Platforms" used to fire ~31 OAuth refresh POSTs

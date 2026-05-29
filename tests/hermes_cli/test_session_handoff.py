@@ -1,4 +1,13 @@
-"""Tests for session handoff (CLI to gateway platform).
+"""命令行界面测试 - 会话管理·handoff
+
+【产品经理理解要点】
+验证命令行界面的会话管理功能
+- 验证的功能: Tests for session handoff (CLI to gateway platform)
+- 核心测试场景: columns exist、request handoff marks pending、request handoff rejects in flight 等共13个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for session handoff (CLI to gateway platform).
 
 The handoff state machine lives on the ``sessions`` table:
 

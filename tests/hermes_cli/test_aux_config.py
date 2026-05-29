@@ -1,4 +1,13 @@
-"""Tests for the auxiliary-model configuration UI in ``hermes model``.
+"""命令行界面测试 - aux·配置管理
+
+【产品经理理解要点】
+验证命令行界面的配置管理功能
+- 验证的功能: Tests for the auxiliary-model configuration UI in ``hermes model``
+- 核心测试场景: title generation present in default config、session search no longer appears in auxiliary model config、aux tasks keys all exist in default config 等共13个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the auxiliary-model configuration UI in ``hermes model``.
 
 Covers the helper functions:
   - ``_save_aux_choice`` writes to config.yaml without touching main model config

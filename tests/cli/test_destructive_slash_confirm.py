@@ -1,4 +1,12 @@
-"""Tests for cli.HermesCLI._confirm_destructive_slash.
+"""破坏性斜杠命令确认测试
+
+【产品经理理解要点】
+验证破坏性操作（如/clear、/reset）需要二次确认的逻辑。
+- 破坏性命令的确认提示
+- 影响防止误操作的安全性
+
+──────────────────────────────────────────────────────────────
+Tests for cli.HermesCLI._confirm_destructive_slash.
 
 Drives the helper directly via __get__ on a SimpleNamespace stand-in so we
 don't have to construct a full HermesCLI (which requires extensive setup).

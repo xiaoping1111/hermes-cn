@@ -1,4 +1,7 @@
-"""Pixel art video — overlay procedural animations onto a source image.
+"""【产品经理理解要点】
+像素画视频生成器——在像素画图片上叠加程序化动画效果（星星、雨滴、萤火虫等），输出MP4和可选GIF。需配合pixel_art.py使用，依赖ffmpeg。
+─────────────────────────────────────────────────────────────────
+Pixel art video — overlay procedural animations onto a source image.
 
 Takes any image (typically pre-processed with pixel_art()) and overlays
 animated pixel effects (stars, rain, fireflies, etc.), then encodes to MP4

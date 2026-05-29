@@ -1,8 +1,18 @@
-"""Tests for cloud browser provider runtime fallback to local Chromium.
+"""浏览器云端降级测试
+
+【产品经理理解要点】
+验证工具系统模块中cloud failure falls back to local等8个场景的正确性
+- cloud failure falls back to local的正确性验证
+- cloud success no fallback的正确性验证
+- cloud and local both fail的正确性验证
+- 另有5个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for cloud browser provider runtime fallback to local Chromium.
 
 Covers the fallback logic in _get_session_info() when a cloud provider
-is configured but fails at runtime (issue #10883).
-"""
+is configured but fails at runtime (issue #10883)."""
 import logging
 from unittest.mock import Mock, patch
 

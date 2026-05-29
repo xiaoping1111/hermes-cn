@@ -1,4 +1,21 @@
-"""Lightweight internationalization (i18n) for Hermes static user-facing messages.
+"""国际化 (i18n) — Agent 自身的界面文字多语言支持
+
+【产品经理理解要点】
+Agent 的一部分界面文字（如确认提示、网关命令回复等）支持多语言。
+这个模块提供翻译功能，目前已支持：英语、中文、日语、德语、西班牙语、
+法语、土耳其语、乌克兰语。
+
+语言优先级：
+  1. 代码中显式指定语言
+  2. 环境变量 HERMES_LANGUAGE
+  3. 配置文件中的 display.language
+  4. 默认英语
+
+注意：AI 的对话输出和工具输出仍为英语，只翻译 Agent 自身的界面提示。
+
+─────────────────────────────────────────────────────────────────
+
+Lightweight internationalization (i18n) for Hermes static user-facing messages.
 
 Scope (thin slice, by design): only the highest-impact static strings shown
 to the user by Hermes itself -- approval prompts, a handful of gateway slash

@@ -1,3 +1,12 @@
+"""CLI手动压缩测试
+
+【产品经理理解要点】
+验证手动执行/compact命令时，不会嵌套缓存的系统提示词，防止压缩后对话质量下降。
+- 手动压缩不传递缓存的旧系统提示
+- 压缩后生成新的系统提示
+- 影响长对话压缩后的回复质量
+"""
+
 from contextlib import nullcontext
 
 from cli import HermesCLI

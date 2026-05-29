@@ -1,4 +1,13 @@
-"""Comprehensive tests for hermes_cli.profiles module.
+"""命令行界面测试 - 多配置文件
+
+【产品经理理解要点】
+验证命令行界面的多配置文件功能
+- 验证的功能: Comprehensive tests for hermes_cli.profiles module
+- 核心测试场景: title case normalized、default case insensitive、empty raises 等共97个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Comprehensive tests for hermes_cli.profiles module.
 
 Tests cover: validation, directory resolution, CRUD operations, active profile
 management, export/import, renaming, alias collision checks, profile isolation,

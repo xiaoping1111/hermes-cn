@@ -1,4 +1,16 @@
-"""
+"""微信平台适配器
+
+【产品经理理解要点】
+让 Agent 通过微信个人号与用户交互，使用腾讯 iLink Bot API：
+  - 长轮询接收消息
+  - 回复消息需携带最新的 context_token
+  - 媒体文件通过 AES-128-ECB 加密的 CDN 协议传输
+  - 支持二维码登录
+
+注意：微信接入涉及腾讯内部 API，稳定性受平台策略影响。
+
+─────────────────────────────────────────────────────────────────
+
 Weixin platform adapter.
 
 Connects Hermes Agent to WeChat personal accounts via Tencent's iLink Bot API.

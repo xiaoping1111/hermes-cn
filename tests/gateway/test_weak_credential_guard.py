@@ -1,4 +1,13 @@
-"""Tests for gateway weak credential rejection at startup.
+"""消息网关测试 - weak·凭证管理·guard
+
+【产品经理理解要点】
+验证消息网关的凭证管理功能
+- 验证的功能: Tests for gateway weak credential rejection at startup
+- 核心测试场景: rejects triple asterisk、rejects changeme、rejects your api key 等共11个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for gateway weak credential rejection at startup.
 
 Ported from openclaw/openclaw#64586: rejects known-weak placeholder
 tokens at gateway startup instead of letting them silently fail

@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
-"""
+"""语音合成工具 — 将文字转为语音
+
+【产品经理理解要点】
+让 AI 能把文字转为语音文件，支持多个语音引擎：
+  - Edge TTS(默认，免费)：微软 Edge 神经网络语音
+  - ElevenLabs：高质量语音，需 API Key
+  - OpenAI TTS：优质语音，需 API Key
+  - MiniMax TTS：支持声音克隆，需 API Key
+  - Google Gemini TTS：30种预置语音，需 API Key
+
+─────────────────────────────────────────────────────────────────
+
 Text-to-Speech Tool Module
 
 Built-in TTS providers:

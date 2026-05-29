@@ -1,4 +1,14 @@
-"""Gateway command help rendering tests."""
+"""消息网关测试 - gateway·命令处理·help
+
+【产品经理理解要点】
+验证消息网关的命令处理功能
+- 验证的功能: Gateway command help rendering tests
+- 核心测试场景: help sanitizes slash command mentions for telegram、commands sanitizes slash command mentions for telegram、help keeps non telegram slash command mentions unchanged
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Gateway command help rendering tests.
+"""
 
 import pytest
 

@@ -1,4 +1,14 @@
-"""Tests for hermes_cli.plugins_cmd — the ``hermes plugins`` CLI subcommand."""
+"""命令行界面测试 - plugins·cmd
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for hermes_cli.plugins_cmd — the ``hermes plugins`` CLI subcommand
+- 核心测试场景: valid simple name、valid name with hyphen and digits、rejects dot dot 等共65个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.plugins_cmd — the ``hermes plugins`` CLI subcommand.
+"""
 
 from __future__ import annotations
 

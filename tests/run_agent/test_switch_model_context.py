@@ -1,4 +1,13 @@
-"""Tests that switch_model does not inherit stale context_length overrides."""
+"""模型切换上下文测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中switch model clears previous config context length、switch model without config context length的正确性
+- switch model clears previous config context length的正确性验证
+- switch model without config context length的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests that switch_model does not inherit stale context_length overrides."""
 
 from unittest.mock import MagicMock, patch
 

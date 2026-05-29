@@ -1,4 +1,12 @@
-"""Scale benchmarks for the Kanban kernel.
+"""性能基准测试
+
+【产品经理理解要点】
+验证压力测试模块中相关功能的正确性
+- 模块功能单元测试覆盖
+- 影响压力测试的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Scale benchmarks for the Kanban kernel.
 
 Measures:
   - dispatch_once latency at 100, 1000, 10000 tasks
@@ -9,8 +17,7 @@ Measures:
 
 Results printed as a table. Saved to JSON for regression-diffing in CI
 or future reviews. Not a pass/fail test — records numbers so we know
-when a change regresses latency by 10x and can decide whether to care.
-"""
+when a change regresses latency by 10x and can decide whether to care."""
 
 import json
 import os

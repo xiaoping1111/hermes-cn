@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
-"""
+"""视觉分析工具 — 让 AI 理解图片内容
+
+【产品经理理解要点】
+让 AI 能"看图说话"——用户提供图片 URL，AI 用视觉模型分析内容：
+  - 识别图中物体、文字、场景
+  - 回答关于图片的问题
+  - 描述截图中的界面元素
+
+使用辅助视觉模型（支持多个提供商），不影响主要对话流程。
+
+─────────────────────────────────────────────────────────────────
+
 Vision Tools Module
 
 This module provides vision analysis tools that work with image URLs.

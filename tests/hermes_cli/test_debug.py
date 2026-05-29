@@ -1,4 +1,14 @@
-"""Tests for ``hermes debug`` CLI command and debug utilities."""
+"""命令行界面测试 - debug
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for ``hermes debug`` CLI command and debug utilities
+- 核心测试场景: upload paste rs success、upload paste rs bad response、upload paste rs network error 等共66个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for ``hermes debug`` CLI command and debug utilities.
+"""
 
 import os
 import sys

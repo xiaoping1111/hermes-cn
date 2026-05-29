@@ -1,4 +1,21 @@
-"""Abstract base class for pluggable memory providers.
+"""记忆提供者抽象基类 — 定义外部记忆插件的接口规范
+
+【产品经理理解要点】
+Agent 的记忆系统支持插件式扩展：除了内置的文件记忆（MEMORY.md），
+还可以接入第三方记忆服务（如 Honcho、Mem0、Hindsight 等）。
+
+这个模块定义了记忆插件必须实现的接口，就像"插座标准"——
+只要你的插头（记忆服务）符合标准，就能接入 Agent 使用。
+
+生命周期：
+  注册插件 → 初始化连接 → 每轮对话前预加载 → 每轮对话后同步
+  → 会话结束清理
+
+约束：同一时间只能有一个外部记忆插件运行（避免冲突）。
+
+─────────────────────────────────────────────────────────────────
+
+Abstract base class for pluggable memory providers.
 
 Memory providers give the agent persistent recall across sessions.
 The MemoryManager enforces a one-external-provider limit to prevent

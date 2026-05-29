@@ -1,4 +1,13 @@
-"""Tests for --ignore-user-config and --ignore-rules flags on `hermes chat`.
+"""命令行界面测试 - ignore·user·配置管理·flags
+
+【产品经理理解要点】
+验证命令行界面的配置管理功能
+- 验证的功能: Tests for --ignore-user-config and --ignore-rules flags on `hermes chat`
+- 核心测试场景: user config loaded when flag unset、user config skipped when flag set、flag ignored when set to other value 等共11个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for --ignore-user-config and --ignore-rules flags on `hermes chat`.
 
 Ported from openai/codex#18646 (`feat: add --ignore-user-config and --ignore-rules`).
 Codex's flags fully isolate a run from user-level config and exec-policy .rules

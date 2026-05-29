@@ -1,4 +1,15 @@
-"""Tests for trajectory_compressor.py — config, metrics, and compression logic."""
+"""轨迹压缩器测试
+
+【产品经理理解要点】
+验证对话轨迹压缩器的配置、指标统计和压缩逻辑。
+- 压缩配置的正确加载
+- 指标统计的准确性
+- 压缩产出的消息摘要格式
+- 影响轨迹数据的存储效率
+
+──────────────────────────────────────────────────────────────
+Tests for trajectory_compressor.py — config, metrics, and compression logic.
+"""
 
 import importlib
 import json

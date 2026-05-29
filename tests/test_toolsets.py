@@ -1,4 +1,15 @@
-"""Tests for toolsets.py — toolset resolution, validation, and composition."""
+"""工具集解析与验证测试
+
+【产品经理理解要点】
+验证工具集的解析、验证和组合逻辑。
+- 工具集名称到工具列表的解析
+- 自定义工具集的创建
+- 多工具集合并的去重
+- 影响用户自定义工具范围的功能
+
+──────────────────────────────────────────────────────────────
+Tests for toolsets.py — toolset resolution, validation, and composition.
+"""
 
 from tools.registry import ToolRegistry
 from toolsets import (

@@ -1,4 +1,13 @@
-"""Tests for agent/prompt_caching.py — Anthropic cache control injection."""
+"""提示词缓存测试
+
+【产品经理理解要点】
+验证Anthropic提示缓存控制标记的正确注入。
+- cache_control标记的正确位置
+- 影响API调用成本优化
+
+──────────────────────────────────────────────────────────────
+Tests for agent/prompt_caching.py — Anthropic cache control injection.
+"""
 
 import copy
 import pytest

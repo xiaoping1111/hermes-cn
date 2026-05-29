@@ -1,4 +1,15 @@
-"""Tests for tools/skills_sync.py — manifest-based skill seeding and updating."""
+"""技能同步测试
+
+【产品经理理解要点】
+验证工具系统模块中read missing manifest等45个场景的正确性
+- read missing manifest的正确性验证
+- write and read roundtrip v2的正确性验证
+- write manifest sorted的正确性验证
+- 另有42个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/skills_sync.py — manifest-based skill seeding and updating."""
 
 from pathlib import Path
 from unittest.mock import patch

@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Google Workspace OAuth2 setup for Hermes Agent.
+"""【产品经理理解要点】
+Google Workspace OAuth2认证配置工具——通过命令行完成Google账号授权，支持检查认证状态、存储OAuth凭证、生成授权URL、完成令牌交换。全程非交互式，由Agent驱动。
+─────────────────────────────────────────────────────────────────
+Google Workspace OAuth2 setup for Hermes Agent.
 
 Fully non-interactive — designed to be driven by the agent via terminal commands.
 The agent mediates between this script and the user (works on CLI, Telegram, Discord, etc.)

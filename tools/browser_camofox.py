@@ -1,4 +1,13 @@
-"""Camofox browser backend — local anti-detection browser via REST API.
+"""Camofox 反指纹浏览器后端
+
+【产品经理理解要点】
+提供基于 Camofox（Firefox 反检测浏览器）的网页操作能力，让 Agent 能像真人一样浏览网页而不被反爬检测。
+- 核心职责：通过 REST API 与自建 Camofox 服务器交互，提供快照、点击、输入、截图等浏览器操作
+- 关键业务概念：反指纹——Camofox 在 C++ 层修改浏览器指纹，比 JS 注入方案更难被检测；需自建或 Docker 部署 Camofox 服务
+- 在系统中的位置：浏览器工具的后端之一，当 CAMOFOX_URL 配置时替代默认 Playwright
+
+─────────────────────────────────────────────────────────────────
+Camofox browser backend — local anti-detection browser via REST API.
 
 Camofox-browser is a self-hosted Node.js server wrapping Camoufox (Firefox
 fork with C++ fingerprint spoofing).  It exposes a REST API that maps 1:1

@@ -1,4 +1,13 @@
-"""Tests for user-defined quick commands that bypass the agent loop."""
+"""快捷命令测试
+
+【产品经理理解要点】
+验证快捷命令的注册、匹配和执行逻辑。
+- 快捷命令的高效匹配
+- 影响命令操作的效率
+
+──────────────────────────────────────────────────────────────
+Tests for user-defined quick commands that bypass the agent loop.
+"""
 import os
 import subprocess
 from unittest.mock import MagicMock, patch, AsyncMock

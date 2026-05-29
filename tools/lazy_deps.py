@@ -1,4 +1,13 @@
 """
+懒加载依赖安装器
+
+【产品经理理解要点】
+让用户按需安装可选功能的依赖包，而非一次性安装所有——装了哪个功能才下哪个包，减少磁盘占用和安装失败风险。
+- 核心职责：在功能首次使用时检查依赖，缺失则自动 pip install；允许用户禁用此行为
+- 关键业务概念：安全模型——仅允许白名单内的包名、仅 venv 内安装、禁止 git+https 等危险源、可全局关闭
+- 在系统中的位置：Mistral TTS、ElevenLabs、Slack 等可选后端的依赖守门人
+
+─────────────────────────────────────────────────────────────────
 Lazy dependency installer for opt-in Hermes Agent backends.
 
 Many Hermes features (Mistral TTS, ElevenLabs TTS, Honcho memory, Bedrock,

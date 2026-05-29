@@ -1,4 +1,14 @@
 #!/usr/bin/env python3
+"""skillshubClawHub测试
+
+【产品经理理解要点】
+验证工具系统模块中search uses listing endpoint as fallback等9个场景的正确性
+- search uses listing endpoint as fallback的正确性验证
+- search falls back to exact slug when search...的正确性验证
+- search repairs poisoned cache with exact slug lookup的正确性验证
+- 另有6个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性"""
+
 
 import unittest
 from unittest.mock import patch

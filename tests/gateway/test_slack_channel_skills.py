@@ -1,4 +1,14 @@
-"""Tests for Slack channel_skill_bindings auto-skill resolution."""
+"""消息网关测试 - 频道技能绑定
+
+【产品经理理解要点】
+验证消息网关频道技能绑定的正确性
+- 验证的功能: Tests for Slack channel_skill_bindings auto-skill resolution
+- 核心测试场景: no bindings returns none、match by dm channel id、match by parent id for thread 等共11个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Slack channel_skill_bindings auto-skill resolution.
+"""
 from unittest.mock import MagicMock
 
 

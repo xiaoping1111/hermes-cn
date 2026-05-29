@@ -1,4 +1,16 @@
-"""Skip the per-file shell linter when LSP will handle the same file.
+"""LSP接管时跳过Shell语法检查器测试
+
+【产品经理理解要点】
+验证当LSP语言服务器已活跃时，冗余的Shell语法检查器（如npx tsc）会被跳过。因为npx tsc无法读取tsconfig.json导致误报大量假阳性错误（如"Cannot find Promise"），每次编辑浪费高达25K token。LSP层能正确读取项目配置，提供真实诊断。
+- 验证.ts/.go/.rs文件在LSP活跃时跳过shell检查器
+- 验证.py/.js文件的内置检查器（py_compile/node --check）始终运行
+- 验证.tsx文件的兼容性：不在LINTERS表中，无论LSP状态都跳过shell检查器
+- 业务影响：如果这些测试失败，AI代理可能误报大量假阳性错误，浪费token并误导用户
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Skip the per-file shell linter when LSP will handle the same file.
 
 The per-file ``npx tsc --noEmit FILE.ts`` shell linter cannot see
 ``tsconfig.json`` (a documented ``tsc`` quirk: explicit file args bypass

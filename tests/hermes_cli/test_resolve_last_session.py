@@ -1,4 +1,14 @@
-"""Verify `hermes -c` picks the session the user most recently used."""
+"""命令行界面测试 - resolve·last·会话管理
+
+【产品经理理解要点】
+验证命令行界面的会话管理功能
+- 验证的功能: Verify `hermes -c` picks the session the user most recently used
+- 核心测试场景: resolve last session prefers last active over started at、search sessions exposes last active column、resolve last session returns none when empty 等共6个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Verify `hermes -c` picks the session the user most recently used.
+"""
 
 from __future__ import annotations
 

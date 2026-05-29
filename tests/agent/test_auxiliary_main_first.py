@@ -1,4 +1,13 @@
-"""Regression tests for the ``auto`` → main-model-first policy.
+"""辅助主入口优先级测试
+
+【产品经理理解要点】
+验证辅助模型的主入口选择逻辑，确保优先使用主要端点。
+- 主端点优先选择
+- 备选端点的降级逻辑
+- 影响辅助模型的路由决策
+
+──────────────────────────────────────────────────────────────
+Regression tests for the ``auto`` → main-model-first policy.
 
 Prior to this change, aggregator users (OpenRouter / Nous Portal) had aux
 tasks routed through a cheap provider-side default (Gemini Flash) while

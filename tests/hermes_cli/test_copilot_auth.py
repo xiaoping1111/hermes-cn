@@ -1,4 +1,14 @@
-"""Tests for hermes_cli.copilot_auth — Copilot token validation and resolution."""
+"""命令行界面测试 - Copilot集成·认证授权
+
+【产品经理理解要点】
+验证命令行界面的Copilot集成认证授权功能
+- 验证的功能: Tests for hermes_cli.copilot_auth — Copilot token validation and resolution
+- 核心测试场景: classic pat rejected、oauth token accepted、fine grained pat accepted 等共25个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.copilot_auth — Copilot token validation and resolution.
+"""
 
 import os
 import pytest

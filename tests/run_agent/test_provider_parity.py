@@ -1,8 +1,18 @@
-"""Provider parity tests: verify that AIAgent builds correct API kwargs
+"""模型提供者对齐验证测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中uses chat completions format等83个场景的正确性
+- uses chat completions format的正确性验证
+- includes reasoning in extra body的正确性验证
+- includes tools的正确性验证
+- 另有80个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Provider parity tests: verify that AIAgent builds correct API kwargs
 and handles responses properly for all supported providers.
 
-Ensures changes to one provider path don't silently break another.
-"""
+Ensures changes to one provider path don't silently break another."""
 
 import json
 import os

@@ -1,4 +1,13 @@
-"""Tests for automatic MCP reload when config.yaml mcp_servers section changes."""
+"""CLI MCP配置监控测试
+
+【产品经理理解要点】
+验证CLI对MCP配置文件变更的自动监控和热重载。
+- 配置文件变更的实时检测
+- 影响MCP工具配置的运维便利性
+
+──────────────────────────────────────────────────────────────
+Tests for automatic MCP reload when config.yaml mcp_servers section changes.
+"""
 import time
 from pathlib import Path
 from unittest.mock import MagicMock, patch

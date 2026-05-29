@@ -1,4 +1,14 @@
-"""Tests for hermes_cli.relaunch — unified self-relaunch utility."""
+"""命令行界面测试 - relaunch
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for hermes_cli.relaunch — unified self-relaunch utility
+- 核心测试场景: prefers absolute argv0 when executable、resolves relative argv0、falls back to path which 等共26个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.relaunch — unified self-relaunch utility.
+"""
 
 import sys
 

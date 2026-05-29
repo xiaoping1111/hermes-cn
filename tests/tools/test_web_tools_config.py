@@ -1,12 +1,22 @@
-"""Tests for web backend client configuration and singleton behavior.
+"""Web工具配置测试
+
+【产品经理理解要点】
+验证工具系统模块中no config raises with helpful message等49个场景的正确性
+- no config raises with helpful message的正确性验证
+- tool gateway domain builds firecrawl gateway origin的正确性验证
+- tool gateway scheme can switch derived gateway origin...的正确性验证
+- 另有46个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for web backend client configuration and singleton behavior.
 
 Coverage:
   _get_firecrawl_client() — configuration matrix, singleton caching,
   constructor failure recovery, return value verification, edge cases.
   _get_backend() — backend selection logic with env var combinations.
   _get_parallel_client() — Parallel client configuration, singleton caching.
-  check_web_api_key() — unified availability check across all web backends.
-"""
+  check_web_api_key() — unified availability check across all web backends."""
 
 import importlib
 import json

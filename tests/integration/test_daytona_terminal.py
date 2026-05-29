@@ -1,8 +1,18 @@
-"""Integration tests for the Daytona terminal backend.
+"""Daytona沙箱终端测试
+
+【产品经理理解要点】
+验证系统集成模块中echo等8个场景的正确性
+- echo的正确性验证
+- python version的正确性验证
+- nonzero exit的正确性验证
+- 另有5个测试场景覆盖
+- 影响系统集成的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Integration tests for the Daytona terminal backend.
 
 Requires DAYTONA_API_KEY to be set. Run with:
-    TERMINAL_ENV=daytona pytest tests/integration/test_daytona_terminal.py -v
-"""
+    TERMINAL_ENV=daytona pytest tests/integration/test_daytona_terminal.py -v"""
 
 import json
 import os

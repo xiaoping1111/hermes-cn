@@ -1,4 +1,14 @@
-"""Base class for all Hermes execution environment backends.
+"""执行环境基类 — 所有命令运行环境的公共逻辑
+
+【产品经理理解要点】
+本模块是所有执行环境的"底盘"，包含命令执行的通用流程：环境变量保持、工作目录追踪、超时控制、中断处理。
+- 核心模式：每次执行命令都启动新的bash进程，通过"快照文件"保持环境变量跨调用持久化
+- CWD追踪：命令执行后自动记录当前工作目录，下次命令在正确目录下执行
+- 中断处理：用户取消命令时，自动终止进程组，避免残留后台进程
+- 超时机制：超时后自动终止命令并返回提示，防止命令无限运行
+
+─────────────────────────────────────────────────────────────────
+Base class for all Hermes execution environment backends.
 
 Unified spawn-per-call model: every command spawns a fresh ``bash -c`` process.
 A session snapshot (env vars, functions, aliases) is captured once at init and

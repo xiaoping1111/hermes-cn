@@ -1,9 +1,19 @@
-"""Tests for config.get() null-coalescing in tool configuration.
+"""配置空值守卫测试
+
+【产品经理理解要点】
+验证工具系统模块中explicit null provider returns default等10个场景的正确性
+- explicit null provider returns default的正确性验证
+- missing provider returns default的正确性验证
+- valid provider passed through的正确性验证
+- 另有7个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for config.get() null-coalescing in tool configuration.
 
 YAML ``null`` values (or ``~``) for a present key make ``dict.get(key, default)``
 return ``None`` instead of the default — calling ``.lower()`` on that raises
-``AttributeError``.  These tests verify the ``or`` coalescing guards.
-"""
+``AttributeError``.  These tests verify the ``or`` coalescing guards."""
 
 from unittest.mock import patch
 import pytest

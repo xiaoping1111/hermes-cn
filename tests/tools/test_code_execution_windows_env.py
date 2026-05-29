@@ -1,4 +1,15 @@
-"""Tests for execute_code env scrubbing on Windows.
+"""代码执行Windows兼容环境变量测试
+
+【产品经理理解要点】
+验证工具系统模块中contains winsock required vars等24个场景的正确性
+- contains winsock required vars的正确性验证
+- contains subprocess required vars的正确性验证
+- contains user profile vars的正确性验证
+- 另有21个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for execute_code env scrubbing on Windows.
 
 On Windows the child process needs a small set of OS-essential env vars
 (SYSTEMROOT, WINDIR, COMSPEC, ...) to run.  Without SYSTEMROOT in particular,
@@ -17,8 +28,7 @@ must be written as UTF-8 on every platform — the generated stub contains
 em-dash/en-dash characters in docstrings, and the default ``open(path, "w")``
 on Windows uses the system locale (cp1252 typically), corrupting those
 bytes.  The child then fails to import with a SyntaxError:
-``'utf-8' codec can't decode byte 0x97``.
-"""
+``'utf-8' codec can't decode byte 0x97``."""
 
 import os
 import socket

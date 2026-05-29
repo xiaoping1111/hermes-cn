@@ -1,4 +1,13 @@
-"""Regression tests for the config.yaml → env var bridge in gateway/run.py.
+"""消息网关测试 - 配置管理·环境配置·bridge·认证授权
+
+【产品经理理解要点】
+验证消息网关的配置管理环境配置认证授权功能
+- 验证的功能: Regression tests for the config.yaml → env var bridge in gateway/run.py
+- 核心测试场景: config max turns wins over stale env、config gateway timeout wins over stale env、config display busy input mode wins over stale env 等共5个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests for the config.yaml → env var bridge in gateway/run.py.
 
 Guards against the 60-vs-500 bug where a stale `.env HERMES_MAX_ITERATIONS=60`
 entry silently shadowed `agent.max_turns: 500` in config.yaml because the

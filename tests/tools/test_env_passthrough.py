@@ -1,4 +1,15 @@
-"""Tests for tools.env_passthrough — skill and config env var passthrough."""
+"""环境变量透传测试
+
+【产品经理理解要点】
+验证工具系统模块中register and check等17个场景的正确性
+- register and check的正确性验证
+- register multiple的正确性验证
+- clear的正确性验证
+- 另有14个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools.env_passthrough — skill and config env var passthrough."""
 
 import os
 import pytest

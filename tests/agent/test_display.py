@@ -1,4 +1,14 @@
-"""Tests for agent/display.py — build_tool_preview() and inline diff previews."""
+"""工具预览显示测试
+
+【产品经理理解要点】
+验证工具调用的预览信息构建和内联差异展示。
+- 工具调用的友好预览文本
+- 文件编辑的内联diff展示
+- 影响用户对工具运行状态的可视性
+
+──────────────────────────────────────────────────────────────
+Tests for agent/display.py — build_tool_preview() and inline diff previews.
+"""
 
 import os
 import json

@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Google Workspace API CLI for Hermes Agent.
+"""【产品经理理解要点】
+Google Workspace API命令行工具——通过命令行操作Gmail邮件、Google日历事件、Google Drive文件、Google Docs文档等。优先使用gws CLI，降级使用Python客户端库。
+─────────────────────────────────────────────────────────────────
+Google Workspace API CLI for Hermes Agent.
 
 Uses the Google Workspace CLI (`gws`) when available, but preserves the
 existing Hermes-facing JSON contract and falls back to the Python client

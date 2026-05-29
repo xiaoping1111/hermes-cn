@@ -1,4 +1,15 @@
-"""Tests for agent.retry_utils jittered backoff."""
+"""重试工具抖动退避测试
+
+【产品经理理解要点】
+验证API调用的指数退避重试策略，包括抖动和最大延迟限制。
+- 退避延迟按指数增长
+- 抖动在合理范围内随机化
+- 最大延迟上限生效
+- 影响API限流场景下的恢复能力
+
+──────────────────────────────────────────────────────────────
+Tests for agent.retry_utils jittered backoff.
+"""
 
 import threading
 

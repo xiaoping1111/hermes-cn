@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""
+"""【产品经理理解要点】
+ComfyUI WebSocket实时监控——连接ComfyUI的WebSocket，实时展示工作流执行事件（节点开始/完成、采样进度、缓存、错误），可选保存预览帧到磁盘。
+─────────────────────────────────────────────────────────────────
 ws_monitor.py — Real-time ComfyUI WebSocket monitor.
 
 Connects to /ws and pretty-prints execution events: node start/finish, sampling

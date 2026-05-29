@@ -1,4 +1,15 @@
-"""Runtime tests for tool-call loop guardrails."""
+"""工具调用护栏运行时测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中default sequential path warns repeated exact failure with...等8个场景的正确性
+- default sequential path warns repeated exact failure without...的正确性验证
+- config enabled hard stop blocks repeated exact failure...的正确性验证
+- sequential after call appends guidance to tool result...的正确性验证
+- 另有5个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Runtime tests for tool-call loop guardrails."""
 
 import json
 import uuid

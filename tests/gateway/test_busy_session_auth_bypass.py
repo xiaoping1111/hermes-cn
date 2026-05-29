@@ -1,4 +1,13 @@
-"""Tests for #17775: unauthorized users must be blocked in the busy-session path.
+"""消息网关测试 - busy·会话管理·认证授权·bypass
+
+【产品经理理解要点】
+验证消息网关的会话管理认证授权功能
+- 验证的功能: Tests for #17775: unauthorized users must be blocked in the busy-session path
+- 核心测试场景: unauthorized user dropped in busy path、authorized user still processed in busy path、unauthorized user during drain still blocked 等共4个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for #17775: unauthorized users must be blocked in the busy-session path.
 
 When an active session exists for a shared thread (thread_sessions_per_user=False),
 messages from non-allowlisted users must be silently dropped — matching the cold-path

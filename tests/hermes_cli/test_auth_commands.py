@@ -1,4 +1,14 @@
-"""Tests for auth subcommands backed by the credential pool."""
+"""命令行界面测试 - 认证授权·命令处理
+
+【产品经理理解要点】
+验证命令行界面的认证授权命令处理功能
+- 验证的功能: Tests for auth subcommands backed by the credential pool
+- 核心测试场景: auth add api key persists manual entry、auth add anthropic oauth persists pool entry、auth add nous oauth persists pool entry 等共46个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for auth subcommands backed by the credential pool.
+"""
 
 from __future__ import annotations
 

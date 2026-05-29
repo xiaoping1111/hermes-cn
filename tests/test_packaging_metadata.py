@@ -1,3 +1,12 @@
+"""打包元数据测试
+
+【产品经理理解要点】
+验证pyproject.toml中的打包配置，确保依赖声明和文件包含列表正确。
+- faster-whisper不在基础依赖中（仅语音可选依赖）
+- MANIFEST.in包含技能文件
+- 影响pip安装的包完整性
+"""
+
 from pathlib import Path
 import tomllib
 

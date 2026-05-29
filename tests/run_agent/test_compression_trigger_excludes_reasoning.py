@@ -1,9 +1,18 @@
-"""Verify compression trigger excludes reasoning/completion tokens (#12026).
+"""压缩触发排除推理测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中high reasoning tokens should not trigger compression、high prompt tokens should trigger compression、zero prompt tokens falls back的正确性
+- high reasoning tokens should not trigger compression的正确性验证
+- high prompt tokens should trigger compression的正确性验证
+- zero prompt tokens falls back的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Verify compression trigger excludes reasoning/completion tokens (#12026).
 
 Thinking models (GLM-5.1, QwQ, DeepSeek R1) inflate completion_tokens with
 reasoning tokens that don't consume context window space.  The compression
-trigger must use only prompt_tokens so sessions aren't prematurely split.
-"""
+trigger must use only prompt_tokens so sessions aren't prematurely split."""
 
 import types
 import pytest

@@ -1,9 +1,19 @@
-"""Tests for agent.api_max_retries config surface.
+"""API最大重试配置测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中default api max retries is three等4个场景的正确性
+- default api max retries is three的正确性验证
+- api max retries honors config override的正确性验证
+- api max retries clamps below one to one的正确性验证
+- 另有1个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for agent.api_max_retries config surface.
 
 Closes #11616 — make the hardcoded ``max_retries = 3`` in the agent's API
 retry loop user-configurable so fallback-provider setups can fail over
-faster on flaky primaries instead of burning ~3x180s on the same stall.
-"""
+faster on flaky primaries instead of burning ~3x180s on the same stall."""
 from unittest.mock import MagicMock, patch
 
 from run_agent import AIAgent

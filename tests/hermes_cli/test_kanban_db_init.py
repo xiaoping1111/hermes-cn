@@ -1,5 +1,19 @@
 from __future__ import annotations
 
+"""命令行界面测试 - 看板数据库
+
+【产品经理理解要点】
+验证命令行界面看板数据库的正确性
+- 验证的功能: 看板数据库初始化
+- 核心测试场景: connect initialization is thread safe
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - 看板任务管理·数据库操作·init
+
+测试CLI命令处理与配置管理中kanban相关的db相关的init功能
+"""
+
 import threading
 from pathlib import Path
 

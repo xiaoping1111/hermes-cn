@@ -1,4 +1,14 @@
-"""Fixtures shared across hermes_cli kanban tests."""
+"""命令行界面测试共享配置
+
+【产品经理理解要点】
+为命令行界面测试提供共享fixture和模拟配置
+- 验证的功能: Fixtures shared across hermes_cli kanban tests
+- 核心测试场景: 命令行界面基础功能验证
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Fixtures shared across hermes_cli kanban tests.
+"""
 
 from __future__ import annotations
 

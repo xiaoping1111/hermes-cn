@@ -1,4 +1,13 @@
-"""Tests for hermes_cli.auth._default_verify platform-aware fallback.
+"""命令行界面测试 - 认证授权·ssl·macos
+
+【产品经理理解要点】
+验证命令行界面的认证授权功能
+- 验证的功能: Tests for hermes_cli.auth._default_verify platform-aware fallback
+- 核心测试场景: returns ssl context on darwin、returns true on linux、returns true on windows 等共9个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.auth._default_verify platform-aware fallback.
 
 On macOS with Homebrew Python, the system OpenSSL cannot locate the
 system trust store, so we explicitly load certifi's bundle. On other

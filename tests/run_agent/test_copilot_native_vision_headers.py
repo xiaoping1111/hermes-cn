@@ -1,3 +1,12 @@
+"""Copilot原生视觉请求头测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中request client adds copilot vision header for native imag...、request client leaves copilot text requests without visio...、request client does not add vision header after non visio...的正确性
+- request client adds copilot vision header for native...的正确性验证
+- request client leaves copilot text requests without vision...的正确性验证
+- request client does not add vision header after...的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性"""
+
 from unittest.mock import MagicMock, patch
 
 from run_agent import AIAgent

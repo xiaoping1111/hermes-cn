@@ -1,4 +1,13 @@
-"""Tests that provider selection via `hermes model` always persists correctly.
+"""命令行界面测试 - 模型管理·提供商·持久化
+
+【产品经理理解要点】
+验证命令行界面的模型管理提供商持久化功能
+- 验证的功能: Tests that provider selection via `hermes model` always persists correctly
+- 核心测试场景: string model becomes dict、dict model stays dict、update config for provider uses atomic yaml write 等共12个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests that provider selection via `hermes model` always persists correctly.
 
 Regression tests for the bug where _save_model_choice could save config.model
 as a plain string, causing subsequent provider writes (which check

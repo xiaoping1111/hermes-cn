@@ -1,7 +1,17 @@
-"""Tests for Mem0 API v2 compatibility — filters param and dict response unwrapping.
+"""Mem0 V2记忆服务测试
 
-Salvaged from PRs #5301 (qaqcvc) and #5117 (vvvanguards).
-"""
+【产品经理理解要点】
+验证功能插件模块中search uses filters等15个场景的正确性
+- search uses filters的正确性验证
+- profile uses filters的正确性验证
+- prefetch uses filters的正确性验证
+- 另有12个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for Mem0 API v2 compatibility — filters param and dict response unwrapping.
+
+Salvaged from PRs #5301 (qaqcvc) and #5117 (vvvanguards)."""
 
 import json
 import pytest

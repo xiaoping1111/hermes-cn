@@ -1,4 +1,15 @@
-"""Tests for richer stream-drop diagnostics in agent.log.
+"""流丢弃日志测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中stream diag init returns well formed dict等10个场景的正确性
+- stream diag init returns well formed dict的正确性验证
+- stream diag capture response collects known headers的正确性验证
+- stream diag capture response safe with none的正确性验证
+- 另有7个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for richer stream-drop diagnostics in agent.log.
 
 When a subagent's stream drops mid-tool-call, the WARNING in agent.log must
 carry enough breadcrumbs to answer "WHY did it drop" without requiring a
@@ -12,8 +23,7 @@ verbose-mode rerun.  Specifically:
 
 Plus the user-visible UI line gains an ``after Xs`` suffix when timing data
 is available, distinguishing "couldn't connect at all" from "died mid-stream
-after N seconds" (very different root causes).
-"""
+after N seconds" (very different root causes)."""
 
 from __future__ import annotations
 

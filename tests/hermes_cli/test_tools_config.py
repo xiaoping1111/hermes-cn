@@ -1,4 +1,14 @@
-"""Tests for hermes_cli.tools_config platform tool persistence."""
+"""命令行界面测试 - 工具系统·配置管理
+
+【产品经理理解要点】
+验证命令行界面的工具系统配置管理功能
+- 验证的功能: Tests for hermes_cli.tools_config platform tool persistence
+- 核心测试场景: agent disabled toolsets suppresses across platforms、agent disabled toolsets with explicit platform config、agent disabled toolsets empty list is noop 等共67个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.tools_config platform tool persistence.
+"""
 
 from unittest.mock import patch
 

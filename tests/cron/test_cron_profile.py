@@ -1,4 +1,13 @@
-"""Tests for per-job profile support in cron jobs.
+"""定时任务测试 - cron·多配置文件
+
+【产品经理理解要点】
+验证定时任务调度引擎的多配置文件功能
+- 验证的功能: Tests for per-job profile support in cron jobs
+- 核心测试场景: none and empty return none、default profile is valid and normalized、named profile must exist and is normalized 等共20个场景
+- 业务影响: 定时任务可能无法正确调度执行，影响自动化工作流的可靠性
+
+─────────────────────────────────────────────────────────────────
+Tests for per-job profile support in cron jobs.
 
 Covers data-layer validation/storage, cronjob tool plumbing, scheduler runtime
 HERMES_HOME scoping, and tick() serialization for profile jobs.

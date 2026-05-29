@@ -1,4 +1,20 @@
-"""Rate limit tracking for inference API responses.
+"""速率限制追踪 — 监控 API 调用额度和剩余量
+
+【产品经理理解要点】
+AI 模型提供商会限制每分钟/每小时的请求次数和 token 用量。
+这个模块追踪这些限制，让用户知道"还剩多少额度"。
+
+追踪的指标：
+  - 每分钟请求数（RPM）：1分钟内还能调用多少次
+  - 每小时请求数（RPH）：1小时内还能调用多少次
+  - 每分钟 Token 数（TPM）：1分钟内还能用多少 token
+  - 每小时 Token 数（TPH）：1小时内还能用多少 token
+
+用户可以通过 /usage 命令查看当前用量情况。
+
+─────────────────────────────────────────────────────────────────
+
+Rate limit tracking for inference API responses.
 
 Captures x-ratelimit-* headers from provider responses and provides
 formatted display for the /usage slash command.  Currently supports

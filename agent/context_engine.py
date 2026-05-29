@@ -1,28 +1,40 @@
-"""Abstract base class for pluggable context engines.
+"""上下文引擎抽象基类 — 定义对话压缩的标准接口
 
-A context engine controls how conversation context is managed when
-approaching the model's token limit. The built-in ContextCompressor
-is the default implementation. Third-party engines (e.g. LCM) can
-replace it via the plugin system or by being placed in the
-``plugins/context_engine/<name>/`` directory.
+【产品经理理解要点】
+这个模块定义了"上下文引擎"的标准接口。上下文引擎是控制对话长度的策略层：
+当对话超过 AI 的记忆容量时，由上下文引擎决定如何压缩。
 
-Selection is config-driven: ``context.engine`` in config.yaml.
-Default is ``"compressor"`` (the built-in). Only one engine is active.
+默认实现是 ContextCompressor（用辅助模型做摘要），但通过这个抽象接口，
+可以替换为其他策略（如基于图的长期记忆系统），而不需要改 Agent 核心代码。
 
-The engine is responsible for:
-  - Deciding when compaction should fire
-  - Performing compaction (summarization, DAG construction, etc.)
-  - Optionally exposing tools the agent can call (e.g. lcm_grep)
-  - Tracking token usage from API responses
+生命周期：
+  创建引擎 → 注册到Agent → 会话开始(on_session_start)
+  → 每次AI响应后更新token统计(update_from_response)
+  → 每轮结束时检查是否需要压缩(should_compress)
+  → 需要时执行压缩(compress)
 
-Lifecycle:
-  1. Engine is instantiated and registered (plugin register() or default)
-  2. on_session_start() called when a conversation begins
-  3. update_from_response() called after each API response with usage data
-  4. should_compress() checked after each turn
-  5. compress() called when should_compress() returns True
-  6. on_session_end() called at real session boundaries (CLI exit, /reset,
-     gateway session expiry) — NOT per-turn
+就像手机内存管理策略：可以选"杀后台"策略，也可以选"压缩缓存"策略，
+接口统一，策略可换。
+
+─────────────────────────────────────────────────────────────────
+
+可插拔上下文引擎的抽象基类。
+
+上下文引擎控制当对话接近模型的 token 限制时如何管理上下文。
+内置的 `ContextCompressor` 是默认实现。
+
+引擎的主要职责包括：
+  - 决定何时触发压缩（Compaction）
+  - 执行压缩操作（如总结、丢弃旧消息、构建 DAG 等）
+  - 可选地向代理公开工具（如 lcm_grep）
+  - 跟踪 API 响应中的 token 使用情况
+
+生命周期：
+  1. 实例化并注册。
+  2. `on_session_start()`: 会话开始时调用。
+  3. `update_from_response()`: 每次 API 响应后调用，更新 token 统计。
+  4. `should_compress()`: 每一轮结束后检查是否需要压缩。
+  5. `compress()`: 当需要压缩时调用，返回缩减后的消息列表。
 """
 
 from abc import ABC, abstractmethod

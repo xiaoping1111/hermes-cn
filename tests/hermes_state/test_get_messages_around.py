@@ -1,10 +1,20 @@
-"""Tests for SessionDB.get_messages_around (anchored-window primitive).
+"""上下文消息获取测试
+
+【产品经理理解要点】
+验证Hermes状态管理模块中returns window around anchor等12个场景的正确性
+- returns window around anchor的正确性验证
+- window zero returns only anchor的正确性验证
+- negative window clamps to zero的正确性验证
+- 另有9个测试场景覆盖
+- 影响Hermes状态管理的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for SessionDB.get_messages_around (anchored-window primitive).
 
 Used by session_search both for the discovery shape (FTS5 match as anchor)
 and the scroll shape (user-supplied anchor). Returns a window of messages
 around the anchor plus before/after counts so callers can detect session
-boundaries.
-"""
+boundaries."""
 import pytest
 
 from hermes_state import SessionDB

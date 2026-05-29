@@ -1,4 +1,13 @@
-"""Targeted tests for ``utils.base_url_hostname`` and ``base_url_host_matches``.
+"""URL主机名解析测试
+
+【产品经理理解要点】
+验证从API基础URL中提取主机名的逻辑，防止子字符串匹配导致的误判。
+- 正确提取带/不带协议的URL主机名
+- 防止api.x.ai被误匹配为api.x.ai.com
+- 影响提供商路由和认证的准确性
+
+──────────────────────────────────────────────────────────────
+Targeted tests for ``utils.base_url_hostname`` and ``base_url_host_matches``.
 
 These helpers are used across provider routing, auxiliary client, setup
 wizards, billing routes, and the trajectory compressor to avoid the

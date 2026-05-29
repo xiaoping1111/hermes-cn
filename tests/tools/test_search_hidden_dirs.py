@@ -1,4 +1,15 @@
-"""Tests that search_files excludes hidden directories by default.
+"""搜索隐藏目录测试
+
+【产品经理理解要点】
+验证工具系统模块中find skips hub cache files等9个场景的正确性
+- find skips hub cache files的正确性验证
+- find skips git internals的正确性验证
+- find still returns visible files的正确性验证
+- 另有6个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests that search_files excludes hidden directories by default.
 
 Regression for #1558: the agent read a 3.5MB skills hub catalog cache
 file (.hub/index-cache/clawhub_catalog_v1.json) that contained adversarial
@@ -10,8 +21,7 @@ does by default. This made search_files behavior inconsistent depending
 on which backend was available.
 
 Fix: _search_files (find) and _search_with_grep both now exclude hidden
-directories, matching ripgrep's default behavior.
-"""
+directories, matching ripgrep's default behavior."""
 
 import os
 import subprocess

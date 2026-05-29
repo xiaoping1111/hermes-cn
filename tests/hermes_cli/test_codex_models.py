@@ -1,3 +1,17 @@
+"""命令行界面测试 - Codex运行时·模型管理
+
+【产品经理理解要点】
+验证命令行界面的Codex运行时模型管理功能
+- 验证的功能: Codex模型配置管理
+- 核心测试场景: get codex model ids prioritizes default and cache、setup wizard codex import resolves、get codex model ids falls back to curated defaults 等共19个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - Codex执行路径·模型切换与管理
+
+测试CLI命令处理与配置管理中codex相关的models功能
+"""
+
 import json
 from unittest.mock import patch
 

@@ -1,4 +1,13 @@
-"""Regression tests for MCP server availability in cron jobs.
+"""定时任务测试 - 调度器MCP初始化
+
+【产品经理理解要点】
+验证定时任务调度引擎调度器MCP初始化的正确性
+- 验证的功能: Regression tests for MCP server availability in cron jobs
+- 核心测试场景: no agent cron job does not initialize mcp
+- 业务影响: 定时任务可能无法正确调度执行，影响自动化工作流的可靠性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for MCP server availability in cron jobs.
 
 Background
 ==========

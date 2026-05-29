@@ -1,4 +1,14 @@
-"""Tests for the codex MCP plugin migration helper."""
+"""命令行界面测试 - Codex运行时
+
+【产品经理理解要点】
+验证命令行界面Codex运行时的正确性
+- 验证的功能: Tests for the codex MCP plugin migration helper
+- 核心测试场景: stdio basic、stdio with cwd、http basic 等共67个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the codex MCP plugin migration helper.
+"""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""Tests for step_callback backward compatibility.
+"""消息网关测试 - step·callback·compat
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for step_callback backward compatibility
+- 核心测试场景: dict prev tools produce string tool names、string prev tools still work、empty prev tools 等共4个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for step_callback backward compatibility.
 
 Verifies that the gateway's step_callback normalization keeps
 ``tool_names`` as a list of strings for backward-compatible hooks,

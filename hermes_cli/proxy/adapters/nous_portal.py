@@ -1,4 +1,13 @@
-"""Nous Portal upstream adapter.
+"""Nous Portal 上游适配器
+
+【产品经理理解要点】
+读取用户的 Nous OAuth 状态，自动刷新 access token，解析 agent_key 兼容凭证，
+为代理服务器提供上游 base URL 和 bearer token。
+- 兼容 NAS invoke JWT 和旧版 session key 两种认证模式
+- Token 接近过期时自动刷新，刷新失败时隔离损坏状态
+
+─────────────────────────────────────────────────────────────────
+Nous Portal upstream adapter.
 
 Reads the user's Nous OAuth state from ``~/.hermes/auth.json`` through the
 shared runtime resolver, refreshes the access token and resolves the

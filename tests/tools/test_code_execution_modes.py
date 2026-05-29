@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
-"""Tests for execute_code's strict / project execution modes.
+"""代码执行执行模式测试
+
+【产品经理理解要点】
+验证工具系统模块中default is project等36个场景的正确性
+- default is project的正确性验证
+- config project的正确性验证
+- config strict的正确性验证
+- 另有33个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for execute_code's strict / project execution modes.
 
 The mode switch controls two things:
   - working directory: staging tmpdir (strict) vs session CWD (project)
@@ -9,8 +20,7 @@ Security-critical invariants — env scrubbing, tool whitelist, resource caps �
 must apply identically in both modes. These tests guard all three layers.
 
 Mode is sourced exclusively from ``code_execution.mode`` in config.yaml —
-there is no env-var override. Tests patch ``_load_config`` directly.
-"""
+there is no env-var override. Tests patch ``_load_config`` directly."""
 
 import json
 import os

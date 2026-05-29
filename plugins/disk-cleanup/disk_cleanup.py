@@ -1,5 +1,12 @@
-"""disk_cleanup — ephemeral file cleanup for Hermes Agent.
+"""磁盘清理核心逻辑 — 临时文件清理规则
 
+【产品经理理解要点】
+磁盘清理的核心规则引擎，定义了各类临时/测试文件的自动清理策略。
+- 测试文件：任务结束时立即删除(age>=0)
+- 临时构建产物：按年龄分级清理
+- 规则类型：按文件路径模式匹配，确定性规则无需AI参与
+
+─────────────────────────────────────────────────────────────────
 Library module wrapping the deterministic cleanup rules written by
 @LVT382009 in PR #12212. The plugin ``__init__.py`` wires these
 functions into ``post_tool_call`` and ``on_session_end`` hooks so

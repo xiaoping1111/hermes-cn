@@ -1,4 +1,15 @@
-"""Tests for _parse_env_var and _get_env_config env-var validation."""
+"""环境变量解析测试
+
+【产品经理理解要点】
+验证工具系统模块中valid int等12个场景的正确性
+- valid int的正确性验证
+- valid float的正确性验证
+- valid json的正确性验证
+- 另有9个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for _parse_env_var and _get_env_config env-var validation."""
 
 import importlib
 import json

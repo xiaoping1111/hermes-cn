@@ -1,4 +1,12 @@
-"""Rendering bridge — routes TUI content through Python-side renderers.
+"""TUI内容渲染桥接
+
+【产品经理理解要点】
+将Agent的输出内容通过Python端渲染器格式化后展示给用户。
+- 核心职责：调用rich_output模块渲染Markdown文本和代码差异
+- 降级策略：rich_output不可用时返回None，TUI端回退到自有的markdown渲染
+
+─────────────────────────────────────────────────────────────────
+Rendering bridge — routes TUI content through Python-side renderers.
 
 When agent.rich_output exists, its functions are used. When it doesn't,
 everything returns None and the TUI falls back to its own markdown.tsx.

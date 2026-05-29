@@ -1,4 +1,12 @@
-"""NVIDIA NIM provider profile."""
+"""NVIDIA NIM 模型供应商配置
+
+【产品经理理解要点】
+注册NVIDIA NIM加速推理平台供应商，提供NVIDIA优化的大模型推理服务。
+- 供应商：NVIDIA NIM，GPU加速推理服务
+- 认证：NVIDIA_API_KEY
+- 备用模型：Llama-3.1-Nemotron-70B、Llama-3.3-70B等NVIDIA优化模型
+- 特点：默认最大token数为16384
+"""
 
 from providers import register_provider
 from providers.base import ProviderProfile

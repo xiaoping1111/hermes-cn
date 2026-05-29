@@ -1,4 +1,15 @@
-"""Tests for backend-specific bulk download implementations and cleanup() wiring."""
+"""同步回传后端测试
+
+【产品经理理解要点】
+验证工具系统模块中ssh bulk download runs tar over ssh等18个场景的正确性
+- ssh bulk download runs tar over ssh的正确性验证
+- ssh bulk download writes to dest的正确性验证
+- ssh bulk download raises on failure的正确性验证
+- 另有15个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for backend-specific bulk download implementations and cleanup() wiring."""
 
 import asyncio
 import subprocess

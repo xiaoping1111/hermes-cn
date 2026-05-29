@@ -1,4 +1,13 @@
 """
+Hermes Web 仪表盘服务器
+
+【产品经理理解要点】
+FastAPI 后端服务，提供 Web UI 管理 Hermes Agent 的配置、环境变量、会话和任务。
+- 提供配置编辑器、会话浏览器、任务管理、插件管理等 Web 界面
+- 支持 PTY 桥接实现浏览器内终端交互
+- 默认监听 127.0.0.1:9119
+
+─────────────────────────────────────────────────────────────────
 Hermes Agent — Web UI server.
 
 Provides a FastAPI backend serving the Vite/React frontend and REST API

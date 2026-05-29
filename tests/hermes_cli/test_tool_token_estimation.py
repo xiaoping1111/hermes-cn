@@ -1,4 +1,14 @@
-"""Tests for tool token estimation and curses_ui status_fn support."""
+"""命令行界面测试 - 工具系统·令牌管理·estimation
+
+【产品经理理解要点】
+验证命令行界面的工具系统令牌管理功能
+- 验证的功能: Tests for tool token estimation and curses_ui status_fn support
+- 核心测试场景: estimate tool tokens returns positive counts、estimate tool tokens is cached、estimate tool tokens returns empty when tiktoken unavailable 等共12个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for tool token estimation and curses_ui status_fn support.
+"""
 
 from unittest.mock import patch
 

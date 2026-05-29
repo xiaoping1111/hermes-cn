@@ -1,4 +1,15 @@
-"""Tests for hermes_state.py — SessionDB SQLite CRUD, FTS5 search, export."""
+"""会话状态数据库测试
+
+【产品经理理解要点】
+验证SQLite会话数据库的CRUD操作、全文搜索和数据导出功能。
+- 会话的创建、查询、更新和删除
+- FTS5全文搜索的正确性
+- 会话分支和历史记录管理
+- 影响会话持久化和恢复功能
+
+──────────────────────────────────────────────────────────────
+Tests for hermes_state.py — SessionDB SQLite CRUD, FTS5 search, export.
+"""
 
 import time
 import pytest

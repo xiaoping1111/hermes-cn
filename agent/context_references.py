@@ -1,3 +1,21 @@
+"""上下文引用 — 解析 @file: @url: @git: 等文件引用语法
+
+【产品经理理解要点】
+用户可以在消息中使用特殊语法引用外部内容，这个模块负责解析：
+
+  - @file:path/to/file — 引用一个文件的内容
+  - @folder:path/to/dir — 引用一个目录的文件列表
+  - @url:https://... — 引用一个网页的内容
+  - @git:commit-ish — 引用 Git 仓库中的文件
+  - @diff — 引用当前的 Git diff
+  - @staged — 引用已暂存的 Git diff
+
+引用的内容会被自动展开并插入到对话中，让 AI 能看到完整的上下文。
+同时有安全限制：不会读取 .ssh、.aws 等敏感目录的文件。
+
+─────────────────────────────────────────────────────────────────
+"""
+
 from __future__ import annotations
 
 import asyncio

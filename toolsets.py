@@ -1,26 +1,33 @@
 #!/usr/bin/env python3
 """
-Toolsets Module
+工具集模块 (Toolsets)
 
-This module provides a flexible system for defining and managing tool aliases/toolsets.
-Toolsets allow you to group tools together for specific scenarios and can be composed
-from individual tools or other toolsets.
+【产品经理理解要点】
+这是系统的"工具包管理器"——定义了 AI 代理可以使用哪些工具、按什么分组。
+核心概念：
+  - 工具集（Toolset）：一组相关工具的集合，如"web"=搜索+提取，"browser"=浏览器自动化
+  - 平台工具集：如"hermes-telegram"、"hermes-discord"，每个平台有专属工具集
+  - 组合关系：工具集可以包含其他工具集（如"debugging"包含"web"+"file"）
+  - 动态解析：运行时根据启用的工具集，自动展开出所有工具名称
 
-Features:
-- Define custom toolsets with specific tools
-- Compose toolsets from other toolsets
-- Built-in common toolsets for typical use cases
-- Easy extension for new toolsets
-- Support for dynamic toolset resolution
+常用工具集说明：
+  - web：网络搜索和内容提取
+  - terminal：终端命令执行
+  - browser：浏览器自动化操作
+  - file：文件读写和搜索
+  - skills：技能系统（AI 自学到的能力）
+  - todo/memory：任务规划和跨会话记忆
+  - messaging：跨平台消息发送
+─────────────────────────────────────────────────────────────────
 
-Usage:
-    from toolsets import get_toolset, resolve_toolset, get_all_toolsets
-    
-    # Get tools for a specific toolset
-    tools = get_toolset("research")
-    
-    # Resolve a toolset to get all tool names (including from composed toolsets)
-    all_tools = resolve_toolset("full_stack")
+该模块提供了一个灵活的系统，用于定义和管理工具别名/工具集。
+工具集允许您将工具按特定场景分组（如 web 研究、代码开发等），并支持嵌套包含。
+
+主要功能:
+- 定义自定义工具集
+- 支持工具集之间的包含关系（组合模式）
+- 提供针对典型用例的内置工具集
+- 动态解析工具集以获取最终的工具列表
 """
 
 from typing import List, Dict, Any, Set, Optional

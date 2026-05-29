@@ -1,4 +1,14 @@
-"""Unit tests for hermes_cli.session_recap."""
+"""命令行界面测试 - 会话管理·recap
+
+【产品经理理解要点】
+验证命令行界面的会话管理功能
+- 验证的功能: Unit tests for hermes_cli.session_recap
+- 核心测试场景: empty history、header shows title when provided、header shows short id when no title 等共13个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Unit tests for hermes_cli.session_recap.
+"""
 from __future__ import annotations
 
 import json

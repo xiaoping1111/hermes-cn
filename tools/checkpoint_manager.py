@@ -1,4 +1,16 @@
-"""
+"""检查点管理器 — 文件操作前自动创建快照，支持回滚
+
+【产品经理理解要点】
+AI 修改文件前自动创建文件快照，万一改坏了可以回滚：
+  - 每次 write_file、patch、危险终端命令前自动拍照
+  - 使用 git 做快照（共享一个隐藏的 git 仓库）
+  - AI 看不到这个机制，透明运行
+  - 通过 --checkpoints 命令行标志或配置启用
+
+就像"撤销"功能——AI 改坏文件后可以一键恢复到之前的状态。
+
+─────────────────────────────────────────────────────────────────
+
 Checkpoint Manager — Transparent filesystem snapshots via a single shared
 shadow git store.
 

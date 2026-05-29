@@ -1,3 +1,11 @@
+"""会话边界钩子测试
+
+【产品经理理解要点】
+验证会话开始和结束时的钩子执行逻辑。
+- 会话开始钩子的正确触发
+- 影响会话生命周期管理
+"""
+
 import pytest
 from unittest.mock import MagicMock, patch
 from hermes_cli.plugins import VALID_HOOKS, PluginManager

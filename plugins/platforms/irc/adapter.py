@@ -1,6 +1,15 @@
-"""
-IRC Platform Adapter for Hermes Agent.
+"""IRC平台适配器
 
+【产品经理理解要点】
+将Hermes AI代理接入IRC网络，实现IRC频道和私聊中的机器人对话。完全基于Python标准库实现，零外部依赖。
+- 核心能力：在IRC频道和私聊中接收和发送消息
+- 协议支持：IRC注册、PING/PONG心跳、NICK冲突自动重试、NickServ认证
+- 安全机制：用户白名单控制、CRLF注入防护、消息内容控制字符过滤
+- 消息处理：频道中仅响应被@提及的消息，自动剥离Markdown格式
+- 独立发送：支持cron任务通过临时IRC连接发送消息，使用独立昵称避免冲突
+- 兼容性：支持Libera.Chat、OFTC等主流IRC网络
+
+─────────────────────────────────────────────────────────────────
 A plugin-based gateway adapter that connects to an IRC server and relays
 messages to/from the Hermes agent.  Zero external dependencies — uses
 Python's stdlib asyncio for the IRC protocol.

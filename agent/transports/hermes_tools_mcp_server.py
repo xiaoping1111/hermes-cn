@@ -1,4 +1,17 @@
-"""Hermes-tools-as-MCP server for the codex_app_server runtime.
+"""Hermes 工具 MCP 服务器 — 让 Codex 模式也能使用 Hermes 的丰富工具
+
+【产品经理理解要点】
+Codex App Server 模式下，Codex 控制对话循环，默认只能用 Codex 自带的工具。
+但 Hermes 有更丰富的工具（网页搜索、浏览器自动化、图片生成、记忆管理等）。
+
+这个模块通过 MCP（Model Context Protocol）协议，把 Hermes 的精选工具暴露给
+Codex 子进程，让用户在 Codex 模式下也能享受 Hermes 的全部能力。
+
+暴露的工具包括：网页搜索、浏览器操作、视觉分析、图片生成等。
+
+─────────────────────────────────────────────────────────────────
+
+Hermes-tools-as-MCP server for the codex_app_server runtime.
 
 When the user runs `openai/*` turns through the codex app-server, codex
 owns the loop and builds its own tool list. By default, that means

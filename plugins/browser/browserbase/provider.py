@@ -1,6 +1,9 @@
-"""Browserbase cloud browser provider — plugin form.
+"""Browserbase云浏览器供应商
 
-Subclasses :class:`agent.browser_provider.BrowserProvider` (the plugin-facing
+【产品经理理解要点】
+Browserbase的远程浏览器供应商实现，提供可弹性扩展的云端浏览器实例。
+- 核心能力：创建/关闭远程浏览器会话、页面操作
+- 特点：支持并发扩展，按需创建浏览器实例 :class:`agent.browser_provider.BrowserProvider` (the plugin-facing
 ABC introduced in PR #25214). The legacy in-tree module
 ``tools.browser_providers.browserbase`` was removed in the same PR; this file
 is now the canonical implementation.

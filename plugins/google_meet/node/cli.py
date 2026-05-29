@@ -1,9 +1,7 @@
-"""`hermes meet node ...` subcommand tree.
+"""Meet节点CLI子命令树
 
-Wired into the existing ``hermes meet`` parser by the plugin's top-level
-CLI. This module only defines the subparsers and their dispatch — it
-does not mutate the existing cli.py.
-"""
+【产品经理理解要点】
+hermes meet node的命令行子命令，用于管理远程Meet机器人节点(注册/启动/查看/连接)。"""
 
 from __future__ import annotations
 

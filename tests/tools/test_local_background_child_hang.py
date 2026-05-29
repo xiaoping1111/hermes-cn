@@ -1,4 +1,15 @@
-"""Regression tests for issue #8340.
+"""本地后台子进程挂起测试
+
+【产品经理理解要点】
+验证工具系统模块中plain background returns promptly等8个场景的正确性
+- plain background returns promptly的正确性验证
+- setsid disown pattern returns promptly的正确性验证
+- foreground streaming output still captured的正确性验证
+- 另有5个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for issue #8340.
 
 When a user command backgrounds a child process (``cmd &``, ``setsid cmd &
 disown``, etc.), the backgrounded grandchild inherits the write-end of our
@@ -8,8 +19,7 @@ closed the pipe — causing the terminal tool to hang for the full lifetime
 of the backgrounded service (indefinitely for a uvicorn server).
 
 The fix switches ``_drain()`` to select()-based non-blocking reads and
-stops draining shortly after bash exits even if the pipe hasn't EOF'd.
-"""
+stops draining shortly after bash exits even if the pipe hasn't EOF'd."""
 import json
 import subprocess
 import time

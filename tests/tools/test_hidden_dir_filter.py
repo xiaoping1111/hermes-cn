@@ -1,11 +1,21 @@
-"""Tests for the hidden directory filter in skills listing.
+"""隐藏目录过滤测试
+
+【产品经理理解要点】
+验证工具系统模块中old filter misses hub on windows path等11个场景的正确性
+- old filter misses hub on windows path的正确性验证
+- old filter misses git on windows path的正确性验证
+- old filter works on unix path的正确性验证
+- 另有8个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the hidden directory filter in skills listing.
 
 Regression test: the original filter used hardcoded forward-slash strings
 like '/.git/' which never match on Windows where Path uses backslashes.
 This caused quarantined skills (.hub/quarantine/) to appear as installed.
 
-Now uses Path.parts which is platform-independent.
-"""
+Now uses Path.parts which is platform-independent."""
 
 import os
 from pathlib import Path, PurePosixPath, PureWindowsPath

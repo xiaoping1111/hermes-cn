@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""
+"""【产品经理理解要点】
+ComfyUI批量工作流执行——支持两种模式：(1) 随机种子多次运行生成变体；(2) 参数扫描（笛卡尔积）批量测试不同参数组合。云端支持并行执行。
+─────────────────────────────────────────────────────────────────
 run_batch.py — Run a workflow many times, varying parameters per run.
 
 Two modes:

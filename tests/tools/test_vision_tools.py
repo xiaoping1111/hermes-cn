@@ -1,4 +1,15 @@
-"""Tests for tools/vision_tools.py — URL validation, type hints, error logging."""
+"""视觉工具测试
+
+【产品经理理解要点】
+验证工具系统模块中valid https url等70个场景的正确性
+- valid https url的正确性验证
+- valid http url的正确性验证
+- valid url without extension的正确性验证
+- 另有67个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/vision_tools.py — URL validation, type hints, error logging."""
 
 import asyncio
 import json

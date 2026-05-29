@@ -1,4 +1,14 @@
-"""Test that AuthError triggers fallback provider resolution (#7230)."""
+"""消息网关测试 - 认证授权·降级策略
+
+【产品经理理解要点】
+验证消息网关的认证授权降级策略功能
+- 验证的功能: Test that AuthError triggers fallback provider resolution (#7230)
+- 核心测试场景: auth error tries fallback、auth error no fallback raises
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Test that AuthError triggers fallback provider resolution (#7230).
+"""
 
 import os
 from unittest.mock import patch, MagicMock

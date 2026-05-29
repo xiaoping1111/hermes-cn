@@ -1,5 +1,13 @@
-"""Firecrawl web search + extract plugin — bundled, auto-loaded.
+"""Firecrawl搜索+提取插件 — 自动加载
 
+【产品经理理解要点】
+Firecrawl插件的注册入口。功能最全面的网络工具供应商，支持搜索、内容提取和网站抓取，并提供直连和托管网关双通道。
+- 核心职责：将Firecrawl供应商注册到Hermes的搜索调度系统
+- 三合一能力：搜索 + 内容提取 + 异步网站抓取
+- 双认证通道：直连(FIRECRAWL_API_KEY)或Nous托管网关（订阅用户）
+- SDK延迟加载：为避免冷启动开销，SDK按需加载
+
+─────────────────────────────────────────────────────────────────
 Largest single plugin in this PR. Captures everything the previous
 inline implementation in tools/web_tools.py did:
 

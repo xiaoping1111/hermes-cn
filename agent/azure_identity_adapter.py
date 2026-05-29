@@ -1,4 +1,19 @@
-"""Microsoft Entra ID adapter for Microsoft Foundry.
+"""Azure Entra ID 适配器 — 通过微软企业身份认证无密钥访问 AI 模型
+
+【产品经理理解要点】
+企业用户通常使用微软的 Entra ID（原 Azure AD）进行身份管理。
+这个适配器让 Agent 通过企业身份认证访问 Microsoft Foundry 上的 AI 模型，
+无需手动管理 API Key：
+
+  - 自动尝试多种认证方式（环境变量、托管身份、VS Code、Azure CLI 等）
+  - 令牌自动刷新，用户无感知
+  - 不会泄露令牌到日志或缓存中
+
+适合企业场景：公司已有 Azure 基础设施的团队可以直接用企业账号访问 AI。
+
+─────────────────────────────────────────────────────────────────
+
+Microsoft Entra ID adapter for Microsoft Foundry.
 
 Provides keyless authentication for Microsoft Foundry deployments using the
 `azure-identity` SDK's `DefaultAzureCredential` chain (env service principal

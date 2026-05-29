@@ -1,4 +1,13 @@
-"""Regression tests for the Telegram text-batch adaptive-delay fast-path
+"""消息网关测试 - Telegram平台·text·批量处理·perf
+
+【产品经理理解要点】
+验证消息网关的Telegram平台批量处理功能
+- 验证的功能: Regression tests for the Telegram text-batch adaptive-delay fast-path
+- 核心测试场景: default when unset、parses valid value、falls back to default on garbage 等共12个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests for the Telegram text-batch adaptive-delay fast-path
 and _env_float_clamped helper introduced by PR #10388 (Telegram latency
 tuning).
 

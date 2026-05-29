@@ -1,4 +1,14 @@
-"""Tests for setup.py configuration flows."""
+"""命令行界面测试 - 设置
+
+【产品经理理解要点】
+验证命令行界面的设置功能
+- 验证的功能: Tests for setup.py configuration flows
+- 核心测试场景: setup delegates to select provider and model、setup syncs openrouter from disk、setup syncs nous from disk 等共19个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for setup.py configuration flows.
+"""
 import json
 import os
 import sys

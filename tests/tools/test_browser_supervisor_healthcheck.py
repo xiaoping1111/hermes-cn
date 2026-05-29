@@ -1,9 +1,19 @@
-"""Unit tests for _SupervisorRegistry cache-hit healthcheck.
+"""浏览器监管进程healthcheck测试
+
+【产品经理理解要点】
+验证工具系统模块中cache hit returns same instance when healthy等4个场景的正确性
+- cache hit returns same instance when healthy的正确性验证
+- dead thread triggers recreate的正确性验证
+- stopped loop triggers recreate的正确性验证
+- 另有1个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Unit tests for _SupervisorRegistry cache-hit healthcheck.
 
 Verifies that get_or_start() does NOT return a cached supervisor whose
 thread has exited or whose event loop has stopped. Avoids a real Chrome —
-the only thing under test is the registry's cache decision.
-"""
+the only thing under test is the registry's cache decision."""
 
 from __future__ import annotations
 

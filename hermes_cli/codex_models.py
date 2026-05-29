@@ -1,4 +1,13 @@
-"""Codex model discovery from API, local cache, and config."""
+"""Codex 模型发现
+
+【产品经理理解要点】
+从 OpenAI Codex OAuth 后端动态获取可用模型列表，并缓存到本地。
+- 核心职责：通过 Codex API 获取用户可用的模型列表（包括 Pro 专属模型如 gpt-5.3-codex-spark），本地缓存避免频繁请求
+- 关键概念：Codex OAuth 后端提供不同于公开 API 的模型列表、本地 JSON 缓存、离线回退到硬编码默认列表
+- 系统定位：模型选择功能的数据来源层，为 `hermes model` 和 /model 命令提供 Codex 可选模型
+
+─────────────────────────────────────────────────────────────────
+Codex model discovery from API, local cache, and config."""
 
 from __future__ import annotations
 

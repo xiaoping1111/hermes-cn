@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
-"""
+"""MCP 工具 — 接入外部 MCP 服务器提供的工具
+
+【产品经理理解要点】
+MCP（Model Context Protocol）是一种让 AI 接入外部工具的标准协议。
+这个模块让 Agent 能连接到 MCP 服务器（如文件系统服务、数据库服务等），
+把外部的工具像内置工具一样使用。
+
+配置在 config.yaml 的 mcp_servers 部分。
+支持三种传输方式：标准输入/输出、HTTP、SSE。
+
+─────────────────────────────────────────────────────────────────
+
 MCP (Model Context Protocol) Client Support
 
 Connects to external MCP servers via stdio, HTTP/StreamableHTTP, or SSE

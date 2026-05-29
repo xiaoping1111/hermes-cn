@@ -1,4 +1,13 @@
-"""Tests for ``_prompt_api_key`` — the shared Keep/Replace/Clear menu used by
+"""命令行界面测试 - 提示词处理·api·key
+
+【产品经理理解要点】
+验证命令行界面的提示词处理功能
+- 验证的功能: Tests for ``_prompt_api_key`` — the shared Keep/Replace/Clear menu used by
+- 核心测试场景: first time save new key、first time cancelled、keep default empty input 等共11个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for ``_prompt_api_key`` — the shared Keep/Replace/Clear menu used by
 ``hermes setup`` / ``hermes model`` when an API key already exists in ``.env``.
 
 Regression coverage for #16394: the wizard used to silently skip the key prompt

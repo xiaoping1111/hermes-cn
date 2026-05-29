@@ -1,3 +1,17 @@
+"""消息网关测试 - Matrix平台·exec·approval
+
+【产品经理理解要点】
+验证消息网关的Matrix平台功能
+- 验证的功能: Matrix平台Codex执行审批流程
+- 核心测试场景: send exec approval registers prompt and seeds reactions、reaction resolves pending approval
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+消息网关测试 - Matrix平台适配·Codex执行路径·approval
+
+测试多平台消息接入与命令分发中matrix相关的exec相关的approval功能
+"""
+
 import types
 
 import pytest

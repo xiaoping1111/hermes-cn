@@ -1,3 +1,17 @@
+"""消息网关测试 - Discord连接
+
+【产品经理理解要点】
+验证消息网关Discord连接的正确性
+- 验证的功能: Discord平台连接与断开处理
+- 核心测试场景: connect only requests members intent when needed、reconnect closes previous client to prevent zombie websocket、connect releases token lock on timeout 等共14个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+消息网关测试 - Discord平台适配·断开连接
+
+测试多平台消息接入与命令分发中discord相关的connect功能
+"""
+
 import asyncio
 import json
 import sys

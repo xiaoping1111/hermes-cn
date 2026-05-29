@@ -1,8 +1,18 @@
-"""Tests for context compression boundary alignment.
+"""压缩边界条件测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中boundary at clean position等6个场景的正确性
+- boundary at clean position的正确性验证
+- boundary after assistant with tools的正确性验证
+- boundary in middle of tool results的正确性验证
+- 另有3个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for context compression boundary alignment.
 
 Verifies that _align_boundary_backward correctly handles tool result groups
-so that parallel tool calls are never split during compression.
-"""
+so that parallel tool calls are never split during compression."""
 
 import pytest
 from unittest.mock import patch, MagicMock

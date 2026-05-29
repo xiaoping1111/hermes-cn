@@ -1,9 +1,19 @@
-"""Tests for skill content size limits.
+"""技能大小限制测试
+
+【产品经理理解要点】
+验证工具系统模块中within limit等14个场景的正确性
+- within limit的正确性验证
+- at limit的正确性验证
+- over limit的正确性验证
+- 另有11个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for skill content size limits.
 
 Agent writes (create/edit/patch/write_file) are constrained to
 MAX_SKILL_CONTENT_CHARS (100k) and MAX_SKILL_FILE_BYTES (1 MiB).
-Hand-placed and hub-installed skills have no hard limit.
-"""
+Hand-placed and hub-installed skills have no hard limit."""
 
 import json
 import os

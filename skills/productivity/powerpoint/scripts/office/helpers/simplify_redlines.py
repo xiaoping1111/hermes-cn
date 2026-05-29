@@ -1,4 +1,7 @@
-"""Simplify tracked changes by merging adjacent w:ins or w:del elements.
+"""【产品经理理解要点】
+Word修订记录简化工具——将同一作者相邻的插入(<w:ins>)或删除(<w:del>)元素合并为一个，减少修订标记嵌套层数，让密集修订的文档更易处理。
+─────────────────────────────────────────────────────────────────
+Simplify tracked changes by merging adjacent w:ins or w:del elements.
 
 Merges adjacent <w:ins> elements from the same author into a single element.
 Same for <w:del> elements. This makes heavily-redlined documents easier to

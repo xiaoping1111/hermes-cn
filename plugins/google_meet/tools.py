@@ -1,5 +1,14 @@
-"""Agent-facing tools for the google_meet plugin.
+"""Google Meet AI可调用工具集
 
+【产品经理理解要点】
+提供给AI代理的Meet操作工具：加入会议、查看状态、读取转录、离开会议、发言(v2)。
+- meet_join：加入会议(本地或远程节点)
+- meet_status：报告机器人和转录进度状态
+- meet_transcript：读取当前转录内容
+- meet_leave：离开会议
+- meet_say：(v2)通过实时音频桥发言
+
+─────────────────────────────────────────────────────────────────
 Tools:
   meet_join        — join a Google Meet URL (spawns Playwright bot locally
                      OR on a remote node host via node=<name>)

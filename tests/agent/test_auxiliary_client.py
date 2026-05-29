@@ -1,4 +1,14 @@
-"""Tests for agent.auxiliary_client resolution chain, provider overrides, and model overrides."""
+"""辅助客户端测试
+
+【产品经理理解要点】
+验证辅助API客户端的构建、请求发送和响应处理。
+- 客户端的正确构建和配置
+- API请求的正确发送和重试
+- 影响辅助模型调用的可用性
+
+──────────────────────────────────────────────────────────────
+Tests for agent.auxiliary_client resolution chain, provider overrides, and model overrides.
+"""
 
 import json
 import logging

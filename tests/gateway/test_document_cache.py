@@ -1,4 +1,12 @@
-"""
+"""消息网关测试 - document·缓存机制
+
+【产品经理理解要点】
+验证消息网关的缓存机制功能
+- 验证的功能: Tests for document cache utilities in gateway/platforms/base.py
+- 核心测试场景: creates directory、returns existing directory、basic caching 等共16个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
 Tests for document cache utilities in gateway/platforms/base.py.
 
 Covers: get_document_cache_dir, cache_document_from_bytes,

@@ -1,4 +1,13 @@
-"""Regression tests: pending-drain + finally-cleanup races must not spawn
+"""消息网关测试 - pending·drain·race
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Regression tests: pending-drain + finally-cleanup races must not spawn
+- 核心测试场景: pending drain keeps active session guard live、finally cleanup drains late arrival pending、no pending cleans up normally
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests: pending-drain + finally-cleanup races must not spawn
 duplicate agents OR silently drop messages that arrived during cleanup.
 
 Two related races in gateway/platforms/base.py:_process_message_background:

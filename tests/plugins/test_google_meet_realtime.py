@@ -1,7 +1,17 @@
-"""Tests for plugins.google_meet.realtime.openai_client (v2).
+"""Google Meet实时通信测试
 
-Uses a scripted fake WebSocket — no network, no API key required.
-"""
+【产品经理理解要点】
+验证功能插件模块中connect sends session update with voice and instructions等9个场景的正确性
+- connect sends session update with voice and instructions的正确性验证
+- speak sends create and response and writes audio的正确性验证
+- speak raises on error frame的正确性验证
+- 另有6个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for plugins.google_meet.realtime.openai_client (v2).
+
+Uses a scripted fake WebSocket — no network, no API key required."""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""Tests for ``list_picker_providers`` — the /model picker filter.
+"""命令行界面测试 - list·picker·提供商
+
+【产品经理理解要点】
+验证命令行界面的提供商功能
+- 验证的功能: Tests for ``list_picker_providers`` — the /model picker filter
+- 核心测试场景: openrouter models replaced with live catalog、openrouter falls back to base models on fetch failure、openrouter empty live catalog drops row 等共10个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for ``list_picker_providers`` — the /model picker filter.
 
 ``list_picker_providers`` wraps ``list_authenticated_providers`` and
 post-processes the result for interactive pickers (Telegram, Discord):

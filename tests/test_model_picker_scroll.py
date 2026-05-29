@@ -1,4 +1,13 @@
-"""Tests for the scrolling viewport logic in _curses_prompt_choice (issue #5755).
+"""模型选择器滚动测试
+
+【产品经理理解要点】
+验证模型选择菜单在短终端窗口中的滚动逻辑，确保所有选项可见。
+- 滚动偏移量跟随光标移动
+- 短终端下底部选项仍然可访问
+- 影响小窗口用户选择模型的体验
+
+──────────────────────────────────────────────────────────────
+Tests for the scrolling viewport logic in _curses_prompt_choice (issue #5755).
 
 The "More providers" submenu has 13 entries (11 extended + custom + cancel).
 Before the fix, _curses_prompt_choice rendered items starting unconditionally

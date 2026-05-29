@@ -1,4 +1,18 @@
-"""OpenAI-compatible facade over Google AI Studio's native Gemini API.
+"""Gemini 原生 API 适配器 — 直接调用 Google AI Studio 的 Gemini 接口
+
+【产品经理理解要点】
+Google 提供了"OpenAI 兼容"的接口，但不够稳定（认证问题、工具调用格式异常等）。
+这个适配器绕过兼容层，直接使用 Gemini 原生 API，更可靠：
+
+  - 将 OpenAI 格式的消息/工具定义翻译为 Gemini 原生格式
+  - 将 Gemini 的回复翻译回 OpenAI 格式
+  - 完整支持流式输出和工具调用
+
+就像从"翻译软件"改为直接说对方的母语——更准确、更少出错。
+
+─────────────────────────────────────────────────────────────────
+
+OpenAI-compatible facade over Google AI Studio's native Gemini API.
 
 Hermes keeps ``api_mode='chat_completions'`` for the ``gemini`` provider so the
 main agent loop can keep using its existing OpenAI-shaped message flow.

@@ -1,4 +1,14 @@
-"""Tests for hermes_cli/tips.py — random tip display at session start."""
+"""命令行界面测试 - tips
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for hermes_cli/tips.py — random tip display at session start
+- 核心测试场景: has at least 200 tips、no duplicates、all tips are strings 等共11个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli/tips.py — random tip display at session start.
+"""
 
 import pytest
 from hermes_cli.tips import TIPS, get_random_tip

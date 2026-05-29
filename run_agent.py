@@ -1,23 +1,43 @@
 #!/usr/bin/env python3
 """
-AI Agent Runner with Tool Calling
+带有工具调用能力的 AI 代理运行器
 
-This module provides a clean, standalone agent that can execute AI models
-with tool calling capabilities. It handles the conversation loop, tool execution,
-and response management.
+【产品经理理解要点】
+这是整个 Hermes 系统的"核心引擎"——负责 AI 对话循环、工具调用、上下文管理等核心逻辑。
 
-Features:
-- Automatic tool calling loop until completion
-- Configurable model parameters
-- Error handling and recovery
-- Message history management
-- Support for multiple model providers
+核心工作流程：
+  用户提问 → AI 回答（可能包含工具调用）→ 执行工具 → 把结果喂回 AI → AI 继续回答
+  这个循环一直持续，直到 AI 认为任务完成或达到最大迭代次数。
 
-Usage:
+关键类：AIAgent
+  - 初始化：设置模型、API密钥、工具集、回调函数等
+  - 运行对话：run_conversation() 是主入口
+  - 工具循环：AI 调用工具 → 执行 → 返回结果 → AI 继续处理
+  - 上下文压缩：对话太长时自动压缩历史，保留关键信息
+  - 后台评审：对话结束后可能在后台评审记忆和技能
+  - 模型切换：运行中可以切换模型（/model 命令）
+
+支持特性：
+  - 多模型供应商（OpenAI、Anthropic、OpenRouter 等 200+ 模型）
+  - 自动错误恢复和重试
+  - 流式输出（边生成边显示）
+  - Token 用量和费用追踪
+  - 会话持久化到 SQLite
+
+该模块负责处理对话循环、工具执行以及响应管理。
+
+主要功能:
+- 自动化的工具调用循环，直到任务完成
+- 可配置的模型参数
+- 错误处理与恢复机制
+- 消息历史管理
+- 支持多个模型供应商（如 Anthropic, OpenAI, OpenRouter 等）
+
+用法示例:
     from run_agent import AIAgent
     
     agent = AIAgent(base_url="http://localhost:30000/v1", model="claude-opus-4-20250514")
-    response = agent.run_conversation("Tell me about the latest Python updates")
+    response = agent.run_conversation("向我介绍一下最新的 Python 更新")
 """
 
 # IMPORTANT: hermes_bootstrap must be the very first import — UTF-8 stdio
@@ -325,10 +345,29 @@ class _StreamErrorEvent(Exception):
 
 class AIAgent:
     """
-    AI Agent with tool calling capabilities.
+    具有工具调用能力的 AI 代理。
 
-    This class manages the conversation flow, tool execution, and response handling
-    for AI models that support function calling.
+    【产品经理理解要点——这是 Hermes 系统的核心引擎类】
+
+    工作原理（简化版）：
+    ┌──────────────────────────────────────────────┐
+    │ 用户发送消息                                    │
+    │      ↓                                        │
+    │ AI 模型分析消息，决定：                          │
+    │   · 直接回答 → 返回文字给用户                    │
+    │   · 需要工具 → 发出工具调用请求                   │
+    │      ↓                                        │
+    │ 执行工具（搜索、终端命令、浏览器操作等）           │
+    │      ↓                                        │
+    │ 把工具结果喂回 AI 模型                           │
+    │      ↓                                        │
+    │ AI 模型根据结果继续回答或调用更多工具              │
+    │      ↓                                        │
+    │ 循环直到任务完成（最多 max_iterations=90 轮）      │
+    └──────────────────────────────────────────────┘
+
+    该类负责管理对话流、工具执行以及支持函数调用的 AI 模型的响应处理。
+    它是代理系统的核心，协调模型调用和本地工具执行之间的交互。
     """
 
     _TOOL_CALL_ARGUMENTS_CORRUPTION_MARKER = (
@@ -3903,20 +3942,31 @@ class AIAgent:
         stream_callback: Optional[callable] = None,
         persist_user_message: Optional[str] = None,
     ) -> Dict[str, Any]:
-        """Forwarder — see ``agent.conversation_loop.run_conversation``."""
+        """
+        运行一个完整的对话，包含工具调用直到任务完成。
+        转发至 ``agent.conversation_loop.run_conversation``。
+
+        参数:
+            user_message (str): 用户输入的消息或问题
+            system_message (str): 系统提示词（可选）
+            conversation_history (List[Dict]): 对话历史记录（可选）
+            task_id (str): 任务 ID，用于跟踪和恢复（可选）
+            stream_callback (callable): 流式响应的回调函数（可选）
+            persist_user_message (str): 是否持久化用户消息（可选）
+        """
         from agent.conversation_loop import run_conversation
         return run_conversation(self, user_message, system_message, conversation_history, task_id, stream_callback, persist_user_message)
 
     def chat(self, message: str, stream_callback: Optional[callable] = None) -> str:
         """
-        Simple chat interface that returns just the final response.
+        简单的聊天接口，仅返回最终的响应字符串。
 
-        Args:
-            message (str): User message
-            stream_callback: Optional callback invoked with each text delta during streaming.
+        参数:
+            message (str): 用户消息
+            stream_callback: 流式输出回调
 
-        Returns:
-            str: Final assistant response
+        返回:
+            str: 最终的助手响应内容
         """
         result = self.run_conversation(message, stream_callback=stream_callback)
         return result["final_response"]

@@ -1,4 +1,12 @@
-"""Tests for CLI goal-continuation interrupt handling.
+"""CLI目标中断测试
+
+【产品经理理解要点】
+验证处理中按Ctrl+C中断AI操作时的行为。
+- 中断信号的正确传播
+- 影响用户取消长时间操作的控制感
+
+──────────────────────────────────────────────────────────────
+Tests for CLI goal-continuation interrupt handling.
 
 Covers:
 - Ctrl+C during a /goal turn auto-pauses the goal (no more continuations).

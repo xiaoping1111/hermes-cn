@@ -1,4 +1,20 @@
-"""Tool-call execution — sequential and concurrent dispatch.
+"""工具调用执行器 — 顺序与并发调度
+
+【产品经理理解要点】
+这是 Agent 的"手脚"模块，负责把 AI 大脑想做的事情真正执行出来。
+当 AI 决定调用某个工具（比如搜网页、执行终端命令、读写文件），这个模块负责：
+  - 安全检查：在执行前拦截危险操作（如删除文件的命令），需要用户确认
+  - 并发执行：当 AI 同时调用多个工具时，用线程池并行执行，提升效率
+  - 结果收集：把每个工具的执行结果按顺序排好，送回给 AI 继续思考
+  - 中断处理：用户随时可以打断正在执行的工具调用
+  - 文件保护：在写入或修改文件前自动创建快照，方便后续回滚
+
+核心流程：
+  AI 产出工具调用 → 安全检查 → 确认/拦截 → 线程池执行 → 收集结果 → 返回 AI
+
+─────────────────────────────────────────────────────────────────
+
+Tool-call execution — sequential and concurrent dispatch.
 
 Both AIAgent methods (``_execute_tool_calls_sequential`` and
 ``_execute_tool_calls_concurrent``) live here as module-level

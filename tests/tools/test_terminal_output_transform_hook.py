@@ -1,3 +1,13 @@
+"""终端输出变换钩子测试
+
+【产品经理理解要点】
+验证工具系统模块中terminal output unchanged when transform hook not registered等9个场景的正确性
+- terminal output unchanged when transform hook not registered的正确性验证
+- terminal output unchanged for none hook result的正确性验证
+- terminal output ignores invalid hook results的正确性验证
+- 另有6个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性"""
+
 import json
 import os
 from pathlib import Path

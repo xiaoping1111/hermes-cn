@@ -1,4 +1,13 @@
-"""Tests for EphemeralReply — system-notice auto-delete in gateway adapters.
+"""消息网关测试 - ephemeral·回复处理
+
+【产品经理理解要点】
+验证消息网关的回复处理功能
+- 验证的功能: Tests for EphemeralReply — system-notice auto-delete in gateway adapters
+- 核心测试场景: unwrap plain string is passthrough、unwrap none is passthrough、unwrap ephemeral explicit ttl on capable adapter 等共13个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for EphemeralReply — system-notice auto-delete in gateway adapters.
 
 Slash-command handlers in ``gateway/run.py`` can return an
 ``EphemeralReply`` wrapper to request auto-deletion of the reply message

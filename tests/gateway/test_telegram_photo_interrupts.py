@@ -1,3 +1,17 @@
+"""消息网关测试 - Telegram平台·photo·中断处理
+
+【产品经理理解要点】
+验证消息网关的Telegram平台中断处理功能
+- 验证的功能: Telegram图片消息中断处理
+- 核心测试场景: handle message does not priority interrupt photo followup
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+消息网关测试 - Telegram平台适配·photo·中断处理
+
+测试多平台消息接入与命令分发中telegram相关的photo相关的interrupts功能
+"""
+
 import asyncio
 from unittest.mock import MagicMock
 

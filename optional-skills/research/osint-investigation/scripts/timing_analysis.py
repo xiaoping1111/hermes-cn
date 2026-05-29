@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Permutation test for donation/contract timing correlation (stdlib-only).
+"""时序相关性置换检验
+
+【产品经理理解要点】
+通过统计置换检验判断捐款与合同授予之间的时间关联是否显著，用于反腐调查分析。
+- 核心职责：计算捐款与最近合同的时间距离，与随机置换结果对比得出p值
+- 使用场景：OSINT调查中验证"捐款后即获得合同"的假设
+
+─────────────────────────────────────────────────────────────────
+Permutation test for donation/contract timing correlation (stdlib-only).
 
 For each (donor, vendor) pair, compute the mean number of days between each
 donation and the nearest contract award. Then shuffle contract award dates

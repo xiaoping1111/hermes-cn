@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""
+"""Solana区块链查询工具
+
+【产品经理理解要点】
+查询Solana链上数据和账户信息，结合CoinGecko获取价格，纯标准库实现。
+- 核心职责：查询Solana链的统计数据、钱包余额、代币信息、NFT等
+- 支持功能：stats、wallet、token、nft、stake等查询
+
+─────────────────────────────────────────────────────────────────
 Solana Blockchain CLI Tool for Hermes Agent
 --------------------------------------------
 Queries the Solana JSON-RPC API and CoinGecko for enriched on-chain data.

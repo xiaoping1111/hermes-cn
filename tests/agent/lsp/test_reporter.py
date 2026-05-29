@@ -1,4 +1,15 @@
-"""Tests for the diagnostic reporter (formatting layer)."""
+"""诊断报告格式化测试
+
+【产品经理理解要点】
+验证LSP诊断结果的格式化输出，将语言服务器返回的结构化错误信息转换为人类可读的文本格式。包括错误位置（1-indexed行列号）、严重性标签（ERROR/WARN/INFO/HINT）、每文件条目数上限、以及按严重性过滤。
+- 验证格式化输出包含正确的位置标签和严重性描述
+- 验证默认只显示ERROR级别、超出上限时截断并提示
+- 业务影响：如果这些测试失败，AI代理展示给用户的代码诊断信息可能格式错乱或遗漏关键错误
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for the diagnostic reporter (formatting layer)."""
 from __future__ import annotations
 
 from agent.lsp.reporter import (

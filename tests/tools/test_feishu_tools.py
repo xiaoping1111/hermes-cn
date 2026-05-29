@@ -1,4 +1,15 @@
-"""Tests for feishu_doc_tool and feishu_drive_tool — registration and schema validation."""
+"""飞书工具测试
+
+【产品经理理解要点】
+验证工具系统模块中all tools registered等5个场景的正确性
+- all tools registered的正确性验证
+- schemas have required fields的正确性验证
+- handlers are callable的正确性验证
+- 另有2个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for feishu_doc_tool and feishu_drive_tool — registration and schema validation."""
 
 import importlib
 import unittest

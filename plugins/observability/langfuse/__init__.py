@@ -1,4 +1,10 @@
-"""langfuse — Hermes plugin for Langfuse observability.
+"""【产品经理理解要点】
+Langfuse可观测性插件——将Hermes的对话、LLM调用和工具使用追踪到Langfuse平台。
+核心能力：(1) 自动追踪每轮对话的完整生命周期（用户输入→LLM调用→工具执行→回复输出）；(2) 记录Token用量和费用估算；(3) 工具调用的输入输出追踪。
+产品理解：这是运维和成本分析的基础设施，让你能在Langfuse仪表盘上看到每次对话的详细耗时、Token消耗、费用和工具调用链路。
+启用方式：hermes plugins enable observability/langfuse，并配置HERMES_LANGFUSE_PUBLIC_KEY/SECRET_KEY/BASE_URL环境变量。
+─────────────────────────────────────────────────────────────────
+langfuse — Hermes plugin for Langfuse observability.
 
 Traces Hermes conversations, LLM calls, and tool usage to Langfuse.
 

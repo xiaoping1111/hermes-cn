@@ -1,4 +1,15 @@
-"""Tests for the MCP remote-URL validator.
+"""MCP无效URL测试
+
+【产品经理理解要点】
+验证工具系统模块中accepts valid http url等15个场景的正确性
+- accepts valid http url的正确性验证
+- strips surrounding whitespace的正确性验证
+- none rejected的正确性验证
+- 另有12个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the MCP remote-URL validator.
 
 Ported from anomalyco/opencode#25019 (``fix: handle invalid mcp urls``).
 
@@ -11,8 +22,7 @@ more of pointless retries plus a confusing opaque error message — before
 eventually giving up.
 
 The fix validates the URL once, up front, and fails fast with a specific
-error message identifying the offending server.
-"""
+error message identifying the offending server."""
 
 from __future__ import annotations
 

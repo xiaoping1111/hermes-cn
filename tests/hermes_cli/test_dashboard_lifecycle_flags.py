@@ -1,4 +1,13 @@
-"""Tests for ``hermes dashboard --stop`` / ``--status`` flags.
+"""命令行界面测试 - dashboard·lifecycle·flags
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for ``hermes dashboard --stop`` / ``--status`` flags
+- 核心测试场景: status no processes、status with processes、status does not try to import fastapi 等共10个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for ``hermes dashboard --stop`` / ``--status`` flags.
 
 These flags share the detection + kill path with the post-``hermes update``
 cleanup, so the heavy coverage of SIGTERM / SIGKILL / Windows taskkill lives

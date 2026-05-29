@@ -1,4 +1,20 @@
-"""Lightweight skill metadata utilities shared by prompt_builder and skills_tool.
+"""技能元数据工具 — 轻量级的技能信息查询，不触发重型依赖
+
+【产品经理理解要点】
+这个模块提供技能相关的"轻量查询"功能，比如列出有哪些技能、读取技能的配置信息等。
+
+为什么强调"轻量"？因为技能系统涉及工具注册、CLI 配置等重型模块，
+如果在启动阶段就导入这些，会拖慢整个 Agent 的启动速度。
+所以这个模块刻意只做"看"不做"做"——只读取技能信息，不加载或注册工具。
+
+核心功能：
+  - 列出技能目录下的所有技能
+  - 读取技能的 metadata（名称、描述、平台兼容性等）
+  - 判断哪些技能在当前平台可用
+
+─────────────────────────────────────────────────────────────────
+
+Lightweight skill metadata utilities shared by prompt_builder and skills_tool.
 
 This module intentionally avoids importing the tool registry, CLI config, or any
 heavy dependency chain.  It is safe to import at module level without triggering

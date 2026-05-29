@@ -1,4 +1,13 @@
-"""Tests for the profile.yaml metadata layer (description + description_auto)
+"""命令行界面测试 - 多配置文件·describer
+
+【产品经理理解要点】
+验证命令行界面的多配置文件功能
+- 验证的功能: Tests for the profile.yaml metadata layer (description + description_auto)
+- 核心测试场景: read profile meta empty when missing、write and read profile meta、write profile meta preserves other fields 等共10个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the profile.yaml metadata layer (description + description_auto)
 and the profile_describer LLM module.
 """
 

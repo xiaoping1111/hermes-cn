@@ -1,5 +1,12 @@
-"""RetainDB memory plugin — MemoryProvider interface.
+"""RetainDB记忆供应商 — 跨会话记忆云服务
 
+【产品经理理解要点】
+提供基于RetainDB云API的跨会话记忆服务，支持语义搜索、用户画像、共享文件存储等丰富功能。
+- 核心能力：语义搜索、用户画像检索、辩证综合(LLM驱动)、共享文件存储、显式记忆工具
+- 使用场景：需要在多会话间持久化用户知识的应用
+- 特点：SQLite写后队列(崩溃安全)、去重叠加层、Agent自模型
+
+─────────────────────────────────────────────────────────────────
 Cross-session memory via RetainDB cloud API.
 
 Features:

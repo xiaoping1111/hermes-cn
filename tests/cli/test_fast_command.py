@@ -1,4 +1,13 @@
-"""Tests for the /fast CLI command and service-tier config handling."""
+"""快速命令测试
+
+【产品经理理解要点】
+验证/fast命令使用快速模型的切换逻辑。
+- 切换到预设的快速模型
+- 影响简单任务的响应速度
+
+──────────────────────────────────────────────────────────────
+Tests for the /fast CLI command and service-tier config handling.
+"""
 
 import unittest
 from types import SimpleNamespace

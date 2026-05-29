@@ -1,3 +1,17 @@
+"""消息网关测试 - Telegram平台·conflict
+
+【产品经理理解要点】
+验证消息网关的Telegram平台功能
+- 验证的功能: Telegram平台消息冲突处理
+- 核心测试场景: connect rejects same host token lock、polling conflict retries before fatal、polling conflict becomes fatal after retries 等共6个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+消息网关测试 - Telegram平台适配·conflict
+
+测试多平台消息接入与命令分发中telegram相关的conflict功能
+"""
+
 import asyncio
 import sys
 from types import SimpleNamespace

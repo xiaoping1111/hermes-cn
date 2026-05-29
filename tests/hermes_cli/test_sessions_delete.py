@@ -1,3 +1,17 @@
+"""命令行界面测试 - 会话管理·删除处理
+
+【产品经理理解要点】
+验证命令行界面的会话管理删除处理功能
+- 验证的功能: 会话删除操作
+- 核心测试场景: sessions delete accepts unique id prefix、sessions delete reports not found when prefix is unknown、sessions delete handles eoferror on confirm 等共4个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - 会话状态管理·消息删除
+
+测试CLI命令处理与配置管理中sessions相关的delete功能
+"""
+
 import sys
 
 

@@ -1,8 +1,18 @@
-"""Tests for the RetainDB memory plugin.
+"""RetainDB插件测试
+
+【产品经理理解要点】
+验证功能插件模块中base url trailing slash stripped等67个场景的正确性
+- base url trailing slash stripped的正确性验证
+- headers include auth的正确性验证
+- headers include api key for memory path的正确性验证
+- 另有64个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the RetainDB memory plugin.
 
 Covers: _Client HTTP client, _WriteQueue SQLite queue, _build_overlay formatter,
-RetainDBMemoryProvider lifecycle/tools/prefetch, thread management, connection pooling.
-"""
+RetainDBMemoryProvider lifecycle/tools/prefetch, thread management, connection pooling."""
 
 import json
 import os

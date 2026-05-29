@@ -1,4 +1,14 @@
-"""Tests for gh-copilot CLI deprecation detection and GitHub Models Azure URL mapping."""
+"""Copilot ACP弃用兼容测试
+
+【产品经理理解要点】
+验证Copilot ACP的弃用兼容逻辑，确保旧接口仍可工作。
+- 弃用警告的正确发出
+- 旧接口的功能不变
+- 影响从旧版Copilot升级的兼容性
+
+──────────────────────────────────────────────────────────────
+Tests for gh-copilot CLI deprecation detection and GitHub Models Azure URL mapping.
+"""
 
 import pytest
 

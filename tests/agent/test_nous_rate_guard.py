@@ -1,4 +1,13 @@
-"""Tests for agent/nous_rate_guard.py — cross-session Nous Portal rate limit guard."""
+"""Nous速率守卫测试
+
+【产品经理理解要点】
+验证Nous平台的API速率限制守卫逻辑。
+- 速率限制的检测和等待
+- 影响Nous平台用户的调用稳定性
+
+──────────────────────────────────────────────────────────────
+Tests for agent/nous_rate_guard.py — cross-session Nous Portal rate limit guard.
+"""
 
 import json
 import os

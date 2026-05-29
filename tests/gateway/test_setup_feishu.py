@@ -1,4 +1,13 @@
-"""Tests for _setup_feishu() in hermes_cli/gateway.py.
+"""消息网关测试 - 设置·feishu
+
+【产品经理理解要点】
+验证消息网关的设置功能
+- 验证的功能: Tests for _setup_feishu() in hermes_cli/gateway.py
+- 核心测试场景: qr success saves core credentials、qr success does not persist bot identity、qr path defaults to websocket 等共14个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for _setup_feishu() in hermes_cli/gateway.py.
 
 Verifies that the interactive setup writes env vars that correctly drive the
 Feishu adapter: credentials, connection mode, DM policy, and group policy.

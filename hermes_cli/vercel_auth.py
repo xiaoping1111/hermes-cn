@@ -1,4 +1,12 @@
-"""Helpers for reporting Vercel Sandbox authentication state."""
+"""Vercel 沙箱认证状态报告
+
+【产品经理理解要点】
+检测并报告 Vercel Sandbox 环境的认证状态，用于 `hermes status` 等诊断场景。
+- 检查 OIDC Token 和 API Token Tuple 两种认证方式
+- 不暴露密钥值，仅报告存在/缺失状态
+
+─────────────────────────────────────────────────────────────────
+Helpers for reporting Vercel Sandbox authentication state."""
 
 from __future__ import annotations
 

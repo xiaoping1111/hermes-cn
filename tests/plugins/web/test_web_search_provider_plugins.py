@@ -1,4 +1,15 @@
-"""Plugin-side tests for the web search provider migration (PR #25182).
+"""Web搜索提供者插件测试
+
+【产品经理理解要点】
+验证功能插件模块中all seven plugins present in registry等27个场景的正确性
+- all seven plugins present in registry的正确性验证
+- capability flags match spec的正确性验证
+- each plugin has name and display name的正确性验证
+- 另有24个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Plugin-side tests for the web search provider migration (PR #25182).
 
 Covers:
 
@@ -14,8 +25,7 @@ Covers:
 Per the dev skill: these tests use *real* imports from the plugin
 modules — no mocking of provider classes themselves — so the test
 catches drift in the ABC interface, the registry, and the plugin
-glue layer simultaneously.
-"""
+glue layer simultaneously."""
 from __future__ import annotations
 
 import asyncio

@@ -1,4 +1,12 @@
-"""CLI handlers for the ``hermes proxy`` subcommand."""
+"""代理 CLI 命令处理
+
+【产品经理理解要点】
+`hermes proxy` 子命令的 CLI 入口，提供 start/stop/status 操作本地代理服务器。
+- 启动代理时指定供应商和监听端口
+- 检查 aiohttp 依赖是否可用
+
+─────────────────────────────────────────────────────────────────
+CLI handlers for the ``hermes proxy`` subcommand."""
 
 from __future__ import annotations
 

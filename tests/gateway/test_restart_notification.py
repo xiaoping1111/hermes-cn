@@ -1,4 +1,14 @@
-"""Tests for /restart notification — the gateway notifies the requester on comeback."""
+"""消息网关测试 - 重启恢复·通知处理
+
+【产品经理理解要点】
+验证消息网关的重启恢复通知处理功能
+- 验证的功能: Tests for /restart notification — the gateway notifies the requester on comeback
+- 核心测试场景: restart notification pending false without marker、restart notification pending true with marker、restart command writes notify file 等共25个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for /restart notification — the gateway notifies the requester on comeback.
+"""
 
 import asyncio
 import json

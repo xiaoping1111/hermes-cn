@@ -1,12 +1,21 @@
-"""Tests for the ACP Registry version-lockstep bump in scripts/release.py.
+"""ACP注册表发布注册表测试
+
+【产品经理理解要点】
+验证脚本工具模块中update acp registry versions bumps manifest and pin、update acp registry versions is silent when manifest missing、update version files bumps manifest alongside pyproject的正确性
+- update acp registry versions bumps manifest and pin的正确性验证
+- update acp registry versions is silent when manifest...的正确性验证
+- update version files bumps manifest alongside pyproject的正确性验证
+- 影响脚本工具的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the ACP Registry version-lockstep bump in scripts/release.py.
 
 The official ACP Registry manifest must match ``pyproject.toml`` exactly —
 ``tests/acp/test_registry_manifest.py`` enforces this at lint time, and the
 upstream registry CI rejects ``@latest`` / floating pins. The release script
 is the single place that bumps the manifest in lockstep with pyproject; if
 that bump ever silently breaks, weekly releases fail the manifest test
-until someone hand-edits the JSON.
-"""
+until someone hand-edits the JSON."""
 
 from __future__ import annotations
 

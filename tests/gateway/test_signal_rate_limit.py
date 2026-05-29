@@ -1,4 +1,14 @@
-"""Tests for the SignalAttachmentScheduler token-bucket simulator."""
+"""消息网关测试 - Signal速率限制
+
+【产品经理理解要点】
+验证消息网关Signal速率限制的正确性
+- 验证的功能: Tests for the SignalAttachmentScheduler token-bucket simulator
+- 核心测试场景: default capacity matches signal cap、default refill rate from default retry after、starts full 等共18个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the SignalAttachmentScheduler token-bucket simulator.
+"""
 import asyncio
 import time
 

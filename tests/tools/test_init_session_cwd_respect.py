@@ -1,4 +1,15 @@
-"""Tests that init_session() respects the configured cwd.
+"""会话初始化工作目录测试
+
+【产品经理理解要点】
+验证工具系统模块中bootstrap contains cd to configured cwd等4个场景的正确性
+- bootstrap contains cd to configured cwd的正确性验证
+- configured cwd survives init session的正确性验证
+- default cwd still works的正确性验证
+- 另有1个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests that init_session() respects the configured cwd.
 
 The bug: when terminal.cwd is set in config.yaml, the configured path was
 displayed in the TUI banner but actual terminal commands ran in os.getcwd()
@@ -10,8 +21,7 @@ Root cause: init_session() captures the login shell environment by running
 runs, so _update_cwd() overwrites self.cwd with the wrong directory.
 
 Fix: the bootstrap now includes an explicit ``cd`` back to self.cwd before
-running ``pwd -P``, so the configured cwd is always what gets recorded.
-"""
+running ``pwd -P``, so the configured cwd is always what gets recorded."""
 
 from tempfile import TemporaryFile
 from unittest.mock import MagicMock

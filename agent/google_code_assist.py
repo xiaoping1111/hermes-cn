@@ -1,4 +1,14 @@
-"""Google Code Assist API client — project discovery, onboarding, quota.
+"""Google Code Assist API客户端
+
+【产品经理理解要点】
+对接Google Code Assist API，为Gemini CLI的免费/付费层级提供项目发现、用户入驻和配额查询。
+- 核心职责：探测用户账户层级、处理首次入驻流程、查询剩余配额
+- 免费层级：个人Google账号有慷慨的每日配额
+- 付费层级：通过GCP项目计费，支持Workspace/Standard/Enterprise
+- VPC-SC处理：企业账户在VPC服务控制下自动降级为标准层级
+
+─────────────────────────────────────────────────────────────────
+Google Code Assist API client — project discovery, onboarding, quota.
 
 The Code Assist API powers Google's official gemini-cli. It sits at
 ``cloudcode-pa.googleapis.com`` and provides:

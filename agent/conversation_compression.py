@@ -1,4 +1,20 @@
-"""Context compression — extract the AIAgent methods that drive summarisation.
+"""对话压缩执行 — 压缩对话内容、切换会话、通知各组件
+
+【产品经理理解要点】
+当对话太长需要压缩时，这个模块负责执行具体的压缩流程：
+
+  1. 可行性检查：压缩用的辅助模型是否足够强？（弱模型做不好摘要）
+  2. 执行压缩：调用上下文引擎（如 ContextCompressor）压缩对话
+  3. 切换会话：在数据库中分割旧会话和新会话，用新会话ID继续
+  4. 通知组件：告诉记忆管理器、插件等"对话被压缩了"
+  5. 图片瘦身：如果图片过大导致 API 报错，自动缩小后重试
+
+压缩不只影响对话，还需要让数据库、缓存、插件等所有组件同步切换，
+这个模块就是"压缩总指挥"。
+
+─────────────────────────────────────────────────────────────────
+
+Context compression — extract the AIAgent methods that drive summarisation.
 
 Three concerns live here:
 

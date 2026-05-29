@@ -1,10 +1,18 @@
-"""Tests for KeyboardInterrupt handling in exit cleanup paths.
+"""退出清理中断测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中keyboard interrupt in end session does not skip close、keyboard interrupt in close does not propagate的正确性
+- keyboard interrupt in end session does not skip...的正确性验证
+- keyboard interrupt in close does not propagate的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for KeyboardInterrupt handling in exit cleanup paths.
 
 ``except Exception`` does not catch ``KeyboardInterrupt`` (which inherits
 from ``BaseException``).  A second Ctrl+C during exit cleanup must not
 abort remaining cleanup steps.  These tests exercise the actual production
-code paths — not a copy of the try/except pattern.
-"""
+code paths — not a copy of the try/except pattern."""
 
 import atexit
 import weakref

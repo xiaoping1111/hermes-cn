@@ -1,4 +1,15 @@
-"""Tests for cold-load token expiry tracking in MCP OAuth.
+"""MCP OAuth冷加载过期测试
+
+【产品经理理解要点】
+验证工具系统模块中set tokens persists absolute expires at等9个场景的正确性
+- set tokens persists absolute expires at的正确性验证
+- set tokens without expires in omits expires at的正确性验证
+- get tokens uses expires at for remaining ttl的正确性验证
+- 另有6个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for cold-load token expiry tracking in MCP OAuth.
 
 PR #11383's consolidation fixed external-refresh reloading (mtime disk-watch)
 and 401 dedup, but left two underlying latent bugs in place:
@@ -29,8 +40,7 @@ These tests pin the contract for Fix A:
   expired tokens with a live refresh_token.
 
 Reference: Claude Code solves this via an ``OAuthTokens.expiresAt`` absolute
-timestamp persisted alongside the access_token (``auth.ts:~180``).
-"""
+timestamp persisted alongside the access_token (``auth.ts:~180``)."""
 from __future__ import annotations
 
 import asyncio

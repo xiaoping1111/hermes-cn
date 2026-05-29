@@ -1,4 +1,7 @@
-"""Pack a directory into a DOCX, PPTX, or XLSX file.
+"""【产品经理理解要点】
+Office文件打包工具——将解包后的目录重新打包为DOCX/PPTX/XLSX文件，包含XML格式压缩和自动修复校验。
+─────────────────────────────────────────────────────────────────
+Pack a directory into a DOCX, PPTX, or XLSX file.
 
 Validates with auto-repair, condenses XML formatting, and creates the Office file.
 

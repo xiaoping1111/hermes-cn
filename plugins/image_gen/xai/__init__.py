@@ -1,5 +1,11 @@
-"""xAI image generation backend.
+"""xAI图像生成后端
 
+【产品经理理解要点】
+提供基于xAI grok-imagine-image模型的AI图像生成，支持多种宽高比和分辨率。
+- 核心功能：文本生成图像，支持1:1/16:9/9:16等宽高比
+- 输出：Base64编码保存到缓存
+
+─────────────────────────────────────────────────────────────────
 Exposes xAI's ``grok-imagine-image`` model as an
 :class:`ImageGenProvider` implementation.
 

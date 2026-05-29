@@ -1,4 +1,12 @@
-"""
+"""消息网关测试 - tts·媒体处理·routing
+
+【产品经理理解要点】
+验证消息网关的媒体处理功能
+- 验证的功能: Tests for cross-platform audio/voice media routing
+- 核心测试场景: base adapter routes telegram flac media tag to document sender、base adapter routes non voice telegram ogg media tag to document sender、base adapter routes voice tagged telegram ogg media tag to voice sender 等共6个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
 Tests for cross-platform audio/voice media routing.
 
 These tests pin the expected delivery path for audio media files across

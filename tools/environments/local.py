@@ -1,4 +1,14 @@
-"""Local execution environment — spawn-per-call with session snapshot."""
+"""本地执行环境 — 直接在主机上运行命令
+
+【产品经理理解要点】
+本模块在当前主机上直接执行命令，是最简单也最直接的环境，适用于开发调试和可信场景。
+- 核心特点：命令直接在本机bash中执行，无隔离，性能最佳
+- 环境保持：通过快照机制保持用户的环境变量（PATH、自定义变量等）跨调用一致
+- 安全过滤：自动过滤掉API密钥、Token等敏感环境变量，防止泄露给子进程
+- 跨平台支持：macOS、Linux、Windows（Git Bash）均可使用
+
+─────────────────────────────────────────────────────────────────
+Local execution environment — spawn-per-call with session snapshot."""
 
 import logging
 import os

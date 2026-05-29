@@ -1,4 +1,13 @@
-"""Shared ANSI color utilities for Hermes CLI modules."""
+"""共享 ANSI 颜色工具
+
+【产品经理理解要点】
+为 CLI 各模块提供统一的终端彩色输出能力，自动尊重 NO_COLOR 环境变量。
+- 核心职责：判断是否应使用彩色输出（NO_COLOR/TERM=dumb/非 TTY 时禁用），提供标准 ANSI 颜色常量
+- 关键概念：NO_COLOR 标准（https://no-color.org/）、TTY 检测、ANSI 转义码
+- 系统定位：CLI 展示层的基础工具，所有终端彩色输出都通过本模块
+
+─────────────────────────────────────────────────────────────────
+Shared ANSI color utilities for Hermes CLI modules."""
 
 import os
 import sys

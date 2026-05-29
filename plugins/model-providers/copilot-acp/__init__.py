@@ -1,4 +1,7 @@
-"""GitHub Copilot ACP provider profile.
+"""【产品经理理解要点】
+GitHub Copilot ACP（Agent Communication Protocol）提供商——通过外部ACP子进程与Copilot通信，不走标准传输层。由run_agent.py单独处理。
+─────────────────────────────────────────────────────────────────
+GitHub Copilot ACP provider profile.
 
 copilot-acp uses an external ACP subprocess — NOT the standard
 transport. api_mode="copilot_acp" is handled separately in run_agent.py.

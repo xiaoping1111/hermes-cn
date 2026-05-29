@@ -1,5 +1,13 @@
-"""Parallel.ai web search + content extraction — plugin form.
+"""Parallel.ai搜索+异步内容提取供应商
 
+【产品经理理解要点】
+Parallel.ai提供AI优化的网络搜索和并行页面内容提取。搜索使用同步客户端，内容提取使用原生异步客户端。
+- 搜索：支持三种模式——agentic(默认，AI深度搜索)、fast(快速)、one-shot(单次)
+- 内容提取：异步批量提取多个URL的完整内容
+- 认证：需要PARALLEL_API_KEY，在https://parallel.ai获取
+- 技术特点：首个使用异步SDK客户端的插件，Hermes调度器自动检测并await
+
+─────────────────────────────────────────────────────────────────
 Subclasses :class:`agent.web_search_provider.WebSearchProvider`. Uses two
 distinct Parallel SDK clients:
 

@@ -1,4 +1,13 @@
-"""Tests for Telegram native partial-quote handling in _build_message_event.
+"""消息网关测试 - Telegram平台·回复处理·quote
+
+【产品经理理解要点】
+验证消息网关的Telegram平台回复处理功能
+- 验证的功能: Tests for Telegram native partial-quote handling in _build_message_event
+- 核心测试场景: native partial quote used as reply to text、full reply text used when no native quote、caption fallback when no quote and no text 等共4个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Telegram native partial-quote handling in _build_message_event.
 
 When a Telegram user replies using Telegram's native quote feature to
 select only part of a prior message, the adapter must use ``message.quote.text``

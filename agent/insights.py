@@ -1,4 +1,17 @@
-"""
+"""会话洞察引擎 — 分析历史使用数据，生成用量报告
+
+【产品经理理解要点】
+用户可以通过 /insights 命令查看自己的使用情况，包括：
+  - Token 消耗趋势：最近30天每天用了多少 token
+  - 费用估算：根据各模型的定价计算大概花费
+  - 工具使用统计：最常用的工具是什么
+  - 模型分布：用了哪些模型，各用了多少
+  - 平台分布：从 CLI、Telegram、Discord 等各发了多少条消息
+
+数据来源是本地 SQLite 数据库中的会话记录，不上传任何数据。
+
+─────────────────────────────────────────────────────────────────
+
 Session Insights Engine for Hermes Agent.
 
 Analyzes historical session data from the SQLite state database to produce

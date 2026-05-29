@@ -1,3 +1,17 @@
+"""命令行界面测试 - chat·技能系统·flag
+
+【产品经理理解要点】
+验证命令行界面的技能系统功能
+- 验证的功能: 聊天技能标志开关
+- 核心测试场景: top level skills flag defaults to chat、chat subcommand accepts skills flag、chat subcommand accepts image flag 等共4个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - chat·技能系统·flag
+
+测试CLI命令处理与配置管理中chat相关的skills相关的flag功能
+"""
+
 import sys
 
 

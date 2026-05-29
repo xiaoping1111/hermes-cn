@@ -1,4 +1,14 @@
-"""Tests for Copilot live /models context-window resolution."""
+"""命令行界面测试 - Copilot集成·context
+
+【产品经理理解要点】
+验证命令行界面的Copilot集成功能
+- 验证的功能: Tests for Copilot live /models context-window resolution
+- 核心测试场景: returns max prompt tokens、returns none for unknown model、skips models without limits 等共11个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for Copilot live /models context-window resolution.
+"""
 
 from __future__ import annotations
 

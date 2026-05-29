@@ -1,4 +1,13 @@
-"""Tests for tui_gateway background-review summary delivery.
+"""审查摘要回调测试
+
+【产品经理理解要点】
+验证TUI网关模块中init session attaches background review callback、review summary callback survives agent without attribute的正确性
+- init session attaches background review callback的正确性验证
+- review summary callback survives agent without attribute的正确性验证
+- 影响TUI网关的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tui_gateway background-review summary delivery.
 
 When the self-improvement background review fires and saves a skill or
 memory entry, it calls ``agent.background_review_callback(message)``. In
@@ -6,8 +15,7 @@ the CLI that routes through a prompt_toolkit-safe ``_cprint``; in the TUI
 there is no print surface, so without a callback wired up the review
 writes the change silently. ``_init_session`` attaches a callback that
 emits a ``review.summary`` event which Ink renders as a persistent
-transcript line.
-"""
+transcript line."""
 
 from __future__ import annotations
 

@@ -1,4 +1,14 @@
-"""Singularity/Apptainer persistent container environment.
+"""Singularity/Apptainer容器环境 — HPC场景的安全容器执行
+
+【产品经理理解要点】
+本模块使用Singularity（现名Apptainer）容器执行命令，主要面向高性能计算（HPC）集群环境，是Docker在受限环境下的替代方案。
+- 安全模型：与Docker不同，Singularity以用户身份运行容器，无需root权限，适合多租户HPC集群
+- 持久化：通过可写叠加层（overlay）目录保存文件系统变更，跨会话持久化
+- 镜像管理：自动将Docker镜像转换为SIF格式并缓存，首次使用需一次性构建
+- 适用场景：大学HPC集群、企业研发集群等不允许运行Docker守护进程的环境
+
+─────────────────────────────────────────────────────────────────
+Singularity/Apptainer persistent container environment.
 
 Security-hardened with --containall, --no-home, capability dropping.
 Supports configurable resource limits and optional filesystem persistence

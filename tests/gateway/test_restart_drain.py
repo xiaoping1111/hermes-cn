@@ -1,3 +1,17 @@
+"""消息网关测试 - 重启恢复·drain
+
+【产品经理理解要点】
+验证消息网关的重启恢复功能
+- 验证的功能: 重启时请求排空机制
+- 核心测试场景: restart command while busy requests drain without interrupt、drain queue mode queues follow up without interrupt、draining rejects new session messages 等共16个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+消息网关测试 - 重启恢复·drain
+
+测试多平台消息接入与命令分发中restart相关的drain功能
+"""
+
 import asyncio
 import shutil
 import subprocess

@@ -1,4 +1,13 @@
-"""Tests for agent/model_metadata.py — token estimation, context lengths,
+"""模型元数据测试
+
+【产品经理理解要点】
+验证模型元数据的查询、缓存和上下文长度获取。
+- 模型上下文长度的正确获取
+- 元数据缓存的一致性
+- 影响对话窗口大小的自动配置
+
+──────────────────────────────────────────────────────────────
+Tests for agent/model_metadata.py — token estimation, context lengths,
 probing, caching, and error parsing.
 
 Coverage levels:

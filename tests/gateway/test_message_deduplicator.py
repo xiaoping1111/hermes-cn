@@ -1,4 +1,13 @@
-"""Tests for MessageDeduplicator TTL enforcement (#10306).
+"""消息网关测试 - 消息去重器
+
+【产品经理理解要点】
+验证消息网关消息去重器的正确性
+- 验证的功能: Tests for MessageDeduplicator TTL enforcement (#10306)
+- 核心测试场景: duplicate within ttl、not duplicate after ttl expires、expired entry gets refreshed 等共8个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for MessageDeduplicator TTL enforcement (#10306).
 
 Previously, is_duplicate() returned True for any previously seen ID without
 checking its age — expired entries were only purged when cache size exceeded

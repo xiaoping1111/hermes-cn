@@ -1,4 +1,15 @@
-"""Regression guard for #15218 — external memory sync must skip interrupted turns.
+"""记忆同步中断测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中interrupted turn does not sync等9个场景的正确性
+- interrupted turn does not sync的正确性验证
+- interrupted turn skips even when response is full的正确性验证
+- completed turn syncs and queues prefetch的正确性验证
+- 另有6个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression guard for #15218 — external memory sync must skip interrupted turns.
 
 Before this fix, ``run_conversation`` called
 ``memory_manager.sync_all(original_user_message, final_response)`` at the
@@ -15,8 +26,7 @@ is True (regardless of whether ``final_response`` and
 
 These tests exercise the helper directly on a bare ``AIAgent`` built
 via ``__new__`` so the full ``run_conversation`` machinery isn't needed
-— the method is pure logic and three state arguments.
-"""
+— the method is pure logic and three state arguments."""
 from unittest.mock import MagicMock
 
 import pytest

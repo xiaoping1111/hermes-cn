@@ -1,4 +1,15 @@
-"""Behavioral tests for Windows-specific compatibility fixes.
+"""Windows原生支持测试
+
+【产品经理理解要点】
+验证工具系统模块中no op on posix等50个场景的正确性
+- no op on posix的正确性验证
+- idempotent的正确性验证
+- windows path sets env and reconfigures streams的正确性验证
+- 另有47个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Behavioral tests for Windows-specific compatibility fixes.
 
 Complements ``tests/tools/test_windows_compat.py`` (which does source-level
 pattern linting) with cross-platform-mocked tests that exercise the actual
@@ -6,8 +17,7 @@ code paths Hermes takes on native Windows.
 
 Runs on Linux CI — every test mocks ``sys.platform``, ``subprocess.run``,
 and ``os.kill`` as needed to simulate Windows behavior without requiring a
-Windows runner.
-"""
+Windows runner."""
 
 from __future__ import annotations
 

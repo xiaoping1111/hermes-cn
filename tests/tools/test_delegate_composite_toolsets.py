@@ -1,4 +1,15 @@
-"""Tests for composite toolset expansion in delegate_task intersection."""
+"""子任务委派组合工具集测试
+
+【产品经理理解要点】
+验证工具系统模块中composite hermes cli expands web等5个场景的正确性
+- composite hermes cli expands web的正确性验证
+- individual toolset unchanged的正确性验证
+- empty parent toolsets的正确性验证
+- 另有2个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for composite toolset expansion in delegate_task intersection."""
 
 import unittest
 from unittest.mock import patch

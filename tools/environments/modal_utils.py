@@ -1,4 +1,13 @@
-"""Shared Hermes-side execution flow for Modal transports.
+"""Modal传输层共享执行流程 — 直连和托管Modal的公共逻辑
+
+【产品经理理解要点】
+本模块抽取了两种Modal模式（直连和托管网关）的公共执行逻辑，包括命令准备、超时控制和中断处理。
+- 核心职责：命令预处理（sudo管道、stdin heredoc嵌入）、超时倒计时、中断信号检测
+- 两种Modal模式的区别：直连模式直接调用Modal SDK，托管模式通过Hermus工具网关中转
+- 统一的执行流程：准备命令 → 启动执行 → 轮询结果 → 处理中断/超时
+
+─────────────────────────────────────────────────────────────────
+Shared Hermes-side execution flow for Modal transports.
 
 This module deliberately stops at the Hermes boundary:
 - command preparation

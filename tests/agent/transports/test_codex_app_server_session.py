@@ -1,4 +1,17 @@
-"""Tests for CodexAppServerSession — drive turns through a mock client.
+"""Codex应用服务器会话层测试
+
+【产品经理理解要点】
+验证Codex会话管理层的核心行为：对话轮次驱动、通知消费、服务器请求（执行审批）处理、中断机制、超时检测。会话层是codex运行时最复杂的组件，负责将JSON-RPC通信转化为Hermes可用的TurnResult。
+- 验证对话轮次的正常文本返回、工具迭代计数、中断机制
+- 验证执行审批桥接：将codex的权限请求转化为用户审批流程
+- 验证会话退役：超时、子进程死亡、OAuth刷新失败时正确退役并重建
+- 验证stderr内容附加到错误信息（密钥自动脱敏）
+- 业务影响：如果这些测试失败，codex运行时可能卡死、权限审批失效或OAuth失败后无法恢复
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for CodexAppServerSession — drive turns through a mock client.
 
 The session adapter has the most complex behavior of the three new modules:
 notification draining, server-request handling (approvals), interrupt,

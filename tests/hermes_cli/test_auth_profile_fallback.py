@@ -1,4 +1,13 @@
-"""Tests for cross-profile auth fallback.
+"""命令行界面测试 - 认证授权·多配置文件·降级策略
+
+【产品经理理解要点】
+验证命令行界面的认证授权多配置文件降级策略功能
+- 验证的功能: Tests for cross-profile auth fallback
+- 核心测试场景: profile with zero entries falls back to global、profile with entries fully shadows global、per provider shadowing is independent 等共11个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for cross-profile auth fallback.
 
 When ``HERMES_HOME`` points to a named profile, ``read_credential_pool()``
 and ``get_provider_auth_state()`` fall back to the global-root

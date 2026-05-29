@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Watch any JSON endpoint that returns a list of objects; dedup by ID field.
+"""JSON API监控脚本
+
+【产品经理理解要点】
+监控任意返回JSON列表的API端点，通过ID字段去重，只推送新条目。
+- 核心职责：定时轮询API，比对上次结果，只输出新增条目
+- 使用方式：通过Hermes定时任务（cron）运行
+
+─────────────────────────────────────────────────────────────────
+Watch any JSON endpoint that returns a list of objects; dedup by ID field.
 
 Usage (via cron with --no-agent):
 

@@ -1,4 +1,13 @@
-"""Tests for voice mode platform isolation (bug #12542).
+"""消息网关测试 - 语音消息·mode·platform·isolation
+
+【产品经理理解要点】
+验证消息网关的语音消息功能
+- 验证的功能: Tests for voice mode platform isolation (bug #12542)
+- 核心测试场景: voice key format、voice key different platforms same chat id、telegram and slack voice mode independent 等共10个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for voice mode platform isolation (bug #12542).
 
 Voice mode state stored as {chat_id: mode} without a platform namespace
 caused collisions: Telegram chat '123' and Slack chat '123' shared the

@@ -1,8 +1,17 @@
-"""Tests for Windows compatibility of process management code.
+"""Windows兼容性测试
+
+【产品经理理解要点】
+验证工具系统模块中preexec fn is guarded、has is windows、no unguarded killpg的正确性
+- preexec fn is guarded的正确性验证
+- has is windows的正确性验证
+- no unguarded killpg的正确性验证
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for Windows compatibility of process management code.
 
 Verifies that os.setsid and os.killpg are never called unconditionally,
-and that each module uses a platform guard before invoking POSIX-only functions.
-"""
+and that each module uses a platform guard before invoking POSIX-only functions."""
 
 import ast
 import pytest

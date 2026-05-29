@@ -1,10 +1,20 @@
-"""Tests for tui_gateway/entry.py sys.path hardening (issue #15989).
+"""系统路径入口测试
+
+【产品经理理解要点】
+验证TUI网关模块中empty string and dot removed from sys path等4个场景的正确性
+- empty string and dot removed from sys path的正确性验证
+- hermes src root inserted at front的正确性验证
+- src root not duplicated if already present的正确性验证
+- 另有1个测试场景覆盖
+- 影响TUI网关的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tui_gateway/entry.py sys.path hardening (issue #15989).
 
 When the TUI backend is spawned by Node.js, the Python interpreter may have
 '' or '.' at the front of sys.path, allowing a local utils/ directory in CWD
 to shadow the installed utils module.  entry.py must sanitize sys.path before
-any non-stdlib import is resolved.
-"""
+any non-stdlib import is resolved."""
 
 import importlib
 import os

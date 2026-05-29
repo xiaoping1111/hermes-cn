@@ -1,4 +1,13 @@
-"""Regression: hermes doctor must not run a generic Bearer-auth health
+"""命令行界面测试 - doctor·dedicated·提供商·skip
+
+【产品经理理解要点】
+验证命令行界面的提供商功能
+- 验证的功能: Regression: hermes doctor must not run a generic Bearer-auth health
+- 核心测试场景: build apikey providers list skips dedicated check providers、build apikey providers list includes non dedicated providers
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression: hermes doctor must not run a generic Bearer-auth health
 check for providers that already have a dedicated check (Anthropic,
 OpenRouter, Bedrock).
 

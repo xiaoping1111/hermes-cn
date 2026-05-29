@@ -1,4 +1,14 @@
-"""Tests for MCP tool-handler circuit-breaker recovery.
+"""MCP协议熔断器测试
+
+【产品经理理解要点】
+验证工具系统模块中circuit breaker half opens after cooldown、circuit breaker reopens on probe failure、circuit breaker cleared on reconnect的正确性
+- circuit breaker half opens after cooldown的正确性验证
+- circuit breaker reopens on probe failure的正确性验证
+- circuit breaker cleared on reconnect的正确性验证
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for MCP tool-handler circuit-breaker recovery.
 
 The circuit breaker in ``tools/mcp_tool.py`` is intended to short-circuit
 calls to an MCP server that has failed ``_CIRCUIT_BREAKER_THRESHOLD``
@@ -9,8 +19,7 @@ The original implementation only had two states — closed and open — with
 no mechanism to transition back to closed, so a tripped breaker stayed
 tripped for the lifetime of the process. These tests lock in the
 half-open / cooldown / reconnect-resets-breaker behavior that fixes
-that.
-"""
+that."""
 import json
 from unittest.mock import MagicMock
 

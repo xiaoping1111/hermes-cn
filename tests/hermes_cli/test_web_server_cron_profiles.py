@@ -1,4 +1,14 @@
-"""Regression tests for dashboard cron job profile routing."""
+"""命令行界面测试 - web·server·cron·多配置文件
+
+【产品经理理解要点】
+验证命令行界面的多配置文件功能
+- 验证的功能: Regression tests for dashboard cron job profile routing
+- 核心测试场景: call cron for profile routes storage and restores globals、list cron jobs all includes default and named profiles、list cron jobs specific profile filters results 等共6个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression tests for dashboard cron job profile routing.
+"""
 
 import pytest
 from fastapi import HTTPException

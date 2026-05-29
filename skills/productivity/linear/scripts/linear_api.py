@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Linear GraphQL API CLI — zero dependencies, stdlib only.
+"""【产品经理理解要点】
+Linear项目管理API命令行工具——零依赖（仅用Python标准库），通过GraphQL操作Linear的项目、团队、Issue、评论等，支持完整的CRUD操作。
+─────────────────────────────────────────────────────────────────
+Linear GraphQL API CLI — zero dependencies, stdlib only.
 
 Usage:
   linear_api.py <command> [args...]

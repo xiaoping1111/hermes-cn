@@ -1,4 +1,13 @@
-"""Regression tests for ``MCPServerTask.run`` + ``asyncio.CancelledError``.
+"""MCP取消错误传播测试
+
+【产品经理理解要点】
+验证工具系统模块中cancelled error is not swallowed by except exception、shutdown completes promptly when task is cancelled的正确性
+- cancelled error is not swallowed by except exception的正确性验证
+- shutdown completes promptly when task is cancelled的正确性验证
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for ``MCPServerTask.run`` + ``asyncio.CancelledError``.
 
 Background
 ==========
@@ -12,8 +21,7 @@ server stayed dead until Hermes was restarted. See #9930.
 The fix adds an explicit ``except asyncio.CancelledError: raise`` BEFORE
 the broad catch so cancellation propagates cleanly to asyncio's task
 machinery and ``MCPServerTask.shutdown()``'s ``await self._task`` completes
-without hanging the reconnect loop.
-"""
+without hanging the reconnect loop."""
 
 from __future__ import annotations
 

@@ -1,3 +1,13 @@
+"""网站策略测试
+
+【产品经理理解要点】
+验证工具系统模块中load website blocklist merges config and shared file等22个场景的正确性
+- load website blocklist merges config and shared file的正确性验证
+- check website access matches parent domain subdomains的正确性验证
+- check website access supports wildcard subdomains only的正确性验证
+- 另有19个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性"""
+
 import json
 from pathlib import Path
 

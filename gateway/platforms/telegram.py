@@ -1,4 +1,14 @@
-"""
+"""Telegram 平台适配器
+
+【产品经理理解要点】
+让 Agent 通过 Telegram 与用户交互，是最常用的平台之一：
+  - 接收用户/群组的文字、图片、贴纸消息
+  - 发送 AI 回复（支持 Markdown 格式）
+  - 处理斜杠命令（/new、/reset 等）
+  - 支持流式编辑（AI 打字过程中实时更新消息）
+
+─────────────────────────────────────────────────────────────────
+
 Telegram platform adapter.
 
 Uses python-telegram-bot library for:

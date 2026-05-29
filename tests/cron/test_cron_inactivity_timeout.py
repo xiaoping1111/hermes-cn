@@ -1,4 +1,13 @@
-"""Tests for cron job inactivity-based timeout.
+"""定时任务测试 - 空闲超时机制
+
+【产品经理理解要点】
+验证定时任务调度引擎空闲超时机制的正确性
+- 验证的功能: Tests for cron job inactivity-based timeout
+- 核心测试场景: active agent completes normally、idle agent triggers timeout、unlimited timeout 等共11个场景
+- 业务影响: 定时任务可能无法正确调度执行，影响自动化工作流的可靠性
+
+─────────────────────────────────────────────────────────────────
+Tests for cron job inactivity-based timeout.
 
 Tests cover:
 - Active agent runs indefinitely (no inactivity timeout)

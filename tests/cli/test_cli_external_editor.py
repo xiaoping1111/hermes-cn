@@ -1,4 +1,13 @@
-"""Tests for CLI external-editor support."""
+"""Cli External Editor 测试
+
+【产品经理理解要点】
+验证cli external editor相关功能的正确性。
+- 相关功能的单元测试覆盖
+- 如果测试失败，对应功能可能异常
+
+──────────────────────────────────────────────────────────────
+Tests for CLI external-editor support.
+"""
 
 from unittest.mock import patch
 

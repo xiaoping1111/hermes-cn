@@ -1,8 +1,17 @@
-"""Regression tests for issue #17335.
+"""工具定义缓存隔离测试
+
+【产品经理理解要点】
+验证工具定义缓存返回的是独立副本，防止Gateway长生命周期进程的工具列表被意外扩充。
+- 缓存命中路径返回新列表（非共享对象）
+- 修改返回值不污染缓存
+- 影响DeepSeek/Moonshot等强制工具名唯一的提供商
+
+──────────────────────────────────────────────────────────────
+Regression tests for issue #17335.
 
 The ``quiet_mode=True`` fast path in :func:`model_tools.get_tool_definitions`
 memoizes results to avoid re-walking the registry on every Gateway call. The
-cached object must NOT be aliased into callers' return values \u2014 long-lived
+cached object must NOT be aliased into callers' return values — long-lived
 Gateway processes mutate the returned list (``run_agent`` appends memory and
 LCM context-engine tool schemas to ``self.tools``), and a shared list would
 poison subsequent agent inits with duplicate tool names. Providers that

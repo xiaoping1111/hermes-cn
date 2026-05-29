@@ -1,4 +1,14 @@
-"""Tests for gateway proxy mode — forwarding messages to a remote API server."""
+"""消息网关测试 - proxy·mode
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for gateway proxy mode — forwarding messages to a remote API server
+- 核心测试场景: returns none when not configured、reads from env var、strips trailing slash 等共22个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for gateway proxy mode — forwarding messages to a remote API server.
+"""
 
 import asyncio
 import json

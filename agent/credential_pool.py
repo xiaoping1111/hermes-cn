@@ -1,4 +1,14 @@
-"""Persistent multi-credential pool for same-provider failover."""
+"""多凭据池：同一供应商的API Key自动故障转移
+
+【产品经理理解要点】
+配置多个API Key时，自动切换到可用的Key，避免单一Key限额用尽导致服务中断。
+- 核心职责：管理多个API Key，在当前Key失效时自动切换到下一个
+- 使用场景：用户配置了多个OpenRouter Key，当某个Key达到限额时自动切换
+- 令牌刷新：自动刷新即将过期的Access Token（如Codex、Kimi等）
+- 状态追踪：记录每个Key的使用状态、冷却时间、错误次数
+
+─────────────────────────────────────────────────────────────────
+Persistent multi-credential pool for same-provider failover."""
 
 from __future__ import annotations
 

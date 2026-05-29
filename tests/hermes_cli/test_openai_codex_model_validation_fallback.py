@@ -1,4 +1,13 @@
-"""Regression tests for OpenAI Codex model validation when the listing lags behind
+"""命令行界面测试 - openai·Codex运行时·模型管理·validation·降级策略
+
+【产品经理理解要点】
+验证命令行界面的Codex运行时模型管理降级策略功能
+- 验证的功能: Regression tests for OpenAI Codex model validation when the listing lags behind
+- 核心测试场景: openai codex unknown but plausible model is accepted with warning、switch model allows openai codex model missing from listing
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression tests for OpenAI Codex model validation when the listing lags behind
 actually usable backend model IDs.
 
 The bug originally reported in #16172: `/model` and `switch_model()` rejected

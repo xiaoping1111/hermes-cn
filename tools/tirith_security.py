@@ -1,4 +1,13 @@
-"""Tirith pre-exec security scanning wrapper.
+"""Tirith 预执行安全扫描
+
+【产品经理理解要点】
+在 Agent 执行终端命令前，用 Tirith 扫描命令内容中的安全威胁（同形字 URL、管道注入、终端逃逸等），阻止高危命令。
+- 核心职责：启动 Tirith 子进程扫描命令；自动下载安装 Tirith（含 SHA-256 校验和可选的 Cosign 签名验证）
+- 关键业务概念：三级判决——允许/阻止/警告；失败放行可配置——Tirith 启动失败时默认允许命令执行（不阻塞正常使用）
+- 在系统中的位置：终端工具和代码执行工具的安全前置，在命令实际执行前拦截
+
+─────────────────────────────────────────────────────────────────
+Tirith pre-exec security scanning wrapper.
 
 Runs the tirith binary as a subprocess to scan commands for content-level
 threats (homograph URLs, pipe-to-interpreter, terminal injection, etc.).

@@ -1,4 +1,15 @@
-"""Tests for the Google Gemini TTS provider in tools/tts_tool.py."""
+"""语音合成Gemini测试
+
+【产品经理理解要点】
+验证工具系统模块中riff header structure等15个场景的正确性
+- riff header structure的正确性验证
+- header size is 44的正确性验证
+- missing api key raises value error的正确性验证
+- 另有12个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the Google Gemini TTS provider in tools/tts_tool.py."""
 
 import base64
 import struct

@@ -1,4 +1,12 @@
-"""Tests for local provider stream read timeout auto-detection.
+"""本地流超时测试
+
+【产品经理理解要点】
+验证本地模型流式响应的超时检测和恢复。
+- 流式响应超时的正确检测
+- 影响本地模型长响应场景的稳定性
+
+──────────────────────────────────────────────────────────────
+Tests for local provider stream read timeout auto-detection.
 
 When a local LLM provider is detected (Ollama, llama.cpp, vLLM, etc.),
 the httpx stream read timeout should be automatically increased from the

@@ -1,4 +1,15 @@
-"""Tests for tools/memory_tool.py — MemoryStore, security scanning, and tool dispatcher."""
+"""记忆工具测试
+
+【产品经理理解要点】
+验证工具系统模块中discourages diary style task logs等33个场景的正确性
+- discourages diary style task logs的正确性验证
+- clean content passes的正确性验证
+- prompt injection blocked的正确性验证
+- 另有30个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/memory_tool.py — MemoryStore, security scanning, and tool dispatcher."""
 
 import json
 import pytest

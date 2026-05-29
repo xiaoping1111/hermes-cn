@@ -1,4 +1,13 @@
-"""
+"""Home Assistant 平台适配器 — 智能家居控制
+
+【产品经理理解要点】
+让 Agent 连接 Home Assistant 智能家居平台：
+  - 监控设备状态变化（灯开了、温度升了等）
+  - 将状态变化转发给 AI 处理
+  - AI 回复通过 persistent notification 通知用户
+
+─────────────────────────────────────────────────────────────────
+
 Home Assistant platform adapter.
 
 Connects to the HA WebSocket API for real-time event monitoring.

@@ -1,4 +1,14 @@
-"""Tests for hermes_cli.model_catalog — remote manifest fetch + cache + fallback."""
+"""命令行界面测试 - 模型管理·catalog
+
+【产品经理理解要点】
+验证命令行界面的模型管理功能
+- 验证的功能: Tests for hermes_cli.model_catalog — remote manifest fetch + cache + fallback
+- 核心测试场景: accepts well formed manifest、rejects non dict、rejects missing version 等共23个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.model_catalog — remote manifest fetch + cache + fallback.
+"""
 
 from __future__ import annotations
 

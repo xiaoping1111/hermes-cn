@@ -1,4 +1,17 @@
-"""Server registry — per-language LSP server definitions.
+"""LSP 服务器定义 — 每种编程语言的语言服务器配置
+
+【产品经理理解要点】
+这个模块定义了支持的所有语言服务器（pyright、gopls、rust-analyzer 等）：
+  - 每种语言服务器知道如何匹配文件（通过扩展名）
+  - 如何确定项目根目录（如 Python 的 pyproject.toml、Rust 的 Cargo.toml）
+  - 如何启动子进程（命令行、参数、环境变量）
+
+只在用户实际编辑某语言的文件时才启动对应服务器，保持快速启动。
+自动安装由 lsp/install.py 处理，这个模块只管"怎么启动"。
+
+─────────────────────────────────────────────────────────────────
+
+Server registry — per-language LSP server definitions.
 
 Each :class:`ServerDef` knows how to:
 

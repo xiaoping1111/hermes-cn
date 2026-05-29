@@ -1,5 +1,14 @@
-"""xAI Web Search — plugin form.
+"""xAI网络搜索供应商 — 基于Grok的AI驱动搜索
 
+【产品经理理解要点】
+利用xAI的Grok模型实现AI驱动的网络搜索。区别于传统搜索引擎返回固定结果，Grok作为AI代理执行搜索，自行决定展示哪些URL和生成摘要。
+- 核心能力：仅支持搜索（不支持内容提取和网站抓取）
+- 技术特点：使用Grok推理模型的web_search工具，服务端执行搜索和页面浏览
+- 认证方式：支持Hermes管理的xAI OAuth或XAI_API_KEY环境变量
+- 安全提示：Grok可能根据查询内容自行选择展示的URL，需注意恶意查询注入风险
+- 配置项：可指定模型、域名过滤（allowed/excluded_domains）、超时时间
+
+─────────────────────────────────────────────────────────────────
 Routes ``web_search`` tool calls through xAI's agentic Web Search tool
 (server-side ``web_search`` on the Responses API). Grok runs the actual
 searching and page-browsing server-side; we ask it to return the top

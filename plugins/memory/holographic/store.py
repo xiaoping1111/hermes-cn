@@ -1,6 +1,9 @@
-"""
-SQLite-backed fact store with entity resolution and trust scoring.
-Single-user Hermes memory store plugin.
+"""SQLite事实存储引擎 — 实体解析与信任评分
+
+【产品经理理解要点】
+基于SQLite的事实存储引擎，支持实体解析(识别同一实体的不同表述)和信任评分(标记信息可靠程度)。
+- 核心能力：事实的增删改查、实体解析合并、信任评分、时间衰减
+- 数据库：SQLite本地存储，单用户模式
 """
 
 import re

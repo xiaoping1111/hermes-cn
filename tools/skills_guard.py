@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 """
+技能安全扫描器
+
+【产品经理理解要点】
+在安装社区技能前自动扫描代码，检测数据窃取、提示注入、破坏性命令等风险，保护用户安全。
+- 核心职责：基于正则的静态分析，扫描已知恶意模式（数据外泄、prompt 注入、持久化后门等）；按信任等级决定安装策略
+- 关键业务概念：三级信任——内置（免审直接信任）、受信仓库（仅拦截危险）、社区（任何发现即拦截）；支持 --force 强制安装
+- 在系统中的位置：技能安装流程的安全关卡，skills_hub 安装前必过此扫描
+
+─────────────────────────────────────────────────────────────────
 Skills Guard — Security scanner for externally-sourced skills.
 
 Every skill downloaded from a registry passes through this scanner before

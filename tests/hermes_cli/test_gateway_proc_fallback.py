@@ -1,4 +1,13 @@
-"""Tests for /proc-based gateway PID detection in Docker environments.
+"""命令行界面测试 - gateway·proc·降级策略
+
+【产品经理理解要点】
+验证命令行界面的降级策略功能
+- 验证的功能: Tests for /proc-based gateway PID detection in Docker environments
+- 核心测试场景: detects gateway pid via proc、excludes own pid from proc scan、falls back to ps when proc absent 等共4个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for /proc-based gateway PID detection in Docker environments.
 
 Verifies that _scan_gateway_pids() uses /proc/*/cmdline when available
 (Docker without procps) and falls back to ps only when /proc is absent.

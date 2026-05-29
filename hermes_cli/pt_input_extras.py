@@ -1,4 +1,13 @@
-"""Augmentations to prompt_toolkit's input-parsing tables.
+"""终端按键映射增强
+
+【产品经理理解要点】
+为 prompt_toolkit 补充现代终端协议（Kitty/xterm modifyOtherKeys）的按键解析，
+让 Shift+Enter 和 Ctrl+Enter 能正确触发换行而非提交。
+- 解决 Kitty/mintty/xterm 终端下 Shift+Enter 行为与 Enter 相同的问题
+- macOS 原生终端和 Windows 终端目前无法在应用层修复此问题
+
+─────────────────────────────────────────────────────────────────
+Augmentations to prompt_toolkit's input-parsing tables.
 
 Imported once at CLI startup. Each helper installs a small mapping into
 prompt_toolkit's `ANSI_SEQUENCES` so byte sequences emitted by modern

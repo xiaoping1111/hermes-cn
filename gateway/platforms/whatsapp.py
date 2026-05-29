@@ -1,4 +1,14 @@
-"""
+"""WhatsApp 平台适配器
+
+【产品经理理解要点】
+让 Agent 通过 WhatsApp 与用户交互。WhatsApp 没有官方个人机器人 API，
+支持多种接入方式：
+  1. WhatsApp Business API：官方方式，需 Meta 企业认证
+  2. whatsapp-web.js：通过 Node.js 模拟网页版，适合个人号
+  3. Baileys：另一种 Node.js 个人号方案
+
+─────────────────────────────────────────────────────────────────
+
 WhatsApp platform adapter.
 
 WhatsApp integration is more complex than Telegram/Discord because:

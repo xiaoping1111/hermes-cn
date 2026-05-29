@@ -1,4 +1,12 @@
-"""Tests for CLI/TUI CWD resolution in load_cli_config().
+"""工作目录环境变量测试
+
+【产品经理理解要点】
+验证CLI启动时尊重当前工作目录环境变量。
+- CWD/HERMES_CWD环境变量的读取
+- 影响在不同项目间切换的体验
+
+──────────────────────────────────────────────────────────────
+Tests for CLI/TUI CWD resolution in load_cli_config().
 
 Rules:
 - Local backend CLI/TUI: always os.getcwd(), ignoring config and inherited env.

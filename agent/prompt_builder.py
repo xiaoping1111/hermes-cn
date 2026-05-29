@@ -1,7 +1,28 @@
-"""System prompt assembly -- identity, platform hints, skills index, context files.
+"""系统提示词组装模块。
 
-All functions are stateless. AIAgent._build_system_prompt() calls these to
-assemble pieces, then combines them with memory and ephemeral prompts.
+【产品经理理解要点】
+这是 Hermes 的"人格塑造器"——决定 AI 代理知道什么、能做什么、怎么说话。
+
+系统提示词是这样组装的：
+  ┌─────────────────────────────────────────┐
+  │ 1. 身份声明：你是 Hermes，一个自进化AI代理  │
+  │ 2. 平台提示：根据运行平台（CLI/Telegram等）调整行为  │
+  │ 3. 工具使用指南：如何和何时调用工具        │
+  │ 4. 技能索引：当前可用的技能列表和触发条件   │
+  │ 5. 记忆上下文：跨会话的持久记忆           │
+  │ 6. 上下文文件：项目中的 AGENTS.md/SOUL.md │
+  │ 7. 人格文件：SOUL.md 自定义人格           │
+  │ 8. 安全护栏：限制危险行为                  │
+  └─────────────────────────────────────────┘
+
+安全功能：
+  - 注入检测：自动扫描 AGENTS.md/SOUL.md 中的提示注入攻击
+  - 隐形字符检测：发现零宽字符等可疑 Unicode 后自动阻断
+
+─────────────────────────────────────────────────────────────────
+
+负责构建代理的身份标识、平台提示、技能索引和上下文文件。
+`AIAgent._build_system_prompt()` 会调用这些函数来组装最终发送给模型的系统提示词。
 """
 
 import json

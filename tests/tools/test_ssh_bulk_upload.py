@@ -1,4 +1,15 @@
-"""Tests for SSH bulk upload via tar pipe."""
+"""SSH批量上传测试
+
+【产品经理理解要点】
+验证工具系统模块中empty files is noop等20个场景的正确性
+- empty files is noop的正确性验证
+- mkdir batched into single call的正确性验证
+- staging symlinks mirror remote layout的正确性验证
+- 另有17个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for SSH bulk upload via tar pipe."""
 
 import os
 import subprocess

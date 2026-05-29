@@ -1,4 +1,15 @@
-"""Tests for tools/skill_usage.py — sidecar telemetry + provenance filtering."""
+"""技能使用统计测试
+
+【产品经理理解要点】
+验证工具系统模块中empty usage returns empty dict等41个场景的正确性
+- empty usage returns empty dict的正确性验证
+- save and load roundtrip的正确性验证
+- save is atomic no partial tmp files的正确性验证
+- 另有38个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/skill_usage.py — sidecar telemetry + provenance filtering."""
 
 import json
 import multiprocessing as mp

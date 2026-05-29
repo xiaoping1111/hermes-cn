@@ -1,4 +1,13 @@
-"""Tests for SSE client disconnect → agent task cancellation.
+"""消息网关测试 - sse·AI代理·cancel
+
+【产品经理理解要点】
+验证消息网关的AI代理功能
+- 验证的功能: Tests for SSE client disconnect → agent task cancellation
+- 核心测试场景: agent task cancelled on client disconnect、agent task not cancelled on normal completion、broken pipe also cancels agent 等共6个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for SSE client disconnect → agent task cancellation.
 
 When a streaming /v1/chat/completions client disconnects mid-stream
 (network drop, browser tab close), the agent is interrupted via

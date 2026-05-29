@@ -1,4 +1,17 @@
-"""Tests for the ResponsesApiTransport (Codex)."""
+"""Codex Responses API传输层测试
+
+【产品经理理解要点】
+验证OpenAI Responses API（Codex）传输层的请求构建和响应标准化，覆盖系统提示提取、推理配置、缓存密钥、xAI兼容性等关键逻辑。
+- 验证系统提示从messages中提取到instructions字段
+- 验证reasoning配置正确传递，minimal级别被钳位为low
+- 验证xAI模型的推理力度白名单机制（grok-4等不支持effort参数的模型自动省略）
+- 验证缓存密钥的多种传递路径（顶层参数、extra_body、请求覆盖）
+- 业务影响：如果这些测试失败，Codex/xAI用户的推理配置可能被拒绝或静默降级
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for the ResponsesApiTransport (Codex)."""
 
 import json
 import pytest

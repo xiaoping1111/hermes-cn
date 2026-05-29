@@ -1,4 +1,13 @@
-"""Regression for #16746: install.sh /dev/tty gates must actually open /dev/tty.
+"""安装脚本TTY探测修复测试
+
+【产品经理理解要点】
+验证安装脚本在Docker构建等场景下正确检测终端可用性，/dev/tty存在但不可打开时跳过交互。
+- 用open探测替代文件存在检测
+- Docker构建中不崩溃
+- 影响Docker镜像构建流程
+
+──────────────────────────────────────────────────────────────
+Regression for #16746: install.sh /dev/tty gates must actually open /dev/tty.
 
 In a Docker build, ``/dev/tty`` exists as a device node (so a bare ``-e``
 existence test returns true) but opening it fails with ``ENXIO: No such

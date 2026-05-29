@@ -1,4 +1,13 @@
-"""Tests for native draft streaming in GatewayStreamConsumer.
+"""消息网关测试 - stream·consumer·draft
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for native draft streaming in GatewayStreamConsumer
+- 核心测试场景: default transport stays on edit、auto dm with draft capable adapter picks draft、auto group falls back to edit 等共12个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for native draft streaming in GatewayStreamConsumer.
 
 Telegram Bot API 9.5 (March 2026) introduced sendMessageDraft for native
 animated streaming previews in private chats.  This test suite covers the

@@ -1,5 +1,12 @@
-"""Remote 'node host' primitive for the google_meet plugin.
+"""Google Meet远程节点主机方案
 
+【产品经理理解要点】
+允许Meet机器人(Playwright+Chrome)运行在与网关不同的机器上。网关通过JSON-over-WebSocket RPC协议与远程节点通信。
+- 拓扑：gateway ──ws://──▶ 节点服务器 └─▶ meet_bot(Playwright)
+- 使用场景：Google登录+Chrome配置在用户笔记本上，远程运行避免传输凭证
+- 核心组件：NodeClient(网关端RPC)、NodeServer(节点端服务器)、NodeRegistry(节点注册表)
+
+─────────────────────────────────────────────────────────────────
 Lets the Meet bot (Playwright + Chrome) run on a different machine than
 the hermes-agent gateway. The gateway speaks a small JSON-over-WebSocket
 RPC protocol to the remote node; the node wraps the existing

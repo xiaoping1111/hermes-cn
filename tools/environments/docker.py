@@ -1,4 +1,15 @@
-"""Docker execution environment for sandboxed command execution.
+"""Docker执行环境 — 沙箱化命令执行
+
+【产品经理理解要点】
+本模块在Docker容器中执行命令，提供安全隔离和资源限制，是平衡安全性与灵活性的主流方案。
+- 安全隔离：容器作为安全边界，丢弃所有Linux能力、禁止提权、限制进程数和临时目录大小
+- 资源控制：可配置CPU核心数、内存上限、磁盘配额，防止单个任务占用过多资源
+- 持久化选项：开启后通过bind mount保存工作目录，容器重启后文件不丢失
+- 凭证传递：自动将技能凭证、缓存文件等以只读方式挂载到容器内
+- 支持Podman：自动检测podman作为docker的替代运行时
+
+─────────────────────────────────────────────────────────────────
+Docker execution environment for sandboxed command execution.
 
 Security hardened (cap-drop ALL, no-new-privileges, PID limits),
 configurable resource limits (CPU, memory, disk), and optional filesystem

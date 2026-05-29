@@ -1,15 +1,32 @@
 #!/usr/bin/env python3
 """
-Hermes Agent CLI - Interactive Terminal Interface
+Hermes Agent CLI - 交互式终端界面
 
-A beautiful command-line interface for the Hermes Agent, inspired by Claude Code.
-Features ASCII art branding, interactive REPL, toolset selection, and rich formatting.
+【产品经理理解要点】
+这是用户通过终端（Terminal）与 Hermes 交互的主入口——运行 `hermes` 命令时启动。
 
-Usage:
-    python cli.py                          # Start interactive mode with all tools
-    python cli.py --toolsets web,terminal  # Start with specific toolsets
+核心能力：
+  - 交互式对话：支持多行编辑、斜杠命令自动补全、上下键翻历史
+  - 斜杠命令：/model 切换模型、/new 新对话、/compress 压缩上下文、/skills 管理技能等
+  - 工具可视化：实时显示工具调用过程和结果（带 emoji 图标）
+  - Token 统计：状态栏实时显示 token 用量和上下文使用率
+  - 模型切换：运行中可随时切换 LLM 模型
+  - Git 工作树隔离：用 --worktree 参数可为每次对话创建独立的 git 分支
+
+配置加载优先级：
+  1. ~/.hermes/config.yaml（用户配置，优先级最高）
+  2. ./cli-config.yaml（项目级配置，兜底）
+  3. 环境变量（覆盖配置文件）
+─────────────────────────────────────────────────────────────────
+
+一个为 Hermes Agent 设计的精美命令行界面，灵感来自 Claude Code。
+具有 ASCII 艺术品牌标识、交互式 REPL、工具集选择和丰富的格式化输出功能。
+
+用法:
+    python cli.py                          # 使用所有工具启动交互模式
+    python cli.py --toolsets web,terminal  # 使用特定工具集启动
     python cli.py --skills hermes-agent-dev,github-auth
-    python cli.py --list-tools             # List available tools and exit
+    python cli.py --list-tools             # 列出可用工具并退出
 """
 
 # IMPORTANT: hermes_bootstrap must be the very first import — UTF-8 stdio
@@ -14219,62 +14236,48 @@ def main(
     ignore_rules: bool = False,
 ):
     """
-    Hermes Agent CLI - Interactive AI Assistant
+    Hermes Agent CLI - 交互式 AI 助手
     
-    Args:
-        query: Single query to execute (then exit). Alias: -q
-        q: Shorthand for --query
-        image: Optional local image path to attach to a single query
-        toolsets: Comma-separated list of toolsets to enable (e.g., "web,terminal")
-        skills: Comma-separated or repeated list of skills to preload for the session
-        model: Model to use (default: anthropic/claude-opus-4-20250514)
-        provider: Inference provider ("auto", "openrouter", "nous", "openai-codex", "zai", "kimi-coding", "minimax", "minimax-cn")
-        api_key: API key for authentication
-        base_url: Base URL for the API
-        max_turns: Maximum tool-calling iterations (default: 60)
-        verbose: Enable verbose logging
-        compact: Use compact display mode
-        list_tools: List available tools and exit
-        list_toolsets: List available toolsets and exit
-        resume: Resume a previous session by its ID (e.g., 20260225_143052_a1b2c3)
-        worktree: Run in an isolated git worktree (for parallel agents). Alias: -w
-        w: Shorthand for --worktree
-    
-    Examples:
-        python cli.py                            # Start interactive mode
-        python cli.py --toolsets web,terminal    # Use specific toolsets
-        python cli.py --skills hermes-agent-dev,github-auth
-        python cli.py -q "What is Python?"       # Single query mode
-        python cli.py -q "Describe this" --image ~/storage/shared/Pictures/cat.png
-        python cli.py --list-tools               # List tools and exit
-        python cli.py --resume 20260225_143052_a1b2c3  # Resume session
-        python cli.py -w                         # Start in isolated git worktree
-        python cli.py -w -q "Fix issue #123"     # Single query in worktree
+    参数:
+        query: 执行单次查询（然后退出）。别名: -q
+        q: --query 的简写
+        image: 可选的本地图像路径，用于附加到单次查询
+        toolsets: 以逗号分隔的启用工具集列表（例如 "web,terminal"）
+        skills: 以逗号分隔或重复的技能列表，用于在会话中预加载
+        model: 使用的模型（默认：anthropic/claude-opus-4-20250514）
+        provider: 推理供应商 ("auto", "openrouter", "nous", "openai-codex", "zai", "kimi-coding", "minimax", "minimax-cn")
+        api_key: 用于身份验证的 API 密钥
+        base_url: API 的基础 URL
+        max_turns: 工具调用迭代的最大次数（默认：60）
+        verbose: 启用详细日志
+        compact: 使用紧凑显示模式
+        list_tools: 列出可用工具并退出
+        list_toolsets: 列出可用工具集并退出
+        resume: 通过 ID 恢复之前的会话
+        worktree: 在隔离的 git 工作树中运行（用于并行代理）。别名: -w
+        w: --worktree 的简写
     """
     global _active_worktree
 
-    # Force UTF-8 stdio on Windows before any banner/print() runs — the
-    # Rich console prints Unicode box-drawing characters that would
-    # UnicodeEncodeError on cp1252.  No-op on Linux/macOS.
+    # 在 Windows 上强制使用 UTF-8 标准输出，以防止 Unicode 字符打印出错。
     try:
         from hermes_cli.stdio import configure_windows_stdio
         configure_windows_stdio()
     except Exception:
         pass
 
-    # Signal to terminal_tool that we're in interactive mode
-    # This enables interactive sudo password prompts with timeout
+    # 通知 terminal_tool 我们处于交互模式，这将启用交互式 sudo 密码提示。
     os.environ["HERMES_INTERACTIVE"] = "1"
     
-    # Handle gateway mode (messaging + cron)
+    # 处理网关模式（用于集成到消息平台如 Telegram, Slack 等）。
     if gateway:
         import asyncio
         from gateway.run import start_gateway
-        print("Starting Hermes Gateway (messaging platforms)...")
+        print("正在启动 Hermes 网关 (消息平台)...")
         asyncio.run(start_gateway())
         return
 
-    # Skip worktree for list commands (they exit immediately)
+    # 为非列表查询命令创建隔离的 git 工作树，防止多个代理同时操作同一仓库产生冲突。
     if not list_tools and not list_toolsets:
         # ── Git worktree isolation (#652) ──
         # Create an isolated worktree so this agent instance doesn't collide

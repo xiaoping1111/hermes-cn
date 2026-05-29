@@ -1,3 +1,17 @@
+"""命令行界面测试 - gateway·service·paths
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: 网关服务路径管理
+- 核心测试场景: service path skips nonexistent node modules、service path includes node modules when present、service path includes hermes home node modules
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - gateway·service·paths
+
+测试CLI命令处理与配置管理中gateway相关的service相关的paths功能
+"""
+
 from pathlib import Path
 from unittest.mock import patch
 

@@ -1,4 +1,15 @@
-"""Tests for tools/skill_provenance.py — write-origin ContextVar."""
+"""技能来源追踪测试
+
+【产品经理理解要点】
+验证工具系统模块中set and get origin等5个场景的正确性
+- set and get origin的正确性验证
+- reset restores prior origin的正确性验证
+- is background review truthy only for review的正确性验证
+- 另有2个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/skill_provenance.py — write-origin ContextVar."""
 
 import contextvars
 

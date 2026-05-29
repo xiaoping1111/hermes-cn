@@ -1,3 +1,17 @@
+"""命令行界面测试 - 配置管理·环境配置·refs
+
+【产品经理理解要点】
+验证命令行界面的配置管理环境配置功能
+- 验证的功能: 配置文件环境变量引用解析
+- 核心测试场景: save config preserves env refs on unrelated change、save config preserves unresolved env refs、save config allows intentional secret value change 等共6个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - 配置更新·环境变量加载·refs
+
+测试CLI命令处理与配置管理中config相关的env相关的refs功能
+"""
+
 import textwrap
 
 from hermes_cli.config import load_config, save_config

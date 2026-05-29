@@ -1,12 +1,22 @@
-"""Tests for None guard on browser_tool LLM response content.
+"""浏览器空内容防护测试
+
+【产品经理理解要点】
+验证工具系统模块中none content falls back to truncated等7个场景的正确性
+- none content falls back to truncated的正确性验证
+- normal content returned的正确性验证
+- empty string content falls back的正确性验证
+- 另有4个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for None guard on browser_tool LLM response content.
 
 browser_tool.py has two call sites that access response.choices[0].message.content
 without checking for None — _extract_relevant_content (line 996) and
 browser_vision (line 1626). When reasoning-only models (DeepSeek-R1, QwQ)
 return content=None, these produce null snapshots or null analysis.
 
-These tests verify both sites are guarded.
-"""
+These tests verify both sites are guarded."""
 
 import types
 from unittest.mock import MagicMock, patch

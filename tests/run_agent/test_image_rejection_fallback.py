@@ -1,10 +1,20 @@
-"""Tests for the image-rejection fallback in run_agent.
+"""图像拒绝降级测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中noop when no images等15个场景的正确性
+- noop when no images的正确性验证
+- string content untouched的正确性验证
+- strips image url part preserves text的正确性验证
+- 另有12个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the image-rejection fallback in run_agent.
 
 When a server rejects image content (e.g. text-only endpoints), the agent
 strips image parts from message history and retries text-only.  These tests
 verify that stripping preserves the role-alternation invariants providers
-require, and that the phrase detector fires on the expected error bodies.
-"""
+require, and that the phrase detector fires on the expected error bodies."""
 
 from run_agent import _strip_images_from_messages
 

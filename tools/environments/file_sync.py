@@ -1,4 +1,15 @@
-"""Shared file sync manager for remote execution backends.
+"""远程环境文件同步管理器 — 本地与远程之间的文件桥
+
+【产品经理理解要点】
+本模块负责将本地文件（技能脚本、凭证、缓存等）同步到远程执行环境，执行完再将变更同步回来。
+- 同步方向：推送（本地→远程，执行前）和回拉（远程→本地，执行后）
+- 增量检测：通过文件修改时间+大小+SHA-256哈希判断是否变更，避免重复传输
+- 删除追踪：本地删除的文件会在远程也同步删除，保持两端一致
+- 事务性：同步失败时自动回滚状态，下次重试时重新上传，保证数据一致性
+- 使用场景：SSH、Modal、Daytona等远程环境；Docker和Singularity使用bind mount不依赖此模块
+
+─────────────────────────────────────────────────────────────────
+Shared file sync manager for remote execution backends.
 
 Tracks local file changes via mtime+size, detects deletions, and
 syncs to remote environments transactionally.  Used by SSH, Modal,

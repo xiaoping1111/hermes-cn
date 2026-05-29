@@ -1,4 +1,12 @@
-"""Tests for the ``/reload-skills`` CLI slash command (``HermesCLI._reload_skills``).
+"""CLI重载技能测试
+
+【产品经理理解要点】
+验证/reload命令热重载技能的逻辑。
+- 运行时重载技能文件
+- 影响开发者迭代效率
+
+──────────────────────────────────────────────────────────────
+Tests for the ``/reload-skills`` CLI slash command (``HermesCLI._reload_skills``).
 
 The CLI handler prints the diff (name + description) for the user and —
 when any skills were added or removed — queues a one-shot note on

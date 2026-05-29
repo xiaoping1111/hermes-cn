@@ -1,8 +1,18 @@
-"""Tests for tools/slash_confirm.py — the generic slash-command confirmation primitive.
+"""斜线确认测试
+
+【产品经理理解要点】
+验证工具系统模块中register stores entry等16个场景的正确性
+- register stores entry的正确性验证
+- get pending missing returns none的正确性验证
+- register supersedes prior entry的正确性验证
+- 另有13个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/slash_confirm.py — the generic slash-command confirmation primitive.
 
 Covers register/resolve/clear lifecycle, stale-entry behavior, confirm_id
-mismatch, handler exceptions, and async resolution.
-"""
+mismatch, handler exceptions, and async resolution."""
 
 import asyncio
 import time

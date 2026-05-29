@@ -1,4 +1,14 @@
-"""Tests for the QQ Bot platform adapter."""
+"""消息网关测试 - 机器人过滤
+
+【产品经理理解要点】
+验证消息网关的机器人过滤功能
+- 验证的功能: Tests for the QQ Bot platform adapter
+- 核心测试场景: returns bool、basic attributes、env fallback 等共144个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the QQ Bot platform adapter.
+"""
 
 import asyncio
 import json

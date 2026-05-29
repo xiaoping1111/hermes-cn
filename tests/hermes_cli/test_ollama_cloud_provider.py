@@ -1,4 +1,14 @@
-"""Tests for Ollama Cloud provider integration."""
+"""命令行界面测试 - Ollama模型·云端服务·提供商
+
+【产品经理理解要点】
+验证命令行界面的Ollama模型云端服务提供商功能
+- 验证的功能: Tests for Ollama Cloud provider integration
+- 核心测试场景: ollama cloud in registry、ollama cloud config、ollama cloud env vars 等共45个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for Ollama Cloud provider integration.
+"""
 
 import os
 import pytest

@@ -1,4 +1,13 @@
-"""Regression tests for gateway per-turn env reload preserving config authority.
+"""消息网关测试 - runtime·环境配置·reload·配置管理·认证授权
+
+【产品经理理解要点】
+验证消息网关的环境配置配置管理认证授权功能
+- 验证的功能: Regression tests for gateway per-turn env reload preserving config authority
+- 核心测试场景: reload runtime env preserves config max turns、reload runtime env keeps env max iterations when config omits key
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests for gateway per-turn env reload preserving config authority.
 
 Issue #19158: startup bridges config.yaml agent.max_turns into
 HERMES_MAX_ITERATIONS, but a later per-turn load_dotenv(..., override=True)

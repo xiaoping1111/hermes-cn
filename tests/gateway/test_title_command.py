@@ -1,4 +1,13 @@
-"""Tests for /title gateway slash command.
+"""消息网关测试 - title·命令处理
+
+【产品经理理解要点】
+验证消息网关的命令处理功能
+- 验证的功能: Tests for /title gateway slash command
+- 核心测试场景: set title、show title when set、show title when not set 等共14个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for /title gateway slash command.
 
 Tests the _handle_title_command handler (set/show session titles)
 across all gateway messenger platforms.

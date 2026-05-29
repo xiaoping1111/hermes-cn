@@ -1,4 +1,12 @@
-"""Tests for the activity-heartbeat behavior of the blocking gateway approval wait.
+"""审批流心跳测试
+
+【产品经理理解要点】
+验证工具系统模块中相关功能的正确性
+- 模块功能单元测试覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the activity-heartbeat behavior of the blocking gateway approval wait.
 
 Regression test for false gateway inactivity timeouts firing while the agent
 is legitimately blocked waiting for a user to respond to a dangerous-command
@@ -8,8 +16,7 @@ watchdog (``agent.gateway_timeout``, default 1800s) would kill the agent
 while the user was still choosing whether to approve.
 
 The fix polls the event in short slices and fires ``touch_activity_if_due``
-between slices, mirroring ``_wait_for_process`` in ``tools/environments/base.py``.
-"""
+between slices, mirroring ``_wait_for_process`` in ``tools/environments/base.py``."""
 
 import os
 import threading

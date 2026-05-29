@@ -1,4 +1,13 @@
-"""Tests for credential exclusion during profile export.
+"""命令行界面测试 - 多配置文件·导出·凭证管理
+
+【产品经理理解要点】
+验证命令行界面的多配置文件导出凭证管理功能
+- 验证的功能: Tests for credential exclusion during profile export
+- 核心测试场景: auth json in default exclude set、dotenv in default exclude set、named profile export excludes auth
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for credential exclusion during profile export.
 
 Profile exports should NEVER include auth.json or .env — these contain
 API keys, OAuth tokens, and credential pool data. Users share exported

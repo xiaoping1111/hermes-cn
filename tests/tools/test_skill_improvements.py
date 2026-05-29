@@ -1,4 +1,15 @@
-"""Tests for skill fuzzy patching via tools.fuzzy_match."""
+"""技能改进测试
+
+【产品经理理解要点】
+验证工具系统模块中exact match still works等9个场景的正确性
+- exact match still works的正确性验证
+- whitespace trimmed match的正确性验证
+- indentation flexible match的正确性验证
+- 另有6个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for skill fuzzy patching via tools.fuzzy_match."""
 
 import json
 import os

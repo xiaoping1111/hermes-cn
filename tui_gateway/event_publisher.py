@@ -1,4 +1,13 @@
-"""Best-effort WebSocket publisher transport for the PTY-side gateway.
+"""TUI事件WebSocket发布器
+
+【产品经理理解要点】
+将TUI网关的事件通过WebSocket推送到Dashboard侧边栏展示。
+- 核心职责：在Dashboard场景下，把Agent的实时事件镜像推送到Web端
+- 设计原则：尽力而为，推送失败不影响主流程
+- 异步设计：使用后台线程和队列，避免阻塞主通信通道
+
+─────────────────────────────────────────────────────────────────
+Best-effort WebSocket publisher transport for the PTY-side gateway.
 
 The dashboard's `/api/pty` spawns `hermes --tui` as a child process, which
 spawns its own ``tui_gateway.entry``.  Tool/reasoning/status events fire on

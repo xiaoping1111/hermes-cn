@@ -1,4 +1,14 @@
-"""Tests for MiniMax OAuth provider (hermes_cli/auth.py).
+"""MiniMax OAuth认证测试
+
+【产品经理理解要点】
+验证MiniMax的OAuth PKCE认证流程，包括用户码获取、令牌轮询和刷新。
+- PKCE挑战码的生成（S256）
+- 令牌从pending到success的轮询
+- 令牌过期后的自动刷新
+- 影响MiniMax用户的登录体验
+
+──────────────────────────────────────────────────────────────
+Tests for MiniMax OAuth provider (hermes_cli/auth.py).
 
 Covers:
 - PKCE pair generation (S256 challenge)

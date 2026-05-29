@@ -1,4 +1,13 @@
-"""Regression test: cancel_background_tasks must drain late-arrival tasks.
+"""消息网关测试 - cancel·background·drain
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Regression test: cancel_background_tasks must drain late-arrival tasks
+- 核心测试场景: cancel background tasks drains late arrivals、cancel background tasks handles no tasks、cancel background tasks bounded rounds
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression test: cancel_background_tasks must drain late-arrival tasks.
 
 During gateway shutdown, a message arriving while
 cancel_background_tasks is mid-await can spawn a fresh

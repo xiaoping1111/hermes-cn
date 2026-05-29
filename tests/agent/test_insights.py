@@ -1,4 +1,13 @@
-"""Tests for agent/insights.py — InsightsEngine analytics and reporting."""
+"""洞察引擎测试
+
+【产品经理理解要点】
+验证洞察引擎的会话统计和分析功能。
+- 会话统计的聚合计算
+- 影响用户对使用模式的了解
+
+──────────────────────────────────────────────────────────────
+Tests for agent/insights.py — InsightsEngine analytics and reporting.
+"""
 
 import time
 import pytest

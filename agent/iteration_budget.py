@@ -1,4 +1,18 @@
-"""Per-agent iteration budget — thread-safe consume/refund counter.
+"""迭代预算 — 限制 Agent 的最大对话轮数
+
+【产品经理理解要点】
+Agent 在处理任务时会反复"思考→执行工具→思考"循环。为防止 AI 陷入无限循环
+（比如反复尝试同一个失败的操作），设置了最大迭代次数限制：
+
+  - 主 Agent：最多 90 轮迭代
+  - 子 Agent（委托任务）：最多 50 轮迭代
+  - 编程式工具调用不消耗预算（会自动退还）
+
+就像给 AI 设定了"思考预算"，防止它在某个问题上死磕太久。
+
+─────────────────────────────────────────────────────────────────
+
+Per-agent iteration budget — thread-safe consume/refund counter.
 
 Extracted from ``run_agent.py``.  Each ``AIAgent`` instance (parent or
 subagent) holds an :class:`IterationBudget`; the parent's cap comes from

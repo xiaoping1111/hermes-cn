@@ -1,8 +1,15 @@
-"""Test real interrupt propagation through delegate_task with actual AIAgent.
+"""子Agent中断测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中interrupt child during api call的正确性
+- interrupt child during api call的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Test real interrupt propagation through delegate_task with actual AIAgent.
 
 This uses a real AIAgent with mocked HTTP responses to test the complete
-interrupt flow through _run_single_child → child.run_conversation().
-"""
+interrupt flow through _run_single_child → child.run_conversation()."""
 
 import json
 import os

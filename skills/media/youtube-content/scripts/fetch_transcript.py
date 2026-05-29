@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""
+"""【产品经理理解要点】
+YouTube视频字幕/文稿提取工具——输入视频URL或ID，输出带时间戳的字幕文本（JSON格式），支持多语言选择。
+─────────────────────────────────────────────────────────────────
 Fetch a YouTube video transcript and output it as structured JSON.
 
 Usage:

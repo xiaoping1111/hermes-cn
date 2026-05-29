@@ -1,4 +1,12 @@
-"""Tests for CLI redraw helpers used to recover from terminal buffer drift.
+"""CLI强制重绘测试
+
+【产品经理理解要点】
+验证CLI界面强制重绘命令的逻辑。
+- 强制重绘清除显示残留
+- 影响终端显示异常时的修复
+
+──────────────────────────────────────────────────────────────
+Tests for CLI redraw helpers used to recover from terminal buffer drift.
 
 Covers:
   - _force_full_redraw (#8688 cmux tab switch, /redraw, Ctrl+L)

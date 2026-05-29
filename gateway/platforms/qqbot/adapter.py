@@ -1,4 +1,15 @@
-"""
+"""QQ 机器人平台适配器
+
+【产品经理理解要点】
+Agent 接入 QQ 的核心模块，负责与 QQ 官方机器人平台的双向通信。
+- 核心职责：维持与 QQ 服务器的 WebSocket 长连接，收发消息，处理断线重连
+- 消息通道：通过 WebSocket 实时接收用户消息（私聊/群聊/频道），通过 REST API 发送回复
+- 权限管控：可配置"谁能与机器人对话"——支持私聊白名单、群聊白名单、全开放等策略
+- 语音转文字：支持将用户发送的语音消息转为文字（优先使用 QQ 自带 ASR，可配置第三方语音识别）
+- 审批交互：在 QQ 中发送带按钮的审批消息，管理员点击按钮即可批准或拒绝敏感操作
+- 自动恢复：网络断开后按退避策略自动重连，Token 过期自动刷新
+
+─────────────────────────────────────────────────────────────────
 QQ Bot platform adapter using the Official QQ Bot API (v2).
 
 Connects to the QQ Bot WebSocket Gateway for inbound events and uses the

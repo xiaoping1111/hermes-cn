@@ -1,4 +1,13 @@
-"""Shared helpers for direct xAI HTTP integrations."""
+"""xAI HTTP 通用辅助模块
+
+【产品经理理解要点】
+为 xAI（Grok）相关的搜索和语言工具提供凭据解析和 HTTP 请求辅助，支持 API Key 和 OAuth 双模式。
+- 核心职责：轻量检测 xAI 凭据是否可用（仅读文件/环境变量，不发网络请求）；解析 OAuth Token 和 API Key
+- 关键业务概念：双模式凭据——支持直接 API Key 和 SuperGrok OAuth 登录两种方式，优先 OAuth
+- 在系统中的位置：x_search_tool 和转录工具的 xAI 后端共享依赖
+
+─────────────────────────────────────────────────────────────────
+Shared helpers for direct xAI HTTP integrations."""
 
 from __future__ import annotations
 

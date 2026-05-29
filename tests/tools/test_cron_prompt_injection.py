@@ -1,11 +1,21 @@
-"""Regression tests for cron prompt injection scanner bypass.
+"""定时任务Prompt注入测试
 
-The original regex `ignore\\s+(previous|all|above|prior)\\s+instructions`
+【产品经理理解要点】
+验证工具系统模块中ignore all prior instructions等8个场景的正确性
+- ignore all prior instructions的正确性验证
+- ignore all previous instructions的正确性验证
+- ignore every prior instructions的正确性验证
+- 另有5个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for cron prompt injection scanner bypass.
+
+The original regex `ignore\s+(previous|all|above|prior)\s+instructions`
 only allowed ONE word between "ignore" and "instructions", so multi-word
 variants like "Ignore ALL prior instructions" bypassed the scanner.
 
-Fix: allow optional extra words with `(?:\\w+\\s+)*` groups.
-"""
+Fix: allow optional extra words with `(?:\w+\s+)*` groups."""
 
 from tools.cronjob_tools import _scan_cron_prompt
 

@@ -1,4 +1,12 @@
-"""Tests for `agent.markdown_tables.realign_markdown_tables`.
+"""Markdown表格处理测试
+
+【产品经理理解要点】
+验证Markdown表格的解析和渲染逻辑。
+- 表格格式的正确解析
+- 影响AI回复中表格的可读性
+
+──────────────────────────────────────────────────────────────
+Tests for `agent.markdown_tables.realign_markdown_tables`.
 
 These cover the alignment guarantee on CJK / wide-character tables and
 the conservative no-op behaviour on non-table input.

@@ -1,4 +1,15 @@
-"""Tests for delegate heartbeat stale threshold configuration."""
+"""心跳过期阈值测试
+
+【产品经理理解要点】
+验证工具系统模块中idle cycles value等5个场景的正确性
+- idle cycles value的正确性验证
+- in tool cycles value的正确性验证
+- idle timeout seconds的正确性验证
+- 另有2个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for delegate heartbeat stale threshold configuration."""
 
 import pytest
 

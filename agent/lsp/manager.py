@@ -1,4 +1,13 @@
-"""Service-level orchestration for LSP clients.
+"""LSP 服务调度管理器
+
+【产品经理理解要点】
+在文件写入前后对比诊断差异，只向 AI 展示本次编辑新增的报错，避免历史噪音。
+- 每种语言每个项目根目录对应一个客户端，按需懒加载启动
+- 记录本次编辑前的诊断快照，写入后仅返回新增问题（增量过滤）
+- 启动失败的客户端不会重试，保证系统稳定性；默认关闭，需配置启用
+
+─────────────────────────────────────────────────────────────────────────
+Service-level orchestration for LSP clients.
 
 The :class:`LSPService` is the bridge between the synchronous
 file_operations layer and the async :class:`agent.lsp.client.LSPClient`.

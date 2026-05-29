@@ -1,4 +1,13 @@
-"""Regression guard: preserve thinking blocks on DeepSeek's /anthropic endpoint.
+"""DeepSeek Anthropic思维模式测试
+
+【产品经理理解要点】
+验证DeepSeek模型使用Anthropic思维模式参数的兼容性。
+- 思维模式参数的正确注入
+- 思维内容的正确提取
+- 影响DeepSeek Reasoner模型的推理能力展示
+
+──────────────────────────────────────────────────────────────
+Regression guard: preserve thinking blocks on DeepSeek's /anthropic endpoint.
 
 DeepSeek's ``api.deepseek.com/anthropic`` route speaks the Anthropic Messages
 protocol but, when thinking mode is enabled, requires ``thinking`` blocks from

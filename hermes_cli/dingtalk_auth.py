@@ -1,4 +1,12 @@
-"""
+"""钉钉设备码授权
+
+【产品经理理解要点】
+实现钉钉机器人的一键扫码授权流程，用户扫描终端二维码即可完成 Hermes 与钉钉的连接。
+- 核心职责：三步注册流程（获取 nonce → 获取设备码+二维码 → 轮询等待扫码确认），自动获取 AppKey 和 AppSecret
+- 关键概念：设备码流程=二维码扫码授权、钉钉机器人的 OAuth 注册
+- 系统定位：钉钉消息通道的认证入口
+
+─────────────────────────────────────────────────────────────────
 DingTalk Device Flow authorization.
 
 Implements the same 3-step registration flow as dingtalk-openclaw-connector:

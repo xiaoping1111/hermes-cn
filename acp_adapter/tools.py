@@ -1,4 +1,14 @@
-"""ACP tool-call helpers for mapping hermes tools to ACP ToolKind and building content."""
+"""ACP工具调用格式化模块
+
+【产品经理理解要点】
+将Hermes的各种工具调用结果翻译成编辑器能友好展示的格式。
+- 核心职责：为每个Hermes工具调用生成人性化的标题、状态、展示内容
+- 工具分类：read（读取）、edit（编辑）、execute（执行）、search（搜索）等
+- 智能格式化：文件读取显示代码块、搜索结果高亮匹配、错误标记为红色
+- Diff展示：文件编辑时生成新旧对比的差异视图，让用户清楚看到变更
+
+─────────────────────────────────────────────────────────────────
+ACP tool-call helpers for mapping hermes tools to ACP ToolKind and building content."""
 
 from __future__ import annotations
 

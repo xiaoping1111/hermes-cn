@@ -1,4 +1,7 @@
-"""Pipeline orchestration for Microsoft Teams meeting summaries."""
+"""Teams会议流水线编排引擎
+
+【产品经理理解要点】
+Teams会议流水线的核心编排逻辑，协调转录获取、AI摘要生成、摘要投递等步骤的按序执行。"""
 
 from __future__ import annotations
 

@@ -1,4 +1,15 @@
-"""Tests for pre-API-call message-sequence repair.
+"""消息序列修复测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中drop scaffolding rewinds orphan tool tail等11个场景的正确性
+- drop scaffolding rewinds orphan tool tail的正确性验证
+- drop scaffolding keeps tail when no scaffolding的正确性验证
+- drop scaffolding handles multiple parallel tool results的正确性验证
+- 另有8个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for pre-API-call message-sequence repair.
 
 Covers ``_repair_message_sequence`` and the extended
 ``_drop_trailing_empty_response_scaffolding`` behavior that rewinds past
@@ -6,8 +17,7 @@ orphan tool-result tails. Together these prevent the self-reinforcing empty-
 response loop observed in session 20260507_044111_fa7e65, where a tool-result
 followed directly by a user message produced silent empty responses from
 providers (violating role alternation), which retriggered the empty-retry
-recovery every turn.
-"""
+recovery every turn."""
 
 from run_agent import AIAgent
 

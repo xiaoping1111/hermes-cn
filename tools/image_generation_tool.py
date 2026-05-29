@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""图片生成工具 — 根据文字描述生成图片
+
+【产品经理理解要点】
+让 AI 能根据文字描述生成图片，如"画一只在月球上的猫"。
+支持多个 FAL.ai 模型，用户可通过 hermes tools 选择。
+生成的图片保存到本地，URL 发送给用户。
+
+─────────────────────────────────────────────────────────────────
+
 Image Generation Tools Module
 
 Provides image generation via FAL.ai. Multiple FAL models are supported and

@@ -1,4 +1,13 @@
-"""Shared logic for the /codex-runtime slash command.
+"""Codex 运行时切换
+
+【产品经理理解要点】
+实现 /codex-runtime 斜杠命令，在 Hermes 默认运行时和 Codex 子进程运行时之间切换。
+- 核心职责：切换 AI 执行引擎（auto=Hermes 内置 vs codex_app_server=Codex 子进程），持久化选择到配置文件
+- 关键概念：运行时=AI 操作的执行方式、Codex 模式下终端/文件/MCP 操作由 Codex 子进程处理
+- 系统定位：高级运行模式切换开关，CLI 和 Gateway 共用
+
+─────────────────────────────────────────────────────────────────
+Shared logic for the /codex-runtime slash command.
 
 Toggles `model.openai_runtime` between "auto" (= chat_completions, Hermes'
 default) and "codex_app_server" (= hand turns to a codex subprocess).

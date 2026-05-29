@@ -1,4 +1,12 @@
-"""
+"""备用供应商链管理
+
+【产品经理理解要点】
+实现 `hermes fallback` 子命令，配置主模型不可用时自动切换的备用 AI 供应商列表。
+- 核心职责：管理备用供应商链（add 添加、remove 删除、list 查看、clear 清空），主模型限流/过载时按顺序尝试备选
+- 关键概念：备用链=优先级排序的备选供应商列表、自动故障切换、存在配置与运行时两层
+- 系统定位：AI 服务可用性保障层，确保主供应商故障时不中断服务
+
+─────────────────────────────────────────────────────────────────
 hermes fallback — manage the fallback provider chain.
 
 Fallback providers are tried in order when the primary model fails with

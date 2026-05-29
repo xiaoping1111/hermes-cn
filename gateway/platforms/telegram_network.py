@@ -1,4 +1,12 @@
-"""Telegram-specific network helpers.
+"""Telegram 网络辅助 — 在受限网络中通过备用地址连接
+
+【产品经理理解要点】
+某些网络（如中国大陆）无法直接访问 api.telegram.org。这个模块提供
+备用 DNS/代理方案，保留原始主机名的同时通过可达的地址建立连接。
+
+─────────────────────────────────────────────────────────────────
+
+Telegram-specific network helpers.
 
 Provides a hostname-preserving fallback transport for networks where
 api.telegram.org resolves to an endpoint that is unreachable from the current

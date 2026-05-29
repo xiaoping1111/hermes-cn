@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 """
+MCP OAuth 2.1 客户端支持
+
+【产品经理理解要点】
+当 MCP 服务端要求 OAuth 登录时，自动弹出浏览器让用户授权，完成后 Token 持久化到磁盘。
+- 核心职责：实现 OAuth 2.1 + PKCE 浏览器授权流程，包括令牌发现、动态客户端注册、令牌交换与刷新
+- 关键业务概念：令牌持久化——授权结果存入磁盘，进程重启后无需重新授权；临时本地服务器捕获回调
+- 在系统中的位置：MCP 工具的认证层，当 MCP 服务端配置 auth: oauth 时激活
+
+─────────────────────────────────────────────────────────────────
 MCP OAuth 2.1 Client Support
 
 Implements the browser-based OAuth 2.1 authorization code flow with PKCE

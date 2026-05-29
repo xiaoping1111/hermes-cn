@@ -1,3 +1,17 @@
+"""消息网关测试 - shared·群组管理·消息发送·前缀处理
+
+【产品经理理解要点】
+验证消息网关的群组管理消息发送前缀处理功能
+- 验证的功能: 共享群组发送者前缀标注
+- 核心测试场景: preprocess prefixes sender for shared non thread group session、preprocess keeps plain text for default group sessions
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+消息网关测试 - shared·群组消息·消息发送·前缀处理
+
+测试多平台消息接入与命令分发中shared相关的group相关的sender相关的prefix功能
+"""
+
 import pytest
 
 from gateway.config import GatewayConfig, Platform, PlatformConfig

@@ -1,4 +1,15 @@
-"""Tests for the async-memory Honcho improvements.
+"""异步记忆接口测试
+
+【产品经理理解要点】
+验证Honcho记忆插件模块中string async等40个场景的正确性
+- string async的正确性验证
+- string turn的正确性验证
+- string session的正确性验证
+- 另有37个测试场景覆盖
+- 影响Honcho记忆插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the async-memory Honcho improvements.
 
 Covers:
   - write_frequency parsing (async / turn / session / int)
@@ -6,8 +17,7 @@ Covers:
   - HonchoSessionManager.save() routing per write_frequency
   - async writer thread lifecycle and retry
   - flush_all() drains pending messages
-  - shutdown() joins the thread
-"""
+  - shutdown() joins the thread"""
 
 import json
 import queue

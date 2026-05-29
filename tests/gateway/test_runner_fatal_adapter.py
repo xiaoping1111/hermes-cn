@@ -1,3 +1,17 @@
+"""消息网关测试 - runner·fatal·adapter
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Runner致命适配器错误处理
+- 核心测试场景: runner requests clean exit for nonretryable startup conflict、runner queues retryable runtime fatal for reconnection
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+消息网关测试 - runner·fatal·adapter
+
+测试多平台消息接入与命令分发中runner相关的fatal相关的adapter功能
+"""
+
 from unittest.mock import AsyncMock
 
 import pytest

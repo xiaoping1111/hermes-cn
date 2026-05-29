@@ -1,3 +1,13 @@
+"""浏览器CDP协议override测试
+
+【产品经理理解要点】
+验证工具系统模块中keeps full devtools websocket url等7个场景的正确性
+- keeps full devtools websocket url的正确性验证
+- resolves http discovery endpoint to websocket的正确性验证
+- resolves bare ws hostport to discovery websocket的正确性验证
+- 另有4个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性"""
+
 from unittest.mock import Mock, patch
 
 

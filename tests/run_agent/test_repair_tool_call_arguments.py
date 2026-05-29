@@ -1,4 +1,15 @@
-"""Tests for _repair_tool_call_arguments — malformed JSON repair pipeline."""
+"""工具调用参数修复测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中empty string returns empty object等21个场景的正确性
+- empty string returns empty object的正确性验证
+- whitespace only returns empty object的正确性验证
+- none type returns empty object的正确性验证
+- 另有18个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for _repair_tool_call_arguments — malformed JSON repair pipeline."""
 
 import json
 import pytest

@@ -1,4 +1,13 @@
-"""Abstract backend interface for computer use.
+"""电脑操控后端抽象接口 — 定义统一的操作规范
+
+【产品经理理解要点】
+本模块定义了电脑操控的"标准操作手册"，所有底层驱动（cua-driver、pyautogui等）都必须实现相同的接口。
+- 核心数据结构：UIElement（界面元素，含编号/角色/标签/位置）、CaptureResult（截图结果）、ActionResult（操作结果）
+- 标准操作：截图、点击、拖拽、滚动、输入文字、按键、列出应用、聚焦应用、等待
+- 设计意义：保证切换底层驱动时上层逻辑无需改动，类似"换引擎不影响驾驶"
+
+─────────────────────────────────────────────────────────────────
+Abstract backend interface for computer use.
 
 Any implementation (cua-driver over MCP, pyautogui, noop, future Linux/Windows)
 must return the shape described below. All methods synchronous; async is

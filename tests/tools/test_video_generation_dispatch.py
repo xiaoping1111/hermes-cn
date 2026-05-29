@@ -1,4 +1,15 @@
-"""Tests for the unified ``video_generate`` tool dispatch surface."""
+"""视频生成调度测试
+
+【产品经理理解要点】
+验证工具系统模块中no provider returns clear error等7个场景的正确性
+- no provider returns clear error的正确性验证
+- unknown provider returns clear error的正确性验证
+- text to video routes without image url的正确性验证
+- 另有4个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the unified ``video_generate`` tool dispatch surface."""
 
 from __future__ import annotations
 

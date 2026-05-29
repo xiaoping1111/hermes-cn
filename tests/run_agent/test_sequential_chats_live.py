@@ -1,4 +1,12 @@
-"""Live regression guardrail for the keepalive/transport bug class (#10933).
+"""顺序对话实境测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中three sequential chats across client rebuild的正确性
+- three sequential chats across client rebuild的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Live regression guardrail for the keepalive/transport bug class (#10933).
 
 AlexKucera reported on Discord (2026-04-16) that after ``hermes update`` pulled
 #10933, the FIRST chat in a session worked and EVERY subsequent chat failed
@@ -13,8 +21,7 @@ for any future keepalive / transport plumbing.
 Opt-in — not part of default CI:
     HERMES_LIVE_TESTS=1 pytest tests/run_agent/test_sequential_chats_live.py -v
 
-Requires ``OPENROUTER_API_KEY`` to be set (or sourced via ~/.hermes/.env).
-"""
+Requires ``OPENROUTER_API_KEY`` to be set (or sourced via ~/.hermes/.env)."""
 from __future__ import annotations
 
 import os

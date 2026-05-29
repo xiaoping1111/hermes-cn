@@ -1,4 +1,15 @@
-"""Regression tests for subagent timeout diagnostic dump (issue #14726).
+"""子Agent超时诊断测试
+
+【产品经理理解要点】
+验证工具系统模块中writes log with expected sections等7个场景的正确性
+- writes log with expected sections的正确性验证
+- truncates very long goal的正确性验证
+- missing worker thread is handled的正确性验证
+- 另有4个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for subagent timeout diagnostic dump (issue #14726).
 
 When delegate_task's child subagent times out without having made any API
 call, a structured diagnostic file is written under
@@ -12,8 +23,7 @@ These tests pin:
 - the timeout branch in _run_single_child only dumps when api_calls == 0
 - the error message surfaces the diagnostic path
 - api_calls > 0 timeouts do NOT write a dump (the old "stuck on slow API
-  call" explanation still applies)
-"""
+  call" explanation still applies)"""
 from __future__ import annotations
 
 import os

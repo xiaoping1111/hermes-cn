@@ -1,4 +1,14 @@
-"""Tests for Telegram message reactions tied to processing lifecycle hooks."""
+"""消息网关测试 - Telegram平台·reactions
+
+【产品经理理解要点】
+验证消息网关的Telegram平台功能
+- 验证的功能: Tests for Telegram message reactions tied to processing lifecycle hooks
+- 核心测试场景: reactions disabled by default、reactions enabled when set true、reactions enabled with 1 等共21个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Telegram message reactions tied to processing lifecycle hooks.
+"""
 
 from types import SimpleNamespace
 from unittest.mock import AsyncMock

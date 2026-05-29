@@ -1,12 +1,19 @@
 #!/usr/bin/env python3
-"""Interactive interrupt test that mimics the exact CLI flow.
+"""交互式中断测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中相关功能的正确性
+- 模块功能单元测试覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Interactive interrupt test that mimics the exact CLI flow.
 
 Starts an agent in a thread with a mock delegate_task that takes a while,
 then simulates the user typing a message via _interrupt_queue.
 
 Logs every step to stderr (which isn't affected by redirect_stdout)
-so we can see exactly where the interrupt gets lost.
-"""
+so we can see exactly where the interrupt gets lost."""
 
 import contextlib
 import io

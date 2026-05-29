@@ -1,4 +1,13 @@
-"""Tests for agent/onboarding.py — contextual first-touch hint helpers."""
+"""新手引导测试
+
+【产品经理理解要点】
+验证首次使用时的引导流程和配置向导。
+- 首次启动时的引导界面
+- 影响新用户的上手体验
+
+──────────────────────────────────────────────────────────────
+Tests for agent/onboarding.py — contextual first-touch hint helpers.
+"""
 
 from __future__ import annotations
 

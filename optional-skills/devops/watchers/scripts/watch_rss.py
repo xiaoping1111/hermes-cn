@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Watch an RSS 2.0 or Atom feed; print new items to stdout, silent on empty.
+"""RSS/Atom订阅监控脚本
+
+【产品经理理解要点】
+监控RSS 2.0或Atom订阅源，自动去重推送新条目。
+- 核心职责：定时拉取RSS源，只推送新文章
+- 使用方式：通过Hermes定时任务（cron）运行
+
+─────────────────────────────────────────────────────────────────
+Watch an RSS 2.0 or Atom feed; print new items to stdout, silent on empty.
 
 Usage (via cron with --no-agent):
 

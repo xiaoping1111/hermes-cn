@@ -1,4 +1,15 @@
-"""Tests for service-singleton lifecycle: atexit handler, idempotent shutdown.
+"""LSP服务单例生命周期测试
+
+【产品经理理解要点】
+验证LSP服务的生命周期管理：包括atexit自动关闭钩子（防止语言服务器进程泄漏）、幂等的关闭操作、以及服务不可用时返回None的安全降级。核心保障是用户退出聊天会话后不会有残留的语言服务器进程。
+- 验证atexit钩子只注册一次、关闭操作可重复调用不出错
+- 验证异常在关闭时被静默吞掉，不影响用户体验
+- 业务影响：如果这些测试失败，用户退出后语言服务器进程可能仍然存活，造成资源泄漏
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for service-singleton lifecycle: atexit handler, idempotent shutdown.
 
 These cover the exit-cleanup behavior added to plug the language-server
 process leak — without the atexit hook, ``hermes chat`` exits while

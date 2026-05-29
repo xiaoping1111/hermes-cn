@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Build a structured findings.json with evidence chains (stdlib-only).
+"""调查发现报告生成器
+
+【产品经理理解要点】
+将实体关联结果和时序分析结果聚合为结构化的调查发现报告（findings.json）。
+- 核心职责：汇总证据链，按严重程度分级生成调查发现
+- 输出格式：带ID、标题、严重程度、置信度、证据引用的结构化JSON
+
+─────────────────────────────────────────────────────────────────
+Build a structured findings.json with evidence chains (stdlib-only).
 
 Aggregates cross_links.csv (entity_resolution output) and an optional
 timing.json (timing_analysis output) into a single evidence-chain document.

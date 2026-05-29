@@ -1,4 +1,12 @@
-"""
+"""命令行参数解析器
+
+【产品经理理解要点】
+定义 Hermes 所有命令行参数和子命令（chat、gateway 等），是用户输入的第一道处理层。
+- 核心职责：解析 hermes chat / gateway / setup 等子命令及各类启动参数（模型、技能、会话恢复等）
+- 关键概念：--model 选模型、--skills 加载技能、--resume 恢复会话、--worktree 隔离工作区
+- 系统定位：用户通过命令行与 Hermes 交互的入口，决定启动哪种功能模式
+
+─────────────────────────────────────────────────────────────────
 Top-level argparse construction for the hermes CLI.
 
 Lives in its own module so other modules (e.g. ``relaunch.py``) can

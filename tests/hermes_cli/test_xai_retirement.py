@@ -1,4 +1,14 @@
-"""Unit tests for hermes_cli.xai_retirement (May 15, 2026 model retirement)."""
+"""命令行界面测试 - xAI认证·retirement
+
+【产品经理理解要点】
+验证命令行界面的xAI认证功能
+- 验证的功能: Unit tests for hermes_cli.xai_retirement (May 15, 2026 model retirement)
+- 核心测试场景: strips x ai prefix、strips xai prefix、lowercases 等共33个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Unit tests for hermes_cli.xai_retirement (May 15, 2026 model retirement).
+"""
 from __future__ import annotations
 
 import pytest

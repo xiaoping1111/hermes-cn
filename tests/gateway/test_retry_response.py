@@ -1,4 +1,13 @@
-"""Regression test: /retry must return the agent response, not None.
+"""消息网关测试 - 重试机制·response
+
+【产品经理理解要点】
+验证消息网关的重试机制功能
+- 验证的功能: Regression test: /retry must return the agent response, not None
+- 核心测试场景: retry returns response not none、retry no previous message
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression test: /retry must return the agent response, not None.
 
 Before the fix in PR #441, _handle_retry_command() called
 _handle_message(retry_event) but discarded its return value with `return None`,

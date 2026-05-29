@@ -1,4 +1,13 @@
-"""Regression tests for topic/channel skill auto-injection after /new or /reset.
+"""消息网关测试 - fresh·reset·技能系统·注入防护
+
+【产品经理理解要点】
+验证消息网关的技能系统注入防护功能
+- 验证的功能: Regression tests for topic/channel skill auto-injection after /new or /reset
+- 核心测试场景: reset session sets is fresh reset true、reset session unknown key returns none、fresh session does not have is fresh reset 等共9个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests for topic/channel skill auto-injection after /new or /reset.
 
 Covers the fix for issue #6508.
 

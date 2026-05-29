@@ -1,4 +1,14 @@
-"""Tests for hermes_cli configuration management."""
+"""命令行界面测试 - 配置管理
+
+【产品经理理解要点】
+验证命令行界面的配置管理功能
+- 验证的功能: Tests for hermes_cli configuration management
+- 核心测试场景: default path、env override、creates subdirs 等共55个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli configuration management.
+"""
 
 import os
 from pathlib import Path

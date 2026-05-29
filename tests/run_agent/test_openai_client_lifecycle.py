@@ -1,3 +1,13 @@
+"""OpenAI客户端生命周期测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中retry after api connection error recreates request client等5个场景的正确性
+- retry after api connection error recreates request client的正确性验证
+- stale non stream close is single owner的正确性验证
+- closed shared client is recreated before request的正确性验证
+- 另有2个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性"""
+
 import sys
 import threading
 import time

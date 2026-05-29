@@ -1,4 +1,12 @@
-"""Regression guard: don't send Anthropic ``thinking`` to Kimi's /coding endpoint.
+"""Kimi Coding Anthropic思维测试
+
+【产品经理理解要点】
+验证Kimi Coding模型使用Anthropic思维模式参数的兼容性。
+- 思维参数到Kimi格式的正确转换
+- 影响Kimi模型的推理能力展示
+
+──────────────────────────────────────────────────────────────
+Regression guard: don't send Anthropic ``thinking`` to Kimi's /coding endpoint.
 
 Kimi's ``api.kimi.com/coding`` endpoint speaks the Anthropic Messages protocol
 but has its own thinking semantics.  When ``thinking.enabled`` is present in

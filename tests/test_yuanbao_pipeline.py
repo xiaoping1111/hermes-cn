@@ -1,4 +1,13 @@
-"""
+"""元宝中间件管道测试
+
+【产品经理理解要点】
+验证元宝平台的入站中间件管道引擎，包括中间件的注册、排序和执行。
+- 管道的use/use_before/use_after/remove操作
+- 中间件的按序执行
+- OOP中间件ABC和类测试
+- 影响QQ消息处理的可扩展性
+
+──────────────────────────────────────────────────────────────
 test_yuanbao_pipeline.py - Unit tests for the inbound middleware pipeline.
 
 Tests cover:

@@ -1,4 +1,13 @@
-"""Integration tests for slash command access control gating in gateway/run.py.
+"""消息网关测试 - slash·access·dispatch
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Integration tests for slash command access control gating in gateway/run.py
+- 核心测试场景: whoami unrestricted when no admin list、whoami admin user、whoami non admin lists runnable commands 等共18个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Integration tests for slash command access control gating in gateway/run.py.
 
 Drives the real ``GatewayRunner._handle_message`` path with a stub session
 store so we exercise the actual gate inserted at the dispatch site (not a

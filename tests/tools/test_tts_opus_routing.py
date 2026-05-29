@@ -1,3 +1,11 @@
+"""语音合成Opus路由测试
+
+【产品经理理解要点】
+验证工具系统模块中edge cli preserves native mp3、edge telegram converts to opus voice的正确性
+- edge cli preserves native mp3的正确性验证
+- edge telegram converts to opus voice的正确性验证
+- 影响工具系统的可靠性和功能正确性"""
+
 import json
 from pathlib import Path
 from unittest.mock import Mock

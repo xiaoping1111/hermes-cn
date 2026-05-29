@@ -1,4 +1,14 @@
-"""Tests for _coalesce_session_name_args — multi-word session name merging."""
+"""命令行界面测试 - coalesce·会话管理·args
+
+【产品经理理解要点】
+验证命令行界面的会话管理功能
+- 验证的功能: Tests for _coalesce_session_name_args — multi-word session name merging
+- 核心测试场景: continue multiword unquoted、continue long form multiword、continue single word 等共17个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for _coalesce_session_name_args — multi-word session name merging.
+"""
 
 import pytest
 from hermes_cli.main import _coalesce_session_name_args

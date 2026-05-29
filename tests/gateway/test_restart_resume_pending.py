@@ -1,4 +1,13 @@
-"""Tests for the resume_pending session continuity path.
+"""消息网关测试 - 重启恢复·会话恢复·pending
+
+【产品经理理解要点】
+验证消息网关的重启恢复会话恢复功能
+- 验证的功能: Tests for the resume_pending session continuity path
+- 核心测试场景: resume pending is cleared only after successful turn、drain timeout marks resume pending、drain timeout uses restart reason when restarting 等共65个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the resume_pending session continuity path.
 
 Covers the behaviour introduced to fix the ``Gateway shutting down ...
 task will be interrupted`` follow-up bug (spec: PR #11852, builds on

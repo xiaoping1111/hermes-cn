@@ -1,4 +1,12 @@
-"""Regression tests for memory provider selection during AIAgent init."""
+"""记忆提供者初始化测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中blank memory provider does not auto enable honcho的正确性
+- blank memory provider does not auto enable honcho的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for memory provider selection during AIAgent init."""
 
 from types import SimpleNamespace
 from unittest.mock import patch

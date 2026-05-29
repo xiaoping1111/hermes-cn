@@ -1,4 +1,15 @@
-"""Tool-surface routing matrix: every (provider, model, modality) combo.
+"""视频生成工具表面矩阵测试
+
+【产品经理理解要点】
+验证工具系统模块中fal text only routes to text endpoint等6个场景的正确性
+- fal text only routes to text endpoint的正确性验证
+- fal text plus image routes to image endpoint的正确性验证
+- xai text only via tool surface的正确性验证
+- 另有3个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tool-surface routing matrix: every (provider, model, modality) combo.
 
 This is the integration test for the question Teknium asked: regardless
 of which provider+model the user picks and whether they pass an
@@ -8,8 +19,7 @@ endpoint with the right payload shape?
 Drives ``_handle_video_generate(args)`` end-to-end — config write →
 config read → registry lookup → provider.generate() → outbound HTTP/SDK
 call. Stubs fal_client and httpx so we observe routing without hitting
-the network.
-"""
+the network."""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""Tests for hermes_cli.kanban_diagnostics — rule-engine that produces
+"""命令行界面测试 - 看板管理·diagnostics
+
+【产品经理理解要点】
+验证命令行界面的看板管理功能
+- 验证的功能: Tests for hermes_cli.kanban_diagnostics — rule-engine that produces
+- 核心测试场景: hallucinated cards fires on blocked event、hallucinated cards clears on subsequent completion、prose phantom refs fires after clean completion 等共46个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.kanban_diagnostics — rule-engine that produces
 structured distress signals (diagnostics) for kanban tasks.
 
 These tests exercise each rule in isolation using minimal in-memory

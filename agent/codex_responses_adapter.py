@@ -1,4 +1,13 @@
-"""Codex Responses API adapter.
+"""Codex Responses API 适配器 — OpenAI Responses API 格式转换
+
+【产品经理理解要点】
+将 Agent 内部的 OpenAI Chat Completions 格式转换为 OpenAI Responses API 格式，
+用于 Codex、xAI、GitHub Models 等使用 Responses API 的提供商。
+纯格式转换，无状态，不涉及客户端管理。
+
+─────────────────────────────────────────────────────────────────
+
+Codex Responses API adapter.
 
 Pure format-conversion and normalization logic for the OpenAI Responses API
 (used by OpenAI Codex, xAI, GitHub Models, and other Responses-compatible endpoints).

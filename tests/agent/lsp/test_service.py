@@ -1,4 +1,16 @@
-"""Tests for the synchronous LSPService wrapper.
+"""LSP同步服务包装器测试
+
+【产品经理理解要点】
+验证LSPService同步包装器的端到端功能：快照基线→获取诊断→增量过滤。使用模拟语言服务器替代真实的Pyright，确保不依赖外部LSP工具链即可测试核心诊断逻辑。
+- 验证服务禁用时正确返回空结果、工作区外的文件不触发LSP
+- 验证增量过滤：基线中已存在的错误不会被重复报告
+- 验证行号偏移传递给API后不会破坏现有增量过滤路径
+- 业务影响：如果这些测试失败，代码编辑后的诊断结果可能遗漏新错误或重复旧错误
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for the synchronous LSPService wrapper.
 
 Drives the service through ``snapshot_baseline`` →
 ``get_diagnostics_sync`` against the mock LSP server, exercising the

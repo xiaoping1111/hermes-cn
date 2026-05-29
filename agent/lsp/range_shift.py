@@ -1,4 +1,15 @@
-"""Diff-aware line-shift map for cross-edit LSP delta filtering.
+"""编辑行号偏移映射 — 解决代码编辑后诊断结果行号偏移的问题
+
+【产品经理理解要点】
+当 Agent 修改文件的中间部分（插入或删除行），文件下方的错误行号会改变：
+  - 原来第 10 行的错误，插入 2 行后变成第 12 行
+  - 如果不调整，Agent 会把"行号变了但同一条错误"误认为"新错误"
+
+这个模块构建"编辑前→编辑后"的行号映射表，确保增量诊断过滤准确无误。
+
+─────────────────────────────────────────────────────────────────
+
+Diff-aware line-shift map for cross-edit LSP delta filtering.
 
 When an edit deletes or inserts lines in the middle of a file, every
 diagnostic below the edit point shifts to a new line number.  The

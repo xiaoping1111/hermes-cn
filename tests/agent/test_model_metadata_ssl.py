@@ -1,4 +1,12 @@
-"""Tests for _resolve_requests_verify() env var precedence.
+"""模型元数据SSL测试
+
+【产品经理理解要点】
+验证模型元数据查询在SSL验证失败时的处理逻辑。
+- SSL验证错误的正确捕获
+- 影响企业代理环境下的模型连接
+
+──────────────────────────────────────────────────────────────
+Tests for _resolve_requests_verify() env var precedence.
 
 Verifies that custom provider `/models` fetches honour the three supported
 CA bundle env vars (HERMES_CA_BUNDLE, REQUESTS_CA_BUNDLE, SSL_CERT_FILE)

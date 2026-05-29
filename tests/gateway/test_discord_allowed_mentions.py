@@ -1,4 +1,13 @@
-"""Tests for the Discord ``allowed_mentions`` safe-default helper.
+"""消息网关测试 - Discord平台·allowed·提及解析
+
+【产品经理理解要点】
+验证消息网关的Discord平台提及解析功能
+- 验证的功能: Tests for the Discord ``allowed_mentions`` safe-default helper
+- 核心测试场景: safe defaults block everyone and roles、env var opts back into everyone、env var can disable users 等共5个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the Discord ``allowed_mentions`` safe-default helper.
 
 Ensures the bot defaults to blocking ``@everyone`` / ``@here`` / role pings
 so an LLM response (or echoed user content) can't spam a whole server —

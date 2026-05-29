@@ -1,4 +1,14 @@
-"""Tests for Xiaomi MiMo provider support."""
+"""命令行界面测试 - xiaomi·提供商
+
+【产品经理理解要点】
+验证命令行界面的提供商功能
+- 验证的功能: Tests for Xiaomi MiMo provider support
+- 核心测试场景: registered、name、auth type 等共39个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for Xiaomi MiMo provider support.
+"""
 
 import os
 

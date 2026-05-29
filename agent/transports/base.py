@@ -1,4 +1,13 @@
-"""Abstract base for provider transports.
+"""传输层抽象基类
+
+【产品经理理解要点】
+定义所有AI供应商适配器的统一接口规范，确保每个供应商的接入方式一致。
+- 规定了四步标准流程：消息转换→工具转换→参数构建→响应标准化
+- 只负责格式转换，不涉及客户端创建、流式传输、重试等运维逻辑
+- 新供应商接入只需实现此基类，即可自动融入Hermes调度体系
+
+─────────────────────────────────────────────────────────────────
+Abstract base for provider transports.
 
 A transport owns the data path for one api_mode:
   convert_messages → convert_tools → build_kwargs → normalize_response

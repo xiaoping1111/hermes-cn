@@ -1,4 +1,13 @@
-"""Tests for hermes_cli.profile_distribution — git-based profile installs.
+"""命令行界面测试 - 多配置文件·distribution
+
+【产品经理理解要点】
+验证命令行界面的多配置文件功能
+- 验证的功能: Tests for hermes_cli.profile_distribution — git-based profile installs
+- 核心测试场景: minimal manifest、full manifest、missing name rejected 等共42个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.profile_distribution — git-based profile installs.
 
 Covers manifest parsing, version requirement checks, install / update / describe
 on local-directory sources, and guards on what can and can't be installed.

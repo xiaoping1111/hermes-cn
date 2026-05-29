@@ -1,4 +1,15 @@
-"""Tests for tool call argument repair in the streaming assembly path.
+"""流式工具调用修复测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中truncated object no close brace等12个场景的正确性
+- truncated object no close brace的正确性验证
+- truncated nested object的正确性验证
+- truncated mid value的正确性验证
+- 另有9个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tool call argument repair in the streaming assembly path.
 
 The streaming path (run_agent._call_chat_completions) assembles tool call
 deltas into full arguments.  When a model truncates or malforms the JSON
@@ -8,8 +19,7 @@ That triggered the truncation handler to kill the session with /new required.
 
 The fix: repair arguments in the streaming assembly path using
 _repair_tool_call_arguments() so repairable malformations (trailing commas,
-unclosed brackets, Python None) don't kill the session.
-"""
+unclosed brackets, Python None) don't kill the session."""
 
 import json
 import pytest

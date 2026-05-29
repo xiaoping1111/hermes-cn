@@ -1,4 +1,15 @@
-"""Tests for the AsyncHttpxClientWrapper.__del__ neuter fix.
+"""异步HTTPX删除操作测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中del becomes noop等9个场景的正确性
+- del becomes noop的正确性验证
+- neuter idempotent的正确性验证
+- neuter graceful without sdk的正确性验证
+- 另有6个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the AsyncHttpxClientWrapper.__del__ neuter fix.
 
 The OpenAI SDK's ``AsyncHttpxClientWrapper.__del__`` schedules
 ``aclose()`` via ``asyncio.get_running_loop().create_task()``.  When GC
@@ -9,8 +20,7 @@ transport is bound to a dead worker loop.
 The three-layer defence:
 1. ``neuter_async_httpx_del()`` replaces ``__del__`` with a no-op.
 2. A custom asyncio exception handler silences residual errors.
-3. ``cleanup_stale_async_clients()`` evicts stale cache entries.
-"""
+3. ``cleanup_stale_async_clients()`` evicts stale cache entries."""
 
 import asyncio
 import threading

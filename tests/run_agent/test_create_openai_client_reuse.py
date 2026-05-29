@@ -1,4 +1,14 @@
-"""Regression guardrail: sequential _create_openai_client calls must not
+"""OpenAI客户端复用测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中second create does not wrap closed transport from first、replace primary openai client survives repeated rebuilds、force close tcp sockets descends httpcore 1 connection wr...的正确性
+- second create does not wrap closed transport from...的正确性验证
+- replace primary openai client survives repeated rebuilds的正确性验证
+- force close tcp sockets descends httpcore 1 connection...的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression guardrail: sequential _create_openai_client calls must not
 share a closed transport across invocations.
 
 This is the behavioral twin of test_create_openai_client_kwargs_isolation.py.
@@ -14,8 +24,7 @@ AlexKucera's Discord report (2026-04-16): after ``hermes update`` pulled
 with ``APIConnectionError('Connection error.')`` whose cause was
 ``RuntimeError: Cannot send a request, as the client has been closed``.
 That is the exact scenario this test reproduces at object level without a
-network, so it runs in CI on every PR.
-"""
+network, so it runs in CI on every PR."""
 from types import SimpleNamespace
 from unittest.mock import MagicMock, patch
 

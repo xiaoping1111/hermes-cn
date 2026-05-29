@@ -1,5 +1,15 @@
 #!/usr/bin/env python3
-"""
+"""Modal沙箱终端测试
+
+【产品经理理解要点】
+验证系统集成模块中modal requirements等6个场景的正确性
+- modal requirements的正确性验证
+- simple command的正确性验证
+- python execution的正确性验证
+- 另有3个测试场景覆盖
+- 影响系统集成的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
 Test Modal Terminal Tool
 
 This script tests that the Modal terminal backend is correctly configured
@@ -10,8 +20,7 @@ Usage:
     TERMINAL_ENV=modal python tests/test_modal_terminal.py
 
     # Or run directly (will use whatever TERMINAL_ENV is set in .env)
-    python tests/test_modal_terminal.py
-"""
+    python tests/test_modal_terminal.py"""
 
 import pytest
 pytestmark = pytest.mark.integration

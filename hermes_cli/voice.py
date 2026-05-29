@@ -1,4 +1,13 @@
-"""Process-wide voice recording + TTS API for the TUI gateway.
+"""语音录制与 TTS 进程级 API
+
+【产品经理理解要点】
+为 TUI 网关的语音交互功能提供录制、转录和语音合成的统一入口。
+- 两种模式：按键通话（手动控制）和连续 VAD（自动静音检测）
+- 录音通过 sounddevice 采集，faster-whisper 转录，TTS 通过各供应商 API 合成
+- 网关延迟加载此模块，缺少音频依赖时在调用时而非启动时报错
+
+─────────────────────────────────────────────────────────────────
+Process-wide voice recording + TTS API for the TUI gateway.
 
 Wraps ``tools.voice_mode`` (recording/transcription) and ``tools.tts_tool``
 (text-to-speech) behind idempotent, stateful entry points that the gateway's

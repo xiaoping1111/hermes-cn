@@ -1,3 +1,11 @@
+"""用量计费测试
+
+【产品经理理解要点】
+验证Token用量的计费计算和价格映射。
+- 各模型的价格正确映射
+- 影响用户对费用的了解
+"""
+
 from types import SimpleNamespace
 
 from agent.usage_pricing import (

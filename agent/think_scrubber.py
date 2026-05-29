@@ -1,4 +1,20 @@
-"""Stateful scrubber for reasoning/thinking blocks in streamed assistant text.
+"""思考内容清洗器 — 流式输出中自动隐藏 AI 的内部推理过程
+
+【产品经理理解要点】
+有些 AI 模型（如 DeepSeek、MiniMax）在回答前会先"思考"（输出在 <think> 标签中），
+这些内部推理过程不应该展示给用户。但在流式输出（一个字一个字返回）的模式下，
+思考标签可能被分成多个片段到达，简单的正则匹配会漏掉或误伤。
+
+这个模块用状态机来精确追踪"当前是否在思考标签内部"：
+  - 在标签内部的内容 → 丢弃，不展示给用户
+  - 在标签外部的正常内容 → 正常显示
+  - 跨片段的不完整标签 → 暂存，等下一个片段确认后再决定
+
+就像一个实时过滤器，确保用户只看到"最终的回答"，不会看到"思考过程"。
+
+─────────────────────────────────────────────────────────────────
+
+Stateful scrubber for reasoning/thinking blocks in streamed assistant text.
 
 ``run_agent._strip_think_blocks`` is regex-based and correct for a complete
 string, but when it runs *per-delta* in ``_fire_stream_delta`` it destroys

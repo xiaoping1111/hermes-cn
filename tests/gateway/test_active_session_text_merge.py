@@ -1,4 +1,13 @@
-"""Regression test for #4469.
+"""消息网关测试 - active·会话管理·text·merge
+
+【产品经理理解要点】
+验证消息网关的会话管理功能
+- 验证的功能: Regression test for #4469
+- 核心测试场景: rapid text followups accumulate instead of replacing、single followup is stored as is
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression test for #4469.
 
 When the agent is actively running (session present in
 ``adapter._active_sessions``) and the user fires off multiple TEXT

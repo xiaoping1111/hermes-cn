@@ -1,4 +1,13 @@
-"""Tests for the SimpleX Chat platform-plugin adapter.
+"""消息网关测试 - simplex·plugin
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for the SimpleX Chat platform-plugin adapter
+- 核心测试场景: platform enum resolves via plugin scan、check requirements needs url、check requirements true when configured 等共27个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the SimpleX Chat platform-plugin adapter.
 
 Loaded via the ``_plugin_adapter_loader`` helper so this lives under
 ``plugin_adapter_simplex`` in ``sys.modules`` and cannot collide with

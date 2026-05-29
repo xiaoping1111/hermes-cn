@@ -1,4 +1,13 @@
-"""Regression tests for #28712 — kanban dispatcher must not auto-promote
+"""命令行界面测试 - 看板管理·锁机制·sticky
+
+【产品经理理解要点】
+验证命令行界面的看板管理锁机制功能
+- 验证的功能: Regression tests for #28712 — kanban dispatcher must not auto-promote
+- 核心测试场景: worker block is not auto promoted by recompute ready、worker block on child with done parents is still sticky、circuit breaker block still auto promotes 等共6个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression tests for #28712 — kanban dispatcher must not auto-promote
 worker-initiated ``kanban_block`` (sticky blocks), but must keep
 auto-recovering circuit-breaker blocks.
 

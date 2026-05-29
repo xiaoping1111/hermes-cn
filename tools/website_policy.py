@@ -1,4 +1,13 @@
-"""Website access policy helpers for URL-capable tools.
+"""网站访问策略——URL 黑名单管理
+
+【产品经理理解要点】
+让用户配置网站黑名单，阻止 Agent 访问特定域名（如竞品网站、内网系统等），保护业务边界。
+- 核心职责：从 config.yaml 和外部共享文件加载域名黑名单，工具发请求前检查目标 URL 是否被屏蔽
+- 关键业务概念：用户可控——黑名单由用户维护，支持域名通配符和外部文件引用；配置变更 30 秒内生效
+- 在系统中的位置：Web 工具和浏览器工具的 URL 访问策略层
+
+─────────────────────────────────────────────────────────────────
+Website access policy helpers for URL-capable tools.
 
 This module loads a user-managed website blocklist from ~/.hermes/config.yaml
 and optional shared list files. It is intentionally lightweight so web/browser

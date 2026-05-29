@@ -1,17 +1,30 @@
-"""The agent conversation loop — extracted from ``run_agent.AIAgent``.
+"""代理对话循环 — 从 ``run_agent.AIAgent`` 中提取。
 
-This is the biggest single chunk pulled out of ``run_agent.py``: the
-roughly 3,900-line :func:`run_conversation` body that drives one user
-turn through the agent (model call, tool dispatch, retries, fallbacks,
-compression, post-turn hooks, background memory/skill review nudges).
+【产品经理理解要点】
+这是 Hermes 的"运行引擎"——整个 AI 对话循环就在这里实现，是系统最大的单一模块。
 
-The function takes the parent ``AIAgent`` instance as its first
-argument (``agent``) and accesses its state via attribute lookup.
-``_ra().AIAgent.run_conversation`` is now a thin forwarder.
+单次用户轮次的完整流程：
+  1. 接收用户消息，构建系统提示词（身份+工具+记忆+技能+上下文文件）
+  2. 调用 AI 模型，获取回复（可能是文字、工具调用、或两者兼有）
+  3. 如果有工具调用 → 执行工具 → 将结果喂回模型 → 模型继续回答
+  4. 如果对话太长 → 自动压缩上下文（用摘要替代早期对话）
+  5. 对话结束后 → 后台评审记忆和技能（异步，不阻塞用户）
+  6. 如果出错 → 自动分类错误、重试、或切换到备用模型（failover）
 
-Symbols that production code or tests patch on ``run_agent`` directly
-(``handle_function_call``, ``_set_interrupt``, ``OpenAI``, ...) are
-resolved through :func:`_ra` so those patches keep working.
+关键决策逻辑：
+  - 何时压缩：上下文使用率超过阈值（默认50%）时触发
+  - 何时重试：网络错误/限流自动重试，认证错误直接报错
+  - 何时切换模型：主模型连续失败时自动切换到 fallback_model
+  - 何时停止：AI 不再调用工具且输出完整文字，或达到最大迭代次数
+
+─────────────────────────────────────────────────────────────────
+
+这是从 ``run_agent.py`` 中提取出的最大单一代码块：
+大约 3900 行的 :func:`run_conversation` 函数体，它驱动代理完成一次用户轮次
+（模型调用、工具分发、重试、回退、上下文压缩、轮次后钩子、后台内存/技能复审等）。
+
+该函数将父级 ``AIAgent`` 实例作为第一个参数（``agent``），并通过属性查找访问其状态。
+``run_agent.AIAgent.run_conversation`` 现在只是一个简单的转发器。
 """
 
 from __future__ import annotations
@@ -194,23 +207,19 @@ def run_conversation(
     persist_user_message: Optional[str] = None,
 ) -> Dict[str, Any]:
     """
-    Run a complete conversation with tool calling until completion.
+    运行完整的对话流程，包括工具调用，直到任务结束。
 
-    Args:
-        user_message (str): The user's message/question
-        system_message (str): Custom system message (optional, overrides ephemeral_system_prompt if provided)
-        conversation_history (List[Dict]): Previous conversation messages (optional)
-        task_id (str): Unique identifier for this task to isolate VMs between concurrent tasks (optional, auto-generated if not provided)
-        stream_callback: Optional callback invoked with each text delta during streaming.
-            Used by the TTS pipeline to start audio generation before the full response.
-            When None (default), API calls use the standard non-streaming path.
-        persist_user_message: Optional clean user message to store in
-            transcripts/history when user_message contains API-only
-            synthetic prefixes.
-                or queuing follow-up prefetch work.
+    参数:
+        agent: AIAgent 实例
+        user_message (str): 用户输入的消息或问题
+        system_message (str): 系统提示词（可选）
+        conversation_history (List[Dict]): 已有的对话历史（可选）
+        task_id (str): 任务标识符（可选）
+        stream_callback (callable): 用于流式输出结果的回调函数（可选）
+        persist_user_message (str): 用于持久化的用户消息内容（可选）
 
-    Returns:
-        Dict: Complete conversation result with final response and message history
+    返回:
+        Dict: 包含最终响应和消息历史记录的完整对话结果
     """
     # Guard stdio against OSError from broken pipes (systemd/headless/daemon).
     # Installed once, transparent when streams are healthy, prevents crash on write.

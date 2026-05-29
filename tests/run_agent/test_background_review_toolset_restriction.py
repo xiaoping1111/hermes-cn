@@ -1,4 +1,14 @@
-"""Tests that the background review agent restricts tools at runtime, not at schema time.
+"""后台审查工具集限制测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中background review matches parent toolset config、background review installs thread local whitelist、background review agent tools are limited的正确性
+- background review matches parent toolset config的正确性验证
+- background review installs thread local whitelist的正确性验证
+- background review agent tools are limited的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests that the background review agent restricts tools at runtime, not at schema time.
 
 Regression coverage for issue #15204 (the background skill-review agent must
 not perform non-skill side effects like terminal, send_message, delegate_task)
@@ -10,8 +20,7 @@ so the cache-key matches, and enforces the memory+skills restriction at
 runtime via a thread-local whitelist on the existing
 ``get_pre_tool_call_block_message`` gate. Safety is preserved mechanically
 (any non-whitelisted dispatch is blocked) without the schema-level narrowing
-that caused the prefix-cache miss.
-"""
+that caused the prefix-cache miss."""
 
 import threading
 from unittest.mock import patch

@@ -1,4 +1,7 @@
-"""Gateway runtime wiring for the Teams meeting pipeline plugin."""
+"""Teams会议流水线网关运行时接入
+
+【产品经理理解要点】
+将Teams会议流水线接入Hermes网关运行时，注册生命周期钩子和定时任务。"""
 
 from __future__ import annotations
 

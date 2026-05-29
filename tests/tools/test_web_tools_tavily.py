@@ -1,11 +1,21 @@
-"""Tests for Tavily web backend integration.
+"""Tavily搜索工具测试
+
+【产品经理理解要点】
+验证工具系统模块中raises without api key等15个场景的正确性
+- raises without api key的正确性验证
+- posts with api key in body的正确性验证
+- raises on http error的正确性验证
+- 另有12个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for Tavily web backend integration.
 
 Coverage:
   _tavily_request() — API key handling, endpoint construction, error propagation.
   _normalize_tavily_search_results() — search response normalization.
   _normalize_tavily_documents() — extract/crawl response normalization, failed_results.
-  web_search_tool / web_extract_tool / web_crawl_tool — Tavily dispatch paths.
-"""
+  web_search_tool / web_extract_tool / web_crawl_tool — Tavily dispatch paths."""
 
 import json
 import os

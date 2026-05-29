@@ -1,10 +1,20 @@
-"""Tests for tool argument type coercion.
+"""工具参数类型转换测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中integer string等61个场景的正确性
+- integer string的正确性验证
+- negative integer的正确性验证
+- zero的正确性验证
+- 另有58个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tool argument type coercion.
 
 When LLMs return tool call arguments, they frequently put numbers as strings
 ("42" instead of 42) and booleans as strings ("true" instead of true).
 coerce_tool_args() fixes these type mismatches by comparing argument values
-against the tool's JSON Schema before dispatch.
-"""
+against the tool's JSON Schema before dispatch."""
 
 import pytest
 from unittest.mock import patch

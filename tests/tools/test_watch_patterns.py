@@ -1,4 +1,15 @@
-"""Tests for watch_patterns background process monitoring feature.
+"""文件监控模式测试
+
+【产品经理理解要点】
+验证工具系统模块中default empty等29个场景的正确性
+- default empty的正确性验证
+- can set patterns的正确性验证
+- no patterns no notification的正确性验证
+- 另有26个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for watch_patterns background process monitoring feature.
 
 Covers:
   - ProcessSession.watch_patterns field
@@ -7,8 +18,7 @@ Covers:
   - watch_queue population
   - Checkpoint persistence of watch_patterns
   - Terminal tool schema includes watch_patterns
-  - Terminal tool handler passes watch_patterns through
-"""
+  - Terminal tool handler passes watch_patterns through"""
 
 import json
 import queue

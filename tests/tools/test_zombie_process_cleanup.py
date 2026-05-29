@@ -1,9 +1,19 @@
-"""Tests for zombie process cleanup — verifies processes spawned by tools
+"""僵尸进程清理测试
+
+【产品经理理解要点】
+验证工具系统模块中orphaned processes survive without cleanup等9个场景的正确性
+- orphaned processes survive without cleanup的正确性验证
+- explicit terminate reaps processes的正确性验证
+- close calls cleanup functions的正确性验证
+- 另有6个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for zombie process cleanup — verifies processes spawned by tools
 are properly reaped when agent sessions end.
 
 Reproduction for issue #7131: zombie process accumulation on long-running
-gateway deployments.
-"""
+gateway deployments."""
 
 import os
 import signal

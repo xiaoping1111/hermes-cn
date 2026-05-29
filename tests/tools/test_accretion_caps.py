@@ -1,4 +1,15 @@
-"""Accretion caps for _read_tracker (file_tools) and _completion_consumed
+"""增量上限caps测试
+
+【产品经理理解要点】
+验证工具系统模块中read history capped等9个场景的正确性
+- read history capped的正确性验证
+- dedup capped oldest first的正确性验证
+- read timestamps capped oldest first的正确性验证
+- 另有6个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Accretion caps for _read_tracker (file_tools) and _completion_consumed
 (process_registry).
 
 Both structures are process-lifetime singletons that previously grew
@@ -15,8 +26,7 @@ None of these were ever trimmed.  A 10k-read CLI session accumulated
 roughly 1.5MB of tracker state; a gateway with high background-process
 churn accumulated ~20B per session_id until the process exited.
 
-These tests pin the new caps + prune hooks.
-"""
+These tests pin the new caps + prune hooks."""
 
 import pytest
 

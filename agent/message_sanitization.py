@@ -1,4 +1,15 @@
-"""Message and tool-payload sanitization helpers.
+"""消息清洗 — 修复消息中的特殊字符，防止 API 调用崩溃
+
+【产品经理理解要点】
+用户输入的消息有时包含特殊字符（如从网页复制的文本中的"代理对"字符），
+这些字符虽然显示正常，但会导致发送给 AI 的 API 调用直接崩溃。
+这个模块在消息发送前自动清洗这些危险字符，确保稳定性。
+
+就像邮件系统的"信件安检"——检查并修复可能导致投递失败的问题。
+
+─────────────────────────────────────────────────────────────────
+
+Message and tool-payload sanitization helpers.
 
 Pure functions extracted from ``run_agent.py`` so the AIAgent module can
 stay focused on the conversation loop.  These walk OpenAI-format message

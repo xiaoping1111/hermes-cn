@@ -1,4 +1,13 @@
-"""Kanban diagnostics — structured, actionable distress signals for tasks.
+"""看板任务诊断
+
+【产品经理理解要点】
+自动检测看板任务中的异常状态（如假卡号、崩溃循环、长期阻塞），并给出可操作的修复建议。
+- 核心职责：无状态只读诊断规则，扫描任务+事件+运行记录，输出结构化告警（kind/severity/title/actions）
+- 关键概念：诊断=可自动清除的故障信号、severity（warning/error/critical）、建议操作=仪表盘按钮/CLI 提示
+- 系统定位：看板运维的可观测性层
+
+─────────────────────────────────────────────────────────────────
+Kanban diagnostics — structured, actionable distress signals for tasks.
 
 A ``Diagnostic`` is a machine-readable description of something that's wrong
 with a kanban task: a hallucinated card id, a spawn crash-loop, a task

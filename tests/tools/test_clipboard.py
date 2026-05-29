@@ -1,11 +1,21 @@
-"""Tests for clipboard image paste — clipboard extraction, multimodal conversion,
+"""剪贴板测试
+
+【产品经理理解要点】
+验证工具系统模块中dispatches to macos on darwin等107个场景的正确性
+- dispatches to macos on darwin的正确性验证
+- dispatches to windows on win32的正确性验证
+- dispatches to linux on linux的正确性验证
+- 另有104个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for clipboard image paste — clipboard extraction, multimodal conversion,
 and CLI integration.
 
 Coverage:
   hermes_cli/clipboard.py  — platform-specific image extraction (macOS, WSL, Wayland, X11)
   cli.py                   — _try_attach_clipboard_image, _build_multimodal_content,
-                              image attachment state, queue tuple routing
-"""
+                              image attachment state, queue tuple routing"""
 
 import base64
 import os

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""
+"""【产品经理理解要点】
+ComfyUI工作流执行工具——将参数注入工作流、提交执行、监控进度、下载输出结果。支持云端和本地部署，WebSocket实时进度监控，流式下载大文件。
+─────────────────────────────────────────────────────────────────
 run_workflow.py — Inject parameters into a ComfyUI workflow, submit it, monitor
 execution, and download outputs.
 

@@ -1,4 +1,13 @@
-"""Tests for gateway warning when an unrecognized /command is dispatched.
+"""消息网关测试 - unknown·命令处理
+
+【产品经理理解要点】
+验证消息网关的命令处理功能
+- 验证的功能: Tests for gateway warning when an unrecognized /command is dispatched
+- 核心测试场景: unknown slash command returns guidance、unknown slash command underscored form also guarded、known slash command not flagged as unknown 等共11个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for gateway warning when an unrecognized /command is dispatched.
 
 Without this warning, unknown slash commands get forwarded to the LLM as plain
 text, which often leads to silent failure (e.g. the model inventing a bogus

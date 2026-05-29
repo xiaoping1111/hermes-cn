@@ -1,4 +1,23 @@
-"""Shared auxiliary client router for side tasks.
+"""辅助客户端路由器 — 上下文压缩、视觉分析等后台任务的 AI 调用通道
+
+【产品经理理解要点】
+Agent 主流程用主模型（如 GPT-4、Claude）与用户对话，但有些后台任务需要
+用 AI 但不适合占用主模型（太贵或太慢），比如：
+  - 对话压缩：用便宜的模型做摘要
+  - 图片分析：用支持视觉的模型看截图
+  - 网页提取：用轻量模型提取网页内容
+
+这个模块自动选择"最合适的 AI 后端"来执行这些任务：
+  1. 优先用用户配置的主提供商和主模型（最稳定）
+  2. 如果主模型不支持（如视觉任务），自动降级到其他可用提供商
+  3. 如果余额用完，自动切换到下一个提供商
+
+就像公司里的"副手系统"——主管（主模型）负责大事，副手们（辅助模型）
+负责压缩文档、翻译图片等辅助工作，自动安排最合适的人来做。
+
+─────────────────────────────────────────────────────────────────
+
+Shared auxiliary client router for side tasks.
 
 Provides a single resolution chain so every consumer (context compression,
 session search, web extraction, vision analysis, browser vision) picks up

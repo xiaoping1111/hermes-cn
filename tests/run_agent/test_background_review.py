@@ -1,4 +1,15 @@
-"""Regression tests for background review agent cleanup."""
+"""后台审查测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中background review shuts down memory provider before close等4个场景的正确性
+- background review shuts down memory provider before close的正确性验证
+- background review installs auto deny approval callback的正确性验证
+- background review summary is attributed to self improvement...的正确性验证
+- 另有1个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for background review agent cleanup."""
 
 from __future__ import annotations
 

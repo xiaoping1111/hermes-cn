@@ -1,4 +1,13 @@
-"""Tests for credential pool preservation through turn config and 429 recovery.
+"""凭证池路由测试
+
+【产品经理理解要点】
+验证凭证池的路由逻辑，确保请求被分配到正确的凭证。
+- 请求到凭证的正确路由
+- 路由策略的可配置性
+- 影响多API密钥的负载均衡
+
+──────────────────────────────────────────────────────────────
+Tests for credential pool preservation through turn config and 429 recovery.
 
 Covers:
 1. CLI _resolve_turn_agent_config passes credential_pool to runtime dict

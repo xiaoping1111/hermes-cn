@@ -1,5 +1,13 @@
-"""Provider module registry.
+"""模型供应商注册中心
 
+【产品经理理解要点】
+管理所有AI模型供应商的注册和发现机制。供应商配置文件可以来自两个来源：官方内置插件和用户自定义插件，用户插件可覆盖内置插件。
+- 核心职责：统一管理AI模型供应商的注册、查询和发现
+- 关键概念：ProviderProfile（供应商配置文件）描述一个AI供应商的全部信息（认证、端点、模型列表等）
+- 系统定位：是Hermes与各种AI模型服务（如OpenAI、Anthropic、xAI等）对接的入口层
+- 扩展机制：支持用户通过$HERMES_HOME/plugins/model-providers/目录自定义供应商，无需修改代码
+
+─────────────────────────────────────────────────────────────────
 Provider profiles can live in two places:
 
 1. Bundled plugins: ``plugins/model-providers/<name>/`` (shipped with hermes-agent)

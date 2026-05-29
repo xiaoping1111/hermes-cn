@@ -1,4 +1,13 @@
-"""Tests for the static-catalog fallback in validate_requested_model.
+"""命令行界面测试 - opencode·go·validation·降级策略
+
+【产品经理理解要点】
+验证命令行界面的降级策略功能
+- 验证的功能: Tests for the static-catalog fallback in validate_requested_model
+- 核心测试场景: opencode go known model accepted、opencode go known model case insensitive、opencode go typo auto corrected 等共7个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the static-catalog fallback in validate_requested_model.
 
 OpenCode Go and OpenCode Zen publish an OpenAI-compatible API at paths that do
 NOT expose ``/models`` (the path returns the marketing site's HTML 404).  This

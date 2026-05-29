@@ -1,4 +1,14 @@
-"""Test that setup.py has shutil available for Matrix E2EE auto-install."""
+"""命令行界面测试 - 设置·Matrix平台·e2ee
+
+【产品经理理解要点】
+验证命令行界面的设置Matrix平台功能
+- 验证的功能: Test that setup.py has shutil available for Matrix E2EE auto-install
+- 核心测试场景: shutil imported at module level
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Test that setup.py has shutil available for Matrix E2EE auto-install.
+"""
 import ast
 
 import pytest

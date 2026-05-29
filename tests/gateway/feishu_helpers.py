@@ -1,4 +1,14 @@
-"""Shared fixtures for Feishu adapter tests (admission, group policy, dispatch)."""
+"""消息网关测试 - feishu·辅助工具
+
+【产品经理理解要点】
+验证消息网关的辅助工具功能
+- 验证的功能: Shared fixtures for Feishu adapter tests (admission, group policy, dispatch)
+- 核心测试场景: 消息网关基础功能验证
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Shared fixtures for Feishu adapter tests (admission, group policy, dispatch).
+"""
 
 from __future__ import annotations
 

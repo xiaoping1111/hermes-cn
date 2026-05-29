@@ -1,4 +1,13 @@
-"""Regression tests for custom_providers per-model context_length resolution.
+"""命令行界面测试 - 自定义模型提供商
+
+【产品经理理解要点】
+验证命令行界面自定义模型提供商的正确性
+- 验证的功能: Regression tests for custom_providers per-model context_length resolution
+- 核心测试场景: returns override for matching entry、trailing slash insensitive、returns none when url does not match 等共12个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression tests for custom_providers per-model context_length resolution.
 
 Covers the fix for #15779 — mid-session /model switch to a named custom
 provider must honor ``custom_providers[].models.<id>.context_length`` the

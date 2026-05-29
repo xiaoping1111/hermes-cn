@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Extract skill metadata from SKILL.md files and index caches into JSON."""
+"""技能元数据提取脚本
+
+【产品经理理解要点】
+从SKILL.md文件提取技能元数据，生成skills.json供网站展示使用。
+- 核心职责：解析内置和可选技能的SKILL.md，输出结构化的JSON索引
+- 数据用途：网站上的技能搜索、分类浏览等功能的数据源
+
+─────────────────────────────────────────────────────────────────
+Extract skill metadata from SKILL.md files and index caches into JSON."""
 
 import json
 import os

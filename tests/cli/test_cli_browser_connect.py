@@ -1,4 +1,13 @@
-"""Tests for CLI browser CDP auto-launch helpers."""
+"""CLI浏览器连接测试
+
+【产品经理理解要点】
+验证CLI中浏览器连接命令的处理逻辑。
+- 浏览器连接命令的参数解析
+- 影响浏览器自动化功能的启用
+
+──────────────────────────────────────────────────────────────
+Tests for CLI browser CDP auto-launch helpers.
+"""
 
 from contextlib import redirect_stdout
 from io import StringIO

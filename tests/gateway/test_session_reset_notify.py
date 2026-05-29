@@ -1,4 +1,13 @@
-"""Tests for session auto-reset notifications.
+"""消息网关测试 - 会话管理·reset·notify
+
+【产品经理理解要点】
+验证消息网关的会话管理功能
+- 验证的功能: Tests for session auto-reset notifications
+- 核心测试场景: returns none when not expired、returns idle when idle expired、returns daily when daily boundary crossed 等共16个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for session auto-reset notifications.
 
 Verifies that:
 - _should_reset() returns a reason string ("idle" or "daily") instead of bool

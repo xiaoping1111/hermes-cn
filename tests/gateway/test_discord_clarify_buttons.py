@@ -1,4 +1,13 @@
-"""Tests for Discord clarify button rendering and resolution.
+"""消息网关测试 - Discord平台·clarify·buttons
+
+【产品经理理解要点】
+验证消息网关的Discord平台功能
+- 验证的功能: Tests for Discord clarify button rendering and resolution
+- 核心测试场景: renders n choice buttons plus other、caps at 24 choices plus other、truncates long choice label 等共14个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Discord clarify button rendering and resolution.
 
 Mirrors test_telegram_clarify_buttons.py for the Discord ``send_clarify``
 override and the ``ClarifyChoiceView`` callbacks. Discord uses ``discord.ui.View``

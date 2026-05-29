@@ -1,4 +1,13 @@
-"""Profile describer — auto-generate ``description`` for a profile.
+"""Profile 自动描述生成
+
+【产品经理理解要点】
+利用辅助 LLM 为 Profile 自动生成一句话描述，供看板编排器路由任务时参考。
+- 读取 Profile 的技能名称、模型和供应商作为输入信号
+- 不读取记忆（记忆是个人化的，编排器按角色路由而非传记）
+- 生成的描述标记为"自动生成"，用户可后续编辑确认
+
+─────────────────────────────────────────────────────────────────
+Profile describer — auto-generate ``description`` for a profile.
 
 Used by ``hermes profile describe <name> --auto`` and the dashboard's
 "auto-generate description" button. Reads the profile's installed

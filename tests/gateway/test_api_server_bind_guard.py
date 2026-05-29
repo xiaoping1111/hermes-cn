@@ -1,4 +1,13 @@
-"""Tests for the API server bind-address startup guard.
+"""消息网关测试 - api·server·bind·guard
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for the API server bind-address startup guard
+- 核心测试场景: ipv4 loopback、ipv6 loopback、ipv4 mapped loopback 等共17个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the API server bind-address startup guard.
 
 Validates that is_network_accessible() correctly classifies addresses and
 that connect() refuses to start on non-loopback without API_SERVER_KEY.

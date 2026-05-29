@@ -1,4 +1,13 @@
-"""Tests for plugin video_gen providers in the tools picker.
+"""命令行界面测试 - video·gen·picker
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for plugin video_gen providers in the tools picker
+- 核心测试场景: reconfigure with env vars already set writes provider、reconfigure with no env vars writes provider、post setup propagated when declared 等共8个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for plugin video_gen providers in the tools picker.
 
 Covers the reconfigure path that previously failed to write
 ``video_gen.provider`` when a user picked an xAI/etc. plugin backend

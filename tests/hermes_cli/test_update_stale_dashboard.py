@@ -1,4 +1,13 @@
-"""Tests for the stale-dashboard handling run at the end of ``hermes update``.
+"""命令行界面测试 - 更新·stale·dashboard
+
+【产品经理理解要点】
+验证命令行界面的更新功能
+- 验证的功能: Tests for the stale-dashboard handling run at the end of ``hermes update``
+- 核心测试场景: no matches returns empty、matches running dashboard、multiple matches 等共19个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the stale-dashboard handling run at the end of ``hermes update``.
 
 ``hermes update`` detects ``hermes dashboard`` processes left over from the
 previous version and kills them (SIGTERM + SIGKILL grace, or ``taskkill /F``

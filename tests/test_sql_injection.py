@@ -1,4 +1,14 @@
-"""Tests that verify SQL injection mitigations in insights and state modules."""
+"""SQL注入防护测试
+
+【产品经理理解要点】
+验证insights和state模块的SQL查询使用参数化查询，防止注入攻击。
+- 列名常量不含注入向量
+- 查询使用?占位符传参
+- 影响用户输入到达数据库的安全性
+
+──────────────────────────────────────────────────────────────
+Tests that verify SQL injection mitigations in insights and state modules.
+"""
 
 import re
 

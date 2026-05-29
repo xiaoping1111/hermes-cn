@@ -1,4 +1,13 @@
-"""Tests for ``install_cua_driver`` upgrade semantics.
+"""命令行界面测试 - install·cua·driver
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for ``install_cua_driver`` upgrade semantics
+- 核心测试场景: upgrade on non macos is silent noop、non upgrade on non macos warns、upgrade on macos with binary runs installer 等共7个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for ``install_cua_driver`` upgrade semantics.
 
 The cua-driver upstream installer always pulls the latest release tag, so
 re-running it is the canonical upgrade path. ``install_cua_driver(upgrade=True)``

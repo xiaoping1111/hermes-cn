@@ -1,4 +1,13 @@
-"""Tests for cron.jobs.rewrite_skill_refs — the curator integration that
+"""定时任务测试 - 技能引用重写
+
+【产品经理理解要点】
+验证定时任务调度引擎技能引用重写的正确性
+- 验证的功能: Tests for cron.jobs.rewrite_skill_refs — the curator integration that
+- 核心测试场景: empty map and no jobs、jobs exist but map empty、jobs exist but no match 等共16个场景
+- 业务影响: 定时任务可能无法正确调度执行，影响自动化工作流的可靠性
+
+─────────────────────────────────────────────────────────────────
+Tests for cron.jobs.rewrite_skill_refs — the curator integration that
 keeps scheduled cron jobs pointing at the right skill names after a
 consolidation / pruning pass.
 

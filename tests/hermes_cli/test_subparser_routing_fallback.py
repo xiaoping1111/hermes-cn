@@ -1,4 +1,13 @@
-"""Tests for the defensive subparser routing workaround (bpo-9338).
+"""命令行界面测试 - subparser·routing·降级策略
+
+【产品经理理解要点】
+验证命令行界面的降级策略功能
+- 验证的功能: Tests for the defensive subparser routing workaround (bpo-9338)
+- 核心测试场景: 命令行界面基础功能验证
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the defensive subparser routing workaround (bpo-9338).
 
 The main() function in hermes_cli/main.py sets subparsers.required=True
 when argv contains a known subcommand name.  This forces deterministic

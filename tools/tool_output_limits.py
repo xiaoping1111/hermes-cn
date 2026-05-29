@@ -1,4 +1,13 @@
-"""Configurable tool-output truncation limits.
+"""工具输出截断限制配置
+
+【产品经理理解要点】
+控制工具返回给 LLM 的内容长度上限（终端输出字符数、文件读取行数、单行长度），防止超长输出撑爆上下文窗口。
+- 核心职责：统一管理三组限制值——max_bytes（终端输出）、max_lines（文件翻页）、max_line_length（单行截断），支持用户配置覆盖
+- 关键业务概念：可配置化——之前硬编码在 terminal_tool 和 file_operations 中，现集中到 config.yaml，用户可按需调整
+- 在系统中的位置：终端工具和文件工具读取输出上限的配置源
+
+─────────────────────────────────────────────────────────────────
+Configurable tool-output truncation limits.
 
 Ported from anomalyco/opencode PR #23770 (``feat(truncate): allow
 configuring tool output truncation limits``).

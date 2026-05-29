@@ -1,10 +1,9 @@
-"""Wire protocol for gateway ↔ node RPC.
+"""网关↔节点RPC通信协议
 
-Everything is a JSON object with the same envelope shape:
+【产品经理理解要点】
+定义网关与远程Meet节点之间的JSON消息信封格式：Request/Response/Error三种消息类型。"""
 
-    Request:   {"type": <str>, "id": <str>, "token": <str>, "payload": <dict>}
-    Response:  {"type": "<req-type>_res", "id": <req-id>, "payload": <dict>}
-    Error:     {"type": "error", "id": <req-id>, "error": <str>}
+from __future__ import annotations
 
 Requests must carry the shared bearer token (set up via
 ``hermes meet node approve`` on the gateway and read off disk on the

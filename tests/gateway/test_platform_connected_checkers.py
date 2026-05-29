@@ -1,4 +1,12 @@
-"""
+"""消息网关测试 - platform·平台连接·checkers
+
+【产品经理理解要点】
+验证消息网关的平台连接功能
+- 验证的功能: Verify that every gateway platform — built-in and plugin — has a connection
+- 核心测试场景: all builtins have checker or generic token path、checker handles minimal config、checker returns true when configured
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
 Verify that every gateway platform — built-in and plugin — has a connection
 checker so ``GatewayConfig.get_connected_platforms()`` doesn't silently drop
 platforms with bespoke auth requirements.

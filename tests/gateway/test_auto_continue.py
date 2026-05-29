@@ -1,4 +1,13 @@
-"""Tests for the auto-continue feature (#4493).
+"""消息网关测试 - auto·continue
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for the auto-continue feature (#4493)
+- 核心测试场景: trailing tool result triggers note、trailing assistant message no note、empty history no note 等共6个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the auto-continue feature (#4493).
 
 When the gateway restarts mid-agent-work, the session transcript ends on a
 tool result that the agent never processed.  The auto-continue logic detects

@@ -1,4 +1,13 @@
-"""Tests for #7100 — transient failures (429/timeout) must not drop the
+"""消息网关测试 - 7100·transient·failure·脚本执行
+
+【产品经理理解要点】
+验证消息网关的脚本执行功能
+- 验证的功能: Tests for #7100 — transient failures (429/timeout) must not drop the
+- 核心测试场景: compression exhausted is context overflow、explicit context length error is context overflow、generic 400 on large session is context overflow 等共9个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for #7100 — transient failures (429/timeout) must not drop the
 user message from the transcript.
 
 The #1630 fix introduced a blanket skip of transcript writes on any

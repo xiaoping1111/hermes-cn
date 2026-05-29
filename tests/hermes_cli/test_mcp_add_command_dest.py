@@ -1,4 +1,13 @@
-"""Regression test: ``hermes mcp add --command`` must not clobber the
+"""命令行界面测试 - MCP工具·add·命令处理·dest
+
+【产品经理理解要点】
+验证命令行界面的MCP工具命令处理功能
+- 验证的功能: Regression test: ``hermes mcp add --command`` must not clobber the
+- 核心测试场景: url invocation preserves top level command、command flag writes to mcp command dest、bare mcp add does not clobber command
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression test: ``hermes mcp add --command`` must not clobber the
 top-level ``args.command`` subparser dest.
 
 The top-level argparse parser uses ``dest="command"`` for its subparsers

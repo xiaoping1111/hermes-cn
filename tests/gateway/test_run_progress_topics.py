@@ -1,4 +1,14 @@
-"""Tests for topic-aware gateway progress updates."""
+"""消息网关测试 - run·progress·topics
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for topic-aware gateway progress updates
+- 核心测试场景: run agent progress stays in originating topic、run agent progress edits keep originating topic metadata、run agent progress does not use event message id for telegram dm 等共27个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for topic-aware gateway progress updates.
+"""
 
 import asyncio
 import importlib

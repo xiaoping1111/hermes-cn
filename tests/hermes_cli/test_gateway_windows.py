@@ -1,4 +1,14 @@
-"""Tests for hermes_cli.gateway_windows."""
+"""命令行界面测试 - gateway·Windows平台
+
+【产品经理理解要点】
+验证命令行界面的Windows平台功能
+- 验证的功能: Tests for hermes_cli.gateway_windows
+- 核心测试场景: schtasks fallback patterns cover localized access denied、schtasks fallback does not hide unknown errors、build gateway argv uses base pythonw for uv venv launcher 等共17个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.gateway_windows.
+"""
 
 from pathlib import Path
 

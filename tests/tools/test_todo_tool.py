@@ -1,4 +1,15 @@
-"""Tests for the todo tool module."""
+"""待办事项工具测试
+
+【产品经理理解要点】
+验证工具系统模块中write replaces list等12个场景的正确性
+- write replaces list的正确性验证
+- read returns copy的正确性验证
+- write deduplicates duplicate ids的正确性验证
+- 另有9个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the todo tool module."""
 
 import json
 

@@ -1,8 +1,18 @@
-"""Tests for foreground timeout cap in terminal_tool.
+"""终端前台超时上限测试
+
+【产品经理理解要点】
+验证工具系统模块中foreground timeout rejected above max等11个场景的正确性
+- foreground timeout rejected above max的正确性验证
+- foreground rejects shell level background wrappers的正确性验证
+- foreground rejects long lived server command的正确性验证
+- 另有8个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for foreground timeout cap in terminal_tool.
 
 Ensures that foreground commands with timeout > FOREGROUND_MAX_TIMEOUT
-are rejected with an error suggesting background=true.
-"""
+are rejected with an error suggesting background=true."""
 import json
 import os
 from unittest.mock import patch, MagicMock

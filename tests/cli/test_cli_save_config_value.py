@@ -1,4 +1,13 @@
-"""Tests for save_config_value() in cli.py — atomic write behavior."""
+"""CLI保存配置测试
+
+【产品经理理解要点】
+验证/config set命令的配置值保存逻辑。
+- 配置值的正确写入和持久化
+- 影响运行时配置管理
+
+──────────────────────────────────────────────────────────────
+Tests for save_config_value() in cli.py — atomic write behavior.
+"""
 
 import yaml
 from unittest.mock import MagicMock

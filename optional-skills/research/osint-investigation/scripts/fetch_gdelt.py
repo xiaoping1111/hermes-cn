@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Search the GDELT 2.0 DOC API for news mentions.
+"""GDELT全球新闻查询
+
+【产品经理理解要点】
+查询GDELT全球新闻数据库，获取100+语种的新闻提及，覆盖面远超Google News。
+- 核心职责：搜索特定人物、公司或主题的国际新闻报道
+- 数据特点：免费匿名访问，15分钟更新频率，覆盖2015年至今
+
+─────────────────────────────────────────────────────────────────
+Search the GDELT 2.0 DOC API for news mentions.
 
 GDELT monitors world news in 100+ languages and indexes the full text.
 Free, anonymous, ~15-minute update frequency. Covers ~2015→present.

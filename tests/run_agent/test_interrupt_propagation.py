@@ -1,8 +1,18 @@
-"""Test interrupt propagation from parent to child agents.
+"""中断传播测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中parent interrupt sets child flag等7个场景的正确性
+- parent interrupt sets child flag的正确性验证
+- child clear interrupt at start clears thread的正确性验证
+- interrupt during child api call detected的正确性验证
+- 另有4个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Test interrupt propagation from parent to child agents.
 
 Reproduces the CLI scenario: user sends a message while delegate_task is
-running, main thread calls parent.interrupt(), child should stop.
-"""
+running, main thread calls parent.interrupt(), child should stop."""
 
 import json
 import threading

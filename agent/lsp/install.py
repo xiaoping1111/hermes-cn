@@ -1,4 +1,16 @@
-"""Auto-installation of LSP server binaries.
+"""LSP 服务器自动安装 — 缺少的语言服务器自动安装到隔离目录
+
+【产品经理理解要点】
+Agent 需要语言服务器（如 pyright）来检查代码错误，但用户可能没有安装。
+这个模块在首次使用时自动安装：
+
+  - 安装位置：~/.hermes/lsp/bin/（不污染用户的全局环境）
+  - 安装策略：默认自动（auto），也可设为手动（manual）
+  - 并发安全：同一语言服务器只安装一次，多个请求不会重复安装
+
+─────────────────────────────────────────────────────────────────
+
+Auto-installation of LSP server binaries.
 
 Tries to install missing servers using whatever package manager is
 appropriate.  All installs go to a Hermes-owned bin staging dir,

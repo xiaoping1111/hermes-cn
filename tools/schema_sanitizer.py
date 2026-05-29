@@ -1,4 +1,13 @@
-"""Sanitize tool JSON schemas for broad LLM-backend compatibility.
+"""工具 JSON Schema 兼容性修复器
+
+【产品经理理解要点】
+自动修复工具 Schema 中某些本地推理后端无法处理的格式问题，让同一套工具定义在所有后端都能正常工作。
+- 核心职责：清理 Schema 中的兼容性问题（无 properties 的空对象、数组类型、anyOf/oneOf 联合类型等）
+- 关键业务概念：后端兼容——OpenAI/Anthropic 能容忍的 Schema 在 llama.cpp 等本地后端可能导致请求失败
+- 在系统中的位置：工具注册到 LLM 之前的最后一道修正，保证 Schema 对所有后端合法
+
+─────────────────────────────────────────────────────────────────
+Sanitize tool JSON schemas for broad LLM-backend compatibility.
 
 Some local inference backends (notably llama.cpp's ``json-schema-to-grammar``
 converter used to build GBNF tool-call parsers) are strict about what JSON

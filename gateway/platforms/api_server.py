@@ -1,13 +1,21 @@
-"""
+"""OpenAI 兼容 API 服务器 — 让外部程序通过 HTTP 调用 Agent
+
+【产品经理理解要点】
+除了聊天平台，Agent 也可以通过 HTTP API 被程序调用（像 OpenAI API 一样）：
+  - POST /v1/chat/completions — 聊天补全接口
+  - POST /v1/responses — Responses API 接口
+  - GET /v1/models — 列出可用模型
+
+方便其他系统集成 Agent 能力，无需接入具体聊天平台。
+
+─────────────────────────────────────────────────────────────────
+
 OpenAI-compatible API server platform adapter.
 
 Exposes an HTTP server with endpoints:
-- POST /v1/chat/completions        — OpenAI Chat Completions format (stateless; opt-in session continuity via X-Hermes-Session-Id header; opt-in long-term memory scoping via X-Hermes-Session-Key header)
-- POST /v1/responses               — OpenAI Responses API format (stateful via previous_response_id; X-Hermes-Session-Key supported)
-- GET  /v1/responses/{response_id} — Retrieve a stored response
-- DELETE /v1/responses/{response_id} — Delete a stored response
+- POST /v1/chat/completions        — OpenAI Chat Completions format
+- POST /v1/responses               — OpenAI Responses API format
 - GET  /v1/models                  — lists hermes-agent as an available model
-- GET  /v1/capabilities            — machine-readable API capabilities for external UIs
 - POST /v1/runs                    — start a run, returns run_id immediately (202)
 - GET  /v1/runs/{run_id}           — retrieve current run status
 - GET  /v1/runs/{run_id}/events    — SSE stream of structured lifecycle events

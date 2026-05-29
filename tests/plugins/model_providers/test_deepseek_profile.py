@@ -1,4 +1,15 @@
-"""Unit tests for the DeepSeek provider profile's thinking-mode wiring.
+"""DeepSeek配置测试
+
+【产品经理理解要点】
+验证功能插件模块中v4 pro default enables thinking without effort等15个场景的正确性
+- v4 pro default enables thinking without effort的正确性验证
+- v4 pro enabled with high effort的正确性验证
+- standard efforts pass through的正确性验证
+- 另有12个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Unit tests for the DeepSeek provider profile's thinking-mode wiring.
 
 DeepSeek V4 (and the legacy ``deepseek-reasoner``) expects every request to
 carry an explicit ``extra_body.thinking`` parameter.  Omitting it makes the
@@ -7,8 +18,7 @@ server default to thinking-mode ON, which then enforces the
 breaks the conversation with HTTP 400 (#15700, #17212, #17825).
 
 These tests pin the profile's wire-shape contract so DeepSeek requests stay
-correctly shaped without going live.
-"""
+correctly shaped without going live."""
 
 from __future__ import annotations
 

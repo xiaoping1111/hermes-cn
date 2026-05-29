@@ -1,3 +1,17 @@
+"""命令行界面测试 - TUI会话恢复
+
+【产品经理理解要点】
+验证命令行界面TUI会话恢复的正确性
+- 验证的功能: TUI会话恢复流程
+- 核心测试场景: cmd chat tui continue uses latui session、cmd chat tui continue falls back to lacli session、cmd chat tui resume resolves title before launch 等共26个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - 终端UI交互·会话恢复·flow
+
+测试CLI命令处理与配置管理中tui相关的resume相关的flow功能
+"""
+
 from argparse import Namespace
 from pathlib import Path
 import sys

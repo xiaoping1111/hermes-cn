@@ -1,4 +1,12 @@
-"""
+"""MCP 服务器管理命令
+
+【产品经理理解要点】
+实现 `hermes mcp` 子命令，管理 MCP（模型上下文协议）外部工具服务器的添加/删除/测试。
+- 核心职责：添加/删除/列出/测试/配置 MCP 服务器，MCP 让 Hermes 可以连接第三方工具服务器（如数据库、API 网关等）
+- 关键概念：MCP=标准化的外部工具连接协议、stdio/http 传输方式、环境变量注入、超时配置
+- 系统定位：扩展 Hermes 工具能力的配置管理界面
+
+─────────────────────────────────────────────────────────────────
 MCP Server Management CLI — ``hermes mcp`` subcommand.
 
 Implements ``hermes mcp add/remove/list/test/configure`` for interactive

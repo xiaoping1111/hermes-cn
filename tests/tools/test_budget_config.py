@@ -1,9 +1,19 @@
-"""Unit tests for tools/budget_config.py.
+"""预算控制config测试
+
+【产品经理理解要点】
+验证工具系统模块中default result size等20个场景的正确性
+- default result size的正确性验证
+- default turn budget的正确性验证
+- default preview size的正确性验证
+- 另有17个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Unit tests for tools/budget_config.py.
 
 Covers default values, resolve_threshold() priority chain
 (pinned > tool_overrides > registry > default), immutability,
-and the PINNED_THRESHOLDS escape-hatch for read_file.
-"""
+and the PINNED_THRESHOLDS escape-hatch for read_file."""
 
 import dataclasses
 import math

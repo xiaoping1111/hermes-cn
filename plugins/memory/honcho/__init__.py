@@ -1,5 +1,12 @@
-"""Honcho memory plugin — MemoryProvider for Honcho AI-native memory.
+"""Honcho记忆供应商 — AI原生跨会话用户建模
 
+【产品经理理解要点】
+提供基于Honcho SDK的AI原生记忆服务，通过辩证式问答、语义搜索、同伴卡片和持久化结论实现跨会话用户建模。
+- 核心能力：辩证式Q&A、语义搜索、同伴卡片(peer cards)、持久化结论(conclusions)
+- 使用场景：深度理解用户需求，构建用户知识图谱
+- 认证：支持HONCHO_API_KEY或多级配置文件链
+
+─────────────────────────────────────────────────────────────────
 Provides cross-session user modeling with dialectic Q&A, semantic search,
 peer cards, and persistent conclusions via the Honcho SDK. Honcho provides AI-native cross-session user
 modeling with dialectic Q&A, semantic search, peer cards, and conclusions.

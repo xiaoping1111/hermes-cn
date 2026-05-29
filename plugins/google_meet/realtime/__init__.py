@@ -1,8 +1,7 @@
-"""Realtime speech subpackage for the google_meet plugin (v2).
+"""Google Meet实时语音子包(v2)
 
-Provides a thin OpenAI Realtime API client and a file-queue speaker
-wrapper so the Meet bot can play synthesized speech through the
-virtual audio bridge.
+【产品经理理解要点】
+v2实时语音能力的入口，提供OpenAI Realtime API客户端和文件队列扬声器，让Meet机器人能通过虚拟音频桥播放合成语音。
 """
 
 from .openai_client import RealtimeSession, RealtimeSpeaker  # noqa: F401

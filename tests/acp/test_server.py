@@ -1,4 +1,15 @@
-"""Tests for acp_adapter.server — HermesACPAgent ACP server."""
+"""ACP服务器测试
+
+【产品经理理解要点】
+验证HermesACPAgent服务器的能力声明、会话管理和消息处理。
+- initialize握手返回正确的能力声明
+- 会话创建和工具注册
+- 消息流的端到端处理
+- 影响ACP协议集成的核心功能
+
+──────────────────────────────────────────────────────────────
+Tests for acp_adapter.server — HermesACPAgent ACP server.
+"""
 
 import asyncio
 import os

@@ -1,4 +1,13 @@
-"""Generic managed-tool gateway helpers for Nous-hosted vendor passthroughs."""
+"""Nous 托管工具网关
+
+【产品经理理解要点】
+为付费用户自动路由第三方工具请求（如 Web 搜索、图片生成）到 Nous 托管的代理网关，无需自备 API Key。
+- 核心职责：读取 Nous 认证状态、检查订阅有效性、构建网关请求配置
+- 关键业务概念：托管模式——付费用户无需配置各供应商 Key，Nous 网关代为转发和计费
+- 在系统中的位置：转录工具、Web 工具等在调用外部 API 前先检查是否可走网关
+
+─────────────────────────────────────────────────────────────────
+Generic managed-tool gateway helpers for Nous-hosted vendor passthroughs."""
 
 from __future__ import annotations
 

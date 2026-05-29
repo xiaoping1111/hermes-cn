@@ -1,3 +1,10 @@
+"""字典工具调用参数测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中tool call validation accepts dict arguments的正确性
+- tool call validation accepts dict arguments的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性"""
+
 import json
 from types import SimpleNamespace
 

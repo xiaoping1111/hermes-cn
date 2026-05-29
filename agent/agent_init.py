@@ -1,20 +1,24 @@
-"""Implementation of :meth:`AIAgent.__init__` — extracted as a module function.
+"""AIAgent.__init__ 方法的具体实现 — 已提取为独立的模块函数。
 
-``AIAgent.__init__`` is one of the longest methods in the codebase (60+
-parameters, ~1,400 lines of attribute initialization, provider
-auto-detection, credential resolution, context-engine bootstrap, etc.).
-Keeping it in ``run_agent.py`` bloats that file with code that's mostly
-"setup state, then forget".
+【产品经理理解要点】
+这是 AI 代理的"启航准备"——初始化一个代理实例需要做的事情：
 
-After this extraction the body lives here as ``init_agent(agent, ...)``
-and :meth:`AIAgent.__init__` is a thin wrapper that calls
-``init_agent(self, ...)``.  All imports the body needs at module-load
-time are listed below; the body also performs many lazy imports inside
-its own scope that come along unchanged.
+  1. 解析提供商标识（provider）：自动检测 openrouter/openai/anthropic/nous 等
+  2. 构建 API 客户端：根据提供商配置 OpenAI 兼容客户端
+  3. 加载工具集：根据配置决定启用哪些工具
+  4. 初始化上下文压缩器：为后续对话压缩做准备
+  5. 加载记忆系统：读取持久记忆和用户画像
+  6. 设置回调函数：工具进度、流式输出、状态通知等
+  7. 配置安全护栏：工具调用前的安全检查
 
-Symbols that tests patch on ``run_agent.*`` (``OpenAI``, ``cleanup_vm``,
-etc.) are resolved through :func:`_ra` so the patch contract is
-preserved.
+60多个参数，约1400行属性初始化，是代码库中最长的方法之一。
+
+─────────────────────────────────────────────────────────────────
+
+``AIAgent.__init__`` 是代码库中最长的方法之一（60多个参数，约1400行属性初始化、供应商自动检测、凭据解析、上下文引擎引导等）。
+将其提取到此处可以避免 ``run_agent.py`` 变得过于臃肿。
+
+在此提取后，初始化逻辑位于 ``init_agent(agent, ...)``，而 :meth:`AIAgent.__init__` 则是一个简单的包装器。
 """
 
 from __future__ import annotations
@@ -139,52 +143,38 @@ def init_agent(
     pass_session_id: bool = False,
 ):
     """
-    Initialize the AI Agent.
+    初始化 AI 代理。
 
-    Args:
-        base_url (str): Base URL for the model API (optional)
-        api_key (str): API key for authentication (optional, uses env var if not provided)
-        provider (str): Provider identifier (optional; used for telemetry/routing hints)
-        api_mode (str): API mode override: "chat_completions" or "codex_responses"
-        model (str): Model name to use (default: "anthropic/claude-opus-4.6")
-        max_iterations (int): Maximum number of tool calling iterations (default: 90)
-        tool_delay (float): Delay between tool calls in seconds (default: 1.0)
-        enabled_toolsets (List[str]): Only enable tools from these toolsets (optional)
-        disabled_toolsets (List[str]): Disable tools from these toolsets (optional)
-        save_trajectories (bool): Whether to save conversation trajectories to JSONL files (default: False)
-        verbose_logging (bool): Enable verbose logging for debugging (default: False)
-        quiet_mode (bool): Suppress progress output for clean CLI experience (default: False)
-        ephemeral_system_prompt (str): System prompt used during agent execution but NOT saved to trajectories (optional)
-        log_prefix_chars (int): Number of characters to show in log previews for tool calls/responses (default: 100)
-        log_prefix (str): Prefix to add to all log messages for identification in parallel processing (default: "")
-        providers_allowed (List[str]): OpenRouter providers to allow (optional)
-        providers_ignored (List[str]): OpenRouter providers to ignore (optional)
-        providers_order (List[str]): OpenRouter providers to try in order (optional)
-        provider_sort (str): Sort providers by price/throughput/latency (optional)
-        openrouter_min_coding_score (float): Coding-score floor (0.0-1.0) for the
-            openrouter/pareto-code router. Only applied when model == "openrouter/pareto-code".
-            None or empty = let OpenRouter pick the strongest available coder.
-        session_id (str): Pre-generated session ID for logging (optional, auto-generated if not provided)
-        tool_progress_callback (callable): Callback function(tool_name, args_preview) for progress notifications
-        clarify_callback (callable): Callback function(question, choices) -> str for interactive user questions.
-            Provided by the platform layer (CLI or gateway). If None, the clarify tool returns an error.
-        max_tokens (int): Maximum tokens for model responses (optional, uses model default if not set)
-        reasoning_config (Dict): OpenRouter reasoning configuration override (e.g. {"effort": "none"} to disable thinking).
-            If None, defaults to {"enabled": True, "effort": "medium"} for OpenRouter. Set to disable/customize reasoning.
-        prefill_messages (List[Dict]): Messages to prepend to conversation history as prefilled context.
-            Useful for injecting a few-shot example or priming the model's response style.
-            Example: [{"role": "user", "content": "Hi!"}, {"role": "assistant", "content": "Hello!"}]
-            NOTE: Anthropic Sonnet 4.6+ and Opus 4.6+ reject a conversation that ends on an
-            assistant-role message (400 error).  For those models use structured outputs or
-            output_config.format instead of a trailing-assistant prefill.
-        platform (str): The interface platform the user is on (e.g. "cli", "telegram", "discord", "whatsapp").
-            Used to inject platform-specific formatting hints into the system prompt.
-        skip_context_files (bool): If True, skip auto-injection of SOUL.md, AGENTS.md, and .cursorrules
-            into the system prompt. Use this for batch processing and data generation to avoid
-            polluting trajectories with user-specific persona or project instructions.
-        load_soul_identity (bool): If True, still use ~/.hermes/SOUL.md as the primary
-            identity even when skip_context_files=True. Project context files from the cwd
-            remain skipped.
+    参数:
+        base_url (str): 模型 API 的基础 URL（可选）
+        api_key (str): 用于身份验证的 API 密钥（可选，默认使用环境变量）
+        provider (str): 供应商标识符（可选，用于遥测或路由提示）
+        api_mode (str): API 模式覆盖："chat_completions" 或 "codex_responses"
+        model (str): 要使用的模型名称（默认："anthropic/claude-opus-4.6"）
+        max_iterations (int): 工具调用循环的最大迭代次数（默认：90）
+        tool_delay (float): 工具调用之间的延迟时间，单位为秒（默认：1.0）
+        enabled_toolsets (List[str]): 仅启用这些工具集（可选）
+        disabled_toolsets (List[str]): 禁用这些工具集（可选）
+        save_trajectories (bool): 是否将对话轨迹保存到 JSONL 文件（默认：False）
+        verbose_logging (bool): 是否启用详细日志以供调试（默认：False）
+        quiet_mode (bool): 是否抑制进度输出以保持 CLI 界面整洁（默认：False）
+        ephemeral_system_prompt (str): 仅在执行期间使用的临时系统提示词（可选）
+        log_prefix_chars (int): 工具调用/响应日志预览中显示的字符数（默认：100）
+        log_prefix (str): 所有日志消息的前缀（默认：""）
+        providers_allowed (List[str]): OpenRouter 允许使用的供应商列表（可选）
+        providers_ignored (List[str]): OpenRouter 忽略的供应商列表（可选）
+        providers_order (List[str]): OpenRouter 供应商的尝试顺序（可选）
+        provider_sort (str): 按价格/吞吐量/延迟对供应商进行排序（可选）
+        openrouter_min_coding_score (float): OpenRouter 的最低代码评分阈值 (0.0-1.0)
+        session_id (str): 预生成的会话 ID（可选，若未提供则自动生成）
+        tool_progress_callback (callable): 进度通知的回调函数
+        clarify_callback (callable): 用于交互式用户提问的回调函数
+        max_tokens (int): 模型响应的最大 token 数（可选）
+        reasoning_config (Dict): 推理配置覆盖（如启用/禁用思考过程）
+        prefill_messages (List[Dict]): 预填入对话历史的消息列表
+        platform (str): 用户所在的界面平台（如 "cli", "telegram", "discord" 等）
+        skip_context_files (bool): 是否跳过自动注入 SOUL.md, AGENTS.md 等上下文文件
+        load_soul_identity (bool): 是否在 skip_context_files=True 时仍加载 SOUL.md
     """
     _install_safe_stdio()
 

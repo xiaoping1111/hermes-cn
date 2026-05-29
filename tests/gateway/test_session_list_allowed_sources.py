@@ -1,4 +1,13 @@
-"""Regression tests for the TUI gateway's ``session.list`` handler.
+"""消息网关测试 - 会话管理·list·allowed·sources
+
+【产品经理理解要点】
+验证消息网关的会话管理功能
+- 验证的功能: Regression tests for the TUI gateway's ``session.list`` handler
+- 核心测试场景: session list surfaces all user facing sources、session list default limit is 200、session list respects explicit limit 等共4个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests for the TUI gateway's ``session.list`` handler.
 
 History:
 - The original implementation hardcoded an allow-list of known gateway

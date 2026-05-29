@@ -1,4 +1,14 @@
-"""Unit tests for hermes_cli/dingtalk_auth.py (QR device-flow registration)."""
+"""命令行界面测试 - dingtalk·认证授权
+
+【产品经理理解要点】
+验证命令行界面的认证授权功能
+- 验证的功能: Unit tests for hermes_cli/dingtalk_auth.py (QR device-flow registration)
+- 核心测试场景: raises on network error、raises on nonzero errcode、returns data on success 等共15个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Unit tests for hermes_cli/dingtalk_auth.py (QR device-flow registration).
+"""
 from __future__ import annotations
 
 import sys

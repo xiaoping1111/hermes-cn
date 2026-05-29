@@ -1,4 +1,14 @@
-"""Tests for hermes_cli.cron command handling."""
+"""命令行界面测试 - cron
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for hermes_cli.cron command handling
+- 核心测试场景: pause resume run、edit can replace and clear skills、create with multiple skills
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.cron command handling.
+"""
 
 from argparse import Namespace
 

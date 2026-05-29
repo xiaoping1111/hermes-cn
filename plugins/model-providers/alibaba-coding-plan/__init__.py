@@ -1,4 +1,7 @@
-"""Alibaba Cloud Coding Plan provider profile.
+"""【产品经理理解要点】
+阿里云编程增强版（Coding Plan）提供商——与标准alibaba提供商不同，使用独立的coding端点（coding-intl.dashscope.aliyuncs.com）和专用API Key层级，专门为编程任务优化。
+─────────────────────────────────────────────────────────────────
+Alibaba Cloud Coding Plan provider profile.
 
 Separate from the standard `alibaba` profile because it hits a different
 endpoint (coding-intl.dashscope.aliyuncs.com) with a dedicated API key tier.

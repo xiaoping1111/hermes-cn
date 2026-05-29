@@ -1,4 +1,14 @@
 """
+Profile 多实例管理
+
+【产品经理理解要点】
+让一个 Hermes 安装运行多个独立的 Profile 实例，每个实例拥有独立的配置、记忆、会话和技能。
+- 每个 Profile 是一个完全隔离的 HERMES_HOME 目录
+- 支持创建、克隆、删除、重命名、导出/导入 Profile
+- 可创建 Shell 快捷命令直接进入指定 Profile
+- "default" Profile 即 ~/.hermes 本身，无需迁移
+
+─────────────────────────────────────────────────────────────────
 Profile management for multiple isolated Hermes instances.
 
 Each profile is a fully independent HERMES_HOME directory with its own

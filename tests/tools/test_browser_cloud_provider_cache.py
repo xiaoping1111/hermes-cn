@@ -1,4 +1,15 @@
-"""Tests for ``_get_cloud_provider()`` caching policy.
+"""浏览器云端提供者缓存测试
+
+【产品经理理解要点】
+验证工具系统模块中explicit local caches permanently等5个场景的正确性
+- explicit local caches permanently的正确性验证
+- successful cloud resolution caches permanently的正确性验证
+- no credentials yet does not cache none的正确性验证
+- 另有2个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for ``_get_cloud_provider()`` caching policy.
 
 Regression coverage for issue #22324: a transient ``None`` from the resolver
 must not be cached for the lifetime of the process. Cache only when:
@@ -7,8 +18,7 @@ must not be cached for the lifetime of the process. Cache only when:
 * A provider is successfully resolved.
 
 All other ``None`` outcomes (no credentials yet, config read error, explicit
-provider instantiation failure) leave the cache unset so the next call retries.
-"""
+provider instantiation failure) leave the cache unset so the next call retries."""
 import logging
 from unittest.mock import Mock
 

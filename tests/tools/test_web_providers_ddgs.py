@@ -1,12 +1,22 @@
-"""Tests for the DuckDuckGo (ddgs) web search provider.
+"""Web搜索providersDuckDuckGo测试
+
+【产品经理理解要点】
+验证工具系统模块中configured when package importable等18个场景的正确性
+- configured when package importable的正确性验证
+- not configured when package missing的正确性验证
+- provider name的正确性验证
+- 另有15个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the DuckDuckGo (ddgs) web search provider.
 
 Covers:
 - DDGSWebSearchProvider.is_available() — reflects package importability
 - DDGSWebSearchProvider.search() — happy path, missing package, runtime error
 - Result normalization (title, url, description, position)
 - _is_backend_available("ddgs") / _get_backend() integration
-- web_extract / web_crawl return search-only errors when ddgs is active
-"""
+- web_extract / web_crawl return search-only errors when ddgs is active"""
 from __future__ import annotations
 
 import json

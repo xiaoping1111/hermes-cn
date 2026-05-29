@@ -1,13 +1,11 @@
-"""CLI commands for the google_meet plugin.
+"""Google Meet CLI管理命令
 
-Wires ``hermes meet <subcommand>``:
-  setup       — preflight playwright, chromium, auth file, print fixes
-  auth        — open a browser to sign into Google, save storage state
-  join <url>  — join a Meet URL synchronously (also callable from the agent)
-  status      — print current bot state
-  transcript  — print the transcript
-  stop        — leave the current meeting
-"""
+【产品经理理解要点】
+Google Meet插件的命令行管理工具，支持环境配置、Google认证、加入/查看/离开会议。
+- setup：环境预检(Playwright/Chromium/认证文件)
+- auth：打开浏览器登录Google
+- join <url>：加入指定Meet链接
+- status/transcript/stop：查看状态/转录/离开"""
 
 from __future__ import annotations
 

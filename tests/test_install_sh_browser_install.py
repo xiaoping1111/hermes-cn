@@ -1,4 +1,13 @@
-"""Regression tests for install.sh browser setup.
+"""安装脚本浏览器安装测试
+
+【产品经理理解要点】
+验证安装脚本中浏览器自动化的安装逻辑，确保下载失败不影响主程序安装。
+- 系统浏览器存在时跳过Playwright下载
+- 下载失败时的优雅降级
+- 影响首次安装的用户体验
+
+──────────────────────────────────────────────────────────────
+Regression tests for install.sh browser setup.
 
 Browser automation is optional. The installer should not leave Hermes
 half-installed just because Playwright's managed Chromium download hangs on an

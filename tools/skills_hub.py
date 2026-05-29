@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 """
+技能中心——来源适配器和状态管理
+
+【产品经理理解要点】
+管理技能市场的核心逻辑：从 GitHub 仓库发现和下载社区技能、跟踪已安装技能的来源、维护本地状态。
+- 核心职责：GitHub 认证、技能源抽象接口、官方可选技能、GitHub 仓库源适配器、锁定文件跟踪、状态目录管理
+- 关键业务概念：来源追溯——每个 Hub 安装的技能都有来源记录，支持升级和卸载；隔离区——下载后先入隔离区扫描，通过后才安装
+- 在系统中的位置：CLI 技能命令和 /skills 斜杠命令的底层引擎
+
+─────────────────────────────────────────────────────────────────
 Skills Hub — Source adapters and hub state management for the Hermes Skills Hub.
 
 This is a library module (not an agent tool). It provides:

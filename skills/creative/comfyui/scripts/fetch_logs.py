@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""
+"""【产品经理理解要点】
+ComfyUI工作流日志获取——当工作流出错时，通过prompt_id从服务器获取完整的Python堆栈跟踪信息，便于排查问题。
+─────────────────────────────────────────────────────────────────
 fetch_logs.py — Retrieve workflow execution diagnostics from a ComfyUI server.
 
 When a workflow errors, the server's /history (local) or /jobs (cloud) entry

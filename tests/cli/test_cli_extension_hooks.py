@@ -1,4 +1,12 @@
-"""Tests for protected HermesCLI TUI extension hooks.
+"""CLI扩展钩子测试
+
+【产品经理理解要点】
+验证CLI扩展钩子的注册和执行机制。
+- 扩展钩子的生命周期管理
+- 影响CLI功能的可扩展性
+
+──────────────────────────────────────────────────────────────
+Tests for protected HermesCLI TUI extension hooks.
 
 Verifies that wrapper CLIs can extend the TUI via:
   - _get_extra_tui_widgets()

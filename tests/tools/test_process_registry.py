@@ -1,4 +1,15 @@
-"""Tests for tools/process_registry.py — ProcessRegistry query methods, pruning, checkpoint."""
+"""进程注册表测试
+
+【产品经理理解要点】
+验证工具系统模块中get not found等58个场景的正确性
+- get not found的正确性验证
+- get running的正确性验证
+- get finished的正确性验证
+- 另有55个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/process_registry.py — ProcessRegistry query methods, pruning, checkpoint."""
 
 import json
 import os

@@ -1,8 +1,18 @@
-"""Tests for BaseEnvironment unified execution model.
+"""基础环境测试
+
+【产品经理理解要点】
+验证工具系统模块中basic shape等18个场景的正确性
+- basic shape的正确性验证
+- no snapshot skips source的正确性验证
+- single quote escaping的正确性验证
+- 另有15个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for BaseEnvironment unified execution model.
 
 Tests _wrap_command(), _extract_cwd_from_output(), _embed_stdin_heredoc(),
-init_session() failure handling, and the CWD marker contract.
-"""
+init_session() failure handling, and the CWD marker contract."""
 
 import uuid
 from unittest.mock import MagicMock

@@ -1,4 +1,15 @@
-"""Regression tests for the May 2026 xAI OAuth (SuperGrok / X Premium) bugs.
+"""Codex xAI OAuth恢复测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中codex stream prelude error falls back to create stream等23个场景的正确性
+- codex stream prelude error falls back to create...的正确性验证
+- codex stream prelude error retries once before fallback的正确性验证
+- codex stream unrelated runtimeerror still raises的正确性验证
+- 另有20个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for the May 2026 xAI OAuth (SuperGrok / X Premium) bugs.
 
 Three distinct failure modes the user community hit during rollout:
 
@@ -27,8 +38,7 @@ Three distinct failure modes the user community hit during rollout:
    multi-turn failure mode was actually the prelude-SSE issue closed by
    Fix A above.  The remaining tests here lock in that xAI receives
    replayed reasoning AND that we ask xAI to echo it back in the
-   ``include`` array.
-"""
+   ``include`` array."""
 
 from types import SimpleNamespace
 from unittest.mock import MagicMock, patch

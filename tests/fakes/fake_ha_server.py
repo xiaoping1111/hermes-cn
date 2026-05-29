@@ -1,4 +1,13 @@
-"""Fake Home Assistant server for integration testing.
+"""Home Assistant模拟服务器
+
+【产品经理理解要点】
+验证测试用模拟外部服务HA模拟服务器的正确性
+- 验证的功能: Fake Home Assistant server for integration testing
+- 核心测试场景: 测试用模拟外部服务基础功能验证
+- 业务影响: 测试替身不准确将导致上层集成测试结论不可靠
+
+─────────────────────────────────────────────────────────────────
+Fake Home Assistant server for integration testing.
 
 Provides a real HTTP + WebSocket server (via aiohttp.web) that mimics the
 Home Assistant API surface used by hermes-agent:

@@ -1,4 +1,13 @@
-"""Tests for _web_ui_build_needed — staleness check for the web UI dist.
+"""命令行界面测试 - web·ui·build
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for _web_ui_build_needed — staleness check for the web UI dist
+- 核心测试场景: returns true when dist missing、returns false when vite manifest fresh、returns true when source newer than manifest 等共16个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for _web_ui_build_needed — staleness check for the web UI dist.
 
 Critical invariant: the Vite build outputs to hermes_cli/web_dist/
 (vite.config.ts: outDir: "../hermes_cli/web_dist"), NOT web/dist/.

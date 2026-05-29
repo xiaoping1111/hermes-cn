@@ -1,4 +1,13 @@
-"""Tests for user-defined providers (providers: dict) in /model.
+"""命令行界面测试 - 模型切换
+
+【产品经理理解要点】
+验证命令行界面模型切换的正确性
+- 验证的功能: Tests for user-defined providers (providers: dict) in /model
+- 核心测试场景: list authenticated providers includes full models list from user providers、list authenticated providers dedupes models when default in list、list authenticated providers enumerates dict format models 等共27个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for user-defined providers (providers: dict) in /model.
 
 These tests ensure that providers defined in the config.yaml ``providers:`` section
 are properly resolved for model switching and that their full ``models:`` lists

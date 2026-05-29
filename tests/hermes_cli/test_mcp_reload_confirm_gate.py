@@ -1,4 +1,13 @@
-"""Tests for the approvals.mcp_reload_confirm config gate.
+"""命令行界面测试 - MCP工具·reload·confirm·gate
+
+【产品经理理解要点】
+验证命令行界面的MCP工具功能
+- 验证的功能: Tests for the approvals.mcp_reload_confirm config gate
+- 核心测试场景: default config has the key、default is true、shape matches other approval keys 等共5个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the approvals.mcp_reload_confirm config gate.
 
 When the user runs /reload-mcp, the MCP tool set is rebuilt which
 invalidates the provider prompt cache for the active session.  That's

@@ -1,4 +1,13 @@
-"""Tests for get_tool_emoji in agent/display.py — skin + registry integration."""
+"""显示表情符号测试
+
+【产品经理理解要点】
+验证工具预览中表情符号的正确选择和展示。
+- 不同工具类型对应正确的emoji
+- 影响CLI界面的视觉友好度
+
+──────────────────────────────────────────────────────────────
+Tests for get_tool_emoji in agent/display.py — skin + registry integration.
+"""
 
 from unittest.mock import patch as mock_patch, MagicMock
 

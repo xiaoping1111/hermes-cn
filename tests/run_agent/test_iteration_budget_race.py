@@ -1,8 +1,18 @@
-"""Tests for IterationBudget thread safety.
+"""迭代预算竞争测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中iteration budget used is thread safe等5个场景的正确性
+- iteration budget used is thread safe的正确性验证
+- iteration budget consume returns false when exhausted的正确性验证
+- iteration budget refund restores consume的正确性验证
+- 另有2个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for IterationBudget thread safety.
 
 The `used` property must acquire the lock before reading `_used` to prevent
-data races with concurrent `consume()` / `refund()` calls.
-"""
+data races with concurrent `consume()` / `refund()` calls."""
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor

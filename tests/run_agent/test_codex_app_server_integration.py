@@ -1,4 +1,15 @@
-"""Integration test for the codex_app_server runtime path through AIAgent.
+"""Codex应用服务器集成测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中api mode is codex app server等15个场景的正确性
+- api mode is codex app server的正确性验证
+- run conversation returns codex shape的正确性验证
+- projected messages are spliced的正确性验证
+- 另有12个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Integration test for the codex_app_server runtime path through AIAgent.
 
 Verifies that:
   - api_mode='codex_app_server' is accepted on AIAgent construction
@@ -7,8 +18,7 @@ Verifies that:
   - Projected messages from a fake Codex session land in the messages list
   - tool_iterations from the codex session tick the skill nudge counter
   - Memory nudge counter ticks once per turn
-  - The returned dict has the same shape as the chat_completions path
-"""
+  - The returned dict has the same shape as the chat_completions path"""
 
 from __future__ import annotations
 

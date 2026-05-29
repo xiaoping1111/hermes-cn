@@ -1,4 +1,13 @@
-"""Tests for Telegram private-chat topic-mode routing.
+"""消息网关测试 - Telegram平台·topic·mode
+
+【产品经理理解要点】
+验证消息网关的Telegram平台功能
+- 验证的功能: Tests for Telegram private-chat topic-mode routing
+- 核心测试场景: root telegram dm prompt is system lobby when topic mode enabled、root telegram dm new shows create topic instruction、telegram topic prompt still runs agent when topic mode enabled 等共42个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Telegram private-chat topic-mode routing.
 
 Topic mode makes the root Telegram DM a system lobby while user-created
 Telegram topics act as independent Hermes session lanes.

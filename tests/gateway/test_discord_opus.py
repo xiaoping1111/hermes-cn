@@ -1,4 +1,14 @@
-"""Tests for Discord Opus codec loading — must use ctypes.util.find_library."""
+"""消息网关测试 - Discord平台·opus
+
+【产品经理理解要点】
+验证消息网关的Discord平台功能
+- 验证的功能: Tests for Discord Opus codec loading — must use ctypes.util.find_library
+- 核心测试场景: uses find library first、homebrew fallback is conditional、opus decode error logged
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Discord Opus codec loading — must use ctypes.util.find_library.
+"""
 
 import inspect
 

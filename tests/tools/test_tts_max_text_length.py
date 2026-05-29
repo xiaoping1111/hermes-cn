@@ -1,9 +1,19 @@
-"""Tests for per-provider TTS input-character limits.
+"""语音合成最大文本长度测试
+
+【产品经理理解要点】
+验证工具系统模块中edge default等27个场景的正确性
+- edge default的正确性验证
+- openai default is 4096的正确性验证
+- xai default is 15000的正确性验证
+- 另有24个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for per-provider TTS input-character limits.
 
 Replaces the old global ``MAX_TEXT_LENGTH = 4000`` cap that truncated every
 provider at 4000 chars even though OpenAI allows 4096, xAI allows 15000,
-MiniMax allows 10000, and ElevenLabs allows 5000-40000 depending on model.
-"""
+MiniMax allows 10000, and ElevenLabs allows 5000-40000 depending on model."""
 
 import json
 from unittest.mock import patch

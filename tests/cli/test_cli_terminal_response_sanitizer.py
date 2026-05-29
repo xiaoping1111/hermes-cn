@@ -1,4 +1,12 @@
-"""Tests for defensive terminal control-response stripping in the CLI.
+"""CLI终端响应清洗测试
+
+【产品经理理解要点】
+验证终端工具输出中的控制字符清洗逻辑。
+- ANSI转义序列的过滤
+- 影响终端输出在对话中的可读性
+
+──────────────────────────────────────────────────────────────
+Tests for defensive terminal control-response stripping in the CLI.
 
 Covers Cursor Position Report (CPR / DSR) responses that occasionally
 leak into the input buffer after terminal resize storms or multiplexer

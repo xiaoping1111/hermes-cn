@@ -1,4 +1,15 @@
-"""Regression tests for SSE transport in ``MCPServerTask._run_http``.
+"""MCP SSE传输测试
+
+【产品经理理解要点】
+验证工具系统模块中sse read timeout is 300s not tool timeout等4个场景的正确性
+- sse read timeout is 300s not tool timeout的正确性验证
+- sse read timeout still 300s when tool timeout...的正确性验证
+- sse client receives oauth auth when configured的正确性验证
+- 另有1个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for SSE transport in ``MCPServerTask._run_http``.
 
 Covers fixes distilled from @amiller's PR #5981 that couldn't be cherry-picked
 due to stale-branch divergence:
@@ -11,8 +22,7 @@ due to stale-branch divergence:
 
 2. OAuth auth is forwarded to ``sse_client`` when configured. Previously the
    code built ``_oauth_auth`` but never passed it to the SSE path, so SSE MCP
-   servers behind OAuth 2.1 PKCE would silently fail with 401s.
-"""
+   servers behind OAuth 2.1 PKCE would silently fail with 401s."""
 
 from __future__ import annotations
 

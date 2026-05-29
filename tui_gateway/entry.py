@@ -1,3 +1,12 @@
+"""TUI网关主入口
+
+【产品经理理解要点】
+TUI模式下Hermes的启动入口，作为子进程被TUI前端调用。
+- 核心职责：初始化网关、处理信号、通过stdin/stdout进行JSON-RPC通信
+- 信号处理：安全处理SIGPIPE/SIGTERM等信号，防止后台线程（如TTS播放）导致进程异常退出
+- MCP发现：启动时检测配置中的MCP服务器，预先发现可用工具
+- 侧边栏推送：可选地将事件通过WebSocket推送到Dashboard侧边栏
+"""
 import os
 import sys
 

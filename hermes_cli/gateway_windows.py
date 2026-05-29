@@ -1,4 +1,13 @@
-"""Windows gateway service backend (Scheduled Task + Startup-folder fallback).
+"""Windows 网关服务后端
+
+【产品经理理解要点】
+实现 Windows 上的网关自启动方案，通过计划任务或启动文件夹实现开机自动运行。
+- 核心职责：在 Windows 上将网关注册为计划任务（登录时自动启动）或放入启动文件夹（企业锁屏环境备选），提供一致的服务管理接口
+- 关键概念：计划任务（schtasks /SC ONLOGON）、启动文件夹备选、gateway.cmd 包装脚本
+- 系统定位：gateway.py 在 Windows 平台的适配实现
+
+─────────────────────────────────────────────────────────────────
+Windows gateway service backend (Scheduled Task + Startup-folder fallback).
 
 This mirrors the contract exposed by ``launchd_install`` / ``launchd_start`` /
 ``launchd_status`` etc. on macOS and ``systemd_install`` / ``systemd_start`` on

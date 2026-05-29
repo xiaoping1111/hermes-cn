@@ -1,4 +1,13 @@
-"""Credential-pool auth subcommands."""
+"""凭据池认证命令
+
+【产品经理理解要点】
+实现 `hermes auth add/list/remove/reset` 等子命令，让用户管理多个 AI 供应商的登录凭证。
+- 核心职责：提供交互式和命令行两种方式添加/删除/查看 API Key 和 OAuth 凭证，支持凭据轮转策略设置
+- 关键概念：凭据池（一个供应商可配多个 Key 自动轮转）、OAuth 登录（浏览器授权）、API Key 粘贴添加
+- 系统定位：用户管理 AI 供应商认证的命令行界面，底层调用 auth.py 的认证能力
+
+─────────────────────────────────────────────────────────────────
+Credential-pool auth subcommands."""
 
 from __future__ import annotations
 

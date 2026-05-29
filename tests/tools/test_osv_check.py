@@ -1,4 +1,15 @@
-"""Tests for OSV malware check on MCP extension packages."""
+"""OSV漏洞check测试
+
+【产品经理理解要点】
+验证工具系统模块中npx等24个场景的正确性
+- npx的正确性验证
+- uvx的正确性验证
+- pipx的正确性验证
+- 另有21个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for OSV malware check on MCP extension packages."""
 
 import json
 import pytest

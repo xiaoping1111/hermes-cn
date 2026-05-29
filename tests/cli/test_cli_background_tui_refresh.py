@@ -1,4 +1,12 @@
-"""Tests for CLI background command TUI refresh behavior.
+"""CLI后台TUI刷新测试
+
+【产品经理理解要点】
+验证后台任务完成时TUI界面的自动刷新逻辑。
+- 后台完成时的界面触发刷新
+- 影响后台任务的用户体验
+
+──────────────────────────────────────────────────────────────
+Tests for CLI background command TUI refresh behavior.
 
 Ensures the TUI is properly refreshed before printing background task output
 to prevent spinner/status bar overlap (#2718).

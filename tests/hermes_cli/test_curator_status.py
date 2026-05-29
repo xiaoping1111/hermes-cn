@@ -1,4 +1,13 @@
-"""Tests for `hermes curator status` output.
+"""命令行界面测试 - curator·status
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for `hermes curator status` output
+- 核心测试场景: status uses last activity not only last used、status shows most and least used sections、status hides most active when all zero 等共5个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for `hermes curator status` output.
 
 Covers:
 - y0shualee's "least recently active" semantic (view/patch/use all count as activity).

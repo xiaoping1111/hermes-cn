@@ -1,3 +1,13 @@
+"""终端依赖检查测试
+
+【产品经理理解要点】
+验证工具系统模块中local terminal requirements等18个场景的正确性
+- local terminal requirements的正确性验证
+- unknown terminal env logs error and returns false的正确性验证
+- ssh backend without host or user logs and...的正确性验证
+- 另有15个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性"""
+
 import importlib
 import logging
 

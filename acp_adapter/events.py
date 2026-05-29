@@ -1,4 +1,14 @@
-"""Callback factories for bridging AIAgent events to ACP notifications.
+"""ACP事件桥接模块
+
+【产品经理理解要点】
+将Hermes Agent内部的各种事件翻译成ACP协议能理解的格式，推送给编辑器显示。
+- 核心职责：桥接AIAgent的四种回调（工具进度、思考过程、推理步骤、消息文本）到ACP通知
+- 工具进度：告诉编辑器"正在读取文件"/"正在执行命令"等实时状态
+- 思考过程：将Agent的内部推理内容展示给用户
+- 任务列表：将todo工具的状态同步为编辑器的原生任务面板
+
+─────────────────────────────────────────────────────────────────
+Callback factories for bridging AIAgent events to ACP notifications.
 
 Each factory returns a callable with the signature that AIAgent expects
 for its callbacks. Internally, the callbacks push ACP session updates

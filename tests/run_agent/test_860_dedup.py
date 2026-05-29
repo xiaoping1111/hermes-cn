@@ -1,11 +1,21 @@
-"""Tests for issue #860 — SQLite session transcript deduplication.
+"""消息去重测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中flush writes only new messages等8个场景的正确性
+- flush writes only new messages的正确性验证
+- flush writes incrementally的正确性验证
+- persist session multiple calls no duplication的正确性验证
+- 另有5个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for issue #860 — SQLite session transcript deduplication.
 
 Verifies that:
 1. _flush_messages_to_session_db uses _last_flushed_db_idx to avoid re-writing
 2. Multiple _persist_session calls don't duplicate messages
 3. append_to_transcript(skip_db=True) skips SQLite but writes JSONL
-4. The gateway doesn't double-write messages the agent already persisted
-"""
+4. The gateway doesn't double-write messages the agent already persisted"""
 
 import json
 import os

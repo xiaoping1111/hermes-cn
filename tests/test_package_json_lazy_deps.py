@@ -1,4 +1,13 @@
-"""Invariants for what is eager vs lazy in the root ``package.json``.
+"""NPM依赖懒加载测试
+
+【产品经理理解要点】
+验证package.json中浏览器后端依赖的懒加载策略，防止可选浏览器下载阻塞主程序更新。
+- agent-browser为急切依赖（默认Chromium后端）
+- camofox-browser为懒加载依赖（仅在用户选择时安装）
+- 影响hermes update的安装速度
+
+──────────────────────────────────────────────────────────────
+Invariants for what is eager vs lazy in the root ``package.json``.
 
 The root ``package.json`` is installed by ``hermes update`` on every user,
 including users who never opted into a given browser backend. Anything

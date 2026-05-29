@@ -1,4 +1,15 @@
-"""Tests for the dynamic schema builder under the simplified surface."""
+"""视频生成动态Schema测试
+
+【产品经理理解要点】
+验证工具系统模块中no config says so等5个场景的正确性
+- no config says so的正确性验证
+- does not mention edit or extend的正确性验证
+- both modalities advertises auto routing的正确性验证
+- 另有2个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the dynamic schema builder under the simplified surface."""
 
 from __future__ import annotations
 

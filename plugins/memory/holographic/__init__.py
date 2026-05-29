@@ -1,5 +1,12 @@
-"""hermes-memory-store — holographic memory plugin using MemoryProvider interface.
+"""全息记忆供应商 — HRR结构化事实存储
 
+【产品经理理解要点】
+基于全息约简表示(HRR)的记忆插件，提供结构化事实存储、实体解析、信任评分和组合式检索。
+- 核心能力：结构化事实存储、实体解析、信任评分、HRR组合式检索
+- 技术特点：使用相位向量编码概念，支持绑定(bind)和解绑(unbind)操作组合信息
+- 数据库：SQLite本地存储，支持配置信任阈值和时间衰减
+
+─────────────────────────────────────────────────────────────────
 Registers as a MemoryProvider plugin, giving the agent structured fact storage
 with entity resolution, trust scoring, and HRR-based compositional retrieval.
 

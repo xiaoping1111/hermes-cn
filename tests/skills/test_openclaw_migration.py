@@ -1,4 +1,12 @@
 from __future__ import annotations
+"""OpenClaw迁移技能测试
+
+【产品经理理解要点】
+验证OpenClaw到Hermes的迁移脚本功能，确保用户能平滑迁移配置和数据。
+- 迁移脚本的参数解析和执行
+- 配置文件格式转换和数据映射
+- 影响用户从旧系统迁移的体验"""
+
 
 import importlib.util
 import json

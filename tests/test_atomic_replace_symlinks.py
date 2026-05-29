@@ -1,4 +1,13 @@
-"""Regression tests for GitHub #16743 — atomic writes must preserve symlinks.
+"""原子写入保护符号链接测试
+
+【产品经理理解要点】
+验证原子写入操作不会破坏已有的符号链接，确保配置文件符号链接在写入后仍然有效。
+- 原子写入后符号链接仍指向正确目标
+- JSON/YAML原子写入均正确处理符号链接
+- 影响使用符号链接管理配置的部署环境
+
+──────────────────────────────────────────────────────────────
+Regression tests for GitHub #16743 — atomic writes must preserve symlinks.
 
 ``os.replace(tmp, target)`` replaces whatever exists at ``target`` — including
 symlinks, which it swaps for a regular file.  Managed deployments that

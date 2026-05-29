@@ -1,4 +1,13 @@
-"""Tests for Bug #12905 fix — stale OAuth token detection in hermes model flow.
+"""命令行界面测试 - anthropic·模型管理·flow·stale·OAuth认证
+
+【产品经理理解要点】
+验证命令行界面的模型管理OAuth认证功能
+- 验证的功能: Tests for Bug #12905 fix — stale OAuth token detection in hermes model flow
+- 核心测试场景: stale oauth token triggers reauth、valid api key skips stale check、valid oauth token with refresh available skips reauth 等共6个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for Bug #12905 fix — stale OAuth token detection in hermes model flow.
 
 Bug 3: `hermes model` with `provider=anthropic` skips OAuth re-authentication
 when a stale ANTHROPIC_TOKEN exists in ~/.hermes/.env but no valid

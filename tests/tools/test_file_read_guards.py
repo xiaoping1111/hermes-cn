@@ -1,11 +1,20 @@
 #!/usr/bin/env python3
-"""
+"""文件读取防护测试
+
+【产品经理理解要点】
+验证工具系统模块中blocked device detection等34个场景的正确性
+- blocked device detection的正确性验证
+- safe device not blocked的正确性验证
+- proc fd blocked的正确性验证
+- 另有31个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
 Tests for read_file_tool safety guards: device-path blocking,
 character-count limits, file deduplication, and dedup reset on
 context compression.
 
-Run with:  python -m pytest tests/tools/test_file_read_guards.py -v
-"""
+Run with:  python -m pytest tests/tools/test_file_read_guards.py -v"""
 
 import json
 import os

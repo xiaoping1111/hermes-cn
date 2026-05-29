@@ -1,4 +1,13 @@
-"""Tests for the ``transform_llm_output`` plugin hook.
+"""LLM输出变换钩子测试
+
+【产品经理理解要点】
+验证transform_llm_output插件钩子的分发语义，确保第一个非空字符串结果生效。
+- 钩子按注册顺序执行
+- 第一个非空字符串结果覆盖最终输出
+- 影响插件修改AI回复的能力
+
+──────────────────────────────────────────────────────────────
+Tests for the ``transform_llm_output`` plugin hook.
 
 The hook fires inside ``AIAgent.run_conversation`` once the tool-calling
 loop has produced a final response. Driving the full agent loop from a

@@ -1,4 +1,13 @@
-"""``hermes logs`` — view and filter Hermes log files.
+"""日志查看命令
+
+【产品经理理解要点】
+实现 `hermes logs` 命令，查看和过滤 Hermes 的运行日志，支持实时追踪和多种筛选条件。
+- 核心职责：查看 agent.log / errors.log / gateway.log 等日志文件，支持实时追踪(-f)、按级别/会话/组件/时间过滤
+- 关键概念：日志级别过滤(WARNING+)、会话 ID 过滤、实时跟踪(tail -f)、相对时间范围(--since 1h)
+- 系统定位：问题排查和运行监控的日志工具
+
+─────────────────────────────────────────────────────────────────
+``hermes logs`` — view and filter Hermes log files.
 
 Supports tailing, following, session filtering, level filtering,
 component filtering, and relative time ranges.  All log files live

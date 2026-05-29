@@ -1,4 +1,14 @@
-"""Tests for xAI Grok OAuth — tokens stored in Hermes auth store (~/.hermes/auth.json)."""
+"""命令行界面测试 - OAuth提供商
+
+【产品经理理解要点】
+验证命令行界面OAuth提供商的正确性
+- 验证的功能: Tests for xAI Grok OAuth — tokens stored in Hermes auth store (~/.hermes/auth.json)
+- 核心测试场景: xai oauth provider registered、resolve provider normalizes xai oauth aliases、xai access token is expiring returns true for expired jwt 等共82个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for xAI Grok OAuth — tokens stored in Hermes auth store (~/.hermes/auth.json).
+"""
 
 import base64
 import json

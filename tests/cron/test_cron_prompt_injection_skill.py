@@ -1,4 +1,13 @@
-"""Regression guard: skill content loaded at cron runtime must be scanned.
+"""定时任务测试 - 提示词注入防护
+
+【产品经理理解要点】
+验证定时任务调度引擎提示词注入防护的正确性
+- 验证的功能: Regression guard: skill content loaded at cron runtime must be scanned
+- 核心测试场景: clean prompt passes through、injection pattern raises、env exfil pattern raises 等共11个场景
+- 业务影响: 定时任务可能无法正确调度执行，影响自动化工作流的可靠性
+
+─────────────────────────────────────────────────────────────────
+Regression guard: skill content loaded at cron runtime must be scanned.
 
 #3968 attack chain: `_scan_cron_prompt` runs on the user-supplied prompt
 at cron-create/cron-update time but the skill content loaded inside

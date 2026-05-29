@@ -1,4 +1,14 @@
-"""Tests for named custom provider and 'main' alias resolution in auxiliary_client."""
+"""命名自定义提供商辅助客户端测试
+
+【产品经理理解要点】
+验证命名自定义提供商的辅助客户端构建和调用。
+- 自定义提供商名称到配置的映射
+- 非标准API端点的兼容性
+- 影响第三方模型提供商的集成
+
+──────────────────────────────────────────────────────────────
+Tests for named custom provider and 'main' alias resolution in auxiliary_client.
+"""
 
 import os
 from unittest.mock import patch, MagicMock

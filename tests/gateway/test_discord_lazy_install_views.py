@@ -1,4 +1,13 @@
-"""Regression: Discord UI view classes must be defined after lazy-install.
+"""消息网关测试 - Discord平台·lazy·install·views
+
+【产品经理理解要点】
+验证消息网关的Discord平台功能
+- 验证的功能: Regression: Discord UI view classes must be defined after lazy-install
+- 核心测试场景: registers all five view classes、check discord requirements calls define on lazy install
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression: Discord UI view classes must be defined after lazy-install.
 
 When discord.py is NOT installed at module load time, the
 ``if DISCORD_AVAILABLE:`` guard at the bottom of gateway/platforms/discord.py

@@ -1,4 +1,15 @@
-"""Tests for the Brave Search (free tier) web search provider.
+"""Web搜索providersBrave搜索free测试
+
+【产品经理理解要点】
+验证工具系统模块中configured when key set等22个场景的正确性
+- configured when key set的正确性验证
+- not configured when key missing的正确性验证
+- not configured when key whitespace的正确性验证
+- 另有19个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the Brave Search (free tier) web search provider.
 
 Covers:
 - BraveFreeWebSearchProvider.is_available() env var gating
@@ -8,8 +19,7 @@ Covers:
 - _is_backend_available("brave-free") integration
 - _get_backend() recognizes "brave-free" as a valid configured backend
 - check_web_api_key() includes brave-free in availability check
-- web_extract / web_crawl return search-only errors when brave-free is active
-"""
+- web_extract / web_crawl return search-only errors when brave-free is active"""
 from __future__ import annotations
 
 import json

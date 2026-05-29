@@ -1,4 +1,13 @@
-"""Tests for auth-aware retry in Mattermost WS and Matrix sync loops.
+"""消息网关测试 - ws·认证授权·重试机制
+
+【产品经理理解要点】
+验证消息网关的认证授权重试机制功能
+- 验证的功能: Tests for auth-aware retry in Mattermost WS and Matrix sync loops
+- 核心测试场景: 401 handshake stops reconnect、403 handshake stops reconnect、transient error retries 等共6个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for auth-aware retry in Mattermost WS and Matrix sync loops.
 
 Both Mattermost's _ws_loop and Matrix's _sync_loop previously caught all
 exceptions with a broad ``except Exception`` and retried forever. Permanent

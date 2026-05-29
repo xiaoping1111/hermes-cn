@@ -1,12 +1,22 @@
-"""Tests for _check_compression_model_feasibility() — warns when the
+"""压缩可行性测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中auto corrects threshold when aux context below threshold等16个场景的正确性
+- auto corrects threshold when aux context below threshold的正确性验证
+- rejects aux below minimum context的正确性验证
+- no warning when aux context sufficient的正确性验证
+- 另有13个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for _check_compression_model_feasibility() — warns when the
 auxiliary compression model's context is smaller than the main model's
 compression threshold.
 
 Two-phase design:
   1. __init__  → runs the check, prints via _vprint (CLI), stores warning
   2. run_conversation (first call) → replays stored warning through
-     status_callback (gateway platforms)
-"""
+     status_callback (gateway platforms)"""
 
 from unittest.mock import MagicMock, patch
 

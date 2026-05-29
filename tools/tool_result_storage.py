@@ -1,4 +1,15 @@
-"""Tool result persistence -- preserves large outputs instead of truncating.
+"""工具结果持久化 — 大输出不截断，保存到文件系统
+
+【产品经理理解要点】
+工具执行有时返回大量内容（如搜索结果），全部塞进对话会占满上下文。
+这个模块的三层防御策略：
+  1. 工具自截断：工具内部先限制输出大小
+  2. 大结果持久化：超过阈值的输出保存到临时文件，对话中只放摘要
+  3. 轮次预算：每轮对话中工具输出的总量有上限
+
+─────────────────────────────────────────────────────────────────
+
+Tool result persistence -- preserves large outputs instead of truncating.
 
 Defense against context-window overflow operates at three levels:
 

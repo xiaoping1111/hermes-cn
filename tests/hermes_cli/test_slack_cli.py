@@ -1,4 +1,14 @@
-"""Tests for Slack CLI helpers."""
+"""命令行界面测试 - Slack平台·CLI命令
+
+【产品经理理解要点】
+验证命令行界面的Slack平台CLI命令功能
+- 验证的功能: Tests for Slack CLI helpers
+- 核心测试场景: app home messages are writable、private channel directory scope is included、assistant features remain enabled
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for Slack CLI helpers.
+"""
 
 from hermes_cli.slack_cli import _build_full_manifest
 

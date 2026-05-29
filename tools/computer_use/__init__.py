@@ -1,4 +1,14 @@
-"""Computer use toolset — universal (any-model) macOS desktop control.
+"""电脑操控工具集 — 通用型（支持所有模型）macOS 桌面控制
+
+【产品经理理解要点】
+本模块让AI智能体可以在macOS桌面上"看"和"操作"应用界面，且不抢占用户鼠标和键盘焦点。
+- 核心能力：截图识别界面元素、点击、输入文字、按键、滚动、拖拽等桌面操作
+- 关键特性：后台操控——智能体和用户可以同时在同一台机器上工作，互不干扰
+- 技术路线：通过SOM（Set-of-Mark）技术在截图上标注可交互元素编号，视觉模型按编号点击，无需像素坐标
+- 适用范围：仅限macOS，需要安装cua-driver
+
+─────────────────────────────────────────────────────────────────
+Computer use toolset — universal (any-model) macOS desktop control.
 
 Architecture
 ------------

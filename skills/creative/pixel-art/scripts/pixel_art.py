@@ -1,4 +1,7 @@
-"""Pixel art converter — Floyd-Steinberg dithering with preset or named palette.
+"""【产品经理理解要点】
+像素画转换器——使用Floyd-Steinberg抖动算法将图片转为像素画风格，内置多种经典硬件调色板（NES、GameBoy、PICO-8、C64等）。可调整像素块大小和调色板。
+─────────────────────────────────────────────────────────────────
+Pixel art converter — Floyd-Steinberg dithering with preset or named palette.
 
 Named hardware palettes (NES, GameBoy, PICO-8, C64, etc.) ported from
 pixel-art-studio (MIT) — see ATTRIBUTION.md.

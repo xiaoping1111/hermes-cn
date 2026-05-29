@@ -1,4 +1,14 @@
-"""Tests for API-key provider support (z.ai/GLM, Kimi, MiniMax, AI Gateway)."""
+"""命令行界面测试 - api·key·提供商
+
+【产品经理理解要点】
+验证命令行界面的提供商功能
+- 验证的功能: Tests for API-key provider support (z.ai/GLM, Kimi, MiniMax, AI Gateway)
+- 核心测试场景: provider registered、zai env vars、xai env vars 等共161个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for API-key provider support (z.ai/GLM, Kimi, MiniMax, AI Gateway).
+"""
 
 import os
 

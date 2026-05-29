@@ -1,4 +1,9 @@
-"""Context engine plugin discovery.
+"""【产品经理理解要点】
+上下文引擎插件发现与加载模块——负责扫描并加载所有可用的上下文引擎插件。
+核心逻辑：(1) 扫描plugins/context_engine/下的子目录，发现引擎；(2) 每个引擎是一个ContextEngine的实现；(3) 同一时间只能激活一个引擎，通过config.yaml的context.engine配置选择；(4) 默认引擎是"compressor"（内置上下文压缩器）。
+产品理解：上下文引擎决定对话超出模型上下文窗口时如何压缩/裁剪历史消息，是长对话体验的关键。
+─────────────────────────────────────────────────────────────────
+Context engine plugin discovery.
 
 Scans ``plugins/context_engine/<name>/`` directories for context engine
 plugins.  Each subdirectory must contain ``__init__.py`` with a class

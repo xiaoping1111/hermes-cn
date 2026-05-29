@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""
+"""【产品经理理解要点】
+Excalidraw文件上传工具——将本地.excalidraw文件上传到excalidraw.com，返回可分享的URL。客户端AES-GCM加密，服务器无法看到明文内容，无需账号。
+─────────────────────────────────────────────────────────────────
 Upload an .excalidraw file to excalidraw.com and print a shareable URL.
 
 No account required. The diagram is encrypted client-side (AES-GCM) before

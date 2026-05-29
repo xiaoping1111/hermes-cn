@@ -1,4 +1,14 @@
-"""Tests that /new (and its /reset alias) clears session-scoped overrides."""
+"""消息网关测试 - 会话管理·模型管理·reset
+
+【产品经理理解要点】
+验证消息网关的会话管理模型管理功能
+- 验证的功能: Tests that /new (and its /reset alias) clears session-scoped overrides
+- 核心测试场景: new command clears session model override、new command no override is noop、new command only clears own session
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests that /new (and its /reset alias) clears session-scoped overrides.
+"""
 from datetime import datetime
 from types import SimpleNamespace
 from unittest.mock import AsyncMock, MagicMock

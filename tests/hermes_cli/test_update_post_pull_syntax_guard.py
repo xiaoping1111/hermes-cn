@@ -1,4 +1,13 @@
-"""Tests for the post-pull syntax guard in ``hermes update``.
+"""命令行界面测试 - 更新·post·pull·syntax·guard
+
+【产品经理理解要点】
+验证命令行界面的更新功能
+- 验证的功能: Tests for the post-pull syntax guard in ``hermes update``
+- 核心测试场景: capture head sha returns stripped sha、capture head sha returns none on git failure、capture head sha returns none on empty output 等共8个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the post-pull syntax guard in ``hermes update``.
 
 When a bad commit lands on ``main`` with a syntax error in a critical file
 (e.g. orphan merge-conflict markers in ``hermes_cli/config.py``), the CLI

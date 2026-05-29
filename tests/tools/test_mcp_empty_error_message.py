@@ -1,11 +1,21 @@
-"""Regression tests for MCP error messages when str(exc) is empty.
+"""MCP空错误消息测试
+
+【产品经理理解要点】
+验证工具系统模块中exc str returns str when nonempty等6个场景的正确性
+- exc str returns str when nonempty的正确性验证
+- exc str falls back to repr when str...的正确性验证
+- exc str falls back to repr for whitespace...的正确性验证
+- 另有3个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for MCP error messages when str(exc) is empty.
 
 Issue #19417: ClosedResourceError (and similar exceptions raised without a
 message argument) produced ``MCP call failed: ClosedResourceError: `` with
 nothing after the colon, making debugging impossible.
 
-Fix: ``_exc_str()`` falls back to ``repr(exc)`` when ``str(exc)`` is empty.
-"""
+Fix: ``_exc_str()`` falls back to ``repr(exc)`` when ``str(exc)`` is empty."""
 
 import json
 from types import SimpleNamespace

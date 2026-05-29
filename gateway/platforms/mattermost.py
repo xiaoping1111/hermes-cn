@@ -1,4 +1,14 @@
-"""Mattermost gateway adapter.
+"""Mattermost 平台适配器
+
+【产品经理理解要点】
+让 Agent 通过 Mattermost（开源团队协作平台）与用户交互：
+  - 使用 REST API + WebSocket 实时通信
+  - 无需额外库，使用已有的 aiohttp
+  - 适合自托管的企业环境
+
+─────────────────────────────────────────────────────────────────
+
+Mattermost gateway adapter.
 
 Connects to a self-hosted (or cloud) Mattermost instance via its REST API
 (v4) and WebSocket for real-time events.  No external Mattermost library

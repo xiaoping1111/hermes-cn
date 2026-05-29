@@ -1,4 +1,13 @@
-"""Tests for agent/image_routing.py — the per-turn image input mode decision."""
+"""图片路由测试
+
+【产品经理理解要点】
+验证图片请求到正确提供者的路由逻辑。
+- 图片请求按模型路由到正确提供者
+- 影响多模型图片生成的正确性
+
+──────────────────────────────────────────────────────────────
+Tests for agent/image_routing.py — the per-turn image input mode decision.
+"""
 
 from __future__ import annotations
 

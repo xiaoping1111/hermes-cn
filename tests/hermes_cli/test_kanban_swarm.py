@@ -1,3 +1,17 @@
+"""命令行界面测试 - 看板管理·swarm
+
+【产品经理理解要点】
+验证命令行界面的看板管理功能
+- 验证的功能: 看板Swarm协作管理
+- 核心测试场景: create swarm builds parallel workers verifier and synthesizer、swarm blackboard merges structured updates、swarm verifier and synthesis are dependency gated
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - 看板任务管理·swarm
+
+测试CLI命令处理与配置管理中kanban相关的swarm功能
+"""
+
 import json
 
 from hermes_cli import kanban_db as kb

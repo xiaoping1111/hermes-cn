@@ -1,4 +1,15 @@
-"""End-to-end client tests against the in-process mock LSP server.
+"""LSP客户端端到端测试
+
+【产品经理理解要点】
+使用模拟语言服务器进行真实的端到端通信测试，覆盖完整的LSP生命周期：启动服务器→初始化→打开文件→获取诊断→关闭。这是不依赖真实语言服务器的最接近生产环境的测试。
+- 验证LSP客户端在正常、报错、崩溃、重复推送等场景下的行为
+- 确保客户端不会因为服务器崩溃而挂起，且关闭操作幂等安全
+- 业务影响：如果这些测试失败，AI代理可能在与语言服务器通信时卡死或丢失诊断结果
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+End-to-end client tests against the in-process mock LSP server.
 
 Spins up :file:`_mock_lsp_server.py` as an actual subprocess, drives
 it through real LSP traffic, and asserts diagnostic flow.  This is

@@ -1,4 +1,21 @@
-"""Tool-dispatch helpers — parallelism gating, multimodal envelopes, mutation tracking.
+"""工具调度辅助 — 并行执行判断、多模态结果封装、文件变更追踪
+
+【产品经理理解要点】
+这个模块为工具调度提供各种辅助判断，核心解决三个问题：
+
+  1. 能不能同时执行？当 AI 一次要调用多个工具时，需要判断哪些可以并行：
+     - 只读工具（搜索、读文件）可以同时跑
+     - 写同一文件的工具必须排队
+     - 需要用户交互的工具不能并行（如"clarify"确认工具）
+
+  2. 结果怎么包装？某些工具返回的是图片、文本等混合内容（如截图工具），
+     需要统一封装格式，既让 AI 能理解，又不浪费 token
+
+  3. 改了哪些文件？追踪每次工具调用修改了哪些文件，用于安全审计和回滚
+
+─────────────────────────────────────────────────────────────────
+
+Tool-dispatch helpers — parallelism gating, multimodal envelopes, mutation tracking.
 
 Pure module-level utilities extracted from ``run_agent.py``:
 

@@ -1,10 +1,20 @@
-"""Tests for AIAgent._anthropic_prompt_cache_policy().
+"""Anthropic提示缓存策略测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中claude on native anthropic caches with native layout等24个场景的正确性
+- claude on native anthropic caches with native layout的正确性验证
+- api anthropic host detected even when provider label...的正确性验证
+- claude on openrouter caches with envelope layout的正确性验证
+- 另有21个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for AIAgent._anthropic_prompt_cache_policy().
 
 The policy returns ``(should_cache, use_native_layout)`` for five endpoint
 classes. The test matrix pins the decision for each so a regression (e.g.
 silently dropping caching on third-party Anthropic gateways, or applying
-the native layout on OpenRouter) surfaces loudly.
-"""
+the native layout on OpenRouter) surfaces loudly."""
 
 from __future__ import annotations
 

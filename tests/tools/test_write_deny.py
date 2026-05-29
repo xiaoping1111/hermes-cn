@@ -1,4 +1,15 @@
-"""Tests for _is_write_denied() — verifies deny list blocks sensitive paths on all platforms."""
+"""写入拒绝测试
+
+【产品经理理解要点】
+验证工具系统模块中etc shadow等20个场景的正确性
+- etc shadow的正确性验证
+- etc passwd的正确性验证
+- etc sudoers的正确性验证
+- 另有17个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for _is_write_denied() — verifies deny list blocks sensitive paths on all platforms."""
 
 import os
 import pytest

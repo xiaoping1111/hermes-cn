@@ -1,4 +1,15 @@
-"""Tests for skills/media/youtube-content/scripts/fetch_transcript.py (issue #22243)."""
+"""转录内容获取测试
+
+【产品经理理解要点】
+验证技能系统模块中standard watch url等13个场景的正确性
+- standard watch url的正确性验证
+- short url的正确性验证
+- bare video id的正确性验证
+- 另有10个测试场景覆盖
+- 影响技能系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for skills/media/youtube-content/scripts/fetch_transcript.py (issue #22243)."""
 
 import sys
 from pathlib import Path

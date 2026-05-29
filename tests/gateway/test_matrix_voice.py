@@ -1,4 +1,13 @@
-"""Tests for Matrix voice message support (MSC3245).
+"""消息网关测试 - Matrix平台·语音消息
+
+【产品经理理解要点】
+验证消息网关的Matrix平台语音消息功能
+- 验证的功能: Tests for Matrix voice message support (MSC3245)
+- 核心测试场景: voice message has type voice、voice message has local path、audio without msc3245 stays audio type 等共7个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Matrix voice message support (MSC3245).
 
 Updated for the mautrix-python SDK (no more matrix-nio / nio imports).
 """

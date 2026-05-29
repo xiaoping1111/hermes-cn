@@ -1,5 +1,18 @@
 #!/usr/bin/env python3
-"""
+"""浏览器工具 — 自动化操作网页
+
+【产品经理理解要点】
+让 AI 能像人一样操作浏览器：点击、输入、滚动、截图、导航等。
+支持三种运行模式：
+  - 本地模式(默认)：在本机 Chrome 上操作，零成本
+  - Browser Use 云端：Nous 订阅用户的云端浏览器
+  - Browserbase 云端：直接凭证的云端浏览器
+
+使用无障碍树（accessibility tree）而非视觉截图像素，
+天然适合 AI 交互，不需要"看图"能力。
+
+─────────────────────────────────────────────────────────────────
+
 Browser Tool Module
 
 This module provides browser automation tools using agent-browser CLI.  It

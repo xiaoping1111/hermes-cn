@@ -1,5 +1,14 @@
-"""Tavily web search + content extraction + crawl — plugin form.
+"""Tavily搜索+内容提取+网站抓取供应商
 
+【产品经理理解要点】
+Tavily是功能最全面的网络工具供应商之一，同时支持搜索、URL内容提取和网站抓取三大能力。
+- 搜索：根据关键词返回相关网页标题、URL和摘要
+- 内容提取：给定URL列表，提取页面正文内容
+- 网站抓取：从种子URL出发，自动发现并抓取网站多个页面
+- 认证：需要TAVILY_API_KEY，在https://app.tavily.com获取
+- 注意：/crawl接口需要Bearer头认证，/search和/extract仅需请求体中的api_key
+
+─────────────────────────────────────────────────────────────────
 Subclasses :class:`agent.web_search_provider.WebSearchProvider`. Three
 capabilities advertised:
 

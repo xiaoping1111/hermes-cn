@@ -1,9 +1,19 @@
-"""Tests for SessionDB.get_anchored_view — anchored window + session bookends.
+"""锚定视图测试
+
+【产品经理理解要点】
+验证Hermes状态管理模块中returns window with bookend start and end等11个场景的正确性
+- returns window with bookend start and end的正确性验证
+- window anchor marked correctly的正确性验证
+- bookend start empty when window covers session head的正确性验证
+- 另有8个测试场景覆盖
+- 影响Hermes状态管理的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for SessionDB.get_anchored_view — anchored window + session bookends.
 
 Used by the discovery shape of session_search: an FTS5 match becomes the
 anchor, the call returns goal (bookend_start) + match (window) + resolution
-(bookend_end) in a single round trip, no LLM.
-"""
+(bookend_end) in a single round trip, no LLM."""
 import pytest
 
 from hermes_state import SessionDB

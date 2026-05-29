@@ -1,4 +1,13 @@
-"""Environment variable passthrough registry.
+"""环境变量透传注册表
+
+【产品经理理解要点】
+让 SDK 沙箱中运行的工具能访问技能声明的必要环境变量（如 API Key），同时防止恶意技能窃取系统凭据。
+- 核心职责：维护一个会话级的环境变量白名单，沙箱执行前检查此名单决定哪些变量可透传
+- 关键业务概念：安全边界——Hermes 自身的 API Key（如 ANTHROPIC_TOKEN）永远不可被技能声明透传；白名单由技能声明和用户配置共同填充
+- 在系统中的位置：代码执行和终端沙箱的守门人，在环境变量清洗之前拦截
+
+─────────────────────────────────────────────────────────────────
+Environment variable passthrough registry.
 
 Skills that declare ``required_environment_variables`` in their frontmatter
 need those vars available in sandboxed execution environments (execute_code,

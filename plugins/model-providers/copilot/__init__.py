@@ -1,4 +1,7 @@
-"""Copilot / GitHub Models provider profile.
+"""【产品经理理解要点】
+GitHub Copilot / GitHub Models提供商——接入GitHub的模型服务。支持多种模型：GPT-5+/Codex走Codex接口，Claude走Anthropic接口，其他走ChatCompletion接口。带有编辑器属性头和推理配置支持。
+─────────────────────────────────────────────────────────────────
+Copilot / GitHub Models provider profile.
 
 Copilot uses per-model api_mode routing:
   - GPT-5+ / Codex models → codex_responses

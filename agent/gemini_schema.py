@@ -1,4 +1,15 @@
-"""Helpers for translating OpenAI-style tool schemas to Gemini's schema subset."""
+"""Gemini 工具格式转换 — 将 OpenAI 工具定义转换为 Gemini 格式
+
+【产品经理理解要点】
+Google Gemini 的工具定义格式是 JSON Schema 的一个子集，比 OpenAI 的更严格。
+这个模块负责在发送请求给 Gemini 之前，剥落 Gemini 不支持的字段，
+防止因格式不兼容导致 API 报错。
+
+就像"信件格式转换"——把全格式信封转为简格式信封，确保投递成功。
+
+─────────────────────────────────────────────────────────────────
+
+Helpers for translating OpenAI-style tool schemas to Gemini's schema subset."""
 
 from __future__ import annotations
 

@@ -1,4 +1,15 @@
-"""Tests for approvals.cron_mode — configurable approval behavior for cron jobs."""
+"""定时任务审批流mode测试
+
+【产品经理理解要点】
+验证工具系统模块中default is deny等24个场景的正确性
+- default is deny的正确性验证
+- explicit deny的正确性验证
+- explicit approve的正确性验证
+- 另有21个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for approvals.cron_mode — configurable approval behavior for cron jobs."""
 
 import os
 import pytest

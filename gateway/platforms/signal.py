@@ -1,4 +1,16 @@
-"""Signal messenger platform adapter.
+"""Signal 平台适配器
+
+【产品经理理解要点】
+让 Agent 通过 Signal（注重隐私的加密通讯应用）与用户交互：
+  - 通过 signal-cli 守护进程的 HTTP 接口通信
+  - 接收消息用 SSE（服务端推送事件）
+  - 发送消息用 JSON-RPC 2.0
+
+需要预先安装并运行 signal-cli 守护进程。
+
+─────────────────────────────────────────────────────────────────
+
+Signal messenger platform adapter.
 
 Connects to a signal-cli daemon running in HTTP mode.
 Inbound messages arrive via SSE (Server-Sent Events) streaming.

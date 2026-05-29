@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""
+"""HuggingFace数据集采样与压缩
+
+【产品经理理解要点】
+从多个HuggingFace数据集下载轨迹数据，随机采样后压缩到目标Token预算内。
+- 核心职责：批量下载、采样、压缩训练轨迹数据
+- 使用场景：准备模型微调的训练数据
+
+─────────────────────────────────────────────────────────────────
 Sample and Compress HuggingFace Datasets
 
 Downloads trajectories from multiple HuggingFace datasets, randomly samples them,

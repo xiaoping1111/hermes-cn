@@ -1,4 +1,15 @@
-"""Tests for tools/clarify_tool.py - Interactive clarifying questions."""
+"""澄清网关tool测试
+
+【产品经理理解要点】
+验证工具系统模块中simple question with callback等20个场景的正确性
+- simple question with callback的正确性验证
+- question with choices的正确性验证
+- empty question returns error的正确性验证
+- 另有17个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/clarify_tool.py - Interactive clarifying questions."""
 
 import json
 from typing import List, Optional

@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""
+"""股票市场数据查询工具
+
+【产品经理理解要点】
+查询股票行情、公司基本面和历史数据，纯标准库实现无需额外依赖。
+- 核心职责：获取实时报价、公司信息、历史K线等股票数据
+
+─────────────────────────────────────────────────────────────────
 stocks_client.py - Stock market data CLI tool for the Hermes Agent project.
 Zero external dependencies - Python stdlib only.
 """

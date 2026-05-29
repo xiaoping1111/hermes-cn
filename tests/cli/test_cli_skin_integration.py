@@ -1,3 +1,11 @@
+"""CLI皮肤集成测试
+
+【产品经理理解要点】
+验证CLI皮肤主题在界面各模块的集成效果。
+- 皮肤主题的完整应用
+- 影响界面的视觉可定制性
+"""
+
 from types import SimpleNamespace
 from unittest.mock import MagicMock, patch
 

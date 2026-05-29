@@ -1,4 +1,14 @@
-"""Tests for MCP tools interactive configuration in hermes_cli.tools_config."""
+"""命令行界面测试 - MCP工具·工具系统·配置管理
+
+【产品经理理解要点】
+验证命令行界面的MCP工具工具系统配置管理功能
+- 验证的功能: Tests for MCP tools interactive configuration in hermes_cli.tools_config
+- 核心测试场景: no mcp servers prints info、all servers disabled prints info、probe failure shows warning 等共14个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for MCP tools interactive configuration in hermes_cli.tools_config.
+"""
 
 from types import SimpleNamespace
 from unittest.mock import MagicMock, patch

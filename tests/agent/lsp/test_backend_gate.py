@@ -1,4 +1,15 @@
-"""Integration test: LSP layer is skipped on non-local backends.
+"""非本地后端LSP层跳过测试
+
+【产品经理理解要点】
+验证当AI代理运行在Docker/Modal/SSH等远程沙箱环境时，LSP语言服务器会被正确跳过——因为宿主机上的语言服务器无法看到沙箱内的文件，必须回退到内置的语法检查。
+- 验证本地环境使用LSP、远程环境跳过LSP的逻辑正确性
+- 确保远程沙箱场景下代码诊断不会因LSP不可用而报错
+- 业务影响：如果这些测试失败，远程环境用户会看到错误的诊断信息或请求超时
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Integration test: LSP layer is skipped on non-local backends.
 
 The host-side LSP server can't see files inside a Docker/Modal/SSH
 sandbox.  When the agent's terminal env isn't ``LocalEnvironment``,

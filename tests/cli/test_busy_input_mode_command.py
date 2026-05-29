@@ -1,4 +1,13 @@
-"""Tests for the /busy CLI command and busy-input-mode config handling."""
+"""忙碌输入模式命令测试
+
+【产品经理理解要点】
+验证AI处理请求时用户输入模式的行为和配置。
+- 处理中输入的排队或拒绝逻辑
+- 影响并发输入场景的用户体验
+
+──────────────────────────────────────────────────────────────
+Tests for the /busy CLI command and busy-input-mode config handling.
+"""
 
 import unittest
 from types import SimpleNamespace

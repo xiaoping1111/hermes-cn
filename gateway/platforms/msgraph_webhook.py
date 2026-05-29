@@ -1,4 +1,13 @@
-"""Microsoft Graph webhook adapter for change-notification ingress."""
+"""Microsoft Graph Webhook 适配器 — 接收微软 365 变更通知
+
+【产品经理理解要点】
+让 Agent 能接收 Microsoft 365 的变更通知（如新邮件、日历事件等），
+通过 Microsoft Graph API 的 Webhook 机制推送。
+
+─────────────────────────────────────────────────────────────────
+
+Microsoft Graph webhook adapter for change-notification ingress.
+"""
 
 from __future__ import annotations
 

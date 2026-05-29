@@ -1,4 +1,15 @@
-"""Async/sync bridging helpers.
+"""异步/同步桥接工具 — 安全地将协程调度到事件循环
+
+【产品经理理解要点】
+Agent 内部同时使用同步代码（工具执行）和异步代码（网络请求）。
+这个模块提供安全的"跨世界调度"功能，确保协程不会因为事件循环关闭
+而被遗忘，造成资源泄漏。
+
+简单理解：这是"异步世界"和"同步世界"之间的安全通道。
+
+─────────────────────────────────────────────────────────────────
+
+Async/sync bridging helpers.
 
 The codebase has ~30 sites that schedule a coroutine onto an event loop from a
 worker thread via :func:`asyncio.run_coroutine_threadsafe`.  That function can

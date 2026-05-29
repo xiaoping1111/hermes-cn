@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""
+"""域名情报收集工具
+
+【产品经理理解要点】
+通过纯标准库收集域名的OSINT信息：子域名、SSL证书、WHOIS、DNS记录等。
+- 核心职责：一站式域名侦察，输出结构化JSON
+- 支持命令：subdomains、ssl、whois、dns、available、bulk
+
+─────────────────────────────────────────────────────────────────
 Domain Intelligence — Passive OSINT via Python stdlib.
 
 Usage:

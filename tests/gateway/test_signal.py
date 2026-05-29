@@ -1,4 +1,14 @@
-"""Tests for Signal messenger platform adapter."""
+"""消息网关测试 - Signal平台
+
+【产品经理理解要点】
+验证消息网关的Signal平台功能
+- 验证的功能: Tests for Signal messenger platform adapter
+- 核心测试场景: apply env overrides signal、signal not loaded without both vars、init parses config 等共109个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Signal messenger platform adapter.
+"""
 import asyncio
 import base64
 import json

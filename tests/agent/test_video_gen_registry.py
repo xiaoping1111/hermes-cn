@@ -1,4 +1,13 @@
-"""Tests for agent/video_gen_registry.py — provider registration & active lookup."""
+"""视频生成注册表测试
+
+【产品经理理解要点】
+验证视频生成工具的提供者注册和调度。
+- 视频生成提供者的注册和发现
+- 影响AI视频生成功能的可用性
+
+──────────────────────────────────────────────────────────────
+Tests for agent/video_gen_registry.py — provider registration & active lookup.
+"""
 
 from __future__ import annotations
 

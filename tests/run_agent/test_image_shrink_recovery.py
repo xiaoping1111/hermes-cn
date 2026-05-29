@@ -1,4 +1,15 @@
-"""Tests for reactive image-shrink recovery.
+"""图像压缩恢复测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中anthropic 400 image exceeds message等13个场景的正确性
+- anthropic 400 image exceeds message的正确性验证
+- generic image too large no status的正确性验证
+- image too large not confused with context overflow的正确性验证
+- 另有10个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for reactive image-shrink recovery.
 
 Covers the full chain for Anthropic's 5 MB per-image ceiling (and any
 future provider that returns an image-too-large error):
@@ -12,8 +23,7 @@ future provider that returns an image-too-large error):
 The end-to-end wiring in the retry loop is not unit-tested here — it's
 covered by the live E2E in the PR description. These tests lock in the
 two pieces that matter independently: the classifier signal and the
-payload rewriter.
-"""
+payload rewriter."""
 
 from __future__ import annotations
 

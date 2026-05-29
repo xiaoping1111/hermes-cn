@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""
+"""视频制作看板流水线初始化脚本
+
+【产品经理理解要点】
+从结构化的计划JSON文件自动创建视频制作看板，配置团队角色和任务依赖。
+- 核心职责：解读计划文件→创建Hermes配置文件→初始化看板任务
+- 使用场景：新视频项目启动时，一键创建完整的制作流水线
+
+─────────────────────────────────────────────────────────────────
 Bootstrap a video production kanban from a structured plan JSON.
 
 Reads a plan.json describing the team + brief, expands templates from

@@ -1,4 +1,13 @@
-"""Per-platform display/verbosity configuration resolver.
+"""平台显示配置 — 每个通讯平台可以有不同的显示偏好
+
+【产品经理理解要点】
+不同平台的显示需求不同（如 Telegram 适合简洁回复，Discord 可以更详细）。
+这个模块提供配置解析，优先级为：
+  1. 平台特有配置 > 2. 全局配置 > 3. 内置默认值
+
+─────────────────────────────────────────────────────────────────
+
+Per-platform display/verbosity configuration resolver.
 
 Provides ``resolve_display_setting()`` — the single entry-point for reading
 display settings with platform-specific overrides and sensible defaults.

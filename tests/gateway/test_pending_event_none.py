@@ -1,4 +1,13 @@
-"""Tests for pending follow-up extraction in recursive _run_agent calls.
+"""消息网关测试 - pending·event·none
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for pending follow-up extraction in recursive _run_agent calls
+- 核心测试场景: none pending event returns none channel prompt、pending event with channel prompt passes through、pending event without channel prompt returns none 等共6个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for pending follow-up extraction in recursive _run_agent calls.
 
 When pending_event is None (Path B: pending comes from interrupt_message),
 accessing pending_event.channel_prompt previously raised AttributeError.

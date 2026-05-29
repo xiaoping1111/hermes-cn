@@ -1,4 +1,20 @@
-"""Pure tool-call loop guardrail primitives.
+"""工具调用护栏 — 防止 AI 重复操作和无限循环
+
+【产品经理理解要点】
+这个模块是 Agent 的"安全护栏"，防止 AI 在使用工具时失控：
+
+  - 重复检测：如果 AI 连续多次调用同一个工具做相同的事，自动提醒它换思路
+  - 循环检测：如果 AI 反复在几个工具间来回切换而没有进展，自动中断
+  - 文件变更计数：追踪每轮对话中修改了多少文件，防止 AI 过度修改
+  - 无害与有害分类：把工具分为"只读"（如搜索、读文件）和"有副作用"
+    （如写文件、执行命令），对有副作用的工具更严格监控
+
+为什么需要护栏？因为 AI 有时会陷入"死循环"——比如反复查同一个文件、
+反复尝试同一个失败的命令。护栏让 Agent 能自觉停下来换个方向。
+
+─────────────────────────────────────────────────────────────────
+
+Pure tool-call loop guardrail primitives.
 
 The controller in this module is intentionally side-effect free: it tracks
 per-turn tool-call observations and returns decisions. Runtime code owns whether

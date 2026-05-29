@@ -1,4 +1,13 @@
-"""Regression tests for ACP adapter detection under Azure Foundry Entra ID.
+"""ACP Entra ID提供商检测测试
+
+【产品经理理解要点】
+验证Azure Foundry的Entra ID认证（可调用API密钥）能被ACP适配器正确识别。
+- callable类型api_key被视为有效凭证
+- 不会被错误降级为openrouter
+- 影响Azure企业用户的ACP连接
+
+──────────────────────────────────────────────────────────────
+Regression tests for ACP adapter detection under Azure Foundry Entra ID.
 
 The ACP adapter's ``detect_provider`` previously gated on
 ``isinstance(api_key, str)`` and returned ``None`` for any runtime that

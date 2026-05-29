@@ -1,4 +1,31 @@
-"""Curator — background skill maintenance orchestrator.
+"""技能策展人 — 后台自动整理和维护技能库
+
+【产品经理理解要点】
+随着 Agent 的使用，技能库会不断增长。就像图书馆需要管理员定期整理一样，
+这个模块负责自动维护技能库的整洁和有序：
+
+  - 生命周期管理：自动将不常用的技能从"活跃"状态转为"归档"状态
+    活跃 → 不活跃（30天未用）→ 归档（90天未用）
+  - 定期审查：当 Agent 空闲超过2小时且距上次审查已过7天时自动触发
+  - 安全约束：只处理 Agent 自己创建的技能，不碰系统预装技能
+    不会自动删除，只会归档（归档后可恢复）
+  - 重要技能保护：被"置顶"的技能跳过所有自动状态转换
+
+技能策展人 vs 后台回顾：
+  - 后台回顾（background_review）：每轮对话后触发，决定"该记住什么"
+  - 技能策展人（curator）：定期维护，决定"哪些技能该归档/整理"
+  两者配合，确保 Agent 越用越聪明，同时不积累冗余信息
+
+状态流转：
+  ┌────────┐  30天未用  ┌────────┐  90天未用  ┌────────┐
+  │  活跃   │ ────────→ │ 不活跃  │ ────────→ │  归档   │
+  │(active) │           │(stale)  │           │(archived)│
+  └────────┘           └────────┘           └────────┘
+     ↑ 置顶技能永不自动转换，但可手动归档
+
+─────────────────────────────────────────────────────────────────
+
+Curator — background skill maintenance orchestrator.
 
 The curator is an auxiliary-model task that periodically reviews agent-created
 skills and maintains the collection. It runs inactivity-triggered (no cron

@@ -1,4 +1,16 @@
-"""
+"""网关运行器 — 启动所有通讯平台适配器，管理网关生命周期
+
+【产品经理理解要点】
+这是网关的主入口，负责启动所有已配置的通讯平台适配器（Telegram、Discord 等）。
+主要功能：
+  - 读取网关配置，启动每个平台的适配器
+  - 管理网关的整体生命周期（启动、运行、关闭）
+  - 处理各平台的消息收发和事件分发
+
+启动方式：python -m gateway.run 或 hermes --gateway
+
+─────────────────────────────────────────────────────────────────
+
 Gateway runner - entry point for messaging platform integrations.
 
 This module provides:

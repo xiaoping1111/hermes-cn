@@ -1,4 +1,14 @@
-"""Static dashboard tests for browser-safe @nous-research/ui imports."""
+"""命令行界面测试 - dashboard·browser·safe·导入
+
+【产品经理理解要点】
+验证命令行界面的导入功能
+- 验证的功能: Static dashboard tests for browser-safe @nous-research/ui imports
+- 核心测试场景: dashboard does not import nous ui root barrel
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Static dashboard tests for browser-safe @nous-research/ui imports.
+"""
 from pathlib import Path
 
 

@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Build the Hermes Model Catalog — a centralized JSON manifest of curated models.
+"""模型目录构建脚本
+
+【产品经理理解要点】
+将Hermes内置的模型列表导出为JSON清单，部署到文档站点供CLI运行时拉取。
+- 核心职责：从代码中的硬编码列表生成model-catalog.json
+- 业务价值：更新模型列表不再需要发版，只需更新网站静态文件
+- 降级策略：运行时拉取失败时回退到代码中的硬编码列表
+
+─────────────────────────────────────────────────────────────────
+Build the Hermes Model Catalog — a centralized JSON manifest of curated models.
 
 This script reads the in-repo hardcoded curated lists (``OPENROUTER_MODELS``,
 ``_PROVIDER_MODELS["nous"]``) and writes them to a JSON manifest that the

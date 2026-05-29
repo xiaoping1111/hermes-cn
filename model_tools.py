@@ -1,23 +1,28 @@
 #!/usr/bin/env python3
 """
-Model Tools Module
+模型工具模块 (Model Tools)
 
-Thin orchestration layer over the tool registry. Each tool file in tools/
-self-registers its schema, handler, and metadata via tools.registry.register().
-This module triggers discovery (by importing all tool modules), then provides
-the public API that run_agent.py, cli.py, batch_runner.py, and the RL
-environments consume.
+【产品经理理解要点】
+这是 AI 代理的"工具调度中心"——AI 模型决定调用什么工具，都是由这个模块来分派执行的。
+核心职责：
+  - 工具发现：导入所有工具模块，让每个工具自动注册到系统
+  - 工具定义生成：根据启用的工具集，生成 AI 模型能理解的工具描述
+  - 函数调用分发：AI 模型发出函数调用请求后，路由到具体的工具处理器
+  - 参数类型修正：AI 模型有时会把数字写成字符串（"42"而非42），这里自动修正
+  - 参数校验和安全：工具执行前的拦截检查和后处理
 
-Public API (signatures preserved from the original 2,400-line version):
-    get_tool_definitions(enabled_toolsets, disabled_toolsets, quiet_mode) -> list
-    handle_function_call(function_name, function_args, task_id, user_task) -> str
-    TOOL_TO_TOOLSET_MAP: dict          (for batch_runner.py)
-    TOOLSET_REQUIREMENTS: dict         (for cli.py, doctor.py)
-    get_all_tool_names() -> list
-    get_toolset_for_tool(name) -> str
-    get_available_toolsets() -> dict
-    check_toolset_requirements() -> dict
-    check_tool_availability(quiet) -> tuple
+本模块之上是 run_agent.py（代理循环），之下是 tools/ 目录的各个具体工具。
+─────────────────────────────────────────────────────────────────
+
+这是工具注册表之上的轻量级编排层。
+`tools/` 目录下的每个工具文件都会通过 `tools.registry.register()` 自行注册其 Schema、处理器和元数据。
+本模块负责触发工具发现（通过导入所有工具模块），并提供供 `run_agent.py`、`cli.py` 等模块调用的公共 API。
+
+核心公共 API:
+    get_tool_definitions: 获取启用的工具定义列表，供模型调用。
+    handle_function_call: 处理模型生成的函数调用，分发到具体的工具处理器。
+    get_all_tool_names: 获取所有已注册工具的名称。
+    get_toolset_for_tool: 查询某个工具属于哪个工具集。
 """
 
 import os

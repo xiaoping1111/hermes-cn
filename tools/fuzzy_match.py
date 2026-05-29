@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 """
+模糊匹配模块
+
+【产品经理理解要点】
+解决 LLM 生成代码时常见的格式偏差问题（缩进不一致、多余空格、转义差异等），让文件编辑操作更稳定可靠。
+- 核心职责：8 级模糊匹配策略链，从精确匹配逐步放宽到语义匹配，确保 LLM 输出的"旧代码"能找到并替换
+- 关键业务概念：LLM 友好——LLM 生成的 old_string 经常有微小格式差异，精确匹配会频繁失败；多策略链保证成功率
+- 在系统中的位置：file_operations/core edit 操作的核心依赖，直接影响代码编辑的可靠性
+
+─────────────────────────────────────────────────────────────────
 Fuzzy Matching Module for File Operations
 
 Implements a multi-strategy matching chain to robustly find and replace text,

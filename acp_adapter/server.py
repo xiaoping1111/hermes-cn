@@ -1,4 +1,16 @@
-"""ACP agent server — exposes Hermes Agent via the Agent Client Protocol."""
+"""ACP代理服务器
+
+【产品经理理解要点】
+ACP服务的核心实现，定义了编辑器与Hermes之间的完整交互协议。
+- 核心职责：实现ACP协议的所有生命周期方法（初始化、认证、会话管理、消息处理）
+- 会话管理：创建/加载/恢复/分叉/列表会话，每个会话对应一个独立的对话
+- 消息处理：接收用户输入，调用Hermes Agent处理，流式返回结果
+- 斜杠命令：支持/help、/model、/tools等交互命令
+- 资源处理：将编辑器传入的文件、图片等附件转换为Hermes可理解的格式
+- 模式切换：Default（每次确认编辑）、Accept Edits（自动通过工作区编辑）、Don't Ask（会话内全部自动）
+
+─────────────────────────────────────────────────────────────────
+ACP agent server — exposes Hermes Agent via the Agent Client Protocol."""
 
 from __future__ import annotations
 

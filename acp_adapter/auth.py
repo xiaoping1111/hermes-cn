@@ -1,4 +1,13 @@
-"""ACP auth helpers — detect and advertise Hermes authentication methods."""
+"""ACP认证模块
+
+【产品经理理解要点】
+处理ACP连接时的身份认证，决定了用户能否在使用编辑器时合法调用Hermes。
+- 核心职责：检测当前Hermes的认证凭据（API Key），并向编辑器声明可用的认证方式
+- 关键逻辑：如果用户还没配置API Key，会引导用户走终端设置流程
+- 两种认证方式：运行时凭据（已配置的API Key）和终端设置（首次使用引导）
+
+─────────────────────────────────────────────────────────────────
+ACP auth helpers — detect and advertise Hermes authentication methods."""
 
 from __future__ import annotations
 

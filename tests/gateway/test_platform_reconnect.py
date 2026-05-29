@@ -1,4 +1,14 @@
-"""Tests for the gateway platform reconnection watcher."""
+"""消息网关测试 - platform·平台连接
+
+【产品经理理解要点】
+验证消息网关的平台连接功能
+- 验证的功能: Tests for the gateway platform reconnection watcher
+- 核心测试场景: start continues after platform connect timeout、connect adapter timeout raises retryable exception、failed platform queued on connect failure 等共29个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the gateway platform reconnection watcher.
+"""
 
 import asyncio
 import time

@@ -1,4 +1,15 @@
-"""Regression tests for run_conversation's prologue handling of multimodal content.
+"""Agent多模态Prologue测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中plain string passthrough等15个场景的正确性
+- plain string passthrough的正确性验证
+- none returns empty string的正确性验证
+- text only list的正确性验证
+- 另有12个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for run_conversation's prologue handling of multimodal content.
 
 PR #5621 and earlier multimodal PRs hit an ``AttributeError`` in
 ``run_agent.run_conversation`` because the prologue unconditionally called
@@ -10,8 +21,7 @@ on what was now a list.  These tests cover the two fixes:
      Responses API ``input_text`` / ``input_image`` shape.
 
 They do NOT boot the full AIAgent — the prologue-fix guarantees are pure
-function contracts at module scope.
-"""
+function contracts at module scope."""
 
 from run_agent import _summarize_user_message_for_log
 from agent.codex_responses_adapter import _chat_content_to_responses_parts

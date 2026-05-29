@@ -1,4 +1,15 @@
-"""Tests for agent/anthropic_adapter.py — Anthropic Messages API adapter."""
+"""Anthropic API适配器测试
+
+【产品经理理解要点】
+验证Anthropic Messages API适配器，包括客户端构建、消息格式转换和特殊参数处理。
+- Anthropic客户端的正确构建（直连/Azure/Bedrock）
+- OpenAI消息到Anthropic格式的转换
+- 缓存控制和思考模式的参数注入
+- 影响Claude模型调用的正确性
+
+──────────────────────────────────────────────────────────────
+Tests for agent/anthropic_adapter.py — Anthropic Messages API adapter.
+"""
 
 import json
 import time

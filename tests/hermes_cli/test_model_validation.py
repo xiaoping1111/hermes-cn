@@ -1,4 +1,14 @@
-"""Tests for provider-aware `/model` validation in hermes_cli.models."""
+"""命令行界面测试 - 模型管理·validation
+
+【产品经理理解要点】
+验证命令行界面的模型管理功能
+- 验证的功能: Tests for provider-aware `/model` validation in hermes_cli.models
+- 核心测试场景: plain model keeps current provider、provider colon model switches provider、provider alias resolved 等共81个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for provider-aware `/model` validation in hermes_cli.models.
+"""
 
 from unittest.mock import MagicMock, patch
 

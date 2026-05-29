@@ -1,10 +1,20 @@
-"""Tests for the native-vision fast path inside vision_analyze.
+"""视觉原生快速路径测试
+
+【产品经理理解要点】
+验证工具系统模块中anthropic native yes等18个场景的正确性
+- anthropic native yes的正确性验证
+- openrouter yes的正确性验证
+- nous yes的正确性验证
+- 另有15个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the native-vision fast path inside vision_analyze.
 
 When the active main model supports native vision AND the provider supports
 image content inside tool-result messages, ``_handle_vision_analyze`` skips
 the auxiliary LLM and returns a multimodal envelope so the main model sees
-the pixels directly on its next turn.
-"""
+the pixels directly on its next turn."""
 
 from __future__ import annotations
 

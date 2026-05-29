@@ -1,4 +1,15 @@
-"""Tests for tools/skill_manager_tool.py — skill creation, editing, and deletion."""
+"""技能管理器tool测试
+
+【产品经理理解要点】
+验证工具系统模块中valid names等86个场景的正确性
+- valid names的正确性验证
+- empty name的正确性验证
+- too long的正确性验证
+- 另有83个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/skill_manager_tool.py — skill creation, editing, and deletion."""
 
 import json
 from contextlib import contextmanager

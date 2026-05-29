@@ -1,4 +1,12 @@
-"""Atypical user scenarios and configurations.
+"""异常场景测试
+
+【产品经理理解要点】
+验证压力测试模块中相关功能的正确性
+- 模块功能单元测试覆盖
+- 影响压力测试的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Atypical user scenarios and configurations.
 
 Exercises the kernel against user inputs and environments that the
 normal tests assume away:
@@ -15,8 +23,7 @@ normal tests assume away:
 
 Each scenario is self-contained. Failures are collected and printed
 together at the end. Script exits 0 iff every scenario passed or was
-cleanly SKIPPED (with reason).
-"""
+cleanly SKIPPED (with reason)."""
 
 import json
 import multiprocessing as mp

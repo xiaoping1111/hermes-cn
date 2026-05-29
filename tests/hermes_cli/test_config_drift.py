@@ -1,4 +1,13 @@
-"""Regression tests for removed dead config keys.
+"""命令行界面测试 - 配置管理·drift
+
+【产品经理理解要点】
+验证命令行界面的配置管理功能
+- 验证的功能: Regression tests for removed dead config keys
+- 核心测试场景: delegation default toolsets removed from cli config
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression tests for removed dead config keys.
 
 This file guards against accidental re-introduction of config keys that were
 documented or declared at some point but never actually wired up to read code.

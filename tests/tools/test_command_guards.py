@@ -1,4 +1,15 @@
-"""Tests for check_all_command_guards() — combined tirith + dangerous command guard."""
+"""命令守卫测试
+
+【产品经理理解要点】
+验证工具系统模块中docker skips both等19个场景的正确性
+- docker skips both的正确性验证
+- singularity skips both的正确性验证
+- modal skips both的正确性验证
+- 另有16个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for check_all_command_guards() — combined tirith + dangerous command guard."""
 
 import os
 from unittest.mock import patch, MagicMock

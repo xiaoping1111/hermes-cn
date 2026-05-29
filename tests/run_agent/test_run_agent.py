@@ -1,9 +1,19 @@
-"""Unit tests for run_agent.py (AIAgent).
+"""Agent运行核心测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中is destructive command treats cp as mutating等336个场景的正确性
+- is destructive command treats cp as mutating的正确性验证
+- is destructive command treats install as mutating的正确性验证
+- aiagent reuses existing errors log handler的正确性验证
+- 另有333个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Unit tests for run_agent.py (AIAgent).
 
 Tests cover pure functions, state/structure methods, and conversation loop
 pieces. The OpenAI client and tool loading are mocked so no network calls
-are made.
-"""
+are made."""
 
 import io
 import json

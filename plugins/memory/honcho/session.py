@@ -1,4 +1,8 @@
-"""Honcho-based session management for conversation history."""
+"""Honcho会话管理 — 对话历史追踪
+
+【产品经理理解要点】
+基于Honcho的对话历史会话管理，负责跟踪和维护与Honcho平台的会话状态。
+"""
 
 from __future__ import annotations
 

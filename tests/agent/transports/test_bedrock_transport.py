@@ -1,4 +1,16 @@
-"""Tests for the BedrockTransport."""
+"""AWS Bedrock传输层测试
+
+【产品经理理解要点】
+验证AWS Bedrock Converse API的传输适配层，负责将Hermes的统一请求格式转换为Bedrock专属格式，以及将Bedrock的响应标准化为统一结构。
+- 验证构建请求参数、工具格式转换、响应校验和标准化
+- 验证完成原因映射（end_turn→stop, tool_use→tool_calls等）
+- 验证推理内容（reasoningContent）正确提取
+- 业务影响：如果这些测试失败，使用AWS Bedrock作为模型提供者的用户将无法正常使用AI代理
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for the BedrockTransport."""
 
 import json
 import pytest

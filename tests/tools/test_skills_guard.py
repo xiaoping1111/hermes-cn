@@ -1,4 +1,15 @@
-"""Tests for tools/skills_guard.py - security scanner for skills."""
+"""技能守卫测试
+
+【产品经理理解要点】
+验证工具系统模块中official sources resolve to builtin等55个场景的正确性
+- official sources resolve to builtin的正确性验证
+- trusted repos的正确性验证
+- skills sh wrapped trusted repos的正确性验证
+- 另有52个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/skills_guard.py - security scanner for skills."""
 
 import os
 import stat

@@ -1,4 +1,14 @@
-"""Tests for gateway /usage command — agent cache lookup and output fields."""
+"""消息网关测试 - 用量统计·命令处理
+
+【产品经理理解要点】
+验证消息网关的用量统计命令处理功能
+- 验证的功能: Tests for gateway /usage command — agent cache lookup and output fields
+- 核心测试场景: cached agent shows detailed usage、running agent preferred over cache、sentinel skipped uses cache 等共8个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for gateway /usage command — agent cache lookup and output fields.
+"""
 
 import asyncio
 import threading

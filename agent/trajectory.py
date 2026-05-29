@@ -1,4 +1,16 @@
-"""Trajectory saving utilities and static helpers.
+"""对话轨迹保存 — 将对话记录转换为训练数据格式
+
+【产品经理理解要点】
+这个模块负责将 Agent 的对话记录保存为"轨迹"格式，用于：
+  - AI 模型训练数据的收集
+  - 对话回放和调试
+  - 批量处理（与 batch_runner.py 配合）
+
+轨迹格式会做适当转换，比如把内部推理标签转换为标准的  Hathinking 标签。
+
+─────────────────────────────────────────────────────────────────
+
+Trajectory saving utilities and static helpers.
 
 _convert_to_trajectory_format stays as an AIAgent method (batch_runner.py
 calls agent._convert_to_trajectory_format). Only the static helpers and

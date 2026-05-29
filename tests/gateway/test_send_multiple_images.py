@@ -1,4 +1,12 @@
-"""
+"""消息网关测试 - 消息发送·multiple·图片处理
+
+【产品经理理解要点】
+验证消息网关的消息发送图片处理功能
+- 验证的功能: Tests for ``send_multiple_images`` native batching across platforms
+- 核心测试场景: loops per image by default、empty batch is noop、single batch under 10 calls send media group once 等共19个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
 Tests for ``send_multiple_images`` native batching across platforms.
 
 Covers:

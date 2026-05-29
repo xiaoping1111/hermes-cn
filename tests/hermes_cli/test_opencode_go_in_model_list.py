@@ -1,4 +1,14 @@
-"""Test that opencode-go appears in /model list when credentials are set."""
+"""命令行界面测试 - opencode·go·in·模型管理·list
+
+【产品经理理解要点】
+验证命令行界面的模型管理功能
+- 验证的功能: Test that opencode-go appears in /model list when credentials are set
+- 核心测试场景: opencode go appears when api key set、opencode go not appears when no creds
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Test that opencode-go appears in /model list when credentials are set.
+"""
 
 import os
 from unittest.mock import patch

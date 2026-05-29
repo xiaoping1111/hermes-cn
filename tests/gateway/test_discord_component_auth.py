@@ -1,4 +1,13 @@
-"""Security regression tests: Discord component views honor role allowlists.
+"""消息网关测试 - Discord组件授权
+
+【产品经理理解要点】
+验证消息网关Discord组件授权的正确性
+- 验证的功能: Security regression tests: Discord component views honor role allowlists
+- 核心测试场景: component check empty allowlists allows everyone、component check user in user allowlist passes、component check user not in user allowlist rejected 等共17个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Security regression tests: Discord component views honor role allowlists.
 
 The four interactive component views (ExecApprovalView, SlashConfirmView,
 UpdatePromptView, ModelPickerView) historically accepted only

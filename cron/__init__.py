@@ -1,4 +1,16 @@
-"""
+"""定时任务系统 — 让 AI 按计划自动执行任务
+
+【产品经理理解要点】
+定时任务让 AI 能"定时做事"，比如：
+  - 每天早上 9 点搜索新闻
+  - 每周一总结上周工作
+  - 2小时后提醒我开会
+
+由网关守护进程每60秒检查一次是否有到期任务。
+文件锁防止多个进程同时执行同一任务。
+
+─────────────────────────────────────────────────────────────────
+
 Cron job scheduling system for Hermes Agent.
 
 This module provides scheduled task execution, allowing the agent to:

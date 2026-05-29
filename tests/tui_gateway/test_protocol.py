@@ -1,4 +1,15 @@
-"""Tests for tui_gateway JSON-RPC protocol plumbing."""
+"""TUI协议测试
+
+【产品经理理解要点】
+验证TUI网关模块中unknown method等44个场景的正确性
+- unknown method的正确性验证
+- ok envelope的正确性验证
+- err envelope的正确性验证
+- 另有41个测试场景覆盖
+- 影响TUI网关的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tui_gateway JSON-RPC protocol plumbing."""
 
 import io
 import json

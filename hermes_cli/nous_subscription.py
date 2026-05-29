@@ -1,4 +1,13 @@
-"""Helpers for Nous subscription managed-tool capabilities."""
+"""Nous 订阅与工具网关管理
+
+【产品经理理解要点】
+管理 Nous 订阅用户可用的增值工具（网页搜索、图片生成、TTS、浏览器自动化、Modal 云终端）。
+- 判断用户是否为 Nous 订阅者，检测每项工具的可用/激活/托管状态
+- 支持"工具网关"模式：订阅用户无需自备 API Key，通过 Nous 网关统一调用
+- 提供首次选型引导弹窗，自动推荐网关方案
+
+─────────────────────────────────────────────────────────────────
+Helpers for Nous subscription managed-tool capabilities."""
 
 from __future__ import annotations
 

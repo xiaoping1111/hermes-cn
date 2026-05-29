@@ -1,4 +1,14 @@
-"""Tests for the update check mechanism in hermes_cli.banner."""
+"""命令行界面测试 - 更新·check
+
+【产品经理理解要点】
+验证命令行界面的更新功能
+- 验证的功能: Tests for the update check mechanism in hermes_cli.banner
+- 核心测试场景: version string no v prefix、check for updates uses cache、check for updates expired cache 等共8个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the update check mechanism in hermes_cli.banner.
+"""
 
 import json
 import os

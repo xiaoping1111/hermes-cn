@@ -1,4 +1,11 @@
-"""GMI Cloud provider profile."""
+"""GMI Cloud模型供应商配置
+
+【产品经理理解要点】
+注册GMI Cloud多模型直连API供应商，使用斜杠格式模型ID（如provider/model-name）。
+- 供应商：GMI Cloud，提供多模型直连API
+- 认证：GMI_API_KEY，支持GMI_BASE_URL自定义端点
+- 特点：模型ID使用斜杠格式（如deepseek/deepseek-r1）
+"""
 
 from hermes_cli import __version__ as _HERMES_VERSION
 from providers import register_provider

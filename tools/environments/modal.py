@@ -1,4 +1,14 @@
-"""Modal cloud execution environment using the native Modal SDK directly.
+"""Modal云执行环境 — 使用Modal SDK直接创建云沙箱
+
+【产品经理理解要点】
+本模块使用Modal平台的云沙箱服务执行命令，在云端创建隔离的Linux容器环境，适合需要大量计算或强隔离的场景。
+- 沙箱模式：使用Modal Sandbox API创建云容器，命令在云端执行
+- 文件系统持久化：通过Modal的快照功能保存文件系统，下次任务可从快照恢复
+- 文件同步：自动将技能和凭证同步到沙箱，执行完再同步回来
+- 异步架构：Modal SDK是异步的，通过后台线程的asyncio事件循环桥接到同步调用
+
+─────────────────────────────────────────────────────────────────
+Modal cloud execution environment using the native Modal SDK directly.
 
 Uses ``Sandbox.create()`` + ``Sandbox.exec()`` instead of the older runtime
 wrapper, while preserving Hermes' persistent snapshot behavior across sessions.

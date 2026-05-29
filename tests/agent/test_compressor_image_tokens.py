@@ -1,4 +1,13 @@
-"""Tests for image-token accounting in the context compressor.
+"""图片Token压缩测试
+
+【产品经理理解要点】
+验证图片Token在上下文压缩时的正确计算和裁剪。
+- 图片Token数量的准确估算
+- 图片被裁剪时Token预算的回收
+- 影响包含图片的对话压缩效率
+
+──────────────────────────────────────────────────────────────
+Tests for image-token accounting in the context compressor.
 
 Covers the native-image-routing PR's companion change: the compressor's
 multimodal message length counter now charges ~1600 tokens per attached

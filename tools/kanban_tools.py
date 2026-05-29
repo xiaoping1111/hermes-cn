@@ -1,4 +1,17 @@
-"""Kanban tools — structured tool-call surface for worker + orchestrator agents.
+"""看板工具 — 结构化的任务管理工具
+
+【产品经理理解要点】
+当 Agent 运行在调度器（dispatcher）模式下时，使用看板工具管理任务：
+  - 创建、分配、完成任务
+  - 查看待办列表
+  - 更新任务状态
+
+普通聊天模式不会看到看板工具，只有调度器模式才会启用。
+设计为工具而非命令行，是因为 Docker/SSH 等远程环境里没有 hermes 命令。
+
+─────────────────────────────────────────────────────────────────
+
+Kanban tools — structured tool-call surface for worker + orchestrator agents.
 
 These tools are registered into the model's schema when the agent is
 running under the dispatcher (env var ``HERMES_KANBAN_TASK`` set) or when

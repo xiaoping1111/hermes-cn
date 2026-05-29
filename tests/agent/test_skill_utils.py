@@ -1,4 +1,13 @@
-"""Tests for agent/skill_utils.py — extract_skill_conditions metadata handling."""
+"""技能工具函数测试
+
+【产品经理理解要点】
+验证技能系统的辅助函数，包括名称空间和解析逻辑。
+- 技能名称的解析和规范化
+- 影响技能系统的内部一致性
+
+──────────────────────────────────────────────────────────────
+Tests for agent/skill_utils.py — extract_skill_conditions metadata handling.
+"""
 
 from agent.skill_utils import extract_skill_conditions
 

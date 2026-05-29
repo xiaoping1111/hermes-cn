@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""
+"""【产品经理理解要点】
+ComfyUI工作流依赖检查——验证工作流所需的自定义节点、模型、嵌入是否已安装在服务器上。支持云端端点映射，精确区分空结果/404/403。
+─────────────────────────────────────────────────────────────────
 check_deps.py — Verify a ComfyUI workflow's dependencies (custom nodes, models,
 embeddings) against a running server.
 

@@ -1,4 +1,15 @@
-"""Tests for acp_adapter.tools — tool kind mapping and ACP content building."""
+"""ACP工具映射测试
+
+【产品经理理解要点】
+验证ACP适配器的工具类型映射和内容构建，将Hermes工具调用转换为ACP格式。
+- 工具类型（file-edit/content/browser）的正确映射
+- ToolCallStart/Progress/Complete的构建
+- 文件编辑位置信息的提取
+- 影响ACP客户端的工具调用展示
+
+──────────────────────────────────────────────────────────────
+Tests for acp_adapter.tools — tool kind mapping and ACP content building.
+"""
 
 import pytest
 

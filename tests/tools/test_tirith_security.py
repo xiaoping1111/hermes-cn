@@ -1,4 +1,15 @@
-"""Tests for the tirith security scanning subprocess wrapper."""
+"""Tirith安全策略测试
+
+【产品经理理解要点】
+验证工具系统模块中exit 0 allow等90个场景的正确性
+- exit 0 allow的正确性验证
+- exit 1 block with findings的正确性验证
+- exit 2 warn with findings的正确性验证
+- 另有87个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the tirith security scanning subprocess wrapper."""
 
 import json
 import os

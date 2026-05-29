@@ -1,5 +1,18 @@
 #!/usr/bin/env python3
 """
+SQLite 会话状态存储模块（SessionDB）
+
+【产品经理理解要点】
+这是 Hermes 的"对话记忆库"——所有聊天记录、会话元数据都存在这里。
+核心功能：
+  - 会话持久化：每次对话的完整消息历史都保存在 SQLite 数据库中
+  - 全文搜索（FTS5）：可以搜索历史对话内容，支持中文模糊匹配
+  - Token 统计：记录每次对话消耗的 token 数量和费用估算
+  - 会话管理：创建、恢复、压缩分裂、标题管理
+  - 跨平台共享：CLI、Telegram、Discord 等所有平台的对话都存在同一个库里
+
+数据存储位置：~/.hermes/state.db（SQLite 文件）
+─────────────────────────────────────────────────────────────────
 SQLite State Store for Hermes Agent.
 
 Provides persistent session storage with FTS5 full-text search, replacing

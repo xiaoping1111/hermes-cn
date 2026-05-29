@@ -1,4 +1,7 @@
-"""Normalized models for the Teams meeting pipeline plugin."""
+"""Teams会议流水线数据模型
+
+【产品经理理解要点】
+定义Teams会议流水线的核心数据结构：任务配置(Job)、运行记录(Run)、摘要结果(Summary)等。"""
 
 from __future__ import annotations
 

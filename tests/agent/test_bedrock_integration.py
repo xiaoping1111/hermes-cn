@@ -1,4 +1,13 @@
-"""Integration tests for the AWS Bedrock provider wiring.
+"""Bedrock集成测试
+
+【产品经理理解要点】
+验证Bedrock的集成流程，确保端到端的模型调用正常工作。
+- 完整的请求-响应流程
+- 流式输出的正确处理
+- 影响AWS Bedrock用户的使用体验
+
+──────────────────────────────────────────────────────────────
+Integration tests for the AWS Bedrock provider wiring.
 
 Verifies that the Bedrock provider is correctly registered in the
 provider registry, model catalog, and runtime resolution pipeline.

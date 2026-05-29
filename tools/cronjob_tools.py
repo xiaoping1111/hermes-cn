@@ -1,4 +1,15 @@
-"""
+"""定时任务工具 — 创建、管理、执行周期性任务
+
+【产品经理理解要点】
+让 AI 能设置定时任务，比如"每天早上9点搜索新闻并发到 Telegram"：
+  - 创建定时任务（支持 cron 表达式和一次性任务）
+  - 查看、修改、删除已有任务
+  - 手动触发执行
+
+设计为单一工具配合 action 参数，避免在 AI 的工具列表中注册太多工具。
+
+─────────────────────────────────────────────────────────────────
+
 Cron job management tools for Hermes Agent.
 
 Expose a single compressed action-oriented tool to avoid schema/context bloat.

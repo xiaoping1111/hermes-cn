@@ -1,8 +1,18 @@
-"""Tests for the Home Assistant tool module.
+"""智能家居工具测试
+
+【产品经理理解要点】
+验证工具系统模块中no filters returns all等63个场景的正确性
+- no filters returns all的正确性验证
+- domain filter lights的正确性验证
+- domain filter sensor的正确性验证
+- 另有60个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the Home Assistant tool module.
 
 Tests real logic: entity filtering, payload building, response parsing,
-handler validation, and availability gating.
-"""
+handler validation, and availability gating."""
 
 import json
 from unittest.mock import patch

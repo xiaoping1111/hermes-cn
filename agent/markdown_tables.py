@@ -1,4 +1,13 @@
-"""CJK/wide-character-aware re-alignment of model-emitted markdown tables.
+"""Markdown 表格对齐修复
+
+【产品经理理解要点】
+修复 AI 输出的 Markdown 表格在终端中因中文字符占两格而错位的问题。
+- 核心职责：将模型生成的表格重新对齐，确保中英文字符混排时列对齐
+- 业务价值：提升终端/纯文本场景下表格的可读性，避免用户看到"歪掉"的表格
+- 仅处理标准管道符表格格式，非表格内容不做改动
+
+─────────────────────────────────────────────────────────────────
+CJK/wide-character-aware re-alignment of model-emitted markdown tables.
 
 Models pad markdown tables assuming each character occupies one terminal
 cell. CJK glyphs and most emoji render as two cells, so the model's

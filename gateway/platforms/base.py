@@ -1,4 +1,12 @@
-"""
+"""平台适配器基类 — 所有通讯平台适配器的统一接口
+
+【产品经理理解要点】
+所有平台适配器（Telegram、Discord、微信等）都继承这个基类，
+确保它们实现统一的方法：接收消息、发送回复、认证、格式转换等。
+就像"插座标准"——不管什么电器，插头形状一致才能接入。
+
+─────────────────────────────────────────────────────────────────
+
 Base platform adapter interface.
 
 All platform adapters (Telegram, Discord, WhatsApp, Weixin, and more) inherit from this

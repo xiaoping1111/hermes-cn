@@ -1,4 +1,13 @@
-"""Tests for Discord /skill 32-char clamp collision warnings.
+"""命令行界面测试 - Discord平台·技能系统·clamp·warning
+
+【产品经理理解要点】
+验证命令行界面的Discord平台技能系统功能
+- 验证的功能: Tests for Discord /skill 32-char clamp collision warnings
+- 核心测试场景: clamp collision emits warning naming both skills、clamp collision with reserved name emits distinct warning、no collision no warning 等共4个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for Discord /skill 32-char clamp collision warnings.
 
 Discord's per-command name limit is 32 chars, so
 ``discord_skill_commands_by_category`` clamps skill slugs to that width

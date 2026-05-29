@@ -1,4 +1,14 @@
-"""Regression tests for iterative context-summary continuity."""
+"""上下文压缩摘要连续性测试
+
+【产品经理理解要点】
+验证连续多次压缩时摘要的连贯性，防止信息在多次压缩中逐步丢失。
+- 多次压缩的摘要不丢失早期关键信息
+- 摘要前缀标记的正确添加
+- 影响超长对话的信息保持
+
+──────────────────────────────────────────────────────────────
+Regression tests for iterative context-summary continuity.
+"""
 
 from unittest.mock import MagicMock, patch
 

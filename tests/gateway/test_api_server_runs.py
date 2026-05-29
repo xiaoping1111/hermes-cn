@@ -1,4 +1,13 @@
-"""Tests for /v1/runs endpoints: start, status, events, and stop.
+"""消息网关测试 - api·server·runs
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for /v1/runs endpoints: start, status, events, and stop
+- 核心测试场景: start returns 202、start invalid json returns 400、start missing input returns 400 等共22个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for /v1/runs endpoints: start, status, events, and stop.
 
 Covers:
 - POST /v1/runs — start a run (202)

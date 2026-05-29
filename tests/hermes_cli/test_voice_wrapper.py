@@ -1,4 +1,13 @@
-"""Tests for ``hermes_cli.voice`` — the TUI gateway's voice wrapper.
+"""命令行界面测试 - 语音消息·wrapper
+
+【产品经理理解要点】
+验证命令行界面的语音消息功能
+- 验证的功能: Tests for ``hermes_cli.voice`` — the TUI gateway's voice wrapper
+- 核心测试场景: gateway symbols importable、ctrl and alt map to prompt toolkit form、control option opt aliases match tui parser 等共42个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for ``hermes_cli.voice`` — the TUI gateway's voice wrapper.
 
 The module is imported *lazily* by ``tui_gateway/server.py`` so that a
 box with missing audio deps fails at call time (returning a clean RPC

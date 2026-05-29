@@ -1,4 +1,13 @@
-"""Test that compute_next_run uses last_run_at for cron jobs.
+"""定时任务测试 - 下次运行计算
+
+【产品经理理解要点】
+验证定时任务调度引擎下次运行计算的正确性
+- 验证的功能: Test that compute_next_run uses last_run_at for cron jobs
+- 核心测试场景: cron uses last run at for every 6h schedule、cron without last run at uses now、cron weekly consistent with interval
+- 业务影响: 定时任务可能无法正确调度执行，影响自动化工作流的可靠性
+
+─────────────────────────────────────────────────────────────────
+Test that compute_next_run uses last_run_at for cron jobs.
 
 Regression test for: cron jobs computing next_run_at from _hermes_now()
 instead of from last_run_at, making them inconsistent with interval jobs.

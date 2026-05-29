@@ -1,4 +1,16 @@
-"""
+"""网关配置管理 — 加载和验证所有通讯平台的配置
+
+【产品经理理解要点】
+管理网关的所有配置信息，包括：
+  - 各平台的连接参数（Token、API Key 等）
+  - 每个平台的"主频道"（消息默认发到哪里）
+  - 会话重置策略（对话多久后自动清空）
+  - 消息投递偏好
+
+配置来源：config.yaml 的 gateway 部分 + 环境变量
+
+─────────────────────────────────────────────────────────────────
+
 Gateway configuration management.
 
 Handles loading and validating configuration for:

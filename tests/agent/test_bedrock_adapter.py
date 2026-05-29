@@ -1,4 +1,13 @@
-"""Tests for the AWS Bedrock Converse API adapter.
+"""Bedrock适配器测试
+
+【产品经理理解要点】
+验证AWS Bedrock API适配器，包括客户端构建和消息格式转换。
+- Bedrock客户端的正确构建
+- 凭证和区域配置
+- 影响AWS Bedrock模型调用的正确性
+
+──────────────────────────────────────────────────────────────
+Tests for the AWS Bedrock Converse API adapter.
 
 Covers:
   - AWS credential detection and region resolution

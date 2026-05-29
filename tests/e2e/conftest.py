@@ -1,4 +1,13 @@
-"""Shared fixtures for gateway e2e tests (Telegram, Discord).
+"""端到端集成测试共享配置
+
+【产品经理理解要点】
+为端到端消息通路测试提供共享fixture和模拟配置
+- 验证的功能: Shared fixtures for gateway e2e tests (Telegram, Discord)
+- 核心测试场景: 端到端消息通路基础功能验证
+- 业务影响: 平台消息通路可能存在集成缺陷，影响真实用户的消息收发体验
+
+─────────────────────────────────────────────────────────────────
+Shared fixtures for gateway e2e tests (Telegram, Discord).
 
 These tests exercise the full async message flow:
     adapter.handle_message(event)

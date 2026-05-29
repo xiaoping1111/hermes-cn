@@ -1,4 +1,14 @@
-"""Google OAuth PKCE flow for the Gemini (google-gemini-cli) inference provider.
+"""Google OAuth PKCE认证模块
+
+【产品经理理解要点】
+实现Google OAuth登录流程，让用户用自己的Google账号免费使用Gemini模型。
+- 核心职责：完成OAuth授权码+PKCE安全认证，获取和刷新访问令牌
+- 用户流程：在浏览器中登录Google→授权Hermes→自动获取Access Token
+- 令牌存储：保存在~/.hermes/auth/google_oauth.json，权限0600
+- 支持场景：Gemini CLI的免费层级和GCP付费层级
+
+─────────────────────────────────────────────────────────────────
+Google OAuth PKCE flow for the Gemini (google-gemini-cli) inference provider.
 
 This module implements Authorization Code + PKCE (S256) OAuth against Google's
 accounts.google.com endpoints. The resulting access token is used by

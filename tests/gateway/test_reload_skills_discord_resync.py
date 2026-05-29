@@ -1,4 +1,13 @@
-"""Tests for `/reload-skills` resyncing the Discord ``/skill`` autocomplete.
+"""消息网关测试 - reload·技能系统·Discord平台·resync
+
+【产品经理理解要点】
+验证消息网关的技能系统Discord平台功能
+- 验证的功能: Tests for `/reload-skills` resyncing the Discord ``/skill`` autocomplete
+- 核心测试场景: refresh repopulates entries after catalog change、refresh sorts entries alphabetically、refresh handles collector exception gracefully 等共5个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for `/reload-skills` resyncing the Discord ``/skill`` autocomplete.
 
 Before this change, ``_register_skill_group`` captured the skill catalog
 in closure variables (``entries`` and ``skill_lookup``) so that the one

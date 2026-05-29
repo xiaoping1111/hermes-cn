@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
-"""A minimal in-process LSP server used by tests.
+"""模拟LSP服务器
+
+【产品经理理解要点】
+测试专用的模拟语言服务器，用于替代真实的Pyright/TypeScript等语言服务器进行集成测试。支持四种行为模式：正常响应、返回错误诊断、模拟崩溃、模拟超时。
+- 验证LSP客户端在各种服务器行为下的表现（正常、报错、崩溃、超时）
+- 确保AI代理在语言服务器异常时不会卡死或崩溃
+- 业务影响：如果这些测试失败，意味着代码编辑诊断功能可能不可靠
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+A minimal in-process LSP server used by tests.
 
 Speaks just enough LSP to drive :class:`agent.lsp.client.LSPClient`
 through a full lifecycle: ``initialize``, ``initialized``,

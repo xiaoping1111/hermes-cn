@@ -1,3 +1,17 @@
+"""命令行界面测试 - pip·install·模式检测
+
+【产品经理理解要点】
+验证命令行界面的模式检测功能
+- 验证的功能: pip安装状态检测
+- 核心测试场景: pip install detected when no git dir、git install detected when git dir exists、managed install takes precedence 等共7个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - pip·install·detection
+
+测试CLI命令处理与配置管理中pip相关的install相关的detection功能
+"""
+
 from pathlib import Path
 from unittest.mock import patch
 

@@ -1,4 +1,15 @@
-"""Tests for tools/skills_tool.py — skill discovery and viewing."""
+"""技能工具测试
+
+【产品经理理解要点】
+验证工具系统模块中valid frontmatter等81个场景的正确性
+- valid frontmatter的正确性验证
+- no frontmatter的正确性验证
+- empty frontmatter的正确性验证
+- 另有78个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/skills_tool.py — skill discovery and viewing."""
 
 import json
 import os

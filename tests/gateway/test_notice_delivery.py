@@ -1,3 +1,17 @@
+"""消息网关测试 - notice·delivery
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: 通知消息投递机制
+- 核心测试场景: deliver platform notice uses private delivery when configured、deliver platform notice falls back to public when private fails、deliver platform notice uses public delivery by default
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+消息网关测试 - notice·delivery
+
+测试多平台消息接入与命令分发中notice相关的delivery功能
+"""
+
 from unittest.mock import AsyncMock, MagicMock
 
 import pytest

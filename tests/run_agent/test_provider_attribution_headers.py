@@ -1,8 +1,18 @@
-"""Attribution default_headers applied per provider via base-URL detection.
+"""提供者归属请求头测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中openrouter base url applies or headers等10个场景的正确性
+- openrouter base url applies or headers的正确性验证
+- ai gateway base url applies attribution headers的正确性验证
+- routermint base url applies user agent header的正确性验证
+- 另有7个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Attribution default_headers applied per provider via base-URL detection.
 
 Mirrors the OpenRouter pattern for the Vercel AI Gateway so that
-referrerUrl / appName / User-Agent flow into gateway analytics.
-"""
+referrerUrl / appName / User-Agent flow into gateway analytics."""
 from types import SimpleNamespace
 from unittest.mock import MagicMock, patch
 

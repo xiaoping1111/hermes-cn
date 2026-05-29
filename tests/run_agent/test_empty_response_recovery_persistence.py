@@ -1,4 +1,14 @@
-"""Regression tests for empty-response recovery transcript persistence."""
+"""空响应恢复持久化测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中persist session strips trailing empty recovery scaffolding、persist session keeps unmarked terminal empty response、persist session strips marked terminal empty sentinel的正确性
+- persist session strips trailing empty recovery scaffolding的正确性验证
+- persist session keeps unmarked terminal empty response的正确性验证
+- persist session strips marked terminal empty sentinel的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for empty-response recovery transcript persistence."""
 
 from run_agent import AIAgent
 

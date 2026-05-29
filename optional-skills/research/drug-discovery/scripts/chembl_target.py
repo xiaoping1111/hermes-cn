@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""
+"""ChEMBL靶点活性化合物查询
+
+【产品经理理解要点】
+查询ChEMBL数据库中的药物靶点，获取最具活性的化合物列表。
+- 核心职责：搜索靶点（如EGFR），返回活性排名靠前的化合物
+
+─────────────────────────────────────────────────────────────────
 chembl_target.py — Search ChEMBL for a target and retrieve top active compounds.
 Usage: python3 chembl_target.py "EGFR" --min-pchembl 7 --limit 20
 No external dependencies.

@@ -1,4 +1,13 @@
-"""Tests for interrupt-aware tool-progress suppression in gateway.
+"""消息网关测试 - run·progress·中断处理
+
+【产品经理理解要点】
+验证消息网关的中断处理功能
+- 验证的功能: Tests for interrupt-aware tool-progress suppression in gateway
+- 核心测试场景: baseline non interrupted agent renders progress、progress suppressed when agent is interrupted
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for interrupt-aware tool-progress suppression in gateway.
 
 When a user sends `stop` while the agent is executing a batch of parallel
 tool calls, the gateway's progress_callback should stop queuing 🔍 bubbles

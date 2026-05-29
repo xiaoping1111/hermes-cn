@@ -1,4 +1,14 @@
-"""Telegram-specific gateway filtering for noisy status/error output."""
+"""消息网关测试 - Telegram平台·noise·消息过滤
+
+【产品经理理解要点】
+验证消息网关的Telegram平台消息过滤功能
+- 验证的功能: Telegram-specific gateway filtering for noisy status/error output
+- 核心测试场景: telegram status suppresses auxiliary and retry noise、non telegram status is unchanged、telegram status sanitizes raw provider security errors 等共6个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Telegram-specific gateway filtering for noisy status/error output.
+"""
 
 from gateway.config import Platform
 from gateway.run import (

@@ -1,10 +1,20 @@
-"""Tests for context token tracking in run_agent.py's usage extraction.
+"""上下文令牌追踪测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中anthropic cache read and creation added等5个场景的正确性
+- anthropic cache read and creation added的正确性验证
+- anthropic no cache fields的正确性验证
+- anthropic cache read only的正确性验证
+- 另有2个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for context token tracking in run_agent.py's usage extraction.
 
 The context counter (status bar) must show the TOTAL prompt tokens including
 Anthropic's cached portions. This is an integration test for the token
 extraction in run_conversation(), not the ContextCompressor itself (which
-is tested in tests/agent/test_context_compressor.py).
-"""
+is tested in tests/agent/test_context_compressor.py)."""
 
 import sys
 import types

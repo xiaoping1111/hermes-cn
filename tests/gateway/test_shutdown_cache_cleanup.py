@@ -1,4 +1,13 @@
-"""Regression tests for gateway shutdown cleaning up cached agent memory providers (issue #11205).
+"""消息网关测试 - 优雅关闭·缓存机制·清理操作
+
+【产品经理理解要点】
+验证消息网关的优雅关闭缓存机制清理操作功能
+- 验证的功能: Regression tests for gateway shutdown cleaning up cached agent memory providers (issue #11205)
+- 核心测试场景: cached agent memory provider shut down、cache cleared after shutdown、no cached agents no error 等共8个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests for gateway shutdown cleaning up cached agent memory providers (issue #11205).
 
 When the gateway shuts down, ``stop()`` called ``_finalize_shutdown_agents()``
 which only drained agents in ``_running_agents``.  Idle agents sitting in

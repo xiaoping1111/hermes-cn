@@ -1,4 +1,13 @@
-"""Per-thread interrupt signaling for all tools.
+"""线程级中断信号
+
+【产品经理理解要点】
+让用户"停止生成"时只中断当前会话的 Agent，不影响其他会话，是多会话并发场景的关键机制。
+- 核心职责：按线程追踪中断信号，Agent 执行时设置线程 ID，工具调用时自动检测当前线程是否被中断
+- 关键业务概念：线程隔离——网关模式下多 Agent 共享同一进程，中断信号必须按线程隔离
+- 在系统中的位置：所有长时间运行工具的中断检查点，确保 Ctrl+C / 停止按钮能及时生效
+
+─────────────────────────────────────────────────────────────────
+Per-thread interrupt signaling for all tools.
 
 Provides thread-scoped interrupt tracking so that interrupting one agent
 session does not kill tools running in other sessions.  This is critical

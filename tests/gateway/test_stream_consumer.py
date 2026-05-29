@@ -1,4 +1,14 @@
-"""Tests for GatewayStreamConsumer — media directive stripping in streaming."""
+"""消息网关测试 - stream·consumer
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for GatewayStreamConsumer — media directive stripping in streaming
+- 核心测试场景: no media passthrough、media tag stripped、media tag with space 等共82个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for GatewayStreamConsumer — media directive stripping in streaming.
+"""
 
 import asyncio
 from types import SimpleNamespace

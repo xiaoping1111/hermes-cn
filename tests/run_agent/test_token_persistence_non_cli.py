@@ -1,3 +1,12 @@
+"""令牌持久化非CLI测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中run conversation persists tokens for telegram sessions、run conversation persists tokens for cron sessions、session search lazily opens db when entrypoint did not pa...的正确性
+- run conversation persists tokens for telegram sessions的正确性验证
+- run conversation persists tokens for cron sessions的正确性验证
+- session search lazily opens db when entrypoint did...的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性"""
+
 from types import ModuleType, SimpleNamespace
 from unittest.mock import MagicMock, patch
 import json

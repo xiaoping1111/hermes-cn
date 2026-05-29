@@ -1,10 +1,20 @@
-"""Tests for the gateway-side clarify primitive (tools/clarify_gateway.py).
+"""澄清网关网关测试
+
+【产品经理理解要点】
+验证工具系统模块中button choice resolves wait等15个场景的正确性
+- button choice resolves wait的正确性验证
+- open ended auto awaits text的正确性验证
+- button choice does not auto await的正确性验证
+- 另有12个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the gateway-side clarify primitive (tools/clarify_gateway.py).
 
 The clarify tool needs to ask the user a question and block the agent
 thread until they respond.  These tests cover the module-level state
 machine: register, wait, resolve via button, resolve via text-fallback,
-"Other"-button text-capture flip, timeout, session boundary cleanup.
-"""
+"Other"-button text-capture flip, timeout, session boundary cleanup."""
 
 from __future__ import annotations
 

@@ -1,3 +1,11 @@
+"""CLI图片命令测试
+
+【产品经理理解要点】
+验证/image命令的图片发送和展示功能。
+- 图片文件的正确读取和编码
+- 影响图片识别功能的使用
+"""
+
 from pathlib import Path
 from unittest.mock import patch
 

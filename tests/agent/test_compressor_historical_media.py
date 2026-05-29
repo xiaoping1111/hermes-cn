@@ -1,4 +1,13 @@
-"""Tests for post-compression historical-media stripping.
+"""历史媒体压缩测试
+
+【产品经理理解要点】
+验证压缩器对历史图片和媒体文件的正确处理。
+- 图片URL在压缩后的保留或替换
+- 历史媒体引用的完整性
+- 影响多模态对话压缩后的可用性
+
+──────────────────────────────────────────────────────────────
+Tests for post-compression historical-media stripping.
 
 Port of Kilo-Org/kilocode#9434 (adapted for OpenAI-style message lists).
 Without this pass, tail messages keep their original multi-MB base-64 image

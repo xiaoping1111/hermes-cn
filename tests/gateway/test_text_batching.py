@@ -1,4 +1,13 @@
-"""Tests for text message batching across all gateway adapters.
+"""消息网关测试 - text·批量处理
+
+【产品经理理解要点】
+验证消息网关的批量处理功能
+- 验证的功能: Tests for text message batching across all gateway adapters
+- 核心测试场景: single message dispatched after delay、split messages aggregated、three way split aggregated 等共23个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for text message batching across all gateway adapters.
 
 When a user sends a long message, the messaging client splits it at the
 platform's character limit.  Each adapter should buffer rapid successive

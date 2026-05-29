@@ -1,5 +1,13 @@
-"""DuckDuckGo search — plugin form (via the ``ddgs`` package).
+"""DuckDuckGo搜索供应商 — 基于ddgs包
 
+【产品经理理解要点】
+基于社区ddgs Python包实现DuckDuckGo搜索，无需API密钥，是零成本搜索方案。
+- 核心能力：仅搜索，不支持内容提取
+- 零成本：无需API Key，通过抓取DuckDuckGo HTML结果页实现
+- 限制：受DuckDuckGo服务端速率限制影响
+- 安装：ddgs为可选依赖，首次选择时自动pip安装
+
+─────────────────────────────────────────────────────────────────
 Subclasses the plugin-facing :class:`agent.web_search_provider.WebSearchProvider`.
 The legacy in-tree module ``tools.web_providers.ddgs`` was removed in the
 same commit that moved this code under ``plugins/``; this file is now the

@@ -1,4 +1,13 @@
-"""Tests for focus_topic flowing through the compressor.
+"""聚焦压缩测试
+
+【产品经理理解要点】
+验证带主题焦点的上下文压缩功能，确保压缩保留与指定主题相关的内容。
+- 焦点主题对压缩摘要内容的影响
+- 非焦点内容的合理裁剪
+- 影响长对话中保留重要上下文的能力
+
+──────────────────────────────────────────────────────────────
+Tests for focus_topic flowing through the compressor.
 
 Verifies that _generate_summary and compress accept and use the focus_topic
 parameter correctly.  Inspired by Claude Code's /compact <focus>.

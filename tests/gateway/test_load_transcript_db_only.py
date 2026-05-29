@@ -1,4 +1,14 @@
-"""Verify load_transcript returns SQLite messages without any JSONL file."""
+"""消息网关测试 - load·脚本执行·数据库·only
+
+【产品经理理解要点】
+验证消息网关的脚本执行数据库功能
+- 验证的功能: Verify load_transcript returns SQLite messages without any JSONL file
+- 核心测试场景: load transcript returns db messages when no jsonl
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Verify load_transcript returns SQLite messages without any JSONL file.
+"""
 from pathlib import Path
 
 import pytest

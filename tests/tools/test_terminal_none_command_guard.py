@@ -1,4 +1,13 @@
-"""Regression tests for invalid/None terminal command handling."""
+"""终端空命令防护测试
+
+【产品经理理解要点】
+验证工具系统模块中transform sudo command none returns cleanly、terminal tool none command returns clean error的正确性
+- transform sudo command none returns cleanly的正确性验证
+- terminal tool none command returns clean error的正确性验证
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for invalid/None terminal command handling."""
 
 import json
 

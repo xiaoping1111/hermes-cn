@@ -1,3 +1,17 @@
+"""消息网关测试 - Discord平台·消息发送
+
+【产品经理理解要点】
+验证消息网关的Discord平台消息发送功能
+- 验证的功能: Discord消息发送功能
+- 核心测试场景: send retries without reference when reply target is system message、send retries without reference when reply target is deleted、send does not retry on unrelated errors 等共18个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+消息网关测试 - Discord平台适配·消息发送
+
+测试多平台消息接入与命令分发中discord相关的send功能
+"""
+
 import asyncio
 from types import SimpleNamespace
 from unittest.mock import AsyncMock, MagicMock

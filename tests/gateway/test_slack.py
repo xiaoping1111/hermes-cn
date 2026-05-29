@@ -1,4 +1,12 @@
-"""
+"""消息网关测试 - Slack平台
+
+【产品经理理解要点】
+验证消息网关的Slack平台功能
+- 验证的功能: Tests for Slack platform adapter
+- 核心测试场景: channel slash command uses group session semantics、dm slash command keeps dm session semantics、app mention registered on connect 等共186个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
 Tests for Slack platform adapter.
 
 Covers: app_mention handler, send_document, send_video,

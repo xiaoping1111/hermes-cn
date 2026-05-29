@@ -1,4 +1,11 @@
-"""Shared entity-name normalization helpers (stdlib-only).
+"""实体名称标准化辅助库
+
+【产品经理理解要点】
+统一实体名称格式（去除公司后缀等），为实体消歧提供一致的比较基础。
+- 核心职责：剥离Inc/LLC/Corp等法律后缀，统一大小写和标点
+
+─────────────────────────────────────────────────────────────────
+Shared entity-name normalization helpers (stdlib-only).
 
 Used by entity_resolution.py and timing_analysis.py.
 """

@@ -1,4 +1,13 @@
-"""Tests for per-profile subprocess HOME isolation (#4426).
+"""子进程HOME目录隔离测试
+
+【产品经理理解要点】
+验证子进程（终端、代码执行）使用按配置文件隔离的HOME目录，同时Python主进程的HOME不变。
+- 子进程获取对应配置文件的HOME路径
+- 主进程HOME和Path.home()不受影响
+- 影响多配置文件部署下的数据隔离
+
+──────────────────────────────────────────────────────────────
+Tests for per-profile subprocess HOME isolation (#4426).
 
 Verifies that subprocesses (terminal, execute_code, background processes)
 receive a per-profile HOME directory while the Python process's own HOME

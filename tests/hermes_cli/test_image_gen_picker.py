@@ -1,4 +1,13 @@
-"""Tests for plugin image_gen providers injecting themselves into the picker.
+"""命令行界面测试 - 图片处理·gen·picker
+
+【产品经理理解要点】
+验证命令行界面的图片处理功能
+- 验证的功能: Tests for plugin image_gen providers injecting themselves into the picker
+- 核心测试场景: plugin providers returns registered、fal skipped to avoid duplicate、visible providers includes plugins for image gen 等共14个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for plugin image_gen providers injecting themselves into the picker.
 
 Covers `_plugin_image_gen_providers`, `_visible_providers`, and
 `_toolset_needs_configuration_prompt` handling of plugin providers.

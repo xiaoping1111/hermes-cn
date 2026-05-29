@@ -1,4 +1,12 @@
-"""Randomized property testing for the Kanban kernel.
+"""属性模糊测试测试
+
+【产品经理理解要点】
+验证压力测试模块中相关功能的正确性
+- 模块功能单元测试覆盖
+- 影响压力测试的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Randomized property testing for the Kanban kernel.
 
 Generates 1000 random operation sequences, each 20-50 ops, on small
 task graphs. After each step, checks the full invariant set:
@@ -20,8 +28,7 @@ task graphs. After each step, checks the full invariant set:
       promoted it). This is called out in the comment on
       recompute_ready; verify it holds after every random seq.
 
-Not using hypothesis the lib; just Python random for simplicity.
-"""
+Not using hypothesis the lib; just Python random for simplicity."""
 
 import os
 import random

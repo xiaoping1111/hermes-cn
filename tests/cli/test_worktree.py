@@ -1,4 +1,12 @@
-"""Tests for git worktree isolation (CLI --worktree / -w flag).
+"""工作树测试
+
+【产品经理理解要点】
+验证CLI工作树（worktree）创建和管理的逻辑。
+- 工作树的创建和切换
+- 影响并行开发工作流
+
+──────────────────────────────────────────────────────────────
+Tests for git worktree isolation (CLI --worktree / -w flag).
 
 Verifies worktree creation, cleanup, .worktreeinclude handling,
 .gitignore management, and integration with the CLI.  (#652)

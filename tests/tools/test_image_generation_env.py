@@ -1,4 +1,15 @@
-"""FAL_KEY env var normalization (whitespace-only treated as unset)."""
+"""图像生成环境变量测试
+
+【产品经理理解要点】
+验证工具系统模块中fal key whitespace is unset等6个场景的正确性
+- fal key whitespace is unset的正确性验证
+- fal key valid的正确性验证
+- fal key empty is unset的正确性验证
+- 另有3个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+FAL_KEY env var normalization (whitespace-only treated as unset)."""
 
 
 def test_fal_key_whitespace_is_unset(monkeypatch):

@@ -1,4 +1,14 @@
-"""Tests for DingTalk platform adapter."""
+"""消息网关测试 - dingtalk
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for DingTalk platform adapter
+- 核心测试场景: returns false when sdk missing、returns false when env vars missing、returns true when all available 等共71个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for DingTalk platform adapter.
+"""
 import asyncio
 import json
 from datetime import datetime, timezone

@@ -1,4 +1,13 @@
-"""Tests for transport auto-detection in agent.auxiliary_client.
+"""辅助传输自动检测测试
+
+【产品经理理解要点】
+验证辅助客户端的传输协议自动检测逻辑。
+- SSE/WebSocket/streaming的自动选择
+- 协议降级和回退
+- 影响辅助模型连接的稳定性
+
+──────────────────────────────────────────────────────────────
+Tests for transport auto-detection in agent.auxiliary_client.
 
 Auxiliary clients must pick the correct wire protocol (OpenAI
 chat.completions vs native Anthropic Messages) based on the endpoint,

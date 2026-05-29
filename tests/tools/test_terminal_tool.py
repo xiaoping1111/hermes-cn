@@ -1,4 +1,15 @@
-"""Regression tests for sudo detection and sudo password handling."""
+"""终端工具测试
+
+【产品经理理解要点】
+验证工具系统模块中searching for sudo does not trigger rewrite等14个场景的正确性
+- searching for sudo does not trigger rewrite的正确性验证
+- printf literal sudo does not trigger rewrite的正确性验证
+- non command argument named sudo does not trigger...的正确性验证
+- 另有11个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for sudo detection and sudo password handling."""
 
 import tools.terminal_tool as terminal_tool
 

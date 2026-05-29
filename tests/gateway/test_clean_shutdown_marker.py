@@ -1,4 +1,13 @@
-"""Tests for the clean shutdown marker that prevents unwanted session auto-resets.
+"""消息网关测试 - 优雅关闭标记
+
+【产品经理理解要点】
+验证消息网关优雅关闭标记的正确性
+- 验证的功能: Tests for the clean shutdown marker that prevents unwanted session auto-resets
+- 核心测试场景: suspends recently active sessions、does not suspend old sessions、already resume pending not double counted 等共7个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the clean shutdown marker that prevents unwanted session auto-resets.
 
 When the gateway shuts down gracefully (hermes update, gateway restart, /restart),
 it writes a .clean_shutdown marker.  On the next startup, if the marker exists,

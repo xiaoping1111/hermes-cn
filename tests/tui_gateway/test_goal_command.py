@@ -1,12 +1,22 @@
-"""Tests for /goal handling in tui_gateway.
+"""目标命令测试
+
+【产品经理理解要点】
+验证TUI网关模块中goal bare shows status when none set等11个场景的正确性
+- goal bare shows status when none set的正确性验证
+- goal whitespace only shows status的正确性验证
+- goal status alias shows status的正确性验证
+- 另有8个测试场景覆盖
+- 影响TUI网关的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for /goal handling in tui_gateway.
 
 The TUI routes ``/goal`` through ``command.dispatch`` (not ``slash.exec``)
 because the CLI's ``_handle_goal_command`` queues the kickoff message onto
 ``_pending_input``, which the slash-worker subprocess has no reader for.
 Instead we handle ``/goal`` directly in the server and return a
 ``{"type": "send", "notice": ..., "message": ...}`` payload the TUI client
-uses to render a system line and fire the kickoff prompt.
-"""
+uses to render a system line and fire the kickoff prompt."""
 
 from __future__ import annotations
 

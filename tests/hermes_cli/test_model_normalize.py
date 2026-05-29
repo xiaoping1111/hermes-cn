@@ -1,4 +1,13 @@
-"""Tests for hermes_cli.model_normalize — provider-aware model name normalization.
+"""命令行界面测试 - 模型管理·normalize
+
+【产品经理理解要点】
+验证命令行界面的模型管理功能
+- 验证的功能: Tests for hermes_cli.model_normalize — provider-aware model name normalization
+- 核心测试场景: opencode go preserves dots、opencode go not in dot to hyphen set、anthropic converts dots 等共22个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.model_normalize — provider-aware model name normalization.
 
 Covers issue #5211: opencode-go model names with dots (e.g. minimax-m2.7)
 must NOT be mangled to hyphens (minimax-m2-7).

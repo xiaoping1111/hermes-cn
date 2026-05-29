@@ -1,4 +1,27 @@
-"""MemoryManager — orchestrates memory providers for the agent.
+"""记忆管理器 — 统一协调 Agent 的记忆提供者
+
+【产品经理理解要点】
+这是 Agent 的"长期记忆大脑"，让 AI 在不同会话之间记住用户的偏好和习惯。
+就像一个助手的笔记本，记录了"用户是谁、喜欢什么、工作方式是什么"。
+
+核心职责：
+  - 统一入口：所有记忆相关的操作（读取、写入、搜索）都通过这个管理器
+  - 多后端支持：支持内置记忆和外部插件记忆（但只能有一个外部插件，避免冲突）
+  - 会话前预加载：每轮对话开始前，自动检索与当前话题相关的记忆
+  - 会话后同步：每轮对话结束后，把学到的新信息写回记忆存储
+  - 隐私保护：在输出给用户时，自动擦除内部记忆标记，用户看不到技术细节
+
+记忆在 Agent 中的角色：
+  ┌──────────┐    ┌──────────────┐    ┌──────────┐
+  │ 用户消息  │ → │ 记忆管理器    │ → │ AI 思考   │
+  │          │    │ (预加载相关记忆)│    │ (带上回忆) │
+  └──────────┘    └──────────────┘    └──────────┘
+                      ↑                     │
+                      └─── 同步新知识 ←──────┘
+
+─────────────────────────────────────────────────────────────────
+
+MemoryManager — orchestrates memory providers for the agent.
 
 Single integration point in run_agent.py. Replaces scattered per-backend
 code with one manager that delegates to registered providers.

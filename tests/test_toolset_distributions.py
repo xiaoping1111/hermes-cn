@@ -1,4 +1,15 @@
-"""Tests for toolset_distributions.py — distribution CRUD, sampling, validation."""
+"""工具集分发测试
+
+【产品经理理解要点】
+验证工具集分发配置的CRUD、采样和验证逻辑。
+- 分发配置的读取和列出
+- 从分发中采样工具集的随机性
+- 分发配置的合法性验证
+- 影响A/B测试中的工具集分配
+
+──────────────────────────────────────────────────────────────
+Tests for toolset_distributions.py — distribution CRUD, sampling, validation.
+"""
 
 import pytest
 from unittest.mock import patch

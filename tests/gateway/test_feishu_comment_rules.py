@@ -1,4 +1,14 @@
-"""Tests for feishu_comment_rules — 3-tier access control rule engine."""
+"""消息网关测试 - feishu·comment·rules
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Tests for feishu_comment_rules — 3-tier access control rule engine
+- 核心测试场景: parse full rule、parse partial rule、parse empty rule 等共30个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for feishu_comment_rules — 3-tier access control rule engine.
+"""
 
 import json
 import os

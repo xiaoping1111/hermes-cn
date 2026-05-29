@@ -1,4 +1,13 @@
-"""Kanban decomposer — fan a triage task out into a graph of child tasks.
+"""看板任务分解器
+
+【产品经理理解要点】
+将一个概要任务分解为多个子任务图，由 AI 根据可用 Profile 自动分配。
+- 核心职责：调用辅助 LLM 将 triage 任务分解为子任务树，原子化创建子任务并建立父子关系，将根任务从 triage 推进到 todo
+- 关键概念：任务分解=大任务→子任务图、扇出(fanout)=创建并行子任务、Profile 匹配=按技能描述分配子任务
+- 系统定位：复杂任务的智能拆解引擎
+
+─────────────────────────────────────────────────────────────────
+Kanban decomposer — fan a triage task out into a graph of child tasks.
 
 Invoked by ``hermes kanban decompose [task_id | --all]`` and the
 auto-decompose path in the gateway dispatcher loop. Reads the user's

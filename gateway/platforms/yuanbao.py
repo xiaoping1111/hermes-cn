@@ -1,4 +1,13 @@
-"""
+"""元宝平台适配器 — 腾讯元宝 AI 助手接入
+
+【产品经理理解要点】
+让 Agent 通过腾讯元宝与用户交互：
+  - WebSocket 长连接通信
+  - 处理认证、心跳、自动重连
+  - 接收和发送消息
+
+─────────────────────────────────────────────────────────────────
+
 Yuanbao platform adapter.
 
 Connects to the Yuanbao WebSocket gateway, handles authentication (AUTH_BIND),

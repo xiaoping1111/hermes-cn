@@ -1,10 +1,20 @@
-"""Tests for delegate_tool toolset scoping.
+"""子任务委派工具集范围测试
+
+【产品经理理解要点】
+验证工具系统模块中requested toolsets intersected with parent等5个场景的正确性
+- requested toolsets intersected with parent的正确性验证
+- all requested toolsets available on parent的正确性验证
+- no toolsets requested inherits parent的正确性验证
+- 另有2个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for delegate_tool toolset scoping.
 
 Verifies that subagents cannot gain tools that the parent does not have.
 The LLM controls the `toolsets` parameter — without intersection with the
 parent's enabled_toolsets, it can escalate privileges by requesting
-arbitrary toolsets.
-"""
+arbitrary toolsets."""
 
 from unittest.mock import MagicMock, patch
 from types import SimpleNamespace

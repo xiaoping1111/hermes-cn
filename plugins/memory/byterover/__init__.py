@@ -1,5 +1,12 @@
-"""ByteRover memory plugin — MemoryProvider interface.
+"""ByteRover记忆供应商 — 本地优先的层级知识树
 
+【产品经理理解要点】
+提供基于ByteRover CLI的持久化记忆服务，将知识组织为层级上下文树，支持分层检索和可选云同步。
+- 核心能力：层级上下文树存储、模糊文本→LLM驱动搜索的分层检索、本地优先+可选云同步
+- 使用场景：需要本地化知识管理且可选择性同步到云端的应用
+- 依赖：brv CLI工具，支持npm或curl安装
+
+─────────────────────────────────────────────────────────────────
 Persistent memory via the ByteRover CLI (``brv``). Organizes knowledge into
 a hierarchical context tree with tiered retrieval (fuzzy text → LLM-driven
 search). Local-first with optional cloud sync.

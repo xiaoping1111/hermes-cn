@@ -1,4 +1,13 @@
-"""Tests for gateway.memory_monitor — periodic process memory logging.
+"""消息网关测试 - 记忆系统·monitor
+
+【产品经理理解要点】
+验证消息网关的记忆系统功能
+- 验证的功能: Tests for gateway.memory_monitor — periodic process memory logging
+- 核心测试场景: log memory usage emits memory line、log memory usage has grep friendly format、log memory usage with prefix 等共10个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for gateway.memory_monitor — periodic process memory logging.
 
 Ported from cline/cline#10343.  The module logs a structured
 ``[MEMORY] rss=...MB ...`` line periodically so long-running gateway

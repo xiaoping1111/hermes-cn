@@ -1,4 +1,13 @@
-"""Minimal e2e tests for Discord mention stripping + /command detection.
+"""端到端集成测试 - Discord平台·adapter
+
+【产品经理理解要点】
+验证端到端消息通路的Discord平台功能
+- 验证的功能: Minimal e2e tests for Discord mention stripping + /command detection
+- 核心测试场景: mention then command、nickname mention then command、text before command not detected 等共6个场景
+- 业务影响: 平台消息通路可能存在集成缺陷，影响真实用户的消息收发体验
+
+─────────────────────────────────────────────────────────────────
+Minimal e2e tests for Discord mention stripping + /command detection.
 
 Covers the fix for slash commands not being recognized when sent via
 @mention in a channel, especially after auto-threading.

@@ -1,4 +1,14 @@
-"""Tests for acp_adapter.entry startup wiring."""
+"""ACP启动接线测试
+
+【产品经理理解要点】
+验证ACP适配器入口模块的启动逻辑，包括不稳定性协议标志的设置。
+- 启动时正确传播unstable标志
+- 启动前的环境准备
+- 影响ACP服务器的初始化
+
+──────────────────────────────────────────────────────────────
+Tests for acp_adapter.entry startup wiring.
+"""
 
 import sys
 

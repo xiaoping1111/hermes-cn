@@ -1,3 +1,13 @@
+"""托管BrowserBase和Modal测试
+
+【产品经理理解要点】
+验证工具系统模块中browser use explicit local mode stays local even when man...等10个场景的正确性
+- browser use explicit local mode stays local even...的正确性验证
+- browserbase does not use gateway only configuration的正确性验证
+- browser use managed gateway adds idempotency key and...的正确性验证
+- 另有7个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性"""
+
 import os
 import sys
 import tempfile

@@ -1,4 +1,13 @@
-"""Tests for /tools slash command handler in the interactive CLI."""
+"""CLI工具命令测试
+
+【产品经理理解要点】
+验证/tools命令展示和管理可用工具的功能。
+- 工具列表的正确展示
+- 影响用户管理工具配置的体验
+
+──────────────────────────────────────────────────────────────
+Tests for /tools slash command handler in the interactive CLI.
+"""
 
 from unittest.mock import MagicMock, patch, call
 

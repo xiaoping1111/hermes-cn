@@ -1,3 +1,17 @@
+"""命令行界面测试 - status
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: 系统状态查询命令
+- 核心测试场景: show status includes tavily key、show status termux gateway section skips systemctl、show status reports nous auth error 等共17个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - status
+
+测试CLI命令处理与配置管理中status功能
+"""
+
 from types import SimpleNamespace
 
 from hermes_cli.status import show_status

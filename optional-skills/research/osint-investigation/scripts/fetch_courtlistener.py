@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Search court records via CourtListener (Free Law Project).
+"""CourtListener法院记录查询
+
+【产品经理理解要点】
+查询美国联邦和州法院的判决书和案卷信息，用于法律背景调查。
+- 核心职责：搜索约1000万份法院意见书和PACER案卷数据
+- 使用场景：OSINT调查中查询某人或某公司的诉讼记录
+
+─────────────────────────────────────────────────────────────────
+Search court records via CourtListener (Free Law Project).
 
 Covers ~10M federal and state court opinions, plus PACER docket data
 where available. Public REST API v4 supports anonymous read access for

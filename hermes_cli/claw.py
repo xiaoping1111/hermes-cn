@@ -1,4 +1,13 @@
-"""hermes claw — OpenClaw migration commands.
+"""OpenClaw 迁移命令
+
+【产品经理理解要点】
+实现 `hermes claw migrate/cleanup` 子命令，帮助用户从旧版 OpenClaw 迁移到 Hermes。
+- 核心职责：将 OpenClaw 的配置、技能、工作区数据迁移到 Hermes 格式，并在迁移后归档旧目录
+- 关键概念：两阶段迁移（先预览再执行）、自动备份、冲突检测（已存在的文件可选择覆盖）、API 密钥需单独显式迁移
+- 系统定位：用户从 OpenClaw 升级到 Hermes 的过渡工具
+
+─────────────────────────────────────────────────────────────────
+hermes claw — OpenClaw migration commands.
 
 Usage:
     hermes claw migrate              # Preview then migrate (always shows preview first)

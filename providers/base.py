@@ -1,5 +1,13 @@
-"""Provider profile base class.
+"""模型供应商配置基类
 
+【产品经理理解要点】
+定义AI模型供应商的标准配置模板，所有具体供应商（如OpenAI、Anthropic、xAI等）都基于此类声明自己的特性。
+- 核心职责：以声明式方式描述一个AI供应商的认证方式、API端点、模型列表、请求参数等
+- 关键概念：ProviderProfile是纯声明式的，不负责客户端构建或流式传输，只描述"供应商是什么"
+- 重要字段：name（供应商名）、api_mode（API模式）、auth_type（认证类型）、fallback_models（备用模型列表）
+- 与系统关系：供应商注册中心通过此基类统一管理所有供应商，传输层读取配置决定如何调用API
+
+─────────────────────────────────────────────────────────────────
 A ProviderProfile declares everything about an inference provider in one place:
 auth, endpoints, client quirks, request-time quirks. The transport reads this
 instead of receiving 20+ boolean flags.

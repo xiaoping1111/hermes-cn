@@ -1,4 +1,13 @@
-"""GitHub Copilot authentication utilities.
+"""GitHub Copilot 认证工具
+
+【产品经理理解要点】
+处理 GitHub Copilot 的 OAuth 登录和令牌验证，让 Hermes 可以通过 Copilot 渠道调用 AI 模型。
+- 核心职责：实现 Copilot OAuth 设备码登录流程，验证和交换不同类型的 GitHub 令牌（gho_/github_pat_/ghu_）
+- 关键概念：Copilot 令牌类型（OAuth/PAT/App Token）、令牌搜索优先级（COPILOT_GITHUB_TOKEN→GH_TOKEN→GITHUB_TOKEN→gh auth token）
+- 系统定位：Copilot 供应商的认证适配层
+
+─────────────────────────────────────────────────────────────────
+GitHub Copilot authentication utilities.
 
 Implements the OAuth device code flow used by the Copilot CLI and handles
 token validation/exchange for the Copilot API.

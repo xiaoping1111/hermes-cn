@@ -1,4 +1,14 @@
-"""Tests for Bug #12905 fixes in agent/anthropic_adapter.py — macOS Keychain support."""
+"""macOS Keychain凭证读取测试
+
+【产品经理理解要点】
+验证从macOS Keychain读取Claude Code凭证的支持，确保跨平台认证正常工作。
+- macOS上从Keychain读取credentials文件
+- Linux/Windows上正确返回None
+- 影响Claude Code用户的自动认证
+
+──────────────────────────────────────────────────────────────
+Tests for Bug #12905 fixes in agent/anthropic_adapter.py — macOS Keychain support.
+"""
 
 import json
 import platform

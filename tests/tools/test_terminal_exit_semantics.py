@@ -1,4 +1,15 @@
-"""Tests for terminal command exit code semantic interpretation."""
+"""终端退出语义测试
+
+【产品经理理解要点】
+验证工具系统模块中success returns none等22个场景的正确性
+- success returns none的正确性验证
+- grep family no matches的正确性验证
+- grep real error no note的正确性验证
+- 另有19个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for terminal command exit code semantic interpretation."""
 
 import pytest
 

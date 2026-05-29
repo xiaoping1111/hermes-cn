@@ -1,4 +1,13 @@
-"""Slash command definitions and autocomplete for the Hermes CLI.
+"""斜杠命令注册中心
+
+【产品经理理解要点】
+定义所有 /斜杠命令（如 /help、/model、/skills 等），是 CLI 自动补全和命令分发的核心数据源。
+- 核心职责：注册所有斜杠命令及其参数、帮助文本、别名；提供命令解析和自动补全
+- 关键概念：COMMAND_REGISTRY 命令注册表、命令别名、自动补全器、Telegram/Slack 机器人命令映射
+- 系统定位：用户交互指令系统的核心注册中心，所有界面（CLI/Gateway/聊天机器人）的命令定义都源自此处
+
+─────────────────────────────────────────────────────────────────
+Slash command definitions and autocomplete for the Hermes CLI.
 
 Central registry for all slash commands. Every consumer -- CLI help, gateway
 dispatch, Telegram BotCommands, Slack subcommand mapping, autocomplete --

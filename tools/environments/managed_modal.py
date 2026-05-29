@@ -1,4 +1,14 @@
-"""Managed Modal environment backed by tool-gateway."""
+"""托管Modal环境 — 通过工具网关管理Modal沙箱
+
+【产品经理理解要点】
+本模块通过Hermes工具网关（Nous）间接管理Modal沙箱，由网关负责创建和销毁沙箱，客户端无需直接访问Modal API。
+- 与直连Modal的区别：直连模式客户端直接持有Modal SDK凭据，托管模式由网关代理所有请求
+- 通信方式：通过HTTP REST API与网关交互，使用Nous用户Token认证
+- 安全限制：托管模式不支持主机凭证文件透传（需使用直连模式）
+- 适用场景：SaaS部署中，客户无需自行管理Modal凭据和API密钥
+
+─────────────────────────────────────────────────────────────────
+Managed Modal environment backed by tool-gateway."""
 
 from __future__ import annotations
 

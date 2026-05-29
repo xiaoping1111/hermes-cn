@@ -1,4 +1,7 @@
-"""Graph-backed Teams meeting helpers for the plugin runtime."""
+"""Teams会议Graph API助手
+
+【产品经理理解要点】
+通过Microsoft Graph API获取Teams会议信息、转录内容和参会者列表等数据。"""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""Tests for MiniMax model validation via static catalog (issues #12611, #12460, #12399, #12547).
+"""MiniMax模型验证测试
+
+【产品经理理解要点】
+验证MiniMax提供商使用静态模型目录验证模型名（因为该提供商不支持/v1/models接口）。
+- 静态目录中的合法模型名通过验证
+- 不在目录中的模型名被拒绝
+- 影响MiniMax用户选择模型时的提示准确性
+
+──────────────────────────────────────────────────────────────
+Tests for MiniMax model validation via static catalog (issues #12611, #12460, #12399, #12547).
 
 MiniMax and MiniMax-CN providers don't expose /v1/models, so validate_requested_model()
 must validate against the static catalog instead of probing the live API.

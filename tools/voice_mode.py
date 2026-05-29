@@ -1,4 +1,13 @@
-"""Voice Mode -- Push-to-talk audio recording and playback for the CLI.
+"""语音模式——CLI 推按对讲录音与播放
+
+【产品经理理解要点】
+在终端中提供"按住说话、松开发送"的语音交互体验，录音后自动转文字发给 Agent，Agent 回复自动朗读。
+- 核心职责：通过 sounddevice 录音、WAV 编码、STT 转写、TTS 播放，构成完整的语音交互闭环
+- 关键业务概念：按需依赖——sounddevice/numpy 为可选依赖，无音频设备环境（SSH/Docker）自动降级
+- 在系统中的位置：CLI 模式下语音交互的核心实现，转录和朗读分别调用 STT/TTS 子系统
+
+─────────────────────────────────────────────────────────────────
+Voice Mode -- Push-to-talk audio recording and playback for the CLI.
 
 Provides audio capture via sounddevice, WAV encoding via stdlib wave,
 STT dispatch via tools.transcription_tools, and TTS playback via

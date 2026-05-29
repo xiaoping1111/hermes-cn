@@ -1,4 +1,13 @@
-"""Tests for agent.rate_limit_tracker — header parsing and formatting."""
+"""速率限制追踪器测试
+
+【产品经理理解要点】
+验证API速率限制的追踪和剩余配额计算。
+- 速率限制头信息的正确解析
+- 影响API调用的配额管理
+
+──────────────────────────────────────────────────────────────
+Tests for agent.rate_limit_tracker — header parsing and formatting.
+"""
 
 import time
 import pytest

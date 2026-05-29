@@ -1,4 +1,12 @@
-"""Tests for session resume history display — _display_resumed_history() and
+"""恢复会话显示测试
+
+【产品经理理解要点】
+验证恢复历史会话时的显示逻辑。
+- 历史消息的正确回放
+- 影响回复旧对话的体验
+
+──────────────────────────────────────────────────────────────
+Tests for session resume history display — _display_resumed_history() and
 _preload_resumed_session().
 
 Verifies that resuming a session shows a compact recap of the previous

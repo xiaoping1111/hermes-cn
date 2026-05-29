@@ -1,4 +1,15 @@
-"""QQ Bot inline keyboards + approval / update-prompt senders.
+"""QQ 机器人内联键盘与审批交互模块
+
+【产品经理理解要点】
+在 QQ 对话中展示交互式按钮，让用户通过点击按钮完成审批和确认操作。
+- 核心职责：构建可点击的按钮面板、解析用户点击事件、发送审批请求消息
+- 审批场景：当 Agent 要执行敏感操作（如运行命令）时，向管理员发送带有"✅允许一次 / ⭐始终允许 / ❌拒绝"按钮的审批消息
+- 确认场景：当系统需要管理员确认（如是否升级）时，发送"✓确认 / ✗取消"按钮
+- 交互闭环：用户点击按钮后，QQ 平台推送事件到 Agent，Agent 解析决策并执行对应操作
+- 按钮互斥：同一组按钮点击一个后其余变灰，防止重复操作
+
+─────────────────────────────────────────────────────────────────
+QQ Bot inline keyboards + approval / update-prompt senders.
 
 QQ Bot v2 supports attaching inline keyboards to outbound messages. When a
 user clicks a button, the platform dispatches an ``INTERACTION_CREATE``

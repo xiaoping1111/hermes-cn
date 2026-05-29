@@ -1,4 +1,12 @@
-"""Tests for the google-gemini-cli OAuth + Code Assist inference provider.
+"""Gemini CloudCode测试
+
+【产品经理理解要点】
+验证Gemini CloudCode模型的特殊配置和调用逻辑。
+- CloudCode端点的正确构建
+- 影响Google Cloud用户的使用体验
+
+──────────────────────────────────────────────────────────────
+Tests for the google-gemini-cli OAuth + Code Assist inference provider.
 
 Covers:
 - agent/google_oauth.py — PKCE, credential I/O with packed refresh format,

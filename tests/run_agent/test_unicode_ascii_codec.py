@@ -1,8 +1,18 @@
-"""Tests for UnicodeEncodeError recovery with ASCII codec.
+"""Unicode ASCII编码测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中ascii only等29个场景的正确性
+- ascii only的正确性验证
+- removes non ascii的正确性验证
+- removes emoji的正确性验证
+- 另有26个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for UnicodeEncodeError recovery with ASCII codec.
 
 Covers the fix for issue #6843 — systems with ASCII locale (LANG=C)
-that can't encode non-ASCII characters in API request payloads.
-"""
+that can't encode non-ASCII characters in API request payloads."""
 
 import pytest
 

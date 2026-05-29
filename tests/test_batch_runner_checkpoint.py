@@ -1,4 +1,14 @@
-"""Tests for batch_runner checkpoint behavior — incremental writes, resume, atomicity."""
+"""批量运行检查点测试
+
+【产品经理理解要点】
+验证批量任务执行器的检查点保存、恢复和原子性，确保中断后能从断点继续执行。
+- 检查点的增量写入和恢复逻辑
+- 原子性保证：写入要么完整要么回滚
+- 影响批量处理长任务的容错能力
+
+──────────────────────────────────────────────────────────────
+Tests for batch_runner checkpoint behavior — incremental writes, resume, atomicity.
+"""
 
 import json
 import os

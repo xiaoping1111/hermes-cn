@@ -1,4 +1,13 @@
-"""Regression guard: DISCORD_ALLOWED_ROLES must be guild-scoped, not global.
+"""消息网关测试 - Discord平台·roles·dm·scope
+
+【产品经理理解要点】
+验证消息网关的Discord平台功能
+- 验证的功能: Regression guard: DISCORD_ALLOWED_ROLES must be guild-scoped, not global
+- 核心测试场景: dm rejects role held in other guild、dm role auth requires explicit guild optin、dm role auth optin rejects when not member 等共12个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression guard: DISCORD_ALLOWED_ROLES must be guild-scoped, not global.
 
 Prior to this fix, ``_is_allowed_user`` iterated ``self._client.guilds`` and
 returned True if the user held any allowed role in ANY mutual guild. This

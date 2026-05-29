@@ -1,4 +1,15 @@
-"""Tests for the Discord server introspection and management tool."""
+"""Discordtool测试
+
+【产品经理理解要点】
+验证工具系统模块中no token等90个场景的正确性
+- no token的正确性验证
+- empty token的正确性验证
+- valid token的正确性验证
+- 另有87个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the Discord server introspection and management tool."""
 
 import json
 import os

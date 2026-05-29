@@ -1,10 +1,20 @@
-"""Tests for AIAgent.steer() — mid-run user message injection.
+"""Agent导向控制测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中accepts non empty text等21个场景的正确性
+- accepts non empty text的正确性验证
+- rejects empty string的正确性验证
+- rejects whitespace only的正确性验证
+- 另有18个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for AIAgent.steer() — mid-run user message injection.
 
 /steer lets the user add a note to the agent's next tool result without
 interrupting the current tool call. The agent sees the note inline with
 tool output on its next iteration, preserving message-role alternation
-and prompt-cache integrity.
-"""
+and prompt-cache integrity."""
 from __future__ import annotations
 
 import threading

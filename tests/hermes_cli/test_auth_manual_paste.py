@@ -1,4 +1,13 @@
-"""Tests for the OAuth manual-paste fallback for browser-only remotes.
+"""命令行界面测试 - 认证授权·manual·paste
+
+【产品经理理解要点】
+验证命令行界面的认证授权功能
+- 验证的功能: Tests for the OAuth manual-paste fallback for browser-only remotes
+- 核心测试场景: is remote session detects known remote envvar、is remote session false when no remote envvars、parse full callback url 等共18个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the OAuth manual-paste fallback for browser-only remotes.
 
 Regression coverage for [#26923](https://github.com/NousResearch/hermes-agent/issues/26923):
 GCP Cloud Shell, GitHub Codespaces, AWS EC2 Instance Connect and

@@ -1,4 +1,14 @@
-"""Tests for hermes_cli/webhook.py — webhook subscription CLI."""
+"""命令行界面测试 - Webhook·CLI命令
+
+【产品经理理解要点】
+验证命令行界面的WebhookCLI命令功能
+- 验证的功能: Tests for hermes_cli/webhook.py — webhook subscription CLI
+- 核心测试场景: basic create、with options、custom secret 等共18个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli/webhook.py — webhook subscription CLI.
+"""
 
 import json
 import os

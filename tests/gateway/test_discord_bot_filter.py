@@ -1,4 +1,14 @@
-"""Tests for Discord bot message filtering (DISCORD_ALLOW_BOTS)."""
+"""消息网关测试 - Discord机器人过滤
+
+【产品经理理解要点】
+验证消息网关Discord机器人过滤的正确性
+- 验证的功能: Tests for Discord bot message filtering (DISCORD_ALLOW_BOTS)
+- 核心测试场景: own messages always ignored、human messages always accepted、allow bots none rejects bots 等共8个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Discord bot message filtering (DISCORD_ALLOW_BOTS).
+"""
 
 import asyncio
 import os

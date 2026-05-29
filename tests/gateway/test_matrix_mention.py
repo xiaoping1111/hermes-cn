@@ -1,4 +1,14 @@
-"""Tests for Matrix require-mention gating and auto-thread features."""
+"""消息网关测试 - Matrix平台·提及解析
+
+【产品经理理解要点】
+验证消息网关的Matrix平台提及解析功能
+- 验证的功能: Tests for Matrix require-mention gating and auto-thread features
+- 核心测试场景: require mention default ignores unmentioned、require mention default processes mentioned、require mention html pill 等共52个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Matrix require-mention gating and auto-thread features.
+"""
 
 import json
 import sys

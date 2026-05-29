@@ -1,4 +1,7 @@
-"""Tests for run_workflow.py — focuses on logic that doesn't require a server."""
+"""【产品经理理解要点】
+run_workflow.py的单元测试——专注于不需要服务器的纯逻辑测试。
+─────────────────────────────────────────────────────────────────
+Tests for run_workflow.py — focuses on logic that doesn't require a server."""
 
 from __future__ import annotations
 

@@ -1,4 +1,7 @@
-"""Named RGB palettes for pixel_art() and pixel_art_video().
+"""【产品经理理解要点】
+像素画调色板定义——收录经典游戏硬件的RGB调色板数据（NES、GameBoy、PICO-8、C64等），供pixel_art()和pixel_art_video()使用。
+─────────────────────────────────────────────────────────────────
+Named RGB palettes for pixel_art() and pixel_art_video().
 
 Palette RGB values sourced from pixel-art-studio (MIT License)
 https://github.com/Synero/pixel-art-studio — see ATTRIBUTION.md.

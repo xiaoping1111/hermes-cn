@@ -1,4 +1,12 @@
-"""
+"""消息网关测试 - Slack提及解析
+
+【产品经理理解要点】
+验证消息网关Slack提及解析的正确性
+- 验证的功能: Tests for Slack mention gating (require_mention / free_response_channels)
+- 核心测试场景: require mention defaults to true、require mention false、require mention true 等共55个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
 Tests for Slack mention gating (require_mention / free_response_channels).
 
 Follows the same pattern as test_whatsapp_group_gating.py.

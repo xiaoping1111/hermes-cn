@@ -1,4 +1,12 @@
-"""Tests for ``HermesCLI._prompt_text_input`` thread-safe input dispatch.
+"""提示文本输入线程安全测试
+
+【产品经理理解要点】
+验证提示词输入框在多线程环境下的安全性。
+- 输入状态的线程安全访问
+- 影响输入框在高并发下的稳定性
+
+──────────────────────────────────────────────────────────────
+Tests for ``HermesCLI._prompt_text_input`` thread-safe input dispatch.
 
 Raw ``input()`` prompts can race with prompt_toolkit when called from the TUI.
 The normal slash confirmations now use a prompt_toolkit-native modal, but

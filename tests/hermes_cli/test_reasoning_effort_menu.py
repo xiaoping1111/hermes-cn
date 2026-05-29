@@ -1,3 +1,17 @@
+"""命令行界面测试 - reasoning·effort·menu
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: 推理深度菜单配置
+- 核心测试场景: reasoning menu orders minimal before low
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - reasoning·effort·menu
+
+测试CLI命令处理与配置管理中reasoning相关的effort相关的menu功能
+"""
+
 import sys
 import types
 

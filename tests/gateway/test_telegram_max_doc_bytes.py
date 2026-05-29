@@ -1,4 +1,13 @@
-"""Tests for Telegram document-size cap.
+"""消息网关测试 - Telegram平台·max·doc·bytes
+
+【产品经理理解要点】
+验证消息网关的Telegram平台功能
+- 验证的功能: Tests for Telegram document-size cap
+- 核心测试场景: max doc bytes defaults to 20mb without base url、max doc bytes raised to 2gb when base url set、max doc bytes empty base url keeps default
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Telegram document-size cap.
 
 The public Telegram Bot API caps `getFile` at 20MB. A locally-hosted
 `telegram-bot-api` server raises that ceiling to 2GB. We treat the presence

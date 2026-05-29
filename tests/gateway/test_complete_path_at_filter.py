@@ -1,4 +1,13 @@
-"""Regression tests for the TUI gateway's `complete.path` handler.
+"""消息网关测试 - complete·path·at·消息过滤
+
+【产品经理理解要点】
+验证消息网关的消息过滤功能
+- 验证的功能: Regression tests for the TUI gateway's `complete.path` handler
+- 核心测试场景: at folder colon only dirs、at file colon only files、at folder bare without colon lists dirs 等共15个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests for the TUI gateway's `complete.path` handler.
 
 Reported during the TUI v2 blitz retest:
   - typing `@folder:` (and `@folder` with no colon yet) surfaced files

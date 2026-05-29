@@ -1,4 +1,15 @@
-"""Tests for tools/skills_hub.py — source adapters, lock file, taps, dedup logic."""
+"""技能市场测试
+
+【产品经理理解要点】
+验证工具系统模块中valid frontmatter等110个场景的正确性
+- valid frontmatter的正确性验证
+- no frontmatter的正确性验证
+- no closing delimiter的正确性验证
+- 另有107个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/skills_hub.py — source adapters, lock file, taps, dedup logic."""
 
 import json
 from pathlib import Path

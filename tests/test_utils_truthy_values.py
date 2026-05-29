@@ -1,4 +1,15 @@
-"""Tests for shared truthy-value helpers."""
+"""布尔值判断工具测试
+
+【产品经理理解要点】
+验证环境变量和配置值的真假判断函数。
+- 常见真值字符串（true, yes, on, 1）的识别
+- 常见假值字符串的识别
+- None值的默认处理
+- 影响配置开关的正确解析
+
+──────────────────────────────────────────────────────────────
+Tests for shared truthy-value helpers.
+"""
 
 from utils import env_var_enabled, is_truthy_value
 

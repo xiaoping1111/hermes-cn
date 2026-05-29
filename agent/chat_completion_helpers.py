@@ -1,11 +1,23 @@
-"""Helper functions for the chat-completions code path.
+"""Chat Completions 辅助函数 — 非流式 API 调用、请求构建、资源清理
+
+【产品经理理解要点】
+从主 Agent 循环中提取的各种辅助功能，用于标准的 Chat Completions API 路径：
+  - 构建 API 请求参数
+  - 非流式 API 调用的处理
+  - 提供商回退激活（主提供商失败时切换到备用）
+  - 达到最大迭代次数时的处理
+  - 每轮结束后的资源清理（关闭浏览器、虚拟机等）
+
+─────────────────────────────────────────────────────────────────
+
+Helper functions for the chat-completions code path.
 
 Extracted from :class:`AIAgent` for cleanliness — bodies of the
 non-streaming API call, request kwargs builder, assistant-message
 materializer, provider-fallback activator, max-iterations handler,
 and per-turn resource cleanup.
 
-Each function takes the parent ``AIAgent`` as its first argument
+Each function takes the parent ``AIAgent`` as their first argument
 (``agent``).  :class:`AIAgent` keeps thin forwarder methods so call
 sites unchanged.  Symbols that tests patch on ``run_agent`` (e.g.
 ``cleanup_vm`` / ``cleanup_browser`` in

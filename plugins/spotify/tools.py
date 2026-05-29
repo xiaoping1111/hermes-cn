@@ -1,4 +1,7 @@
-"""Native Spotify tools for Hermes (registered via plugins/spotify)."""
+"""Spotify原生工具集 — 播放控制、搜索、播放列表管理
+
+【产品经理理解要点】
+Spotify插件的工具实现，包含播放控制、搜索、设备管理、播放列表操作等7个AI可调用工具。"""
 
 from __future__ import annotations
 

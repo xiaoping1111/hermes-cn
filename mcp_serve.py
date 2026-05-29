@@ -1,4 +1,21 @@
 """
+Hermes MCP Server —— 将消息对话暴露为 MCP 工具
+
+【产品经理理解要点】
+这是系统的"外部集成接口"——让 Claude Code、Cursor、Codex 等其他 AI 工具
+可以通过 MCP 协议与 Hermes 的消息系统交互。
+
+核心能力（9个MCP工具）：
+  - conversations_list：列出所有活跃对话
+  - conversation_get：获取单个对话详情
+  - messages_read：读取对话消息历史
+  - messages_send：向指定平台发送消息
+  - events_poll / events_wait：实时获取新消息事件
+  - permissions_list_open / permissions_respond：审批请求管理
+  - channels_list：列出可发送消息的目标渠道
+
+激活方式：hermes mcp serve
+─────────────────────────────────────────────────────────────────
 Hermes MCP Server — expose messaging conversations as MCP tools.
 
 Starts a stdio MCP server that lets any MCP client (Claude Code, Cursor, Codex,

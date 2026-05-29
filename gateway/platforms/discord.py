@@ -1,6 +1,16 @@
 from __future__ import annotations
 
-"""
+"""Discord 平台适配器
+
+【产品经理理解要点】
+让 Agent 通过 Discord 与用户交互：
+  - 接收服务器频道和私信消息
+  - 发送 AI 回复（支持富文本格式）
+  - 支持线程（Thread）对话
+  - 处理斜杠命令
+
+─────────────────────────────────────────────────────────────────
+
 Discord platform adapter.
 
 Uses discord.py library for:

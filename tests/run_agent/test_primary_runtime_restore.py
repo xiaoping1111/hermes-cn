@@ -1,4 +1,15 @@
-"""Tests for per-turn primary runtime restoration and transport recovery.
+"""主运行时恢复测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中snapshot created at init等32个场景的正确性
+- snapshot created at init的正确性验证
+- snapshot includes compressor state的正确性验证
+- snapshot includes anthropic state when applicable的正确性验证
+- 另有29个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for per-turn primary runtime restoration and transport recovery.
 
 Verifies that:
 1. Fallback is turn-scoped: a new turn restores the primary model/provider
@@ -6,8 +17,7 @@ Verifies that:
 3. Context compressor state is restored alongside the runtime
 4. Transient transport errors get one recovery cycle before fallback
 5. Recovery is skipped for aggregator providers (OpenRouter, Nous)
-6. Non-transport errors don't trigger recovery
-"""
+6. Non-transport errors don't trigger recovery"""
 
 import time
 from types import SimpleNamespace

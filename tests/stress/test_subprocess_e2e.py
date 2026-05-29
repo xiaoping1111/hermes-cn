@@ -1,4 +1,12 @@
-"""E2E: dispatcher spawns real Python subprocess workers.
+"""子进程端到端测试
+
+【产品经理理解要点】
+验证压力测试模块中相关功能的正确性
+- 模块功能单元测试覆盖
+- 影响压力测试的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+E2E: dispatcher spawns real Python subprocess workers.
 
 This validates the IPC + lifecycle story that mocks can't:
   - spawn_fn returns a real PID
@@ -7,8 +15,7 @@ This validates the IPC + lifecycle story that mocks can't:
   - the child completes via the CLI with --summary + --metadata
   - the dispatcher observes all of this through the DB only
   - worker logs are captured to HERMES_HOME/kanban/logs/<task>.log
-  - crash detection works against a real dead PID
-"""
+  - crash detection works against a real dead PID"""
 
 import json
 import os

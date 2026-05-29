@@ -1,4 +1,13 @@
-"""Regression tests for Telegram channel_post updates.
+"""消息网关测试 - Telegram平台·频道管理·posts
+
+【产品经理理解要点】
+验证消息网关的Telegram平台频道管理功能
+- 验证的功能: Regression tests for Telegram channel_post updates
+- 核心测试场景: build message event uses channel identity for channel posts、text handler uses effective message for channel post、command handler uses effective message for channel post
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests for Telegram channel_post updates.
 
 Telegram channel broadcasts are delivered as ``Update.channel_post`` rather than
 ``Update.message``.  The adapter should use ``effective_message`` so channel

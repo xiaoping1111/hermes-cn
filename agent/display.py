@@ -1,4 +1,19 @@
-"""CLI presentation -- spinner, kawaii faces, tool preview formatting.
+"""CLI 展示层 — 终端输出美化、进度动画、工具执行反馈
+
+【产品经理理解要点】
+这个模块负责让 Agent 在终端上的交互体验更好看、更直观：
+
+  - 旋转动画（Spinner）：AI 思考时显示旋转等待动画
+  - 可爱表情反馈：工具执行成功/失败时有对应的表情提示
+  - 工具预览：执行工具时显示简洁的操作摘要
+  - Diff 高亮：文件变更时用颜色标记增删行
+  - 失败检测：自动识别工具执行结果中的错误并用红色标记
+
+纯展示层，不依赖 AIAgent 核心，方便独立测试和替换。
+
+─────────────────────────────────────────────────────────────────
+
+CLI presentation -- spinner, kawaii faces, tool preview formatting.
 
 Pure display functions and classes with no AIAgent dependency.
 Used by AIAgent._execute_tool_calls for CLI feedback.

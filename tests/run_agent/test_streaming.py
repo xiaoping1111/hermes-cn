@@ -1,8 +1,18 @@
-"""Tests for streaming token delivery infrastructure.
+"""流式响应测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中text only response等40个场景的正确性
+- text only response的正确性验证
+- tool call response的正确性验证
+- tool name not duplicated when resent per chunk的正确性验证
+- 另有37个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for streaming token delivery infrastructure.
 
 Tests the unified streaming API call, delta callbacks, tool-call
-suppression, provider fallback, and CLI streaming display.
-"""
+suppression, provider fallback, and CLI streaming display."""
 import json
 import threading
 import uuid

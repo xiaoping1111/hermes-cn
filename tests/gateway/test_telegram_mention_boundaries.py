@@ -1,4 +1,13 @@
-"""Tests for Telegram bot mention detection (bug #12545).
+"""消息网关测试 - Telegram平台·提及解析·boundaries
+
+【产品经理理解要点】
+验证消息网关的Telegram平台提及解析功能
+- 验证的功能: Tests for Telegram bot mention detection (bug #12545)
+- 核心测试场景: mention at start of message、mention mid sentence、mention at end of message 等共19个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Telegram bot mention detection (bug #12545).
 
 The old implementation used a naive substring check
 (`f"@{bot_username}" in text.lower()`), which incorrectly matched partial

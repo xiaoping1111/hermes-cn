@@ -1,12 +1,22 @@
-"""Tests for #1630 — gateway infinite 400 failure loop prevention.
+"""上下文溢出循环测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中generic 400 with small session is client error等16个场景的正确性
+- generic 400 with small session is client error的正确性验证
+- generic 400 with large token count triggers heuristic的正确性验证
+- generic 400 with many messages triggers heuristic的正确性验证
+- 另有13个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for #1630 — gateway infinite 400 failure loop prevention.
 
 Verifies that:
 1. Generic 400 errors with large sessions are treated as context-length errors
    and trigger compression instead of aborting.
 2. The gateway does not persist messages when the agent fails early, preventing
    the session from growing on each failure.
-3. Context-overflow failures produce helpful error messages suggesting /compact.
-"""
+3. Context-overflow failures produce helpful error messages suggesting /compact."""
 
 import pytest
 from types import SimpleNamespace

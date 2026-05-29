@@ -1,3 +1,17 @@
+"""命令行界面测试 - banner·git·state
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: 启动横幅Git状态显示
+- 核心测试场景: format banner version label without git state、format banner version label on upstream main、format banner version label with carried commits 等共4个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - banner·git·state
+
+测试CLI命令处理与配置管理中banner相关的git相关的state功能
+"""
+
 from unittest.mock import MagicMock, patch
 
 

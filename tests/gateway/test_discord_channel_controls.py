@@ -1,4 +1,14 @@
-"""Tests for Discord ignored_channels and no_thread_channels config."""
+"""消息网关测试 - Discord平台·频道管理·controls
+
+【产品经理理解要点】
+验证消息网关的Discord平台频道管理功能
+- 验证的功能: Tests for Discord ignored_channels and no_thread_channels config
+- 核心测试场景: ignored channel blocks message、ignored channel blocks even with mention、non ignored channel processes normally 等共14个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Discord ignored_channels and no_thread_channels config.
+"""
 
 from types import SimpleNamespace
 from datetime import datetime, timezone

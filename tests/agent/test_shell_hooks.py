@@ -1,4 +1,12 @@
-"""Tests for the shell-hooks subprocess bridge (agent.shell_hooks).
+"""Shell钩子测试
+
+【产品经理理解要点】
+验证Shell命令执行前后的钩子（hook）机制。
+- 命令执行前后的回调触发
+- 影响命令执行的可扩展性
+
+──────────────────────────────────────────────────────────────
+Tests for the shell-hooks subprocess bridge (agent.shell_hooks).
 
 These tests focus on the pure translation layer — JSON serialisation,
 JSON parsing, matcher behaviour, block-schema correctness, and the

@@ -1,4 +1,15 @@
-"""Tests for tools/send_message_tool.py."""
+"""消息发送tool测试
+
+【产品经理理解要点】
+验证工具系统模块中cron duplicate target is skipped and explained等120个场景的正确性
+- cron duplicate target is skipped and explained的正确性验证
+- resolved telegram topic name preserves thread id的正确性验证
+- display label target resolves via channel directory的正确性验证
+- 另有117个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools/send_message_tool.py."""
 
 import asyncio
 import json

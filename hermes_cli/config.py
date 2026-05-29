@@ -1,4 +1,12 @@
-"""
+"""配置管理
+
+【产品经理理解要点】
+管理 Hermes 的所有配置（config.yaml + .env），是系统设置的读写中枢。
+- 核心职责：读写 ~/.hermes/config.yaml（模型/工具集/网关等设置）和 ~/.hermes/.env（API 密钥等敏感信息）
+- 关键概念：多层配置（默认值→配置文件→环境变量→命令行参数）、`hermes config set/edit` 命令、API 密钥安全存储
+- 系统定位：所有模块获取配置的统一入口，是 Hermes 的"设置中心"
+
+─────────────────────────────────────────────────────────────────
 Configuration management for Hermes Agent.
 
 Config files are stored in ~/.hermes/ for easy access:

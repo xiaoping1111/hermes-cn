@@ -1,4 +1,13 @@
-"""Tests for agent.title_generator — auto-generated session titles."""
+"""会话标题生成测试
+
+【产品经理理解要点】
+验证对话标题的自动生成逻辑。
+- 标题根据对话内容自动生成
+- 影响会话列表的可读性
+
+──────────────────────────────────────────────────────────────
+Tests for agent.title_generator — auto-generated session titles.
+"""
 
 import threading
 from unittest.mock import MagicMock, patch

@@ -1,4 +1,13 @@
-"""Tests for PR1 pluggable image gen: scanner recursion, kinds, path keys.
+"""命令行界面测试 - plugin·扫描·recursion
+
+【产品经理理解要点】
+验证命令行界面的扫描功能
+- 验证的功能: Tests for PR1 pluggable image gen: scanner recursion, kinds, path keys
+- 核心测试场景: category namespace discovered、flat plugin key matches name、depth cap two 等共13个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for PR1 pluggable image gen: scanner recursion, kinds, path keys.
 
 Covers ``_scan_directory`` recursion into category namespaces
 (``plugins/image_gen/openai/``), ``kind`` parsing, path-derived registry

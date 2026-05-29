@@ -1,9 +1,19 @@
-"""Unit tests for browser_cdp tool.
+"""浏览器CDP协议tool测试
+
+【产品经理理解要点】
+验证工具系统模块中missing method returns error等19个场景的正确性
+- missing method returns error的正确性验证
+- non string method returns error的正确性验证
+- non dict params returns error的正确性验证
+- 另有16个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Unit tests for browser_cdp tool.
 
 Uses a tiny in-process ``websockets`` server to simulate a CDP endpoint —
 gives real protocol coverage (connect, send, recv, close) without needing
-a real Chrome instance.
-"""
+a real Chrome instance."""
 from __future__ import annotations
 
 import asyncio

@@ -1,4 +1,14 @@
-"""Tests for cron/jobs.py — schedule parsing, job CRUD, and due-job detection."""
+"""定时任务测试 - 任务管理
+
+【产品经理理解要点】
+验证定时任务调度引擎的任务管理功能
+- 验证的功能: Tests for cron/jobs.py — schedule parsing, job CRUD, and due-job detection
+- 核心测试场景: minutes、hours、days 等共79个场景
+- 业务影响: 定时任务可能无法正确调度执行，影响自动化工作流的可靠性
+
+─────────────────────────────────────────────────────────────────
+Tests for cron/jobs.py — schedule parsing, job CRUD, and due-job detection.
+"""
 
 import json
 import threading

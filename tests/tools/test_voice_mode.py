@@ -1,4 +1,15 @@
-"""Tests for tools.voice_mode -- all mocked, no real microphone or API calls."""
+"""语音模式测试
+
+【产品经理理解要点】
+验证工具系统模块中clean environment is available等60个场景的正确性
+- clean environment is available的正确性验证
+- ssh blocks voice的正确性验证
+- wsl without pulse blocks voice的正确性验证
+- 另有57个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools.voice_mode -- all mocked, no real microphone or API calls."""
 
 import os
 import struct

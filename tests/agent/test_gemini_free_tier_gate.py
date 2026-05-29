@@ -1,4 +1,13 @@
-"""Tests for Gemini free-tier detection and blocking."""
+"""Gemini免费层门控测试
+
+【产品经理理解要点】
+验证Gemini免费层的用量门控，防止超出免费额度。
+- 免费额度的检测和限制
+- 影响免费用户的用量管理
+
+──────────────────────────────────────────────────────────────
+Tests for Gemini free-tier detection and blocking.
+"""
 from __future__ import annotations
 
 from unittest.mock import MagicMock, patch

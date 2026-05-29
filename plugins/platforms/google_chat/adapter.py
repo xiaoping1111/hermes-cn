@@ -1,6 +1,15 @@
-"""
-Google Chat platform adapter.
+"""Google Chat平台适配器
 
+【产品经理理解要点】
+将Hermes AI代理接入Google Chat，通过Google Cloud Pub/Sub接收消息，通过Chat REST API发送消息，无需公网端点。
+- 核心能力：在Google Chat空间和私聊中接收和发送消息，支持文件附件
+- 消息接收：通过Pub/Sub Pull订阅接收事件，无需公网暴露
+- 并发模型：Pub/Sub回调运行在后台线程，通过asyncio桥接处理代理工作
+- 安全机制：消息去重、用户鉴权、服务账号认证
+- 审批卡片：支持交互式卡片审批和投票
+- 独立发送：支持cron任务通过REST API直接发送消息
+
+─────────────────────────────────────────────────────────────────
 Uses Google Cloud Pub/Sub (pull subscription) for inbound events and the
 Google Chat REST API for outbound messages. Pattern parallels Slack Socket
 Mode and Telegram long-polling: no public endpoint required.

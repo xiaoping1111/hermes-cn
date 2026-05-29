@@ -1,12 +1,22 @@
-"""Tests for MCP tool-handler auth-failure detection.
+"""MCP工具401处理测试
+
+【产品经理理解要点】
+验证工具系统模块中is auth error detects oauth flow error等7个场景的正确性
+- is auth error detects oauth flow error的正确性验证
+- is auth error detects oauth non interactive的正确性验证
+- is auth error detects httpx 401的正确性验证
+- 另有4个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for MCP tool-handler auth-failure detection.
 
 When a tool call raises UnauthorizedError / OAuthNonInteractiveError /
 httpx.HTTPStatusError(401), the handler should:
   1. Ask MCPOAuthManager.handle_401 if recovery is viable.
   2. If yes, trigger MCPServerTask._reconnect_event and retry once.
   3. If no, return a structured needs_reauth error so the model stops
-     hallucinating manual refresh attempts.
-"""
+     hallucinating manual refresh attempts."""
 import json
 from unittest.mock import MagicMock
 

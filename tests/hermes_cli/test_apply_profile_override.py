@@ -1,4 +1,13 @@
-"""Regression tests for _apply_profile_override HERMES_HOME guard (issue #22502).
+"""命令行界面测试 - 应用·多配置文件·override
+
+【产品经理理解要点】
+验证命令行界面的应用多配置文件功能
+- 验证的功能: Regression tests for _apply_profile_override HERMES_HOME guard (issue #22502)
+- 核心测试场景: hermes home at root with active profile is redirected、hermes home already profile dir is trusted、hermes home unset reads active profile 等共4个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression tests for _apply_profile_override HERMES_HOME guard (issue #22502).
 
 When HERMES_HOME is set to the hermes root (e.g. systemd hardcodes
 HERMES_HOME=/root/.hermes), _apply_profile_override must still read

@@ -1,4 +1,15 @@
-"""Tests for the FAL video gen plugin — family routing, payload shape."""
+"""Fal视频生成插件测试
+
+【产品经理理解要点】
+验证功能插件模块中fal provider registers等18个场景的正确性
+- fal provider registers的正确性验证
+- fal family catalog的正确性验证
+- kling 4k uses start image url的正确性验证
+- 另有15个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the FAL video gen plugin — family routing, payload shape."""
 
 from __future__ import annotations
 

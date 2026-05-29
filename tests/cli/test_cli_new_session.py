@@ -1,4 +1,13 @@
-"""Regression tests for CLI fresh-session commands."""
+"""CLI新建会话测试
+
+【产品经理理解要点】
+验证/new命令创建新会话的行为。
+- 新会话的干净创建
+- 影响多会话管理的体验
+
+──────────────────────────────────────────────────────────────
+Regression tests for CLI fresh-session commands.
+"""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""Tests for the WAL→DELETE journal-mode fallback on NFS / SMB / FUSE.
+"""WAL日志模式回退测试
+
+【产品经理理解要点】
+验证在网络文件系统（NFS/SMB）上WAL模式失败时能自动回退到DELETE模式。
+- WAL锁定错误时自动降级到DELETE模式
+- 降级后数据库仍可正常读写
+- 影响NFS共享存储用户的会话功能
+
+──────────────────────────────────────────────────────────────
+Tests for the WAL→DELETE journal-mode fallback on NFS / SMB / FUSE.
 
 When ``PRAGMA journal_mode=WAL`` raises ``OperationalError("locking protocol")``
 (SQLITE_PROTOCOL — typical on NFS/SMB), Hermes must fall back to

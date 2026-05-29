@@ -1,4 +1,15 @@
-"""Regression test for issue #22357 — gateway memory-nudge counter hydration.
+"""记忆提醒计数器水合测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中no history leaves counters at zero等7个场景的正确性
+- no history leaves counters at zero的正确性验证
+- seven user turns history hydrates to seven的正确性验证
+- thirteen turns history wraps via modulo的正确性验证
+- 另有4个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression test for issue #22357 — gateway memory-nudge counter hydration.
 
 The gateway creates a fresh AIAgent for each inbound message in several
 common scenarios (cache miss, 1h idle eviction at gateway/run.py
@@ -10,8 +21,7 @@ trigger (`_turns_since_memory >= _memory_nudge_interval`) can never be
 reached: every turn looks like turn 1 to the counter, so a user can chat
 for hours without ever seeing a "💾 Self-improvement review:" message.
 
-This test pins the hydration behavior added at the top of run_conversation().
-"""
+This test pins the hydration behavior added at the top of run_conversation()."""
 
 from __future__ import annotations
 

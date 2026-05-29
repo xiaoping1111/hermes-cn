@@ -1,9 +1,19 @@
-"""Tests for the Kanban dashboard plugin backend (plugins/kanban/dashboard/plugin_api.py).
+"""看板仪表盘插件测试
+
+【产品经理理解要点】
+验证功能插件模块中board empty等94个场景的正确性
+- board empty的正确性验证
+- create task appears on board的正确性验证
+- scheduled tasks have their own column not todo的正确性验证
+- 另有91个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the Kanban dashboard plugin backend (plugins/kanban/dashboard/plugin_api.py).
 
 The plugin mounts as /api/plugins/kanban/ inside the dashboard's FastAPI app,
 but here we attach its router to a bare FastAPI instance so we can test the
-REST surface without spinning up the whole dashboard.
-"""
+REST surface without spinning up the whole dashboard."""
 
 from __future__ import annotations
 

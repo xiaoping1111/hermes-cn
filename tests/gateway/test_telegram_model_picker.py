@@ -1,4 +1,14 @@
-"""Tests for Telegram model picker thread fallback."""
+"""消息网关测试 - Telegram平台·模型管理·picker
+
+【产品经理理解要点】
+验证消息网关的Telegram平台模型管理功能
+- 验证的功能: Tests for Telegram model picker thread fallback
+- 核心测试场景: send model picker escapes dynamic provider label、back button escapes dynamic provider label、model selected edits message on success 等共4个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Telegram model picker thread fallback.
+"""
 
 import sys
 from types import SimpleNamespace

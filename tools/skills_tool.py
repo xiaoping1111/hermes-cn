@@ -1,5 +1,17 @@
 #!/usr/bin/env python3
-"""
+"""技能查看工具 — 列出和查看技能文档
+
+【产品经理理解要点】
+技能是 AI 的"专项能力手册"，每个技能教 AI 如何做一类任务。
+这个工具提供两个功能：
+  - skills_list：列出所有可用技能的名称和简介
+  - skill_view：查看某个技能的完整指令
+
+技能采用"渐进式披露"设计：先看到简短列表，按需加载完整内容，
+避免一次性把所有技能细节塞进 AI 的上下文（太占 token）。
+
+─────────────────────────────────────────────────────────────────
+
 Skills Tool Module
 
 This module provides tools for listing and viewing skill documents.

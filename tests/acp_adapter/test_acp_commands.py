@@ -1,3 +1,12 @@
+"""ACP适配器命令测试
+
+【产品经理理解要点】
+验证ACP适配器处理的斜杠命令和特殊控制命令。
+- 会话管理命令的正确处理
+- 命令结果到ACP内容的转换
+- 影响ACP客户端的命令交互
+"""
+
 import sys
 from types import ModuleType, SimpleNamespace
 

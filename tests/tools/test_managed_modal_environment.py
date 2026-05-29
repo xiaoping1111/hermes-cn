@@ -1,3 +1,13 @@
+"""托管Modal沙箱environment测试
+
+【产品经理理解要点】
+验证工具系统模块中managed modal execute polls until completed等7个场景的正确性
+- managed modal execute polls until completed的正确性验证
+- managed modal create sends a stable idempotency key的正确性验证
+- managed modal execute cancels on interrupt的正确性验证
+- 另有4个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性"""
+
 import json
 import sys
 import tempfile

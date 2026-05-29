@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
-"""
+"""会话搜索工具 — 在历史对话中搜索相关信息
+
+【产品经理理解要点】
+AI 可以搜索过去的对话记录，找回之前讨论过的内容：
+  - 搜索模式：输入关键词，找到最相关的历史会话
+  - 查看模式：获取某次会话的完整内容
+  - 无需 AI 参与，纯数据库查询，零 token 消耗
+
+就像"聊天记录搜索"——从过去的对话中找回有用信息。
+
+─────────────────────────────────────────────────────────────────
+
 Session Search Tool - Long-Term Conversation Recall
 
 Single-shape tool with three calling modes (inferred from args, no explicit

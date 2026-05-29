@@ -1,4 +1,13 @@
-"""Tests verifying interrupt key consistency between adapter and gateway.
+"""消息网关测试 - 中断键匹配
+
+【产品经理理解要点】
+验证消息网关中断键匹配的正确性
+- 验证的功能: Tests verifying interrupt key consistency between adapter and gateway
+- 核心测试场景: session key differs from chat id for dm、session key differs from chat id for group、has pending interrupt requires session key 等共6个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests verifying interrupt key consistency between adapter and gateway.
 
 Regression test for a bug where monitor_for_interrupt() in _run_agent used
 source.chat_id to query the adapter, but the adapter stores interrupts under

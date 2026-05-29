@@ -1,4 +1,13 @@
-"""Tests for the ``/reload-skills`` gateway slash command handler.
+"""消息网关测试 - reload·技能系统·命令处理
+
+【产品经理理解要点】
+验证消息网关的技能系统命令处理功能
+- 验证的功能: Tests for the ``/reload-skills`` gateway slash command handler
+- 核心测试场景: reload skills handler queues note on diff、reload skills handler reports no changes、dispatcher routes reload skills 等共4个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the ``/reload-skills`` gateway slash command handler.
 
 Verifies:
   * dispatcher routes ``/reload-skills`` to ``_handle_reload_skills_command``

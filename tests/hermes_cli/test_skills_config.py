@@ -1,4 +1,14 @@
-"""Tests for hermes_cli/skills_config.py and skills_tool disabled filtering."""
+"""命令行界面测试 - 技能系统·配置管理
+
+【产品经理理解要点】
+验证命令行界面的技能系统配置管理功能
+- 验证的功能: Tests for hermes_cli/skills_config.py and skills_tool disabled filtering
+- 核心测试场景: empty config、reads global disabled、reads platform disabled 等共28个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli/skills_config.py and skills_tool disabled filtering.
+"""
 import pytest
 from unittest.mock import patch, MagicMock
 

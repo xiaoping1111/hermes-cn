@@ -1,4 +1,12 @@
-"""Tests for /save — the conversation snapshot slash command.
+"""保存对话位置测试
+
+【产品经理理解要点】
+验证保存对话到文件的路径选择和文件写入逻辑。
+- 保存路径的默认值和自定义
+- 影响对话导出的便捷性
+
+──────────────────────────────────────────────────────────────
+Tests for /save — the conversation snapshot slash command.
 
 Regression: the old implementation wrote ``hermes_conversation_<ts>.json``
 to the current working directory (CWD). Users who ran /save expected the

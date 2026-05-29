@@ -1,4 +1,14 @@
-"""Tests for webhook adapter dynamic route loading."""
+"""消息网关测试 - Webhook动态路由
+
+【产品经理理解要点】
+验证消息网关Webhook动态路由的正确性
+- 验证的功能: Tests for webhook adapter dynamic route loading
+- 核心测试场景: no dynamic file、loads dynamic routes、static takes precedence 等共6个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for webhook adapter dynamic route loading.
+"""
 
 import json
 import os

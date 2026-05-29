@@ -1,12 +1,22 @@
-"""Tests for Anthropic Sonnet long-context tier 429 handling.
+"""长上下文层级429测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中matches anthropic error等15个场景的正确性
+- matches anthropic error的正确性验证
+- matches lowercase的正确性验证
+- matches openrouter model id的正确性验证
+- 另有12个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for Anthropic Sonnet long-context tier 429 handling.
 
 When Claude Max users without "extra usage" hit the 1M context tier
 on Sonnet, Anthropic returns HTTP 429 "Extra usage is required for long
 context requests."  This is NOT a transient rate limit — the agent should
 reduce context_length to 200k and compress instead of retrying.
 
-Only Sonnet is affected — Opus 1M is general access.
-"""
+Only Sonnet is affected — Opus 1M is general access."""
 
 import pytest
 from types import SimpleNamespace

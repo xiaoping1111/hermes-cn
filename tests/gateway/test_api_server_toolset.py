@@ -1,4 +1,14 @@
-"""Tests for hermes-api-server toolset and API server tool availability."""
+"""消息网关测试 - api·server·工具系统
+
+【产品经理理解要点】
+验证消息网关的工具系统功能
+- 验证的功能: Tests for hermes-api-server toolset and API server tool availability
+- 核心测试场景: toolset exists、toolset validates、toolset includes web tools 等共12个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes-api-server toolset and API server tool availability.
+"""
 import os
 import json
 from unittest.mock import patch, MagicMock

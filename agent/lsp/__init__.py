@@ -1,4 +1,13 @@
-"""Language Server Protocol (LSP) integration for Hermes Agent.
+"""LSP 语言服务集成入口
+
+【产品经理理解要点】
+为代码编辑提供实时语法与语义检查能力，在写入文件后自动捕获报错并反馈给 AI。
+- 仅在 Git 仓库内激活，避免非项目目录启动无用后台服务
+- 对外暴露 get_service() 单例接口，文件操作层自动调用
+- 找不到项目或未启用时自动降级为内置语法检查，不影响原有流程
+
+─────────────────────────────────────────────────────────────────────────
+Language Server Protocol (LSP) integration for Hermes Agent.
 
 Hermes runs full language servers (pyright, gopls, rust-analyzer,
 typescript-language-server, etc.) as subprocesses and pipes their

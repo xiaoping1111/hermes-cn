@@ -1,4 +1,13 @@
-"""SQLite-backed Kanban board for multi-profile, multi-project collaboration.
+"""看板数据库层
+
+【产品经理理解要点】
+看板系统的 SQLite 数据存储层，管理任务状态、事件日志和多工作区隔离。
+- 核心职责：SQLite 数据库 Schema 管理、任务 CRUD、状态流转、事件审计日志、多工作区/多看板支持
+- 关键概念：看板数据库=SQLite 存储、任务生命周期（Triage→Todo→Ready→In Progress→Done）、跨 Profile 共享看板、工作区=任务的工作目录隔离
+- 系统定位：看板系统的数据持久化层，kanban.py 的底层存储
+
+─────────────────────────────────────────────────────────────────
+SQLite-backed Kanban board for multi-profile, multi-project collaboration.
 
 In a fresh install the board lives at ``<root>/kanban.db`` where
 ``<root>`` is the **shared Hermes root** (the parent of any active

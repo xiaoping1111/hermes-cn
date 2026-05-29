@@ -1,4 +1,12 @@
-"""Stress test for parent-completion invariant at the claim gate.
+"""并发父进程门控测试
+
+【产品经理理解要点】
+验证压力测试模块中相关功能的正确性
+- 模块功能单元测试覆盖
+- 影响压力测试的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Stress test for parent-completion invariant at the claim gate.
 
 Simulates the create-then-link race described in RCA t_a6acd07d:
 
@@ -14,8 +22,7 @@ instead of spawning.
 
 Run as a script (`python tests/stress/test_concurrency_parent_gate.py`)
 or via `pytest --run-stress`. The default pytest collection in
-tests/stress/conftest.py ignores *.py globs, so this is a script.
-"""
+tests/stress/conftest.py ignores *.py globs, so this is a script."""
 from __future__ import annotations
 
 import os

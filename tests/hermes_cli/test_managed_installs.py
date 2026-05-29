@@ -1,3 +1,17 @@
+"""命令行界面测试 - managed·installs
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: 托管安装管理
+- 核心测试场景: get managed system homebrew、format managed message homebrew、recommended update command defaults to hermes update 等共5个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+命令行界面测试 - managed·installs
+
+测试CLI命令处理与配置管理中managed相关的installs功能
+"""
+
 from types import SimpleNamespace
 from unittest.mock import patch
 

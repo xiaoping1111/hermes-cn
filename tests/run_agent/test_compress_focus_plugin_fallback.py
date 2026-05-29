@@ -1,11 +1,18 @@
-"""Regression test: _compress_context tolerates plugin engines with strict signatures.
+"""焦点插件压缩降级测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中compress context falls back when engine rejects focus topic的正确性
+- compress context falls back when engine rejects focus...的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression test: _compress_context tolerates plugin engines with strict signatures.
 
 Added to ``ContextEngine.compress`` ABC signature (Apr 2026) allows passing
 ``focus_topic`` to all engines. Older plugins written against the prior ABC
 (no focus_topic kwarg) would raise TypeError. _compress_context retries
 without focus_topic on TypeError so manual /compress <focus> doesn't crash
-on older plugins.
-"""
+on older plugins."""
 
 from unittest.mock import MagicMock
 

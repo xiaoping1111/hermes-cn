@@ -1,5 +1,12 @@
-"""OpenViking memory plugin — full bidirectional MemoryProvider interface.
+"""OpenViking记忆供应商 — 火山引擎上下文数据库
 
+【产品经理理解要点】
+提供基于火山引擎(Volcengine/字节跳动)OpenViking的上下文数据库服务，以文件系统层级组织AI知识。
+- 核心能力：viking:// URI文件系统层级存储、分层的上下文加载、自动记忆提取、会话管理
+- 使用场景：企业级知识管理，将AI知识组织为结构化的文件系统
+- 认证：OPENVIKING_API_KEY，支持多租户（Account/User/Agent）
+
+─────────────────────────────────────────────────────────────────
 Context database by Volcengine (ByteDance) that organizes agent knowledge
 into a filesystem hierarchy (viking:// URIs) with tiered context loading,
 automatic memory extraction, and session management.

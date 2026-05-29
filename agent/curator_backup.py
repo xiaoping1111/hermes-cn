@@ -1,4 +1,19 @@
-"""Curator snapshot + rollback.
+"""技能策展人备份与回滚 — 在技能维护前自动备份，支持一键恢复
+
+【产品经理理解要点】
+技能策展人（curator）会自动修改技能库，万一改坏了需要能恢复。
+这个模块提供完整的备份和回滚机制：
+
+  - 自动备份：策展人每次运行前自动创建技能库快照（tar.gz 压缩包）
+  - 按需恢复：用户可以回滚到任意一次快照
+  - 安全回滚：回滚操作本身也会创建快照，所以回滚也能撤消
+
+备份位置：~/.hermes/skills/.curator_backups/<时间戳>/
+不备份的内容：.hub/（Hub 管理的技能）、已有的备份目录
+
+─────────────────────────────────────────────────────────────────
+
+Curator snapshot + rollback.
 
 A pre-run snapshot of ``~/.hermes/skills/`` (excluding ``.curator_backups/``
 itself) is taken before any mutating curator pass. Snapshots are tar.gz

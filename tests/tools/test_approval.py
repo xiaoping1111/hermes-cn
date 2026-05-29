@@ -1,4 +1,15 @@
-"""Tests for the dangerous command approval module."""
+"""审批流测试
+
+【产品经理理解要点】
+验证工具系统模块中unquoted yaml off boolean false maps to off等184个场景的正确性
+- unquoted yaml off boolean false maps to off的正确性验证
+- string off still maps to off的正确性验证
+- smart approval uses call llm的正确性验证
+- 另有181个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the dangerous command approval module."""
 
 import ast
 from pathlib import Path

@@ -1,4 +1,13 @@
-"""Remote model catalog fetcher.
+"""远程模型目录获取器
+
+【产品经理理解要点】
+从 Hermes 官网动态获取最新的模型列表（OpenRouter/Nous 等），避免每次发版才能更新可用模型。
+- 核心职责：获取/验证/缓存远程模型清单，网络不可用时回退到内置列表，磁盘缓存避免频繁请求
+- 关键概念：远程模型目录=无需发版即可更新的模型列表、TTL 缓存失效、磁盘缓存（~/.hermes/cache/）
+- 系统定位：模型选择功能的热更新数据源
+
+─────────────────────────────────────────────────────────────────
+Remote model catalog fetcher.
 
 The Hermes docs site hosts a JSON manifest of curated models for providers
 we want to update without shipping a release (currently OpenRouter and

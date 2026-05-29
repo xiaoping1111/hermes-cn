@@ -1,4 +1,12 @@
-"""Tests for ``agent.conversation_loop._restore_or_build_system_prompt``.
+"""系统提示词恢复测试
+
+【产品经理理解要点】
+验证系统提示词在会话恢复时能正确还原。
+- 恢复会话时系统提示词的完整性
+- 影响会话恢复后的AI行为一致性
+
+──────────────────────────────────────────────────────────────
+Tests for ``agent.conversation_loop._restore_or_build_system_prompt``.
 
 Validates the gateway DB-roundtrip path that keeps the system prompt
 byte-stable across turns (fresh AIAgent → must restore from session DB

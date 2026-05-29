@@ -1,4 +1,14 @@
-"""Regression tests for approval-state cleanup on session boundaries."""
+"""消息网关测试 - 会话管理·boundary·security·state
+
+【产品经理理解要点】
+验证消息网关的会话管理功能
+- 验证的功能: Regression tests for approval-state cleanup on session boundaries
+- 核心测试场景: resume clears session scoped approval and yolo state、branch clears session scoped approval and yolo state、branch preserves persisted assistant metadata 等共5个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests for approval-state cleanup on session boundaries.
+"""
 
 from datetime import datetime
 from unittest.mock import MagicMock

@@ -1,4 +1,15 @@
-"""Tests for CLI voice mode integration -- command parsing, markdown stripping,
+"""语音CLI集成测试
+
+【产品经理理解要点】
+验证工具系统模块中strips bold等84个场景的正确性
+- strips bold的正确性验证
+- strips italic的正确性验证
+- strips inline code的正确性验证
+- 另有81个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for CLI voice mode integration -- command parsing, markdown stripping,
 state management, streaming TTS activation, voice message prefix, _vprint."""
 
 import ast

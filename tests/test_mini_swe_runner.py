@@ -1,3 +1,12 @@
+"""迷你SWE运行器测试
+
+【产品经理理解要点】
+验证迷你SWE（软件工程）任务运行器的模型调用逻辑。
+- Kimi模型不传递客户端温度参数
+- 运行器正确初始化和调用模型
+- 影响自动化代码修复功能
+"""
+
 from types import SimpleNamespace
 from unittest.mock import MagicMock, patch
 

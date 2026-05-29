@@ -1,4 +1,13 @@
-"""Tests for hermes_cli.runtime_provider._detect_api_mode_for_url.
+"""命令行界面测试 - API模式检测
+
+【产品经理理解要点】
+验证命令行界面API模式检测的正确性
+- 验证的功能: Tests for hermes_cli.runtime_provider._detect_api_mode_for_url
+- 核心测试场景: openai api returns codex responses、xai api returns codex responses、openrouter is not codex responses 等共16个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for hermes_cli.runtime_provider._detect_api_mode_for_url.
 
 The helper maps base URLs to api_modes for three cases:
   * api.openai.com  → codex_responses

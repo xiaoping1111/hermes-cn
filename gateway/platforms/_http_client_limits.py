@@ -1,7 +1,14 @@
-"""Shared HTTP client factory for long-lived platform adapters.
+"""共享 HTTP 客户端工厂 — 统一平台适配器的 HTTP 连接管理
 
-Gateway messaging platforms (QQ Bot, Feishu, WeCom, DingTalk, Signal,
-BlueBubbles, WeCom-callback) keep a persistent ``httpx.AsyncClient``
+【产品经理理解要点】
+各平台适配器保持长连接 HTTP 客户端以提高性能，这个模块统一管理
+连接池大小和超时设置，防止文件描述符耗尽。
+
+─────────────────────────────────────────────────────────────────
+
+Shared HTTP client factory for long-lived platform adapters.
+
+Gateway messaging platforms keep a persistent ``httpx.AsyncClient``
 alive for the adapter's lifetime.  That amortises TLS/connection setup
 across many API calls, but it also means the process's file-descriptor
 pressure is sensitive to how aggressively the pool recycles idle keep-

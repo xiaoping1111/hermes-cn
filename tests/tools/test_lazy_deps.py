@@ -1,4 +1,15 @@
-"""Tests for tools.lazy_deps — the supply-chain-resilient on-demand installer.
+"""懒加载依赖测试
+
+【产品经理理解要点】
+验证工具系统模块中safe specs pass等36个场景的正确性
+- safe specs pass的正确性验证
+- unsafe specs rejected的正确性验证
+- unknown feature raises的正确性验证
+- 另有33个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for tools.lazy_deps — the supply-chain-resilient on-demand installer.
 
 The lazy_deps module is the architectural fix for the "one quarantined
 package nukes 10 unrelated extras" problem. It exposes ``ensure(feature)``
@@ -7,8 +18,7 @@ like a URL / file path, runs venv-scoped, and respects the
 ``security.allow_lazy_installs`` config flag.
 
 These tests cover the security boundary and the public API. The real pip
-call is mocked — we never actually shell out during unit tests.
-"""
+call is mocked — we never actually shell out during unit tests."""
 
 from __future__ import annotations
 

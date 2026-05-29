@@ -1,4 +1,13 @@
-"""Tests for the Microsoft Entra ID adapter (agent/azure_identity_adapter.py).
+"""Azure Identity适配器测试
+
+【产品经理理解要点】
+验证Azure Identity认证适配器，支持Entra ID令牌获取。
+- DefaultAzureCredential的正确包装
+- 令牌获取和缓存
+- 影响Azure企业认证的用户体验
+
+──────────────────────────────────────────────────────────────
+Tests for the Microsoft Entra ID adapter (agent/azure_identity_adapter.py).
 
 Covers:
   - Scope resolution per Azure host shape

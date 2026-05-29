@@ -1,9 +1,19 @@
-"""Regression test for #11884: _make_agent must resolve runtime provider.
+"""Agent创建提供者测试
+
+【产品经理理解要点】
+验证TUI网关模块中make agent passes resolved provider等7个场景的正确性
+- make agent passes resolved provider的正确性验证
+- make agent ignores display personality without system prompt的正确性验证
+- make agent honors tui launch env flags的正确性验证
+- 另有4个测试场景覆盖
+- 影响TUI网关的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression test for #11884: _make_agent must resolve runtime provider.
 
 Without resolve_runtime_provider(), bare-slug models in config
 (e.g. ``claude-opus-4-6`` with ``model.provider: anthropic``) leave
-provider/base_url/api_key empty in AIAgent, causing HTTP 404.
-"""
+provider/base_url/api_key empty in AIAgent, causing HTTP 404."""
 
 import os
 from unittest.mock import MagicMock, patch

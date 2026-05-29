@@ -1,3 +1,11 @@
+"""CLI密钥捕获测试
+
+【产品经理理解要点】
+验证CLI中API密钥等敏感信息的输入和存储。
+- 密钥输入时的隐藏显示
+- 影响API密钥配置的安全性
+"""
+
 import queue
 import threading
 import time

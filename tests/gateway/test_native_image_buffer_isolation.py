@@ -1,3 +1,17 @@
+"""消息网关测试 - native·图片处理·缓冲管理·isolation
+
+【产品经理理解要点】
+验证消息网关的图片处理缓冲管理功能
+- 验证的功能: 原生图片缓冲区隔离机制
+- 核心测试场景: native image buffer isolated per session、native image buffer not cleared by other sessions without images
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+消息网关测试 - native·图片处理·缓冲管理·isolation
+
+测试多平台消息接入与命令分发中native相关的image相关的buffer相关的isolation功能
+"""
+
 import pytest
 
 from gateway.config import GatewayConfig, Platform, PlatformConfig

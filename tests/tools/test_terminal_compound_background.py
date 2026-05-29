@@ -1,4 +1,15 @@
-"""Regression tests for _rewrite_compound_background.
+"""终端复合后台测试
+
+【产品经理理解要点】
+验证工具系统模块中simple and background等34个场景的正确性
+- simple and background的正确性验证
+- or background的正确性验证
+- chained and的正确性验证
+- 另有31个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for _rewrite_compound_background.
 
 Context: bash parses ``A && B &`` as ``(A && B) &`` — it forks a subshell
 for the compound and backgrounds the subshell. Inside the subshell, B
@@ -9,8 +20,7 @@ pattern leak processes across the fleet (vela, sal, combiagent).
 
 The rewriter fixes this by wrapping the tail in a brace group —
 ``A && { B & }`` — so B runs as a simple backgrounded command inside
-the current shell. No subshell fork, no wait.
-"""
+the current shell. No subshell fork, no wait."""
 
 import pytest
 

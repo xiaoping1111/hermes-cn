@@ -1,4 +1,13 @@
-"""Tests for /update gateway slash command.
+"""消息网关测试 - 更新·命令处理
+
+【产品经理理解要点】
+验证消息网关的更新命令处理功能
+- 验证的功能: Tests for /update gateway slash command
+- 核心测试场景: managed install returns package manager guidance、no git directory、no hermes binary 等共28个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for /update gateway slash command.
 
 Tests both the _handle_update_command handler (spawns update process) and
 the _send_update_notification startup hook (sends results after restart).

@@ -1,4 +1,17 @@
-"""Session adapter for codex app-server runtime.
+"""Codex App Server 会话管理 — 每个用户会话对应一个 Codex 对话线程
+
+【产品经理理解要点】
+这个模块管理 Codex App Server 模式下的对话会话：
+  - 每次新会话启动一个 Codex 子进程和对话线程
+  - 每轮对话发送用户消息，等待 Codex 完成处理
+  - 处理 Codex 发回的工具调用审批请求
+  - 对话结束后关闭子进程
+
+从调用者角度看是单线程的，内部复杂的多线程通信已被封装。
+
+─────────────────────────────────────────────────────────────────
+
+Session adapter for codex app-server runtime.
 
 Owns one Codex thread per Hermes session. Drives `turn/start`, consumes
 streaming notifications via CodexEventProjector, handles server-initiated

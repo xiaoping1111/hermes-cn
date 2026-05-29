@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""技能中心 CLI —— 技能的搜索、安装、更新和移除
+
+【产品经理理解要点】
+Hermes 技能市场的统一命令行入口，管理技能的完整生命周期。
+- 同时支持 CLI 命令 `hermes skills <子命令>` 和聊天内斜杠命令 `/skills`
+- 从内置、本地和远程来源搜索、安装和更新技能
+- 提供技能详情查看、分类浏览等功能
+
+─────────────────────────────────────────────────────────────────
 Skills Hub CLI — Unified interface for the Hermes Skills Hub.
 
 Powers both:

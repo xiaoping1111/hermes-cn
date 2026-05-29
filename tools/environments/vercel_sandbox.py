@@ -1,4 +1,15 @@
-"""Vercel Sandbox execution environment.
+"""Vercel沙箱执行环境 — 使用Vercel SDK运行云端沙箱
+
+【产品经理理解要点】
+本模块使用Vercel平台的沙箱服务执行命令，提供云端隔离环境，适合需要快速启动和弹性扩展的场景。
+- 沙箱管理：通过Vercel Python SDK创建、恢复、停止沙箱，支持从快照恢复以保持文件系统
+- 自动恢复：沙箱异常终止时自动检测并重新创建，确保命令执行不中断
+- 重试机制：对Vercel API的瞬态错误（429限流、5xx服务器错误等）自动重试
+- 文件同步：通过SDK的write_files和tar命令批量传输文件，效率优于逐文件上传
+- 注意：不支持自定义磁盘大小，仅使用Vercel默认配置
+
+─────────────────────────────────────────────────────────────────
+Vercel Sandbox execution environment.
 
 Uses the Vercel Python SDK to run commands in cloud sandboxes through Hermes'
 shared ``BaseEnvironment`` shell contract. When persistence is enabled, the

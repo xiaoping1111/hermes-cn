@@ -1,4 +1,13 @@
 """
+供应商身份注册中心
+
+【产品经理理解要点】
+Hermes 支持的所有 AI 供应商（OpenAI、Anthropic、xAI、Nous 等）的统一元数据源。
+- 三层数据合并：models.dev 目录 + Hermes 覆盖层 + 用户自定义配置
+- 管理供应商别名（如 "claude" → "anthropic"）、传输协议和认证方式
+- 供应商解析的完整链路：内置 → models.dev → 用户配置
+
+─────────────────────────────────────────────────────────────────
 Single source of truth for provider identity in Hermes Agent.
 
 Two data sources, merged at runtime:

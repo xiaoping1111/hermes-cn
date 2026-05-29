@@ -1,4 +1,13 @@
-"""Regression tests for the OAuth dispatcher in hermes_cli.web_server.
+"""命令行界面测试 - web·OAuth认证·dispatch
+
+【产品经理理解要点】
+验证命令行界面的OAuth认证功能
+- 验证的功能: Regression tests for the OAuth dispatcher in hermes_cli.web_server
+- 核心测试场景: minimax login does not launch anthropic flow、nous dashboard device flow honors legacy scope override、nous dashboard device flow retries legacy scope on invoke refusal 等共7个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression tests for the OAuth dispatcher in hermes_cli.web_server.
 
 Bug history (2026-05-09): the `_OAUTH_PROVIDER_CATALOG` had two entries
 flagged ``flow: "pkce"`` — anthropic and minimax-oauth — and the

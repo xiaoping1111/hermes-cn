@@ -1,4 +1,15 @@
-"""Unit tests for the Vercel Sandbox terminal backend."""
+"""Vercel沙箱sandboxenvironment测试
+
+【产品经理理解要点】
+验证工具系统模块中default cwd tracks remote workspace root等15个场景的正确性
+- default cwd tracks remote workspace root的正确性验证
+- tilde cwd resolves against remote home的正确性验证
+- pending sandbox timeout raises descriptive error的正确性验证
+- 另有12个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Unit tests for the Vercel Sandbox terminal backend."""
 
 from __future__ import annotations
 

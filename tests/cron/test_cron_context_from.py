@@ -1,4 +1,14 @@
-"""Tests for cron job context_from feature (issue #5439 Option C)."""
+"""定时任务测试 - cron·context
+
+【产品经理理解要点】
+验证定时任务调度引擎相关功能的正确性
+- 验证的功能: Tests for cron job context_from feature (issue #5439 Option C)
+- 核心测试场景: create job with context from string、create job with context from list、create job without context from 等共20个场景
+- 业务影响: 定时任务可能无法正确调度执行，影响自动化工作流的可靠性
+
+─────────────────────────────────────────────────────────────────
+Tests for cron job context_from feature (issue #5439 Option C).
+"""
 
 import sys
 from pathlib import Path

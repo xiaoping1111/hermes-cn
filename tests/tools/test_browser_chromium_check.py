@@ -1,10 +1,20 @@
-"""Tests for Chromium-presence detection in browser_tool.
+"""浏览器Chromium检查测试
+
+【产品经理理解要点】
+验证工具系统模块中respects playwright browsers path env等10个场景的正确性
+- respects playwright browsers path env的正确性验证
+- ignores playwright browsers path zero的正确性验证
+- always includes default ms playwright cache的正确性验证
+- 另有7个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for Chromium-presence detection in browser_tool.
 
 Regression guard for the "browser tool advertised but Chromium missing"
 class of bug — where ``agent-browser`` CLI is discoverable but no
 Chromium build is on disk, causing every browser_* tool call to hang
-for the full command timeout before surfacing a useless error.
-"""
+for the full command timeout before surfacing a useless error."""
 
 import os
 from pathlib import Path

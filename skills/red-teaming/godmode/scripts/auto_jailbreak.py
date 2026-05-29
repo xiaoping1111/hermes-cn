@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""
+"""【产品经理理解要点】
+自动越狱测试流水线——自动测试各种越狱技术对当前模型的效果，找到有效方案并写入配置文件。
+产品理解：这是安全红队评估工具，自动测试模型安全边界，帮助识别防护薄弱点。
+─────────────────────────────────────────────────────────────────
 Auto-Jailbreak Pipeline
 
 Automatically tests jailbreak techniques against the current model,

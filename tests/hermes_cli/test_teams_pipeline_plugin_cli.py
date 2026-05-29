@@ -1,4 +1,14 @@
-"""Tests for the teams_pipeline plugin CLI."""
+"""命令行界面测试 - LINE插件
+
+【产品经理理解要点】
+验证命令行界面LINE插件的正确性
+- 验证的功能: Tests for the teams_pipeline plugin CLI
+- 核心测试场景: register cli builds tree、list prints recent jobs、show prints job json 等共8个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for the teams_pipeline plugin CLI.
+"""
 
 from __future__ import annotations
 

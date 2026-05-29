@@ -1,4 +1,13 @@
-"""Host-specific gating in ``hermes_cli.gateway._all_platforms()``.
+"""命令行界面测试 - gateway·platform·门控策略
+
+【产品经理理解要点】
+验证命令行界面的门控策略功能
+- 验证的功能: Host-specific gating in ``hermes_cli.gateway._all_platforms()``
+- 核心测试场景: matrix present on linux、matrix present on macos、matrix hidden on windows 等共4个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Host-specific gating in ``hermes_cli.gateway._all_platforms()``.
 
 Some messaging platforms can't function on every host. The gate lives
 in one place — ``_all_platforms()`` — so the setup wizard, the curses

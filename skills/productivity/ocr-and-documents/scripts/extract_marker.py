@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Extract text from documents using marker-pdf. High-quality OCR + layout analysis.
+"""【产品经理理解要点】
+marker-pdf文档提取工具——使用marker进行高质量OCR和版面分析，支持PDF/DOCX/PPTX/XLSX/HTML/EPUB/图片。首次使用需下载约3-5GB模型文件。
+─────────────────────────────────────────────────────────────────
+Extract text from documents using marker-pdf. High-quality OCR + layout analysis.
 
 Requires ~3-5GB disk (PyTorch + models downloaded on first use).
 Supports: PDF, DOCX, PPTX, XLSX, HTML, EPUB, images.

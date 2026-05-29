@@ -1,5 +1,18 @@
 #!/usr/bin/env python3
-"""
+"""技能管理工具 — 创建、编辑、删除技能
+
+【产品经理理解要点】
+让 AI 能自主管理技能——把成功的做事方法固化为可复用的技能：
+  - create：创建新技能（生成 SKILL.md + 目录结构）
+  - update：更新现有技能的内容
+  - delete：删除技能
+
+技能 vs 记忆的区别：
+  - 记忆（MEMORY.md）：广泛但声明性的（"用户喜欢简洁风格"）
+  - 技能（SKILL.md）：聚焦且可执行的（"如何写技术方案"）
+
+─────────────────────────────────────────────────────────────────
+
 Skill Manager Tool -- Agent-Managed Skill Creation & Editing
 
 Allows the agent to create, update, and delete skills, turning successful

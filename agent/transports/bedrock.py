@@ -1,4 +1,12 @@
-"""AWS Bedrock Converse API transport.
+"""AWS Bedrock 传输层 — 通过 AWS SDK 调用 Bedrock 模型
+
+【产品经理理解要点】
+将 Agent 的请求转换为 AWS Bedrock Converse API 格式的传输层实现。
+Bedrock 使用 boto3 客户端（非 OpenAI SDK），传输层只负责格式转换。
+
+─────────────────────────────────────────────────────────────────
+
+AWS Bedrock Converse API transport.
 
 Delegates to the existing adapter functions in agent/bedrock_adapter.py.
 Bedrock uses its own boto3 client (not the OpenAI SDK), so the transport

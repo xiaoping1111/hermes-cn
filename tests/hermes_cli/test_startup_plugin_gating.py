@@ -1,4 +1,13 @@
-"""Guards for CLI startup performance regression.
+"""命令行界面测试 - startup·plugin·门控策略
+
+【产品经理理解要点】
+验证命令行界面的门控策略功能
+- 验证的功能: Guards for CLI startup performance regression
+- 核心测试场景: first positional argv、discovery skipped for builtins、discovery runs for unknown positional 等共5个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Guards for CLI startup performance regression.
 
 ``hermes_cli.main`` skips eager plugin discovery at argparse-setup time
 when the invocation is clearly targeting a known built-in subcommand.

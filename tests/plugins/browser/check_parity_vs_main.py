@@ -1,4 +1,12 @@
-"""Behavior-parity check for the browser-provider plugin migration (#25214).
+"""浏览器特性对齐验证
+
+【产品经理理解要点】
+验证功能插件模块中相关功能的正确性
+- 模块功能单元测试覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Behavior-parity check for the browser-provider plugin migration (#25214).
 
 Spawns one subprocess per (version, scenario) cell — pinned to either
 origin/main (legacy in-tree providers + class-instantiation lookup) or
@@ -14,8 +22,7 @@ which would be a real regression for users on the existing config keys.
 Run from the PR worktree:
 
     cd ~/.hermes/hermes-agent/.worktrees/browser-providers-plugin
-    python tests/plugins/browser/check_parity_vs_main.py
-"""
+    python tests/plugins/browser/check_parity_vs_main.py"""
 from __future__ import annotations
 
 import json

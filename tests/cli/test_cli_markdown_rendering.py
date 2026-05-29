@@ -1,3 +1,11 @@
+"""CLI Markdown渲染测试
+
+【产品经理理解要点】
+验证CLI中Markdown内容的富文本渲染。
+- Markdown语法到终端格式的转换
+- 影响AI回复的可读性
+"""
+
 from io import StringIO
 
 from rich.console import Console

@@ -1,4 +1,11 @@
-"""
+"""OpenRouter鹦鹉进化示例
+
+【产品经理理解要点】
+通过OpenRouter调用LLM运行进化算法的示例脚本，验证达尔文进化器的端到端流程。
+- 核心职责：演示如何用OpenRouter替代Anthropic原生调用运行进化循环
+- 使用场景：开发者学习和测试进化器工作流
+
+─────────────────────────────────────────────────────────────────
 parrot_openrouter: same as the upstream `parrot` example but the LLM call goes
 through OpenRouter (OpenAI SDK) instead of Anthropic native. Lets us run an
 end-to-end evolution with whatever model the user already has paid access to.

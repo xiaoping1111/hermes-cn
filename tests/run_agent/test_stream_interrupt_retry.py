@@ -1,4 +1,14 @@
-"""Tests that /stop interrupts streaming retry loops immediately.
+"""流中断重试测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中interrupt prevents stream retry、interrupt before first attempt、normal retry still works without interrupt的正确性
+- interrupt prevents stream retry的正确性验证
+- interrupt before first attempt的正确性验证
+- normal retry still works without interrupt的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests that /stop interrupts streaming retry loops immediately.
 
 When the agent is interrupted during a streaming API call, the outer poll
 loop closes the HTTP connection.  The inner `_call()` thread sees a
@@ -8,8 +18,7 @@ making /stop take multiple retry cycles × read-timeout to actually stop
 (510+ seconds observed on slow ollama-cloud providers).
 
 The fix adds an `_interrupt_requested` check at the top of the retry loop
-so the agent exits immediately instead of retrying.
-"""
+so the agent exits immediately instead of retrying."""
 from types import SimpleNamespace
 from unittest.mock import MagicMock, patch
 

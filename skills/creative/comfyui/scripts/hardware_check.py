@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""hardware_check.py — Detect whether this machine can realistically run ComfyUI locally.
+"""【产品经理理解要点】
+ComfyUI硬件检测——检测本机是否能运行ComfyUI：多GPU检测（NVIDIA/AMD）、Apple Silicon识别、WSL2检测、ROCm支持、磁盘空间检查。
+─────────────────────────────────────────────────────────────────
+hardware_check.py — Detect whether this machine can realistically run ComfyUI locally.
 
 Improvements over v1:
   - Multi-GPU detection: scans all NVIDIA / AMD GPUs, picks the best one (most VRAM)

@@ -1,4 +1,14 @@
-"""Tests for GHSA-96vc-wcxf-jjff and GHSA-qg5c-hvr5-hjgr.
+"""ACP审批隔离安全测试
+
+【产品经理理解要点】
+验证两个ACP审批流安全修复：执行环境变量缺失和回调全局状态冲突。
+- ACP模式下HERMES_EXEC_ASK被正确设置
+- 审批回调使用线程本地存储而非全局变量
+- 并发ACP会话不互相覆盖回调
+- 影响ACP模式下的操作审批安全
+
+──────────────────────────────────────────────────────────────
+Tests for GHSA-96vc-wcxf-jjff and GHSA-qg5c-hvr5-hjgr.
 
 Two related ACP approval-flow issues:
 - 96vc: ACP didn't set HERMES_EXEC_ASK, so `check_all_command_guards`

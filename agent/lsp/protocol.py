@@ -1,4 +1,16 @@
-"""Minimal LSP JSON-RPC 2.0 framer over async streams.
+"""LSP 协议层 — JSON-RPC 2.0 消息封装与解析
+
+【产品经理理解要点】
+LSP（Language Server Protocol）通过标准输入/输出传输 JSON-RPC 2.0 消息。
+这个模块负责消息的"打包"和"拆包"：
+  - 发送时：加上 Content-Length 头
+  - 接收时：按头部长度截取消息体
+
+就像信封和信纸的关系——协议层负责信封格式，客户端只管信纸内容。
+
+─────────────────────────────────────────────────────────────────
+
+Minimal LSP JSON-RPC 2.0 framer over async streams.
 
 LSP wire format:
 

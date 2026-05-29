@@ -1,4 +1,14 @@
-"""Tests for ${ENV_VAR} substitution in config.yaml values."""
+"""命令行界面测试 - 配置管理·环境配置·expansion
+
+【产品经理理解要点】
+验证命令行界面的配置管理环境配置功能
+- 验证的功能: Tests for ${ENV_VAR} substitution in config.yaml values
+- 核心测试场景: simple substitution、missing var kept verbatim、no placeholder unchanged 等共13个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for ${ENV_VAR} substitution in config.yaml values.
+"""
 
 import os
 import pytest

@@ -1,4 +1,12 @@
-"""
+"""网关服务命令
+
+【产品经理理解要点】
+实现 `hermes gateway` 子命令，管理 Hermes 消息网关——连接 Telegram/Discord/Slack 等聊天平台的后台服务。
+- 核心职责：启动/停止/重启网关服务，查看状态，安装/卸载为系统服务（开机自启）
+- 关键概念：网关=Hermes 连接聊天平台的桥梁服务、后台运行（systemd/launchd/计划任务）、热重载
+- 系统定位：Hermes 作为聊天机器人运行的核心服务管理接口
+
+─────────────────────────────────────────────────────────────────
 Gateway subcommand for hermes CLI.
 
 Handles: hermes gateway [run|start|stop|restart|status|install|uninstall|setup]

@@ -1,4 +1,13 @@
-"""Tests for the config.yaml → env var bridge logic in gateway/run.py.
+"""消息网关测试 - 配置管理·cwd·bridge
+
+【产品经理理解要点】
+验证消息网关的配置管理功能
+- 验证的功能: Tests for the config.yaml → env var bridge logic in gateway/run.py
+- 核心测试场景: top level cwd sets terminal cwd、top level backend sets terminal env、top level cwd and backend 等共24个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for the config.yaml → env var bridge logic in gateway/run.py.
 
 Specifically tests that top-level `cwd:` and `backend:` in config.yaml
 are correctly bridged to TERMINAL_CWD / TERMINAL_ENV env vars as

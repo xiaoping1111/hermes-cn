@@ -1,4 +1,13 @@
-"""Regression tests for Copilot api_mode recomputation during /model switch.
+"""命令行界面测试 - 模型切换
+
+【产品经理理解要点】
+验证命令行界面模型切换的正确性
+- 验证的功能: Regression tests for Copilot api_mode recomputation during /model switch
+- 核心测试场景: same provider copilot switch recomputes api mode、explicit copilot switch uses selected model api mode、copilot gpt5 keeps codex responses
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression tests for Copilot api_mode recomputation during /model switch.
 
 When switching models within the Copilot provider (e.g. GPT-5 → Claude),
 the stale api_mode from resolve_runtime_provider must be overridden with

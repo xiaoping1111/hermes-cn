@@ -1,4 +1,15 @@
-"""Test validation error prevention for strict APIs (Fireworks, etc.)"""
+"""严格API校验测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中fireworks compatible messages after sanitization等4个场景的正确性
+- fireworks compatible messages after sanitization的正确性验证
+- codex preserves fields for replay的正确性验证
+- sanitize method with fireworks provider的正确性验证
+- 另有1个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Test validation error prevention for strict APIs (Fireworks, etc.)"""
 
 import sys
 import types

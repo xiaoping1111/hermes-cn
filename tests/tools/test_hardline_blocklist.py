@@ -1,11 +1,21 @@
-"""Tests for the unconditional hardline command blocklist.
+"""硬线阻断黑名单测试
+
+【产品经理理解要点】
+验证工具系统模块中hardline detection blocks等18个场景的正确性
+- hardline detection blocks的正确性验证
+- hardline detection allows的正确性验证
+- check dangerous command blocks hardline的正确性验证
+- 另有15个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the unconditional hardline command blocklist.
 
 The hardline list is a floor below yolo: a small set of commands so
 catastrophic they should never run via the agent, regardless of --yolo,
 gateway /yolo, approvals.mode=off, or cron approve mode.
 
-Inspired by Mercury Agent's permission-hardened blocklist.
-"""
+Inspired by Mercury Agent's permission-hardened blocklist."""
 import os
 
 import pytest

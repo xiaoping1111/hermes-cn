@@ -1,4 +1,13 @@
-"""Hermes-managed Camofox state helpers.
+"""Camofox 浏览器持久化状态管理
+
+【产品经理理解要点】
+为 Camofox 浏览器提供跨重启的持久化身份，确保同一用户配置下的浏览器会话保持一致。
+- 核心职责：根据 Hermes Profile 生成确定性的用户 ID 和会话 Key，Camofox 据此映射到同一浏览器配置目录
+- 关键业务概念：Profile 级隔离——不同 Hermes Profile 对应不同浏览器身份，同一 Profile 重启后身份不变
+- 在系统中的位置：browser_camofox.py 的依赖，提供浏览器身份参数
+
+─────────────────────────────────────────────────────────────────
+Hermes-managed Camofox state helpers.
 
 Provides profile-scoped identity and state directory paths for Camofox
 persistent browser profiles.  When managed persistence is enabled, Hermes

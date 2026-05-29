@@ -1,4 +1,14 @@
-"""Regression tests for numbered fallbacks when TerminalMenu cannot initialize."""
+"""命令行界面测试 - terminal·menu·降级策略
+
+【产品经理理解要点】
+验证命令行界面的降级策略功能
+- 验证的功能: Regression tests for numbered fallbacks when TerminalMenu cannot initialize
+- 核心测试场景: prompt model selection falls back on terminalmenu runtime error、prompt reasoning effort falls back on terminalmenu runtime error、remove custom provider falls back on terminalmenu runtime error 等共4个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression tests for numbered fallbacks when TerminalMenu cannot initialize.
+"""
 
 import subprocess
 import sys

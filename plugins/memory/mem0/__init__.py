@@ -1,5 +1,12 @@
-"""Mem0 memory plugin — MemoryProvider interface.
+"""Mem0记忆供应商 — 服务端事实提取与语义搜索
 
+【产品经理理解要点】
+提供基于Mem0平台的AI记忆服务，自动从对话中提取关键事实，支持语义搜索和自动去重。
+- 核心能力：服务端LLM事实提取、带重排序的语义搜索、自动去重
+- 使用场景：自动从对话中提取用户偏好和关键信息，跨会话保持记忆
+- 认证：MEM0_API_KEY，支持自定义USER_ID和AGENT_ID
+
+─────────────────────────────────────────────────────────────────
 Server-side LLM fact extraction, semantic search with reranking, and
 automatic deduplication via the Mem0 Platform API.
 

@@ -1,5 +1,12 @@
-"""Subprocess lifecycle manager for the google_meet bot.
+"""Google Meet机器人子进程生命周期管理
 
+【产品经理理解要点】
+管理Meet机器人的子进程启动、监控和清理，同一时间只允许一个活跃会议。
+- 运行状态持久化：写入$HERMES_HOME/workspace/meetings/.active.json
+- 通信方式：纯文件系统，不持有文件描述符
+- 会话清理：on_session_end时自动清理子进程
+
+─────────────────────────────────────────────────────────────────
 Single active meeting at a time. Stores the running pid + out_dir in a
 session-scoped state file under ``$HERMES_HOME/workspace/meetings/.active.json``
 so tool calls across turns can find the bot, and ``on_session_end`` can clean

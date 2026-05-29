@@ -1,4 +1,13 @@
-"""`hermes checkpoints` CLI subcommand.
+"""文件检查点管理命令
+
+【产品经理理解要点】
+实现 `hermes checkpoints` 子命令，管理文件操作前的自动快照，支持通过 /rollback 回滚。
+- 核心职责：查看/清理/删除文件检查点存储（~/.hermes/checkpoints/），检查点用于 AI 修改文件前自动备份，支持一键回滚
+- 关键概念：检查点=文件修改前的自动快照、/rollback 回滚到修改前状态、孤立检查点清理、存储空间管理
+- 系统定位：文件安全层，是 AI 修改文件后可回滚的保障机制
+
+─────────────────────────────────────────────────────────────────
+`hermes checkpoints` CLI subcommand.
 
 Gives users direct visibility and control over the filesystem checkpoint
 store at ``~/.hermes/checkpoints/``.  Actions:

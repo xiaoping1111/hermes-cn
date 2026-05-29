@@ -1,10 +1,20 @@
-"""Tests for kanban worker/runs read endpoints.
+"""看板Worker运行测试
+
+【产品经理理解要点】
+验证功能插件模块中workers active empty board等11个场景的正确性
+- workers active empty board的正确性验证
+- workers active with running task的正确性验证
+- workers active excludes ended runs的正确性验证
+- 另有8个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for kanban worker/runs read endpoints.
 
 Covers:
   GET /workers/active
   GET /runs/{run_id}
-  GET /runs/{run_id}/inspect
-"""
+  GET /runs/{run_id}/inspect"""
 
 from __future__ import annotations
 

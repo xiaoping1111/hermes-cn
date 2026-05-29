@@ -1,4 +1,14 @@
-"""Regression coverage for the bundled Kanban Codex lane skill."""
+"""看板Codex泳道技能测试
+
+【产品经理理解要点】
+验证工具系统模块中kanban codex lane skill frontmatter is valid、kanban codex lane skill is discoverable with template、kanban codex lane documents required contracts的正确性
+- kanban codex lane skill frontmatter is valid的正确性验证
+- kanban codex lane skill is discoverable with template的正确性验证
+- kanban codex lane documents required contracts的正确性验证
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression coverage for the bundled Kanban Codex lane skill."""
 
 import json
 from pathlib import Path

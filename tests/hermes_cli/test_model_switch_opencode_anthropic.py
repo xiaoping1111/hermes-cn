@@ -1,4 +1,13 @@
-"""Regression tests for OpenCode /v1 stripping during /model switch.
+"""命令行界面测试 - 模型切换
+
+【产品经理理解要点】
+验证命令行界面模型切换的正确性
+- 验证的功能: Regression tests for OpenCode /v1 stripping during /model switch
+- 核心测试场景: switch to minimax m27 strips v1、switch to minimax m25 strips v1、switch to glm leaves v1 intact 等共12个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression tests for OpenCode /v1 stripping during /model switch.
 
 When switching to an Anthropic-routed OpenCode model mid-session (e.g.
 ``/model minimax-m2.7`` on opencode-go, or ``/model claude-sonnet-4-6``

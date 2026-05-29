@@ -1,4 +1,13 @@
-"""Regression tests for task/session cwd propagation in terminal_tool."""
+"""终端任务工作目录测试
+
+【产品经理理解要点】
+验证工具系统模块中foreground command uses registered task cwd for existing ...、explicit workdir still wins over registered task cwd的正确性
+- foreground command uses registered task cwd for existing...的正确性验证
+- explicit workdir still wins over registered task cwd的正确性验证
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Regression tests for task/session cwd propagation in terminal_tool."""
 
 import json
 

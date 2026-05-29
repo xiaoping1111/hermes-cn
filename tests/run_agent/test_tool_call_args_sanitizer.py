@@ -1,4 +1,15 @@
-"""Tests for AIAgent._sanitize_tool_call_arguments."""
+"""工具调用参数清洗测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中valid arguments unchanged等7个场景的正确性
+- valid arguments unchanged的正确性验证
+- truncated arguments replaced with empty object的正确性验证
+- marker appended to existing tool message的正确性验证
+- 另有4个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for AIAgent._sanitize_tool_call_arguments."""
 
 import copy
 import logging

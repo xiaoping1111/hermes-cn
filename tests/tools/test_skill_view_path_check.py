@@ -1,9 +1,19 @@
-"""Tests for the skill_view path boundary check.
+"""技能视图路径检查测试
+
+【产品经理理解要点】
+验证工具系统模块中valid subpath allowed等6个场景的正确性
+- valid subpath allowed的正确性验证
+- deeply nested subpath allowed的正确性验证
+- outside path blocked的正确性验证
+- 另有3个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the skill_view path boundary check.
 
 Regression test: the original check used a hardcoded "/" separator which
 fails on Windows where Path.resolve() returns backslash-separated paths.
-Now uses Path.is_relative_to() which handles all platforms correctly.
-"""
+Now uses Path.is_relative_to() which handles all platforms correctly."""
 
 import os
 import pytest

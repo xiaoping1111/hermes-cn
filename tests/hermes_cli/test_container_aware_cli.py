@@ -1,4 +1,13 @@
-"""Tests for container-aware CLI routing (NixOS container mode).
+"""命令行界面测试 - container·aware·CLI命令
+
+【产品经理理解要点】
+验证命令行界面的CLI命令功能
+- 验证的功能: Tests for container-aware CLI routing (NixOS container mode)
+- 核心测试场景: get container exec info returns metadata、get container exec info none inside container、get container exec info none without file 等共14个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for container-aware CLI routing (NixOS container mode).
 
 When container.enable = true in the NixOS module, the activation script
 writes a .container-mode metadata file. The host CLI detects this and

@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Watch GitHub activity — issues, pulls, releases, or commits — with dedup.
+"""GitHub活动监控脚本
+
+【产品经理理解要点】
+监控GitHub仓库的Issues、PR、Release和Commit，自动去重发送新事件通知。
+- 核心职责：定时拉取GitHub活动，只推送新增事件
+- 使用方式：通过Hermes定时任务（cron）运行
+
+─────────────────────────────────────────────────────────────────
+Watch GitHub activity — issues, pulls, releases, or commits — with dedup.
 
 Usage (via cron with --no-agent):
 

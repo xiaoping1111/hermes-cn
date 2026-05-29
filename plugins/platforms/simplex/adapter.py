@@ -1,5 +1,15 @@
-"""SimpleX Chat platform adapter (Hermes plugin).
+"""SimpleX Chat平台适配器
 
+【产品经理理解要点】
+将Hermes AI代理接入SimpleX Chat——一个注重隐私的去中心化消息平台。通过WebSocket连接simplex-chat守护进程实现消息收发。
+- 核心能力：接收和发送文本消息，支持私聊和群组
+- 隐私优势：SimpleX不收集用户身份数据，联系通过不透明ID识别
+- 连接方式：通过WebSocket连接本地或远程的simplex-chat daemon
+- 安全机制：用户白名单控制、WebSocket健康监控、自动重连
+- 独立发送：支持cron任务通过临时WebSocket连接发送消息
+- 媒体支持：可接收图片/音频/文件附件（通过daemon文件系统）
+
+─────────────────────────────────────────────────────────────────
 Connects to a simplex-chat daemon running in WebSocket mode.
 Inbound messages arrive via a persistent WebSocket connection.
 Outbound messages use the same WebSocket with JSON commands.

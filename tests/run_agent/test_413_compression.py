@@ -1,10 +1,20 @@
-"""Tests for payload/context-length → compression retry logic in AIAgent.
+"""413压缩处理测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中413 triggers compression等15个场景的正确性
+- 413 triggers compression的正确性验证
+- 413 not treated as generic 4xx的正确性验证
+- 413 error message detection的正确性验证
+- 另有12个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for payload/context-length → compression retry logic in AIAgent.
 
 Verifies that:
 - HTTP 413 errors trigger history compression and retry
 - HTTP 400 context-length errors trigger compression (not generic 4xx abort)
-- Preflight compression proactively compresses oversized sessions before API calls
-"""
+- Preflight compression proactively compresses oversized sessions before API calls"""
 
 import pytest
 #pytestmark = pytest.mark.skip(reason="Hangs in non-interactive environments")

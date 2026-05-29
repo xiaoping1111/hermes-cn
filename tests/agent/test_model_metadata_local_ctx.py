@@ -1,4 +1,12 @@
-"""Tests for _query_local_context_length and the local server fallback in
+"""模型元数据本地上下文测试
+
+【产品经理理解要点】
+验证本地模型（Ollama/LM Studio等）的上下文长度元数据获取。
+- 从本地API获取上下文长度
+- 影响本地模型的长对话支持
+
+──────────────────────────────────────────────────────────────
+Tests for _query_local_context_length and the local server fallback in
 get_model_context_length.
 
 All tests use synthetic inputs — no filesystem or live server required.

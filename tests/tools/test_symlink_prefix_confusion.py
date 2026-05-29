@@ -1,10 +1,20 @@
-"""Tests for the symlink boundary check prefix confusion fix in skills_guard.py.
+"""符号链接前缀混淆测试
+
+【产品经理理解要点】
+验证工具系统模块中old check misses sibling with shared prefix等8个场景的正确性
+- old check misses sibling with shared prefix的正确性验证
+- new check catches sibling with shared prefix的正确性验证
+- both agree on real subpath的正确性验证
+- 另有5个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the symlink boundary check prefix confusion fix in skills_guard.py.
 
 Regression test: the original check used startswith() without a trailing
 separator, so a symlink resolving to 'axolotl-backdoor/' passed the check
 for 'axolotl/' because the string prefix matched. Now uses
-Path.is_relative_to() which handles directory boundaries correctly.
-"""
+Path.is_relative_to() which handles directory boundaries correctly."""
 
 import os
 import pytest

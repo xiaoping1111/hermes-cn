@@ -1,4 +1,13 @@
-"""Tests for the memory provider interface, manager, and builtin provider."""
+"""记忆提供商接口测试
+
+【产品经理理解要点】
+验证记忆提供商的接口规范和内置实现。
+- 提供者接口的方法签名
+- 影响记忆系统的插件化扩展
+
+──────────────────────────────────────────────────────────────
+Tests for the memory provider interface, manager, and builtin provider.
+"""
 
 import json
 import pytest

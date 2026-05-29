@@ -1,4 +1,15 @@
-"""Tests for ``_is_anthropic_oauth`` guard against third-party Anthropic-compatible providers.
+"""Anthropic第三方OAuth护栏测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中third party provider refresh is noop等7个场景的正确性
+- third party provider refresh is noop的正确性验证
+- native anthropic preserves existing oauth behaviour的正确性验证
+- pool swap on third party never flips oauth的正确性验证
+- 另有4个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for ``_is_anthropic_oauth`` guard against third-party Anthropic-compatible providers.
 
 The invariant: ``self._is_anthropic_oauth`` must only ever be True when
 ``self.provider == 'anthropic'`` (native Anthropic).  Third-party providers
@@ -13,8 +24,7 @@ This test class covers all FIVE sites that assign ``_is_anthropic_oauth``:
 2. ``AIAgent.switch_model``                          (line ~1832)
 3. ``AIAgent._try_refresh_anthropic_client_credentials`` (line ~5335)
 4. ``AIAgent._swap_credential``                      (line ~5378)
-5. ``AIAgent._try_activate_fallback``                (line ~6536)
-"""
+5. ``AIAgent._try_activate_fallback``                (line ~6536)"""
 
 from __future__ import annotations
 

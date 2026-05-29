@@ -1,4 +1,15 @@
-"""Tests for browser_console tool and browser_vision annotate param."""
+"""浏览器控制台测试
+
+【产品经理理解要点】
+验证工具系统模块中returns console messages and errors等27个场景的正确性
+- returns console messages and errors的正确性验证
+- passes clear flag的正确性验证
+- no clear by default的正确性验证
+- 另有24个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for browser_console tool and browser_vision annotate param."""
 
 import json
 import os

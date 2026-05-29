@@ -1,4 +1,12 @@
-"""
+"""标准模型目录与验证工具
+
+【产品经理理解要点】
+维护 Hermes 支持的所有 AI 模型的标准目录，包括各供应商的可用模型列表和基础验证。
+- 核心职责：定义每个供应商的可用模型目录（CANONICAL_PROVIDERS）、Copilot 模型获取、模型别名和模糊匹配建议
+- 关键概念：标准供应商目录=系统预定义的供应商和模型映射、模型别名=多个名称指向同一模型、模糊匹配=输入错误时建议最接近的模型名
+- 系统定位：模型选择功能的基础数据层，所有模型相关的查询都基于此目录
+
+─────────────────────────────────────────────────────────────────
 Canonical model catalogs and lightweight validation helpers.
 
 Add, remove, or reorder entries here — both `hermes setup` and

@@ -1,4 +1,13 @@
-"""Tests for _stream_delta's handling of <think> tags in prose vs real reasoning blocks."""
+"""流式增量思维标签测试
+
+【产品经理理解要点】
+验证流式输出中思维标签的增量解析和展示。
+- 思维标签在流式增量中的正确识别
+- 影响AI思考过程的实时展示
+
+──────────────────────────────────────────────────────────────
+Tests for _stream_delta's handling of <think> tags in prose vs real reasoning blocks.
+"""
 import sys
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))

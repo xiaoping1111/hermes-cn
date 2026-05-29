@@ -1,4 +1,13 @@
-"""Tests for agent.models_dev — models.dev registry integration."""
+"""开发模型配置测试
+
+【产品经理理解要点】
+验证开发用模型配置的正确性，确保/dev模型路由正确。
+- 开发模型的特殊配置
+- 影响开发者调试和测试
+
+──────────────────────────────────────────────────────────────
+Tests for agent.models_dev — models.dev registry integration.
+"""
 import json
 from unittest.mock import patch, MagicMock
 

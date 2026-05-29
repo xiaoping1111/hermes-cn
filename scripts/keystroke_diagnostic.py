@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Diagnose how prompt_toolkit identifies keystrokes in the current terminal.
+"""按键诊断工具
+
+【产品经理理解要点】
+诊断终端中按键的原始编码，帮助开发者在不同平台上正确配置快捷键。
+- 核心职责：显示终端实际发送的按键标识和转义字节序列
+- 典型问题：Ctrl+Enter和Enter是否区分、Alt+Enter是否被终端拦截
+- 跨平台价值：Windows终端的按键行为与Mac/Linux差异大，此工具帮助确认
+
+─────────────────────────────────────────────────────────────────
+Diagnose how prompt_toolkit identifies keystrokes in the current terminal.
 
 Useful when adding a keybinding to Hermes (or any prompt_toolkit app) and you
 need to know what the terminal actually delivers — particularly on Windows,

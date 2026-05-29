@@ -1,4 +1,15 @@
-"""Tests for workspace + project-root resolution."""
+"""工作区与项目根目录解析测试
+
+【产品经理理解要点】
+验证LSP工作区的发现和项目根目录的解析逻辑：从文件路径向上查找.git目录或pyproject.toml等标记文件，确定项目根目录用于语言服务器初始化。每个项目只启动一个语言服务器实例。
+- 验证git仓库发现（.git目录和gitfile）、项目标记文件查找、排除标记优先级
+- 验证文件路径短化（相对路径优先）和波浪号展开
+- 业务影响：如果这些测试失败，语言服务器可能在不同项目间混淆或无法正确初始化
+
+─────────────────────────────────────────────────────────────────
+Original English docstring continues below...
+
+Tests for workspace + project-root resolution."""
 from __future__ import annotations
 
 import os

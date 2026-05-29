@@ -1,4 +1,13 @@
-"""Tests for parent→subparser flag propagation.
+"""命令行界面测试 - argparse·flag·propagation
+
+【产品经理理解要点】
+验证命令行界面相关功能的正确性
+- 验证的功能: Tests for parent→subparser flag propagation
+- 核心测试场景: yolo before chat sets env、yolo after chat sets env、no yolo no env 等共4个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for parent→subparser flag propagation.
 
 When flags like --yolo, -w, -s exist on both the parent parser and the 'chat'
 subparser, placing the flag BEFORE the subcommand (e.g. 'hermes --yolo chat')

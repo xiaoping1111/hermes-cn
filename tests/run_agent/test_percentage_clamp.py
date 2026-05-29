@@ -1,11 +1,21 @@
-"""Tests for percentage clamping at 100% across display paths.
+"""百分比钳位测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中over limit clamped at 100等11个场景的正确性
+- over limit clamped at 100的正确性验证
+- normal percentage的正确性验证
+- zero limit returns zero的正确性验证
+- 另有8个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for percentage clamping at 100% across display paths.
 
 PR #3480 capped context pressure percentage at 100% in agent/display.py
 but missed the same unclamped pattern in 4 other files. When token counts
 overshoot the context length (possible during streaming or before
 compression fires), users see >100% in /stats, gateway status, and
-memory tool output.
-"""
+memory tool output."""
 
 class TestMemoryToolPercentClamp:
     """tools/memory_tool.py — _success_response and _render_block pct"""

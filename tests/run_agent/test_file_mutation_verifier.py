@@ -1,4 +1,15 @@
-"""Tests for the per-turn file-mutation verifier footer.
+"""文件变更验证测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中non mutating tool returns empty等29个场景的正确性
+- non mutating tool returns empty的正确性验证
+- write file returns single path的正确性验证
+- write file missing path returns empty的正确性验证
+- 另有26个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the per-turn file-mutation verifier footer.
 
 Covers the three moving pieces:
 
@@ -14,8 +25,7 @@ Regression target: the "Ben Eng llm-wiki" session where grok-4.1-fast
 batched parallel patches, half failed, and the model summarised the
 turn claiming every file was edited.  This verifier makes over-claiming
 structurally impossible past the model: the user always sees the real
-list of files that did NOT change.
-"""
+list of files that did NOT change."""
 
 from __future__ import annotations
 

@@ -1,4 +1,15 @@
-"""Tests for SSRF protection in url_safety module."""
+"""URL安全URL安全测试
+
+【产品经理理解要点】
+验证工具系统模块中public url allowed等74个场景的正确性
+- public url allowed的正确性验证
+- ftp scheme blocked的正确性验证
+- missing scheme blocked的正确性验证
+- 另有71个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for SSRF protection in url_safety module."""
 
 import socket
 from unittest.mock import patch

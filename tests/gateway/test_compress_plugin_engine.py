@@ -1,4 +1,13 @@
-"""Regression test: /compress works with context engine plugins.
+"""消息网关测试 - compress·plugin·engine
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: Regression test: /compress works with context engine plugins
+- 核心测试场景: compress works with plugin context engine、compress respects plugin has content to compress false
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression test: /compress works with context engine plugins.
 
 Reported by @selfhostedsoul (Discord, Apr 2026) with the LCM plugin installed:
 

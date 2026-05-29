@@ -1,4 +1,12 @@
-"""Tests for the combined /reasoning command.
+"""推理命令测试
+
+【产品经理理解要点】
+验证/reasoning命令调整推理强度的功能。
+- 推理强度级别的切换
+- 影响AI思考深度的控制
+
+──────────────────────────────────────────────────────────────
+Tests for the combined /reasoning command.
 
 Covers both reasoning effort level management and reasoning display toggle,
 plus the reasoning extraction and display pipeline from run_agent through CLI.

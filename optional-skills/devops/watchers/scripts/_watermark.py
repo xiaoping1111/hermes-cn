@@ -1,4 +1,12 @@
-"""Shared watermark helper used by the three watcher scripts.
+"""监控去重水位线辅助库
+
+【产品经理理解要点】
+为三个监控脚本提供共享的去重机制，记录已见ID，确保只推送新事件。
+- 核心职责：管理JSON水位线文件，原子写入保证安全
+- 去重策略：首次运行记录所有ID但不推送，后续只推送新增
+
+─────────────────────────────────────────────────────────────────
+Shared watermark helper used by the three watcher scripts.
 
 A watermark is just a JSON file that records the IDs we've seen on previous
 runs, so the next run only emits items we haven't seen before.

@@ -1,4 +1,12 @@
-"""Consent-flow tests for the shell-hook allowlist.
+"""Shell钩子授权测试
+
+【产品经理理解要点】
+验证Shell钩子执行时需要用户授权的逻辑。
+- 危险命令的授权提示
+- 影响命令执行的安全性
+
+──────────────────────────────────────────────────────────────
+Consent-flow tests for the shell-hook allowlist.
 
 Covers the prompt/non-prompt decision tree: TTY vs non-TTY, and the
 three accept-hooks channels (--accept-hooks, HERMES_ACCEPT_HOOKS env,

@@ -1,3 +1,11 @@
+"""CLI状态栏测试
+
+【产品经理理解要点】
+验证CLI底部状态栏的信息展示逻辑。
+- 模型名、Token用量等信息的显示
+- 影响用户对运行状态的感知
+"""
+
 import time
 from datetime import datetime, timedelta
 from types import SimpleNamespace

@@ -1,4 +1,13 @@
-"""Profile distributions — shareable, packaged Hermes profiles via git.
+"""Profile 分发 —— 可分享、可安装的 Git 托管 Profile
+
+【产品经理理解要点】
+将 Hermes Profile 打包为 Git 仓库形式分发的一键安装/更新方案。
+- 一条命令从 Git URL 安装完整 Profile（含技能、定时任务、配置）
+- 更新时只替换分发拥有的文件，用户数据（记忆、会话、凭证）永不覆盖
+- 通过 distribution.yaml 声明版本、环境依赖和所属文件列表
+
+─────────────────────────────────────────────────────────────────
+Profile distributions — shareable, packaged Hermes profiles via git.
 
 A distribution is a Hermes profile published as a git repository (or
 installed from a local directory for development). Install with one command

@@ -1,4 +1,14 @@
-"""Tests for ``hermes migrate xai`` — apply path with ruamel round-trip."""
+"""命令行界面测试 - 速率控制·xAI认证
+
+【产品经理理解要点】
+验证命令行界面的速率控制xAI认证功能
+- 验证的功能: Tests for ``hermes migrate xai`` — apply path with ruamel round-trip
+- 核心测试场景: clean config returns unchanged result、empty issues list is noop、missing file raises 等共17个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Tests for ``hermes migrate xai`` — apply path with ruamel round-trip.
+"""
 from __future__ import annotations
 
 from pathlib import Path

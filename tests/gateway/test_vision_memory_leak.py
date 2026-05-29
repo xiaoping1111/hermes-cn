@@ -1,4 +1,13 @@
-"""Tests for _enrich_message_with_vision — regression for #5719.
+"""消息网关测试 - vision·记忆系统·leak
+
+【产品经理理解要点】
+验证消息网关的记忆系统功能
+- 验证的功能: Tests for _enrich_message_with_vision — regression for #5719
+- 核心测试场景: clean description passes through、memory context fence stripped、fenced leak stripped plugin header preserved
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for _enrich_message_with_vision — regression for #5719.
 
 The auxiliary vision LLM can echo system-prompt memory-context back into
 its analysis output.  The boundary fix in gateway/run.py runs the generic

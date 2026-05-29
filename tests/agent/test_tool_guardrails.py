@@ -1,4 +1,14 @@
-"""Pure tool-call guardrail primitive tests."""
+"""工具安全护栏测试
+
+【产品经理理解要点】
+验证工具调用的安全护栏机制，防止危险操作。
+- 危险工具的识别和拦截
+- 用户确认流程
+- 影响AI自主操作的安全性
+
+──────────────────────────────────────────────────────────────
+Pure tool-call guardrail primitive tests.
+"""
 
 import json
 

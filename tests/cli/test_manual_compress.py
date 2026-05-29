@@ -1,4 +1,13 @@
-"""Tests for CLI manual compression messaging."""
+"""手动压缩CLI测试
+
+【产品经理理解要点】
+验证/compact命令的手动压缩触发和结果展示。
+- 手动压缩的触发和进度展示
+- 影响用户主动管理对话长度
+
+──────────────────────────────────────────────────────────────
+Tests for CLI manual compression messaging.
+"""
 
 from unittest.mock import MagicMock, patch
 

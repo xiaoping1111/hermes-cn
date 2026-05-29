@@ -1,6 +1,8 @@
-"""Browser Use cloud browser provider — plugin form.
+"""Browser Use云浏览器供应商
 
-Subclasses :class:`agent.browser_provider.BrowserProvider` (the plugin-facing
+【产品经理理解要点】
+Browser Use的AI驱动浏览器自动化供应商实现，通过AI理解页面内容并执行操作。
+- 核心能力：AI理解页面结构、自动执行点击/输入/导航操作 :class:`agent.browser_provider.BrowserProvider` (the plugin-facing
 ABC introduced in PR #25214). The legacy in-tree module
 ``tools.browser_providers.browser_use`` was removed in the same PR; this file
 is now the canonical implementation.

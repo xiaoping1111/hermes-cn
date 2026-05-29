@@ -1,4 +1,14 @@
-"""Test that HERMES_SESSION_ID is exposed as an env var and ContextVar."""
+"""会话ID环境变量测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中session id env set on init、session id env uses provided id、session id contextvar set的正确性
+- session id env set on init的正确性验证
+- session id env uses provided id的正确性验证
+- session id contextvar set的正确性验证
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Test that HERMES_SESSION_ID is exposed as an env var and ContextVar."""
 
 import os
 import sys

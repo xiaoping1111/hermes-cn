@@ -1,4 +1,7 @@
-"""Tests for check_deps.py — focuses on parsing logic that doesn't need a server."""
+"""【产品经理理解要点】
+check_deps.py的单元测试——专注于不需要服务器的解析逻辑测试。
+─────────────────────────────────────────────────────────────────
+Tests for check_deps.py — focuses on parsing logic that doesn't need a server."""
 
 from __future__ import annotations
 

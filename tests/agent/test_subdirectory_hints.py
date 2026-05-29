@@ -1,4 +1,13 @@
-"""Tests for progressive subdirectory hint discovery."""
+"""子目录提示测试
+
+【产品经理理解要点】
+验证在子目录中运行时对用户的路径提示。
+- 子目录中的上下文感知提示
+- 影响多项目场景的用户体验
+
+──────────────────────────────────────────────────────────────
+Tests for progressive subdirectory hint discovery.
+"""
 
 import os
 import pytest

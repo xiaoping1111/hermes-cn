@@ -1,4 +1,13 @@
-"""Regression tests: /yolo and /verbose dispatch mid-agent-run.
+"""消息网关测试 - running·AI代理·会话管理·toggles
+
+【产品经理理解要点】
+验证消息网关的AI代理会话管理功能
+- 验证的功能: Regression tests: /yolo and /verbose dispatch mid-agent-run
+- 核心测试场景: yolo dispatches mid run、verbose dispatches mid run、fast rejected mid run 等共5个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Regression tests: /yolo and /verbose dispatch mid-agent-run.
 
 When an agent is running, the gateway's running-agent guard rejects most
 slash commands with "⏳ Agent is running — /{cmd} can't run mid-turn"

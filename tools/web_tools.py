@@ -1,5 +1,17 @@
 #!/usr/bin/env python3
-"""
+"""网页工具 — 搜索网页、提取内容、爬取网站
+
+【产品经理理解要点】
+让 AI 能访问互联网，核心功能：
+  - 网页搜索：根据关键词搜索互联网
+  - 内容提取：从指定 URL 提取网页正文
+  - 网站爬取：按指令爬取整个网站
+
+支持多个搜索后端（Exa、Tavily、Firecrawl、Parallel 等），
+用户可在 config.yaml 中选择。
+
+─────────────────────────────────────────────────────────────────
+
 Standalone Web Tools Module
 
 This module provides generic web tools that work with multiple backend providers.

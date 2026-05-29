@@ -1,4 +1,13 @@
-"""Tests for duplicate reply suppression across the gateway stack.
+"""消息网关测试 - duplicate·回复处理·suppression
+
+【产品经理理解要点】
+验证消息网关的回复处理功能
+- 验证的功能: Tests for duplicate reply suppression across the gateway stack
+- 核心测试场景: stale response suppressed when interrupted、response not suppressed without interrupt、response not suppressed with interrupt but no pending 等共24个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for duplicate reply suppression across the gateway stack.
 
 Covers four fix paths:
   1. base.py: stale response suppressed when interrupt_event is set and a

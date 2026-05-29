@@ -1,4 +1,11 @@
-"""``hermes slack ...`` CLI subcommands.
+"""Slack CLI 子命令
+
+【产品经理理解要点】
+`hermes slack` 子命令实现，当前仅支持生成 Slack App Manifest JSON，
+将 Hermes 网关命令注册为 Slack 原生斜杠命令，提供与 Discord/Telegram 一致的一级交互体验。
+
+─────────────────────────────────────────────────────────────────
+``hermes slack ...`` CLI subcommands.
 
 Today only ``hermes slack manifest`` is implemented — it generates the
 Slack app manifest JSON for registering every gateway command as a native

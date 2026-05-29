@@ -1,4 +1,12 @@
-"""Tests for malformed proxy env var and base URL validation.
+"""代理与URL验证测试
+
+【产品经理理解要点】
+验证HTTP代理配置和API URL的验证逻辑。
+- HTTP/HTTPS代理的正确配置
+- 影响代理环境下的连接
+
+──────────────────────────────────────────────────────────────
+Tests for malformed proxy env var and base URL validation.
 
 Salvaged from PR #6403 by MestreY0d4-Uninter — validates that the agent
 surfaces clear errors instead of cryptic httpx ``Invalid port`` exceptions

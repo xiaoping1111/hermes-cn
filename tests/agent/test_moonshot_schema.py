@@ -1,4 +1,12 @@
-"""Tests for Moonshot/Kimi flavored-JSON-Schema sanitizer.
+"""Moonshot Schema测试
+
+【产品经理理解要点】
+验证Moonshot（Kimi）平台的工具Schema兼容性处理。
+- Schema参数类型的兼容转换
+- 影响Moonshot/Kimi的函数调用
+
+──────────────────────────────────────────────────────────────
+Tests for Moonshot/Kimi flavored-JSON-Schema sanitizer.
 
 Moonshot's tool-parameter validator rejects several shapes that the rest of
 the JSON Schema ecosystem accepts:

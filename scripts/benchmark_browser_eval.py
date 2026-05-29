@@ -1,4 +1,12 @@
-"""Quick benchmark: subprocess eval vs supervisor-WS eval.
+"""浏览器评估性能基准测试
+
+【产品经理理解要点】
+对比两种浏览器评估路径（子进程模式 vs 监督器WebSocket模式）的性能差异，供PR评审使用。
+- 核心职责：在同一Chrome实例上运行两种评估路径，输出对比表格
+- 使用方式：手动运行脚本，非自动化测试
+
+─────────────────────────────────────────────────────────────────
+Quick benchmark: subprocess eval vs supervisor-WS eval.
 
 Runs both paths against the same live Chrome and prints a comparison table.
 Not a pytest — a script you run manually for the PR description.

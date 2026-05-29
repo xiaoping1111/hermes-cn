@@ -1,4 +1,13 @@
-"""Kanban Swarm v1: thin swarm topology helpers on top of Kanban.
+"""看板蜂群拓扑
+
+【产品经理理解要点】
+在看板上实现"蜂群"协作模式：规划者分配并行工人执行任务，验证者检查结果，综合者汇总输出。
+- 核心职责：在看板中创建蜂群任务图——根任务(已完成)→并行专业工人(ready)→验证者(todo→工人完成后 ready)→综合者(todo)
+- 关键概念：蜂群=多 AI 并行协作拓扑、共享黑板=根任务评论中的结构化 JSON、任务依赖
+- 系统定位：多 AI 协同工作的高级调度模式
+
+─────────────────────────────────────────────────────────────────
+Kanban Swarm v1: thin swarm topology helpers on top of Kanban.
 
 This module intentionally does not introduce a second scheduler. It writes a
 small task graph into the existing Kanban kernel:

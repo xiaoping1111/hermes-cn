@@ -1,4 +1,15 @@
-"""Tests for the Camofox browser backend."""
+"""浏览器CamoFox隐身测试
+
+【产品经理理解要点】
+验证工具系统模块中disabled by default等23个场景的正确性
+- disabled by default的正确性验证
+- enabled when url set的正确性验证
+- cdp override takes priority的正确性验证
+- 另有20个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for the Camofox browser backend."""
 
 import json
 import os

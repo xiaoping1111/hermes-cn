@@ -1,4 +1,13 @@
-"""File passthrough registry for remote terminal backends.
+"""远程沙箱凭据文件挂载注册表
+
+【产品经理理解要点】
+确保远程沙箱（Docker/Modal/SSH）中的 Agent 能访问宿主机的凭据文件和用户文件，否则沙箱内无密钥无法工作。
+- 核心职责：注册需要挂载到沙箱的凭据文件路径、技能目录、缓存目录（上传文件/截图/TTS 音频等）
+- 关键业务概念：会话级隔离——网关模式下各会话的凭据列表互不干扰；缓存只读挂载防止沙箱篡改宿主文件
+- 在系统中的位置：远程终端后端（Docker/Modal/SSH/Daytona）在创建容器和执行命令前的挂载准备
+
+─────────────────────────────────────────────────────────────────
+File passthrough registry for remote terminal backends.
 
 Remote backends (Docker, Modal, SSH) create sandboxes with no host files.
 This module ensures that credential files, skill directories, and host-side

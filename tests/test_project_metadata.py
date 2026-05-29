@@ -1,4 +1,14 @@
-"""Regression tests for packaging metadata in pyproject.toml."""
+"""项目元数据回归测试
+
+【产品经理理解要点】
+验证pyproject.toml中的项目元数据配置，确保可选依赖和包数据正确声明。
+- 可选依赖组的完整性
+- 包数据文件列表的覆盖度
+- 影响打包和分发的正确性
+
+──────────────────────────────────────────────────────────────
+Regression tests for packaging metadata in pyproject.toml.
+"""
 
 from pathlib import Path
 import tomllib

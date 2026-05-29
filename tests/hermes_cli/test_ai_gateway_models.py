@@ -1,4 +1,13 @@
-"""AI Gateway model list and pricing translation.
+"""命令行界面测试 - ai·gateway·模型管理
+
+【产品经理理解要点】
+验证命令行界面的模型管理功能
+- 验证的功能: AI Gateway model list and pricing translation
+- 核心测试场景: ai gateway pricing translates input output to prompt completion、ai gateway pricing returns empty on fetch failure、ai gateway pricing skips entries without pricing dict 等共9个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+AI Gateway model list and pricing translation.
 
 Vercel AI Gateway exposes ``/v1/models`` with a richer shape than OpenAI's
 spec (type, tags, pricing). The pricing object uses ``input`` / ``output``

@@ -1,4 +1,14 @@
-"""Tests for Discord system message filtering (thread renames, pins, etc.)."""
+"""消息网关测试 - Discord平台·system·messages
+
+【产品经理理解要点】
+验证消息网关的Discord平台功能
+- 验证的功能: Tests for Discord system message filtering (thread renames, pins, etc.)
+- 核心测试场景: default messages accepted、reply messages accepted、thread rename ignored 等共8个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Discord system message filtering (thread renames, pins, etc.).
+"""
 
 import pytest
 import unittest

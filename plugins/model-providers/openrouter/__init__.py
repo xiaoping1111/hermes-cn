@@ -1,4 +1,7 @@
-"""OpenRouter provider profile."""
+"""【产品经理理解要点】
+OpenRouter模型路由提供商——通过单一API Key访问多家厂商的模型（GPT、Claude、Llama等），自动路由到不同backend。适合需要灵活切换模型的场景。
+─────────────────────────────────────────────────────────────────
+OpenRouter provider profile."""
 
 import logging
 from typing import Any

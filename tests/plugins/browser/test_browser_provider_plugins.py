@@ -1,4 +1,15 @@
-"""Plugin-side tests for the browser provider migration (PR #25214).
+"""浏览器提供者插件测试
+
+【产品经理理解要点】
+验证功能插件模块中all three plugins present in registry等21个场景的正确性
+- all three plugins present in registry的正确性验证
+- each plugin has name and display name的正确性验证
+- each plugin has setup schema的正确性验证
+- 另有18个测试场景覆盖
+- 影响功能插件的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Plugin-side tests for the browser provider migration (PR #25214).
 
 Covers:
 
@@ -19,8 +30,7 @@ These tests use *real* imports from the plugin modules — no mocking of
 provider classes themselves — so the test catches drift in the ABC
 interface, the registry, and the plugin glue layer simultaneously.
 Mirrors ``tests/plugins/web/test_web_search_provider_plugins.py`` from
-PR #25182.
-"""
+PR #25182."""
 from __future__ import annotations
 
 import pytest

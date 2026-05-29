@@ -1,4 +1,15 @@
-"""User-facing summaries for manual compression commands."""
+"""手动压缩反馈 — 用户触发对话压缩后展示结果摘要
+
+【产品经理理解要点】
+用户可以手动触发对话压缩（通过 /compact 命令）。
+这个模块生成压缩结果的摘要信息，告诉用户：
+  - 压缩前有多少条消息，压缩后有多少条
+  - Token 数从多少降到多少
+  - 压缩是否真正生效（有时不需要压缩则提示无变化）
+
+─────────────────────────────────────────────────────────────────
+
+User-facing summaries for manual compression commands."""
 
 from __future__ import annotations
 

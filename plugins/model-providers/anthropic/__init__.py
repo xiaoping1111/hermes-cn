@@ -1,4 +1,11 @@
-"""Native Anthropic provider profile."""
+"""Anthropic原生模型供应商配置
+
+【产品经理理解要点】
+注册Anthropic原生供应商，提供Claude系列模型。使用Anthropic专用API（x-api-key认证），非标准Bearer Token。
+- 供应商：Anthropic，提供Claude系列模型
+- 认证：ANTHROPIC_API_KEY，使用x-api-key头认证（而非Bearer）
+- 特点：支持Claude模型的extended thinking、实时模型列表获取
+"""
 
 import json
 import logging

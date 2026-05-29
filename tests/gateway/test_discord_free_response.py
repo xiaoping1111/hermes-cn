@@ -1,4 +1,14 @@
-"""Tests for Discord free-response defaults and mention gating."""
+"""消息网关测试 - Discord平台·free·response
+
+【产品经理理解要点】
+验证消息网关的Discord平台功能
+- 验证的功能: Tests for Discord free-response defaults and mention gating
+- 核心测试场景: discord defaults to require mention、discord free response in server channels、discord free response in threads 等共34个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Tests for Discord free-response defaults and mention gating.
+"""
 
 from datetime import datetime, timezone
 from types import SimpleNamespace

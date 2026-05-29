@@ -1,4 +1,13 @@
-"""Unit tests for _print_loopback_ssh_hint() in hermes_cli/auth.py.
+"""命令行界面测试 - 认证授权·loopback·ssh·提示信息
+
+【产品经理理解要点】
+验证命令行界面的认证授权提示信息功能
+- 验证的功能: Unit tests for _print_loopback_ssh_hint() in hermes_cli/auth.py
+- 核心测试场景: loopback ssh hint silent when not remote、loopback ssh hint prints tunnel command on ssh、loopback ssh hint uses actual bound port 等共14个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Unit tests for _print_loopback_ssh_hint() in hermes_cli/auth.py.
 
 The helper exists to warn users that loopback OAuth flows (xAI Grok OAuth,
 Spotify) don't work over SSH unless they set up an `ssh -L` port forward

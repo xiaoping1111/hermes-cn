@@ -1,4 +1,13 @@
-"""Security-focused integration tests for CLI worktree setup."""
+"""工作树安全测试
+
+【产品经理理解要点】
+验证工作树操作中的安全约束和路径验证。
+- 工作树路径遍历攻击的防护
+- 影响多项目环境的安全性
+
+──────────────────────────────────────────────────────────────
+Security-focused integration tests for CLI worktree setup.
+"""
 
 import subprocess
 from pathlib import Path

@@ -1,4 +1,13 @@
-"""Regression test for /model context-length display on provider-capped models.
+"""命令行界面测试 - 模型切换
+
+【产品经理理解要点】
+验证命令行界面模型切换的正确性
+- 验证的功能: Regression test for /model context-length display on provider-capped models
+- 核心测试场景: codex oauth overrides models dev、falls back to model info when resolver returns none、returns none when both sources empty 等共7个场景
+- 业务影响: CLI命令可能出现异常，影响用户配置和操作体验
+
+─────────────────────────────────────────────────────────────────
+Regression test for /model context-length display on provider-capped models.
 
 Bug (April 2026): `/model gpt-5.5` on openai-codex (ChatGPT OAuth) showed
 "Context: 1,050,000 tokens" because the display code used the raw models.dev

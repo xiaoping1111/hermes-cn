@@ -1,5 +1,19 @@
 from __future__ import annotations
 
+"""消息网关测试 - goal·status·notice
+
+【产品经理理解要点】
+验证消息网关相关功能的正确性
+- 验证的功能: 目标状态通知机制
+- 核心测试场景: goal status notice uses adapter send with thread metadata、goal status notice defers until post delivery callback、clear goal pending continuations removes slot and overflow only
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+消息网关测试 - goal·status·notice
+
+测试多平台消息接入与命令分发中goal相关的status相关的notice功能
+"""
+
 from types import SimpleNamespace
 
 import pytest

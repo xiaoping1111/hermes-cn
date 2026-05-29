@@ -1,4 +1,13 @@
-"""Integration tests for gateway AIAgent caching.
+"""消息网关测试 - AI代理·缓存机制
+
+【产品经理理解要点】
+验证消息网关的AI代理缓存机制功能
+- 验证的功能: Integration tests for gateway AIAgent caching
+- 核心测试场景: same config same signature、model change different signature、same token prefix different full token changes signature 等共55个场景
+- 业务影响: 消息网关可能出现命令丢失或平台适配错误，影响所有平台用户
+
+─────────────────────────────────────────────────────────────────
+Integration tests for gateway AIAgent caching.
 
 Verifies that the agent cache correctly:
 - Reuses agents across messages (same config → same instance)

@@ -1,4 +1,15 @@
-"""Tests for model_tools.py — function call dispatch, agent-loop interception, legacy toolsets."""
+"""模型工具调度测试
+
+【产品经理理解要点】
+验证模型工具的函数调用分发、代理循环拦截和遗留工具集映射。
+- handle_function_call的正确路由
+- 代理循环工具的识别和拦截
+- 工具集到工具名的映射
+- 影响AI调用工具的正确性
+
+──────────────────────────────────────────────────────────────
+Tests for model_tools.py — function call dispatch, agent-loop interception, legacy toolsets.
+"""
 
 import json
 from unittest.mock import ANY, call, patch

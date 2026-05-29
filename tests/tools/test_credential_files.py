@@ -1,4 +1,15 @@
-"""Tests for credential file passthrough and skills directory mounting."""
+"""凭证files测试
+
+【产品经理理解要点】
+验证工具系统模块中dict with path key等29个场景的正确性
+- dict with path key的正确性验证
+- dict with name key fallback的正确性验证
+- string entry的正确性验证
+- 另有26个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests for credential file passthrough and skills directory mounting."""
 
 import json
 import os

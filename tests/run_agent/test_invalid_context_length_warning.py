@@ -1,4 +1,15 @@
-"""Tests that invalid context_length values in config produce visible warnings."""
+"""无效上下文长度警告测试
+
+【产品经理理解要点】
+验证Agent运行引擎模块中valid integer context length no warning等5个场景的正确性
+- valid integer context length no warning的正确性验证
+- string k suffix context length warns的正确性验证
+- string numeric context length works的正确性验证
+- 另有2个测试场景覆盖
+- 影响Agent运行引擎的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Tests that invalid context_length values in config produce visible warnings."""
 
 from unittest.mock import patch, MagicMock, call
 

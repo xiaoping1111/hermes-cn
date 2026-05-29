@@ -1,4 +1,13 @@
-"""Shared helpers for attaching Hermes to a local Chromium-family CDP port."""
+"""浏览器CDP连接工具
+
+【产品经理理解要点】
+帮助Hermes连接到本地Chromium浏览器的CDP调试端口，供浏览器自动化工具使用。
+- 核心职责：查找本地浏览器可执行文件、启动调试模式、验证CDP端口可用
+- 支持浏览器：Chrome、Chromium、Brave、Edge（Mac/Windows/Linux全平台）
+- 默认连接地址：http://127.0.0.1:9222
+
+─────────────────────────────────────────────────────────────────
+Shared helpers for attaching Hermes to a local Chromium-family CDP port."""
 
 from __future__ import annotations
 

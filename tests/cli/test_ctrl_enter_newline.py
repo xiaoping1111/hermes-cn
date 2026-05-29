@@ -1,4 +1,12 @@
-"""Regression tests for issue #22379 — Ctrl+Enter newline over SSH/WSL.
+"""Ctrl+Enter换行测试
+
+【产品经理理解要点】
+验证Ctrl+Enter在不同配置下的行为。
+- Ctrl+Enter作为换行或发送的配置
+- 影响输入习惯的适配
+
+──────────────────────────────────────────────────────────────
+Regression tests for issue #22379 — Ctrl+Enter newline over SSH/WSL.
 
 prompt_toolkit treats c-j (LF) as Enter on POSIX so thin PTYs (docker exec,
 some BSD ssh) that send LF for plain Enter still work. But Windows Terminal

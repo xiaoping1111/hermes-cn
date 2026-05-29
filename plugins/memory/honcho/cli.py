@@ -1,6 +1,8 @@
-"""CLI commands for Honcho integration management.
+"""Honcho CLI管理命令
 
-Handles: hermes honcho setup | status | sessions | map | peer
+【产品经理理解要点】
+提供Honcho集成的命令行管理工具，用于配置、状态检查、会话管理和同伴映射。
+- 支持命令：setup(配置) | status(状态) | sessions(会话) | map(映射) | peer(同伴)
 """
 
 from __future__ import annotations

@@ -1,4 +1,15 @@
-"""Test that skill_view registers required env vars in the passthrough registry."""
+"""技能环境变量透传测试
+
+【产品经理理解要点】
+验证工具系统模块中available env vars registered等4个场景的正确性
+- available env vars registered的正确性验证
+- remote backend persisted env vars registered的正确性验证
+- missing env vars not registered的正确性验证
+- 另有1个测试场景覆盖
+- 影响工具系统的可靠性和功能正确性
+
+─────────────────────────────────────────────────────────────────
+Test that skill_view registers required env vars in the passthrough registry."""
 
 import json
 import os
