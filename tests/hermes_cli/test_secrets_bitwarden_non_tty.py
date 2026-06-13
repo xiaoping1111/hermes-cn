@@ -2,7 +2,11 @@
 
 Issue #40274: cmd_setup() crashes with EOFError when stdin is not a TTY
 because getpass.getpass() and console.input() require an interactive terminal.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_secrets_bitwarden_non_tty.py）
 """
+
 from __future__ import annotations
 
 import argparse

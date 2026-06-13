@@ -1,4 +1,8 @@
-"""Tests for Feishu vc.bot.meeting_invited_v1 event handling."""
+"""Tests for Feishu vc.bot.meeting_invited_v1 event handling.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的飞书适配——对接飞书机器人API
+"""
 
 import asyncio
 import unittest

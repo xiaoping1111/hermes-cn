@@ -3,6 +3,9 @@
 These cover the small public surface that lets `hermes model` / `hermes setup`
 label detected credentials with their origin ("from Bitwarden") so users
 don't see an unexplained "credentials ✓" line when their .env is empty.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_env_loader_secret_sources.py）
 """
 
 from __future__ import annotations

@@ -2,6 +2,9 @@
 
 These verify the fix for the tick-blocking issue where as_completed(timeout=600)
 prevented the ticker thread from firing, causing all other jobs to be fast-forwarded.
+
+【产品经理理解要点】
+定时任务测试——验证调度和脚本执行（test_parallel_pool.py）
 """
 
 import concurrent.futures

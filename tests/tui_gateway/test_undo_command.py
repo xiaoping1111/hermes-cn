@@ -9,6 +9,9 @@ returns ``{"type": "prefill", "message": <text>, "notice": ...}`` so
 the Ink client drops the message into the composer for editing.
 
 ``/undo N`` backs up N user turns at once (default 1). See issue #21910.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_undo_command.py）
 """
 
 from __future__ import annotations

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """Write-approval gate + pending store for memory and skill writes.
 
 Background
@@ -38,6 +39,9 @@ writes always stage (too big to eyeball mid-loop).
 Pending records live under ``<HERMES_HOME>/pending/{memory,skills}/<id>.json``
 so they survive process restarts and can be reviewed from CLI, gateway, or the
 web dashboard.
+
+【产品经理理解要点】
+工具系统——提供代码执行、文件操作、浏览器、搜索等能力给AI代理中的审批机制——危险操作需用户确认后执行
 """
 
 from __future__ import annotations

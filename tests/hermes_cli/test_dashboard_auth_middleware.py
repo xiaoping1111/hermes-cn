@@ -11,7 +11,11 @@ without any external IDP.  Exercises:
   * Full /auth/login → /auth/callback → / round trip with the stub
   * Invalid / missing cookies return 401 (api) or 302 (html)
   * Zero-providers + gate-on fails closed
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的认证授权——管理API密钥和OAuth流程
 """
+
 from __future__ import annotations
 
 import pytest

@@ -7,6 +7,9 @@ tool injects an escalating ``_hint`` that tells the model to break out
 of the loop (re-read, use longer context, or fall back to write_file).
 
 See issue #507 (Roo Code deep-dive, item 2f).
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_patch_failure_tracking.py）
 """
 
 import json

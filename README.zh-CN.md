@@ -1,3 +1,14 @@
+---
+AIGC:
+  ContentProducer: '001191110102MAD55U9H0F10002'
+  ContentPropagator: '001191110102MAD55U9H0F10002'
+  Label: '1'
+  ProduceID: 'c3cfd19f-52e3-4c4f-8015-67a59427dbac'
+  PropagateID: 'c3cfd19f-52e3-4c4f-8015-67a59427dbac'
+  ReservedCode1: '397da732-fbee-4277-a47f-0be7ade01542'
+  ReservedCode2: '397da732-fbee-4277-a47f-0be7ade01542'
+---
+
 <p align="center">
   <img src="assets/banner.png" alt="Hermes Agent" width="100%">
 </p>
@@ -127,33 +138,35 @@ Hermes 有两种入口：用 `hermes` 启动终端 UI，或运行网关从 Teleg
 
 ## 源码阅读指南
 
-为了帮助开发者快速掌握 Hermes 的架构与实现，建议按照以下**“从外到内、从调度到执行”**的逻辑顺序阅读源码。我们在核心文件中增加了详细的中文注释（包含【产品经理理解要点】和【核心工作流程】）。
+为了帮助开发者快速掌握 Hermes 的架构与实现，建议按照以下**"从外到内、从调度到执行"**的逻辑顺序阅读源码。我们在全部 2,284 个 Python 文件中添加了【产品经理理解要点】中文注释（覆盖率 100%），方便非开发背景的团队成员快速理解每个模块的业务定位。
 
 ### 1. 入口与外壳 (The Entry Point)
 了解用户是如何启动并与 AI 代理交互的。
-- [cli.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/cli.py): 交互式终端界面的总入口，负责处理命令、状态显示和用户交互。
+- `cli.py`: 交互式终端界面的总入口，负责处理命令、状态显示和用户交互。
 
 ### 2. 核心大脑 (The Orchestrator)
 理解 AI 代理的核心类及其生命周期管理。
-- [run_agent.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/run_agent.py): 定义了核心类 `AIAgent`。这是整个系统的“心脏”，负责协调模型、工具、记忆和上下文。
-- [agent/agent_init.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/agent/agent_init.py): 详细定义了代理启动时的配置参数（模型、Token 限制、重试机制等）。
+- `run_agent.py`: 定义了核心类 `AIAgent`。这是整个系统的"心脏"，负责协调模型、工具、记忆和上下文。
+- `agent/agent_init.py`: 详细定义了代理启动时的配置参数（模型、Token 限制、重试机制等）。
 
 ### 3. 运行逻辑 (The Execution Loop)
-深入研究 AI 是如何“思考”并“行动”的。
-- [agent/conversation_loop.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/agent/conversation_loop.py): 实现了“用户提问 -> 模型生成 -> 工具执行 -> 结果反馈”的核心循环。
+深入研究 AI 是如何"思考"并"行动"的。
+- `agent/conversation_loop.py`: 实现了"用户提问 -> 模型生成 -> 工具执行 -> 结果反馈"的核心循环。
 
 ### 4. 工具系统 (The Tooling System)
 了解 AI 如何扩展自己的能力，操作外部世界。
-- [model_tools.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/model_tools.py): 工具分发层，将模型生成的 JSON 指令转换为真实的 Python 函数调用。
-- [toolsets.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/toolsets.py): 工具集的管理与分组。
+- `model_tools.py`: 工具分发层，将模型生成的 JSON 指令转换为真实的 Python 函数调用。
+- `toolsets.py`: 工具集的管理与分组。
 
 ### 5. 上下文与智能 (Context & Intelligence)
 理解长对话如何不丢失记忆，以及 Prompt 是如何生成的。
-- [agent/prompt_builder.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/agent/prompt_builder.py): 动态组装发送给模型的 System Prompt。
-- [agent/context_engine.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/agent/context_engine.py): 上下文管理，负责在 Token 快满时执行压缩总结。
-- [agent/memory_manager.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/agent/memory_manager.py): 负责从数据库加载用户偏好、项目规则和过往经验。
+- `agent/prompt_builder.py`: 动态组装发送给模型的 System Prompt。
+- `agent/context_engine.py`: 上下文管理，负责在 Token 快满时执行压缩总结。
+- `agent/memory_manager.py`: 负责从数据库加载用户偏好、项目规则和过往经验。
 
 ### 6. 系统支撑 (System Support)
-- [agent/error_classifier.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/agent/error_classifier.py): 负责 API 错误分类与故障切换。
-- [agent/display.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/agent/display.py): 终端 UI 显示组件（如 Spinner 和状态栏）。
-- [tools/terminal_tool.py](file:///Users/xiaoping/ai-dev/hermes/hermes-agent/tools/terminal_tool.py): 核心工具实现示例，展示 AI 如何执行本地命令。
+- `agent/error_classifier.py`: 负责 API 错误分类与故障切换。
+- `agent/display.py`: 终端 UI 显示组件（如 Spinner 和状态栏）。
+- `tools/terminal_tool.py`: 核心工具实现示例，展示 AI 如何执行本地命令。
+
+> AI生成

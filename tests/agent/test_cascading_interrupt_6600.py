@@ -20,7 +20,11 @@ The fix: a request-local ``_request_cancelled`` token set by the poll loop
 right before the force-close. The worker's exception handler checks it and
 exits cleanly (no retry, no fallback, no "reconnecting" status) instead of
 treating the forced error as transient.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_cascading_interrupt_6600.py）
 """
+
 import threading
 import time
 import types

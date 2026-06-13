@@ -17,6 +17,9 @@ deterministic stubs for:
 
 …so the full code path is covered without a live cua-driver, a real
 auxiliary client, or network access.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_computer_use_capture_routing.py）
 """
 
 from __future__ import annotations

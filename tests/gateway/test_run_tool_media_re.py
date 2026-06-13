@@ -1,3 +1,7 @@
+"""【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_run_tool_media_re.py）
+"""
+
 r"""Tests for _TOOL_MEDIA_RE regex patterns in gateway/run.py.
 
 Issue #34632: The _TOOL_MEDIA_RE patterns in GatewayRunner used (?:/|~\/) to

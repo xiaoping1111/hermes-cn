@@ -3,6 +3,9 @@
 Extracted verbatim from ``hermes_cli/main.py:main()`` — same arguments, same
 ``func=cmd_cron`` dispatch. The handler is injected so this module does not
 import ``main`` (cycle avoidance).
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（cron.py）
 """
 
 from __future__ import annotations

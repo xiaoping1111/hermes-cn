@@ -6,7 +6,11 @@ pass after the Phase 2 s6 migration. Any behavior drift is a regression.
 The harness expects ``built_image`` and ``container_name`` fixtures from
 ``tests/docker/conftest.py``. When Docker isn't available every test
 here is skipped at collection time.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_main_invocation.py）
 """
+
 from __future__ import annotations
 
 import subprocess

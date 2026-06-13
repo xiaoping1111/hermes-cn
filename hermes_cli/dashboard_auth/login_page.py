@@ -18,7 +18,11 @@ Test-stable class names: the existing test suite extracts the
 ``class="provider-btn"`` anchor href to walk the OAuth flow. That
 class name MUST NOT change without updating
 ``tests/hermes_cli/test_dashboard_auth_401_reauth.py``.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（login_page.py）
 """
+
 from __future__ import annotations
 
 import html

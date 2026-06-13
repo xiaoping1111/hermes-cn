@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """Per-file parallel test runner.
 
 The minimum-viable replacement for pytest-xdist + a subprocess-isolation
@@ -33,6 +34,9 @@ Environment:
     HERMES_TEST_PATHS    Override discovery roots (colon-sep, default: 'tests')
 
 Exit code: 0 if every file's pytest exited 0; 1 otherwise.
+
+【产品经理理解要点】
+构建脚本——项目构建、发布、审计等辅助工具（run_tests_parallel.py）
 """
 
 from __future__ import annotations

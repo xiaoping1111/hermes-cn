@@ -13,6 +13,9 @@ Core invariant these tests pin:
   The resolution base for a relative path MUST always be absolute. A relative
   ``TERMINAL_CWD`` (``.``, ``./sub``, ``..``) must be anchored deterministically,
   never left to resolve against whatever the process cwd happens to be.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_file_tools_cwd_resolution.py）
 """
 
 import os

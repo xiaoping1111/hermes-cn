@@ -11,6 +11,9 @@ hit ``/api/plugins/example/hello`` (and ``/dashboard-plugins/example/
 manifest.json``) without depending on any production-facing plugin.
 
 Mounted at /api/plugins/example/ by the dashboard plugin system.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（plugin_api.py）
 """
 
 from fastapi import APIRouter

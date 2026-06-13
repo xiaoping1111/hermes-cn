@@ -9,6 +9,9 @@ and verifies:
 
 This is the regression test for issue #30768 — the inline-skip escape hatch
 must work without ever touching the modal, on every platform.
+
+【产品经理理解要点】
+命令行测试——验证CLI命令和交互行为（test_destructive_slash_inline_skip_e2e.py）
 """
 
 from __future__ import annotations

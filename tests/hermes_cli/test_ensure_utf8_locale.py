@@ -9,6 +9,9 @@ caught the Windows cp1252 case. Linux hosts with a latin-1 / C / POSIX locale
 (common on minimal Debian installs and Raspberry Pi) hit the identical crash
 in ``hermes setup`` because the repair returned early. See the Raspberry Pi
 report: latin-1 locale → UnicodeEncodeError before the wizard could start.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_ensure_utf8_locale.py）
 """
 
 import io

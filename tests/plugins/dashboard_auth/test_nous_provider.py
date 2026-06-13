@@ -12,6 +12,9 @@ Also exercises ``revoke_session`` (no-op) and ``refresh_session``
 (unconditional ``RefreshExpiredError``).
 
 All HTTP is mocked: nothing in this file talks to a real Portal.
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能（test_nous_provider.py）
 """
 
 from __future__ import annotations

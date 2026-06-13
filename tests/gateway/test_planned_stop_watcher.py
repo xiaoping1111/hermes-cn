@@ -9,6 +9,9 @@ and translating its existence into the same shutdown-handler call a
 real SIGTERM would have produced.
 
 See issue #33778 for the original Windows session-loss bug report.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_planned_stop_watcher.py）
 """
 
 import asyncio

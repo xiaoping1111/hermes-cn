@@ -16,6 +16,9 @@ import, add it to the pip install line below.
 
 Marked `integration` because it shells out to `uv build` + `venv` + `pip` and
 takes ~15-30s. Run with: pytest -m integration tests/test_wheel_locales_e2e.py
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_wheel_locales_e2e.py）
 """
 
 from __future__ import annotations

@@ -25,6 +25,9 @@ The sandbox has its own existing probe (``_probe_remote_backend``)
 in ``agent/prompt_builder.py``.
 
 Toggle via ``agent.environment_probe`` in config.yaml (default True).
+
+【产品经理理解要点】
+工具系统——提供代码执行、文件操作、浏览器、搜索等能力给AI代理（env_probe.py）
 """
 
 from __future__ import annotations

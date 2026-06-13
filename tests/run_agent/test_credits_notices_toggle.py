@@ -2,7 +2,11 @@
 
 The toggle suppresses notice EMISSION only — credits state capture and /usage
 stay live. Uses the bare-AIAgent pattern (object.__new__) from test_notice_spine.py.
+
+【产品经理理解要点】
+运行代理测试——验证代理端到端执行流程（test_credits_notices_toggle.py）
 """
+
 from __future__ import annotations
 
 from unittest.mock import patch

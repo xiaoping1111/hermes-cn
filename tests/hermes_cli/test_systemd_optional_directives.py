@@ -8,6 +8,9 @@ comparison sees a difference.
 
 The fix: _strip_optional_systemd_directives() removes those directives
 from both the installed and expected text before comparison.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_systemd_optional_directives.py）
 """
 
 from __future__ import annotations

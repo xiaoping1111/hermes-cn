@@ -1,3 +1,7 @@
+"""【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_web_server_fs.py）
+"""
+
 import base64
 from pathlib import Path
 

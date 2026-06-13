@@ -1,9 +1,7 @@
 """网关↔节点RPC通信协议
 
 【产品经理理解要点】
-定义网关与远程Meet节点之间的JSON消息信封格式：Request/Response/Error三种消息类型。"""
-
-from __future__ import annotations
+定义网关与远程Meet节点之间的JSON消息信封格式：Request/Response/Error三种消息类型。
 
 Requests must carry the shared bearer token (set up via
 ``hermes meet node approve`` on the gateway and read off disk on the

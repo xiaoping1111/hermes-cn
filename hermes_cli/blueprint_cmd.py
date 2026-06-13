@@ -27,6 +27,9 @@ and calls the existing ``cronjob`` tool. No new tool, no second job engine.
 
 Parsing is shlex-based so quoted free-text values (``criteria="from my boss"``)
 survive.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（blueprint_cmd.py）
 """
 
 from __future__ import annotations

@@ -4,6 +4,9 @@ These are invariant tests, not catalog snapshots: they assert how
 ``group_providers`` folds a flat slug list and how member slugs relate to
 ``PROVIDER_GROUPS`` / ``CANONICAL_PROVIDERS`` — not the specific set of
 vendors, which is expected to change over time.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_provider_groups.py）
 """
 
 from hermes_cli.models import (

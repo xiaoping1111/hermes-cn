@@ -5,6 +5,9 @@ When installing as root with the FHS layout (INSTALL_DIR=/usr/local/lib/...),
 location, otherwise the venv interpreter ends up at ``/root/.local/share/uv/...``
 and the shared ``/usr/local/bin/hermes`` wrapper fails for non-root users with
 "bad interpreter: Permission denied".  See #21457.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_install_sh_root_fhs_uv_python_path.py）
 """
 
 from pathlib import Path

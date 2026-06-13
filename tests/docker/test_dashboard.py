@@ -9,7 +9,11 @@ not change between tini and s6).
 Every ``docker exec`` here runs as the unprivileged ``hermes`` user
 (via :func:`docker_exec`/:func:`docker_exec_sh` in conftest), matching
 the realistic runtime context. See the conftest module docstring.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_dashboard.py）
 """
+
 from __future__ import annotations
 
 import json

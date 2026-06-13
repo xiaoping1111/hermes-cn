@@ -22,6 +22,9 @@ would add indirection without clarifying anything.
 
 This module is dependency-free so it can be unit-tested in isolation and
 imported by the turn loop without an import cycle.
+
+【产品经理理解要点】
+AI代理核心——管理对话循环、模型调用、工具执行和上下文压缩（turn_retry_state.py）
 """
 
 from __future__ import annotations

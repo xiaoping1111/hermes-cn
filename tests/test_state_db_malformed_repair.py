@@ -11,7 +11,11 @@ The error fires on the *first* statement of any connection (PRAGMA
 journal_mode in apply_wal_with_fallback), before _init_schema runs — so it
 cannot be handled at the FTS-rebuild layer. These tests verify the
 sqlite_master surgery path recovers the canonical data and self-heals on open.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_state_db_malformed_repair.py）
 """
+
 import sqlite3
 import uuid
 from pathlib import Path

@@ -5,7 +5,11 @@ loopback port with a token the next gateway run doesn't know — every
 replacement spawn then died on EADDRINUSE. These tests cover the startup
 reaper (`_reap_stale_sidecar`) and the stdin-pipe lifetime binding, without
 spawning Node or binding ports.
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能（test_sidecar_lifecycle.py）
 """
+
 from __future__ import annotations
 
 import subprocess

@@ -15,6 +15,9 @@ These tests exercise:
 All assertions work under the mocked OpenAI SDK used elsewhere in this
 suite (we patch ``run_agent.OpenAI`` and drive ``agent.client``), so they
 pass identically in CI and locally.
+
+【产品经理理解要点】
+运行代理测试——验证代理端到端执行流程（test_turn_completion_explainer.py）
 """
 
 import os

@@ -13,8 +13,10 @@ These tests cover the surface that the recovery touches in isolation:
 shallow copies share inner field references; popping a key from one dict
 does not remove it from the other; and a list of shallow copies behaves
 the same way.
-"""
 
+【产品经理理解要点】
+运行代理测试——验证代理端到端执行流程（test_thinking_sig_recovery_persistence.py）
+"""
 
 def _shallow_copies(messages):
     return [m.copy() for m in messages]

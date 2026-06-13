@@ -1,3 +1,7 @@
+"""【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的会话管理——管理用户与代理的会话状态
+"""
+
 import asyncio
 
 from hermes_cli import web_server

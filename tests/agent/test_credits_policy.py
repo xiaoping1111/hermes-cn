@@ -2,6 +2,9 @@
 
 All tests use fresh latch = {"active": set(), "seen_below_90": False, "usage_band": None} per scenario.
 CreditsState is constructed directly (not parsed from headers).
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_credits_policy.py）
 """
 
 from __future__ import annotations

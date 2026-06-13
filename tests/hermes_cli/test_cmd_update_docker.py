@@ -12,6 +12,9 @@ These tests pin the new behaviour: when ``detect_install_method`` reports
 (``cmd_update``) and the check path (``_cmd_update_check``) print the
 ``docker pull`` guidance from ``format_docker_update_message`` and exit
 with status 1, without running ``git fetch`` / ``subprocess.run``.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的Docker沙箱——在容器中安全执行代码
 """
 
 from __future__ import annotations

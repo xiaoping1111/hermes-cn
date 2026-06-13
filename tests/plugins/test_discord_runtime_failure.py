@@ -1,3 +1,7 @@
+"""【产品经理理解要点】
+插件测试——验证各类插件的功能中的Discord适配——对接Discord Bot API
+"""
+
 import asyncio
 from unittest.mock import AsyncMock
 

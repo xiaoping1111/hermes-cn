@@ -13,6 +13,9 @@ backend, POSIX gets the fcntl/termios one.  Both branches must:
 This test asserts the live state on whichever platform CI runs on, plus a
 source-text check confirming the branch shape is preserved so a future
 refactor can't accidentally collapse it back to a POSIX-only import.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_web_server_pty_import.py）
 """
 
 from __future__ import annotations

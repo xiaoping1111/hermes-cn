@@ -5,6 +5,9 @@ can't freeze ``gateway.ready``.  The agent snapshots its tool list once at
 build time and never re-reads it, so ``_make_agent`` briefly joins the
 discovery thread before building — bounded, so a dead server can't re-introduce
 the startup hang, and a no-op once discovery has finished.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试中的MCP协议——对接Model Context Protocol工具标准
 """
 
 import threading

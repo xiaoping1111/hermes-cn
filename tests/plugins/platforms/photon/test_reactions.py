@@ -4,7 +4,11 @@ Outbound reactions go through the sidecar's ``/react`` / ``/unreact``
 endpoints; these tests stub ``_sidecar_call`` to assert endpoint + body
 shape. Inbound reaction events are fed straight to ``_dispatch_inbound``.
 Neither path spawns the Node sidecar or binds ports.
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能（test_reactions.py）
 """
+
 from __future__ import annotations
 
 from datetime import datetime, timezone

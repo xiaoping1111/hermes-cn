@@ -1,5 +1,4 @@
-"""
-Transcription Provider Registry
+"""Transcription Provider Registry
 ================================
 
 Central map of registered STT providers. Populated by plugins at
@@ -15,6 +14,9 @@ Plugin names that collide with a built-in STT provider (``local``,
 rejected at registration with a warning. This invariant is also
 re-checked at dispatch time in
 :func:`tools.transcription_tools._dispatch_to_plugin_provider`.
+
+【产品经理理解要点】
+AI代理核心——管理对话循环、模型调用、工具执行和上下文压缩（transcription_registry.py）
 """
 
 from __future__ import annotations

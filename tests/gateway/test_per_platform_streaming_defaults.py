@@ -6,6 +6,9 @@ display.platforms.telegram.streaming=true, .discord.streaming=false. These are
 gap-fillers (user values win via deep-merge) and, because the dashboard schema
 is generated from DEFAULT_CONFIG, they automatically appear as editable toggles
 in the web UI.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_per_platform_streaming_defaults.py）
 """
 
 from __future__ import annotations

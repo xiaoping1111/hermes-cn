@@ -6,6 +6,9 @@ Subcommands:
     sync     — run a fetch right now and show what would be applied (dry-run friendly)
     disable  — flip ``secrets.bitwarden.enabled`` to False
     install  — just download the bws binary (no token / project required)
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口中的命令行——终端交互的主入口
 """
 
 from __future__ import annotations

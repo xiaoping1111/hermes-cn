@@ -8,6 +8,9 @@ behavioural regression test).
 
 Focus here: the lock primitives themselves (acquire, release, TTL,
 diagnostic accessor) — not the wiring into compression.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试中的压缩——压缩对话历史以节省上下文空间
 """
 
 from __future__ import annotations

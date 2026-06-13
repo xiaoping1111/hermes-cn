@@ -60,6 +60,9 @@ Skip reasons: when the plugin loads but can't register (missing issuer /
 client_id), it writes a human-readable reason to the module-level
 :data:`LAST_SKIP_REASON` so the gate's fail-closed branch can surface a useful
 operator error instead of the bare "no providers registered".
+
+【产品经理理解要点】
+插件系统——扩展Hermes核心功能的可选组件（如记忆、浏览器、图片生成）（__init__.py）
 """
 
 from __future__ import annotations

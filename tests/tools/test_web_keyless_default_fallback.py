@@ -15,7 +15,11 @@ These tests pin the invariant that :func:`tools.web_tools._ensure_web_plugins_lo
 guarantees the keyless default is registered regardless of the sweep's outcome,
 and that the direct-registration fallback honors an explicit ``plugins.disabled``
 entry. Real imports from the bundled plugin modules — no provider mocking.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_web_keyless_default_fallback.py）
 """
+
 from __future__ import annotations
 
 import pytest

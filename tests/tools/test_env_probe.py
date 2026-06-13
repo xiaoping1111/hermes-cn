@@ -1,4 +1,8 @@
-"""Tests for tools/env_probe.py — local Python toolchain probe."""
+"""Tests for tools/env_probe.py — local Python toolchain probe.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_env_probe.py）
+"""
 
 import sys
 

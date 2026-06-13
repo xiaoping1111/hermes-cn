@@ -8,6 +8,9 @@ generations with `finish_reason="length"`.
 Precedence verified here:
     HERMES_MAX_TOKENS env  >  model.max_tokens  >  per-provider
     max_output_tokens  >  None
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_max_tokens_propagation.py）
 """
 
 import importlib

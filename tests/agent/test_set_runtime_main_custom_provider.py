@@ -2,7 +2,11 @@
 so that _resolve_auto() can route custom: providers in Step 1.
 
 Fixes https://github.com/NousResearch/hermes-agent/issues/34777
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_set_runtime_main_custom_provider.py）
 """
+
 import pytest
 from unittest.mock import patch, MagicMock
 

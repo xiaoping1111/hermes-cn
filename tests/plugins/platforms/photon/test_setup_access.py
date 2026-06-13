@@ -4,7 +4,11 @@
 channel at their DM, writing to the per-test ~/.hermes/.env (the hermetic
 HERMES_HOME fixture isolates this). It must fill only unset keys so a re-run
 never clobbers a hand-tuned allowlist.
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能中的安装设置——首次使用引导和配置向导
 """
+
 from __future__ import annotations
 
 import pytest

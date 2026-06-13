@@ -4,6 +4,9 @@ When MATRIX_ALLOWED_USERS is not configured, _on_reaction must deny
 approval reactions by default unless GATEWAY_ALLOW_ALL_USERS=true.
 Mirrors the Telegram _is_callback_user_authorized fix (commit 89d32052e,
 PR #28494).
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的审批机制——危险操作需用户确认后执行
 """
 
 import asyncio

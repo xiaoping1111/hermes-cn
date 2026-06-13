@@ -8,7 +8,11 @@ raised ``McpError(-32601 Method not found)`` against such servers, so a
 prompt-only server could never stay connected.
 
 Ported from anomalyco/opencode#31271.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性中的MCP协议——对接Model Context Protocol工具标准
 """
+
 import asyncio
 from types import SimpleNamespace
 from unittest.mock import AsyncMock

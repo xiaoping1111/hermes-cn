@@ -24,6 +24,9 @@ This regression simulates the two concurrent ``compress_context`` calls
 against a shared ``state.db`` and asserts that the per-session compression
 lock added in this PR prevents the orphan child.  Without the lock the
 fixture deterministically produces 2 children; with the lock, exactly 1.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等中的压缩——压缩对话历史以节省上下文空间
 """
 
 from __future__ import annotations

@@ -10,7 +10,11 @@ both the user-facing recommended command and the actual
 Detection is restricted to properties of the running interpreter
 (``sys.prefix`` / ``sys.executable``) so a pip/venv install on a machine
 that also has ``uv tool install hermes-agent`` does not get misclassified.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_uv_tool_update.py）
 """
+
 from __future__ import annotations
 
 import subprocess

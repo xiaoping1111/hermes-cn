@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """Classify candidate items by urgency/importance and emit only the urgent ones.
 
 The proactive-monitor pattern: a fetch step (a watcher script, an inbox dump, a
@@ -31,6 +32,9 @@ Item schema (flexible): each item is an object; the classifier sees the whole
 object. A "title"/"subject"/"summary"/"text" field helps it judge. An "id"
 field (any of id/guid/message_id/url) is echoed back so duplicates can be
 deduped upstream.
+
+【产品经理理解要点】
+定时任务——支持定时发送消息、执行脚本的调度系统（classify_items.py）
 """
 
 from __future__ import annotations

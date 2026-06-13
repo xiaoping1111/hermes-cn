@@ -1,9 +1,10 @@
 """远程Meet节点本地注册表
 
 【产品经理理解要点】
-维护已批准的远程Meet节点列表(name→url+token)，存储在$HERMES_HOME/workspace/meetings/nodes.json。"""
+维护已批准的远程Meet节点列表(name→url+token)，存储在$HERMES_HOME/workspace/meetings/nodes.json。
 
-from __future__ import annotations
+Schema
+------
     {
       "nodes": {
         "<name>": {

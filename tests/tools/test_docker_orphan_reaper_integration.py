@@ -8,6 +8,9 @@ gates: once-per-process behavior, the disable flag, and the
 Issue #20561 — without these gates, parallel subagents would each fire the
 reaper on container creation, and the ``terminal.docker_orphan_reaper: false``
 opt-out would silently do nothing.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性中的Docker沙箱——在容器中安全执行代码
 """
 
 import os

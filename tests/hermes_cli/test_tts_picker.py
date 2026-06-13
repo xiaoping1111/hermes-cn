@@ -4,6 +4,9 @@ Covers ``_plugin_tts_providers()`` and the ``_visible_providers()``
 integration that injects plugin rows into the Text-to-Speech category.
 
 Mirrors the structure of existing image_gen / browser picker tests.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的语音合成——将文本转为语音输出
 """
 
 from __future__ import annotations

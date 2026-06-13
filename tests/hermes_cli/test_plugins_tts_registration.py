@@ -6,6 +6,9 @@ and asserts the registration result.
 
 Mirrors the structure of
 ``tests/hermes_cli/test_plugin_scanner_recursion.py::TestRegisterImageGenProvider``.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的语音合成——将文本转为语音输出
 """
 
 from __future__ import annotations

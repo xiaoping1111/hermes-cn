@@ -6,6 +6,9 @@ Promptware defense: results from tools that fetch attacker-controllable content
 the model treats them as data, not instructions. The wrapper is intentionally
 NOT a regex scan — it's an unconditional architectural mark on every result
 from a known-untrusted source.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_tool_dispatch_helpers.py）
 """
 
 import pytest

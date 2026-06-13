@@ -6,7 +6,11 @@ complementary inner-container case: when file tools execute inside Docker,
 the bind-mount strips that prefix and the guard sees plain ``/root/.hermes/…``.
 The root:root ownership on the divergent SOUL.md in #32049 confirms this
 is the primary failure mode.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等中的文件安全——防止代理读写敏感文件
 """
+
 from __future__ import annotations
 
 import pytest

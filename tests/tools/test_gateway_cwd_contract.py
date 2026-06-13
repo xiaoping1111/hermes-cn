@@ -8,6 +8,9 @@ Unlike the system-prompt readers fixed in the gateway-cwd-resolver cluster
 were deliberately left out of scope. This file is a *characterization* guard: it
 pins the already-correct behavior so the supersession of PR #29365 is airtight
 and a future refactor of these sites can't silently regress the contract.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_gateway_cwd_contract.py）
 """
 
 from __future__ import annotations

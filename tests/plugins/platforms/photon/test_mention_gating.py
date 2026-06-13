@@ -7,7 +7,11 @@ never gated.
 
 These call ``_dispatch_inbound`` directly (no aiohttp / ports) and assert
 on what reaches ``handle_message``.
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能（test_mention_gating.py）
 """
+
 from __future__ import annotations
 
 from typing import List

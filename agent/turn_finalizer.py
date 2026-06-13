@@ -18,6 +18,9 @@ Module ``logger`` is imported lazily inside the body (``from
 agent.conversation_loop import logger``) so this module never imports
 ``agent.conversation_loop`` at import time -> no import cycle, and the log records
 keep the exact logger name (``"agent.conversation_loop"``).
+
+【产品经理理解要点】
+AI代理核心——管理对话循环、模型调用、工具执行和上下文压缩（turn_finalizer.py）
 """
 
 from __future__ import annotations

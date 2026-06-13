@@ -1,5 +1,4 @@
-"""
-Photon Spectrum (iMessage) platform adapter for Hermes Agent.
+"""Photon Spectrum (iMessage) platform adapter for Hermes Agent.
 
 Both directions of traffic flow through a small supervised Node sidecar
 (see ``sidecar/index.mjs``) that runs the ``spectrum-ts`` SDK — the SDK is
@@ -20,7 +19,11 @@ Outbound:
     (images, voice notes, video, documents) goes through spectrum-ts'
     ``attachment()`` / ``voice()`` content builders via the sidecar's
     ``/send-attachment`` endpoint.
+
+【产品经理理解要点】
+平台插件——额外的即时通讯平台对接（adapter.py）
 """
+
 from __future__ import annotations
 
 import asyncio

@@ -8,6 +8,9 @@ is perfectly capable of reading. These tests pin the contract:
 - text documents: note confirms the (adapter-)inlined content + records path.
 - binary documents (PDF/DOCX/…): note tells the agent to extract the text
   itself and never tells it to punt back to the user.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_document_context_note.py）
 """
 
 import importlib

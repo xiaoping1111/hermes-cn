@@ -1,10 +1,12 @@
-"""
-Feishu/Lark meeting-invitation event handling.
+"""Feishu/Lark meeting-invitation event handling.
 
 Processes ``vc.bot.meeting_invited_v1`` events by converting them into a
 synthetic gateway ``MessageEvent``.  Unlike document comments, the response
 should go back to the inviter through the normal Hermes gateway pipeline, so
 this module does not instantiate an agent directly.
+
+【产品经理理解要点】
+平台适配器——每个文件对接一个即时通讯平台的API中的飞书适配——对接飞书机器人API
 """
 
 from __future__ import annotations

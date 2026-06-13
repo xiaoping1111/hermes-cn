@@ -3,6 +3,9 @@
 The session database records persisted conversations.  This module records
 currently open chat surfaces, including idle CLI/TUI sessions that have not
 written a transcript row yet.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口中的会话管理——管理用户与代理的会话状态
 """
 
 from __future__ import annotations

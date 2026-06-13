@@ -19,7 +19,11 @@ The fix has two prongs:
 Both prongs together close the FD-recycling window. The tests below pin
 each prong individually and one end-to-end test simulates the reporter's
 timeline at object granularity (no network, no real sockets).
+
+【产品经理理解要点】
+运行代理测试——验证代理端到端执行流程（test_tls_fd_recycle_corruption.py）
 """
+
 from __future__ import annotations
 
 import logging

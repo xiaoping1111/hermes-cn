@@ -1,5 +1,4 @@
-"""
-``hermes photon ...`` CLI subcommands — registered by the plugin via
+"""``hermes photon ...`` CLI subcommands — registered by the plugin via
 ``ctx.register_cli_command()``.
 
 Subcommands:
@@ -15,7 +14,11 @@ gateway channel onboards through a single setup surface).
 
 Photon uses the spectrum-ts gRPC stream for inbound — there is no webhook
 to register, so there are no webhook subcommands.
+
+【产品经理理解要点】
+平台插件——额外的即时通讯平台对接中的命令行——终端交互的主入口
 """
+
 from __future__ import annotations
 
 import argparse

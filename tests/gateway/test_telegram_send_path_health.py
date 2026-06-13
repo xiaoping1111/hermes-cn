@@ -4,7 +4,11 @@ After sustained Bad Gateway / TimedOut reconnect cycles, the PTB httpx client
 can enter a wedged state where ``bot.send_message()`` returns a valid Message
 but nothing reaches the recipient.  ``_send_path_degraded`` short-circuits
 ``send()`` so cron's live-adapter branch falls through to standalone HTTP.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的Telegram适配——对接Telegram Bot API
 """
+
 import sys
 from unittest.mock import AsyncMock, MagicMock, patch
 

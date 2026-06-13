@@ -11,6 +11,9 @@ These tests assert the *bounding/timing* contract of ``_cleanup_ws`` using
 lightweight fakes; force-closing the underlying TCP transport on cancellation
 is ``websockets``' responsibility (and harmless at shutdown, where the loop is
 tearing down regardless), so it is intentionally out of scope here.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_yuanbao_shutdown.py）
 """
 
 import sys

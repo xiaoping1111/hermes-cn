@@ -3,6 +3,9 @@
 Covers the store (add/dedup/cap/accept/dismiss/latch), catalog seeding, the
 blueprint->suggestion bridge, and the shared command handler. Uses an isolated
 HERMES_HOME so the real suggestions.json is never touched.
+
+【产品经理理解要点】
+定时任务测试——验证调度和脚本执行（test_suggestions.py）
 """
 
 import importlib

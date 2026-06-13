@@ -1,4 +1,8 @@
-"""Regression tests for Honcho startup fail-open behavior."""
+"""Regression tests for Honcho startup fail-open behavior.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试中的Honcho记忆——对接Honcho长期记忆服务
+"""
 
 from __future__ import annotations
 

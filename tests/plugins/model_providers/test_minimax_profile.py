@@ -16,6 +16,9 @@ Refs:
   - PR #36212 (open): adds M3 to `_PROVIDER_MODELS["minimax"]` catalog
   - PR #6082: M2.7-highspeed → M2.7 for aux model (half-price fix)
   - Commit 773a0faca: same profile-layer fix pattern for `deepseek`
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能（test_minimax_profile.py）
 """
 
 from __future__ import annotations

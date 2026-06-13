@@ -18,6 +18,9 @@ session DB) exactly as the inline code did — those side effects are the point.
 
 Behavior is identical to the original inline prologue; this is a pure
 move-and-name refactor with no semantic change.
+
+【产品经理理解要点】
+AI代理核心——管理对话循环、模型调用、工具执行和上下文压缩（turn_context.py）
 """
 
 from __future__ import annotations

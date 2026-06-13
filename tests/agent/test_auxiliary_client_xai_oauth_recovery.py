@@ -6,6 +6,9 @@ an OAuth2 access token has expired.  These tests verify the three fixes:
 1. _is_auth_error detects xAI 403 as an auth failure
 2. _recoverable_pool_provider maps api.x.ai to xai-oauth
 3. _refresh_provider_credentials includes xai-oauth refresh logic
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等中的命令行——终端交互的主入口
 """
 
 import pytest

@@ -1,3 +1,7 @@
+"""【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的Telegram适配——对接Telegram Bot API
+"""
+
 import sys
 from pathlib import Path
 from types import SimpleNamespace

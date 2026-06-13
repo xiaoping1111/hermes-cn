@@ -1,4 +1,9 @@
-"""Tests for the ranked fuzzy scorer used by the searchable curses pickers."""
+"""Tests for the ranked fuzzy scorer used by the searchable curses pickers.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_curses_ui_fuzzy_rank.py）
+"""
+
 from hermes_cli.curses_ui import (
     _SearchState,
     _filter_indices,

@@ -28,6 +28,9 @@ Tool-pool headers use a SEPARATE prefix:
 
 Money is handled as micros ints only; *_usd values are preserved verbatim as
 the raw strings the server sent (never re-parsed to float).
+
+【产品经理理解要点】
+AI代理核心——管理对话循环、模型调用、工具执行和上下文压缩（credits_tracker.py）
 """
 
 from __future__ import annotations

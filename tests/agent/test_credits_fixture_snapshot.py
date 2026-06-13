@@ -5,7 +5,11 @@ maps a header-shaped CreditsState (e.g. a HERMES_DEV_CREDITS_FIXTURE) into the S
 /usage snapshot shape, so the gauge + magnitudes are exercisable offline. These lock
 the gauge math, the verbatim *_usd magnitudes (never parseFloat'd), the depletion line,
 and the dev-fixture marker.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_credits_fixture_snapshot.py）
 """
+
 from __future__ import annotations
 
 from agent.account_usage import _snapshot_from_credits_state

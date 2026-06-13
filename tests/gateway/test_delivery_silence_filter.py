@@ -3,6 +3,9 @@
 See the gateway delivery path: hallucinated "silence" tokens like ``*(silent)*``
 are dropped pre-send so bot-to-bot channels can't mirror them into a token-burning
 loop that crashes a model with "no content after all retries".
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_delivery_silence_filter.py）
 """
 
 import pytest

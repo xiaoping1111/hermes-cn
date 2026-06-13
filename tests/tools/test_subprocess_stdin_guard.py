@@ -3,6 +3,9 @@
 This is the pytest wrapper for scripts/check_subprocess_stdin.py.
 It runs as part of the test suite so CI catches regressions when new
 subprocess calls are added without stdin=subprocess.DEVNULL.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_subprocess_stdin_guard.py）
 """
 
 import importlib.util

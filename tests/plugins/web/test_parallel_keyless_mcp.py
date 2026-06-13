@@ -8,6 +8,9 @@ Covers the transport added in ``plugins/web/parallel/provider.py`` that lets
 - ``_mcp_payload`` — structuredContent preferred, text-block JSON fallback, errors
 - ``_mcp_web_search`` — full handshake (mocked transport) → standard search shape
 - ``ParallelWebSearchProvider.search`` — keyless path routes to the MCP
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能中的MCP协议——对接Model Context Protocol工具标准
 """
 
 from __future__ import annotations

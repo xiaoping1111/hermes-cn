@@ -8,6 +8,9 @@ and returns 200 here.
 All tests are fixture-driven — no live network. httpx is patched so the
 adapter never reaches graph.facebook.com, and the aiohttp server is
 exercised with synthetic ``Request`` objects.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的WhatsApp适配——对接WhatsApp Cloud API
 """
 
 from __future__ import annotations

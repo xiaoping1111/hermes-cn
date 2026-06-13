@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """Generate the Automation Blueprints catalog JSON for the docs site.
 
 Mirrors ``extract-skills.py``: imports the single-source-of-truth blueprint
@@ -9,6 +10,9 @@ and a ``hermes://`` "Send to App" deep-link).
 Output: ``website/static/api/automation-blueprints-index.json`` (served at
 ``/docs/api/automation-blueprints-index.json``). Run automatically by
 ``website/scripts/prebuild.mjs`` before ``npm start`` / ``npm run build``.
+
+【产品经理理解要点】
+官网脚本——官网内容生成和技能索引提取（extract-automation-blueprints.py）
 """
 
 from __future__ import annotations

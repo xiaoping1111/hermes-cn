@@ -1,4 +1,8 @@
-"""Tests for agent.coding_context — RuntimeMode seam, resolver, toolset, git probe."""
+"""Tests for agent.coding_context — RuntimeMode seam, resolver, toolset, git probe.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_coding_context.py）
+"""
 
 import json
 import os

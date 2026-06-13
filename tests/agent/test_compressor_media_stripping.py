@@ -3,7 +3,11 @@
 MEDIA directives in assistant messages must not leak into compaction
 summaries — if they do, the downstream model re-emits them as active
 directives on the next turn.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_compressor_media_stripping.py）
 """
+
 import pytest
 from unittest.mock import patch
 from agent.context_compressor import ContextCompressor

@@ -10,7 +10,6 @@ QQBot platform package.
 
 Re-exports the main adapter symbols from ``adapter.py`` so that
 all existing import paths remain unchanged.
-"""
 
 New modules:
     - ``constants`` — shared constants (API URLs, timeouts, message types)

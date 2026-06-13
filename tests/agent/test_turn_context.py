@@ -4,6 +4,9 @@ These exercise ``build_turn_context`` against a lightweight fake agent to
 confirm the prologue produces the right ``TurnContext`` and applies the
 ``agent`` side effects the loop relies on — without spinning up a real
 ``AIAgent`` or hitting any provider.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_turn_context.py）
 """
 
 from __future__ import annotations

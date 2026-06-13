@@ -4,6 +4,9 @@ tokens).
 Loads the plugin module directly (it's a bundled backend plugin, not on the
 import path as a package) and exercises the provider behaviour + the
 ``register(ctx)`` entry point's config/env resolution and skip reasons.
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能（test_basic_provider.py）
 """
 
 from __future__ import annotations

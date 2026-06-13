@@ -12,7 +12,11 @@ These tests pin:
   2. A MarkdownV2 BadRequest triggers a single plain-text retry rather than
      killing draft streaming for the whole response.
   3. A non-BadRequest failure propagates so the caller falls back to edit.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的Telegram适配——对接Telegram Bot API
 """
+
 import sys
 from unittest.mock import AsyncMock, MagicMock
 

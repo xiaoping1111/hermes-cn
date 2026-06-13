@@ -4,7 +4,11 @@ config passthrough) and #29415 (kanban_swarm humanizer skill ref).
 These two fixes are bundled because they're both small, both touch the
 kanban dispatcher's CLI surface, and they each guard against a silent
 operator footgun that only manifests in long-running setups.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的看板管理——项目任务的可视化追踪与分解
 """
+
 from __future__ import annotations
 
 import argparse

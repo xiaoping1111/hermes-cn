@@ -2,6 +2,9 @@
 behind ``/compress here [N]`` (boundary-aware "summarize up to here").
 
 Inspired by Claude Code's Rewind "Summarize up to here" action.
+
+【产品经理理解要点】
+命令行测试——验证CLI命令和交互行为（test_partial_compress.py）
 """
 
 from hermes_cli.partial_compress import (

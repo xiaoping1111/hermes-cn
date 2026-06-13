@@ -5,6 +5,9 @@ exercise the surface-agnostic `build_credits_view()` core and assert the gateway
 handler renders the block + tappable top-up URL + no-wait copy. The CLI panel is
 a thin wrapper over the same view (interactive prompt_toolkit modal — covered by
 the view-core tests plus manual verification).
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_credits_view.py）
 """
 
 from __future__ import annotations

@@ -10,6 +10,9 @@ Import discipline (mirrors gateway/slash_commands.py, PR #41886):
     module-level helpers and constants) are imported LAZILY inside each handler
     via ``from cli import ...`` — that resolves at call time when ``cli`` is fully
     loaded, so the mixin module never imports ``cli`` at top level (no cycle).
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口中的命令行——终端交互的主入口
 """
 
 from __future__ import annotations

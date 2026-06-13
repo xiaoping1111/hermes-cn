@@ -37,6 +37,9 @@ Design notes / invariants honored:
 * **Conservative defaults.** ``keep_last`` counts *exchanges* (a user
   turn plus its following assistant/tool turns), defaulting to 2. The
   split never compresses if doing so would leave nothing in the head.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（partial_compress.py）
 """
 
 from __future__ import annotations

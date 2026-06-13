@@ -10,4 +10,7 @@ Currently shipped:
   - ``bitwarden`` — Bitwarden Secrets Manager (`bws` CLI).  See
     ``agent.secret_sources.bitwarden`` for the integration and
     ``hermes_cli.secrets_cli`` for the user-facing setup wizard.
+
+【产品经理理解要点】
+AI代理核心——管理对话循环、模型调用、工具执行和上下文压缩（__init__.py）
 """

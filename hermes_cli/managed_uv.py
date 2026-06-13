@@ -6,6 +6,9 @@ If the binary is missing, ``ensure_uv()`` bootstraps it via the official
 standalone installer with ``UV_UNMANAGED_INSTALL`` / ``UV_INSTALL_DIR`` pointed
 at ``$HERMES_HOME/bin`` so the installer writes directly there — no PATH
 probing, no conda guards, no multi-location resolution chains.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（managed_uv.py）
 """
 
 from __future__ import annotations

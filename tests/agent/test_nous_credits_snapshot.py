@@ -1,4 +1,8 @@
-"""Tests for build_nous_credits_snapshot (L6-A, magnitudes-only)."""
+"""Tests for build_nous_credits_snapshot (L6-A, magnitudes-only).
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_nous_credits_snapshot.py）
+"""
 
 from __future__ import annotations
 

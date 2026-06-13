@@ -3,6 +3,9 @@
 - Non-dispatch gateways (dispatch_in_gateway=false) exit before opening any DB.
 - HERMES_KANBAN_DISPATCH_IN_GATEWAY env var disables without loading config.
 - Dispatch-owning gateways (dispatch_in_gateway=true) proceed past the gate.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的看板管理——项目任务的可视化追踪与分解
 """
 
 import asyncio

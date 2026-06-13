@@ -2,6 +2,9 @@
 
 Covers the 9-state matrix plus validation edge cases.  All header values
 arrive as STRINGS (the producer calls String(...) on every field).
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_credits_tracker.py）
 """
 
 from __future__ import annotations

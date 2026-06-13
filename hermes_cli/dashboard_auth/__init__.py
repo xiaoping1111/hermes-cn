@@ -8,7 +8,11 @@ plugins.
 The Nous provider lives in ``plugins/dashboard-auth-nous/`` and is the
 default. Third parties register their own providers via the plugin hook
 ``ctx.register_dashboard_auth_provider``.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（__init__.py）
 """
+
 from hermes_cli.dashboard_auth.base import (
     DashboardAuthProvider,
     Session,

@@ -13,7 +13,11 @@ The fix sets ``retry_count = max(0, max_retries - 1)`` so the loop body runs
 exactly once more: the guard sees the breaker state recorded by
 ``record_nous_rate_limit()`` moments earlier and either activates a fallback
 provider (resetting retry_count) or returns the explicit rate-limit failure.
+
+【产品经理理解要点】
+运行代理测试——验证代理端到端执行流程（test_nous_429_fallback_reentry.py）
 """
+
 from __future__ import annotations
 
 import inspect

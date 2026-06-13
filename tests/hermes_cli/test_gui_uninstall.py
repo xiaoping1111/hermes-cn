@@ -4,6 +4,9 @@ Covers the cross-platform artifact discovery, the agent/GUI detection the
 desktop UI gates options on, and that ``uninstall_gui`` removes only GUI
 artifacts (built renderer/release/node_modules, packaged bundle, Electron
 userData) while leaving the Python agent + config/sessions/.env intact.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_gui_uninstall.py）
 """
 
 import sys

@@ -5,6 +5,9 @@ The status-update path must:
   2. Edit that same message on subsequent calls with the same key.
   3. Fall back to sending fresh when the cached message edit fails.
   4. Keep distinct keys independent (no cross-talk).
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的Telegram适配——对接Telegram Bot API
 """
 
 from __future__ import annotations

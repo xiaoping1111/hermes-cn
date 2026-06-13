@@ -3,6 +3,9 @@
 Verifies that _discover_all_plugins() recurses into category directories
 (up to 2 levels deep) and that _plugin_status() checks both manifest name
 and path-derived key against the enabled/disabled sets.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_plugins_cmd_category_discovery.py）
 """
 
 import json

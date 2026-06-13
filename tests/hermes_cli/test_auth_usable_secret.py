@@ -1,4 +1,8 @@
-"""Tests for placeholder API key detection in hermes_cli.auth."""
+"""Tests for placeholder API key detection in hermes_cli.auth.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的认证授权——管理API密钥和OAuth流程
+"""
 
 from hermes_cli.auth import has_usable_secret
 

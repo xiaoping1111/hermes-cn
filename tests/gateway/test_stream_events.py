@@ -5,6 +5,9 @@ happened* (typed events) from *how it's delivered* (adapter decides).  The
 default BasePlatformAdapter rendering must reproduce today's behavior exactly;
 an adapter may override format_tool_event to eat tool chrome on platforms that
 can't render it.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_stream_events.py）
 """
 
 from __future__ import annotations

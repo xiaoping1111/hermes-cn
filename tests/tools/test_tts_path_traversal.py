@@ -5,6 +5,9 @@ chosen file is the whole point). What it must reject is paths that use
 ``..`` components to escape their declared base — those are almost
 always either a bug or prompt-injection-controlled
 (e.g. ``output_path="audio/../../etc/cron.d/x"``).
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性中的语音合成——将文本转为语音输出
 """
 
 import json

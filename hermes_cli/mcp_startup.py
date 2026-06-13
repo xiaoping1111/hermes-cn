@@ -1,4 +1,8 @@
-"""Shared CLI/TUI-safe helpers for background MCP discovery."""
+"""Shared CLI/TUI-safe helpers for background MCP discovery.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口中的MCP协议——对接Model Context Protocol工具标准
+"""
 
 from __future__ import annotations
 

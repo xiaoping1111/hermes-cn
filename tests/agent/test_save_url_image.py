@@ -8,6 +8,9 @@ actually writes to.
 
 Pre-fix the helper didn't exist; xAI URL responses were returned bare
 and the gateway 404'd at ``send_photo`` time.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_save_url_image.py）
 """
 
 from __future__ import annotations

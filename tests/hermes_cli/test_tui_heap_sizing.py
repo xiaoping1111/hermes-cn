@@ -5,6 +5,9 @@ toward 8GB in a memory-limited container, so the cgroup OOM-killer SIGKILLs Node
 before V8's own monitor fires — leaving the user with only a bare gateway
 ``stdin EOF`` and no breadcrumb. ``_resolve_tui_heap_mb`` reads the real cgroup
 limit and sizes the cap below it so V8 exits gracefully instead.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_tui_heap_sizing.py）
 """
 
 import builtins

@@ -29,6 +29,9 @@ Acceptable diffs:
 Run from the PR worktree::
 
     python tests/plugins/transcription/check_parity_vs_main.py
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能（check_parity_vs_main.py）
 """
 
 from __future__ import annotations

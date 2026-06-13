@@ -39,6 +39,9 @@ Pinned here:
 * ``TestSourceGuardrail`` — static asserts on
   ``agent/context_compressor.py`` so a future refactor can't
   silently drop the anchor.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_compressor_assistant_tail_anchor.py）
 """
 
 from __future__ import annotations

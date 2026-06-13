@@ -5,7 +5,11 @@ Photon ships outbound attachments via spectrum-ts' ``attachment()`` /
 ``/send-attachment`` endpoint. These tests stub ``_sidecar_call`` so we
 can assert the endpoint + body shape each ``send_*`` override produces
 without spawning Node or binding ports.
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能（test_outbound_media.py）
 """
+
 from __future__ import annotations
 
 import os

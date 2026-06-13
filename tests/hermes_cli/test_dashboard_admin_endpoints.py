@@ -5,6 +5,9 @@ These endpoints turn the web dashboard into an administration panel for
 operators without CLI access to the host. The tests assert the request
 contract and the CLI-config parity (servers/keys written via the API are
 visible to the CLI data layer), not specific catalog values.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_dashboard_admin_endpoints.py）
 """
 
 import pytest

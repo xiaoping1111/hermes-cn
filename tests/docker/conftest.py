@@ -11,7 +11,11 @@ the repo's Dockerfile once per session.
 Docker tests need longer timeouts than the suite default (30s), so every
 test under this directory is granted a 180s default via
 ``pytest.mark.timeout`` applied at collection time.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（conftest.py）
 """
+
 from __future__ import annotations
 
 import os

@@ -10,6 +10,9 @@ The companion end-to-end regression for #24015 lives in
 ``tests/tools/test_computer_use_capture_routing.py``; this file pins the
 unit contract of the helper in isolation so behaviour does not regress
 silently if the surrounding ``computer_use`` plumbing is refactored.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_computer_use_vision_routing.py）
 """
 
 from __future__ import annotations

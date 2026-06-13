@@ -13,6 +13,9 @@ feature.
 Adding a catalog entry: append a CatalogEntry. Keep prompts self-contained
 (cron jobs run with no chat context) and schedules sensible. The ``job_spec``
 is passed verbatim to ``create_job`` on accept.
+
+【产品经理理解要点】
+定时任务——支持定时发送消息、执行脚本的调度系统（suggestion_catalog.py）
 """
 
 from __future__ import annotations

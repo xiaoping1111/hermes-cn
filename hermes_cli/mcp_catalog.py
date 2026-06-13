@@ -19,6 +19,9 @@ Catalog policy:
 
 See website/docs/user-guide/mcp-catalog.md for user docs.
 See references/mcp-catalog.md (this repo's skill) for the manifest schema.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口中的MCP协议——对接Model Context Protocol工具标准
 """
 
 from __future__ import annotations

@@ -11,6 +11,9 @@ Covers the canonical fix for issues #4146, #27303, #30882, #33057:
      gateway approve/deny/timeout/missing-notify, smart mode).
   4. tools.code_execution_tool._scrub_child_env — broad HERMES_ prefix dropped,
      operational allowlist kept, DSN/WEBHOOK blocked, passthrough precedence.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性中的审批机制——危险操作需用户确认后执行
 """
 
 from __future__ import annotations

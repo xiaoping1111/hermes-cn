@@ -1,3 +1,7 @@
+"""【产品经理理解要点】
+工具测试——验证各种工具功能的正确性中的图片生成——调用AI模型生成图片
+"""
+
 import json
 from types import SimpleNamespace
 

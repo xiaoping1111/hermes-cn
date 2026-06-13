@@ -4,7 +4,11 @@ Every provider plugin should call ``assert_protocol_compliance`` on its
 provider class in its own unit test. This module tests the abstract base
 itself: dataclass fields, ABC rejection of partial impls, and the
 protocol-compliance helper.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的认证授权——管理API密钥和OAuth流程
 """
+
 from __future__ import annotations
 
 import pytest

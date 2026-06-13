@@ -12,6 +12,9 @@ The "bytes flowing" signal is ``agent._codex_stream_last_event_ts``, set on
 *any* event by ``codex_runtime.run_codex_stream`` — so reasoning-only or
 tool-call-only turns (which emit no output-text deltas) are not mistaken for a
 stall.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_codex_ttfb_watchdog.py）
 """
 
 from __future__ import annotations

@@ -13,6 +13,9 @@ so it can never fire before the detector.  They mirror the inline logic in
 ``agent/chat_completion_helpers.py`` (the real builder lives deep inside a
 worker thread, so — like ``test_local_stream_timeout.py`` — the resolution is
 reproduced here rather than driven end-to-end).
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_stream_read_timeout_floor.py）
 """
 
 import os

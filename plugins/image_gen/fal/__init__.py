@@ -19,6 +19,9 @@ so:
 
 See issue #26241 for the migration plan and the
 ``plugin-extraction-test-patch-compatibility.md`` rules this follows.
+
+【产品经理理解要点】
+图片生成插件——对接DALL-E、Stable Diffusion等图片生成服务（__init__.py）
 """
 
 from __future__ import annotations

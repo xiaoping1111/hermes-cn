@@ -10,6 +10,9 @@ Subcommands:
   /suggestions dismiss <N|id>  dismiss it (latched, never re-offered)
   /suggestions catalog         seed the curated starter automations as pending
   /suggestions clear           drop accepted records (housekeeping)
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（suggestions_cmd.py）
 """
 
 from __future__ import annotations

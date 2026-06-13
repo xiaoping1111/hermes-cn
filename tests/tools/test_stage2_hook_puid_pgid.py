@@ -11,7 +11,11 @@ set.
 The s6-overlay rework moved bootstrap from docker/entrypoint.sh (now a shim)
 to docker/stage2-hook.sh, which is installed as /etc/cont-init.d/01-hermes-setup
 by the Dockerfile.  This test targets the post-rework location.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_stage2_hook_puid_pgid.py）
 """
+
 from __future__ import annotations
 
 import os

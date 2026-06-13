@@ -7,7 +7,11 @@ in Docker containers where curses.COLORS == 8 (only colors 0-7 exist).
 The bug was ``curses.init_pair(4, 8, -1)`` using raw color 8 ("bright
 black" / dim gray) which does not exist on 8-color terminals.  The fix
 clamps with ``min(8, curses.COLORS - 1)``.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_curses_color_compat.py）
 """
+
 import sys
 
 import pytest

@@ -37,6 +37,9 @@ Patterns use ``(?:\\w+\\s+)*`` between key tokens to prevent attackers
 from inserting filler words (e.g. "ignore all prior instructions" instead
 of "ignore all instructions").  This mirrors the fix applied to
 ``skills_guard.py`` in commit 4ea29978.
+
+【产品经理理解要点】
+工具系统——提供代码执行、文件操作、浏览器、搜索等能力给AI代理（threat_patterns.py）
 """
 
 from __future__ import annotations

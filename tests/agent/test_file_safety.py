@@ -1,6 +1,9 @@
 """Tests for agent/file_safety.py read guards — env file blocking.
 
 Run with:  python -m pytest tests/agent/test_file_safety.py -v
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等中的文件安全——防止代理读写敏感文件
 """
 
 import os

@@ -2,6 +2,9 @@
 
 These never hit the live OSV API; HTTP is monkeypatched. The live-call path
 is exercised in the E2E test embedded in PR validation, not here.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_security_audit.py）
 """
 
 from __future__ import annotations

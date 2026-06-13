@@ -14,6 +14,9 @@ to act on it. The action depends on current status:
 
 The picker loops until the user hits ESC/q so they can manage multiple
 entries in one session.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口中的MCP协议——对接Model Context Protocol工具标准
 """
 
 from __future__ import annotations

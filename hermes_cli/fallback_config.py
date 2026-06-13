@@ -1,4 +1,8 @@
-"""Helpers for reading the effective fallback provider chain from config."""
+"""Helpers for reading the effective fallback provider chain from config.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口中的配置管理——加载和验证YAML/ENV配置文件
+"""
 
 from __future__ import annotations
 

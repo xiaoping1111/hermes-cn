@@ -12,6 +12,9 @@ This test covers the two fallback paths that previously lacked
 1. ``agent_failed_early`` path — transient 429/timeout failures
 2. ``not new_messages`` path — edge case where ``history_offset`` exceeds
    the actual message count
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_42039_duplicate_user_message.py）
 """
 
 import sys

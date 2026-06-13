@@ -5,6 +5,9 @@ group and wire ``func`` to the injected handler. These are intentionally
 light — the byte-identical ``--help`` verification done at extraction time is
 the real behavioral guarantee; this just guards against a module failing to
 import or a builder raising.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_subcommands_batch.py）
 """
 
 from __future__ import annotations

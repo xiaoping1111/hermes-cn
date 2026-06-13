@@ -2,7 +2,11 @@
 
 Mirrors the image-gen / memory-provider hooks (see plugins.py:531 for prior
 art).
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的认证授权——管理API密钥和OAuth流程
 """
+
 from __future__ import annotations
 
 import pytest

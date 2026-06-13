@@ -19,7 +19,11 @@ This test handles both cases:
 * If the file is absent, assert the legacy behaviour (``(unknown)``)
   still holds — defensive guard against the helper accidentally
   reporting bogus data from somewhere else.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_dump_build_sha.py）
 """
+
 from __future__ import annotations
 
 import re

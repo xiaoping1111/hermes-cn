@@ -16,7 +16,11 @@ Every ``docker exec`` here runs as the unprivileged ``hermes`` user
 docstring. ``/run/service`` is chowned hermes-writable by the
 ``02-reconcile-profiles`` cont-init.d script, so register/unregister
 operations work correctly under UID 10000.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_s6_profile_gateway_integration.py）
 """
+
 from __future__ import annotations
 
 import subprocess

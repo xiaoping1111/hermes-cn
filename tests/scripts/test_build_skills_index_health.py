@@ -12,6 +12,9 @@ These tests pin the two contracts that prevent a recurrence:
   1. A degenerate crawl exits non-zero AND does NOT write the output file
      (so extract-skills.py falls back instead of reading a broken index).
   2. A healthy crawl exits zero AND writes the file with every source present.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_build_skills_index_health.py）
 """
 
 import os

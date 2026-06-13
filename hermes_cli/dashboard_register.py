@@ -20,6 +20,9 @@ This command:
 The portal endpoint is the NAS half of this feature (POST
 /api/oauth/self-hosted-client). The ``agent:`` prefix is applied server-side,
 so this client never needs to know the namespace convention.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（dashboard_register.py）
 """
 
 from __future__ import annotations

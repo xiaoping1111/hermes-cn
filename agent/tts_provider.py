@@ -1,5 +1,4 @@
-"""
-Text-to-Speech Provider ABC
+"""Text-to-Speech Provider ABC
 ============================
 
 Defines the pluggable-backend interface for text-to-speech synthesis.
@@ -41,6 +40,9 @@ and returns the path as a string. Implementations should raise on
 failure — the dispatcher converts exceptions into the standard
 ``{success: False, error: …}`` JSON envelope the rest of Hermes
 expects.
+
+【产品经理理解要点】
+AI代理核心——管理对话循环、模型调用、工具执行和上下文压缩中的语音合成——将文本转为语音输出
 """
 
 from __future__ import annotations

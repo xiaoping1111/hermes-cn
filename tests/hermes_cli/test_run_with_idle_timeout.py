@@ -9,6 +9,9 @@ isolating these here prevents real-Popen state from racing with the
 Added for issue #33788: ``hermes update`` got stuck at "webui-build" because
 ``npm run build`` ran with ``capture_output=True`` and no timeout. The helper
 fixes both halves — streams output AND idle-kills the process.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_run_with_idle_timeout.py）
 """
 
 import sys as _sys

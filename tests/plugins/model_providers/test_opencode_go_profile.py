@@ -1,4 +1,8 @@
-"""Unit tests for OpenCode Go reasoning-control wiring."""
+"""Unit tests for OpenCode Go reasoning-control wiring.
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能（test_opencode_go_profile.py）
+"""
 
 from __future__ import annotations
 

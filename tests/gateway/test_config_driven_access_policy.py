@@ -18,6 +18,9 @@ declare ``enforces_own_access_policy`` (a ``BasePlatformAdapter`` property,
 default ``False``). The gateway trusts that flag and skips the env-only
 default-deny for those platforms, rather than re-implementing each adapter's
 policy logic a second time.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的配置管理——加载和验证YAML/ENV配置文件
 """
 
 from types import SimpleNamespace

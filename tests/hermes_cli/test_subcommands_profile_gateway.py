@@ -2,6 +2,9 @@
 
 Confirms the builders attach the same subactions and ``func=`` dispatch that
 lived inline in ``main()`` before the god-file Phase 2 extraction.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_subcommands_profile_gateway.py）
 """
 
 from __future__ import annotations

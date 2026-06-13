@@ -9,6 +9,9 @@ primary provider, preventing two bugs:
 Both bugs share the same root cause: _recover_with_credential_pool and
 _swap_credential continue operating on the PRIMARY's credential pool during
 fallback calls, contaminating primary state with fallback-provider errors.
+
+【产品经理理解要点】
+运行代理测试——验证代理端到端执行流程（test_fallback_credential_isolation.py）
 """
 
 import sys

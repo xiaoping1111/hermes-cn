@@ -1,4 +1,8 @@
-"""Tests for gateway auto-TTS voice reply audio format selection."""
+"""Tests for gateway auto-TTS voice reply audio format selection.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的语音模式——管理语音对话的完整流程
+"""
 
 import json
 from pathlib import Path

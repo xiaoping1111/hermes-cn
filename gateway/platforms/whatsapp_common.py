@@ -1,5 +1,4 @@
-"""
-Transport-agnostic WhatsApp behavior shared by the Baileys bridge adapter
+"""Transport-agnostic WhatsApp behavior shared by the Baileys bridge adapter
 and the official WhatsApp Cloud API adapter.
 
 The mixin provides:
@@ -27,6 +26,9 @@ mixin's methods are called (typically in ``__init__``):
 
 Class attributes ``MAX_MESSAGE_LENGTH`` and ``DEFAULT_REPLY_PREFIX`` are
 defined on the mixin and may be overridden per-adapter if needed.
+
+【产品经理理解要点】
+平台适配器——每个文件对接一个即时通讯平台的API中的WhatsApp适配——对接WhatsApp Cloud API
 """
 
 from __future__ import annotations

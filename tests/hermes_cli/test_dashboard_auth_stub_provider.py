@@ -3,7 +3,11 @@
 Phase 2 of the dashboard-OAuth plan. Validates the stub against the
 provider protocol so subsequent phases that depend on its behavior
 have a guarantee.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的认证授权——管理API密钥和OAuth流程
 """
+
 from __future__ import annotations
 
 import pytest

@@ -14,6 +14,9 @@ Verifies the contract documented in Phase 6 v2 of the plan:
   - ``set_session_cookies(refresh_token="")`` does NOT emit the
     ``hermes_session_rt`` cookie (contract V1: no RT to persist).
   - ``/auth/callback?next=…`` honours the same-origin landing path.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的认证授权——管理API密钥和OAuth流程
 """
 
 from __future__ import annotations

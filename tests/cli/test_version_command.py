@@ -1,4 +1,8 @@
-"""Tests for the /version slash command."""
+"""Tests for the /version slash command.
+
+【产品经理理解要点】
+命令行测试——验证CLI命令和交互行为（test_version_command.py）
+"""
 
 from unittest.mock import patch
 

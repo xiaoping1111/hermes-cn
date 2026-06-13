@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """Live test harness for Hermes Agent's Tool Search feature.
 
 Spins up a real AIAgent against a real model, registers ~20 fake "MCP" tools
@@ -17,6 +18,9 @@ Each scenario runs twice:
   - tool_search DISABLED (all tools loaded directly)
 
 Output: ./out/<scenario_id>__<enabled|disabled>.json
+
+【产品经理理解要点】
+构建脚本——项目构建、发布、审计等辅助工具（tool_search_livetest.py）
 """
 
 from __future__ import annotations

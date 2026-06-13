@@ -7,6 +7,9 @@ Covers:
   - _all_aux_tasks() merge of built-in + plugin tasks
   - _reset_aux_to_auto() includes plugin tasks
   - _get_auxiliary_task_config() layers plugin defaults under user config
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_plugin_auxiliary_tasks.py）
 """
 
 from __future__ import annotations

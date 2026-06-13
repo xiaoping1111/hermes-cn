@@ -6,6 +6,9 @@ when only a substituted region changes (the rest of the file keeps its
 CRLF endings while the replacement is LF-only).
 
 See issue #507 (Roo Code deep-dive, item 2c).
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_line_ending_preservation.py）
 """
 
 import json

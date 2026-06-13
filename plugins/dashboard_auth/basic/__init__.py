@@ -53,6 +53,9 @@ Skip reasons:
   Like the Nous provider, this exposes a module-level ``LAST_SKIP_REASON``
   the gate's fail-closed branch can surface when the plugin loads but
   declines to register (no username/password configured).
+
+【产品经理理解要点】
+插件系统——扩展Hermes核心功能的可选组件（如记忆、浏览器、图片生成）（__init__.py）
 """
 
 from __future__ import annotations

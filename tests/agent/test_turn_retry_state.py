@@ -4,6 +4,9 @@ The dataclass holds the inner-retry-loop's one-shot recovery guards + restart
 signals. These tests pin its shape and default semantics — the behavioral
 guarantee for the loop itself is the existing recovery-branch tests in
 tests/run_agent/ which now exercise these fields via `_retry.<flag>`.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_turn_retry_state.py）
 """
 
 from __future__ import annotations

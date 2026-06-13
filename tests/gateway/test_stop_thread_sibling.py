@@ -6,6 +6,9 @@ isolated session key (``...:{thread_id}:{user_id}``).  A run another user
 started lives under a different key, so the caller's own ``/stop`` used to find
 nothing and reply "no active task to stop".  Authorized users should be able to
 stop any run in the same thread.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_stop_thread_sibling.py）
 """
 
 import pytest

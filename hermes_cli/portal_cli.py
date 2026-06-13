@@ -17,7 +17,11 @@ Subcommands:
 This command is intentionally minimal — it does not duplicate functionality
 already in ``hermes auth`` or ``hermes tools``. It's the onboarding + discovery
 surface for the Portal subscription itself.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口中的命令行——终端交互的主入口
 """
+
 from __future__ import annotations
 
 import sys

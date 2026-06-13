@@ -27,6 +27,9 @@ double-checked locking, this module gives them two thread-safe primitives:
 
 Both are import-light (stdlib ``threading`` only) so any plugin can import
 them without dragging in heavyweight host modules.
+
+【产品经理理解要点】
+插件系统——扩展Hermes核心功能的可选组件（如记忆、浏览器、图片生成）（plugin_utils.py）
 """
 
 from __future__ import annotations

@@ -14,6 +14,9 @@ Covers ``plugins/security-guidance/``:
     writes when ``SECURITY_GUIDANCE_BLOCK=1`` and stays silent
     otherwise.
   * Bundled-plugin discovery via ``PluginManager.discover_and_load``.
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能（test_security_guidance_plugin.py）
 """
 
 import importlib.util

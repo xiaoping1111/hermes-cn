@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Tests for Krea image generation provider."""
+
+"""Tests for Krea image generation provider.
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能（test_krea_provider.py）
+"""
 
 from __future__ import annotations
 

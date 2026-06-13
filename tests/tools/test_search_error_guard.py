@@ -19,6 +19,9 @@ tool diagnostics from match output by *shape*, and only surfaces an error
 when exit==2 AND no usable match payload remains.
 
 These tests drive the real methods through the real local terminal backend.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_search_error_guard.py）
 """
 
 import os

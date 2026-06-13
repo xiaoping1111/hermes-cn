@@ -9,6 +9,9 @@ The diagnostic builds a real inspection agent (so the numbers match what
 actually ships on the wire) but never makes a network call: it passes dummy
 credentials so ``AIAgent.__init__`` takes the direct-construction path, then
 calls ``build_system_prompt_parts`` / inspects ``agent.tools`` offline.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（prompt_size.py）
 """
 
 from __future__ import annotations

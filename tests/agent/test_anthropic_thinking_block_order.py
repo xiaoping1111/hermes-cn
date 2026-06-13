@@ -28,6 +28,9 @@ This test asserts that an interleaved turn round-trips through
 normalize_response -> stored message -> convert_messages_to_anthropic with its
 block order preserved.  It FAILS on the current code (documenting the bug) and
 should PASS once block ordering is preserved on replay.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_anthropic_thinking_block_order.py）
 """
 
 import json

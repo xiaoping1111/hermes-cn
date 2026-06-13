@@ -6,7 +6,11 @@ create_profile and delete_profile is covered indirectly by the
 existing TestCreateProfile and TestDeleteProfile classes in
 tests/hermes_cli/test_profiles.py; here we only exercise the new
 helper surface that doesn't touch the filesystem.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_profiles_s6_hooks.py）
 """
+
 from __future__ import annotations
 
 from typing import Any

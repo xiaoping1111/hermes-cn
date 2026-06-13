@@ -8,7 +8,11 @@ nothing when it is not.
 
 These tests MUST pass on the current tini-based image AND continue to
 pass after the Phase 2 s6 migration. Any drift is a regression.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_tui_passthrough.py）
 """
+
 from __future__ import annotations
 
 import re

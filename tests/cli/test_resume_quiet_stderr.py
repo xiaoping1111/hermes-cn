@@ -8,6 +8,9 @@ The fix in cli._init_agent routes three messages to stderr when
   * "Session ... found but has no messages. Starting fresh."
 
 Interactive mode (tool_progress_mode == "full") still uses ChatConsole.
+
+【产品经理理解要点】
+命令行测试——验证CLI命令和交互行为（test_resume_quiet_stderr.py）
 """
 
 from datetime import datetime

@@ -17,6 +17,9 @@ This test pins the contract structurally: inside ``handle_enter``, any
 inline-command early-return that resets the buffer must be followed by an
 ``event.app.invalidate()`` before its ``return``.  It is an *invariant*
 (every reset-then-return repaints), not a snapshot of current source.
+
+【产品经理理解要点】
+命令行测试——验证CLI命令和交互行为（test_steer_inline_repaint_34569.py）
 """
 
 from __future__ import annotations

@@ -1,4 +1,8 @@
-"""Tests for the bundled observability/nemo_relay plugin."""
+"""Tests for the bundled observability/nemo_relay plugin.
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能（test_nemo_relay_plugin.py）
+"""
 
 from __future__ import annotations
 

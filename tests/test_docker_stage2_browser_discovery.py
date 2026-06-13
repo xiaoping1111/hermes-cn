@@ -1,4 +1,8 @@
-"""Regression tests for Docker stage2 browser executable discovery."""
+"""Regression tests for Docker stage2 browser executable discovery.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试中的浏览器——提供网页浏览、截图、自动化操作
+"""
 
 from pathlib import Path
 

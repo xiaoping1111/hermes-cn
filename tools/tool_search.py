@@ -23,6 +23,9 @@ for the full rationale):
 * Display and trajectory unwrap is implemented here so the user (CLI activity
   feed, gateway, saved trajectories) always sees the underlying tool, not
   the bridge.
+
+【产品经理理解要点】
+工具系统——提供代码执行、文件操作、浏览器、搜索等能力给AI代理（tool_search.py）
 """
 
 from __future__ import annotations

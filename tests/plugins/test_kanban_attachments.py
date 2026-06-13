@@ -8,6 +8,9 @@ Covers three layers:
 The plugin router is attached to a bare FastAPI app — same approach as
 ``test_kanban_dashboard_plugin.py`` — so we exercise the real HTTP path
 (multipart upload, streaming download) without the whole dashboard.
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能中的看板管理——项目任务的可视化追踪与分解
 """
 
 from __future__ import annotations

@@ -7,6 +7,9 @@ echoes literal ``^[[<…M`` text into the user's scrollback.
 
 `_suppress_mouse_residue_early()` writes the disable sequence to stdout
 before the heavy imports so the terminal stops emitting events ASAP.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_tui_mouse_residue_suppression.py）
 """
 
 from __future__ import annotations

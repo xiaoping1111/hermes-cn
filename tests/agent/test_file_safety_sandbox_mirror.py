@@ -11,7 +11,11 @@ Reference: #32049 — under ``terminal.backend: docker``, the agent's
 ``write_file`` / ``patch`` calls landed on the sandbox mirror of SOUL.md
 while the host process kept loading the untouched authoritative file.
 The agent reported success; the rule never took effect.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等中的文件安全——防止代理读写敏感文件
 """
+
 from __future__ import annotations
 
 from pathlib import Path

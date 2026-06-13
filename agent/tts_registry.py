@@ -1,5 +1,4 @@
-"""
-TTS Provider Registry
+"""TTS Provider Registry
 =====================
 
 Central map of registered TTS providers. Populated by plugins at
@@ -24,6 +23,9 @@ lives in the dispatcher, which checks for a same-name
 registry. The rationale is locality: a name declared in the user's
 ``config.yaml`` is more specific to their setup than a plugin that
 happens to be installed.
+
+【产品经理理解要点】
+AI代理核心——管理对话循环、模型调用、工具执行和上下文压缩中的语音合成——将文本转为语音输出
 """
 
 from __future__ import annotations

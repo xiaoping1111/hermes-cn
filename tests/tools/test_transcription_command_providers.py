@@ -1,5 +1,4 @@
-"""
-Tests for the STT command-provider registry (``stt.providers.<name>``).
+"""Tests for the STT command-provider registry (``stt.providers.<name>``).
 
 Mirrors ``tests/tools/test_tts_command_providers.py`` — same shape, same
 invariants, adapted for the input=audio → output=transcript flow.
@@ -14,6 +13,9 @@ Covers:
 Nothing here talks to a real STT engine. The shell command writes a static
 transcript to ``{output_path}`` using ``python -c`` so the tests run
 identically on Linux, macOS, and Windows (with minor quoting differences).
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_transcription_command_providers.py）
 """
 
 from __future__ import annotations

@@ -11,6 +11,9 @@ These tests pin two fixes:
      model per session and recovers it when a fresh resolution comes back empty.
   2. ``_has_pending_fallback`` gates the "trying fallback..." status so it is only
      announced when a fallback chain actually exists.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_empty_model_recovery.py）
 """
 
 import threading

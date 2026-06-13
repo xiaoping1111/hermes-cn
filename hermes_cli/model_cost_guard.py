@@ -1,4 +1,8 @@
-"""Expensive-model confirmation helpers for model selection surfaces."""
+"""Expensive-model confirmation helpers for model selection surfaces.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（model_cost_guard.py）
+"""
 
 from __future__ import annotations
 

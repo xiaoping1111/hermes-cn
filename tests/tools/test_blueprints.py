@@ -3,6 +3,9 @@
 A blueprint is a skill with a metadata.hermes.blueprint block. These verify parsing,
 the create-job bridge, and the export round-trip without touching the real
 cron store.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_blueprints.py）
 """
 
 import sys

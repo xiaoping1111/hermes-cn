@@ -13,7 +13,11 @@ hermes_cli.gateway_windows directly. This protocol is a thin facade
 used by new code that needs to be backend-agnostic — specifically the
 profile create/delete hooks (Phase 4) and the s6 dispatch path in
 ``hermes gateway start/stop/restart`` when running inside a container.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（service_manager.py）
 """
+
 from __future__ import annotations
 
 import re

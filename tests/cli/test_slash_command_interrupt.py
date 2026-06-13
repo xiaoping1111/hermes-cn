@@ -9,6 +9,9 @@ KeyboardInterrupt so the command aborts but the session survives.
 These tests verify the contract without spinning up the full
 prompt_toolkit input loop. We exercise the same try/except by calling
 through a thin wrapper that mirrors the real dispatch shape.
+
+【产品经理理解要点】
+命令行测试——验证CLI命令和交互行为（test_slash_command_interrupt.py）
 """
 
 from unittest.mock import patch

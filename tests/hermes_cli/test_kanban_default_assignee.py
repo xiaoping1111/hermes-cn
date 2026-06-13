@@ -3,7 +3,11 @@
 When the dispatcher hits an unassigned ready task and ``kanban.default_assignee``
 is set, the dispatcher applies the assignment and spawns. Without the config,
 the task is skipped (existing behavior preserved).
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的看板管理——项目任务的可视化追踪与分解
 """
+
 from __future__ import annotations
 
 import json

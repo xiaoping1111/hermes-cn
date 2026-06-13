@@ -6,7 +6,11 @@ keys are delivered to ``getch()`` as raw CSI/SS3 escape byte sequences
 used to treat the leading ``27`` as ESC/cancel, which dumped the setup wizard's
 provider/model picker into its numbered "Select [1-N]" fallback the instant a
 user pressed up or down.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_curses_arrow_keys.py）
 """
+
 import sys
 
 import pytest

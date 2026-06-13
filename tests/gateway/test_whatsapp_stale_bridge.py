@@ -14,6 +14,9 @@ report no hash and are treated as stale by definition.
 
 Also covers the npm dependency-refresh stamp: deps are reinstalled when
 package.json changes, not only when node_modules is missing.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的WhatsApp适配——对接WhatsApp Cloud API
 """
 
 import asyncio

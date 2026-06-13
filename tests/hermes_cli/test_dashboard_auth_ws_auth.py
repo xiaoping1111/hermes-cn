@@ -9,6 +9,9 @@ These tests exercise the helper at the unit level (no actual WS upgrade)
 plus the ticket-mint endpoint under realistic gated-mode setup. We don't
 test the full WS upgrade because the starlette TestClient WS path has a
 pre-existing regression unrelated to dashboard-auth.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的认证授权——管理API密钥和OAuth流程
 """
 
 from __future__ import annotations

@@ -1,5 +1,4 @@
-"""
-Transcription Provider ABC
+"""Transcription Provider ABC
 ==========================
 
 Defines the pluggable-backend interface for speech-to-text. Providers
@@ -42,6 +41,9 @@ Response contract
     transcript   str       transcribed text (empty when success=False)
     provider     str       provider name (for diagnostics)
     error        str       only when success=False
+
+【产品经理理解要点】
+AI代理核心——管理对话循环、模型调用、工具执行和上下文压缩（transcription_provider.py）
 """
 
 from __future__ import annotations

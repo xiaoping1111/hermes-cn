@@ -1,4 +1,8 @@
-"""Regression tests for the Android psutil compatibility installer."""
+"""Regression tests for the Android psutil compatibility installer.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_psutil_android_extract.py）
+"""
 
 from __future__ import annotations
 

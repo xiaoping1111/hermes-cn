@@ -1,4 +1,8 @@
-"""Tests for the ``hermes prompt-size`` diagnostic (issue #34667)."""
+"""Tests for the ``hermes prompt-size`` diagnostic (issue #34667).
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_prompt_size.py）
+"""
 
 import json
 

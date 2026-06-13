@@ -16,6 +16,9 @@ Three independent fixes that were salvaged together:
 3. ``PairingStore.list_pending`` TOCTOU: previously called
    ``_cleanup_expired`` (which writes the JSON file) without holding
    ``self._lock``, racing with ``generate_code`` / ``approve_code``.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_pr_6656_regressions.py）
 """
 
 from __future__ import annotations

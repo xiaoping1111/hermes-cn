@@ -16,6 +16,9 @@ the reasoning-effort/stepfun/qwen helpers, ``_run_anthropic_oauth_flow``, …) a
 imported lazily inside the flows (``from hermes_cli.main import ...`` resolves at
 call time, when main.py is fully loaded) so this module never imports
 ``hermes_cli.main`` at import time -> no import cycle.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口中的安装设置——首次使用引导和配置向导
 """
 
 from __future__ import annotations

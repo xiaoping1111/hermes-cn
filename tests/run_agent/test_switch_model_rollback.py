@@ -11,6 +11,9 @@ openai-codex" on the next turn.
 These tests exercise both branches (openai_chat_completions and
 anthropic_messages) and assert that every mutated field returns to its
 pre-swap value when the rebuild raises.
+
+【产品经理理解要点】
+运行代理测试——验证代理端到端执行流程（test_switch_model_rollback.py）
 """
 
 from unittest.mock import MagicMock, patch

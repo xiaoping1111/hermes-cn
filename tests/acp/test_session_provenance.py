@@ -3,6 +3,9 @@
 Exercises acp_adapter.provenance against a real SessionDB — no mocks — covering
 the acceptance-criteria matrix: root session, compression-split continuation,
 multi-depth chains, rotation flagging, and graceful handling of unknown ids.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试中的会话管理——管理用户与代理的会话状态
 """
 
 import time

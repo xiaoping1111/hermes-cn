@@ -5,6 +5,9 @@ This helper decides whether a given model name requires the newer
 ``/v1/chat/completions``. It protects against the 400 ``unsupported_parameter``
 error seen when third-party OpenAI-compatible endpoints serve gpt-4o / 4.1 /
 5.x / o-series models by name and the caller only checks the URL host.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_model_forces_max_completion_tokens.py）
 """
 
 from __future__ import annotations

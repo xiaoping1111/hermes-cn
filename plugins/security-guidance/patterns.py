@@ -1,5 +1,4 @@
-"""
-Regex-based security pattern definitions for the security-guidance plugin.
+"""Regex-based security pattern definitions for the security-guidance plugin.
 
 Pure data + one pure helper. No env-var reads, no I/O — kept side-effect-free
 so it can be imported in isolation.
@@ -26,7 +25,11 @@ Modifications by NousResearch for the Hermes Agent plugin port:
   - none to the pattern data itself; this file is byte-for-byte the upstream
     patterns.py at commit 0bde168 (2026-05-26). Hermes-side wiring lives in
     __init__.py.
+
+【产品经理理解要点】
+插件系统——扩展Hermes核心功能的可选组件（如记忆、浏览器、图片生成）（patterns.py）
 """
+
 from enum import IntEnum
 
 

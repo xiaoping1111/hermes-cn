@@ -15,6 +15,9 @@ notes in ``references/security-disclosure-triage.md``.
 
 Out of scope on purpose: global pip/npm, editor/browser extensions,
 daily background scans, auto-blocking installs.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（security_audit.py）
 """
 
 from __future__ import annotations

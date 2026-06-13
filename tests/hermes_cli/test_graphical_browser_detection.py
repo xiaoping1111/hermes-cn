@@ -9,6 +9,9 @@ to a console browser and hijacked the TTY.
 The helper distinguishes "a real windowed browser will pop up" from "a console
 browser will hijack the terminal" so OAuth callsites can fall back to printing
 the URL / manual paste instead of auto-opening.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的浏览器——提供网页浏览、截图、自动化操作
 """
 
 from __future__ import annotations

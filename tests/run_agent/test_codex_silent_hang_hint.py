@@ -5,6 +5,9 @@ warning when the request matches a known Codex silent-reject pattern
 (gpt-5.5 family on the ChatGPT Codex backend).  See issue #21444 for
 symptom history. The recommended workaround for ChatGPT Codex OAuth
 accounts is `gpt-5.4` / `gpt-5.3-codex`, not `gpt-5.4-codex`.
+
+【产品经理理解要点】
+运行代理测试——验证代理端到端执行流程（test_codex_silent_hang_hint.py）
 """
 
 from __future__ import annotations

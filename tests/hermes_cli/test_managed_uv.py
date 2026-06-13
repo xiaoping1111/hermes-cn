@@ -1,4 +1,8 @@
-"""Tests for hermes_cli.managed_uv — one path, no guessing."""
+"""Tests for hermes_cli.managed_uv — one path, no guessing.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_managed_uv.py）
+"""
 
 from __future__ import annotations
 

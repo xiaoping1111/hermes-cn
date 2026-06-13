@@ -18,7 +18,11 @@ reclaims the stale claim on the next dispatcher tick.
 These tests use a synthetic Python script that mirrors the cli.py signal
 handler shape so we can exercise the exit-path contract without booting the
 full CLI (which needs a real provider config).
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的看板管理——项目任务的可视化追踪与分解
 """
+
 from __future__ import annotations
 
 import os

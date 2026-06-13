@@ -13,7 +13,11 @@ assert the reconciler did the right thing.
 Every ``docker exec`` here runs as the unprivileged ``hermes`` user
 (via :func:`docker_exec` / :func:`docker_exec_sh` in conftest); see
 the conftest module docstring.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_container_restart.py）
 """
+
 from __future__ import annotations
 
 import subprocess

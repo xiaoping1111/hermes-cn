@@ -13,7 +13,11 @@ The fix is ``ENV HERMES_TUI_DIR=/opt/hermes/ui-tui`` in the Dockerfile, which
 makes the launcher take the prebuilt-bundle fast path (``node --expose-gc
 .../dist/entry.js``) and skip the install check entirely. These tests assert
 that invariant holds in the built image.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_tui_prebuilt_bundle.py）
 """
+
 from __future__ import annotations
 
 import json

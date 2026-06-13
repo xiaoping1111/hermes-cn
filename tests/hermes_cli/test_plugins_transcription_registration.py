@@ -6,6 +6,9 @@ and asserts the registration result.
 
 Mirrors the shape of ``test_plugins_tts_registration.py`` (companion
 TTS hook from issue #30398).
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_plugins_transcription_registration.py）
 """
 
 from __future__ import annotations

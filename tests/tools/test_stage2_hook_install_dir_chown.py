@@ -7,7 +7,11 @@ new UID before services drop privileges. ``/opt/hermes/gateway`` is one such
 tree: Python writes ``__pycache__`` beneath the package on first import, which
 fails with EACCES if the tree still belongs to the build-time UID (10000) after
 a remap (#27221).
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_stage2_hook_install_dir_chown.py）
 """
+
 from __future__ import annotations
 
 import re

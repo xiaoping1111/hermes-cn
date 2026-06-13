@@ -4,6 +4,9 @@ The realistic bug scenario from #28822 is: a child task ends up in
 ``todo`` with all its parents already ``done`` (because the
 auto-promote daemon hasn't run, or a manual close raced it).
 Direct-SQL setup is used to construct that state deterministically.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的看板管理——项目任务的可视化追踪与分解
 """
 
 from __future__ import annotations

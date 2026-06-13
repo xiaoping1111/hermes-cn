@@ -9,6 +9,9 @@ best-effort: a clock failure must omit the rule, never block compaction.
 These exercise ``_generate_summary`` directly -- the function that builds the
 summarizer prompt. ``test_context_compressor_summary_continuity`` already
 proves ``compress()`` routes into ``_generate_summary``.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等中的上下文压缩——在对话过长时压缩历史消息
 """
 
 from datetime import datetime, timezone

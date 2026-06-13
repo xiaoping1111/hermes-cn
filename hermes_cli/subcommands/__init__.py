@@ -13,6 +13,9 @@ dependency-injected into the builders so these modules never import ``main``
 ``_shared.py``.
 
 Part of the god-file decomposition plan (Phase 2).
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（__init__.py）
 """
 
 from __future__ import annotations

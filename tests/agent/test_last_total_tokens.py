@@ -1,4 +1,8 @@
-"""Test that last_total_tokens is correctly set by ContextCompressor."""
+"""Test that last_total_tokens is correctly set by ContextCompressor.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_last_total_tokens.py）
+"""
 
 from agent.context_compressor import ContextCompressor
 

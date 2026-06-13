@@ -10,6 +10,9 @@ Covers:
 
 3. SSE path forwards ``cert`` and ``ssl_verify`` via an ``httpx_client_factory``
    without breaking the OAuth/headers/timeout passthrough.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性中的命令行——终端交互的主入口
 """
 
 from __future__ import annotations

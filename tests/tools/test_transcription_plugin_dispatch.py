@@ -14,6 +14,9 @@ to #30398 — STT pluggability):
    envelope.
 5. Plugin returning non-dict → caught with error envelope.
 6. Plugin result has ``provider`` field stamped if missing.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_transcription_plugin_dispatch.py）
 """
 
 from __future__ import annotations

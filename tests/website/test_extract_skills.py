@@ -12,6 +12,9 @@ per-skill source links and a cleaned-up category sidebar:
    unknown tags fall to ``uncategorized`` (folded into "Other" later) so the
    sidebar doesn't fill with one-off junk like version strings or brand
    names.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_extract_skills.py）
 """
 
 from __future__ import annotations

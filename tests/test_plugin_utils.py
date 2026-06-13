@@ -3,6 +3,9 @@
 These exercise the actual concurrency guarantee with real threads (not mocks):
 a barrier releases N threads simultaneously into the accessor, and we assert
 the factory ran exactly once.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_plugin_utils.py）
 """
 
 import threading

@@ -4,6 +4,9 @@ Guards the Anthropic Messages dispatch boundary against Responses-API-only
 kwargs (``instructions``, ``input``, ``store``, ``parallel_tool_calls``)
 leaking in under an api_mode-flip race. The Anthropic SDK raises a
 non-retryable ``TypeError`` on any of them, killing the whole turn.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_anthropic_kwargs_sanitize.py）
 """
 
 import logging

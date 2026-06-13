@@ -16,7 +16,11 @@ proxy header chain isn't reliable.
 The single source of truth for both helpers lives here so the gate
 middleware, the OAuth routes, the cookie helpers, and the SPA mount
 all agree on validation rules.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（prefix.py）
 """
+
 from __future__ import annotations
 
 import logging

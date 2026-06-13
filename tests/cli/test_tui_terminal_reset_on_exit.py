@@ -8,6 +8,9 @@ runs on every catchable exit path, including ``atexit``) now emits the disable
 sequence as its first step via ``_reset_terminal_input_modes_on_exit`` — gated
 on ``_tui_input_modes_active`` so non-TUI one-shot CLI runs (which share
 ``_run_cleanup`` via ``atexit``) don't emit codes for modes they never set.
+
+【产品经理理解要点】
+命令行测试——验证CLI命令和交互行为（test_tui_terminal_reset_on_exit.py）
 """
 
 import unittest

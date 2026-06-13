@@ -4,7 +4,11 @@ When ``kanban.max_in_progress_per_profile`` is set, no single profile
 gets more than N workers running at once even if the global
 ``max_in_progress`` cap would allow it. Prevents one profile's local
 model / API quota / browser pool from being overwhelmed by a fan-out.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的看板管理——项目任务的可视化追踪与分解
 """
+
 from __future__ import annotations
 
 import os

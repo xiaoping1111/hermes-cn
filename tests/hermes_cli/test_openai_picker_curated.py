@@ -16,6 +16,9 @@ Bug 2 — OpenRouter appeared authenticated whenever OPENAI_API_KEY was set
     row. The overlay entry is removed; runtime credential resolution still
     falls back to OPENAI_API_KEY for explicitly-selected OpenRouter (handled
     in runtime_provider.py, independent of the overlay).
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_openai_picker_curated.py）
 """
 
 import os

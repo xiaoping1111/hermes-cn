@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
+
 """Compare enabled vs disabled runs and produce a readable report.
 
 Reads scripts/out/_summary.json and the per-scenario JSONs, prints a side-by-
 side comparison of what happened, and flags anomalies.
+
+【产品经理理解要点】
+构建脚本——项目构建、发布、审计等辅助工具（analyze_livetest.py）
 """
 
 from __future__ import annotations

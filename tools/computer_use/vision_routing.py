@@ -43,6 +43,9 @@ The decision intentionally fails *closed* (i.e. towards aux routing) when
 metadata is missing or ambiguous: returning a screenshot to a model that
 cannot read it is a hard tool failure, while routing it through aux costs
 one extra LLM call and yields a usable description.
+
+【产品经理理解要点】
+工具系统——提供代码执行、文件操作、浏览器、搜索等能力给AI代理（vision_routing.py）
 """
 
 from __future__ import annotations

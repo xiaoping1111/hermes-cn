@@ -1,4 +1,8 @@
-"""Tests for gateway /version command."""
+"""Tests for gateway /version command.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_version_command.py）
+"""
 
 import asyncio
 

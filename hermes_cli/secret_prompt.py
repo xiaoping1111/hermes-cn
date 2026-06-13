@@ -1,4 +1,8 @@
-"""Secret input prompts with masked typing feedback."""
+"""Secret input prompts with masked typing feedback.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（secret_prompt.py）
+"""
 
 from __future__ import annotations
 

@@ -4,7 +4,11 @@
 `hermes gateway start/stop/restart` invocation should be routed to
 the in-container S6ServiceManager instead of falling through to the
 host systemd/launchd/windows code path.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_gateway_s6_dispatch.py）
 """
+
 from __future__ import annotations
 
 

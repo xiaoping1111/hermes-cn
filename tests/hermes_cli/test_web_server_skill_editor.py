@@ -10,7 +10,11 @@ gap for headless/VPS users. These tests pin:
 - PUT /api/skills/content rewrites an existing SKILL.md (404 on unknown).
 - POST /api/cron/jobs accepts ``skills`` and persists it on the job;
   PUT /api/cron/jobs/{id} can update the list.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_web_server_skill_editor.py）
 """
+
 import pytest
 
 

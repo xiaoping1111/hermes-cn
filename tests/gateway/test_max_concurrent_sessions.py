@@ -1,4 +1,8 @@
-"""Tests for the gateway max_concurrent_sessions active-session cap."""
+"""Tests for the gateway max_concurrent_sessions active-session cap.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的会话管理——管理用户与代理的会话状态
+"""
 
 import asyncio
 import time

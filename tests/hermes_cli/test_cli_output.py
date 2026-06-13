@@ -1,3 +1,7 @@
+"""【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的命令行——终端交互的主入口
+"""
+
 from hermes_cli import cli_output
 
 

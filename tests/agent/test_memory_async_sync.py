@@ -14,7 +14,11 @@ The fix dispatches provider work to a single-worker background executor.
 (or fails, logged) in the background. ``flush_pending`` provides a barrier
 for session boundaries and deterministic tests. ``shutdown_all`` drains the
 executor with a bounded timeout so a wedged provider can't hang teardown.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_memory_async_sync.py）
 """
+
 import time
 
 import pytest

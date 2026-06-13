@@ -4,6 +4,9 @@ Covers the core catalog/slot schema/renderers/fill (cron/blueprint_catalog.py),
 the shared /blueprint command handler (hermes_cli/blueprint_cmd.py), and
 the docs generator. Uses an isolated HERMES_HOME for anything that touches the
 cron job store.
+
+【产品经理理解要点】
+定时任务测试——验证调度和脚本执行（test_blueprint_catalog.py）
 """
 
 import importlib

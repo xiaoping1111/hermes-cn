@@ -12,6 +12,9 @@ The fix adds two safeguards:
    re-walk with the raw (non-inflated) budget to find a meaningful cut.
 2. compress(): when compress_start >= compress_end, record the no-op as
    an ineffective compression so should_compress() anti-thrashing fires.
+
+【产品经理理解要点】
+运行代理测试——验证代理端到端执行流程（test_infinite_compaction_loop.py）
 """
 
 from unittest.mock import patch, MagicMock

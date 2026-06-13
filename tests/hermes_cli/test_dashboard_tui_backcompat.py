@@ -14,6 +14,9 @@ start" with no actionable cause.
 The fix adds a hidden, deprecated, accepted-and-ignored ``--tui`` flag to the
 dashboard subparser so an old app shell + new CLI degrades gracefully instead
 of bricking. These tests pin that contract.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_dashboard_tui_backcompat.py）
 """
 
 import os

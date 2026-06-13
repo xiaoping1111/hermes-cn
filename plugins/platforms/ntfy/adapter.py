@@ -42,6 +42,9 @@ Identity model: ntfy has no native authenticated user identity. The
 authorization. Each topic is treated as a single trusted channel —
 ``user_id`` is fixed to the topic name. Use a private topic protected
 by a read token for any real trust boundary.
+
+【产品经理理解要点】
+平台插件——额外的即时通讯平台对接（adapter.py）
 """
 
 import asyncio

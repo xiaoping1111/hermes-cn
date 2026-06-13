@@ -4,6 +4,9 @@ Guards the description text that flags ``schedule`` (and ``prompt``) as
 REQUIRED for ``action=create`` — the load-bearing fix for description-driven
 models (e.g. Grok) that omit schedule when the schema only lists ``action``
 in ``required[]``. See issue #32427 / PR #32448.
+
+【产品经理理解要点】
+定时任务测试——验证调度和脚本执行（test_cronjob_schema.py）
 """
 
 from __future__ import annotations

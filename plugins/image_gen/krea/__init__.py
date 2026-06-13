@@ -18,6 +18,9 @@ Selection precedence (first hit wins):
 
 Docs: https://docs.krea.ai/developers/krea-2/overview
 API:  https://docs.krea.ai/api-reference/krea/krea-2-large
+
+【产品经理理解要点】
+图片生成插件——对接DALL-E、Stable Diffusion等图片生成服务（__init__.py）
 """
 
 from __future__ import annotations

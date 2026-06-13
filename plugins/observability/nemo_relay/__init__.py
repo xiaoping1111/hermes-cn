@@ -1,4 +1,8 @@
-"""nemo_relay — optional Hermes plugin for NeMo Relay observability."""
+"""nemo_relay — optional Hermes plugin for NeMo Relay observability.
+
+【产品经理理解要点】
+可观测性插件——记录应用行为用于审计和分析（__init__.py）
+"""
 
 from __future__ import annotations
 

@@ -11,6 +11,9 @@ Covers, by analogy with ``test_nous_provider.py``:
 6. OIDC discovery: endpoint extraction, issuer pinning, https enforcement.
 
 All HTTP is mocked: nothing here talks to a real IDP.
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能（test_self_hosted_provider.py）
 """
 
 from __future__ import annotations

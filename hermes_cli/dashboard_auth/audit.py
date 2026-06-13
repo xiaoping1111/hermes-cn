@@ -8,7 +8,11 @@ This module deliberately keeps a minimal dependency surface — no imports
 from ``hermes_constants`` or other hermes_cli modules — so it can be
 imported safely from middleware code that loads early in the startup
 sequence.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（audit.py）
 """
+
 from __future__ import annotations
 
 import datetime as _dt

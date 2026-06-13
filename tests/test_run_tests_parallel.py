@@ -16,6 +16,9 @@ kernel's process table.
 
 POSIX-only: Windows has its own grandchild lifecycle (no shared session,
 ``taskkill /F /T`` semantics). Marked accordingly.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_run_tests_parallel.py）
 """
 
 from __future__ import annotations

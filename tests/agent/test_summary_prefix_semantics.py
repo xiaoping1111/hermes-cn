@@ -16,6 +16,9 @@ i18n refactor", "never mind, look at grafana"), the model often followed
 the agent repeatedly re-surfacing already-cancelled work across turns.
 
 These tests pin the post-fix invariants so the conflict cannot regress.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_summary_prefix_semantics.py）
 """
 
 from agent.context_compressor import (

@@ -1,3 +1,7 @@
+"""【产品经理理解要点】
+工具测试——验证各种工具功能的正确性中的配置管理——加载和验证YAML/ENV配置文件
+"""
+
 from __future__ import annotations
 
 import os

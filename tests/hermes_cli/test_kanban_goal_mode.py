@@ -8,6 +8,9 @@ Covers three layers:
    when the card opts in.
 3. Loop: goals.run_kanban_goal_loop continuation / completion / budget
    behaviour, driven entirely through injected callbacks (no live model).
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的看板管理——项目任务的可视化追踪与分解
 """
 
 from __future__ import annotations

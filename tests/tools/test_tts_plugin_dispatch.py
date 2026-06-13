@@ -24,6 +24,9 @@ The dispatcher is exercised in isolation — we don't actually call
 writes. Each test directly calls
 ``tools.tts_tool._dispatch_to_plugin_provider`` / the predicate
 helpers.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性中的语音合成——将文本转为语音输出
 """
 
 from __future__ import annotations

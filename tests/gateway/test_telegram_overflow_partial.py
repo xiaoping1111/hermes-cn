@@ -1,4 +1,8 @@
-"""Regression coverage for partial Telegram overflow delivery."""
+"""Regression coverage for partial Telegram overflow delivery.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的Telegram适配——对接Telegram Bot API
+"""
 
 from types import SimpleNamespace
 from unittest.mock import AsyncMock, MagicMock

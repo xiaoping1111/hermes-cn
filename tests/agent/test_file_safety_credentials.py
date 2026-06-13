@@ -9,6 +9,9 @@ keys + OAuth tokens) readable by the agent. A prompt-injection reaching
 These tests verify that ``get_read_block_error`` returns a denial message
 for the credential stores while leaving arbitrary ``HERMES_HOME`` files
 readable, and that the existing ``skills/.hub`` deny still applies.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等中的文件安全——防止代理读写敏感文件
 """
 
 from __future__ import annotations

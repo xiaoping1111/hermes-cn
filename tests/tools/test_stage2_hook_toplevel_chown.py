@@ -17,7 +17,11 @@ and those must never be chowned.
 The s6-overlay rework moved bootstrap from docker/entrypoint.sh (now a shim) to
 docker/stage2-hook.sh, installed as /etc/cont-init.d/01-hermes-setup. This test
 targets that location.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_stage2_hook_toplevel_chown.py）
 """
+
 from __future__ import annotations
 
 import os

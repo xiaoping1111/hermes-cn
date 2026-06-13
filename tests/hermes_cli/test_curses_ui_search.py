@@ -1,3 +1,7 @@
+"""【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_curses_ui_search.py）
+"""
+
 from hermes_cli.curses_ui import (
     _SearchState,
     _filter_indices,

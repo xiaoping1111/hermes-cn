@@ -25,6 +25,9 @@ Design summary
 The module is intentionally subprocess-driven rather than going through
 the ``bitwarden-sdk-secrets`` Python package: one cross-platform binary
 is easier to lazy-install than a wheels-with-Rust-extension dependency.
+
+【产品经理理解要点】
+AI代理核心——管理对话循环、模型调用、工具执行和上下文压缩（bitwarden.py）
 """
 
 from __future__ import annotations

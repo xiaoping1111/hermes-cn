@@ -12,7 +12,11 @@ Real-world symptom from the issue:
 repeating across cron jobs and gateway sessions, with the user unable to
 tell whether the gateway was broken, the model was down, or their prompt
 was the problem.
+
+【产品经理理解要点】
+运行代理测试——验证代理端到端执行流程（test_18028_content_policy_blocked.py）
 """
+
 from __future__ import annotations
 
 

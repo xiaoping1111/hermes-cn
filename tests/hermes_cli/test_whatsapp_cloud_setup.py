@@ -10,6 +10,9 @@ Covers:
   the post-setup tunnel + Meta-dashboard instructions the user needs
   (the wizard can't smoke-test reachability itself because the gateway
   isn't running yet during setup).
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的WhatsApp适配——对接WhatsApp Cloud API
 """
 
 from __future__ import annotations

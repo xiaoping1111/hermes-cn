@@ -1,4 +1,8 @@
-"""Regression tests for bounded/lazy CLI MCP startup."""
+"""Regression tests for bounded/lazy CLI MCP startup.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的MCP协议——对接Model Context Protocol工具标准
+"""
 
 from __future__ import annotations
 

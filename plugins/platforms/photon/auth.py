@@ -1,5 +1,4 @@
-"""
-Photon Dashboard API client + device-code login flow.
+"""Photon Dashboard API client + device-code login flow.
 
 This module is pure Python — it intentionally does not depend on
 ``spectrum-ts``.  Every management-plane operation (login, find/create
@@ -33,7 +32,11 @@ Credential storage mirrors every other Hermes channel:
 
 Reference: https://github.com/photon-hq/cli and
 https://photon.codes/docs/api-reference/device-login/request-device-+-user-code
+
+【产品经理理解要点】
+平台插件——额外的即时通讯平台对接中的认证授权——管理API密钥和OAuth流程
 """
+
 from __future__ import annotations
 
 import json

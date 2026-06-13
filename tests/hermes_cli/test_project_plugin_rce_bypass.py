@@ -27,7 +27,11 @@ These tests pin each layer of the new defence:
   refuses project-source plugins outright.
 * End-to-end the original PoC manifest no longer triggers
   ``importlib`` for ``/tmp/payload.py``.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_project_plugin_rce_bypass.py）
 """
+
 from __future__ import annotations
 
 import json

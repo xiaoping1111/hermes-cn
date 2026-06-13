@@ -4,6 +4,9 @@ These 9 subcommands had their handler defined as a closure inside main(); the
 handler was promoted to top-level and the parser block extracted into a builder.
 Confirms each builder attaches its subcommand and wires func to the injected
 handler.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_subcommands_followup.py）
 """
 
 from __future__ import annotations

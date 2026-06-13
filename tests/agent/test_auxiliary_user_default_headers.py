@@ -7,6 +7,9 @@ clients, so a ``custom`` endpoint behind a gateway/WAF that rejects the OpenAI
 SDK's identifying headers needs the ``model.default_headers`` override applied
 on BOTH paths — otherwise the main turn succeeds but auxiliary calls to the
 same endpoint still fail with an opaque 4xx/502. (#40033)
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_auxiliary_user_default_headers.py）
 """
 
 from unittest.mock import patch, MagicMock

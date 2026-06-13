@@ -3,7 +3,11 @@
 Plugins call ``register_provider`` via the plugin context hook at startup.
 The auth gate middleware iterates ``list_providers()`` and uses
 ``get_provider`` to dispatch on the session's ``provider`` field.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（registry.py）
 """
+
 from __future__ import annotations
 
 import logging

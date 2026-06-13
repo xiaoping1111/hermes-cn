@@ -21,6 +21,9 @@ The three fixes covered here:
   3. ``check_vision_requirements`` mirrors the runtime fallback chain so
      ``vision_analyze`` shows up whenever the auto chain can serve vision,
      and ``browser_vision`` gates on vision availability as well.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_vision_routing_31179.py）
 """
 
 from __future__ import annotations

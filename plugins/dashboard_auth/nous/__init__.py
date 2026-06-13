@@ -65,6 +65,9 @@ Skip reasons:
   fail-closed branch reads to surface a useful operator error message
   ("Set HERMES_DASHBOARD_OAUTH_CLIENT_ID …") instead of the bare "no
   providers registered" the gate would otherwise emit.
+
+【产品经理理解要点】
+插件系统——扩展Hermes核心功能的可选组件（如记忆、浏览器、图片生成）（__init__.py）
 """
 
 from __future__ import annotations

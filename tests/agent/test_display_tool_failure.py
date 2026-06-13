@@ -4,6 +4,9 @@ inline failure suffix rendering.
 Covers the user-visible promise: when a tool fails, the CLI shows a short,
 specific reason in square brackets at the end of the completion line —
 not a generic "[error]".
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_display_tool_failure.py）
 """
 
 import json

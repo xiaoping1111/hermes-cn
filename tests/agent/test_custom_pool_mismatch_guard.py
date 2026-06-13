@@ -12,7 +12,11 @@ rotation) never ran for ANY custom-provider user.
 The fix accepts the pair only when the agent's current base_url resolves to
 the same pool key, preserving the guard's original purpose (#33088/#33163:
 never mutate the primary's pool while a fallback provider is active).
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_custom_pool_mismatch_guard.py）
 """
+
 from unittest.mock import MagicMock, patch
 
 import pytest

@@ -3,6 +3,9 @@
 Manifest parsing, install/uninstall config writes, and picker plumbing
 are exercised here. Anything that would actually clone a repo or
 launch an MCP is mocked.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的MCP协议——对接Model Context Protocol工具标准
 """
 
 from __future__ import annotations

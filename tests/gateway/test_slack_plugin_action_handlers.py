@@ -6,6 +6,9 @@ Covers:
 * ``SlackAdapter.connect`` wiring those handlers into the AsyncApp
 * Defensive wrapping: a plugin handler that raises does NOT take down
   the gateway and Slack still gets an ack.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的Slack适配——对接Slack Bot API
 """
 
 from __future__ import annotations

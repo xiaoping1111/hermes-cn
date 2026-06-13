@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Run Docker boot-time config migrations safely."""
+
+"""Run Docker boot-time config migrations safely.
+
+【产品经理理解要点】
+构建脚本——项目构建、发布、审计等辅助工具中的配置管理——加载和验证YAML/ENV配置文件
+"""
+
 from __future__ import annotations
 
 import shutil

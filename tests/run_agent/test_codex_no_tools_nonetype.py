@@ -24,7 +24,11 @@ from our own Codex call paths, so the specific iteration crash inside
 ``_make_tools`` is also structurally avoided in normal operation.  This
 test class additionally pins the SDK's ``_make_tools(None)`` contract so
 we notice if upstream ever changes it.
+
+【产品经理理解要点】
+运行代理测试——验证代理端到端执行流程（test_codex_no_tools_nonetype.py）
 """
+
 from __future__ import annotations
 
 import sys

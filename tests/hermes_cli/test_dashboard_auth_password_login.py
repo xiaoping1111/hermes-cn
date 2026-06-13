@@ -8,6 +8,9 @@ form rendering, and the route's rate limiter.
 
 The E2E harness mirrors ``test_dashboard_auth_401_reauth.py``: register a
 provider, flip ``app.state.auth_required = True``, drive a ``TestClient``.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的认证授权——管理API密钥和OAuth流程
 """
 
 from __future__ import annotations

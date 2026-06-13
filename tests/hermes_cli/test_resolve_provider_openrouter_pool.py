@@ -8,6 +8,9 @@ requests went out with no Authorization header — OpenRouter's
 "HTTP 401: Missing Authentication header".
 
 These tests lock in that auto-detection consults the OpenRouter pool.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_resolve_provider_openrouter_pool.py）
 """
 
 import uuid

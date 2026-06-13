@@ -1,4 +1,8 @@
-"""Matrix Project A / Project B context-isolation regressions."""
+"""Matrix Project A / Project B context-isolation regressions.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_matrix_project_context_isolation.py）
+"""
 
 from __future__ import annotations
 

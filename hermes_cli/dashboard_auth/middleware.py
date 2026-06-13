@@ -13,7 +13,11 @@ Engaged when ``app.state.auth_required is True``. The gate's job:
 The middleware is a no-op when ``auth_required`` is False (loopback
 mode); the legacy ``_SESSION_TOKEN`` ``auth_middleware`` handles those
 binds.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（middleware.py）
 """
+
 from __future__ import annotations
 
 import logging

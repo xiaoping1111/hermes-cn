@@ -19,6 +19,9 @@ Design choice: users never type raw cron. A blueprint carries a fixed recurrence
 in ``schedule_template`` and parameterizes only the human-friendly parts
 (time-of-day, weekday set). Blueprints needing full flexibility expose a ``text``
 slot named ``schedule`` that passes through verbatim.
+
+【产品经理理解要点】
+定时任务——支持定时发送消息、执行脚本的调度系统（blueprint_catalog.py）
 """
 
 from __future__ import annotations

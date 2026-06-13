@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """Tests for the FAL.ai image generation plugin.
 
 The plugin is a thin registration adapter — actual FAL pipeline logic
@@ -9,6 +10,9 @@ lives in ``tools.image_generation_tool`` and is exercised by
 * call-time indirection (``_it`` resolution at ``generate()`` time so
   ``monkeypatch.setattr(image_tool, ...)`` keeps working)
 * response shape stamping (provider/prompt/aspect_ratio/model)
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能（test_fal_provider.py）
 """
 
 from __future__ import annotations

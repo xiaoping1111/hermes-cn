@@ -5,6 +5,9 @@ serve / MITM the update mirror plant a symlink that extractall() then
 follows, writing arbitrary file content outside the staging directory.
 The Linux mode bits live in the upper 16 bits of ``ZipInfo.external_attr``;
 we explicitly reject any member whose type bits are S_IFLNK.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_update_zip_symlink_reject.py）
 """
 
 import os

@@ -1,3 +1,7 @@
+"""【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_codex_responses_adapter.py）
+"""
+
 from types import SimpleNamespace
 
 import pytest

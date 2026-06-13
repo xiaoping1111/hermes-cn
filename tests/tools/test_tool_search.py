@@ -3,6 +3,9 @@
 Coverage targets — these mirror the issues called out in the OpenClaw tool
 search report. Every test that names an OpenClaw issue is the regression
 guard that would have caught that specific failure mode.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_tool_search.py）
 """
 
 from __future__ import annotations

@@ -7,6 +7,9 @@ to a text summary instead of waiting for a reactive 400 recovery.
 
 The fix adds ``supports_vision_tool_messages`` to ``ProviderProfile``
 and checks it in ``_tool_result_content_for_active_model``.
+
+【产品经理理解要点】
+运行代理测试——验证代理端到端执行流程（test_vision_tool_messages.py）
 """
 
 from __future__ import annotations

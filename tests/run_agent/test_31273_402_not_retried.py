@@ -20,7 +20,11 @@ Falling through to the retry-backoff path from here just burns paid
 requests with no recovery mechanism left.  Aborting mirrors how 401/403
 (also ``should_fallback=True``) already behave once their recovery paths
 have failed.
+
+【产品经理理解要点】
+运行代理测试——验证代理端到端执行流程（test_31273_402_not_retried.py）
 """
+
 from __future__ import annotations
 
 

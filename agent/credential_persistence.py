@@ -5,6 +5,9 @@ runtime secrets and strip raw values before those entries are written to
 ``auth.json``.  They intentionally have no dependency on ``hermes_cli.auth`` so
 both the pool model and the final auth-store write boundary can share the same
 policy without import cycles.
+
+【产品经理理解要点】
+AI代理核心——管理对话循环、模型调用、工具执行和上下文压缩（credential_persistence.py）
 """
 
 from __future__ import annotations

@@ -21,6 +21,9 @@ read (``session_id``). This avoids the heavy ``HermesCLI`` construction
 path used in ``test_cli_init.py``, which is incompatible with this test
 file's path layout — ``HermesCLI.__init__`` imports a lot of optional
 state we don't need here.
+
+【产品经理理解要点】
+命令行测试——验证CLI命令和交互行为中的命令行——终端交互的主入口
 """
 
 import os

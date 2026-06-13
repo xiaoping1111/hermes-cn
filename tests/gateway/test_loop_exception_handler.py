@@ -9,6 +9,9 @@ and logs+swallows it; non-transient errors still surface.
 
 These tests pin the classifier and the loop handler so the safety net
 can't silently regress to swallowing every exception.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_loop_exception_handler.py）
 """
 
 from __future__ import annotations

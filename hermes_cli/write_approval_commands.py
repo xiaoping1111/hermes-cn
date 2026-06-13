@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """Shared handlers for the /memory and /skills write-approval subcommands.
 
 Both the interactive CLI (``cli.py``) and the gateway (``gateway/run.py``) call
@@ -11,6 +12,9 @@ Every public handler returns a plain text string suitable for both a terminal
 and a chat message. Skill diffs are intentionally NOT inlined here — the
 ``diff`` handler returns the full diff for the CLI pager, but on a messaging
 platform the gateway truncates it and points the user at the dashboard / file.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口中的审批机制——危险操作需用户确认后执行
 """
 
 from __future__ import annotations

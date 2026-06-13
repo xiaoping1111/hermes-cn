@@ -3,6 +3,9 @@
 Confirms ``build_cron_parser`` wires up the same subactions, aliases, options,
 and ``func=cmd_cron`` dispatch that lived inline in ``main()`` before the
 god-file Phase 2 extraction.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_cron_parser_builder.py）
 """
 
 from __future__ import annotations

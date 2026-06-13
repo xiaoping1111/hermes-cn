@@ -6,6 +6,9 @@ notifications/artifacts, and drive the multi-agent dispatcher. They use only
 ``self`` state, so they live on a mixin that ``GatewayRunner`` inherits — the
 ``self._kanban_*`` call sites resolve identically via the MRO, making this a
 behavior-neutral move that lifts ~1,000 LOC out of run.py.
+
+【产品经理理解要点】
+消息网关——连接各种即时通讯平台（Telegram/Discord/微信等）到AI代理中的看板管理——项目任务的可视化追踪与分解
 """
 
 from __future__ import annotations

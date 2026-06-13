@@ -8,6 +8,9 @@ oversized content and for transports that lack the endpoint.
 The ``telegram`` package is mocked by ``tests/gateway/conftest.py``
 (:func:`_ensure_telegram_mock`), so these tests construct a real
 ``TelegramAdapter`` and wire a mock bot.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的Telegram适配——对接Telegram Bot API
 """
 
 from types import SimpleNamespace

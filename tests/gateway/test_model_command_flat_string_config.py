@@ -9,6 +9,9 @@ silently and the user-visible result was "switch failed" with no persist.
 After fix: the persist block coerces a scalar ``model:`` into a nested dict
 before mutation, so ``--global`` succeeds and the config is rewritten in
 the proper ``model: {default: ..., provider: ...}`` form.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的配置管理——加载和验证YAML/ENV配置文件
 """
 
 import yaml

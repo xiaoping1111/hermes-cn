@@ -7,6 +7,9 @@ Covers:
   list and full ``api_kwargs`` dicts.
 - The May 2026 default-base change (300s -> 90s) and the lowered
   context-tier ceilings (450/600 -> 150/240).
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_non_stream_stale_timeout.py）
 """
 
 from __future__ import annotations

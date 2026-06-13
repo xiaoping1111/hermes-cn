@@ -11,6 +11,9 @@ Covers the CLI half of self-hosted dashboard registration:
 The portal HTTP call and the Nous token resolution are both mocked — this
 file proves the CLI wiring + env-write behaviour. The live end-to-end token
 round-trip against the Vercel preview build is a separate manual step.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_dashboard_register.py）
 """
 
 from __future__ import annotations

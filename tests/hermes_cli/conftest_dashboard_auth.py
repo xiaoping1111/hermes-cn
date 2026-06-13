@@ -12,7 +12,11 @@ can complete the OAuth round trip in-process without external network.
 
 Tokens are HMAC-signed JSON blobs (not real JWTs) — just enough structure
 for ``verify_session`` to detect tampering and expiry.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的认证授权——管理API密钥和OAuth流程
 """
+
 from __future__ import annotations
 
 import base64

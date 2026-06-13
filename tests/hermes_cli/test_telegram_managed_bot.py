@@ -1,4 +1,8 @@
-"""Tests for hermes_cli.telegram_managed_bot — QR codes, deep links, pairing."""
+"""Tests for hermes_cli.telegram_managed_bot — QR codes, deep links, pairing.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的Telegram适配——对接Telegram Bot API
+"""
 
 from __future__ import annotations
 

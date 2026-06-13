@@ -9,6 +9,9 @@ Bug — newly-routed curated aliases vanished on a native Anthropic setup
     curated ``_PROVIDER_MODELS["anthropic"]`` list with the live catalog —
     curated entries first, live-only models appended, deduped — mirroring the
     OpenAI curated-merge philosophy.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_anthropic_picker_curated.py）
 """
 
 from unittest.mock import patch

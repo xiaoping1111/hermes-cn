@@ -4,7 +4,11 @@ terminals, incl. Ghostty) instead of simple_term_menu.
 
 Guards against silently regressing back to simple_term_menu, whose ESC/arrow
 handling was unreliable in `hermes setup` (the provider->model sub-menu).
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的安装设置——首次使用引导和配置向导
 """
+
 from unittest.mock import patch
 
 

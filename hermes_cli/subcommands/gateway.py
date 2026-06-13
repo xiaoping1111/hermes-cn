@@ -4,6 +4,9 @@ Extracted verbatim from ``hermes_cli/main.py:main()`` (god-file Phase 2).
 Both parsers are built together because they shared one inline block (the
 ``gateway`` section also defined ``proxy``). Handlers injected to avoid
 importing ``main``.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（gateway.py）
 """
 
 from __future__ import annotations

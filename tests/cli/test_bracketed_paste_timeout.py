@@ -3,7 +3,11 @@
 Verifies the production helper in cli.py monkey-patches prompt_toolkit's
 Vt100Parser.feed() so the parser auto-escapes from bracketed-paste mode when
 the ESC[201~ end mark is never received.
+
+【产品经理理解要点】
+命令行测试——验证CLI命令和交互行为（test_bracketed_paste_timeout.py）
 """
+
 import ast
 import importlib
 import logging

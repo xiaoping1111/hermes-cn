@@ -1,4 +1,9 @@
-"""Tests for the Photon auth module (device login + dashboard API)."""
+"""Tests for the Photon auth module (device login + dashboard API).
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能中的认证授权——管理API密钥和OAuth流程
+"""
+
 from __future__ import annotations
 
 import json

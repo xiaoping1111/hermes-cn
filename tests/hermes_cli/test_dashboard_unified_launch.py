@@ -4,7 +4,11 @@
 spawning a per-profile server: attach (open browser at ?profile=) when one
 is already listening, else re-exec as the machine dashboard with the
 launching profile preselected. `--isolated` opts out.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_dashboard_unified_launch.py）
 """
+
 import sys
 import types
 import pytest

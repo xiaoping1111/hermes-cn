@@ -5,7 +5,11 @@ model, and chat-PTY endpoints accept an optional ``profile`` so the global
 profile switcher can target any profile's HERMES_HOME. These tests pin:
 reads/writes land in the REQUESTED profile, the dashboard's own profile
 stays untouched, and the chat PTY env is scoped via HERMES_HOME.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_web_server_profile_unification.py）
 """
+
 import pytest
 import yaml
 

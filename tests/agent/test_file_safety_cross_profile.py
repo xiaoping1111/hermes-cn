@@ -9,7 +9,11 @@ Reference: May 2026 incident — a hermes-security profile session
 accidentally edited skills under both ~/.hermes/profiles/hermes-security/skills/
 AND ~/.hermes/skills/ (the default profile's skills), realizing only
 afterwards that the second path belonged to a different profile.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等中的文件安全——防止代理读写敏感文件
 """
+
 from __future__ import annotations
 
 from pathlib import Path

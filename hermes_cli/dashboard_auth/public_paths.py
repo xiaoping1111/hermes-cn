@@ -27,7 +27,11 @@ entry should be safe to expose to:
 
 If a new endpoint doesn't pass all three tests, it should be gated and
 the SPA should bootstrap it after login instead.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（public_paths.py）
 """
+
 from __future__ import annotations
 
 PUBLIC_API_PATHS: frozenset[str] = frozenset({

@@ -1,4 +1,8 @@
-"""Tests for the CLI exit summary's resume hint, including profile-flag support."""
+"""Tests for the CLI exit summary's resume hint, including profile-flag support.
+
+【产品经理理解要点】
+命令行测试——验证CLI命令和交互行为（test_exit_summary_resume_hint.py）
+"""
 
 from datetime import datetime
 from unittest.mock import MagicMock, patch

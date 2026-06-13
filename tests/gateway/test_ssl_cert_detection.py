@@ -1,4 +1,8 @@
-"""Regression tests for gateway SSL certificate environment repair."""
+"""Regression tests for gateway SSL certificate environment repair.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_ssl_cert_detection.py）
+"""
 
 from types import SimpleNamespace
 

@@ -1,4 +1,8 @@
-"""Tests for agent/system_prompt.py — context-file cwd wiring."""
+"""Tests for agent/system_prompt.py — context-file cwd wiring.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_system_prompt.py）
+"""
 
 from types import SimpleNamespace
 from unittest.mock import patch

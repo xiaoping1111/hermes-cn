@@ -3,6 +3,9 @@
 Ghostty/macOS window and tab navigation can deliver terminal focus reports
 (CSI I / CSI O) to the running TUI. These must be consumed by the input parser,
 not inserted into the prompt buffer and cleaned up later.
+
+【产品经理理解要点】
+命令行测试——验证CLI命令和交互行为中的命令行——终端交互的主入口
 """
 
 from prompt_toolkit.input.vt100_parser import Vt100Parser

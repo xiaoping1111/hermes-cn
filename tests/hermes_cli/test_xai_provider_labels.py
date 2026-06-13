@@ -1,4 +1,8 @@
-"""Regression tests for xAI provider label disambiguation."""
+"""Regression tests for xAI provider label disambiguation.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_xai_provider_labels.py）
+"""
 
 from hermes_cli.models import provider_label
 from hermes_cli.providers import get_label

@@ -18,6 +18,9 @@ These tests pin that precedence at every layer that makes the decision:
     ``hermes_cli.config`` are importable.
   * the argument parser   — both ``--cli`` and ``--tui`` parse at the top
     level and under the ``chat`` subcommand and are relaunch-inherited.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_default_interface_resolution.py）
 """
 
 from __future__ import annotations

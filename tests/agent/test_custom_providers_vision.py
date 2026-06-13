@@ -4,6 +4,9 @@ When a named custom provider declares per-model supports_vision via the
 legacy list-style custom_providers config, image_routing should honor it
 and route images natively instead of falling through to models.dev or
 the auxiliary vision_analyze path.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_custom_providers_vision.py）
 """
 
 from __future__ import annotations

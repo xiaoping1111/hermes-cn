@@ -3,7 +3,11 @@
 These bypass the loopback HTTP stream — they call ``_dispatch_inbound`` /
 ``_on_inbound_line`` / ``_is_duplicate`` directly, exercising the
 sidecar-event parsing without spawning the Node sidecar or binding ports.
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能（test_inbound.py）
 """
+
 from __future__ import annotations
 
 import base64

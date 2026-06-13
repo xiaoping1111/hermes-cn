@@ -1,3 +1,7 @@
+"""【产品经理理解要点】
+命令行测试——验证CLI命令和交互行为中的命令行——终端交互的主入口
+"""
+
 from unittest.mock import MagicMock, patch
 
 from cli import HermesCLI

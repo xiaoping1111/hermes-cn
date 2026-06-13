@@ -6,6 +6,9 @@ the *mutation* side: `hermes plugins enable/disable` must resolve a bare name
 OR a full path-derived key (e.g. `observability/nemo_relay`) to the canonical
 registry key and write THAT — the same string PluginManager gates on — so a
 nested bundled plugin can actually be toggled.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_plugins_cmd_enable_disable_nested.py）
 """
 
 import sys  # noqa: F401

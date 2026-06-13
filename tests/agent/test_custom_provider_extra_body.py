@@ -1,3 +1,7 @@
+"""【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_custom_provider_extra_body.py）
+"""
+
 from types import SimpleNamespace
 
 from agent.agent_init import _merge_custom_provider_extra_body

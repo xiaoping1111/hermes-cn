@@ -27,6 +27,9 @@ token — so this module provides two credential shapes:
 In-memory; the dashboard is a single process so no distributed coordination
 is needed. The module exposes a small functional API rather than a class so
 tests can patch ``time.time`` cleanly.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（ws_tickets.py）
 """
 
 from __future__ import annotations

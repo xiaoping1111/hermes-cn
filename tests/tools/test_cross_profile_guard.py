@@ -9,7 +9,11 @@ This file tests that the tool surfaces:
   3. Continue to accept in-profile writes normally.
   4. skill_manage's "not found" error names other profiles where the
      skill exists.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_cross_profile_guard.py）
 """
+
 from __future__ import annotations
 
 import json

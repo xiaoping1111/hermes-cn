@@ -4,7 +4,11 @@ adapter wrappers (Systemd / Launchd / Windows).
 
 The s6 backend is added in Phase 3; its tests live alongside the
 implementation in this same file once that phase ships.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_service_manager.py）
 """
+
 from __future__ import annotations
 
 import pytest

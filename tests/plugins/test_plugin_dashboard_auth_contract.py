@@ -19,7 +19,11 @@ helpers are the carrot, this test is the stick.
 
 If you have a legitimate reason to reference the token name (e.g. a comment
 explaining why NOT to use it), add the file to ``_ALLOWED_FILES`` with a note.
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能中的认证授权——管理API密钥和OAuth流程
 """
+
 from __future__ import annotations
 
 import re

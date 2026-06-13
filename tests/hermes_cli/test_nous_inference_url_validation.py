@@ -17,6 +17,9 @@ These tests verify:
 4. The env-var override path (``NOUS_INFERENCE_BASE_URL``) is NOT
    gated by the validator — that's the documented dev/staging escape
    hatch.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_nous_inference_url_validation.py）
 """
 
 from __future__ import annotations

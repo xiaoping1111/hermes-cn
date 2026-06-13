@@ -5,6 +5,9 @@ fresh install can configure a specific provider directly (e.g.
 ``hermes memory setup honcho``) without the interactive picker — which matters
 because the per-provider ``hermes <provider>`` subcommand is only registered
 once that provider is active.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的安装设置——首次使用引导和配置向导
 """
 
 from types import SimpleNamespace

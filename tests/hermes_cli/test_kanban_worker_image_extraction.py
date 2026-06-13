@@ -11,7 +11,11 @@ DB during startup. These tests cover the round-trip:
 
   task body  →  kanban_db.get_task  →  extract_image_refs  →
   build_native_content_parts  →  multimodal user turn
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的看板管理——项目任务的可视化追踪与分解
 """
+
 from __future__ import annotations
 
 import base64

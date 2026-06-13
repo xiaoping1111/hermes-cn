@@ -11,6 +11,9 @@ Covers:
 - ABC contract: synthesize() must be implemented
 - ABC contract: stream() raises NotImplementedError by default
 - resolve_output_format helper coerces invalid input
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等中的语音合成——将文本转为语音输出
 """
 
 from __future__ import annotations

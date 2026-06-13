@@ -3,6 +3,9 @@
 The store is process-local and threading-safe. Tests run with xdist so
 each worker has its own module instance — no cross-worker bleed — but we
 call ``_reset_for_tests`` between tests to keep things deterministic.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的认证授权——管理API密钥和OAuth流程
 """
 
 from __future__ import annotations

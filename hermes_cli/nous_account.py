@@ -1,4 +1,8 @@
-"""Normalized Nous Portal account entitlement helpers."""
+"""Normalized Nous Portal account entitlement helpers.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（nous_account.py）
+"""
 
 from __future__ import annotations
 

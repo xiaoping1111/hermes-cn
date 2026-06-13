@@ -5,7 +5,11 @@ HERMES_DEV_CREDITS_FIXTURE) so depletion AND the 90% grant warning fire immediat
 at session open, not only after the first inference header. These tests assert the
 notice policy fires correctly for a seed-shaped CreditsState with the warn90 latch
 primed the way conversation_loop does it.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_credits_cold_start.py）
 """
+
 import time
 
 from agent.credits_tracker import CreditsState, evaluate_credits_notices

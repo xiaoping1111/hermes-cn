@@ -30,6 +30,9 @@ invariants):
   * Backward compatible by construction.  The gateway adapts its existing
     callbacks into these events at the boundary; adapters that don't opt into
     event-native rendering get identical behavior via the base-class default.
+
+【产品经理理解要点】
+消息网关——连接各种即时通讯平台（Telegram/Discord/微信等）到AI代理（stream_events.py）
 """
 
 from __future__ import annotations

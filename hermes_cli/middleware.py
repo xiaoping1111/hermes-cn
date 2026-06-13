@@ -3,6 +3,9 @@
 Observer hooks report what happened. Middleware can change what happens by
 rewriting a request or wrapping the actual execution callback. Keep the small
 contract helpers here so agent-loop call sites and plugins share one vocabulary.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（middleware.py）
 """
 
 from __future__ import annotations

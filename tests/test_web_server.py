@@ -2,6 +2,9 @@
 
 The server now uses uvicorn.Server directly (not uvicorn.run) so we stub
 Config + Server + asyncio.run to capture kwargs without starting an event loop.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_web_server.py）
 """
 
 import asyncio

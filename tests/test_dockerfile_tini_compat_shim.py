@@ -4,6 +4,9 @@ for orchestration templates that still reference /usr/bin/tini.
 This is a documentation-as-test guard: removing the shim is a real
 choice, but it should be done deliberately (e.g. once Hostinger's
 'Hermes WebUI' catalog updates to /init) and not by accident.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试中的Docker沙箱——在容器中安全执行代码
 """
 
 from __future__ import annotations

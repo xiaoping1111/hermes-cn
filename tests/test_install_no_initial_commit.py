@@ -9,6 +9,9 @@ abort with "You do not have the initial commit yet", failing the install at the
 
 Both installers must instead treat a commit-less checkout as broken and
 re-clone fresh.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_install_no_initial_commit.py）
 """
 
 from __future__ import annotations

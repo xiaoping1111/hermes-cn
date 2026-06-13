@@ -10,6 +10,9 @@ presence) replace the core-file grep tests from the original PR — the
 ntfy adapter no longer modifies ``gateway/config.py``, ``gateway/run.py``,
 ``cron/scheduler.py``, ``toolsets.py``, etc.  Everything routes through
 the ``platform_registry``.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_ntfy_plugin.py）
 """
 
 from __future__ import annotations

@@ -7,6 +7,9 @@ request can't trip "cannot specify both 'thinking' and 'reasoning_effort'".
 
 This mirrors the kimi-k2 handling already shipped for the opencode-go relay
 (see ``tests/plugins/model_providers/test_opencode_go_profile.py``).
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能（test_kimi_profile.py）
 """
 
 from __future__ import annotations

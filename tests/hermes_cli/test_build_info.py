@@ -3,6 +3,9 @@
 The build SHA is written by the Dockerfile's ``HERMES_GIT_SHA`` build-arg
 into ``<project_root>/.hermes_build_sha``.  These tests cover the read-side
 helper: missing file, malformed file, truncation, and error tolerance.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_build_info.py）
 """
 
 from pathlib import Path

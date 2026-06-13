@@ -16,6 +16,9 @@ unowned adapter, plus the path-level ``APIServerAdapter.disconnect()``
 behavior of also closing the ``ResponseStore``. The pre-fix
 implementation did not call ``disconnect()`` on any of these paths;
 this file would have caught the regression and now pins the fix.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_platform_reconnect_fd_leak.py）
 """
 
 from __future__ import annotations

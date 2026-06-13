@@ -5,6 +5,9 @@ Covers the boolean write_approval gate (off by default = write freely; on =
 require approval) for both subsystems, the foreground-vs-background staging
 split, pending store CRUD, and the list/approve/reject/diff/approval
 subcommand dispatch.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性中的审批机制——危险操作需用户确认后执行
 """
 
 import json

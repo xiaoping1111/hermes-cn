@@ -5,6 +5,9 @@ used to leave empty untitled rows in the session DB that clutter /resume
 and `hermes sessions list`. ``SessionDB.delete_session_if_empty`` removes
 a just-ended session row only when it never gained resumable content:
 no messages, no title, and no child sessions.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试中的会话管理——管理用户与代理的会话状态
 """
 
 import pytest

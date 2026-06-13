@@ -21,6 +21,9 @@ These tests pin down the gateway-side guard introduced for #30170:
   subagents.
 * The ``queue`` and ``steer`` configured modes still behave exactly as
   before — the guard is interrupt-only.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_subagent_protection_30170.py）
 """
 
 from __future__ import annotations

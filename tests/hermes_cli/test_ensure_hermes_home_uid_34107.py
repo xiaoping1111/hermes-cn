@@ -10,7 +10,11 @@ uid-mapped worker invocations with ``PermissionError [Errno 13]``.
 The fix is a ``_chown_to_hermes_uid`` helper that reads the env vars and
 applies chown after ``mkdir``, invoked from ``_secure_dir`` (which already
 runs after every directory creation in the home-init path).
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_ensure_hermes_home_uid_34107.py）
 """
+
 from __future__ import annotations
 
 import os

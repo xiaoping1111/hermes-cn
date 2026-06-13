@@ -21,6 +21,9 @@ named reverse-signal verbs. Two invariants guard the resume path specifically:
 
 These are content/structural assertions (no live model call) — they pin the
 mechanism that makes the stale task historical rather than active.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_resume_stale_active_task.py）
 """
 
 from agent.context_compressor import (

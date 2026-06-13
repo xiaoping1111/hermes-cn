@@ -6,6 +6,9 @@ published Docker image excludes ``.git`` and falls back to the baked SHA
 written by the Dockerfile's ``HERMES_GIT_SHA`` build-arg.
 
 These tests cover both paths plus the failure modes (no git, no baked file).
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_dump_git_commit.py）
 """
 
 from unittest.mock import MagicMock, patch

@@ -9,7 +9,11 @@ verbatim via _to_plain_data and replayed them as input → 400.
 Fix: whitelist input-permitted fields per block type at three points —
 normalize_response capture, _sanitize_replay_block (ordered-blocks replay), and
 _convert_content_part_to_anthropic (content-list replay).
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_anthropic_output_field_leak.py）
 """
+
 import sys, os
 sys.path.insert(0, os.path.expanduser("~/.hermes/hermes-agent"))
 

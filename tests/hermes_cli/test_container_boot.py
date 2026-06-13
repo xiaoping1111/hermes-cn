@@ -6,7 +6,11 @@ These tests run against a fake $HERMES_HOME under tmp_path; no real
 s6 supervision tree is required. The in-container integration test
 covering end-to-end "docker restart" survival lives in
 tests/docker/test_container_restart.py.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_container_boot.py）
 """
+
 from __future__ import annotations
 
 import json

@@ -2,6 +2,9 @@
 
 Verifies the completion status rendering (done/total ✓) on all three
 todo tool call paths: read, create (merge=False), update (merge=True).
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_display_todo_progress.py）
 """
 
 import json

@@ -1,4 +1,8 @@
-"""Tests for tools.skills_ast_audit — opt-in AST diagnostic scanner."""
+"""Tests for tools.skills_ast_audit — opt-in AST diagnostic scanner.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_skills_ast_audit.py）
+"""
 
 import sys
 

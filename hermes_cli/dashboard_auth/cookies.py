@@ -53,7 +53,11 @@ Refresh-token handling:
    deployment gets cleared. The transparent rotation flow ("expired AT +
    live RT → rotate server-side, else 401 → /login") lives in
    ``middleware._attempt_refresh``.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（cookies.py）
 """
+
 from __future__ import annotations
 
 from typing import Optional, Tuple

@@ -1,5 +1,4 @@
-"""
-Baked-in build metadata for Hermes Agent.
+"""Baked-in build metadata for Hermes Agent.
 
 Source installs report their git revision live via ``git rev-parse`` (see
 ``hermes_cli/dump.py`` and ``hermes_cli/banner.py``).  That doesn't work inside
@@ -21,6 +20,9 @@ Behaviour:
   for support triage; nothing in the CLI is allowed to crash because of it.
 - Truncates to ``short`` characters (default 8) to match the format used by
   ``git rev-parse --short=8`` throughout the codebase.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（build_info.py）
 """
 
 from __future__ import annotations

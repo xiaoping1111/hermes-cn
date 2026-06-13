@@ -2,6 +2,9 @@
 
 Kept separate from ``test_send_message_tool.py`` because that module skips
 wholesale when optional Telegram dependencies are not installed.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_send_message_react.py）
 """
 
 import json

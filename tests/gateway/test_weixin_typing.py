@@ -1,4 +1,8 @@
-"""Tests for WeChat iLink typing ticket refresh logic (issue #38085)."""
+"""Tests for WeChat iLink typing ticket refresh logic (issue #38085).
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的微信适配——对接微信公众号API
+"""
 
 import asyncio
 import time

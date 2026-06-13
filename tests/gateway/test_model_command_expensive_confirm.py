@@ -11,6 +11,9 @@ These tests pin the typed path:
 - confirm ("once") → switch applies (session override set)
 - cancel → switch not applied, current model unchanged
 - no warning (cheap model) → switch applies immediately, no prompt
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_model_command_expensive_confirm.py）
 """
 
 from types import SimpleNamespace

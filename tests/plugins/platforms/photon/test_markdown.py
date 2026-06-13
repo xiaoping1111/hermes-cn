@@ -3,7 +3,11 @@
 Markdown is on by default (the sidecar sends it via spectrum-ts'
 ``markdown()`` builder and iMessage renders it); ``PHOTON_MARKDOWN=false``
 reverts to the stripped-plain-text path.
+
+【产品经理理解要点】
+插件测试——验证各类插件的功能（test_markdown.py）
 """
+
 from __future__ import annotations
 
 from typing import Any, Dict, List, Tuple

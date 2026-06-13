@@ -16,7 +16,11 @@ before s6-rc starts user services.
 Without this module, every ``docker restart`` would silently wipe
 every per-profile gateway, even though the user's profiles still
 exist on disk.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（container_boot.py）
 """
+
 from __future__ import annotations
 
 import json

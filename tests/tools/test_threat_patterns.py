@@ -3,6 +3,9 @@
 Covers the scope split (all/context/strict), the Brainworm payload as the
 gold standard, false-positive guards on borderline patterns, and the
 helpers `scan_for_threats()` / `first_threat_message()`.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_threat_patterns.py）
 """
 
 import pytest

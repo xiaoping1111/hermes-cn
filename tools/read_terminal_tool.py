@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """Read the in-app terminal pane in the Hermes desktop GUI.
 
 The embedded terminal's buffer lives in the desktop renderer (xterm.js), so this
@@ -6,6 +7,9 @@ tool round-trips through the gateway's blocking-prompt bridge — the same one
 `clarify` uses: tui_gateway emits ``terminal.read.request``, the renderer answers
 with ``terminal.read.respond``. This module is just schema + a thin dispatcher
 over the platform-injected callback.
+
+【产品经理理解要点】
+工具系统——提供代码执行、文件操作、浏览器、搜索等能力给AI代理（read_terminal_tool.py）
 """
 
 import json

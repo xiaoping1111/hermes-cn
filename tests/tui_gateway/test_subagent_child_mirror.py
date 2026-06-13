@@ -6,6 +6,9 @@ reaches the gateway only as relayed ``subagent.*`` events on the PARENT sid
 (desktop open-in-new-window), ``_mirror_subagent_to_child`` translates those
 relayed events into native stream events on the CHILD's live sid so the window
 shows a real midstream turn instead of sitting silent until persistence.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_subagent_child_mirror.py）
 """
 
 from __future__ import annotations

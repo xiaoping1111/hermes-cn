@@ -7,7 +7,11 @@ the MCP "Test server" probe) would silently vanish for anything resolving
 get_hermes_home() inside the coroutine, most visibly OAuth token-store
 paths. _run_on_mcp_loop now wraps scheduled coroutines with the caller's
 override (mcp_tool._wrap_with_home_override).
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性中的MCP协议——对接Model Context Protocol工具标准
 """
+
 import os
 
 import pytest

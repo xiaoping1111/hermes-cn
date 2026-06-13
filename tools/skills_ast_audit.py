@@ -1,5 +1,4 @@
-"""
-AST-level deep audit for skill Python files — opt-in diagnostic, not a security gate.
+"""AST-level deep audit for skill Python files — opt-in diagnostic, not a security gate.
 
 Per SECURITY.md §2.4, Skills Guard is in-process heuristics ("useful — not
 boundaries"). This module is a separate opt-in diagnostic that flags dynamic
@@ -8,6 +7,9 @@ reviewing third-party skill code. Every pattern flagged here has legitimate
 uses; findings are hints for human review, not verdicts.
 
 CLI: ``hermes skills audit --deep``
+
+【产品经理理解要点】
+工具系统——提供代码执行、文件操作、浏览器、搜索等能力给AI代理（skills_ast_audit.py）
 """
 
 from __future__ import annotations

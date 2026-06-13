@@ -11,7 +11,11 @@ Two invariants:
    strips it — strict gateways (Fireworks, Mistral, Moonshot/Kimi,
    opencode-go) reject unknown message keys with "Extra inputs are not
    permitted", poisoning the session.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_compressed_summary_metadata.py）
 """
+
 from unittest.mock import MagicMock, patch
 
 import pytest

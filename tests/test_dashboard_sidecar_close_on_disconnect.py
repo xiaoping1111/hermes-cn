@@ -1,3 +1,7 @@
+"""【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_dashboard_sidecar_close_on_disconnect.py）
+"""
+
 import re
 from pathlib import Path
 

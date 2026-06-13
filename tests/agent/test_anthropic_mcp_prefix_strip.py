@@ -4,6 +4,9 @@ When strip_tool_prefix=True (Anthropic OAuth path), the transport must only
 strip the ``mcp_`` prefix from OAuth-injected tools, NOT from Hermes-native
 MCP server tools that are registered under their full ``mcp_<server>_<tool>``
 name in the tool registry.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等中的MCP协议——对接Model Context Protocol工具标准
 """
 
 from __future__ import annotations

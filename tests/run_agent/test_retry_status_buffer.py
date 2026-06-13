@@ -4,6 +4,9 @@ These helpers defer noisy retry chatter (rate-limit retries, fallback
 switches, compression attempts) so users only see the trace when
 everything ultimately fails.  On successful recovery the buffer is
 silently dropped.
+
+【产品经理理解要点】
+运行代理测试——验证代理端到端执行流程（test_retry_status_buffer.py）
 """
 
 from __future__ import annotations

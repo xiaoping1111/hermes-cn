@@ -1,5 +1,4 @@
-"""
-Hermes Desktop (Chat GUI) uninstaller.
+"""Hermes Desktop (Chat GUI) uninstaller.
 
 The desktop GUI ships in two shapes and this module knows how to find and
 remove the artifacts of both, on Linux, macOS, and Windows, WITHOUT touching
@@ -33,6 +32,9 @@ Chromium cache — pure GUI state, safe to remove on a GUI uninstall.
 The functions here are deliberately import-light and side-effect-free at
 import time so the Electron main process can shell out to
 ``hermes uninstall --gui`` (and friends) without paying for the full CLI.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（gui_uninstall.py）
 """
 
 import os

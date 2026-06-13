@@ -47,6 +47,9 @@ Activation (config ``agent.coding_context``):
     hidden). Explicit opt-in for a lean schema.
   * ``on`` — force the posture anywhere (incl. non-workspaces). Prompt-only.
   * ``off`` — disable entirely.
+
+【产品经理理解要点】
+AI代理核心——管理对话循环、模型调用、工具执行和上下文压缩（coding_context.py）
 """
 
 from __future__ import annotations

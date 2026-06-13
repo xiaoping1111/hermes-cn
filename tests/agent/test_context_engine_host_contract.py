@@ -22,6 +22,9 @@ engine plugins (e.g. hermes-lcm) rely on:
 5. The repo-shipped ``_EngineCollector`` honors ``ctx.register_command``
    from a plugin engine's ``register(ctx)`` entry point and routes it
    to the global plugin command registry.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等中的上下文引擎——管理和优化代理的上下文窗口
 """
 
 from __future__ import annotations

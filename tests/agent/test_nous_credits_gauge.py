@@ -3,7 +3,11 @@
 Covers the monthly_credits denominator path added when the portal /api/oauth/account
 subscription block began carrying `monthly_credits`. Magnitudes-only fallback, clamp,
 and the non-finite / rollover guards (surfaced by adversarial review) are all asserted.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_nous_credits_gauge.py）
 """
+
 from hermes_cli.nous_account import (
     NousPortalAccountInfo,
     NousPaidServiceAccessInfo,

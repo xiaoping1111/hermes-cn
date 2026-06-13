@@ -10,6 +10,9 @@ calls resolve unchanged via the MRO. Neutral dependencies are imported at module
 top level; ``cli.py``-internal helpers/constants are imported lazily inside each
 method (``from cli import ...`` resolves at call time, when ``cli`` is fully
 loaded) so this module never imports ``cli`` at import time -> no import cycle.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口中的安装设置——首次使用引导和配置向导
 """
 
 from __future__ import annotations

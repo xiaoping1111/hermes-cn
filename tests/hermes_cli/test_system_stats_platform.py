@@ -1,3 +1,7 @@
+"""【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_system_stats_platform.py）
+"""
+
 from hermes_cli.web_server import _display_system_platform
 
 

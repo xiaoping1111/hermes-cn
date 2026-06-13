@@ -1,5 +1,4 @@
-"""
-WhatsApp Cloud API adapter — official Meta WhatsApp Business Platform.
+"""WhatsApp Cloud API adapter — official Meta WhatsApp Business Platform.
 
 This adapter is a *complement* to ``whatsapp.py`` (the Baileys bridge), not
 a replacement. The two are independent:
@@ -37,6 +36,9 @@ Optional / Phase-3+:
 - WHATSAPP_CLOUD_WEBHOOK_PORT     (default 8090)
 - WHATSAPP_CLOUD_WEBHOOK_PATH     (default /whatsapp/webhook)
 - WHATSAPP_CLOUD_API_VERSION      (default v20.0)
+
+【产品经理理解要点】
+平台适配器——每个文件对接一个即时通讯平台的API中的WhatsApp适配——对接WhatsApp Cloud API
 """
 
 from __future__ import annotations

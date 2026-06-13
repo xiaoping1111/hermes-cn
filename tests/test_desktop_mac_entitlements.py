@@ -16,6 +16,9 @@ lived only in the main plist, so macOS' TCC layer refused the microphone with::
 
 and never showed the permission prompt. These tests pin that every device
 entitlement granted to the main app is also granted to the inherited helpers.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_desktop_mac_entitlements.py）
 """
 
 from __future__ import annotations

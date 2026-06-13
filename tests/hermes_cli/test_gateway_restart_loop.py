@@ -4,6 +4,9 @@ Covers:
 - Defense 1: gateway stop/restart refuse when _HERMES_GATEWAY=1
 - Defense 2: cron create rejects prompts containing gateway lifecycle commands
 - _contains_gateway_lifecycle_command pattern matching
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_gateway_restart_loop.py）
 """
 
 import os

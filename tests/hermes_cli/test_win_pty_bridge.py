@@ -10,6 +10,9 @@ The bridge is the ConPTY backend behind the dashboard ``/chat`` tab — see
 ``hermes_cli/web_server.py`` ``/api/pty`` handler — so these tests are the
 unit-level half of the integration check that the dashboard chat pane is
 actually live on native Windows.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_win_pty_bridge.py）
 """
 
 from __future__ import annotations

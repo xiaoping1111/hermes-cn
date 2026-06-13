@@ -1,3 +1,7 @@
+"""【产品经理理解要点】
+命令行测试——验证CLI命令和交互行为中的会话管理——管理用户与代理的会话状态
+"""
+
 from types import SimpleNamespace
 
 import pytest

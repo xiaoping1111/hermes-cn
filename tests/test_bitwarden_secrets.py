@@ -4,6 +4,9 @@ We never hit GitHub or Bitwarden in tests — subprocess + urllib are
 mocked so the suite stays fast and offline-safe.  The "live" pull and
 binary download are exercised manually by `hermes secrets bitwarden
 setup` outside of pytest.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_bitwarden_secrets.py）
 """
 
 from __future__ import annotations

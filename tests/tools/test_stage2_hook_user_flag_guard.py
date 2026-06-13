@@ -19,7 +19,11 @@ unaffected.
 
 Extraction + stubbed-shell-run mirrors
 tests/tools/test_stage2_hook_toplevel_chown.py.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_stage2_hook_user_flag_guard.py）
 """
+
 from __future__ import annotations
 
 import re

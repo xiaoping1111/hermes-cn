@@ -4,6 +4,9 @@ Regression for #34536: the POSIX installer drops node/npm/npx symlinks in
 ~/.local/bin pointing into $HERMES_HOME/node and prepends ~/.local/bin to
 PATH, shadowing an existing nvm. Uninstall must remove those symlinks, but
 only when they still resolve into the Hermes-managed node dir.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_uninstall_node_symlinks.py）
 """
 
 import os

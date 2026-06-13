@@ -3,7 +3,11 @@
 Unraid commonly runs appdata as nobody:users (99:100). The stage2 hook must
 accept those non-root numeric IDs and keep legacy/new pairing stores writable
 after targeted ownership reconciliation.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_stage2_hook_unraid_uid.py）
 """
+
 from __future__ import annotations
 
 import os

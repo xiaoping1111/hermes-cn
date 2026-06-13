@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """Check that subprocess calls in TUI-context code specify stdin=.
 
 When Hermes runs in TUI mode, the gateway child process communicates with
@@ -20,6 +21,9 @@ Usage:
 
 With --fix, prints the commands to add stdin=subprocess.DEVNULL to each
 violation (does not modify files).
+
+【产品经理理解要点】
+构建脚本——项目构建、发布、审计等辅助工具（check_subprocess_stdin.py）
 """
 
 from __future__ import annotations

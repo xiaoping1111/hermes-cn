@@ -5,6 +5,9 @@ The mixer (plugins/platforms/discord/voice_mixer.py) is pure-PCM and has no
 discord.py dependency, so its core is tested directly.  The adapter
 integration (install on join, play routing, ack) is tested with the standard
 ``object.__new__(DiscordAdapter)`` helper used elsewhere in the voice suite.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的Discord适配——对接Discord Bot API
 """
 
 import os

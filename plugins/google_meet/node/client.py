@@ -1,10 +1,8 @@
 """网关端远程节点RPC客户端
 
 【产品经理理解要点】
-网关侧的RPC客户端，每次调用打开一个短生命周期的WebSocket到远程节点，发送请求后读取响应。简洁无状态设计。"""
-
-from __future__ import annotations
-plugin load doesn't require it.
+网关侧的RPC客户端，每次调用打开一个短生命周期的WebSocket到远程节点，发送请求后读取响应。简洁无状态设计。
+``websockets`` is an optional dep so plugin load doesn't require it.
 """
 
 from __future__ import annotations

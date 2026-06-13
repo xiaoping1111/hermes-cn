@@ -6,6 +6,9 @@ a file starts.  The ``web_registry_populated`` fixture registers all bundled
 providers before each test and resets the registry afterwards — tests that
 depend on the registry being populated should use it explicitly or via
 ``@pytest.mark.usefixtures("web_registry_populated")``.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（conftest.py）
 """
 
 from unittest.mock import patch

@@ -5,6 +5,9 @@ user's critical path so the first ``/model`` open in a session is fast instead
 of blocking ~1-2s on serial /v1/models fetches. These pin the two contracts
 that matter: it runs the warm path exactly once per process (no thread leak),
 and it delegates to ``list_authenticated_providers`` to do the warming.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_picker_prewarm.py）
 """
 
 from __future__ import annotations

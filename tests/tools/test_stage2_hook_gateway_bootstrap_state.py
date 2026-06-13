@@ -19,7 +19,11 @@ This mirrors the existing HERMES_AUTH_JSON_BOOTSTRAP env-seed pattern: it seeds
 the SAME gateway_state.json the reconciler already consults, guarded by
 ``[ ! -f ]`` so persisted runtime state always wins on subsequent boots (a
 deliberately-stopped gateway must stay stopped across restarts).
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_stage2_hook_gateway_bootstrap_state.py）
 """
+
 from __future__ import annotations
 
 import json

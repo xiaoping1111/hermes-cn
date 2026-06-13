@@ -12,7 +12,11 @@ The routes:
   POST /auth/logout        → clears cookies, best-effort revoke
   GET  /api/auth/providers → list registered providers (login bootstrap)
   GET  /api/auth/me        → current Session as JSON (auth-required)
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（routes.py）
 """
+
 from __future__ import annotations
 
 import logging

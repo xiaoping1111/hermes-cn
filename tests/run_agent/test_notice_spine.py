@@ -6,7 +6,11 @@ Covers:
   B. Constructor / init_agent signature threading.
   C. TUI _agent_cbs notice binding — mirrors the status_callback tests already
      in tests/test_tui_gateway_server.py.
+
+【产品经理理解要点】
+运行代理测试——验证代理端到端执行流程（test_notice_spine.py）
 """
+
 from __future__ import annotations
 
 import inspect

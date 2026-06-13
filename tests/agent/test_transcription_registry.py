@@ -10,6 +10,9 @@ Covers:
 - ABC contract: default implementations work
 - ABC contract: transcribe() must be implemented
 - Sync invariant: registry built-ins match tools/transcription_tools.py
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等（test_transcription_registry.py）
 """
 
 from __future__ import annotations

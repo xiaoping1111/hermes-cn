@@ -1,4 +1,8 @@
-"""Regression tests for CLI prefill config key compatibility."""
+"""Regression tests for CLI prefill config key compatibility.
+
+【产品经理理解要点】
+命令行测试——验证CLI命令和交互行为中的配置管理——加载和验证YAML/ENV配置文件
+"""
 
 from __future__ import annotations
 

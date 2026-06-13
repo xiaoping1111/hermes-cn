@@ -16,6 +16,9 @@ independent code paths.
 This module deliberately has no platform knowledge and no asyncio: it is a thin
 synchronous router callable from the agent's worker thread, exactly like the
 callbacks it replaces.
+
+【产品经理理解要点】
+消息网关——连接各种即时通讯平台（Telegram/Discord/微信等）到AI代理（stream_dispatch.py）
 """
 
 from __future__ import annotations

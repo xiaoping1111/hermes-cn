@@ -19,6 +19,9 @@ These tests verify:
    running as root deliberately.
 5. The main CMD path (``docker run <image> …``) is unaffected by the
    PATH-shim ordering — no recursion, no behavior change.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试中的Docker沙箱——在容器中安全执行代码
 """
 
 from __future__ import annotations

@@ -1,4 +1,8 @@
-"""Helpers for the temporary psutil-on-Android compatibility installer."""
+"""Helpers for the temporary psutil-on-Android compatibility installer.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（psutil_android.py）
+"""
 
 from __future__ import annotations
 

@@ -14,6 +14,9 @@ These tests verify:
 3. The raw stdin fallback is kept ONLY for the safe cases: no running app, and
    (on win32, off-thread) a scheduling failure degrades to a clean cancel.
 4. Empty choices returns None.
+
+【产品经理理解要点】
+命令行测试——验证CLI命令和交互行为（test_slash_confirm_windows.py）
 """
 
 import sys

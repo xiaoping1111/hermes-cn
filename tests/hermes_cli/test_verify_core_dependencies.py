@@ -12,6 +12,9 @@ The verification step:
      false-positive (e.g. ``ptyprocess ; sys_platform != 'win32'`` on Windows).
   3. Probes ``importlib.metadata.version()`` in the venv interpreter.
   4. Reinstalls with --reinstall, then per-package, if anything's missing.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_verify_core_dependencies.py）
 """
 
 from __future__ import annotations

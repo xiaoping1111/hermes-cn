@@ -11,6 +11,9 @@ Pins the contract:
 - conversation_loop's length-continuation prompt distinguishes a real
   output-length truncation from a partial-stream-stub network error
   via response.id.
+
+【产品经理理解要点】
+运行代理测试——验证代理端到端执行流程（test_partial_stream_finish_reason.py）
 """
 
 from __future__ import annotations

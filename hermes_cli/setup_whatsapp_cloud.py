@@ -1,5 +1,4 @@
-"""
-Interactive setup wizard for the WhatsApp Cloud API adapter.
+"""Interactive setup wizard for the WhatsApp Cloud API adapter.
 
 Entry point: ``hermes whatsapp-cloud`` (dispatched from
 ``cmd_whatsapp_cloud`` in ``hermes_cli/main.py``).
@@ -30,6 +29,9 @@ processes the user starts AFTER this wizard exits, so any in-wizard
 probe would fail by design. Instead the final SETUP COMPLETE block
 prints the exact curl command the user can run from a third terminal
 to verify the loop end-to-end once everything's running.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口中的WhatsApp适配——对接WhatsApp Cloud API
 """
 
 from __future__ import annotations

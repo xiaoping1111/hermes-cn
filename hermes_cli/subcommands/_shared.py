@@ -5,6 +5,9 @@ into a neutral module so both ``main.py`` and every
 ``hermes_cli/subcommands/<group>.py`` builder can import them without an
 import cycle. ``main.py`` re-exports them for backwards compatibility, so
 existing references keep working.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口（_shared.py）
 """
 
 from __future__ import annotations

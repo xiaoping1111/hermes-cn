@@ -17,7 +17,11 @@ These tests verify the three load-bearing properties of that redirect:
 
 Every ``docker exec`` runs as ``hermes`` per the conftest module
 docstring; see ``tests/docker/conftest.py`` for rationale.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试（test_gateway_run_supervised.py）
 """
+
 from __future__ import annotations
 
 import subprocess

@@ -7,6 +7,9 @@ production probe must run on its own httpx client outside the MCP SDK's anyio
 task group, and a faithful test must exercise that actual method so the
 content-type allow-list, HEAD->GET fallback, and best-effort pass-through are
 all covered as shipped.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性中的MCP协议——对接Model Context Protocol工具标准
 """
 
 from __future__ import annotations

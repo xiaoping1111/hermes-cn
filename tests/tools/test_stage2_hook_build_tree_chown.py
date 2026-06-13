@@ -17,7 +17,11 @@ The fix probes the build trees directly (stat .venv) rather than $HERMES_HOME.
 
 The extraction + stubbed-shell-run approach mirrors
 tests/tools/test_stage2_hook_toplevel_chown.py.
+
+【产品经理理解要点】
+工具测试——验证各种工具功能的正确性（test_stage2_hook_build_tree_chown.py）
 """
+
 from __future__ import annotations
 
 import re

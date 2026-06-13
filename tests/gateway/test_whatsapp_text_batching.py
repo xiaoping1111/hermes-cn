@@ -6,6 +6,9 @@ invocation, wasting tokens and flooding the user with reply fragments.  This
 mirrors the Telegram/WeCom/Feishu pattern.
 
 Batch delays are read from ``config.extra`` (config.yaml), not env vars.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理中的WhatsApp适配——对接WhatsApp Cloud API
 """
 
 import asyncio

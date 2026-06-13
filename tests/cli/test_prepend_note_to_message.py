@@ -3,6 +3,9 @@
 Regression coverage for the TypeError raised when a queued /model or
 /reload-skills note was prepended to a multimodal (image-attached) message:
 ``can only concatenate str (not "list") to str``.
+
+【产品经理理解要点】
+命令行测试——验证CLI命令和交互行为（test_prepend_note_to_message.py）
 """
 
 from cli import _prepend_note_to_message

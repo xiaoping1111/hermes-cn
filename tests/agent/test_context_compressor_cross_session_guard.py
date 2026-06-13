@@ -10,6 +10,9 @@ the summarizer prompt — contaminating the live session's context.
 
 Fix: compress() guards against this by clearing _previous_summary when no
 handoff summary is found in the current messages.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等中的上下文压缩——在对话过长时压缩历史消息
 """
 
 import sys

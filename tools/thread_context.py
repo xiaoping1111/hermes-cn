@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """Propagate agent-turn context into worker threads that dispatch Hermes tools.
 
 A bare ``threading.Thread`` / ``ThreadPoolExecutor`` worker starts with an
@@ -29,6 +30,9 @@ returned callable as the worker's target::
 Approval/sudo callbacks are installed for the worker's lifetime and **always
 cleared on exit**, so a recycled thread never holds a stale reference to a
 disposed CLI instance.
+
+【产品经理理解要点】
+工具系统——提供代码执行、文件操作、浏览器、搜索等能力给AI代理（thread_context.py）
 """
 
 from __future__ import annotations

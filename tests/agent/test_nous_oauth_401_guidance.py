@@ -11,7 +11,11 @@ that's OpenRouter syntax, not a Nous catalog name. The previous guidance
 branch only covered ``openai-codex`` and ``xai-oauth``; ``nous`` fell through
 to a generic "Your API key was rejected... run hermes setup" message, which is
 the wrong advice for a pure-OAuth provider.
+
+【产品经理理解要点】
+代理核心测试——验证对话引擎、模型适配、上下文压缩等中的认证授权——管理API密钥和OAuth流程
 """
+
 from __future__ import annotations
 
 import inspect

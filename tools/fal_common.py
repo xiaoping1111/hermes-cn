@@ -22,6 +22,9 @@ caches here would silently defeat ``monkeypatch.setattr(image_tool,
 "_managed_fal_client", None)`` because the lookups would go against
 ``fal_common``'s namespace instead. See the per-rule walkthrough at
 issue #26241 for details.
+
+【产品经理理解要点】
+工具系统——提供代码执行、文件操作、浏览器、搜索等能力给AI代理（fal_common.py）
 """
 
 from __future__ import annotations

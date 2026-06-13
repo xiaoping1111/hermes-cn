@@ -1,4 +1,8 @@
-"""Regression tests for Docker HOME overrides under s6/with-contenv."""
+"""Regression tests for Docker HOME overrides under s6/with-contenv.
+
+【产品经理理解要点】
+测试用例——确保各模块功能正确的自动化测试中的Docker沙箱——在容器中安全执行代码
+"""
 
 from pathlib import Path
 

@@ -2,7 +2,11 @@
 
 When has_retried_429 is lost (user cancels between 429s), the pool should
 still rotate if the current credential is already marked exhausted.
+
+【产品经理理解要点】
+运行代理测试——验证代理端到端执行流程中的凭证池——管理多个API密钥的轮转和限额
 """
+
 from unittest.mock import MagicMock, patch
 
 from agent.credential_pool import PooledCredential, STATUS_EXHAUSTED

@@ -3,6 +3,9 @@
 Uses Telegram's Managed Bots feature to create a user-owned child bot without
 manual BotFather token copy-paste. Hermes talks only to the Nous onboarding
 service; the raw Telegram token is saved locally after one-time retrieval.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口中的Telegram适配——对接Telegram Bot API
 """
 
 from __future__ import annotations

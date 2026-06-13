@@ -3,6 +3,9 @@
 feeds the desktop GUI model picker (and onboarding) so it can show $/Mtok
 columns + Free/Pro badges and gate paid models on free Nous accounts, the
 same way the `hermes model` CLI picker does.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_inventory_pricing.py）
 """
 
 import hermes_cli.inventory as inv

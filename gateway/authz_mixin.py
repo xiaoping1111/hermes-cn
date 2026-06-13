@@ -13,6 +13,9 @@ that uses it (``from gateway.run import logger`` resolves at call time, when
 ``gateway.run`` is fully loaded) so this module never imports ``gateway.run`` at
 import time -> no import cycle. The lazy import preserves the exact logger name
 (``"gateway.run"``) so log records are unchanged.
+
+【产品经理理解要点】
+消息网关——连接各种即时通讯平台（Telegram/Discord/微信等）到AI代理中的认证授权——管理API密钥和OAuth流程
 """
 
 from __future__ import annotations

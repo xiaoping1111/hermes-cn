@@ -3,7 +3,11 @@
 Profile-aware location: ``$HERMES_HOME/logs/dashboard-auth.log``.
 Format: one JSON object per line. Token-like kwargs are dropped before
 serialisation so we never leak refresh tokens or JWTs to disk.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块中的认证授权——管理API密钥和OAuth流程
 """
+
 from __future__ import annotations
 
 import json

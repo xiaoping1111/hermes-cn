@@ -3,7 +3,11 @@
 Covers render_notice_line — the pure helper that turns an AgentNotice into the
 single plaintext line pushed standalone over a messaging platform (no status
 bar, unlike the TUI). Behavior contracts, not data snapshots.
+
+【产品经理理解要点】
+网关测试——验证各平台消息收发和会话管理（test_notice_rendering.py）
 """
+
 from agent.credits_tracker import AgentNotice
 from gateway.run import render_notice_line
 

@@ -9,6 +9,9 @@ The ACP/editor ``session_id`` stays the stable public handle. When context
 compression rotates the internal Hermes head, ``build_session_provenance`` lets
 a client see the previous/current internal ids and the lineage root without
 parsing status text, guessing from token drops, or reading ``state.db``.
+
+【产品经理理解要点】
+ACP适配器——对接Agent Communication Protocol标准协议（provenance.py）
 """
 
 from __future__ import annotations

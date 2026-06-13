@@ -1,4 +1,8 @@
-"""Tests for ``hermes gui`` desktop launcher wiring."""
+"""Tests for ``hermes gui`` desktop launcher wiring.
+
+【产品经理理解要点】
+CLI模块测试——验证命令行各子模块（test_gui_command.py）
+"""
 
 from __future__ import annotations
 

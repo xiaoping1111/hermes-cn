@@ -21,6 +21,9 @@ a trivial flag-and-continue around the existing pattern used for
 ``image_too_large`` recovery.
 
 See: https://github.com/NousResearch/hermes-agent/issues/27344
+
+【产品经理理解要点】
+运行代理测试——验证代理端到端执行流程中的Modal沙箱——在Modal云端执行代码
 """
 
 from __future__ import annotations

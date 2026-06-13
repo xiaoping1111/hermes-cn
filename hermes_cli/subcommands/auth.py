@@ -2,6 +2,9 @@
 
 Extracted verbatim from ``hermes_cli/main.py:main()`` (god-file Phase 2).
 Handler injected to avoid importing ``main``.
+
+【产品经理理解要点】
+命令行界面——用户通过终端与Hermes交互的入口中的认证授权——管理API密钥和OAuth流程
 """
 
 from __future__ import annotations

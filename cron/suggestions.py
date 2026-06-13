@@ -23,6 +23,9 @@ re-offered after the user says no.
 
 Storage mirrors ``cron/jobs.py``: ``~/.hermes/cron/suggestions.json``, atomic
 writes, an in-process lock, and 0600 perms.
+
+【产品经理理解要点】
+定时任务——支持定时发送消息、执行脚本的调度系统（suggestions.py）
 """
 
 from __future__ import annotations

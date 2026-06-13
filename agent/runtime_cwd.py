@@ -8,6 +8,9 @@ tool surfaces, and context-file discovery agreeing on where the agent lives.
 
 Multi-session gateways can pin a logical cwd via the `_SESSION_CWD`
 contextvar; CLI/cron fall through to `TERMINAL_CWD`/launch cwd.
+
+【产品经理理解要点】
+AI代理核心——管理对话循环、模型调用、工具执行和上下文压缩（runtime_cwd.py）
 """
 
 import os
