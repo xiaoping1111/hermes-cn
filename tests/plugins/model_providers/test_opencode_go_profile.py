@@ -1,4 +1,14 @@
-"""Unit tests for OpenCode Go reasoning-control wiring."""
+"""插件系统测试 - opencode go profile
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的opencode go profile验证。
+- 验证功能：opencode go profile功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：opencode go profile功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for OpenCode Go reasoning-control wiring.
+"""
 
 from __future__ import annotations
 

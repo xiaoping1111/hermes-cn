@@ -1,4 +1,12 @@
-"""Microsoft Foundry provider profile.
+"""Azure AI Foundry 模型提供者
+
+【产品经理理解要点】
+对接 Azure AI Foundry 托管模型服务。
+- Azure 托管模型接入
+- Azure 认证和端点配置
+
+─────────────────────────────────────────────────────────────────
+Microsoft Foundry provider profile.
 
 Azure Foundry exposes an OpenAI-compatible endpoint; users supply their own
 base URL at setup since endpoints are per-resource.

@@ -1,11 +1,19 @@
-"""Smoke tests for the batch-extracted subcommand parser builders.
+"""CLIsubcommands batch测试
+
+【产品经理理解要点】
+CLIsubcommands batch功能测试。
+- 验证功能：命令行subcommands batch功能
+- 关键场景：配置、执行、验证
+- 业务影响：subcommands batch命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Smoke tests for the batch-extracted subcommand parser builders.
 
 Each ``build_<group>_parser`` should attach its subcommand to a subparsers
 group and wire ``func`` to the injected handler. These are intentionally
 light — the byte-identical ``--help`` verification done at extraction time is
 the real behavioral guarantee; this just guards against a module failing to
-import or a builder raising.
-"""
+import or a builder raising."""
 
 from __future__ import annotations
 

@@ -1,5 +1,16 @@
 """OpenAI-compatible facade that talks to Google's Cloud Code Assist backend.
 
+Gemini Cloud Code 适配器
+
+【产品经理理解要点】
+将 Google Cloud Code Assist 后端包装为 OpenAI 兼容接口，让 Hermes 透明使用 Gemini。
+- 核心职责：OpenAI 消息-Gemini Content 转换、SSE 流式响应转换、OAuth PKCE 认证
+- 关键业务概念：Cloud Code Assist API、项目封装、流式 SSE、双向往返翻译
+- 在系统中的位置：Gemini 供应商的传输适配层
+
+─────────────────────────────────────────────────────────────────
+
+
 This adapter lets Hermes use the ``google-gemini-cli`` provider as if it were
 a standard OpenAI-shaped chat completion endpoint, while the underlying HTTP
 traffic goes to ``cloudcode-pa.googleapis.com/v1internal:{generateContent,

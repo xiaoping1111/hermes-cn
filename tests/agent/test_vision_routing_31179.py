@@ -1,4 +1,13 @@
-"""Regression tests for issue #31179.
+"""Agent核心测试 - vision routing 31179
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的vision routing 31179验证。
+- 验证功能：vision routing 31179功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：vision routing 31179功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for issue #31179.
 
 Before the fix:
   - ``auxiliary.vision.provider: openai`` silently failed to resolve because

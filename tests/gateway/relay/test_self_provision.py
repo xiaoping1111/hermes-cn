@@ -1,4 +1,13 @@
-"""Unit tests for boot-time relay self-provisioning.
+"""自供给
+
+【产品经理理解要点】
+中继自供给。
+- 验证功能：中继节点的自动供给
+- 关键场景：节点发现、配置、注册
+- 业务影响：中继节点无法自注册
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for boot-time relay self-provisioning.
 
 Covers gateway.relay.self_provision_relay() + the relay_endpoint() /
 relay_route_keys() config readers. The connector HTTP POST is monkeypatched
@@ -7,8 +16,7 @@ TRIGGER logic, in-process env wiring, and fail-soft boot behaviour.
 
 The trigger is deliberately NOT is_managed() (that means NixOS/package-manager-
 managed, which is False on a NAS-hosted Fly agent). The real gate is
-"relay_url set + no pinned secret + a resolvable NAS token".
-"""
+"relay_url set + no pinned secret + a resolvable NAS token"."""
 
 from __future__ import annotations
 

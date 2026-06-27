@@ -1,3 +1,14 @@
+
+"""记忆配置向导
+
+【产品经理理解要点】
+hermes memory setup/status，交互式配置记忆提供商插件。
+- 自动发现已安装的记忆提供商
+- curses交互UI选择提供商
+- 按提供商的配置Schema逐步引导填写
+
+────────────────────────────────────────────────────────────────"""
+
 """hermes memory setup|status — configure memory provider plugins.
 
 Auto-detects installed memory providers via the plugin system.

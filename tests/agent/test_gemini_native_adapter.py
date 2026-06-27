@@ -1,4 +1,14 @@
-"""Tests for the native Google AI Studio Gemini adapter."""
+"""Agent核心测试 - gemini native adapter
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的gemini native adapter验证。
+- 验证功能：gemini native adapter功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：gemini native adapter功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the native Google AI Studio Gemini adapter.
+"""
 
 from __future__ import annotations
 

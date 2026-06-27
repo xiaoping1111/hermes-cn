@@ -1,5 +1,16 @@
 """Codex API runtime — App Server and Responses-API streaming paths.
 
+Codex 运行时
+
+【产品经理理解要点】
+驱动 OpenAI Codex(App Server / Responses API)的流式对话路径。
+- 核心职责：Codex App Server 子进程驱动、Responses API 流式调用、错误回退
+- 关键业务概念：codex_app_server 模式、codex_responses 模式、流式 SSE
+- 在系统中的位置：Codex 供应商的传输适配层
+
+─────────────────────────────────────────────────────────────────
+
+
 Extracted from :class:`AIAgent` to keep the agent loop file focused.
 Each function takes the parent ``AIAgent`` as its first argument
 (``agent``).  AIAgent keeps thin forwarder methods for backward

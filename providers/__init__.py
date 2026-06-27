@@ -1,4 +1,13 @@
-"""Provider module registry.
+"""模型提供方注册中心
+
+【产品经理理解要点】
+管理和发现所有模型推理提供方（如 OpenRouter、NVIDIA、Kimi 等），支持官方内置和用户自定义两种来源。
+- 核心职责：懒加载发现提供方插件，维护名称→配置的注册表，支持按名称或别名查找
+- 关键概念：提供方可来自内置插件目录（plugins/model-providers/）或用户自定义目录（~/.hermes/plugins/），用户插件优先
+- 系统定位：提供方管理层，Agent 选择模型时 → 查找提供方配置 → 构建对应的 API 客户端
+
+─────────────────────────────────────────────────────────────────────────
+Provider module registry.
 
 Provider profiles can live in two places:
 

@@ -1,11 +1,18 @@
-"""
+"""TTS媒体路由
+
+【产品经理理解要点】
+TTS媒体路由。
+- 验证功能：文本转语音的媒体文件路由
+- 关键场景：TTS生成、媒体存储、路由分发
+- 业务影响：语音消息无法正确路由
+
+─────────────────────────────────────────────────────────────────────────
 Tests for cross-platform audio/voice media routing.
 
 These tests pin the expected delivery path for audio media files across
 Telegram (where Bot-API sendAudio only accepts MP3/M4A and .ogg/.opus
 only renders as a voice bubble when explicitly flagged) and via
-``GatewayRunner._deliver_media_from_response``.
-"""
+``GatewayRunner._deliver_media_from_response``."""
 
 from types import SimpleNamespace
 from unittest.mock import AsyncMock

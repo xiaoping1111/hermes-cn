@@ -1,4 +1,14 @@
-"""Tirith pre-exec security scanning wrapper.
+"""Tirith安全扫描器
+
+【产品经理理解要点】
+在命令执行前进行内容级安全扫描，检测终端注入、同形字URL等威胁。
+- 核心职责：调用Tirith二进制扫描待执行命令，判定是否允许（0）、阻止（1）或警告（2）
+- 安全价值：防止恶意提示词或技能通过终端注入、管道解释器等方式危害系统
+- 自动安装：Tirith不在PATH上时自动从GitHub下载，验证SHA-256校验和，有cosign时还验证供应链签名
+- 在系统中的位置：位于命令执行和安全策略之间，是纵深防御的一层
+
+─────────────────────────────────────────────────────────────────
+Tirith pre-exec security scanning wrapper.
 
 Runs the tirith binary as a subprocess to scan commands for content-level
 threats (homograph URLs, pipe-to-interpreter, terminal injection, etc.).

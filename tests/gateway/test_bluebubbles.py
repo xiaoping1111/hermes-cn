@@ -1,4 +1,13 @@
-"""Tests for the BlueBubbles iMessage gateway adapter."""
+"""BlueBubbles
+
+【产品经理理解要点】
+BlueBubbles适配器。
+- 验证功能：BlueBubbles(iMessage)平台适配
+- 关键场景：消息收发、附件处理、桥接
+- 业务影响：iMessage功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the BlueBubbles iMessage gateway adapter."""
 import asyncio
 import json
 

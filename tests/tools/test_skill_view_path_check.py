@@ -1,4 +1,13 @@
-"""Tests for the skill_view path boundary check.
+"""工具系统测试 - skill view path check
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的skill view path check验证。
+- 验证功能：skill view path check功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：skill view path check功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the skill_view path boundary check.
 
 Regression test: the original check used a hardcoded "/" separator which
 fails on Windows where Path.resolve() returns backslash-separated paths.

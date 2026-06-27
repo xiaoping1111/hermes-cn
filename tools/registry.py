@@ -1,4 +1,15 @@
-"""Central registry for all hermes-agent tools.
+"""工具注册中心
+
+【产品经理理解要点】
+智能体所有工具的中央注册表，是工具系统的核心枢纽。
+- 核心职责：每个工具模块在导入时自动调用 register() 完成注册，模型侧通过注册表查询可用工具
+- 关键业务概念：工具集（toolset）是工具分组单位，用于权限控制和可用性检测；check_fn 是工具可用性探针（如检测 Docker 是否安装）
+- 注册保护机制：防止不同工具集的同名工具互相覆盖（MCP工具除外），插件需显式声明 override=True 才能替换内置工具
+- 调度能力：dispatch() 方法根据工具名找到处理器并执行，自动桥接异步处理器，统一错误格式
+- 在系统中的位置：模型层（model_tools）→ 注册表（registry）→ 具体工具实现，避免循环依赖
+
+─────────────────────────────────────────────────────────────────
+Central registry for all hermes-agent tools.
 
 Each tool file calls ``registry.register()`` at module level to declare its
 schema, handler, toolset membership, and availability check.  ``model_tools.py``

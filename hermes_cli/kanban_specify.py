@@ -1,3 +1,14 @@
+
+"""看板任务规格化
+
+【产品经理理解要点】
+将粗略的分诊任务细化为有目标、方案和验收标准的具体规格。
+- 输入：一句话标题 → 输出：完整任务规格
+- 由辅助LLM生成具体的body内容
+- 提升任务执行的成功率
+
+────────────────────────────────────────────────────────────────"""
+
 """Kanban triage specifier — flesh out a one-liner into a real spec.
 
 Used by ``hermes kanban specify [task_id | --all]``. Takes a task that

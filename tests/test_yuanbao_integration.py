@@ -1,4 +1,12 @@
-"""
+"""测试 - yuanbao integration
+
+【产品经理理解要点】
+功能验证中的yuanbao integration验证。
+- 验证功能：yuanbao integration功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：yuanbao integration功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
 test_yuanbao_integration.py - Yuanbao 模块集成测试
 
 验证各模块能正确组装和交互：

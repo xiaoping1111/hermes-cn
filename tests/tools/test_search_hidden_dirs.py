@@ -1,4 +1,13 @@
-"""Tests that search_files excludes hidden directories by default.
+"""工具系统测试 - search hidden dirs
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的search hidden dirs验证。
+- 验证功能：search hidden dirs功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：search hidden dirs功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests that search_files excludes hidden directories by default.
 
 Regression for #1558: the agent read a 3.5MB skills hub catalog cache
 file (.hub/index-cache/clawhub_catalog_v1.json) that contained adversarial

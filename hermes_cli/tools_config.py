@@ -1,4 +1,12 @@
-"""
+"""工具配置管理
+
+【产品经理理解要点】
+hermes tools子命令，管理按平台分组的工具集开关。
+- 选择平台→切换工具集→配置需要API Key的工具
+- 配置存储在config.yaml的platform_toolsets键下
+- 每个平台（CLI/Telegram/Discord等）可独立配置工具集
+
+────────────────────────────────────────────────────────────────
 Unified tool configuration for Hermes Agent.
 
 `hermes tools` and `hermes setup tools` both enter this module.
@@ -6,8 +14,7 @@ Select a platform → toggle toolsets on/off → for newly enabled tools
 that need API keys, run through provider-aware configuration.
 
 Saves per-platform tool configuration to ~/.hermes/config.yaml under
-the `platform_toolsets` key.
-"""
+the `platform_toolsets` key."""
 
 import json as _json
 import logging

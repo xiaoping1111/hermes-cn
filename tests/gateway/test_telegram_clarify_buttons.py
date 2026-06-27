@@ -1,8 +1,16 @@
-"""Tests for Telegram inline keyboard clarify buttons.
+"""Telegram网关测试
+
+【产品经理理解要点】
+Telegram平台网关功能测试。
+- 验证功能：Telegram平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Telegram inline keyboard clarify buttons.
 
 Mirrors test_telegram_approval_buttons.py for the new ``send_clarify`` and
-``cl:`` callback dispatch added in feat/clarify-gateway-buttons.
-"""
+``cl:`` callback dispatch added in feat/clarify-gateway-buttons."""
 
 import os
 import sys

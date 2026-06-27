@@ -1,4 +1,13 @@
-"""Tests for `hermes chat --safe-mode` — pristine troubleshooting runs.
+"""CLIsafe mode测试
+
+【产品经理理解要点】
+CLIsafe mode功能测试。
+- 验证功能：命令行safe mode功能
+- 关键场景：配置、执行、验证
+- 业务影响：safe mode命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for `hermes chat --safe-mode` — pristine troubleshooting runs.
 
 Inspired by Claude Code v2.1.169's ``--safe-mode`` flag (June 2026), which
 disables all customizations (CLAUDE.md, plugins, skills, hooks, MCP) for
@@ -7,8 +16,7 @@ troubleshooting. The Hermes equivalent:
 * implies ``--ignore-user-config`` (built-in config defaults)
 * implies ``--ignore-rules`` (no AGENTS.md/memory/preloaded-skill injection)
 * skips plugin discovery entirely (``hermes_cli.plugins``)
-* loads zero MCP servers (``tools.mcp_tool._load_mcp_config``)
-"""
+* loads zero MCP servers (``tools.mcp_tool._load_mcp_config``)"""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""End-to-end provider parity contract: the desktop Providers tabs must show
+"""CLIprovider parity测试
+
+【产品经理理解要点】
+CLIprovider parity功能测试。
+- 验证功能：命令行provider parity功能
+- 关键场景：配置、执行、验证
+- 业务影响：provider parity命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+End-to-end provider parity contract: the desktop Providers tabs must show
 the SAME provider universe as ``hermes model`` (the CLI/TUI picker).
 
 This is the single load-bearing invariant of the unified provider catalog:
@@ -8,8 +17,7 @@ This is the single load-bearing invariant of the unified provider catalog:
 i.e. every provider the CLI picker offers is configurable from the desktop app,
 on one of the two Providers sub-tabs (API keys or Accounts). It is asserted as
 an invariant against the real FastAPI endpoints (not a snapshot / count), so it
-can never silently drift again when a provider plugin is added.
-"""
+can never silently drift again when a provider plugin is added."""
 
 from fastapi.testclient import TestClient
 

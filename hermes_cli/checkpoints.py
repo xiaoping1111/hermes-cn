@@ -1,3 +1,14 @@
+
+"""检查点管理命令
+
+【产品经理理解要点】
+hermes checkpoints子命令，管理文件系统检查点存储。
+- 检查点：文件操作前的自动快照，支持回滚
+- 状态查看：检查点总大小、项目数、明细
+- 清理/清除：按策略或强制删除检查点释放磁盘空间
+
+────────────────────────────────────────────────────────────────"""
+
 """`hermes checkpoints` CLI subcommand.
 
 Gives users direct visibility and control over the filesystem checkpoint

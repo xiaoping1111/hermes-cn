@@ -1,4 +1,13 @@
-"""Tests for Slack CLI helpers."""
+"""CLIslack cli测试
+
+【产品经理理解要点】
+CLIslack cli功能测试。
+- 验证功能：命令行slack cli功能
+- 关键场景：配置、执行、验证
+- 业务影响：slack cli命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Slack CLI helpers."""
 
 from hermes_cli.slack_cli import _build_full_manifest
 

@@ -1,3 +1,14 @@
+
+"""看板命令入口
+
+【产品经理理解要点】
+hermes kanban子命令，看板任务管理的CLI入口。
+- Argparse子命令构建和调度
+- 纯文本和JSON两种输出格式
+- DB操作委托给kanban_db模块
+
+────────────────────────────────────────────────────────────────"""
+
 """CLI for the Hermes Kanban board — ``hermes kanban …`` subcommand.
 
 Exposes the full Kanban command surface documented in the design spec

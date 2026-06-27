@@ -1,4 +1,14 @@
-"""Helpers for translating OpenAI-style tool schemas to Gemini's schema subset."""
+"""Gemini Schema 适配
+
+【产品经理理解要点】
+将标准 OpenAI 工具 Schema 转换为 Gemini 的 Schema 子集格式。
+- 核心职责：剥离 Gemini 不支持的 Schema 字段、递归清理嵌套属性
+- 关键业务概念：Gemini Schema 允许字段集合、嵌套清理
+- 在系统中的位置：Gemini 供应商请求构建的 Schema 转换层
+
+─────────────────────────────────────────────────────────────────
+Helpers for translating OpenAI-style tool schemas to Gemini's schema subset.
+"""
 
 from __future__ import annotations
 

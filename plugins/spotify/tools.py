@@ -1,4 +1,12 @@
-"""Native Spotify tools for Hermes (registered via plugins/spotify)."""
+"""Spotify 原生工具集
+
+【产品经理理解要点】
+注册 Spotify 相关的 Agent 工具（播放控制、搜索、播放列表等）。
+- 7 个工具：播放控制、设备、队列、搜索、播放列表、专辑、曲库
+- 未认证时工具仍注册但不执行，引导用户完成 auth spotify
+
+─────────────────────────────────────────────────────────────────
+Native Spotify tools for Hermes (registered via plugins/spotify)."""
 
 from __future__ import annotations
 

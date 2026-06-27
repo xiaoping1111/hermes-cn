@@ -1,12 +1,19 @@
-"""
+"""进程自重启
+
+【产品经理理解要点】
+统一的自重启逻辑，保留关键标志（--tui/--dev/--profile等）。
+- 跨进程替换保留用户的UI模式偏好
+- 支持hermes不在PATH上的场景（nix run等）
+- 用于sessions browse和setup后的重启
+
+────────────────────────────────────────────────────────────────
 Unified self-relaunch for Hermes CLI.
 
 Preserves critical flags (--tui, --dev, --profile, --model, etc.) across
 process replacement so that ``hermes sessions browse`` or post-setup relaunch
 doesn't silently drop the user's UI mode or other preferences.
 
-Also works when ``hermes`` is not on PATH (e.g. ``nix run`` or ``python -m``).
-"""
+Also works when ``hermes`` is not on PATH (e.g. ``nix run`` or ``python -m``)."""
 
 import os
 import shutil

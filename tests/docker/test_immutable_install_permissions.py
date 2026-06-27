@@ -1,4 +1,14 @@
-"""Docker smoke tests for immutable install permissions."""
+"""Docker部署测试 - immutable install permissions
+
+【产品经理理解要点】
+Docker容器化部署：权限、网关、僵尸进程回收、不可变安装等运维正确性中的immutable install permissions验证。
+- 验证功能：immutable install permissions功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：immutable install permissions功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Docker smoke tests for immutable install permissions.
+"""
 from __future__ import annotations
 
 import subprocess

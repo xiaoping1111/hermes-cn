@@ -1,3 +1,14 @@
+
+"""昂贵模型确认
+
+【产品经理理解要点】
+用户选择高单价模型时的确认提示，防止意外产生高额费用。
+- 输入/输出Token单价阈值告警
+- 特定模型（如GPT-5.5 Pro）的专项提示
+- 保护用户不因误选高价模型产生意外账单
+
+────────────────────────────────────────────────────────────────"""
+
 """Expensive-model confirmation helpers for model selection surfaces."""
 
 from __future__ import annotations

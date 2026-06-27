@@ -1,4 +1,13 @@
-"""Tests for protected HermesCLI TUI extension hooks.
+"""CLI终端测试 - cli extension hooks
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的cli extension hooks验证。
+- 验证功能：cli extension hooks功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：cli extension hooks功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for protected HermesCLI TUI extension hooks.
 
 Verifies that wrapper CLIs can extend the TUI via:
   - _get_extra_tui_widgets()

@@ -1,4 +1,12 @@
-"""Resolve HERMES_HOME for standalone skill scripts.
+"""Hermes Home 路径工具
+
+【产品经理理解要点】
+Hermes 配置主目录的路径解析工具。
+- HERMES_HOME 环境变量解析
+- 默认路径回退
+
+─────────────────────────────────────────────────────────────────
+Resolve HERMES_HOME for standalone skill scripts.
 
 Skill scripts may run outside the Hermes process (e.g. system Python,
 nix env, CI) where ``hermes_constants`` is not importable.  This module

@@ -1,4 +1,13 @@
-"""Regression test for /reload-mcp refreshing cached agent tool lists.
+"""网关mcp reload refreshes cached agents测试
+
+【产品经理理解要点】
+网关mcp reload refreshes cached agents功能测试。
+- 验证功能：网关mcp reload refreshes cached agents处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：mcp reload refreshes cached agents功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression test for /reload-mcp refreshing cached agent tool lists.
 
 Before this fix, the gateway's _execute_mcp_reload reconnected MCP servers
 and updated the global _servers registry, but cached AIAgent instances kept
@@ -7,8 +16,7 @@ history) for the agent to pick up the new tools.
 
 This test exercises _execute_mcp_reload directly with mocked MCP discovery
 and asserts that every cached agent's `tools` and `valid_tool_names`
-attributes are overwritten with the freshly-discovered tool set.
-"""
+attributes are overwritten with the freshly-discovered tool set."""
 
 from __future__ import annotations
 

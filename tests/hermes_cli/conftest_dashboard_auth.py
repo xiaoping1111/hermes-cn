@@ -1,4 +1,13 @@
-"""Stub auth provider + shared fixtures for dashboard-auth tests.
+"""CLIconftest dashboard auth测试
+
+【产品经理理解要点】
+CLIconftest dashboard auth功能测试。
+- 验证功能：命令行conftest dashboard auth功能
+- 关键场景：配置、执行、验证
+- 业务影响：conftest dashboard auth命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Stub auth provider + shared fixtures for dashboard-auth tests.
 
 NOT a pytest conftest.py — this is an importable helper module. Phase 2
 of the dashboard-OAuth plan; used by Phase 3's end-to-end gate tests.
@@ -11,8 +20,7 @@ The stub bounces straight back to the callback with a fake code so tests
 can complete the OAuth round trip in-process without external network.
 
 Tokens are HMAC-signed JSON blobs (not real JWTs) — just enough structure
-for ``verify_session`` to detect tampering and expiry.
-"""
+for ``verify_session`` to detect tampering and expiry."""
 from __future__ import annotations
 
 import base64

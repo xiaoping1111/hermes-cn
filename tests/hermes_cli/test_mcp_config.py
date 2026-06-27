@@ -1,9 +1,16 @@
-"""
+"""CLImcp config测试
+
+【产品经理理解要点】
+CLImcp config功能测试。
+- 验证功能：命令行mcp config功能
+- 关键场景：配置、执行、验证
+- 业务影响：mcp config命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
 Tests for hermes_cli.mcp_config — ``hermes mcp`` subcommands.
 
 These tests mock the MCP server connection layer so they run without
-any actual MCP servers or API keys.
-"""
+any actual MCP servers or API keys."""
 
 import argparse
 from pathlib import Path

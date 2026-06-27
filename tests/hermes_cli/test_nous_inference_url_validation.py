@@ -1,4 +1,13 @@
-"""Regression tests for Nous Portal inference_base_url host-allowlist validation.
+"""CLInous inference url validation测试
+
+【产品经理理解要点】
+CLInous inference url validation功能测试。
+- 验证功能：命令行nous inference url validation功能
+- 关键场景：配置、执行、验证
+- 业务影响：nous inference url validation命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for Nous Portal inference_base_url host-allowlist validation.
 
 A poisoned ``inference_base_url`` from a Portal refresh response (network
 MITM, malicious response injection) would otherwise be persisted to
@@ -16,8 +25,7 @@ These tests verify:
 3. The proxy adapter applies the validator as belt-and-suspenders.
 4. The env-var override path (``NOUS_INFERENCE_BASE_URL``) is NOT
    gated by the validator — that's the documented dev/staging escape
-   hatch.
-"""
+   hatch."""
 
 from __future__ import annotations
 

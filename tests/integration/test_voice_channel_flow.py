@@ -1,4 +1,13 @@
-"""Integration tests for Discord voice channel audio flow.
+"""语音通道流程
+
+【产品经理理解要点】
+语音通道完整链路。
+- 验证功能：语音I/O全流程
+- 关键场景：ASR→Agent→TTS
+- 业务影响：语音交互链路中断
+
+─────────────────────────────────────────────────────────────────────────
+Integration tests for Discord voice channel audio flow.
 
 Uses real NaCl encryption and Opus codec (no mocks for crypto/codec).
 Does NOT require a Discord connection — tests the VoiceReceiver

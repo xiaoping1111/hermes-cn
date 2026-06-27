@@ -1,4 +1,13 @@
-"""Tests for hermes_bootstrap — Windows UTF-8 stdio shim.
+"""测试 - hermes bootstrap
+
+【产品经理理解要点】
+功能验证中的hermes bootstrap验证。
+- 验证功能：hermes bootstrap功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：hermes bootstrap功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_bootstrap — Windows UTF-8 stdio shim.
 
 The bootstrap module is imported at the top of every Hermes entry point
 (hermes, hermes-agent, hermes-acp, gateway, batch_runner, cli.py).  It

@@ -1,3 +1,14 @@
+
+"""Codex运行时切换
+
+【产品经理理解要点】
+/codex-runtime斜杠命令的共享逻辑，在Hermes默认运行时和Codex子进程间切换。
+- 切换model.openai_runtime：auto⇄codex_app_server
+- CLI和Gateway行为一致
+- 切换后自动持久化到配置文件
+
+────────────────────────────────────────────────────────────────"""
+
 """Shared logic for the /codex-runtime slash command.
 
 Toggles `model.openai_runtime` between "auto" (= chat_completions, Hermes'

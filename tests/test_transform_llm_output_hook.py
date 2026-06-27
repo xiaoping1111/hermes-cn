@@ -1,4 +1,13 @@
-"""Tests for the ``transform_llm_output`` plugin hook.
+"""测试 - transform llm output hook
+
+【产品经理理解要点】
+功能验证中的transform llm output hook验证。
+- 验证功能：transform llm output hook功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：transform llm output hook功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the ``transform_llm_output`` plugin hook.
 
 The hook fires inside ``AIAgent.run_conversation`` once the tool-calling
 loop has produced a final response. Driving the full agent loop from a

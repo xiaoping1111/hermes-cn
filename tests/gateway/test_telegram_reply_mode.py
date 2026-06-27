@@ -1,10 +1,18 @@
-"""Tests for Telegram reply_to_mode functionality.
+"""Telegram网关测试
+
+【产品经理理解要点】
+Telegram平台网关功能测试。
+- 验证功能：Telegram平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Telegram reply_to_mode functionality.
 
 Covers the threading behavior control for multi-chunk replies:
 - "off": Never thread replies to original message
 - "first": Only first chunk threads (default)
-- "all": All chunks thread to original message
-"""
+- "all": All chunks thread to original message"""
 import os
 import sys
 from unittest.mock import MagicMock, AsyncMock, patch

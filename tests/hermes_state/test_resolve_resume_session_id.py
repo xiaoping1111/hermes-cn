@@ -1,4 +1,13 @@
-"""Regression guard for #15000: --resume <id> after compression loses messages.
+"""恢复会话ID解析
+
+【产品经理理解要点】
+恢复会话ID解析。
+- 验证功能：恢复会话时ID的解析逻辑
+- 关键场景：ID查找、验证、歧义处理
+- 业务影响：无法正确恢复目标会话
+
+─────────────────────────────────────────────────────────────────────────
+Regression guard for #15000: --resume <id> after compression loses messages.
 
 Context compression ends the current session and forks a new child session
 (linked by ``parent_session_id``). The SQLite flush cursor is reset, so
@@ -8,8 +17,7 @@ used to load zero rows and show a blank chat.
 
 ``SessionDB.resolve_resume_session_id()`` walks the parent → child chain
 and redirects to the first descendant that actually has messages. These
-tests pin that behaviour.
-"""
+tests pin that behaviour."""
 import time
 
 import pytest

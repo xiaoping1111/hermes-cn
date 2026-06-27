@@ -1,4 +1,13 @@
-"""Random tips shown at CLI session start to help users discover features."""
+"""使用提示语
+
+【产品经理理解要点】
+CLI会话开始时随机显示的功能发现提示。
+- 提示语语料库：斜杠命令/快捷键/工具/工作流技巧
+- 每次启动随机选取，帮助用户发现新功能
+- 提升用户对Agent能力的认知
+
+────────────────────────────────────────────────────────────────
+Random tips shown at CLI session start to help users discover features."""
 
 import random
 

@@ -1,4 +1,13 @@
-"""Integration tests for slash command access control gating in gateway/run.py.
+"""斜杠命令分发
+
+【产品经理理解要点】
+斜杠命令访问分发。
+- 验证功能：斜杠命令的权限检查与路由分发
+- 关键场景：命令路由、权限校验、分发
+- 业务影响：斜杠命令无法正确路由
+
+─────────────────────────────────────────────────────────────────────────
+Integration tests for slash command access control gating in gateway/run.py.
 
 Drives the real ``GatewayRunner._handle_message`` path with a stub session
 store so we exercise the actual gate inserted at the dispatch site (not a
@@ -14,8 +23,7 @@ Coverage targets:
   - User denied: command not in either list → returns the ⛔ denial.
   - Always-allowed floor: /help and /whoami reachable for non-admins
     even with empty user_allowed_commands.
-  - DM vs group scope isolation.
-"""
+  - DM vs group scope isolation."""
 from __future__ import annotations
 
 from datetime import datetime

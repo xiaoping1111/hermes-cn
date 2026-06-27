@@ -1,4 +1,13 @@
-"""Stress test for parent-completion invariant at the claim gate.
+"""并发父门控
+
+【产品经理理解要点】
+父进程门控限流。
+- 验证功能：高并发限流正确性
+- 关键场景：门控、限流、排队
+- 业务影响：并发请求未被限流
+
+─────────────────────────────────────────────────────────────────────────
+Stress test for parent-completion invariant at the claim gate.
 
 Simulates the create-then-link race described in RCA t_a6acd07d:
 

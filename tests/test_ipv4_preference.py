@@ -1,4 +1,14 @@
-"""Tests for network.force_ipv4 — the socket.getaddrinfo monkey-patch."""
+"""测试 - ipv4 preference
+
+【产品经理理解要点】
+功能验证中的ipv4 preference验证。
+- 验证功能：ipv4 preference功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：ipv4 preference功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for network.force_ipv4 — the socket.getaddrinfo monkey-patch.
+"""
 
 import importlib
 import socket

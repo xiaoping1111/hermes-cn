@@ -1,4 +1,13 @@
-"""Harness: dashboard opt-in via HERMES_DASHBOARD.
+"""Docker部署测试 - dashboard
+
+【产品经理理解要点】
+Docker容器化部署：权限、网关、僵尸进程回收、不可变安装等运维正确性中的dashboard验证。
+- 验证功能：dashboard功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：dashboard功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Harness: dashboard opt-in via HERMES_DASHBOARD.
 
 Today (tini): dashboard starts once when HERMES_DASHBOARD=1; if it crashes
 it stays dead. After Phase 2 (s6): dashboard starts once; if it crashes

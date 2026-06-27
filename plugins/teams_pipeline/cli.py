@@ -1,4 +1,12 @@
-"""CLI commands for the Teams meeting pipeline plugin."""
+"""Teams 会议管线 CLI 命令
+
+【产品经理理解要点】
+Teams 会议管线的命令行管理接口。
+- 任务列表、状态查看、重放
+- Graph 订阅验证和维护
+
+─────────────────────────────────────────────────────────────────
+CLI commands for the Teams meeting pipeline plugin."""
 
 from __future__ import annotations
 

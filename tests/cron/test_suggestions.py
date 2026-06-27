@@ -1,9 +1,17 @@
-"""Tests for the Suggested Cron Jobs feature.
+"""定时任务建议
+
+【产品经理理解要点】
+定时任务建议生成。
+- 验证功能：Cron表达式建议与智能补全
+- 关键场景：建议生成、格式校验
+- 业务影响：用户无法获得cron表达式辅助
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Suggested Cron Jobs feature.
 
 Covers the store (add/dedup/cap/accept/dismiss/latch), catalog seeding, the
 blueprint->suggestion bridge, and the shared command handler. Uses an isolated
-HERMES_HOME so the real suggestions.json is never touched.
-"""
+HERMES_HOME so the real suggestions.json is never touched."""
 
 import importlib
 import json

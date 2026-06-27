@@ -1,10 +1,18 @@
-"""Tests for the interactive session browser (`hermes sessions browse`).
+"""CLIsession browse测试
+
+【产品经理理解要点】
+CLIsession browse功能测试。
+- 验证功能：命令行session browse功能
+- 关键场景：配置、执行、验证
+- 业务影响：session browse命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the interactive session browser (`hermes sessions browse`).
 
 Covers:
 - _session_browse_picker logic (curses mocked, fallback tested)
 - cmd_sessions 'browse' action integration
-- Argument parser registration
-"""
+- Argument parser registration"""
 
 import time
 from unittest.mock import MagicMock, patch

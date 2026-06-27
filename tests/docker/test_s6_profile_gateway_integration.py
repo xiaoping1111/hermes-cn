@@ -1,4 +1,13 @@
-"""Harness: in-container integration tests for S6ServiceManager.
+"""Docker部署测试 - s6 profile gateway integration
+
+【产品经理理解要点】
+Docker容器化部署：权限、网关、僵尸进程回收、不可变安装等运维正确性中的s6 profile gateway integration验证。
+- 验证功能：s6 profile gateway integration功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：s6 profile gateway integration功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Harness: in-container integration tests for S6ServiceManager.
 
 The unit tests in tests/hermes_cli/test_service_manager.py exercise the
 class against a tmp-path scandir with a stubbed ``subprocess.run``.

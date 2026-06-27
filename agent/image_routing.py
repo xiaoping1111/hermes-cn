@@ -1,5 +1,16 @@
 """Routing helpers for inbound user-attached images.
 
+图片输入路由
+
+【产品经理理解要点】
+决定用户发送的图片以原生方式还是文字描述方式传给模型。
+- 核心职责：根据模型能力和配置选择图片输入模式(native直传像素 vs text先描述)
+- 关键业务概念：原生视觉(native)、文字描述(text)、视觉能力检测、辅助视觉后端
+- 在系统中的位置：用户消息处理管线中的图片分发决策点
+
+─────────────────────────────────────────────────────────────────
+
+
 Two modes:
 
   native  — attach images as OpenAI-style ``image_url`` content parts on the

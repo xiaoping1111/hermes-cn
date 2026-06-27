@@ -1,4 +1,13 @@
-"""Tests for _clear_stale_openai_base_url() cleanup after provider switch (#5161)."""
+"""CLIclear stale base url测试
+
+【产品经理理解要点】
+CLIclear stale base url功能测试。
+- 验证功能：命令行clear stale base url功能
+- 关键场景：配置、执行、验证
+- 业务影响：clear stale base url命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for _clear_stale_openai_base_url() cleanup after provider switch (#5161)."""
 
 from __future__ import annotations
 

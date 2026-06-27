@@ -1,3 +1,11 @@
+"""通知投递
+
+【产品经理理解要点】
+通知投递。
+- 验证功能：系统通知的投递机制
+- 关键场景：投递策略、重试、确认
+- 业务影响：通知无法送达用户"""
+
 from unittest.mock import AsyncMock, MagicMock
 
 import pytest

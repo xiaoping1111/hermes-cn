@@ -1,4 +1,13 @@
-"""Tests for the gateway loop-level transient-network-error safety net.
+"""循环异常处理
+
+【产品经理理解要点】
+事件循环异常处理。
+- 验证功能：异步事件循环的异常处理器
+- 关键场景：异常捕获、日志记录、恢复
+- 业务影响：未捕获异常导致服务崩溃
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the gateway loop-level transient-network-error safety net.
 
 Issues #31066 / #31110: unhandled ``telegram.error.TimedOut`` (or peer
 ``NetworkError`` / ``httpx`` connection error) propagating to the
@@ -8,8 +17,7 @@ profile attached to the same runner. The safety net installed in
 and logs+swallows it; non-transient errors still surface.
 
 These tests pin the classifier and the loop handler so the safety net
-can't silently regress to swallowing every exception.
-"""
+can't silently regress to swallowing every exception."""
 
 from __future__ import annotations
 

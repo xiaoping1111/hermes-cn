@@ -1,4 +1,14 @@
-"""Tests for toolset_distributions.py — distribution CRUD, sampling, validation."""
+"""测试 - toolset distributions
+
+【产品经理理解要点】
+功能验证中的toolset distributions验证。
+- 验证功能：toolset distributions功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：toolset distributions功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for toolset_distributions.py — distribution CRUD, sampling, validation.
+"""
 
 import pytest
 

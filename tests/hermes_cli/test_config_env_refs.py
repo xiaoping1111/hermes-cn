@@ -1,3 +1,11 @@
+"""CLIconfig env refs测试
+
+【产品经理理解要点】
+CLIconfig env refs功能测试。
+- 验证功能：命令行config env refs功能
+- 关键场景：配置、执行、验证
+- 业务影响：config env refs命令行功能失效"""
+
 import textwrap
 
 from hermes_cli.config import load_config, save_config

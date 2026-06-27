@@ -1,4 +1,13 @@
-"""Tests for execute_code env scrubbing on Windows.
+"""工具系统测试 - code execution windows env
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的code execution windows env验证。
+- 验证功能：code execution windows env功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：code execution windows env功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for execute_code env scrubbing on Windows.
 
 On Windows the child process needs a small set of OS-essential env vars
 (SYSTEMROOT, WINDIR, COMSPEC, ...) to run.  Without SYSTEMROOT in particular,

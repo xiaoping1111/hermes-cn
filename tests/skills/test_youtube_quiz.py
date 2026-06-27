@@ -1,4 +1,14 @@
-"""Tests for optional-skills/productivity/memento-flashcards/scripts/youtube_quiz.py"""
+"""YouTube问答技能
+
+【产品经理理解要点】
+YouTube问答生成。
+- 验证功能：视频内容问答能力
+- 关键场景：字幕获取、问答生成
+- 业务影响：YouTube问答功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for optional-skills/productivity/memento-flashcards/scripts/youtube_quiz.py
+"""
 
 import json
 import sys

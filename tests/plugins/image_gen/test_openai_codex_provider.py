@@ -1,4 +1,13 @@
-"""Tests for the bundled ``openai-codex`` image_gen plugin.
+"""插件系统测试 - openai codex provider
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的openai codex provider验证。
+- 验证功能：openai codex provider功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：openai codex provider功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the bundled ``openai-codex`` image_gen plugin.
 
 Mirrors ``test_openai_provider.py`` but targets the standalone
 Codex/ChatGPT-OAuth-backed provider that uses the Responses

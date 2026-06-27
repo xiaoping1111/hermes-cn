@@ -1,3 +1,14 @@
+
+"""技能策展人命令
+
+【产品经理理解要点】
+hermes curator子命令，管理技能的使用统计和自动编排。
+- 状态表：技能使用频率和活跃度
+- 触发运行：手动执行技能策展周期
+- 暂停/恢复/置顶：技能的精细管理
+
+────────────────────────────────────────────────────────────────"""
+
 """CLI subcommand: `hermes curator <subcommand>`.
 
 Thin shell around agent/curator.py and tools/skill_usage.py. Renders a status

@@ -1,11 +1,20 @@
-"""Tests for the Windows / Git Bash MSYS-path normalization in
+r"""工具系统测试 - local env windows msys
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的local env windows msys验证。
+- 验证功能：local env windows msys功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：local env windows msys功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Windows / Git Bash MSYS-path normalization in
 ``LocalEnvironment``.
 
 Background
 ----------
 On Windows, ``pwd -P`` inside Git Bash emits paths like
 ``/c/Users/NVIDIA``. ``subprocess.Popen(..., cwd=...)`` only accepts
-native Windows paths (``C:\\Users\\NVIDIA``), and the validation done
+native Windows paths (``C:\Users\NVIDIA``), and the validation done
 by ``_resolve_safe_cwd`` was also checking the MSYS form against
 ``os.path.isdir``, which returns ``False`` on Windows. The combined
 effect was a warning logged on every single terminal call:

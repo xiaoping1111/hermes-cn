@@ -1,9 +1,16 @@
-"""
+"""定时任务管理命令
+
+【产品经理理解要点】
+hermes cron子命令，管理定时/周期性任务的创建、编辑、暂停和执行。
+- Cron表达式定义执行周期
+- 定时任务持久化，重启后恢复
+- 支持手动触发单个任务(tick)
+
+────────────────────────────────────────────────────────────────
 Cron subcommand for hermes CLI.
 
 Handles standalone cron management commands like list, create, edit,
-pause/resume/run/remove, status, and tick.
-"""
+pause/resume/run/remove, status, and tick."""
 
 import json
 import re

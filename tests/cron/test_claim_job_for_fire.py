@@ -1,12 +1,20 @@
-"""Tests for the store-level CAS fire claim (Phase 4C).
+"""认领触发任务
+
+【产品经理理解要点】
+任务认领与触发。
+- 验证功能：分布式环境下任务认领与触发
+- 关键场景：认领竞争、触发幂等
+- 业务影响：任务被重复触发或遗漏
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the store-level CAS fire claim (Phase 4C).
 
 `claim_job_for_fire` gives multi-machine at-most-once semantics when an external
 scheduler (Chronos) fires a job: across N gateway replicas, exactly ONE wins the
 claim for a given fire. Single-machine deployments always win (unaffected).
 
 These exercise the real store against a temp HERMES_HOME (no mocks) per the
-E2E-over-mocks discipline for file-touching code.
-"""
+E2E-over-mocks discipline for file-touching code."""
 import pytest
 
 

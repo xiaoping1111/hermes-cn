@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""A minimal in-process LSP server used by tests.
+"""Agent核心测试 -  mock lsp server
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的 mock lsp server验证。
+- 验证功能： mock lsp server功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响： mock lsp server功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+A minimal in-process LSP server used by tests.
 
 Speaks just enough LSP to drive :class:`agent.lsp.client.LSPClient`
 through a full lifecycle: ``initialize``, ``initialized``,

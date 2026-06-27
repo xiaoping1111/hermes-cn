@@ -1,4 +1,13 @@
-"""Tests for trajectory_compressor AsyncOpenAI event loop binding.
+"""测试 - trajectory compressor async
+
+【产品经理理解要点】
+功能验证中的trajectory compressor async验证。
+- 验证功能：trajectory compressor async功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：trajectory compressor async功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for trajectory_compressor AsyncOpenAI event loop binding.
 
 The AsyncOpenAI client was created once at __init__ time and stored as an
 instance attribute. When process_directory() calls asyncio.run() — which

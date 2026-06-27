@@ -1,4 +1,12 @@
-"""
+"""模型目录与提供商定义
+
+【产品经理理解要点】
+维护所有 AI 模型的完整目录和提供商列表，是模型选择界面的数据源。
+- 核心职责：定义各提供商支持的模型清单（_PROVIDER_MODELS）、提供商注册表（CANONICAL_PROVIDERS）、别名映射、免费/付费分层、Nous Portal 推荐模型
+- 关键概念：提供商分组（PROVIDER_GROUPS）用于界面折叠展示、静默默认模型防止自动选最贵模型、模型别名兼容用户习惯
+- 系统定位：`hermes model` 命令和所有模型选择界面的单一数据源
+
+─────────────────────────────────────────────────────────────────
 Canonical model catalogs and lightweight validation helpers.
 
 Add, remove, or reorder entries here — both `hermes setup` and

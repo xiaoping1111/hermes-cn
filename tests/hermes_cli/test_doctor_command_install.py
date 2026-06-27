@@ -1,4 +1,13 @@
-"""Tests for the Command Installation check in hermes doctor."""
+"""CLIdoctor command install测试
+
+【产品经理理解要点】
+CLIdoctor command install功能测试。
+- 验证功能：命令行doctor command install功能
+- 关键场景：配置、执行、验证
+- 业务影响：doctor command install命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Command Installation check in hermes doctor."""
 
 import sys
 import types

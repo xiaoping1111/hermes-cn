@@ -1,11 +1,19 @@
-"""Tests for the load_env() process-level cache.
+"""CLIenv load cache测试
+
+【产品经理理解要点】
+CLIenv load cache功能测试。
+- 验证功能：命令行env load cache功能
+- 关键场景：配置、执行、验证
+- 业务影响：env load cache命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the load_env() process-level cache.
 
 The cache exists to keep `hermes tools` → "All Platforms" fast: every
 `get_env_value()` lookup used to re-read and re-sanitise the entire
 .env file, racking up hundreds of ms across one menu render. The
 cache is keyed on (path, mtime, size); writers (save_env_value /
-remove_env_value / sanitise_env_file) call invalidate_env_cache().
-"""
+remove_env_value / sanitise_env_file) call invalidate_env_cache()."""
 
 from __future__ import annotations
 

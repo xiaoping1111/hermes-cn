@@ -1,8 +1,16 @@
-"""Tests for the API server bind-address startup guard.
+"""网关api server bind guard测试
+
+【产品经理理解要点】
+网关api server bind guard功能测试。
+- 验证功能：网关api server bind guard处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：api server bind guard功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the API server bind-address startup guard.
 
 Validates that is_network_accessible() correctly classifies addresses and
-that connect() refuses to start without API_SERVER_KEY.
-"""
+that connect() refuses to start without API_SERVER_KEY."""
 
 import socket
 from unittest.mock import patch

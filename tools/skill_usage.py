@@ -1,4 +1,13 @@
-"""Skill usage telemetry + provenance tracking for the Curator feature.
+"""技能使用量遥测与来源追踪
+
+【产品经理理解要点】
+追踪每个技能的使用频次和时间，为技能生命周期管理（策展器）提供数据依据。
+- 核心职责：在.sidecar JSON文件中记录技能调用次数和时间戳，策展器据此判断技能是否过期
+- 生命周期管理：active（活跃）→ stale（过期）→ archived（归档），根据使用时间自动转换
+- 在系统中的位置：位于技能工具和策展器之间，是技能自管理系统的数据层
+
+─────────────────────────────────────────────────────────────────
+Skill usage telemetry + provenance tracking for the Curator feature.
 
 Tracks per-skill usage metadata in a sidecar JSON file (~/.hermes/skills/.usage.json)
 keyed by skill name. Counters are bumped by the existing skill tools (skill_view,

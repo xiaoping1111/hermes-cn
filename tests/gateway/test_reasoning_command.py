@@ -1,4 +1,13 @@
-"""Tests for gateway /reasoning command and hot reload behavior."""
+"""网关reasoning command测试
+
+【产品经理理解要点】
+网关reasoning command功能测试。
+- 验证功能：网关reasoning command处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：reasoning command功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway /reasoning command and hot reload behavior."""
 
 import asyncio
 import inspect

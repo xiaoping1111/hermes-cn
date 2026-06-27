@@ -1,4 +1,13 @@
-"""Tests for file permissions hardening on sensitive files."""
+"""文件权限
+
+【产品经理理解要点】
+Cron文件权限检查。
+- 验证功能：定时任务相关文件权限安全
+- 关键场景：权限校验、安全警告
+- 业务影响：权限问题导致安全漏洞
+
+─────────────────────────────────────────────────────────────────────────
+Tests for file permissions hardening on sensitive files."""
 
 import os
 import stat

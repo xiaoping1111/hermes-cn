@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Canvas LMS API CLI for Hermes Agent.
+"""Canvas 画布 API
+
+【产品经理理解要点】
+对接 Canvas LMS 的 API 客户端。
+- 课程和作业查询
+- 成绩和提交管理
+
+─────────────────────────────────────────────────────────────────
+Canvas LMS API CLI for Hermes Agent.
 
 A thin CLI wrapper around the Canvas REST API.
 Authenticates using a personal access token from environment variables.

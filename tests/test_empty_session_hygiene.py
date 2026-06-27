@@ -1,4 +1,13 @@
-"""Tests for empty-session hygiene — gemini-cli#27770 port.
+"""测试 - empty session hygiene
+
+【产品经理理解要点】
+功能验证中的empty session hygiene验证。
+- 验证功能：empty session hygiene功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：empty session hygiene功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for empty-session hygiene — gemini-cli#27770 port.
 
 Starting the CLI and immediately quitting (or rotating sessions with /new)
 used to leave empty untitled rows in the session DB that clutter /resume

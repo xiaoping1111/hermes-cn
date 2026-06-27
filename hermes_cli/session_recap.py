@@ -1,4 +1,13 @@
-"""Session recap — summarize what's happened in the current session.
+"""会话回顾 — 总结当前会话的活动情况
+
+【产品经理理解要点】
+生成当前对话会话的摘要，帮助用户快速了解上次离开后发生了什么。
+- 核心职责：统计用户/助手轮次、工具调用次数、最近编辑的文件，展示最新问题和回复预览
+- 关键概念：近期活动窗口、工具使用统计、文件编辑追踪
+- 系统定位：支持 CLI 和所有网关平台（Telegram/Discord/Slack 等），纯本地计算不调用 LLM
+
+─────────────────────────────────────────────────────────────────
+Session recap — summarize what's happened in the current session.
 
 Inspired by Claude Code's `/recap` command (v2.1.114, April 2026), which
 shows a one-line summary of what happened while a terminal was unfocused

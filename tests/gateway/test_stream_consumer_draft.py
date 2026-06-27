@@ -1,4 +1,13 @@
-"""Tests for native draft streaming in GatewayStreamConsumer.
+"""流消费者草稿
+
+【产品经理理解要点】
+流消费者草稿模式。
+- 验证功能：流式响应的草稿消费逻辑
+- 关键场景：草稿识别、消费、合并
+- 业务影响：草稿消息处理异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for native draft streaming in GatewayStreamConsumer.
 
 Telegram Bot API 9.5 (March 2026) introduced sendMessageDraft for native
 animated streaming previews in private chats.  This test suite covers the
@@ -7,8 +16,7 @@ that path.
 
 Adapter under test is a runtime subclass of BasePlatformAdapter that
 overrides supports_draft_streaming + send_draft, since the consumer's
-isinstance(BasePlatformAdapter) gate excludes plain MagicMocks.
-"""
+isinstance(BasePlatformAdapter) gate excludes plain MagicMocks."""
 
 from __future__ import annotations
 

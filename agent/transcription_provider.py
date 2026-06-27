@@ -1,4 +1,13 @@
 """
+语音转写供应商抽象接口
+
+【产品经理理解要点】
+定义语音转写(STT)的插件化后端接口，支持多种语音识别引擎切换。
+- 核心职责：定义 TranscriptionProvider ABC(transcribe/list_models)、内置优先
+- 关键业务概念：STT 后端、内置优先级、HERMES_LOCAL_STT_COMMAND 逃逸口
+- 在系统中的位置：transcribe_audio 工具的供应商抽象层
+
+─────────────────────────────────────────────────────────────────
 Transcription Provider ABC
 ==========================
 

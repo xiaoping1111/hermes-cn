@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 """
+会话搜索工具
+
+【产品经理理解要点】
+让智能体搜索和回溯历史对话记录，支持三种模式：关键词搜索、消息滚动浏览、近期会话列表。
+- 核心职责：基于FTS5全文搜索历史会话，返回匹配片段及上下文窗口，零LLM成本
+- 三种模式：发现（关键词搜索→返回最相关会话）、滚动（按消息ID翻页）、浏览（列出最近会话）
+- 在系统中的位置：位于智能体和会话存储之间，是长期记忆和上下文延续的关键组件
+
+─────────────────────────────────────────────────────────────────
 Session Search Tool - Long-Term Conversation Recall
 
 Single-shape tool with three calling modes (inferred from args, no explicit

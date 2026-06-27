@@ -1,4 +1,13 @@
-"""Unit tests for the plugin LLM facade (``agent.plugin_llm``).
+"""Agent核心测试 - plugin llm
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的plugin llm验证。
+- 验证功能：plugin llm功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：plugin llm功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for the plugin LLM facade (``agent.plugin_llm``).
 
 These tests exercise the trust gate, JSON parsing, schema validation,
 image input encoding, and the auxiliary-client invocation contract.

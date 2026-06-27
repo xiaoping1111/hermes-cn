@@ -1,12 +1,20 @@
-"""Tests for nested/alias-normalized enable & disable flows.
+"""CLIplugins cmd enable disable nested测试
+
+【产品经理理解要点】
+CLIplugins cmd enable disable nested功能测试。
+- 验证功能：命令行plugins cmd enable disable nested功能
+- 关键场景：配置、执行、验证
+- 业务影响：plugins cmd enable disable nested命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for nested/alias-normalized enable & disable flows.
 
 Companion to test_plugins_cmd_category_discovery.py. That file covers the
 *listing* side of nested category plugins (issue #41066). These tests cover
 the *mutation* side: `hermes plugins enable/disable` must resolve a bare name
 OR a full path-derived key (e.g. `observability/nemo_relay`) to the canonical
 registry key and write THAT — the same string PluginManager gates on — so a
-nested bundled plugin can actually be toggled.
-"""
+nested bundled plugin can actually be toggled."""
 
 import sys  # noqa: F401
 from pathlib import Path

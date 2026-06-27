@@ -1,4 +1,12 @@
-"""Honcho memory plugin — MemoryProvider for Honcho AI-native memory.
+"""Honcho 记忆插件包
+
+【产品经理理解要点】
+Honcho 记忆系统入口，提供基于对话的认知状态追踪。
+- 通过 API 与 Honcho 后端交互
+- 支持会话管理和认知状态查询
+
+─────────────────────────────────────────────────────────────────
+Honcho memory plugin — MemoryProvider for Honcho AI-native memory.
 
 Provides cross-session user modeling with dialectic Q&A, semantic search,
 peer cards, and persistent conclusions via the Honcho SDK. Honcho provides AI-native cross-session user

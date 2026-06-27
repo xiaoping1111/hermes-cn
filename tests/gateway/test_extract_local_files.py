@@ -1,12 +1,19 @@
-"""
+"""网关extract local files测试
+
+【产品经理理解要点】
+网关extract local files功能测试。
+- 验证功能：网关extract local files处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：extract local files功能异常
+
+─────────────────────────────────────────────────────────────────────────
 Tests for extract_local_files() — auto-detection of bare local file paths
 in model response text for native media delivery.
 
 Covers: path matching, code-block exclusion, URL rejection, tilde expansion,
 deduplication, text cleanup, and extension routing.
 
-Based on PR #1636 by sudoingX (salvaged + hardened).
-"""
+Based on PR #1636 by sudoingX (salvaged + hardened)."""
 
 from unittest.mock import patch
 

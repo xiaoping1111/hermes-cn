@@ -1,5 +1,15 @@
 #!/usr/bin/env python3
 """
+记忆工具
+
+【产品经理理解要点】
+为智能体提供跨会话持久化记忆，分为自笔记（MEMORY.md）和用户档案（USER.md）两个存储。
+- 核心职责：管理智能体的记忆读写——添加、替换、删除、读取，写入即时落盘但系统提示冻结到下次会话才刷新
+- 关键业务概念：MEMORY.md是智能体对环境的观察笔记，USER.md是智能体对用户的了解，两者在会话开始时注入系统提示
+- 字符限制而非token限制：确保不同模型间的通用性
+- 在系统中的位置：位于智能体对话引擎和持久化存储之间，是长期记忆系统的核心
+
+─────────────────────────────────────────────────────────────────
 Memory Tool Module - Persistent Curated Memory
 
 Provides bounded, file-backed memory that persists across sessions. Two stores:

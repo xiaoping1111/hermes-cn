@@ -1,9 +1,17 @@
-"""Tests for issue #26670 — concurrent hermes.exe detection and improved
+"""CLIupdate concurrent quarantine测试
+
+【产品经理理解要点】
+CLIupdate concurrent quarantine功能测试。
+- 验证功能：命令行update concurrent quarantine功能
+- 关键场景：配置、执行、验证
+- 业务影响：update concurrent quarantine命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for issue #26670 — concurrent hermes.exe detection and improved
 quarantine retry / reboot-deferred fallback during `hermes update` on Windows.
 
 These tests force ``_is_windows`` to return ``True`` via patching so the
-Windows-specific code paths can be exercised on any host.
-"""
+Windows-specific code paths can be exercised on any host."""
 
 from __future__ import annotations
 

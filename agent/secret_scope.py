@@ -1,5 +1,16 @@
 """Profile-scoped credential resolution for multi-profile gateway multiplexing.
 
+多 Profile 凭证隔离
+
+【产品经理理解要点】
+在多 Profile 网关中用 ContextVar 隔离各 Profile 的凭证，防止密钥跨 Profile 泄露。
+- 核心职责：按会话安装活跃 Profile 的凭证、fail-closed 设计(无 scope 时报错)
+- 关键业务概念：Profile 隔离、ContextVar、fail-closed、多路复用网关
+- 在系统中的位置：多路复用网关的凭证安全隔离层
+
+─────────────────────────────────────────────────────────────────
+
+
 The multiplexing gateway serves many profiles from one process. Each profile
 has its own ``.env`` with its own provider keys and platform tokens, so we
 **cannot** union them into the process-global ``os.environ`` (that would leak

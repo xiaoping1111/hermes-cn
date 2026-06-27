@@ -1,4 +1,14 @@
-"""Progressive tool disclosure ("tool search") for Hermes Agent.
+"""渐进式工具发现
+
+【产品经理理解要点】
+当工具数量过多时，用"搜索-查看-调用"三步桥接工具替代直接展示所有工具，节省模型上下文窗口。
+- 核心职责：判断是否需要启用工具搜索（基于工具Schema占上下文窗口的比例阈值），将非核心工具延迟加载
+- 工作流程：tool_search（搜索可用工具）→ tool_describe（查看工具参数详情）→ tool_call（调用具体工具）
+- 关键业务概念：核心工具（始终可见，不可延迟）；可延迟工具（MCP/插件工具，按需搜索）；阈值门控（auto模式根据token占比决定是否激活）
+- 在系统中的位置：位于模型工具定义组装和API调用之间，动态决定模型"看到"哪些工具
+
+─────────────────────────────────────────────────────────────────
+Progressive tool disclosure ("tool search") for Hermes Agent.
 
 When enabled, MCP and non-core plugin tools are replaced in the model-visible
 tools array by three bridge tools — ``tool_search``, ``tool_describe``,

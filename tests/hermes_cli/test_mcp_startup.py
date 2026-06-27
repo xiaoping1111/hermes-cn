@@ -1,4 +1,13 @@
-"""Regression tests for bounded/lazy CLI MCP startup."""
+"""CLImcp startup测试
+
+【产品经理理解要点】
+CLImcp startup功能测试。
+- 验证功能：命令行mcp startup功能
+- 关键场景：配置、执行、验证
+- 业务影响：mcp startup命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for bounded/lazy CLI MCP startup."""
 
 from __future__ import annotations
 

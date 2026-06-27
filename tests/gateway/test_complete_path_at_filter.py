@@ -1,4 +1,13 @@
-"""Regression tests for the TUI gateway's `complete.path` handler.
+"""路径补全过滤
+
+【产品经理理解要点】
+路径补全@过滤。
+- 验证功能：@提及路径补全与过滤
+- 关键场景：路径补全、权限过滤
+- 业务影响：提及路径补全错误
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the TUI gateway's `complete.path` handler.
 
 Reported during the TUI v2 blitz retest:
   - typing `@folder:` (and `@folder` with no colon yet) surfaced files
@@ -14,8 +23,7 @@ Covers:
   - `@file:` only yields regular files
   - Bare `@folder` / `@file` (no colon) lists cwd directly
   - Explicit prefix is preserved in the completion text
-  - `@<name>` with no slash fuzzy-matches basenames anywhere in the tree
-"""
+  - `@<name>` with no slash fuzzy-matches basenames anywhere in the tree"""
 
 from __future__ import annotations
 

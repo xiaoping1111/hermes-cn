@@ -1,4 +1,13 @@
-"""Regression tests for dashboard cron job profile routing."""
+"""CLIweb server cron profiles测试
+
+【产品经理理解要点】
+CLIweb server cron profiles功能测试。
+- 验证功能：命令行web server cron profiles功能
+- 关键场景：配置、执行、验证
+- 业务影响：web server cron profiles命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for dashboard cron job profile routing."""
 
 import pytest
 from fastapi import HTTPException

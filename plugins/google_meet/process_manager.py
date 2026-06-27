@@ -1,4 +1,12 @@
-"""Subprocess lifecycle manager for the google_meet bot.
+"""Google Meet 进程管理器
+
+【产品经理理解要点】
+管理 Google Meet 机器人子进程的生命周期。
+- 子进程启停和健康检查
+- 崩溃重启和资源清理
+
+─────────────────────────────────────────────────────────────────
+Subprocess lifecycle manager for the google_meet bot.
 
 Single active meeting at a time. Stores the running pid + out_dir in a
 session-scoped state file under ``$HERMES_HOME/workspace/meetings/.active.json``

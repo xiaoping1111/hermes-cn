@@ -1,11 +1,19 @@
-"""Tests for session auto-reset notifications.
+"""会话重置通知
+
+【产品经理理解要点】
+会话重置通知。
+- 验证功能：会话重置后的通知机制
+- 关键场景：重置触发、通知发送、状态同步
+- 业务影响：重置后通知未发出
+
+─────────────────────────────────────────────────────────────────────────
+Tests for session auto-reset notifications.
 
 Verifies that:
 - _should_reset() returns a reason string ("idle" or "daily") instead of bool
 - SessionEntry captures auto_reset_reason
 - SessionResetPolicy.notify controls whether notifications are sent
-- notify_exclude_platforms skips notifications for excluded platforms
-"""
+- notify_exclude_platforms skips notifications for excluded platforms"""
 
 from datetime import datetime, timedelta
 

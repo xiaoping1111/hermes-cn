@@ -1,9 +1,17 @@
-"""Tests for non-ASCII credential detection and sanitization.
+"""CLInon ascii credential测试
+
+【产品经理理解要点】
+CLInon ascii credential功能测试。
+- 验证功能：命令行non ascii credential功能
+- 关键场景：配置、执行、验证
+- 业务影响：non ascii credential命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for non-ASCII credential detection and sanitization.
 
 Covers the fix for issue #6843 — API keys containing Unicode lookalike
 characters (e.g. ʋ U+028B instead of v) cause UnicodeEncodeError when
-httpx tries to encode the Authorization header as ASCII.
-"""
+httpx tries to encode the Authorization header as ASCII."""
 
 import os
 

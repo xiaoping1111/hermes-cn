@@ -1,4 +1,13 @@
-"""Tests for gateway linger auto-enable behavior on headless Linux installs."""
+"""CLIgateway linger测试
+
+【产品经理理解要点】
+CLIgateway linger功能测试。
+- 验证功能：命令行gateway linger功能
+- 关键场景：配置、执行、验证
+- 业务影响：gateway linger命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway linger auto-enable behavior on headless Linux installs."""
 
 from types import SimpleNamespace
 

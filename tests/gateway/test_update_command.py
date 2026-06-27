@@ -1,8 +1,16 @@
-"""Tests for /update gateway slash command.
+"""更新命令
+
+【产品经理理解要点】
+更新命令处理。
+- 验证功能：系统/配置更新命令
+- 关键场景：更新检查、下载、安装
+- 业务影响：系统无法自动更新
+
+─────────────────────────────────────────────────────────────────────────
+Tests for /update gateway slash command.
 
 Tests both the _handle_update_command handler (spawns update process) and
-the _send_update_notification startup hook (sends results after restart).
-"""
+the _send_update_notification startup hook (sends results after restart)."""
 
 import json
 from pathlib import Path

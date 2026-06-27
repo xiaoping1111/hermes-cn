@@ -1,4 +1,13 @@
-"""Tests for the WhatsApp Cloud API adapter (Phase 2).
+"""WhatsApp网关测试
+
+【产品经理理解要点】
+WhatsApp平台网关功能测试。
+- 验证功能：WhatsApp平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：WhatsApp平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the WhatsApp Cloud API adapter (Phase 2).
 
 Covers the outbound Graph API send path and the inbound verify-token
 handshake. The webhook POST path is currently a stub (Phase 3 will add
@@ -7,8 +16,7 @@ and returns 200 here.
 
 All tests are fixture-driven — no live network. httpx is patched so the
 adapter never reaches graph.facebook.com, and the aiohttp server is
-exercised with synthetic ``Request`` objects.
-"""
+exercised with synthetic ``Request`` objects."""
 
 from __future__ import annotations
 

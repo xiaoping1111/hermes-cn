@@ -1,4 +1,13 @@
-"""Verify Shift+Enter byte sequences parse to the same key tuple Alt+Enter
+"""CLI终端测试 - cli shift enter newline
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的cli shift enter newline验证。
+- 验证功能：cli shift enter newline功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：cli shift enter newline功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Verify Shift+Enter byte sequences parse to the same key tuple Alt+Enter
 produces, so the existing Alt+Enter newline handler in `cli.py` fires for
 terminals that emit a distinct Shift+Enter under the Kitty keyboard protocol
 or xterm modifyOtherKeys mode.

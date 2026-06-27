@@ -1,4 +1,13 @@
-"""Tests for gateway.platforms.telegram_network – fallback transport layer.
+"""Telegram网络
+
+【产品经理理解要点】
+Telegram网络处理。
+- 验证功能：Telegram平台网络连接与重连
+- 关键场景：连接建立、断线重连、超时
+- 业务影响：Telegram连接不稳定
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway.platforms.telegram_network – fallback transport layer.
 
 Background
 ----------
@@ -12,8 +21,7 @@ servers still accept the request.  This is the programmatic equivalent of:
 
 The TelegramFallbackTransport implements this: try the primary (DNS-resolved)
 path first, and on ConnectTimeout / ConnectError fall through to configured
-fallback IPs in order, then "stick" to whichever IP works.
-"""
+fallback IPs in order, then "stick" to whichever IP works."""
 
 import httpx
 import pytest

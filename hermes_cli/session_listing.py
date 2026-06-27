@@ -1,3 +1,14 @@
+
+"""会话列表辅助
+
+【产品经理理解要点】
+CLI和Gateway共享的会话列表和恢复逻辑。
+- 解析/sessions参数为列表标志和恢复目标
+- 统一两端的会话浏览体验
+- 防止CLI和Gateway的列表逻辑发散
+
+────────────────────────────────────────────────────────────────"""
+
 """Shared session-listing helpers for CLI and gateway slash surfaces."""
 
 from __future__ import annotations

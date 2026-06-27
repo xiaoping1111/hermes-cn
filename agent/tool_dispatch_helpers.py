@@ -1,5 +1,16 @@
 """Tool-dispatch helpers — parallelism gating, multimodal envelopes, mutation tracking.
 
+工具调度辅助函数
+
+【产品经理理解要点】
+工具调度的策略引擎：决定多个工具调用能否并行执行、处理多模态结果、追踪文件变更。
+- 核心职责：并行性判断(读操作可并行、写操作互斥)、多模态结果封装、文件变更目标提取
+- 关键业务概念：破坏性命令检测、并行作用域、多模态信封格式、轨迹归一化
+- 在系统中的位置：对话引擎与工具执行器之间的策略层
+
+─────────────────────────────────────────────────────────────────
+
+
 Pure module-level utilities extracted from ``run_agent.py``:
 
 * ``_is_destructive_command`` — terminal-command heuristic used to gate

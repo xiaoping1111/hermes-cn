@@ -1,4 +1,13 @@
-"""Unit tests for hermes_cli.session_recap."""
+"""CLIsession recap测试
+
+【产品经理理解要点】
+CLIsession recap功能测试。
+- 验证功能：命令行session recap功能
+- 关键场景：配置、执行、验证
+- 业务影响：session recap命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for hermes_cli.session_recap."""
 from __future__ import annotations
 
 import json

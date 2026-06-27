@@ -1,9 +1,17 @@
-"""Regression test: /retry must return the agent response, not None.
+"""网关retry response测试
+
+【产品经理理解要点】
+网关retry response功能测试。
+- 验证功能：网关retry response处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：retry response功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression test: /retry must return the agent response, not None.
 
 Before the fix in PR #441, _handle_retry_command() called
 _handle_message(retry_event) but discarded its return value with `return None`,
-so users never received the final response.
-"""
+so users never received the final response."""
 import pytest
 from unittest.mock import AsyncMock, MagicMock
 from gateway.run import GatewayRunner

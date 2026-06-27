@@ -1,3 +1,14 @@
+
+"""Windows网关服务后端
+
+【产品经理理解要点】
+Windows平台上的网关服务管理，使用计划任务和启动文件夹。
+- schtasks创建ONLOGON计划任务
+- 被锁定策略阻止时回退到Startup文件夹
+- 与macOS launchd/Linux systemd对齐的接口
+
+────────────────────────────────────────────────────────────────"""
+
 """Windows gateway service backend (Scheduled Task + Startup-folder fallback).
 
 This mirrors the contract exposed by ``launchd_install`` / ``launchd_start`` /

@@ -1,3 +1,14 @@
+
+"""Codex运行时插件迁移
+
+【产品经理理解要点】
+将Hermes的MCP配置和插件安装信息迁移到Codex的config.toml格式。
+- 读取Hermes YAML配置并转换为Codex TOML格式
+- 确保Codex子进程能看到用户已安装的插件
+- 双向同步：Hermes→Codex的配置桥接
+
+────────────────────────────────────────────────────────────────"""
+
 """Migrate Hermes' MCP server config and Codex's installed curated plugins
 to the format Codex expects in ~/.codex/config.toml.
 

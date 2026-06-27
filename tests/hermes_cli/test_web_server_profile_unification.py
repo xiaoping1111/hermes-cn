@@ -1,11 +1,19 @@
-"""Regression tests for the machine-dashboard multi-profile unification.
+"""CLIweb server profile unification测试
+
+【产品经理理解要点】
+CLIweb server profile unification功能测试。
+- 验证功能：命令行web server profile unification功能
+- 关键场景：配置、执行、验证
+- 业务影响：web server profile unification命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the machine-dashboard multi-profile unification.
 
 The dashboard is ONE machine-level management surface: config, env, MCP,
 model, and chat-PTY endpoints accept an optional ``profile`` so the global
 profile switcher can target any profile's HERMES_HOME. These tests pin:
 reads/writes land in the REQUESTED profile, the dashboard's own profile
-stays untouched, and the chat PTY env is scoped via HERMES_HOME.
-"""
+stays untouched, and the chat PTY env is scoped via HERMES_HOME."""
 import pytest
 import yaml
 

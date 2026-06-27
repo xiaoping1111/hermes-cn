@@ -1,4 +1,13 @@
-"""Tests for ``hermes debug`` CLI command and debug utilities."""
+"""CLIdebug测试
+
+【产品经理理解要点】
+CLIdebug功能测试。
+- 验证功能：命令行debug功能
+- 关键场景：配置、执行、验证
+- 业务影响：debug命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ``hermes debug`` CLI command and debug utilities."""
 
 import os
 import urllib.error

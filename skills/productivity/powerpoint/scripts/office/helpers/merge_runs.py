@@ -1,4 +1,12 @@
-"""Merge adjacent runs with identical formatting in DOCX.
+"""文本运行合并
+
+【产品经理理解要点】
+合并 PowerPoint/Word 中相邻的相同格式文本运行。
+- 运行格式比较
+- 相邻运行合并优化
+
+─────────────────────────────────────────────────────────────────
+Merge adjacent runs with identical formatting in DOCX.
 
 Merges adjacent <w:r> elements that have identical <w:rPr> properties.
 Works on runs in paragraphs and inside tracked changes (<w:ins>, <w:del>).

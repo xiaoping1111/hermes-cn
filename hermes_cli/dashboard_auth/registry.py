@@ -1,3 +1,14 @@
+
+"""Dashboard Provider注册表
+
+【产品经理理解要点】
+模块级Provider注册和查找，供中间件分发认证请求。
+- register_provider：插件启动时注册Provider
+- get_provider/list_providers：中间件运行时查找
+- 线程安全的注册表实现
+
+────────────────────────────────────────────────────────────────"""
+
 """Module-level registry for DashboardAuthProvider instances.
 
 Plugins call ``register_provider`` via the plugin context hook at startup.

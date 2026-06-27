@@ -1,4 +1,13 @@
-"""Tests for Ollama Cloud authentication and /model switch fixes.
+"""CLIollama cloud auth测试
+
+【产品经理理解要点】
+CLIollama cloud auth功能测试。
+- 验证功能：命令行ollama cloud auth功能
+- 关键场景：配置、执行、验证
+- 业务影响：ollama cloud auth命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Ollama Cloud authentication and /model switch fixes.
 
 Covers:
 - OLLAMA_API_KEY resolution for custom endpoints pointing to ollama.com
@@ -6,8 +15,7 @@ Covers:
 - /model command updating requested_provider for session persistence
 - Direct alias resolution from config.yaml model_aliases
 - Reverse lookup: full model names match direct aliases
-- /model tab completion for model aliases
-"""
+- /model tab completion for model aliases"""
 
 import os
 

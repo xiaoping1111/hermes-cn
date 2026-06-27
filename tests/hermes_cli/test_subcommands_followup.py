@@ -1,10 +1,18 @@
-"""Smoke tests for the Phase 2 follow-up subcommand builders (promoted handlers).
+"""CLIsubcommands followup测试
+
+【产品经理理解要点】
+CLIsubcommands followup功能测试。
+- 验证功能：命令行subcommands followup功能
+- 关键场景：配置、执行、验证
+- 业务影响：subcommands followup命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Smoke tests for the Phase 2 follow-up subcommand builders (promoted handlers).
 
 These 9 subcommands had their handler defined as a closure inside main(); the
 handler was promoted to top-level and the parser block extracted into a builder.
 Confirms each builder attaches its subcommand and wires func to the injected
-handler.
-"""
+handler."""
 
 from __future__ import annotations
 

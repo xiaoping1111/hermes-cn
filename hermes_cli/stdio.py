@@ -1,3 +1,14 @@
+
+"""安全stdio配置
+
+【产品经理理解要点】
+Windows安全的标准输入输出配置，解决Unicode编码问题。
+- Windows默认cp1252编码无法输出Unicode字符
+- 将stdout/stderr切换到UTF-8模式
+- 防止中文和特殊字符导致CLI崩溃
+
+────────────────────────────────────────────────────────────────"""
+
 """Windows-safe stdio configuration.
 
 On Windows, Python's ``sys.stdout``/``sys.stderr`` default to the console's

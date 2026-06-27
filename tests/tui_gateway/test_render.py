@@ -1,4 +1,14 @@
-"""Tests for tui_gateway.render — rendering bridge fallback behavior."""
+"""渲染测试
+
+【产品经理理解要点】
+TUI消息渲染。
+- 验证功能：渲染格式正确性
+- 关键场景：格式、颜色、布局
+- 业务影响：消息显示格式错误
+
+─────────────────────────────────────────────────────────────────────────
+Tests for tui_gateway.render — rendering bridge fallback behavior.
+"""
 
 from unittest.mock import MagicMock, patch
 

@@ -1,4 +1,13 @@
-"""Regression guard for #15218 — external memory sync must skip interrupted turns.
+"""Agent运行引擎测试 - memory sync interrupted
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的memory sync interrupted验证。
+- 验证功能：memory sync interrupted功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：memory sync interrupted功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression guard for #15218 — external memory sync must skip interrupted turns.
 
 Before this fix, ``run_conversation`` called
 ``memory_manager.sync_all(original_user_message, final_response)`` at the

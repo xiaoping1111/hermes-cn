@@ -1,4 +1,13 @@
-"""Parity tests: pin the exact current transport behavior per provider.
+"""传输协议一致性
+
+【产品经理理解要点】
+不同传输层行为一致性。
+- 验证功能：HTTP/SSE/WS行为统一
+- 关键场景：协议适配、行为一致
+- 业务影响：传输层行为不一致
+
+─────────────────────────────────────────────────────────────────────────
+Parity tests: pin the exact current transport behavior per provider.
 
 These tests document the flag-based contract between run_agent.py and
 ChatCompletionsTransport.build_kwargs(). When the next PR wires profiles

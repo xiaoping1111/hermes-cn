@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""地图服务客户端
+
+【产品经理理解要点】
+地图搜索和路线规划 API 客户端。
+- 地点搜索和详情
+- 路线规划和距离计算
+
+─────────────────────────────────────────────────────────────────
+
 maps_client.py - CLI tool for maps, geocoding, routing, POI search, and more.
 Uses only Python stdlib. Data from OpenStreetMap/Nominatim, Overpass API, OSRM,
 and TimeAPI.io.

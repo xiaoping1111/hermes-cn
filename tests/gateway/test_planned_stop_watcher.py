@@ -1,4 +1,13 @@
-"""Tests for the planned-stop marker watcher thread (gateway/run.py).
+"""网关planned stop watcher测试
+
+【产品经理理解要点】
+网关planned stop watcher功能测试。
+- 验证功能：网关planned stop watcher处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：planned stop watcher功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the planned-stop marker watcher thread (gateway/run.py).
 
 The watcher is the Windows-fallback path for the v0.13.0 session-resume
 feature — on Windows ``asyncio.add_signal_handler`` raises
@@ -8,8 +17,7 @@ watcher closes this gap by polling for the planned-stop marker file
 and translating its existence into the same shutdown-handler call a
 real SIGTERM would have produced.
 
-See issue #33778 for the original Windows session-loss bug report.
-"""
+See issue #33778 for the original Windows session-loss bug report."""
 
 import asyncio
 import json

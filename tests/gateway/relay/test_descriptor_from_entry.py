@@ -1,9 +1,17 @@
-"""Descriptor <- PlatformEntry projection (relay Phase 0, Task 0.3).
+"""描述符
+
+【产品经理理解要点】
+中继描述符。
+- 验证功能：中继节点的描述符定义
+- 关键场景：描述符解析、校验、序列化
+- 业务影响：中继描述符格式错误
+
+─────────────────────────────────────────────────────────────────────────
+Descriptor <- PlatformEntry projection (relay Phase 0, Task 0.3).
 
 Proves the CapabilityDescriptor is a projection of the existing PlatformEntry,
 not a parallel concept: the entry's label/limit/emoji/hint/pii fields carry
-straight through.
-"""
+straight through."""
 
 from gateway.platform_registry import PlatformEntry
 from gateway.relay.descriptor import CONTRACT_VERSION, CapabilityDescriptor

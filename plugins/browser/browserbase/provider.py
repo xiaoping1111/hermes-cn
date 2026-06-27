@@ -1,4 +1,12 @@
-"""Browserbase cloud browser provider — plugin form.
+"""Browserbase 浏览器提供者
+
+【产品经理理解要点】
+Browserbase 云端浏览器的具体实现。
+- Browserbase API 集成
+- 会话管理和页面交互
+
+─────────────────────────────────────────────────────────────────
+Browserbase cloud browser provider — plugin form.
 
 Subclasses :class:`agent.browser_provider.BrowserProvider` (the plugin-facing
 ABC introduced in PR #25214). The legacy in-tree module

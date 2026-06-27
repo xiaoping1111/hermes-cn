@@ -1,4 +1,13 @@
-"""Memory provider plugin discovery.
+"""记忆提供者插件发现与加载
+
+【产品经理理解要点】
+记忆系统的插件注册中心，扫描并加载记忆后端（如 Hindsight、RetainDB、OpenViking）。
+- 同时扫描内置插件目录和用户安装目录，内置优先
+- 同一时间仅激活一个记忆提供者，通过 memory.provider 配置选择
+- 记忆提供者实现 MemoryProvider ABC，提供跨会话的长期记忆能力
+
+─────────────────────────────────────────────────────────────────
+Memory provider plugin discovery.
 
 Scans two directories for memory provider plugins:
 

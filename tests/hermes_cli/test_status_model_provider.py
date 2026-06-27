@@ -1,4 +1,13 @@
-"""Tests for hermes_cli.status model/provider display."""
+"""CLIstatus model provider测试
+
+【产品经理理解要点】
+CLIstatus model provider功能测试。
+- 验证功能：命令行status model provider功能
+- 关键场景：配置、执行、验证
+- 业务影响：status model provider命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.status model/provider display."""
 
 from types import SimpleNamespace
 

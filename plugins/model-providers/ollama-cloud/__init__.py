@@ -1,4 +1,12 @@
-"""Ollama Cloud provider profile."""
+"""Ollama Cloud 模型提供者
+
+【产品经理理解要点】
+对接 Ollama Cloud 托管推理服务。
+- Ollama 云端推理
+- 兼容本地 Ollama API
+
+─────────────────────────────────────────────────────────────────
+Ollama Cloud provider profile."""
 
 from providers import register_provider
 from providers.base import ProviderProfile

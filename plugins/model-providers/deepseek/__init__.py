@@ -1,4 +1,12 @@
-"""DeepSeek provider profile.
+"""DeepSeek 模型提供者
+
+【产品经理理解要点】
+对接 DeepSeek 大模型服务。
+- DeepSeek V3/R1 系列模型
+- DEEPSEEK_API_KEY 认证
+
+─────────────────────────────────────────────────────────────────
+DeepSeek provider profile.
 
 DeepSeek's V4 family (and the legacy ``deepseek-reasoner``) defaults to
 thinking-mode ON when ``extra_body.thinking`` is unset.  The API then returns

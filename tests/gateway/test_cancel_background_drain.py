@@ -1,12 +1,20 @@
-"""Regression test: cancel_background_tasks must drain late-arrival tasks.
+"""网关cancel background drain测试
+
+【产品经理理解要点】
+网关cancel background drain功能测试。
+- 验证功能：网关cancel background drain处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：cancel background drain功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression test: cancel_background_tasks must drain late-arrival tasks.
 
 During gateway shutdown, a message arriving while
 cancel_background_tasks is mid-await can spawn a fresh
 _process_message_background task via handle_message, which is added
 to self._background_tasks.  Without the re-drain loop, the subsequent
 _background_tasks.clear() drops the reference; the task runs
-untracked against a disconnecting adapter.
-"""
+untracked against a disconnecting adapter."""
 
 import asyncio
 from unittest.mock import AsyncMock

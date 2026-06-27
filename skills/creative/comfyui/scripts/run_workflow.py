@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""ComfyUI 工作流执行
+
+【产品经理理解要点】
+提交并执行单个 ComfyUI 工作流。
+- 工作流提交和等待
+- 结果图片保存
+
+─────────────────────────────────────────────────────────────────
+
 run_workflow.py — Inject parameters into a ComfyUI workflow, submit it, monitor
 execution, and download outputs.
 

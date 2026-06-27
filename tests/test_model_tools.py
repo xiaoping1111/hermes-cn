@@ -1,4 +1,14 @@
-"""Tests for model_tools.py — function call dispatch, agent-loop interception, legacy toolsets."""
+"""测试 - model tools
+
+【产品经理理解要点】
+功能验证中的model tools验证。
+- 验证功能：model tools功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：model tools功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for model_tools.py — function call dispatch, agent-loop interception, legacy toolsets.
+"""
 
 import json
 from unittest.mock import ANY, call, patch

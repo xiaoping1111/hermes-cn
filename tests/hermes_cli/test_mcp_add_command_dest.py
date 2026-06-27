@@ -1,4 +1,13 @@
-"""Regression test: ``hermes mcp add --command`` must not clobber the
+"""CLImcp add command dest测试
+
+【产品经理理解要点】
+CLImcp add command dest功能测试。
+- 验证功能：命令行mcp add command dest功能
+- 关键场景：配置、执行、验证
+- 业务影响：mcp add command dest命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression test: ``hermes mcp add --command`` must not clobber the
 top-level ``args.command`` subparser dest.
 
 The top-level argparse parser uses ``dest="command"`` for its subparsers
@@ -18,8 +27,7 @@ is unchanged; only the in-memory attribute moves.
 
 We replicate the relevant parser shape here rather than importing the
 real builder, mirroring ``test_argparse_flag_propagation.py`` and
-``test_subparser_routing_fallback.py``.
-"""
+``test_subparser_routing_fallback.py``."""
 
 import argparse
 

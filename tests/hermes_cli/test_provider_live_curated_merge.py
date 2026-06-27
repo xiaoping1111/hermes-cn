@@ -1,9 +1,17 @@
-"""Tests for live+curated merge in the generic profile-based provider path.
+"""CLIprovider live curated merge测试
+
+【产品经理理解要点】
+CLIprovider live curated merge功能测试。
+- 验证功能：命令行provider live curated merge功能
+- 关键场景：配置、执行、验证
+- 业务影响：provider live curated merge命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for live+curated merge in the generic profile-based provider path.
 
 Guards the fix for #46850: when a provider's live /v1/models endpoint
 returns a stale or incomplete list, the static curated models from
-``_PROVIDER_MODELS`` must still appear in the merged result.
-"""
+``_PROVIDER_MODELS`` must still appear in the merged result."""
 
 from unittest.mock import MagicMock, patch
 

@@ -1,4 +1,13 @@
-"""Tests for the OAuth manual-paste fallback for browser-only remotes.
+"""CLIauth manual paste测试
+
+【产品经理理解要点】
+CLIauth manual paste功能测试。
+- 验证功能：命令行auth manual paste功能
+- 关键场景：配置、执行、验证
+- 业务影响：auth manual paste命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the OAuth manual-paste fallback for browser-only remotes.
 
 Regression coverage for [#26923](https://github.com/NousResearch/hermes-agent/issues/26923):
 GCP Cloud Shell, GitHub Codespaces, AWS EC2 Instance Connect and
@@ -18,8 +27,7 @@ locks in four things:
   same shape.
 * ``_xai_oauth_loopback_login(manual_paste=True)`` skips the HTTP
   server entirely, validates ``state``, and goes straight to the
-  token exchange — proving the paste path actually wires up.
-"""
+  token exchange — proving the paste path actually wires up."""
 
 from __future__ import annotations
 

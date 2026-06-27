@@ -1,4 +1,13 @@
-"""Regression guard for #14920: wildcard "*" in Discord channel config lists.
+"""Discord网关测试
+
+【产品经理理解要点】
+Discord平台网关功能测试。
+- 验证功能：Discord平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Discord平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Regression guard for #14920: wildcard "*" in Discord channel config lists.
 
 Setting ``allowed_channels: "*"``, ``free_response_channels: "*"``, or
 ``ignored_channels: "*"`` in config (or their ``DISCORD_*_CHANNELS`` env var
@@ -7,8 +16,7 @@ channel (or is silenced in every channel, for the ignored list). Previously
 the literal string "*" was placed into a set and compared against numeric
 channel IDs via set-intersection, which always produced an empty set and
 caused every message to be silently dropped (for ``allowed_channels``) or
-every ``free_response`` / ``ignored`` check to fail open.
-"""
+every ``free_response`` / ``ignored`` check to fail open."""
 
 import unittest
 

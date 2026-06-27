@@ -1,12 +1,20 @@
-"""Tests for `hermes update --yes / -y` — assume yes for interactive prompts.
+"""CLIupdate yes flag测试
+
+【产品经理理解要点】
+CLIupdate yes flag功能测试。
+- 验证功能：命令行update yes flag功能
+- 关键场景：配置、执行、验证
+- 业务影响：update yes flag命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for `hermes update --yes / -y` — assume yes for interactive prompts.
 
 Covers:
   1. argparse parses the flag
   2. Config-migration prompt is auto-answered (no input() call) and migrate_config
      runs with interactive=False so API-key prompts are skipped
   3. Autostash restore prompt is auto-answered (prompt_for_restore == False, no
-     input() call) and the stash is applied automatically
-"""
+     input() call) and the stash is applied automatically"""
 
 import subprocess
 from types import SimpleNamespace

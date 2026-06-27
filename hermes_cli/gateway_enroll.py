@@ -1,3 +1,14 @@
+
+"""网关注册命令
+
+【产品经理理解要点】
+hermes gateway enroll，将自托管网关注册到Nous Portal的中继连接器。
+- 零接触注册：自动完成与Nous Portal的双向认证
+- 生成网关侧的认证凭据
+- 企业部署场景：网关暴露公网时的安全通道
+
+────────────────────────────────────────────────────────────────"""
+
 """``hermes gateway enroll`` — enroll a self-hosted gateway with a relay connector.
 
 The connector⇄gateway channel is authenticated (the gateway may be

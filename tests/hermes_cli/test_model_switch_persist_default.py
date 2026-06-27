@@ -1,12 +1,20 @@
-"""Tests for persist-by-default model switching.
+"""CLImodel switch persist default测试
+
+【产品经理理解要点】
+CLImodel switch persist default功能测试。
+- 验证功能：命令行model switch persist default功能
+- 关键场景：配置、执行、验证
+- 业务影响：model switch persist default命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for persist-by-default model switching.
 
 Covers:
 - ``parse_model_flags`` recognises ``--session`` (and keeps ``--global``).
 - ``resolve_persist_behavior`` applies the config-gated default and the
   ``--session`` / ``--global`` overrides.
 - The default (no flags) persists, which is the user-facing fix: a plain
-  ``/model <name>`` survives across sessions.
-"""
+  ``/model <name>`` survives across sessions."""
 
 from unittest.mock import patch
 

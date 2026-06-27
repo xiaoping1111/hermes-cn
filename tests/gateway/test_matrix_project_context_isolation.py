@@ -1,4 +1,13 @@
-"""Matrix Project A / Project B context-isolation regressions."""
+"""Matrix项目隔离
+
+【产品经理理解要点】
+Matrix项目上下文隔离。
+- 验证功能：Matrix平台不同项目的上下文隔离
+- 关键场景：上下文分离、配置独立
+- 业务影响：不同项目上下文混淆
+
+─────────────────────────────────────────────────────────────────────────
+Matrix Project A / Project B context-isolation regressions."""
 
 from __future__ import annotations
 

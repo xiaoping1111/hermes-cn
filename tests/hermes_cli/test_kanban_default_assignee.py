@@ -1,9 +1,17 @@
-"""Regression tests for #27145 — kanban.default_assignee for unassigned ready tasks.
+"""CLIkanban default assignee测试
+
+【产品经理理解要点】
+CLIkanban default assignee功能测试。
+- 验证功能：命令行kanban default assignee功能
+- 关键场景：配置、执行、验证
+- 业务影响：kanban default assignee命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for #27145 — kanban.default_assignee for unassigned ready tasks.
 
 When the dispatcher hits an unassigned ready task and ``kanban.default_assignee``
 is set, the dispatcher applies the assignment and spawns. Without the config,
-the task is skipped (existing behavior preserved).
-"""
+the task is skipped (existing behavior preserved)."""
 from __future__ import annotations
 
 import json

@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Watch any JSON endpoint that returns a list of objects; dedup by ID field.
+"""HTTP JSON 监控
+
+【产品经理理解要点】
+监控 HTTP JSON 端点的数据变化。
+- 轮询和变更检测
+- JSON Path 提取和比较
+
+─────────────────────────────────────────────────────────────────
+Watch any JSON endpoint that returns a list of objects; dedup by ID field.
 
 Usage (via cron with --no-agent):
 

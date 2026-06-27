@@ -1,4 +1,13 @@
-"""Regression tests for #13636 — CloudCode / Gemini CLI rate-limit fallback.
+"""Agent核心测试 - gemini fast fallback
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的gemini fast fallback验证。
+- 验证功能：gemini fast fallback功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：gemini fast fallback功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for #13636 — CloudCode / Gemini CLI rate-limit fallback.
 
 _pool_may_recover_from_rate_limit() is the hinge between credential-pool
 rotation and fallback-provider activation.  For CloudCode (Gemini CLI /

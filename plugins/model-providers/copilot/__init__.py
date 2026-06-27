@@ -1,4 +1,12 @@
-"""Copilot / GitHub Models provider profile.
+"""GitHub Copilot 模型提供者
+
+【产品经理理解要点】
+对接 GitHub Copilot 模型服务。
+- Copilot 模型接入
+- GitHub OAuth 认证
+
+─────────────────────────────────────────────────────────────────
+Copilot / GitHub Models provider profile.
 
 Copilot uses per-model api_mode routing:
   - GPT-5+ / Codex models → codex_responses

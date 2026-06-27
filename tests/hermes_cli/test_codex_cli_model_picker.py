@@ -1,4 +1,13 @@
-"""Regression tests for the /model picker's credential-discovery paths.
+"""CLIcodex cli model picker测试
+
+【产品经理理解要点】
+CLIcodex cli model picker功能测试。
+- 验证功能：命令行codex cli model picker功能
+- 关键场景：配置、执行、验证
+- 业务影响：codex cli model picker命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the /model picker's credential-discovery paths.
 
 Covers:
  - Normal path (tokens already in Hermes auth store)
@@ -8,8 +17,7 @@ Covers:
 Note: auto-import from ~/.codex/auth.json was removed in #12360 — Hermes
 now owns its own openai-codex auth state, and users explicitly adopt
 existing Codex CLI tokens via `hermes auth openai-codex`. The old
-"Codex CLI shared file" discovery tests were removed with that change.
-"""
+"Codex CLI shared file" discovery tests were removed with that change."""
 
 import base64
 import json

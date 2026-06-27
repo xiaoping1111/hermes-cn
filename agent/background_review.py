@@ -1,5 +1,16 @@
 """Background memory/skill review — fork the agent to evaluate the turn.
 
+后台记忆/技能审查
+
+【产品经理理解要点】
+每轮对话后在后台 fork 一个智能体审查是否需要保存/更新技能或记忆。
+- 核心职责：fork 后台审查线程、限制工具白名单(仅记忆/技能工具)、写入存储
+- 关键业务概念：后台审查、自改进循环、fork 继承、工具白名单
+- 在系统中的位置：对话结束后的自改进增强功能
+
+─────────────────────────────────────────────────────────────────
+
+
 After every turn, ``AIAgent.run_conversation`` may call
 :func:`spawn_background_review` to fire off a daemon thread that replays
 the conversation snapshot in a forked :class:`AIAgent` and asks itself

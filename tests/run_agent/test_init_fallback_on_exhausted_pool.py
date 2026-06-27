@@ -1,5 +1,15 @@
-"""Regression test for #17929: AIAgent.__init__ should try fallback_model
-when primary provider credentials are exhausted."""
+"""Agent运行引擎测试 - init fallback on exhausted pool
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的init fallback on exhausted pool验证。
+- 验证功能：init fallback on exhausted pool功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：init fallback on exhausted pool功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression test for #17929: AIAgent.__init__ should try fallback_model
+when primary provider credentials are exhausted.
+"""
 import pytest
 from unittest.mock import patch, MagicMock
 from run_agent import AIAgent

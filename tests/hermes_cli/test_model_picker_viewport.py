@@ -1,11 +1,19 @@
-"""Tests for the prompt_toolkit /model picker scroll viewport.
+"""CLImodel picker viewport测试
+
+【产品经理理解要点】
+CLImodel picker viewport功能测试。
+- 验证功能：命令行model picker viewport功能
+- 关键场景：配置、执行、验证
+- 业务影响：model picker viewport命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the prompt_toolkit /model picker scroll viewport.
 
 Regression for: when a provider exposes many models (e.g. Ollama Cloud's
 36+), the picker rendered every choice into a Window with no max height,
 clipping the bottom border and any items past the terminal's last row.
 The viewport helper now caps visible items and slides the offset to keep
-the cursor on screen.
-"""
+the cursor on screen."""
 from cli import HermesCLI
 
 

@@ -1,4 +1,13 @@
-"""Guardrail: dashboard plugins must NOT read the session token directly.
+"""插件系统测试 - plugin dashboard auth contract
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的plugin dashboard auth contract验证。
+- 验证功能：plugin dashboard auth contract功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：plugin dashboard auth contract功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Guardrail: dashboard plugins must NOT read the session token directly.
 
 The dashboard host exposes a sanctioned, gated-mode-aware auth surface on the
 plugin SDK (``window.__HERMES_PLUGIN_SDK__``): ``fetchJSON`` (JSON REST),

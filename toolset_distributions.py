@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""工具集分布配置
+
+【产品经理理解要点】
+定义批量运行时各类工具的抽样概率，控制每次对话随机激活哪些工具集。
+- 核心职责：为批量评估场景配置工具集的选用概率分布（如图像生成 90%、终端 30%）
+- 关键业务概念：概率分布、工具集名称、归一化——不同场景侧重不同工具组合
+- 在系统中的位置：被 batch_runner.py 调用，决定每条提示词可用的工具范围
+
+─────────────────────────────────────────────────────────────────
 Toolset Distributions Module
 
 This module defines distributions of toolsets for data generation runs.

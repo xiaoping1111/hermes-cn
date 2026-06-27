@@ -1,4 +1,13 @@
-"""Regression tests for issue #11016 — Telegram sessions trapped in
+"""网关session split brain 11016测试
+
+【产品经理理解要点】
+网关session split brain 11016功能测试。
+- 验证功能：网关session split brain 11016处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：session split brain 11016功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for issue #11016 — Telegram sessions trapped in
 repeated 'Interrupting current task...' while /stop reports no active task.
 
 Covers three layers of the fix:
@@ -13,8 +22,7 @@ Covers three layers of the fix:
 
 3. Runner-side generation guard: a stale async run can't promote itself
    into _running_agents after /stop/ /new bumped the generation, and
-   can't clear a newer run's slot on the way out.
-"""
+   can't clear a newer run's slot on the way out."""
 
 import asyncio
 from unittest.mock import MagicMock

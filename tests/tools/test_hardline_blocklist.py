@@ -1,4 +1,13 @@
-"""Tests for the unconditional hardline command blocklist.
+"""工具系统测试 - hardline blocklist
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的hardline blocklist验证。
+- 验证功能：hardline blocklist功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：hardline blocklist功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the unconditional hardline command blocklist.
 
 The hardline list is a floor below yolo: a small set of commands so
 catastrophic they should never run via the agent, regardless of --yolo,

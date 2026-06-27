@@ -1,4 +1,13 @@
-"""Tests for the ``hermes prompt-size`` diagnostic (issue #34667)."""
+"""CLIprompt size测试
+
+【产品经理理解要点】
+CLIprompt size功能测试。
+- 验证功能：命令行prompt size功能
+- 关键场景：配置、执行、验证
+- 业务影响：prompt size命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the ``hermes prompt-size`` diagnostic (issue #34667)."""
 
 import json
 

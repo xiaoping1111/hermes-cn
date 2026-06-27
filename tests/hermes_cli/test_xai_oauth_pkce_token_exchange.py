@@ -1,4 +1,13 @@
-"""Regression coverage for xAI OAuth PKCE token exchange (issue #26990).
+"""CLIxai oauth pkce token exchange测试
+
+【产品经理理解要点】
+CLIxai oauth pkce token exchange功能测试。
+- 验证功能：命令行xai oauth pkce token exchange功能
+- 关键场景：配置、执行、验证
+- 业务影响：xai oauth pkce token exchange命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression coverage for xAI OAuth PKCE token exchange (issue #26990).
 
 Issue [#26990] reported that ``hermes auth add xai-oauth`` succeeds at the
 browser-side authorize step but fails at the token endpoint with
@@ -20,8 +29,7 @@ The fix in ``hermes_cli/auth.py`` extracts the token POST into
   users / maintainers can tell a 400 (bad request) from a 403
   (entitlement denied) at a glance.
 
-These tests pin all three behaviors so the fix can't silently regress.
-"""
+These tests pin all three behaviors so the fix can't silently regress."""
 
 from __future__ import annotations
 

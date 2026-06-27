@@ -1,4 +1,12 @@
-"""Durable local state for the Teams pipeline plugin."""
+"""Teams 会议管线持久化存储
+
+【产品经理理解要点】
+Teams 会议管线插件的本地 JSON 状态存储。
+- 管线运行状态的持久化
+- 原子写入防止数据损坏
+
+─────────────────────────────────────────────────────────────────
+Durable local state for the Teams pipeline plugin."""
 
 from __future__ import annotations
 

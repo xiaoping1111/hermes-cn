@@ -1,5 +1,16 @@
 """Credits tracking for Nous inference API responses.
 
+积分追踪器
+
+【产品经理理解要点】
+从 API 响应头解析 Nous 积分余额和订阅状态，提供余额耗尽检测。
+- 核心职责：解析 x-nous-credits-* 头部、积分/订阅/工具池状态、耗尽预警
+- 关键业务概念：积分类(micros/USD)、订阅上限、付费访问(paid_access)、工具池
+- 在系统中的位置：/usage 斜杠命令的 Nous 积分数据源
+
+─────────────────────────────────────────────────────────────────
+
+
 Parses x-nous-credits-* (and optional x-nous-tool-pool-*) headers from
 inference responses into a validated CreditsState dataclass.  Provides
 depletion detection (paid_access), subscription-cap used_fraction, and

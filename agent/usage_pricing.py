@@ -1,5 +1,17 @@
 from __future__ import annotations
 
+"""用量与定价计算
+
+用量与定价计算
+
+【产品经理理解要点】
+根据模型元数据和实际用量计算 Token 成本，支持多种定价来源。
+- 核心职责：Token 成本计算、多来源定价(供应商API/官方文档/用户覆盖)
+- 关键业务概念：输入/输出 Token 单价、成本状态(实际/估算/包含)、成本来源
+- 在系统中的位置：/usage 和 /insights 的成本计算引擎
+
+─────────────────────────────────────────────────────────────────
+"""
 import re
 from dataclasses import dataclass
 from datetime import datetime, timezone

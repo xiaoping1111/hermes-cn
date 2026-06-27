@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""身体指标计算
+
+【产品经理理解要点】
+计算 BMI、BMR、TDEE 等身体和健身指标。
+- BMI 和体脂率计算
+- 每日热量需求估算
+
+─────────────────────────────────────────────────────────────────
+
 body_calc.py — All-in-one fitness calculator.
 
 Subcommands:

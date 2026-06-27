@@ -1,4 +1,15 @@
 """
+后台进程注册表
+
+【产品经理理解要点】
+管理智能体启动的后台进程，提供进程追踪、输出捕获、完成通知等全生命周期管理。
+- 核心职责：后台进程的创建与注册、输出缓冲（滚动200KB窗口）、状态查询、阻塞等待、进程终止、崩溃恢复
+- 关键业务概念：Watch Pattern——监控进程输出，匹配关键词时自动通知智能体（如构建失败、测试通过）；速率限制——防止高频输出洪水般通知用户
+- 多后端支持：本地进程（Popen/PTY）、Docker容器、Singularity、Modal、Daytona、SSH远程
+- 崩溃恢复：通过JSON检查点文件，网关重启后可恢复之前的进程状态
+- 在系统中的位置：位于终端工具和操作系统/容器运行时之间，是后台任务管理的核心组件
+
+─────────────────────────────────────────────────────────────────
 Process Registry -- In-memory registry for managed background processes.
 
 Tracks processes spawned via terminal(background=true), providing:

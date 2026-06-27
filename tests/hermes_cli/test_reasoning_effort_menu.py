@@ -1,3 +1,11 @@
+"""CLIreasoning effort menu测试
+
+【产品经理理解要点】
+CLIreasoning effort menu功能测试。
+- 验证功能：命令行reasoning effort menu功能
+- 关键场景：配置、执行、验证
+- 业务影响：reasoning effort menu命令行功能失效"""
+
 from hermes_cli.main import _prompt_reasoning_effort_selection
 
 

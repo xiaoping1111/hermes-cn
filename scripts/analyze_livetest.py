@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Compare enabled vs disabled runs and produce a readable report.
+"""工具搜索实测分析
+
+【产品经理理解要点】
+对比工具搜索功能开启/关闭两种模式下的实测结果，生成可读报告并标记异常。
+- 核心职责：读取实测 JSON 数据，并排对比两种模式下每个场景的工具调用序列和结果
+- 关键概念：用于验证 tool_search 特性的效果——是否真的帮助 Agent 更精准地选择工具
+- 系统定位：质量验证脚本，属于测试辅助工具
+
+─────────────────────────────────────────────────────────────────
+Compare enabled vs disabled runs and produce a readable report.
 
 Reads scripts/out/_summary.json and the per-scenario JSONs, prints a side-by-
 side comparison of what happened, and flags anomalies.

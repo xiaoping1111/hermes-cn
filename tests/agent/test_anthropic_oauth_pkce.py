@@ -1,4 +1,13 @@
-"""Regression tests for the Anthropic OAuth PKCE flow.
+"""Agent核心测试 - anthropic oauth pkce
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的anthropic oauth pkce验证。
+- 验证功能：anthropic oauth pkce功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：anthropic oauth pkce功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the Anthropic OAuth PKCE flow.
 
 Guards against re-introducing the bug where the PKCE ``code_verifier`` was
 reused as the OAuth ``state`` parameter, leaking the verifier via the

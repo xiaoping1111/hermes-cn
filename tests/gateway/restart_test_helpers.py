@@ -1,3 +1,11 @@
+"""重启测试辅助
+
+【产品经理理解要点】
+重启测试辅助函数。
+- 验证功能：重启相关测试的辅助工具
+- 关键场景：状态快照、进程管理、断言辅助
+- 业务影响：重启测试辅助工具不可用"""
+
 import asyncio
 from collections import OrderedDict
 from unittest.mock import AsyncMock, MagicMock

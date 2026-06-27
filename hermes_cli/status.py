@@ -1,8 +1,15 @@
-"""
+"""状态命令
+
+【产品经理理解要点】
+hermes status，显示所有Hermes组件的运行状态。
+- 检查Agent/Gateway/Dashboard/Cron等服务的运行状态
+- 显示版本号和配置路径
+- 系统健康快速概览
+
+────────────────────────────────────────────────────────────────
 Status command for hermes CLI.
 
-Shows the status of all Hermes Agent components.
-"""
+Shows the status of all Hermes Agent components."""
 
 import os
 import sys

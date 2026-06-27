@@ -1,3 +1,14 @@
+
+"""Telegram托管机器人
+
+【产品经理理解要点】
+使用Telegram Managed Bot功能自动创建Robot，无需手动BotFather操作。
+- 通过Nous onboarding服务自动获取bot token
+- 用户无需接触BotFather即可完成Telegram集成
+- token本地存储，Nous服务不保留
+
+────────────────────────────────────────────────────────────────"""
+
 """Telegram Managed Bot onboarding client.
 
 Uses Telegram's Managed Bots feature to create a user-owned child bot without

@@ -1,4 +1,13 @@
-"""Regression: the Windows installer must not spawn a bare ``powershell``.
+"""测试 - install ps1 uv powershell host
+
+【产品经理理解要点】
+功能验证中的install ps1 uv powershell host验证。
+- 验证功能：install ps1 uv powershell host功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：install ps1 uv powershell host功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression: the Windows installer must not spawn a bare ``powershell``.
 
 A user on Windows reported the installer getting stuck; running
 ``irm https://hermes-agent.nousresearch.com/install.ps1 | iex`` failed at the

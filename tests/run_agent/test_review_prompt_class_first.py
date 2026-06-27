@@ -1,4 +1,13 @@
-"""Behavior tests for the skill review / combined review prompts.
+"""Agent运行引擎测试 - review prompt class first
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的review prompt class first验证。
+- 验证功能：review prompt class first功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：review prompt class first功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Behavior tests for the skill review / combined review prompts.
 
 The review prompts steer the background review agent toward actively updating
 the skill library after most sessions, with a strong bias toward:

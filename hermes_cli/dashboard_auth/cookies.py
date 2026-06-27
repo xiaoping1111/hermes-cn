@@ -1,3 +1,14 @@
+
+"""Dashboard认证Cookie
+
+【产品经理理解要点】
+Dashboard认证的Cookie设置和解析，支持访问令牌和刷新令牌。
+- hermes_session_at：访问令牌（HttpOnly, ~15分钟TTL）
+- hermes_session_rt：刷新令牌（HttpOnly, 24h, 轮转机制）
+- 令牌过期时自动刷新，用户无感知
+
+────────────────────────────────────────────────────────────────"""
+
 """Cookie helpers for dashboard auth.
 
 Three cookies in play:

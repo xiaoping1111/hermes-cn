@@ -1,5 +1,16 @@
 """System prompt assembly -- identity, platform hints, skills index, context files.
 
+系统提示构建器
+
+【产品经理理解要点】
+组装智能体的系统提示：身份、平台信息、技能索引、上下文文件等。
+- 核心职责：读取 SOUL.md/AGENTS.md/.cursorrules、构建身份/技能/上下文提示块
+- 关键业务概念：系统提示三层结构(stable/context/volatile)、技能索引、上下文发现
+- 在系统中的位置：每轮对话初始化时构建系统提示的核心模块
+
+─────────────────────────────────────────────────────────────────
+
+
 All functions are stateless. AIAgent._build_system_prompt() calls these to
 assemble pieces, then combines them with memory and ephemeral prompts.
 """

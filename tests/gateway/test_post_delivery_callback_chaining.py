@@ -1,11 +1,19 @@
-"""Tests for ``BasePlatformAdapter.register_post_delivery_callback`` chaining.
+"""网关post delivery callback chaining测试
+
+【产品经理理解要点】
+网关post delivery callback chaining功能测试。
+- 验证功能：网关post delivery callback chaining处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：post delivery callback chaining功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ``BasePlatformAdapter.register_post_delivery_callback`` chaining.
 
 When two features want to run after the final response lands on the same
 session (e.g. background-review release + temporary-progress cleanup), the
 registration API chains them rather than clobbering. Per-callback
 exceptions are swallowed so one bad callback can't sabotage the others.
-Stale-generation registrations are rejected.
-"""
+Stale-generation registrations are rejected."""
 import pytest
 
 from gateway.config import Platform, PlatformConfig

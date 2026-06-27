@@ -1,4 +1,14 @@
-"""Shared SKILL.md preprocessing helpers."""
+"""技能预处理工具
+
+【产品经理理解要点】
+预处理 SKILL.md 中的模板变量和内嵌 Shell 命令，在加载时展开。
+- 核心职责：替换 ${HERMES_SKILL_DIR} 等模板变量、执行 !`cmd` 内嵌 Shell 片段
+- 关键业务概念：模板变量展开、内嵌 Shell、输出长度限制
+- 在系统中的位置：技能加载管线中的文本预处理步骤
+
+─────────────────────────────────────────────────────────────────
+Shared SKILL.md preprocessing helpers."""
+
 
 import logging
 import re

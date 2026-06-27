@@ -1,4 +1,13 @@
-"""Prompt-size diagnostic: ``hermes prompt-size``.
+"""提示词大小诊断工具
+
+【产品经理理解要点】
+诊断系统提示词的各组成部分大小，帮助用户了解固定提示词预算花在哪里。
+- 核心职责：拆解系统提示词为技能索引、记忆块、用户画像、工具 schema 等部分，报告字符数和字节数
+- 关键概念：提示词三层结构（stable/context/volatile）、技能索引占比、工具 schema 体积
+- 系统定位：离线诊断工具，不发起网络请求，数字与实际上线内容一致
+
+─────────────────────────────────────────────────────────────────
+Prompt-size diagnostic: ``hermes prompt-size``.
 
 Reports a byte/char breakdown of the system prompt the agent would build for
 a fresh session — system prompt total, the ``<available_skills>`` index,

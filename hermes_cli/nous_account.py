@@ -1,3 +1,14 @@
+
+"""Nous账户权限
+
+【产品经理理解要点】
+Nous Portal用户账户的权限和余额信息查询。
+- 规范化账户权益信息
+- 线程安全的缓存和刷新
+- 供计费和额度限制模块使用
+
+────────────────────────────────────────────────────────────────"""
+
 """Normalized Nous Portal account entitlement helpers."""
 
 from __future__ import annotations

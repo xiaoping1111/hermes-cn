@@ -1,4 +1,12 @@
-"""Pytest configuration for the comfyui skill test suite.
+"""ComfyUI 测试配置
+
+【产品经理理解要点】
+ComfyUI 技能测试的 pytest 配置和共享 fixture。
+- 测试环境初始化
+- 共享 mock 和 fixture
+
+─────────────────────────────────────────────────────────────────
+Pytest configuration for the comfyui skill test suite.
 
 Adds `scripts/` to sys.path so tests can `from _common import ...`, and
 provides a few common fixtures.

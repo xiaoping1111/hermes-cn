@@ -1,4 +1,13 @@
-"""ACP permission bridging for Hermes dangerous-command approvals."""
+"""ACP 权限桥接
+
+【产品经理理解要点】
+将 Hermes 的危险命令审批机制桥接到 ACP 权限请求，让编辑器用户能控制 Agent 的敏感操作。
+- 核心职责：当 Agent 要执行危险命令时，通过 ACP 向编辑器弹出权限请求，用户可选择允许/拒绝
+- 关键概念：支持"仅允许一次""本次会话允许""始终允许"和"拒绝"四种权限粒度
+- 系统定位：权限控制层，保障 Agent 在编辑器中的操作安全可控
+
+─────────────────────────────────────────────────────────────────────────
+ACP permission bridging for Hermes dangerous-command approvals."""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""Cron scheduler provider plugin discovery.
+"""定时任务调度插件发现与加载
+
+【产品经理理解要点】
+定时任务调度器的插件注册中心，扫描并加载调度后端。
+- 同时扫描内置和用户安装目录，内置优先
+- 同一时间仅激活一个调度器，通过 cron.provider 配置选择
+- 内置 InProcessCronScheduler 不在此发现，仅非默认提供者（如 chronos）
+
+─────────────────────────────────────────────────────────────────
+Cron scheduler provider plugin discovery.
 
 Scans two directories for cron scheduler provider plugins:
 

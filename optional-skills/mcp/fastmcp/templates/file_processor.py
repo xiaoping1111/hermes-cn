@@ -1,5 +1,16 @@
 from __future__ import annotations
 
+
+"""FastMCP 文件处理模板
+
+【产品经理理解要点】
+FastMCP 文件处理服务器的模板实现。
+- 文件读写工具注册
+- 格式转换和处理
+
+─────────────────────────────────────────────────────────────────
+"""
+
 from pathlib import Path
 from typing import Any
 

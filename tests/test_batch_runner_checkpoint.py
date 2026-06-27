@@ -1,4 +1,14 @@
-"""Tests for batch_runner checkpoint behavior — incremental writes, resume, atomicity."""
+"""批量运行器集成
+
+【产品经理理解要点】
+多会话批量执行。
+- 验证功能：批量调度与并发
+- 关键场景：调度、并发、结果收集
+- 业务影响：批量任务执行异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for batch_runner checkpoint behavior — incremental writes, resume, atomicity.
+"""
 
 import json
 from pathlib import Path

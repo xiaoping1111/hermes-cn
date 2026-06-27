@@ -1,4 +1,13 @@
-"""Shared fixtures for tests/tools/ web-provider tests.
+"""工具系统测试 - conftest
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的conftest验证。
+- 验证功能：conftest功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：conftest功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Shared fixtures for tests/tools/ web-provider tests.
 
 Per-file subprocess isolation means each test file gets a fresh interpreter,
 so module-level state (like the web-search-provider registry) is empty when

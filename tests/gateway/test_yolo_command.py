@@ -1,4 +1,13 @@
-"""Tests for gateway /yolo session scoping."""
+"""YOLO命令
+
+【产品经理理解要点】
+YOLO命令处理。
+- 验证功能：YOLO模式的命令执行
+- 关键场景：命令识别、权限检查、执行
+- 业务影响：YOLO模式命令失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway /yolo session scoping."""
 
 import os
 

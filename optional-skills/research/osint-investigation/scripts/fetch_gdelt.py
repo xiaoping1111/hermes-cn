@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Search the GDELT 2.0 DOC API for news mentions.
+"""GDELT 事件数据库查询
+
+【产品经理理解要点】
+查询 GDELT 全球事件数据库获取新闻事件。
+- 事件搜索和过滤
+- 时间线和地理分析
+
+─────────────────────────────────────────────────────────────────
+Search the GDELT 2.0 DOC API for news mentions.
 
 GDELT monitors world news in 100+ languages and indexes the full text.
 Free, anonymous, ~15-minute update frequency. Covers ~2015→present.

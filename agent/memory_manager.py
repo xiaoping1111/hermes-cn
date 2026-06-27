@@ -1,5 +1,16 @@
 """MemoryManager — orchestrates memory providers for the agent.
 
+记忆管理器
+
+【产品经理理解要点】
+统一管理所有记忆供应商，为智能体提供跨会话记忆召回和持久化。
+- 核心职责：注册/选择记忆供应商、构建系统提示记忆块、轮次前后读写
+- 关键业务概念：记忆供应商(Honcho/Mem0等)、单一外部供应商限制、预取/同步
+- 在系统中的位置：run_agent.py 的记忆集成点，连接对话引擎与记忆后端
+
+─────────────────────────────────────────────────────────────────
+
+
 Single integration point in run_agent.py. Replaces scattered per-backend
 code with one manager that delegates to registered providers.
 

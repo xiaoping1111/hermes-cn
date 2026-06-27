@@ -1,10 +1,18 @@
-"""Tests for `hermes curator status` output.
+"""CLIcurator status测试
+
+【产品经理理解要点】
+CLIcurator status功能测试。
+- 验证功能：命令行curator status功能
+- 关键场景：配置、执行、验证
+- 业务影响：curator status命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for `hermes curator status` output.
 
 Covers:
 - y0shualee's "least recently active" semantic (view/patch/use all count as activity).
 - The most-used / least-used rankings by activity_count so users can see which
-  skills actually get exercised.
-"""
+  skills actually get exercised."""
 
 from __future__ import annotations
 

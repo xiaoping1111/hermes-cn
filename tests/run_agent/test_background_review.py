@@ -1,4 +1,14 @@
-"""Regression tests for background review agent cleanup."""
+"""Agent运行引擎测试 - background review
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的background review验证。
+- 验证功能：background review功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：background review功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for background review agent cleanup.
+"""
 
 from __future__ import annotations
 

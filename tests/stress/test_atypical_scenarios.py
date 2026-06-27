@@ -1,4 +1,13 @@
-"""Atypical user scenarios and configurations.
+"""非典型场景
+
+【产品经理理解要点】
+异常输入容错性。
+- 验证功能：极端场景系统容错
+- 关键场景：畸形数据、极端参数
+- 业务影响：异常输入导致崩溃
+
+─────────────────────────────────────────────────────────────────────────
+Atypical user scenarios and configurations.
 
 Exercises the kernel against user inputs and environments that the
 normal tests assume away:

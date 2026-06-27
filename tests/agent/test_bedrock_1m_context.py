@@ -1,4 +1,13 @@
-"""Tests for the 1M-context beta header on AWS Bedrock Claude models.
+"""Agent核心测试 - bedrock 1m context
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的bedrock 1m context验证。
+- 验证功能：bedrock 1m context功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：bedrock 1m context功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the 1M-context beta header on AWS Bedrock Claude models.
 
 Claude Opus 4.6/4.7 and Sonnet 4.6 support a 1M context window, but on AWS
 Bedrock (and Microsoft Foundry) that window is still gated behind the

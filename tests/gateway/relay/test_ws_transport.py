@@ -1,4 +1,13 @@
-"""WebSocketRelayTransport against a real in-process WebSocket server.
+"""WS传输
+
+【产品经理理解要点】
+WebSocket传输层。
+- 验证功能：WebSocket传输层的连接管理
+- 关键场景：连接建立、心跳、重连、关闭
+- 业务影响：WebSocket连接不稳定
+
+─────────────────────────────────────────────────────────────────────────
+WebSocketRelayTransport against a real in-process WebSocket server.
 
 Exercises the production transport over an actual ``websockets`` server (no
 mock socket): handshake (hello -> descriptor), inbound frame -> handler,
@@ -6,8 +15,7 @@ outbound request/response correlation, and follow_up routing. Proves the wire
 framing (newline-delimited JSON) and the request/response future plumbing work
 end to end on a live socket.
 
-Skipped cleanly if the optional ``websockets`` dependency is absent.
-"""
+Skipped cleanly if the optional ``websockets`` dependency is absent."""
 
 from __future__ import annotations
 

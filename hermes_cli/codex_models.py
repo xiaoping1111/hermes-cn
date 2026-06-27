@@ -1,3 +1,14 @@
+
+"""Codex模型发现
+
+【产品经理理解要点】
+从API、本地缓存和配置中发现和缓存Codex可用模型。
+- 远程API查询可用模型列表
+- 本地磁盘缓存避免重复请求
+- 配置文件中的模型定义作为回退源
+
+────────────────────────────────────────────────────────────────"""
+
 """Codex model discovery from API, local cache, and config."""
 
 from __future__ import annotations

@@ -1,10 +1,17 @@
-"""
+"""卸载命令
+
+【产品经理理解要点】
+hermes uninstall，提供完全卸载和保留数据的两种卸载模式。
+- 完全卸载：删除代码+配置+数据
+- 保留数据：仅删除代码，保留~/.hermes/
+- 用户自主控制数据保留策略
+
+────────────────────────────────────────────────────────────────
 Hermes Agent Uninstaller.
 
 Provides options for:
 - Full uninstall: Remove everything including configs and data
-- Keep data: Remove code but keep ~/.hermes/ (configs, sessions, logs)
-"""
+- Keep data: Remove code but keep ~/.hermes/ (configs, sessions, logs)"""
 
 import os
 import shutil

@@ -1,9 +1,17 @@
-"""Tests for the dispatch_in_gateway gate on _kanban_notifier_watcher.
+"""看板通知
+
+【产品经理理解要点】
+看板通知器。
+- 验证功能：Kanban看板变更通知
+- 关键场景：变更检测、通知发送、订阅管理
+- 业务影响：看板变更无通知
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the dispatch_in_gateway gate on _kanban_notifier_watcher.
 
 - Non-dispatch gateways (dispatch_in_gateway=false) exit before opening any DB.
 - HERMES_KANBAN_DISPATCH_IN_GATEWAY env var disables without loading config.
-- Dispatch-owning gateways (dispatch_in_gateway=true) proceed past the gate.
-"""
+- Dispatch-owning gateways (dispatch_in_gateway=true) proceed past the gate."""
 
 import asyncio
 from unittest.mock import MagicMock, patch

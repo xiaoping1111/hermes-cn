@@ -1,4 +1,13 @@
-"""Tests for ``hermes dashboard register``.
+"""CLIdashboard register测试
+
+【产品经理理解要点】
+CLIdashboard register功能测试。
+- 验证功能：命令行dashboard register功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard register命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ``hermes dashboard register``.
 
 Covers the CLI half of self-hosted dashboard registration:
   - Docker-style auto-name generation
@@ -10,8 +19,7 @@ Covers the CLI half of self-hosted dashboard registration:
 
 The portal HTTP call and the Nous token resolution are both mocked — this
 file proves the CLI wiring + env-write behaviour. The live end-to-end token
-round-trip against the Vercel preview build is a separate manual step.
-"""
+round-trip against the Vercel preview build is a separate manual step."""
 
 from __future__ import annotations
 

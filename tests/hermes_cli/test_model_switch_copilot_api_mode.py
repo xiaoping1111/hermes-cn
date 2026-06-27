@@ -1,11 +1,19 @@
-"""Regression tests for Copilot api_mode recomputation during /model switch.
+"""CLImodel switch copilot api mode测试
+
+【产品经理理解要点】
+CLImodel switch copilot api mode功能测试。
+- 验证功能：命令行model switch copilot api mode功能
+- 关键场景：配置、执行、验证
+- 业务影响：model switch copilot api mode命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for Copilot api_mode recomputation during /model switch.
 
 When switching models within the Copilot provider (e.g. GPT-5 → Claude),
 the stale api_mode from resolve_runtime_provider must be overridden with
 a fresh value computed from the *new* model.  Without the fix, Claude
 requests went through the Responses API and failed with
-``unsupported_api_for_model``.
-"""
+``unsupported_api_for_model``."""
 
 from unittest.mock import patch
 

@@ -1,4 +1,13 @@
-"""End-to-end test for Matrix cross-signing auto-bootstrap.
+"""引导启动E2E
+
+【产品经理理解要点】
+Matrix引导启动端到端。
+- 验证功能：Matrix平台XSign引导流程
+- 关键场景：密钥生成、签名验证、首次连接
+- 业务影响：Matrix加密通信无法建立
+
+─────────────────────────────────────────────────────────────────────────
+End-to-end test for Matrix cross-signing auto-bootstrap.
 
 Spins a real Continuwuity homeserver in docker, registers a fresh bot,
 runs the patched ``MatrixAdapter.connect()`` against it, and asserts:
@@ -23,8 +32,7 @@ Run from repo root::
     docker compose -f tests/e2e/matrix_xsign_bootstrap/docker-compose.yml down -v
 
 Skipped automatically if mautrix isn't installed or the homeserver
-isn't reachable.
-"""
+isn't reachable."""
 from __future__ import annotations
 
 import json

@@ -1,4 +1,13 @@
-"""Tests for uv-tool install detection in the update path (issue #29700).
+"""CLIuv tool update测试
+
+【产品经理理解要点】
+CLIuv tool update功能测试。
+- 验证功能：命令行uv tool update功能
+- 关键场景：配置、执行、验证
+- 业务影响：uv tool update命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for uv-tool install detection in the update path (issue #29700).
 
 ``uv tool install hermes-agent`` lives outside any venv, so the previous
 ``uv pip install --upgrade`` update path failed with ``No virtual
@@ -9,8 +18,7 @@ both the user-facing recommended command and the actual
 
 Detection is restricted to properties of the running interpreter
 (``sys.prefix`` / ``sys.executable``) so a pip/venv install on a machine
-that also has ``uv tool install hermes-agent`` does not get misclassified.
-"""
+that also has ``uv tool install hermes-agent`` does not get misclassified."""
 from __future__ import annotations
 
 import subprocess

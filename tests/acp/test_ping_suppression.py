@@ -1,4 +1,13 @@
-"""Tests for acp_adapter.entry._BenignProbeMethodFilter.
+"""Ping抑制
+
+【产品经理理解要点】
+ACP心跳Ping抑制。
+- 验证功能：带宽优化效果
+- 关键场景：频率控制、抑制
+- 业务影响：Ping占用过多带宽
+
+─────────────────────────────────────────────────────────────────────────
+Tests for acp_adapter.entry._BenignProbeMethodFilter.
 
 Covers both the isolated filter logic and the full end-to-end path where a
 client sends a bare JSON-RPC ``ping`` request over stdio and the acp runtime

@@ -1,4 +1,13 @@
-"""Regression tests for capability-gated MCP utility schema registration.
+"""工具系统测试 - mcp utility capability gating
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的mcp utility capability gating验证。
+- 验证功能：mcp utility capability gating功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：mcp utility capability gating功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for capability-gated MCP utility schema registration.
 
 Background
 ==========
@@ -11,7 +20,7 @@ all four methods on the class — independent of what the remote server
 supports.
 
 Tools-only servers like ``@upstash/context7-mcp`` advertise
-``{\"tools\": {\"listChanged\": true}}`` in their ``initialize`` response —
+``{"tools": {"listChanged": true}}`` in their ``initialize`` response —
 no ``prompts`` or ``resources`` keys — and they return JSON-RPC
 ``-32601 Method not found`` for ``prompts/list``, ``prompts/get``,
 ``resources/list``, ``resources/read``. The model would try the stubs,

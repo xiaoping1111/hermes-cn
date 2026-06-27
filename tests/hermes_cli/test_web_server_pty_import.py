@@ -1,4 +1,13 @@
-"""Test the platform-branched PTY bridge import in hermes_cli.web_server.
+"""CLIweb server pty import测试
+
+【产品经理理解要点】
+CLIweb server pty import功能测试。
+- 验证功能：命令行web server pty import功能
+- 关键场景：配置、执行、验证
+- 业务影响：web server pty import命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Test the platform-branched PTY bridge import in hermes_cli.web_server.
 
 The /api/pty WebSocket handler in web_server.py picks its bridge at import
 time via ``sys.platform.startswith("win")`` — Windows gets the ConPTY
@@ -12,8 +21,7 @@ backend, POSIX gets the fcntl/termios one.  Both branches must:
 
 This test asserts the live state on whichever platform CI runs on, plus a
 source-text check confirming the branch shape is preserved so a future
-refactor can't accidentally collapse it back to a POSIX-only import.
-"""
+refactor can't accidentally collapse it back to a POSIX-only import."""
 
 from __future__ import annotations
 

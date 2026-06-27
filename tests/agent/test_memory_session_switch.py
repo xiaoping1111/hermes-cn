@@ -1,4 +1,13 @@
-"""Tests for the on_session_switch hook and session_id propagation.
+"""Agent核心测试 - memory session switch
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的memory session switch验证。
+- 验证功能：memory session switch功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：memory session switch功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the on_session_switch hook and session_id propagation.
 
 Covers #6672: memory providers must be notified when AIAgent.session_id
 rotates mid-process (via /resume, /branch, /reset, /new, or context

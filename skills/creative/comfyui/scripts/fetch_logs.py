@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""ComfyUI 日志获取
+
+【产品经理理解要点】
+从 ComfyUI 服务获取运行日志。
+- 任务日志查询
+- 错误日志提取
+
+─────────────────────────────────────────────────────────────────
+
 fetch_logs.py — Retrieve workflow execution diagnostics from a ComfyUI server.
 
 When a workflow errors, the server's /history (local) or /jobs (cloud) entry

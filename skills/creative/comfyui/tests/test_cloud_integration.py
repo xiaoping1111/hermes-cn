@@ -1,4 +1,11 @@
-"""Integration tests against the live Comfy Cloud API.
+"""ComfyUI 云集成测试
+
+【产品经理理解要点】
+ComfyUI 云服务集成的端到端测试。
+- 云 API 调用验证
+
+─────────────────────────────────────────────────────────────────
+Integration tests against the live Comfy Cloud API.
 
 These tests are auto-skipped when COMFY_CLOUD_API_KEY is not set.
 They never SUBMIT workflows (would need a paid subscription) — they only

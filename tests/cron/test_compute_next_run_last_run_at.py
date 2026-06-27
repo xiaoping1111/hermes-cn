@@ -1,8 +1,16 @@
-"""Test that compute_next_run uses last_run_at for cron jobs.
+"""下次运行时间
+
+【产品经理理解要点】
+下次运行时间计算。
+- 验证功能：基于cron表达式计算下次触发时间
+- 关键场景：时间计算、时区处理、边界条件
+- 业务影响：任务在错误时间触发
+
+─────────────────────────────────────────────────────────────────────────
+Test that compute_next_run uses last_run_at for cron jobs.
 
 Regression test for: cron jobs computing next_run_at from _hermes_now()
-instead of from last_run_at, making them inconsistent with interval jobs.
-"""
+instead of from last_run_at, making them inconsistent with interval jobs."""
 import pytest
 from datetime import datetime
 from zoneinfo import ZoneInfo

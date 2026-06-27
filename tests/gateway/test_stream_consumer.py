@@ -1,4 +1,13 @@
-"""Tests for GatewayStreamConsumer — media directive stripping in streaming."""
+"""网关stream consumer测试
+
+【产品经理理解要点】
+网关stream consumer功能测试。
+- 验证功能：网关stream consumer处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：stream consumer功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for GatewayStreamConsumer — media directive stripping in streaming."""
 
 import asyncio
 from types import SimpleNamespace

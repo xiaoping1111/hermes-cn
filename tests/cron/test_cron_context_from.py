@@ -1,4 +1,13 @@
-"""Tests for cron job context_from feature (issue #5439 Option C)."""
+"""上下文来源
+
+【产品经理理解要点】
+Cron上下文来源。
+- 验证功能：定时任务的上下文构建
+- 关键场景：上下文来源识别、构建逻辑
+- 业务影响：任务执行缺少必要上下文
+
+─────────────────────────────────────────────────────────────────────────
+Tests for cron job context_from feature (issue #5439 Option C)."""
 
 import logging
 import sys

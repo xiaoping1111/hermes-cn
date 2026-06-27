@@ -1,10 +1,19 @@
-"""Regression tests for cron prompt injection scanner bypass.
+"""工具系统测试 - cron prompt injection
 
-The original regex `ignore\\s+(previous|all|above|prior)\\s+instructions`
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的cron prompt injection验证。
+- 验证功能：cron prompt injection功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：cron prompt injection功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for cron prompt injection scanner bypass.
+
+The original regex `ignore\s+(previous|all|above|prior)\s+instructions`
 only allowed ONE word between "ignore" and "instructions", so multi-word
 variants like "Ignore ALL prior instructions" bypassed the scanner.
 
-Fix: allow optional extra words with `(?:\\w+\\s+)*` groups.
+Fix: allow optional extra words with `(?:\w+\s+)*` groups.
 """
 
 from tools.cronjob_tools import _scan_cron_prompt

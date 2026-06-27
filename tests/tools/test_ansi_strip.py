@@ -1,4 +1,13 @@
-"""Comprehensive tests for ANSI escape sequence stripping (ECMA-48).
+"""工具系统测试 - ansi strip
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的ansi strip验证。
+- 验证功能：ansi strip功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：ansi strip功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Comprehensive tests for ANSI escape sequence stripping (ECMA-48).
 
 The strip_ansi function in tools/ansi_strip.py is the source-level fix for
 ANSI codes leaking into the model's context via terminal/execute_code output.

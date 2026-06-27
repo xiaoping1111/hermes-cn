@@ -1,4 +1,12 @@
-"""Qwen Portal provider profile."""
+"""通义千问 OAuth 模型提供者
+
+【产品经理理解要点】
+通过 OAuth 认证对接通义千问模型。
+- 阿里云 OAuth 登录
+- 无需手动配置 API Key
+
+─────────────────────────────────────────────────────────────────
+Qwen Portal provider profile."""
 
 import copy
 from typing import Any

@@ -1,5 +1,16 @@
 from __future__ import annotations
 
+
+"""FastMCP 数据库服务器模板
+
+【产品经理理解要点】
+FastMCP 数据库查询服务器的模板实现。
+- SQL 查询工具注册
+- 数据库连接管理
+
+─────────────────────────────────────────────────────────────────
+"""
+
 import os
 import re
 import sqlite3

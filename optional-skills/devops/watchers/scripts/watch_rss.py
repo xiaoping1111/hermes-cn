@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Watch an RSS 2.0 or Atom feed; print new items to stdout, silent on empty.
+"""RSS 监控
+
+【产品经理理解要点】
+监控 RSS 源的新内容并发送通知。
+- RSS 解析和新条目检测
+- 变更通知推送
+
+─────────────────────────────────────────────────────────────────
+Watch an RSS 2.0 or Atom feed; print new items to stdout, silent on empty.
 
 Usage (via cron with --no-agent):
 

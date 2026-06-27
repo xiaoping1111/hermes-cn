@@ -1,4 +1,13 @@
-"""Tests for the TUI gateway's late MCP tool-snapshot refresh.
+"""测试 - tui mcp late refresh
+
+【产品经理理解要点】
+功能验证中的tui mcp late refresh验证。
+- 验证功能：tui mcp late refresh功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：tui mcp late refresh功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the TUI gateway's late MCP tool-snapshot refresh.
 
 When an MCP server connects slower than the bounded wait in ``_make_agent``,
 the agent is built without its tools and the banner/tool count is stale for the

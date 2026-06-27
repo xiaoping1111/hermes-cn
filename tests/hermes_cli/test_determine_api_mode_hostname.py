@@ -1,11 +1,19 @@
-"""Regression tests for ``determine_api_mode`` hostname handling.
+"""CLIdetermine api mode hostname测试
+
+【产品经理理解要点】
+CLIdetermine api mode hostname功能测试。
+- 验证功能：命令行determine api mode hostname功能
+- 关键场景：配置、执行、验证
+- 业务影响：determine api mode hostname命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for ``determine_api_mode`` hostname handling.
 
 Companion to tests/hermes_cli/test_detect_api_mode_for_url.py — the same
 false-positive class (custom URLs containing ``api.openai.com`` /
 ``api.anthropic.com`` as a path segment or host suffix) must be rejected
 by ``determine_api_mode`` as well, since it's the code path used by
-custom/unknown providers in ``resolve_custom_provider``.
-"""
+custom/unknown providers in ``resolve_custom_provider``."""
 
 from __future__ import annotations
 

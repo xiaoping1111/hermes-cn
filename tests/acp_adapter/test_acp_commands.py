@@ -1,4 +1,12 @@
 import sys
+"""ACP命令
+
+【产品经理理解要点】
+ACP命令解析执行。
+- 验证功能：命令处理正确性
+- 关键场景：解析、路由、执行
+- 业务影响：ACP命令无法执行"""
+
 from types import ModuleType, SimpleNamespace
 
 import pytest

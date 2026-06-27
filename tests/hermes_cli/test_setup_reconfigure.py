@@ -1,4 +1,13 @@
-"""Tests for the setup wizard's returning-user behavior.
+"""CLIsetup reconfigure测试
+
+【产品经理理解要点】
+CLIsetup reconfigure功能测试。
+- 验证功能：命令行setup reconfigure功能
+- 关键场景：配置、执行、验证
+- 业务影响：setup reconfigure命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the setup wizard's returning-user behavior.
 
 On an existing install:
 - Bare `hermes setup` drops straight into the full reconfigure wizard
@@ -7,8 +16,7 @@ On an existing install:
 - `hermes setup --reconfigure` is a backwards-compat alias for the
   bare-setup default.
 
-On a fresh install, all three are no-ops — fall through to first-time setup.
-"""
+On a fresh install, all three are no-ops — fall through to first-time setup."""
 
 from argparse import Namespace
 from contextlib import ExitStack

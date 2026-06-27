@@ -1,9 +1,17 @@
-"""Tests for the nested category plugin discovery fix (issue #41066).
+"""CLIplugins cmd category discovery测试
+
+【产品经理理解要点】
+CLIplugins cmd category discovery功能测试。
+- 验证功能：命令行plugins cmd category discovery功能
+- 关键场景：配置、执行、验证
+- 业务影响：plugins cmd category discovery命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the nested category plugin discovery fix (issue #41066).
 
 Verifies that _discover_all_plugins() recurses into category directories
 (up to 2 levels deep) and that _plugin_status() checks both manifest name
-and path-derived key against the enabled/disabled sets.
-"""
+and path-derived key against the enabled/disabled sets."""
 
 import json
 import sys

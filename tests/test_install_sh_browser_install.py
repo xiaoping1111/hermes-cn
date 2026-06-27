@@ -1,4 +1,13 @@
-"""Regression tests for install.sh browser setup.
+"""测试 - install sh browser install
+
+【产品经理理解要点】
+功能验证中的install sh browser install验证。
+- 验证功能：install sh browser install功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：install sh browser install功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for install.sh browser setup.
 
 Browser automation is optional. The installer should not leave Hermes
 half-installed just because Playwright's managed Chromium download hangs on an

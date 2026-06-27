@@ -1,4 +1,12 @@
-"""
+"""网关media extraction测试
+
+【产品经理理解要点】
+网关media extraction功能测试。
+- 验证功能：网关media extraction处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：media extraction功能异常
+
+─────────────────────────────────────────────────────────────────────────
 Tests for MEDIA tag extraction from tool results.
 
 Verifies that MEDIA tags (e.g., from TTS tool) are only extracted from
@@ -8,8 +16,7 @@ times per reply. (Regression test for #160)
 
 Also covers #34608: a stale MEDIA: path emitted by an execute_code /
 make_image tool several turns earlier must not leak onto a later
-text-only reply, even when the path-based dedup set fails to capture it.
-"""
+text-only reply, even when the path-based dedup set fails to capture it."""
 
 import pytest
 import re

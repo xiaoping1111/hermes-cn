@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Google Workspace API CLI for Hermes Agent.
+"""Google API 客户端
+
+【产品经理理解要点】
+Google API 的认证和调用封装。
+- OAuth2 认证流程
+- API 请求和响应处理
+
+─────────────────────────────────────────────────────────────────
+Google Workspace API CLI for Hermes Agent.
 
 Uses the Google Workspace CLI (`gws`) when available, but preserves the
 existing Hermes-facing JSON contract and falls back to the Python client

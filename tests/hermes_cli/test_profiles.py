@@ -1,9 +1,17 @@
-"""Comprehensive tests for hermes_cli.profiles module.
+"""CLIprofiles测试
+
+【产品经理理解要点】
+CLIprofiles功能测试。
+- 验证功能：命令行profiles功能
+- 关键场景：配置、执行、验证
+- 业务影响：profiles命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Comprehensive tests for hermes_cli.profiles module.
 
 Tests cover: validation, directory resolution, CRUD operations, active profile
 management, export/import, renaming, alias collision checks, profile isolation,
-and shell completion generation.
-"""
+and shell completion generation."""
 
 import json
 import io

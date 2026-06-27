@@ -1,4 +1,13 @@
-"""Tests for EphemeralReply — system-notice auto-delete in gateway adapters.
+"""网关ephemeral reply测试
+
+【产品经理理解要点】
+网关ephemeral reply功能测试。
+- 验证功能：网关ephemeral reply处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：ephemeral reply功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for EphemeralReply — system-notice auto-delete in gateway adapters.
 
 Slash-command handlers in ``gateway/run.py`` can return an
 ``EphemeralReply`` wrapper to request auto-deletion of the reply message
@@ -17,8 +26,7 @@ Covered:
    configured delay with the correct chat_id / message_id.
 5. ``_process_message_background`` sends the unwrapped text (not the
    sentinel object) and schedules deletion when appropriate.
-6. The two busy-session bypass paths also unwrap + schedule.
-"""
+6. The two busy-session bypass paths also unwrap + schedule."""
 
 import asyncio
 from unittest.mock import AsyncMock, patch

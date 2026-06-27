@@ -1,4 +1,13 @@
-"""Tests for `hermes fallback` — chain reading, add/remove/clear, legacy migration."""
+"""CLIfallback cmd测试
+
+【产品经理理解要点】
+CLIfallback cmd功能测试。
+- 验证功能：命令行fallback cmd功能
+- 关键场景：配置、执行、验证
+- 业务影响：fallback cmd命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for `hermes fallback` — chain reading, add/remove/clear, legacy migration."""
 from __future__ import annotations
 
 import types

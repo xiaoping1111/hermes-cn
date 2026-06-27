@@ -1,4 +1,13 @@
-"""Tests for #1630 — gateway infinite 400 failure loop prevention.
+"""Agent运行引擎测试 - 1630 context overflow loop
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的1630 context overflow loop验证。
+- 验证功能：1630 context overflow loop功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：1630 context overflow loop功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for #1630 — gateway infinite 400 failure loop prevention.
 
 Verifies that:
 1. Generic 400 errors with large sessions are treated as context-length errors

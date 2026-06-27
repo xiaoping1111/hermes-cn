@@ -1,4 +1,13 @@
-"""Tests for codex_responses_adapter multimodal tool-result handling.
+"""Agent运行引擎测试 - codex multimodal tool result
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的codex multimodal tool result验证。
+- 验证功能：codex multimodal tool result功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：codex multimodal tool result功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for codex_responses_adapter multimodal tool-result handling.
 
 Tool messages can contain a list of OpenAI-style content parts
 (``[{type:"text"...}, {type:"image_url"...}]``) when the

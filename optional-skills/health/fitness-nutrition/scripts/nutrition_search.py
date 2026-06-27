@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""营养数据搜索
+
+【产品经理理解要点】
+搜索食物的营养成分数据。
+- 食物数据库查询
+- 营养素详情获取
+
+─────────────────────────────────────────────────────────────────
+
 nutrition_search.py — Search USDA FoodData Central for nutrition info.
 
 Usage:

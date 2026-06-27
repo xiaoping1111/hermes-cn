@@ -1,4 +1,13 @@
-"""Regression tests for the OAuth dispatcher in hermes_cli.web_server.
+"""CLIweb oauth dispatch测试
+
+【产品经理理解要点】
+CLIweb oauth dispatch功能测试。
+- 验证功能：命令行web oauth dispatch功能
+- 关键场景：配置、执行、验证
+- 业务影响：web oauth dispatch命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the OAuth dispatcher in hermes_cli.web_server.
 
 Bug history (2026-05-09): the `_OAUTH_PROVIDER_CATALOG` had two entries
 flagged ``flow: "pkce"`` — anthropic and minimax-oauth — and the
@@ -17,8 +26,7 @@ The fix:
      without an explicit branch gets a clean ``400 Unsupported flow``
      instead of silently launching Anthropic OAuth.
 
-These tests pin the corrected behavior.
-"""
+These tests pin the corrected behavior."""
 import asyncio
 import time
 from datetime import datetime, timezone

@@ -1,4 +1,13 @@
-"""Tests for the `hermes proxy` subcommand and its upstream adapters."""
+"""CLIproxy测试
+
+【产品经理理解要点】
+CLIproxy功能测试。
+- 验证功能：命令行proxy功能
+- 关键场景：配置、执行、验证
+- 业务影响：proxy命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the `hermes proxy` subcommand and its upstream adapters."""
 
 from __future__ import annotations
 

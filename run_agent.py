@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""AI 智能体运行器（核心对话引擎）
+
+【产品经理理解要点】
+智能体核心引擎：管理"用户提问→模型思考→调用工具→获取结果→继续思考"的完整循环。
+- 核心职责：对话循环控制、工具调用调度、消息历史管理、流式响应输出
+- 关键业务概念：轮次（turn）、工具调用（function_call）、上下文压缩、多模型适配
+- 在系统中的位置：系统心脏，CLI/Gateway 批量运行均通过 AIAgent 类驱动
+
+─────────────────────────────────────────────────────────────────
 AI Agent Runner with Tool Calling
 
 This module provides a clean, standalone agent that can execute AI models

@@ -1,4 +1,13 @@
-"""Tests for MCPServerTask._preflight_content_type fast-fail behaviour.
+"""工具系统测试 - mcp preflight content type
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的mcp preflight content type验证。
+- 验证功能：mcp preflight content type功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：mcp preflight content type功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for MCPServerTask._preflight_content_type fast-fail behaviour.
 
 These drive the REAL ``_preflight_content_type`` method against a real local
 HTTP server (via httpx's ASGI/transport plumbing through a stdlib server),

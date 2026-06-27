@@ -1,4 +1,12 @@
-"""Parallel.ai web search + content extraction — plugin form.
+"""Parallel 搜索提供者
+
+【产品经理理解要点】
+Parallel 多引擎聚合搜索的具体实现。
+- 并发调度多个搜索提供者
+- 结果去重和排序合并
+
+─────────────────────────────────────────────────────────────────
+Parallel.ai web search + content extraction — plugin form.
 
 Subclasses :class:`agent.web_search_provider.WebSearchProvider`. Uses two
 distinct Parallel SDK clients:

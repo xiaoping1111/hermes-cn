@@ -1,4 +1,13 @@
-"""Regression tests for topic/channel skill auto-injection after /new or /reset.
+"""全新重置技能注入
+
+【产品经理理解要点】
+全新重置技能注入。
+- 验证功能：会话全新重置时的技能注入
+- 关键场景：技能发现、注入、配置
+- 业务影响：重置后缺少必要技能
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for topic/channel skill auto-injection after /new or /reset.
 
 Covers the fix for issue #6508.
 
@@ -23,8 +32,7 @@ We use ``was_auto_reset`` for surprise resets (idle/daily/suspended) and
 ``is_fresh_reset`` for user-initiated resets because the former also drives
 a "Session automatically reset due to inactivity" user-facing notice and
 a context-note prepend into the agent's prompt — both wrong for an explicit
-/new or /reset.
-"""
+/new or /reset."""
 
 from gateway.config import GatewayConfig, Platform
 from gateway.session import SessionEntry, SessionSource, SessionStore

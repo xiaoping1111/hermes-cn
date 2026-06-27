@@ -1,5 +1,16 @@
 """Trajectory saving utilities and static helpers.
 
+轨迹保存工具
+
+【产品经理理解要点】
+将对话轨迹保存为标准格式(from/value 对)，供训练和评估管线使用。
+- 核心职责：轨迹文件写入、推理标签转换(REASONING_SCRATCHPAD-think)、静态辅助
+- 关键业务概念：轨迹格式(from/value)、JSONL 存储、推理块转换
+- 在系统中的位置：对话结束后轨迹持久化的执行层
+
+─────────────────────────────────────────────────────────────────
+
+
 _convert_to_trajectory_format stays as an AIAgent method (batch_runner.py
 calls agent._convert_to_trajectory_format). Only the static helpers and
 the file-write logic live here.

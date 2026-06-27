@@ -1,4 +1,13 @@
-"""Tests for Anthropic Sonnet long-context tier 429 handling.
+"""Agent运行引擎测试 - long context tier 429
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的long context tier 429验证。
+- 验证功能：long context tier 429功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：long context tier 429功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Anthropic Sonnet long-context tier 429 handling.
 
 When Claude Max users without "extra usage" hit the 1M context tier
 on Sonnet, Anthropic returns HTTP 429 "Extra usage is required for long

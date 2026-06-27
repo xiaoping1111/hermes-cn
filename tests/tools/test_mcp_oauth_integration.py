@@ -1,4 +1,13 @@
-"""End-to-end integration tests for the MCP OAuth consolidation.
+"""工具系统测试 - mcp oauth integration
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的mcp oauth integration验证。
+- 验证功能：mcp oauth integration功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：mcp oauth integration功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+End-to-end integration tests for the MCP OAuth consolidation.
 
 Exercises the full chain — manager, provider subclass, disk watch, 401
 dedup — with real file I/O and real imports (no transport mocks, no

@@ -1,4 +1,13 @@
-"""Tests for #7100 — transient failures (429/timeout) must not drop the
+"""网关7100 transient failure transcript测试
+
+【产品经理理解要点】
+网关7100 transient failure transcript功能测试。
+- 验证功能：网关7100 transient failure transcript处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：7100 transient failure transcript功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for #7100 — transient failures (429/timeout) must not drop the
 user message from the transcript.
 
 The #1630 fix introduced a blanket skip of transcript writes on any
@@ -12,8 +21,7 @@ The gateway classifier must distinguish:
 
 * ``compression_exhausted=True`` OR context-keyword errors OR a generic
   ``400`` on a long history  → context-overflow → skip transcript
-* everything else that fails → transient → persist the user message
-"""
+* everything else that fails → transient → persist the user message"""
 
 
 

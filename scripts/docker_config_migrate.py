@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Run Docker boot-time config migrations safely."""
+"""Docker 配置迁移
+
+【产品经理理解要点】
+在 Docker 容器启动时安全执行配置格式迁移，自动升级旧版配置文件到新格式。
+- 核心职责：备份旧配置文件后执行迁移，确保容器升级后配置兼容
+- 关键概念：迁移是幂等的——已迁移的配置不会重复处理；备份文件带时间戳防止覆盖
+- 系统定位：运维脚本，Docker 容器启动时自动运行
+
+─────────────────────────────────────────────────────────────────
+Run Docker boot-time config migrations safely."""
 from __future__ import annotations
 
 import shutil

@@ -1,3 +1,14 @@
+
+"""cron子命令解析器
+
+【产品经理理解要点】
+hermes cron子命令的argparse解析器构建。
+- 定时任务调度子命令参数定义
+- 从main.py提取（god-file Phase 2）
+- 处理器通过依赖注入传入
+
+────────────────────────────────────────────────────────────────"""
+
 """``hermes cron`` subcommand parser.
 
 Extracted verbatim from ``hermes_cli/main.py:main()`` — same arguments, same

@@ -1,4 +1,13 @@
-"""Tests for tools/tool_search.py — progressive tool disclosure.
+"""工具系统测试 - tool search
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的tool search验证。
+- 验证功能：tool search功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：tool search功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for tools/tool_search.py — progressive tool disclosure.
 
 Coverage targets — these mirror the issues called out in the OpenClaw tool
 search report. Every test that names an OpenClaw issue is the regression

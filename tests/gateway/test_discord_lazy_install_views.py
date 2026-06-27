@@ -1,4 +1,13 @@
-"""Regression: Discord UI view classes must be defined after lazy-install.
+"""Discord网关测试
+
+【产品经理理解要点】
+Discord平台网关功能测试。
+- 验证功能：Discord平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Discord平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Regression: Discord UI view classes must be defined after lazy-install.
 
 When discord.py is NOT installed at module load time, the
 ``if DISCORD_AVAILABLE:`` guard at the bottom of gateway/platforms/discord.py
@@ -12,8 +21,7 @@ DISCORD_AVAILABLE flips to True.  Without this, the first button interaction
 DISCORD_AVAILABLE=True.
 
 Fixes: lazy-install path NameError for ExecApprovalView, SlashConfirmView,
-UpdatePromptView, ModelPickerView, ClarifyChoiceView.
-"""
+UpdatePromptView, ModelPickerView, ClarifyChoiceView."""
 import importlib
 from unittest.mock import patch
 

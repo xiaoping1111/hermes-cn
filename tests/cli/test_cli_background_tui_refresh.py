@@ -1,4 +1,13 @@
-"""Tests for CLI background command TUI refresh behavior.
+"""CLI终端测试 - cli background tui refresh
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的cli background tui refresh验证。
+- 验证功能：cli background tui refresh功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：cli background tui refresh功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for CLI background command TUI refresh behavior.
 
 Ensures the TUI is properly refreshed before printing background task output
 to prevent spinner/status bar overlap (#2718).

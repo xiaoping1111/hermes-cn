@@ -1,4 +1,11 @@
-"""Unit tests for _common.py — pure logic only, no network."""
+"""ComfyUI 公共模块测试
+
+【产品经理理解要点】
+ComfyUI 公共工具函数的单元测试。
+- 工具函数正确性验证
+
+─────────────────────────────────────────────────────────────────
+Unit tests for _common.py — pure logic only, no network."""
 
 from __future__ import annotations
 

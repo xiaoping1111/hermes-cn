@@ -1,3 +1,14 @@
+
+"""MCP安全检查
+
+【产品经理理解要点】
+检测用户配置的MCP服务器中可能的敏感信息外泄模式。
+- 阻止Shell解释器+网络出站的命令组合
+- 不影响正常的本地命令使用
+- 基于#45620安全事件的高信号检测
+
+────────────────────────────────────────────────────────────────"""
+
 """Security checks for user-configured MCP server entries.
 
 MCP stdio transports intentionally support arbitrary local commands so users can

@@ -1,4 +1,12 @@
-"""
+"""自定义问题模板
+
+【产品经理理解要点】
+Darwinian Evolver 的自定义问题定义模板。
+- 问题定义和评估函数
+- 进化参数配置
+
+─────────────────────────────────────────────────────────────────
+
 Template: a custom darwinian-evolver problem.
 
 Copy this file, fill in the THREE marked spots (Organism, Evaluator, Mutator),

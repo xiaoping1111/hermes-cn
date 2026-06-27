@@ -1,10 +1,18 @@
-"""Regression tests confirming the setup model/provider/reasoning pickers route
+"""CLIsetup menu curses migration测试
+
+【产品经理理解要点】
+CLIsetup menu curses migration功能测试。
+- 验证功能：命令行setup menu curses migration功能
+- 关键场景：配置、执行、验证
+- 业务影响：setup menu curses migration命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests confirming the setup model/provider/reasoning pickers route
 through the shared curses radiolist (ESC + arrow-key handling that works across
 terminals, incl. Ghostty) instead of simple_term_menu.
 
 Guards against silently regressing back to simple_term_menu, whose ESC/arrow
-handling was unreliable in `hermes setup` (the provider->model sub-menu).
-"""
+handling was unreliable in `hermes setup` (the provider->model sub-menu)."""
 from unittest.mock import patch
 
 

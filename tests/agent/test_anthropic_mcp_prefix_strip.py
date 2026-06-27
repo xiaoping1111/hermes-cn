@@ -1,4 +1,13 @@
-"""Tests for GH-25255: Anthropic OAuth ``mcp__`` tool-name round-trip.
+"""Agent核心测试 - anthropic mcp prefix strip
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的anthropic mcp prefix strip验证。
+- 验证功能：anthropic mcp prefix strip功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：anthropic mcp prefix strip功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for GH-25255: Anthropic OAuth ``mcp__`` tool-name round-trip.
 
 Anthropic's subscription/OAuth billing classifier treats a **single-underscore**
 ``mcp_`` tool name as a third-party-app fingerprint and rejects the request with

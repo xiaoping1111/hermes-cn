@@ -1,4 +1,12 @@
-"""Custom / Ollama (local) provider profile.
+"""自定义模型提供者
+
+【产品经理理解要点】
+允许用户配置自定义 OpenAI 兼容 API 端点。
+- 任意 OpenAI 兼容 API
+- 自定义 base_url 和模型名
+
+─────────────────────────────────────────────────────────────────
+Custom / Ollama (local) provider profile.
 
 Covers any endpoint registered as provider="custom", including local
 Ollama instances. Key quirks:

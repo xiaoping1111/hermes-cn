@@ -1,5 +1,16 @@
 """Preventive SSL CA certificate checks for Hermes Agent.
 
+SSL 证书检查
+
+【产品经理理解要点】
+在 OpenAI/httpx 调用前检查 CA 证书路径有效性，防止模糊的文件不存在错误。
+- 核心职责：检查 CA_BUNDLE 环境变量指向的路径是否存在、启动时预警
+- 关键业务概念：CA 证书路径、SSL 错误预防、环境变量检查
+- 在系统中的位置：启动阶段的 SSL 安全检查
+
+─────────────────────────────────────────────────────────────────
+
+
 This module catches broken CA bundle paths before OpenAI/httpx turns them into
 opaque ``FileNotFoundError: [Errno 2] No such file or directory`` failures.
 """

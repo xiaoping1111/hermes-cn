@@ -1,10 +1,18 @@
-"""Tests for the auto-continue feature (#4493 / #45232).
+"""网关auto continue测试
+
+【产品经理理解要点】
+网关auto continue功能测试。
+- 验证功能：网关auto continue处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：auto continue功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the auto-continue feature (#4493 / #45232).
 
 When the gateway restarts mid-agent-work, the session transcript can end on a
 tool result that the agent never processed.  The auto-continue logic detects
 this and prepends an API-only system note to the next user message so the model
-does not re-execute stale interrupted tool calls before addressing new input.
-"""
+does not re-execute stale interrupted tool calls before addressing new input."""
 
 
 

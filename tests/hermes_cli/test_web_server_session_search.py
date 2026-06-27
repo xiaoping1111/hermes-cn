@@ -1,3 +1,11 @@
+"""CLIweb server session search测试
+
+【产品经理理解要点】
+CLIweb server session search功能测试。
+- 验证功能：命令行web server session search功能
+- 关键场景：配置、执行、验证
+- 业务影响：web server session search命令行功能失效"""
+
 import asyncio
 
 from hermes_cli import web_server

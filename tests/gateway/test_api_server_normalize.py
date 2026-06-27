@@ -1,4 +1,13 @@
-"""Tests for _normalize_chat_content in the API server adapter."""
+"""网关api server normalize测试
+
+【产品经理理解要点】
+网关api server normalize功能测试。
+- 验证功能：网关api server normalize处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：api server normalize功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for _normalize_chat_content in the API server adapter."""
 
 from gateway.platforms import api_server
 from gateway.platforms.api_server import _normalize_chat_content

@@ -1,4 +1,14 @@
-"""Tests for tui_gateway JSON-RPC protocol plumbing."""
+"""协议测试
+
+【产品经理理解要点】
+TUI与Agent通信协议。
+- 验证功能：协议编解码正确性
+- 关键场景：编码、解码、一致性
+- 业务影响：通信协议错误
+
+─────────────────────────────────────────────────────────────────────────
+Tests for tui_gateway JSON-RPC protocol plumbing.
+"""
 
 import io
 import json

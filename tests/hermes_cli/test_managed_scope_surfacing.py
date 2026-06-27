@@ -1,4 +1,13 @@
-"""Surfacing tests — managed scope shown in `config show` and `hermes doctor`."""
+"""CLImanaged scope surfacing测试
+
+【产品经理理解要点】
+CLImanaged scope surfacing功能测试。
+- 验证功能：命令行managed scope surfacing功能
+- 关键场景：配置、执行、验证
+- 业务影响：managed scope surfacing命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Surfacing tests — managed scope shown in `config show` and `hermes doctor`."""
 import pytest
 
 

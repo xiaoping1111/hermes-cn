@@ -1,3 +1,14 @@
+
+"""Agent构建与恢复混入
+
+【产品经理理解要点】
+HermesCLI的混入类，负责Agent实例的构建、凭证解析和会话恢复。
+- Agent生命周期：首次构建和会话恢复的显示逻辑
+- 凭证解析：运行时确定使用哪个提供商的API密钥
+- 从god-file cli.py中提取，行为无变化
+
+────────────────────────────────────────────────────────────────"""
+
 """Agent-construction and session-resume display methods for ``HermesCLI``.
 
 Extracted from ``cli.py`` as part of the god-file decomposition campaign

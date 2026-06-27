@@ -1,4 +1,13 @@
-"""Tests for TTS plugin dispatch in tools/tts_tool.py (issue #30398).
+"""工具系统测试 - tts plugin dispatch
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的tts plugin dispatch验证。
+- 验证功能：tts plugin dispatch功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：tts plugin dispatch功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for TTS plugin dispatch in tools/tts_tool.py (issue #30398).
 
 Covers the three core invariants of the plugin dispatcher:
 

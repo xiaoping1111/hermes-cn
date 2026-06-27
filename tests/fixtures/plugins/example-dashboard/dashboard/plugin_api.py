@@ -1,4 +1,13 @@
-"""Example dashboard plugin — backend API routes (test fixture).
+"""测试夹具 - plugin api
+
+【产品经理理解要点】
+提供测试固定数据和插件示例，支撑可重复的测试环境搭建中的plugin api验证。
+- 验证功能：plugin api功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：plugin api功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Example dashboard plugin — backend API routes (test fixture).
 
 This plugin lives under ``tests/fixtures/plugins/`` so it is NOT shipped as
 part of the bundled-plugins set; a stock hermes-agent install does not see

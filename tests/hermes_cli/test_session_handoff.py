@@ -1,4 +1,13 @@
-"""Tests for session handoff (CLI to gateway platform).
+"""CLIsession handoff测试
+
+【产品经理理解要点】
+CLIsession handoff功能测试。
+- 验证功能：命令行session handoff功能
+- 关键场景：配置、执行、验证
+- 业务影响：session handoff命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for session handoff (CLI to gateway platform).
 
 The handoff state machine lives on the ``sessions`` table:
 
@@ -7,8 +16,7 @@ The handoff state machine lives on the ``sessions`` table:
 CLI side calls ``request_handoff`` and poll-waits on ``get_handoff_state``.
 Gateway side iterates ``list_pending_handoffs``, calls ``claim_handoff`` to
 flip pending → running, and finishes with ``complete_handoff`` or
-``fail_handoff``.
-"""
+``fail_handoff``."""
 
 from __future__ import annotations
 

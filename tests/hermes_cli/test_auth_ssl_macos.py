@@ -1,4 +1,13 @@
-"""Tests for hermes_cli.auth._default_verify platform-aware fallback.
+"""CLIauth ssl macos测试
+
+【产品经理理解要点】
+CLIauth ssl macos功能测试。
+- 验证功能：命令行auth ssl macos功能
+- 关键场景：配置、执行、验证
+- 业务影响：auth ssl macos命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.auth._default_verify platform-aware fallback.
 
 On macOS with Homebrew Python, the system OpenSSL cannot locate the
 system trust store, so we explicitly load certifi's bundle. On other
@@ -7,8 +16,7 @@ platforms we defer to httpx's own default (which itself uses certifi).
 Most tests use monkeypatching — no real SSL handshakes. A handful use
 an openssl-generated self-signed cert via the `real_bundle_file`
 fixture because `ssl.create_default_context(cafile=...)` parses the
-bundle and refuses stubs.
-"""
+bundle and refuses stubs."""
 
 import os
 import shutil

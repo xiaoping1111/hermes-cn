@@ -1,4 +1,12 @@
 from io import StringIO
+"""渲染测试
+
+【产品经理理解要点】
+TUI消息渲染。
+- 验证功能：渲染格式正确性
+- 关键场景：格式、颜色、布局
+- 业务影响：消息显示格式错误"""
+
 
 from rich.console import Console
 from rich.markdown import Markdown

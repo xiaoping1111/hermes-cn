@@ -1,4 +1,13 @@
-"""Context engine plugin discovery.
+"""上下文引擎插件发现与加载
+
+【产品经理理解要点】
+上下文压缩引擎的插件注册中心，控制 Agent 长对话时的上下文管理策略。
+- 扫描并加载上下文引擎实现（如 compressor、lcm）
+- 同一时间仅激活一个引擎，通过 context.engine 配置选择
+- 默认为 compressor（内置上下文压缩器）
+
+─────────────────────────────────────────────────────────────────
+Context engine plugin discovery.
 
 Scans ``plugins/context_engine/<name>/`` directories for context engine
 plugins.  Each subdirectory must contain ``__init__.py`` with a class

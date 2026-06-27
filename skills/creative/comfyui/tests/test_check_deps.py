@@ -1,4 +1,11 @@
-"""Tests for check_deps.py — focuses on parsing logic that doesn't need a server."""
+"""ComfyUI 依赖检查测试
+
+【产品经理理解要点】
+ComfyUI 依赖检查功能的单元测试。
+- 依赖可用性检测验证
+
+─────────────────────────────────────────────────────────────────
+Tests for check_deps.py — focuses on parsing logic that doesn't need a server."""
 
 from __future__ import annotations
 

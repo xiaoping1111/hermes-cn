@@ -1,3 +1,14 @@
+
+"""迁移命令
+
+【产品经理理解要点】
+hermes migrate子命令，处理模型引用迁移（如xAI退役模型替换）。
+- 诊断配置中引用已退役模型的问题
+- --apply自动重写为替换模型
+- 纯逻辑模块，可被doctor等复用
+
+────────────────────────────────────────────────────────────────"""
+
 """CLI handlers for ``hermes migrate ...``.
 
 Currently exposes only ``hermes migrate xai`` — diagnoses and (with --apply)

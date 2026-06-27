@@ -1,4 +1,14 @@
-"""Tests for ACP Registry metadata shipped with Hermes."""
+"""注册表清单
+
+【产品经理理解要点】
+ACP工具注册表清单。
+- 验证功能：清单完整性
+- 关键场景：格式、完整性、校验
+- 业务影响：工具清单不完整
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ACP Registry metadata shipped with Hermes.
+"""
 
 from __future__ import annotations
 

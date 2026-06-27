@@ -1,3 +1,14 @@
+
+"""xAI退役模型检测
+
+【产品经理理解要点】
+检测配置中引用了2026年5月15日退役的xAI模型。
+- 纯逻辑模块：输入配置dict，输出问题列表
+- 可被hermes doctor和hermes migrate xai复用
+- 无I/O和CLI依赖，易于测试
+
+────────────────────────────────────────────────────────────────"""
+
 """Detect xAI models retired on May 15, 2026.
 
 Source: https://docs.x.ai/developers/migration/may-15-retirement

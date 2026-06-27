@@ -1,4 +1,13 @@
-"""Tests for the password (non-redirect) dashboard-auth login flow.
+"""CLIdashboard auth password login测试
+
+【产品经理理解要点】
+CLIdashboard auth password login功能测试。
+- 验证功能：命令行dashboard auth password login功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard auth password login命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the password (non-redirect) dashboard-auth login flow.
 
 Covers the protocol extension (``supports_password`` +
 ``complete_password_login``), the ``/auth/password-login`` route end-to-end
@@ -7,8 +16,7 @@ authenticated request → transparent refresh), the login-page credential
 form rendering, and the route's rate limiter.
 
 The E2E harness mirrors ``test_dashboard_auth_401_reauth.py``: register a
-provider, flip ``app.state.auth_required = True``, drive a ``TestClient``.
-"""
+provider, flip ``app.state.auth_required = True``, drive a ``TestClient``."""
 
 from __future__ import annotations
 

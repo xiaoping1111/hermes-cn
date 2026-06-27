@@ -1,3 +1,14 @@
+
+"""Dashboard路径前缀
+
+【产品经理理解要点】
+反向代理场景下的路径前缀处理（如/example/dashboard）。
+- 解析X-Forwarded-Prefix头
+- 自动修复Location头/OAuth重定向/Cookie路径
+- 支持HERMES_DASHBOARD_PUBLIC_URL声明式配置
+
+────────────────────────────────────────────────────────────────"""
+
 """Helpers for X-Forwarded-Prefix support.
 
 Mission-control style deploys reverse-proxy the dashboard at a path

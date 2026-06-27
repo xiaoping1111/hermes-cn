@@ -1,3 +1,11 @@
+"""CLIupdate autostash测试
+
+【产品经理理解要点】
+CLIupdate autostash功能测试。
+- 验证功能：命令行update autostash功能
+- 关键场景：配置、执行、验证
+- 业务影响：update autostash命令行功能失效"""
+
 from pathlib import Path
 from subprocess import CalledProcessError
 from types import SimpleNamespace

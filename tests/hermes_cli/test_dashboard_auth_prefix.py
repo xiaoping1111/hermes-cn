@@ -1,4 +1,13 @@
-"""Path-prefix (X-Forwarded-Prefix) awareness for the dashboard-auth gate.
+"""CLIdashboard auth prefix测试
+
+【产品经理理解要点】
+CLIdashboard auth prefix功能测试。
+- 验证功能：命令行dashboard auth prefix功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard auth prefix命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Path-prefix (X-Forwarded-Prefix) awareness for the dashboard-auth gate.
 
 Mission-control style deployments reverse-proxy the dashboard at a path
 prefix (e.g. ``mission-control.tilos.com/hermes/*`` -> local Caddy ->
@@ -26,8 +35,7 @@ honour it too:
      covers).
 
 These tests document the wire-level contract so a regression in any of
-those rules surfaces before a Mission Control deploy.
-"""
+those rules surfaces before a Mission Control deploy."""
 from __future__ import annotations
 
 import pytest

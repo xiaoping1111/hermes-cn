@@ -1,4 +1,13 @@
-"""Tests for hermes_cli.azure_detect — transport & model auto-detection."""
+"""CLIazure detect测试
+
+【产品经理理解要点】
+CLIazure detect功能测试。
+- 验证功能：命令行azure detect功能
+- 关键场景：配置、执行、验证
+- 业务影响：azure detect命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.azure_detect — transport & model auto-detection."""
 
 from __future__ import annotations
 

@@ -1,8 +1,16 @@
-"""Tests for the Home Assistant gateway adapter.
+"""HomeAssistant网关测试
+
+【产品经理理解要点】
+HomeAssistant平台网关功能测试。
+- 验证功能：HomeAssistant平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：HomeAssistant平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Home Assistant gateway adapter.
 
 Tests real logic: state change formatting, event filtering pipeline,
-cooldown behavior, config integration, and adapter initialization.
-"""
+cooldown behavior, config integration, and adapter initialization."""
 
 import time
 from unittest.mock import AsyncMock, MagicMock, patch

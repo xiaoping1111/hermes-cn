@@ -1,4 +1,13 @@
-"""Tests for _enrich_message_with_vision — regression for #5719.
+"""网关vision memory leak测试
+
+【产品经理理解要点】
+网关vision memory leak功能测试。
+- 验证功能：网关vision memory leak处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：vision memory leak功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for _enrich_message_with_vision — regression for #5719.
 
 The auxiliary vision LLM can echo system-prompt memory-context back into
 its analysis output.  The boundary fix in gateway/run.py runs the generic
@@ -6,8 +15,7 @@ sanitize_context helper over the description so the fenced wrapper and
 its system-note are removed before the description reaches the user.
 
 Plugin-specific header cleanup (e.g. "## Honcho Context") belongs at the
-provider boundary, not in this shared gateway path.
-"""
+provider boundary, not in this shared gateway path."""
 
 import asyncio
 import json

@@ -1,4 +1,13 @@
-"""Regression guard for #18028: provider content-policy / safety-filter
+"""Agent运行引擎测试 - 18028 content policy blocked
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的18028 content policy blocked验证。
+- 验证功能：18028 content policy blocked功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：18028 content policy blocked功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression guard for #18028: provider content-policy / safety-filter
 blocks must classify as ``content_policy_blocked``, be non-retryable, and
 trigger the ``is_client_error`` abort path so the loop jumps straight to a
 configured fallback or surfaces a clear policy-block message — instead of

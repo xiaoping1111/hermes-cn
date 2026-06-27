@@ -1,4 +1,13 @@
-"""Profile-path parity tests: verify profile path produces identical output to legacy flags.
+"""Profile接线
+
+【产品经理理解要点】
+模型供应商Profile接线。
+- 验证功能：配置到运行时正确连接
+- 关键场景：Profile解析、客户端创建
+- 业务影响：模型配置无法生效
+
+─────────────────────────────────────────────────────────────────────────
+Profile-path parity tests: verify profile path produces identical output to legacy flags.
 
 Each test calls build_kwargs twice — once with legacy flags, once with provider_profile —
 and asserts the output is identical. This catches any behavioral drift between the two paths.

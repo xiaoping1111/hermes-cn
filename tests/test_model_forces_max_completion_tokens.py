@@ -1,4 +1,13 @@
-"""Targeted tests for ``utils.model_forces_max_completion_tokens``.
+"""测试 - model forces max completion tokens
+
+【产品经理理解要点】
+功能验证中的model forces max completion tokens验证。
+- 验证功能：model forces max completion tokens功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：model forces max completion tokens功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Targeted tests for ``utils.model_forces_max_completion_tokens``.
 
 This helper decides whether a given model name requires the newer
 ``max_completion_tokens`` kwarg (rather than the legacy ``max_tokens``) on

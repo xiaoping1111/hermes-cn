@@ -1,4 +1,14 @@
-"""Shared helpers for classifying tool result payloads."""
+"""工具结果分类
+
+【产品经理理解要点】
+判断工具执行结果是否成功写入文件，用于文件变更追踪。
+- 核心职责：识别文件变更工具(write_file/patch)、验证结果是否落地
+- 关键业务概念：文件变更验证、bytes_written/success 字段检查
+- 在系统中的位置：工具护栏和并行调度的判断依据
+
+─────────────────────────────────────────────────────────────────
+Shared helpers for classifying tool result payloads.
+"""
 
 from __future__ import annotations
 

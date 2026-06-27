@@ -1,4 +1,14 @@
 """
+延迟依赖安装器
+
+【产品经理理解要点】
+按需安装可选功能的Python依赖包，避免将所有依赖打包到默认安装中。
+- 核心职责：当用户首次使用某个可选功能（如Mistral TTS、ElevenLabs、Bedrock等），自动检测并安装所需的pip包
+- 业务价值：解决两个痛点——(1)一个依赖出问题不会拖垮整个安装；(2)用户只下载实际使用的包，减少磁盘和启动开销
+- 安全模型：仅在虚拟环境内安装、仅从PyPI按包名安装、用户可通过配置禁止自动安装
+- 在系统中的位置：位于工具模块和Python包管理器之间，是"即用即装"体验的核心实现
+
+─────────────────────────────────────────────────────────────────
 Lazy dependency installer for opt-in Hermes Agent backends.
 
 Many Hermes features (Mistral TTS, ElevenLabs TTS, Honcho memory, Bedrock,

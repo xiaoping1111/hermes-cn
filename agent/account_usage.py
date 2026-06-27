@@ -1,5 +1,17 @@
 from __future__ import annotations
 
+"""账户用量查询
+
+账户用量查询
+
+【产品经理理解要点】
+查询 Nous Portal 和各供应商的账户用量与订阅状态。
+- 核心职责：构建用量视图(订阅/余额/已用)、支持多供应商(Nous/Anthropic/Codex)
+- 关键业务概念：订阅状态、余额、用量统计、OAuth 认证
+- 在系统中的位置：/usage 和 /billing 斜杠命令的数据源
+
+─────────────────────────────────────────────────────────────────
+"""
 import logging
 import math
 from dataclasses import dataclass

@@ -1,4 +1,13 @@
-"""Regression tests for /retry replacement semantics."""
+"""网关retry replacement测试
+
+【产品经理理解要点】
+网关retry replacement功能测试。
+- 验证功能：网关retry replacement处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：retry replacement功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for /retry replacement semantics."""
 
 from unittest.mock import AsyncMock, MagicMock
 

@@ -1,4 +1,13 @@
-"""Tests for kanban goal_mode — per-card Ralph-style goal loop.
+"""CLIkanban goal mode测试
+
+【产品经理理解要点】
+CLIkanban goal mode功能测试。
+- 验证功能：命令行kanban goal mode功能
+- 关键场景：配置、执行、验证
+- 业务影响：kanban goal mode命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for kanban goal_mode — per-card Ralph-style goal loop.
 
 Covers three layers:
 
@@ -7,8 +16,7 @@ Covers three layers:
 2. Spawn: _default_spawn sets the HERMES_KANBAN_GOAL_MODE env vars only
    when the card opts in.
 3. Loop: goals.run_kanban_goal_loop continuation / completion / budget
-   behaviour, driven entirely through injected callbacks (no live model).
-"""
+   behaviour, driven entirely through injected callbacks (no live model)."""
 
 from __future__ import annotations
 

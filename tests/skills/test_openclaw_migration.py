@@ -1,4 +1,12 @@
 from __future__ import annotations
+"""OpenClaw迁移
+
+【产品经理理解要点】
+OpenClaw迁移兼容性。
+- 验证功能：技能迁移正确性
+- 关键场景：迁移、兼容、验证
+- 业务影响：迁移后技能失效"""
+
 
 import importlib.util
 import json

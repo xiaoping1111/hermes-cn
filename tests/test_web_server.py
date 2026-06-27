@@ -1,4 +1,13 @@
-"""Test that start_server configures ws-ping keepalive.
+"""测试 - web server
+
+【产品经理理解要点】
+功能验证中的web server验证。
+- 验证功能：web server功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：web server功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Test that start_server configures ws-ping keepalive.
 
 The server now uses uvicorn.Server directly (not uvicorn.run) so we stub
 Config + Server + asyncio.run to capture kwargs without starting an event loop.

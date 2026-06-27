@@ -1,4 +1,13 @@
-"""Tests for the gateway's child-session live mirror.
+"""子智能体镜像
+
+【产品经理理解要点】
+子智能体输出镜像。
+- 验证功能：输出同步显示
+- 关键场景：镜像、同步、显示
+- 业务影响：子智能体输出不同步
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the gateway's child-session live mirror.
 
 A delegated child runs synchronously inside the parent's turn; its activity
 reaches the gateway only as relayed ``subagent.*`` events on the PARENT sid

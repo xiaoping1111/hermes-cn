@@ -1,3 +1,14 @@
+
+"""模型名称标准化
+
+【产品经理理解要点】
+按提供商格式要求标准化模型名称（斜杠/连字符/点号等）。
+- 聚合器需要vendor/model格式
+- Anthropic需要连字符替代点号
+- 确保模型标识符与API期望格式匹配
+
+────────────────────────────────────────────────────────────────"""
+
 """Per-provider model name normalization.
 
 Different LLM providers expect model identifiers in different formats:

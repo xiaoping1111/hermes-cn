@@ -1,12 +1,20 @@
-"""Tests for the approvals.mcp_reload_confirm config gate.
+"""CLImcp reload confirm gate测试
+
+【产品经理理解要点】
+CLImcp reload confirm gate功能测试。
+- 验证功能：命令行mcp reload confirm gate功能
+- 关键场景：配置、执行、验证
+- 业务影响：mcp reload confirm gate命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the approvals.mcp_reload_confirm config gate.
 
 When the user runs /reload-mcp, the MCP tool set is rebuilt which
 invalidates the provider prompt cache for the active session.  That's
 expensive on long-context / high-reasoning models.  The config gate
 adds a three-option confirmation (Approve Once / Always Approve /
 Cancel); "Always Approve" flips this key to false so subsequent reloads
-run silently.
-"""
+run silently."""
 
 from __future__ import annotations
 

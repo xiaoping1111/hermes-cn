@@ -1,4 +1,13 @@
-"""Tests for the post-pull syntax guard in ``hermes update``.
+"""CLIupdate post pull syntax guard测试
+
+【产品经理理解要点】
+CLIupdate post pull syntax guard功能测试。
+- 验证功能：命令行update post pull syntax guard功能
+- 关键场景：配置、执行、验证
+- 业务影响：update post pull syntax guard命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the post-pull syntax guard in ``hermes update``.
 
 When a bad commit lands on ``main`` with a syntax error in a critical file
 (e.g. orphan merge-conflict markers in ``hermes_cli/config.py``), the CLI
@@ -9,8 +18,7 @@ pre-pull SHA on failure so the user's install stays runnable.
 Reference incident: PR #28452 (May 18, 2026) shipped unresolved conflict
 markers in ``hermes_cli/config.py``; users who ran ``hermes update`` in
 the 7-minute window before #28458 landed could not run any ``hermes``
-command afterward.
-"""
+command afterward."""
 
 from __future__ import annotations
 

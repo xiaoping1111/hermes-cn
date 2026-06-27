@@ -1,4 +1,14 @@
-"""Voice Mode -- Push-to-talk audio recording and playback for the CLI.
+"""语音模式模块
+
+【产品经理理解要点】
+为CLI提供"按住说话"的语音交互能力，实现语音输入→文字识别→智能体处理→语音播放的完整闭环。
+- 核心职责：音频录制（支持静音自动停止）、语音转文字（STT）、文字转语音播放（TTS）、环境音频检测
+- 关键业务概念：静音检测（VAD）——自动识别用户停止说话后结束录制；Whisper幻觉过滤——排除STT模型在静音片段上的常见误识别
+- 多环境支持：标准桌面（sounddevice）、Termux（Android终端）、SSH远程（PulseAudio转发）、Docker容器（音频挂载）、WSL
+- 在系统中的位置：位于用户语音交互层和智能体对话引擎之间，是语音模式的核心实现
+
+─────────────────────────────────────────────────────────────────
+Voice Mode -- Push-to-talk audio recording and playback for the CLI.
 
 Provides audio capture via sounddevice, WAV encoding via stdlib wave,
 STT dispatch via tools.transcription_tools, and TTS playback via

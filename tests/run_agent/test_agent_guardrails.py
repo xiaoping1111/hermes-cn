@@ -1,4 +1,13 @@
-"""Unit tests for AIAgent pre/post-LLM-call guardrails.
+"""Agent运行引擎测试 - agent guardrails
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的agent guardrails验证。
+- 验证功能：agent guardrails功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：agent guardrails功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for AIAgent pre/post-LLM-call guardrails.
 
 Covers three static methods on AIAgent (inspired by PR #1321 — @alireza78a):
   - _sanitize_api_messages()    — Phase 1: orphaned tool pair repair

@@ -1,4 +1,13 @@
-"""Regression coverage for GHSA-5qr3-c538-wm9j (#29156) — Remote Code
+"""CLIproject plugin rce bypass测试
+
+【产品经理理解要点】
+CLIproject plugin rce bypass功能测试。
+- 验证功能：命令行project plugin rce bypass功能
+- 关键场景：配置、执行、验证
+- 业务影响：project plugin rce bypass命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression coverage for GHSA-5qr3-c538-wm9j (#29156) — Remote Code
 Execution via the ``HERMES_ENABLE_PROJECT_PLUGINS`` bypass in the web
 server's dashboard plugin loader.
 
@@ -26,8 +35,7 @@ These tests pin each layer of the new defence:
 * ``_mount_plugin_api_routes`` re-validates at import time and
   refuses project-source plugins outright.
 * End-to-end the original PoC manifest no longer triggers
-  ``importlib`` for ``/tmp/payload.py``.
-"""
+  ``importlib`` for ``/tmp/payload.py``."""
 from __future__ import annotations
 
 import json

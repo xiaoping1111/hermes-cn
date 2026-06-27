@@ -1,4 +1,13 @@
-"""Tests for ``gateway.run._build_replay_entry``.
+"""网关replay entry fields测试
+
+【产品经理理解要点】
+网关replay entry fields功能测试。
+- 验证功能：网关replay entry fields处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：replay entry fields功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ``gateway.run._build_replay_entry``.
 
 The gateway rebuilds ``agent_history`` from the persisted transcript on every
 turn (unlike the CLI, which keeps the live in-memory message list).  When a
@@ -12,8 +21,7 @@ unrecovered drop of ``codex_message_items`` in particular kills prefix-cache
 hits for OpenAI Codex Responses API users — OpenAI's docs require the
 ``phase`` field be replayed on every assistant message.
 
-These tests pin the expanded whitelist so it doesn't regress.
-"""
+These tests pin the expanded whitelist so it doesn't regress."""
 from __future__ import annotations
 
 

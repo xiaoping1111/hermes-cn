@@ -1,7 +1,15 @@
-"""Regression: ``hermes setup`` for the ollama-cloud provider must force-refresh
+"""CLIsetup ollama cloud force refresh测试
+
+【产品经理理解要点】
+CLIsetup ollama cloud force refresh功能测试。
+- 验证功能：命令行setup ollama cloud force refresh功能
+- 关键场景：配置、执行、验证
+- 业务影响：setup ollama cloud force refresh命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression: ``hermes setup`` for the ollama-cloud provider must force-refresh
 the model cache after the user supplies a key, otherwise the picker keeps
-serving a stale cache (models.dev only, no live API probe) for up to an hour.
-"""
+serving a stale cache (models.dev only, no live API probe) for up to an hour."""
 
 from __future__ import annotations
 

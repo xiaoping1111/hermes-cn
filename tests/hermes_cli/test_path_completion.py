@@ -1,4 +1,13 @@
-"""Tests for file path autocomplete in the CLI completer."""
+"""CLIpath completion测试
+
+【产品经理理解要点】
+CLIpath completion功能测试。
+- 验证功能：命令行path completion功能
+- 关键场景：配置、执行、验证
+- 业务影响：path completion命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for file path autocomplete in the CLI completer."""
 
 import os
 from unittest.mock import MagicMock

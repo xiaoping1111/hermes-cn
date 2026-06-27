@@ -1,11 +1,19 @@
-"""Tests for configurable background process notification modes.
+"""网关background process notifications测试
+
+【产品经理理解要点】
+网关background process notifications功能测试。
+- 验证功能：网关background process notifications处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：background process notifications功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for configurable background process notification modes.
 
 The gateway process watcher pushes status updates to users' chats when
 background terminal commands run.  ``display.background_process_notifications``
 controls verbosity: off | result | error | all (default).
 
-Contributed by @PeterFile (PR #593), reimplemented on current main.
-"""
+Contributed by @PeterFile (PR #593), reimplemented on current main."""
 
 import asyncio
 from types import SimpleNamespace

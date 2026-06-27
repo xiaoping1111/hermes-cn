@@ -1,5 +1,16 @@
 """Per-agent iteration budget — thread-safe consume/refund counter.
 
+迭代预算计数器
+
+【产品经理理解要点】
+线程安全的迭代次数计数器，限制单次智能体对话的最大工具调用轮数。
+- 核心职责：消耗/退还迭代次数、预算耗尽检测、子智能体独立预算
+- 关键业务概念：max_iterations(默认90)、子智能体预算(默认50)、线程安全
+- 在系统中的位置：对话循环的迭代上限守卫
+
+─────────────────────────────────────────────────────────────────
+
+
 Extracted from ``run_agent.py``.  Each ``AIAgent`` instance (parent or
 subagent) holds an :class:`IterationBudget`; the parent's cap comes from
 ``max_iterations`` (default 90), each subagent's cap comes from

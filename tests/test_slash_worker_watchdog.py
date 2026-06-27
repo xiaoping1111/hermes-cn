@@ -1,4 +1,12 @@
 import psutil
+"""测试 - slash worker watchdog
+
+【产品经理理解要点】
+功能验证中的slash worker watchdog验证。
+- 验证功能：slash worker watchdog功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：slash worker watchdog功能异常或存在安全隐患"""
+
 
 from tui_gateway import slash_worker
 

@@ -1,4 +1,13 @@
-"""Regression tests for _rewrite_compound_background.
+"""工具系统测试 - terminal compound background
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的terminal compound background验证。
+- 验证功能：terminal compound background功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：terminal compound background功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for _rewrite_compound_background.
 
 Context: bash parses ``A && B &`` as ``(A && B) &`` — it forks a subshell
 for the compound and backgrounds the subshell. Inside the subshell, B

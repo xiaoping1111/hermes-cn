@@ -1,3 +1,14 @@
+
+"""GitHub Copilot认证
+
+【产品经理理解要点】
+实现GitHub Copilot的OAuth设备码流程和令牌验证。
+- OAuth设备码流程：用户在浏览器中授权
+- 支持gho_/github_pat_/ghu_等令牌类型
+- 与GitHub Copilot API的认证集成
+
+────────────────────────────────────────────────────────────────"""
+
 """GitHub Copilot authentication utilities.
 
 Implements the OAuth device code flow used by the Copilot CLI and handles

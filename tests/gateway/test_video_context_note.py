@@ -1,4 +1,13 @@
-"""Tests for video attachment context notes in gateway turns."""
+"""网关video context note测试
+
+【产品经理理解要点】
+网关video context note功能测试。
+- 验证功能：网关video context note处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：video context note功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for video attachment context notes in gateway turns."""
 
 from unittest.mock import patch
 

@@ -1,4 +1,13 @@
-"""Regression test: `@folder:` completion must only surface directories and
+"""CLIat context completion filter测试
+
+【产品经理理解要点】
+CLIat context completion filter功能测试。
+- 验证功能：命令行at context completion filter功能
+- 关键场景：配置、执行、验证
+- 业务影响：at context completion filter命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression test: `@folder:` completion must only surface directories and
 `@file:` must only surface regular files.
 
 Reported during TUI v2 blitz testing: typing `@folder:` showed .dockerignore,
@@ -6,8 +15,7 @@ Reported during TUI v2 blitz testing: typing `@folder:` showed .dockerignore,
 completion branch yielded every entry regardless of the explicit prefix, and
 auto-switched the completion kind based on `is_dir`. That defeated the user's
 explicit choice and rendered the `@folder:` / `@file:` prefixes useless for
-filtering.
-"""
+filtering."""
 
 from __future__ import annotations
 

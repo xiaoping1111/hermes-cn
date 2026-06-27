@@ -1,4 +1,12 @@
-"""
+"""全息记忆存储模块
+
+【产品经理理解要点】
+管理记忆的持久化存储，包括向量索引和数据序列化。
+- 向量索引的构建和维护
+- 记忆数据的持久化和加载
+
+─────────────────────────────────────────────────────────────────
+
 SQLite-backed fact store with entity resolution and trust scoring.
 Single-user Hermes memory store plugin.
 """

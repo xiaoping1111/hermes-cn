@@ -1,4 +1,15 @@
 """LM Studio reasoning-effort resolution shared by the chat-completions
+
+LM Studio 推理强度解析
+
+【产品经理理解要点】
+将用户的推理配置映射到 LM Studio 支持的 reasoning_effort 值。
+- 核心职责：reasoning_config-LM Studio effort 映射、allowed_options 钳位
+- 关键业务概念：推理强度(none/minimal/low/medium/high)、toggle 模式
+- 在系统中的位置：LM Studio 供应商的请求参数转换层
+
+─────────────────────────────────────────────────────────────────
+
 transport and run_agent's iteration-limit summary path.
 
 LM Studio publishes per-model ``capabilities.reasoning.allowed_options`` (e.g.

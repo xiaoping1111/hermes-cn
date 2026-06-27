@@ -1,4 +1,13 @@
-"""Tests for Codex auth — tokens stored in Hermes auth store (~/.hermes/auth.json)."""
+"""CLIauth codex provider测试
+
+【产品经理理解要点】
+CLIauth codex provider功能测试。
+- 验证功能：命令行auth codex provider功能
+- 关键场景：配置、执行、验证
+- 业务影响：auth codex provider命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Codex auth — tokens stored in Hermes auth store (~/.hermes/auth.json)."""
 
 import json
 import time

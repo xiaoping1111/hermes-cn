@@ -1,9 +1,17 @@
-"""Regression tests for interactive setup provider/model persistence.
+"""CLIsetup model provider测试
+
+【产品经理理解要点】
+CLIsetup model provider功能测试。
+- 验证功能：命令行setup model provider功能
+- 关键场景：配置、执行、验证
+- 业务影响：setup model provider命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for interactive setup provider/model persistence.
 
 Since setup_model_provider delegates to select_provider_and_model()
 from hermes_cli.main, these tests mock the delegation point and verify
-that the setup wizard correctly syncs config from disk after the call.
-"""
+that the setup wizard correctly syncs config from disk after the call."""
 
 from __future__ import annotations
 

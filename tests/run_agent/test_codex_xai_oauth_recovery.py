@@ -1,4 +1,13 @@
-"""Regression tests for the May 2026 xAI OAuth (SuperGrok / X Premium) bugs.
+"""Agent运行引擎测试 - codex xai oauth recovery
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的codex xai oauth recovery验证。
+- 验证功能：codex xai oauth recovery功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：codex xai oauth recovery功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the May 2026 xAI OAuth (SuperGrok / X Premium) bugs.
 
 Three distinct failure modes the user community hit during rollout:
 

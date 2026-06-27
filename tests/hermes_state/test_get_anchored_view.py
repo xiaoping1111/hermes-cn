@@ -1,9 +1,17 @@
-"""Tests for SessionDB.get_anchored_view — anchored window + session bookends.
+"""锚定视图获取
+
+【产品经理理解要点】
+获取锚定视图。
+- 验证功能：获取消息历史的锚定视图
+- 关键场景：锚点定位、视图范围、分页
+- 业务影响：消息视图定位不准确
+
+─────────────────────────────────────────────────────────────────────────
+Tests for SessionDB.get_anchored_view — anchored window + session bookends.
 
 Used by the discovery shape of session_search: an FTS5 match becomes the
 anchor, the call returns goal (bookend_start) + match (window) + resolution
-(bookend_end) in a single round trip, no LLM.
-"""
+(bookend_end) in a single round trip, no LLM."""
 import pytest
 
 from hermes_state import SessionDB

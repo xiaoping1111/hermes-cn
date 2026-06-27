@@ -1,5 +1,16 @@
 """Google Code Assist API client — project discovery, onboarding, quota.
 
+Google Code Assist API 客户端
+
+【产品经理理解要点】
+Google Gemini CLI 的后端接入：处理账号层级发现、用户入驻和配额查询。
+- 核心职责：探测用户是免费/付费层、自动入驻(onboard)、查询剩余配额
+- 关键业务概念：GCP 项目绑定、VPC-SC 企业账户兼容、LRO 长时轮询
+- 在系统中的位置：Gemini 供应商部署前的控制面，为实际推理调用准备凭证和项目
+
+─────────────────────────────────────────────────────────────────
+
+
 The Code Assist API powers Google's official gemini-cli. It sits at
 ``cloudcode-pa.googleapis.com`` and provides:
 

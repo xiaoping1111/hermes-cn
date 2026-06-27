@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""SWE 任务运行器
+
+【产品经理理解要点】
+软件工程任务自动执行器：在隔离环境（Docker/Modal/本地）中运行编程任务并输出轨迹。
+- 核心职责：加载编程任务、在沙箱环境中执行命令、收集执行轨迹（trajectory）
+- 关键业务概念：执行环境（local/docker/modal）、轨迹格式（from/value 对）、JSONL 批处理
+- 在系统中的位置：SWE-bench 等编码评估场景的入口，产出与 trajectory_compressor 对接
+
+─────────────────────────────────────────────────────────────────
 SWE Runner with Hermes Trajectory Format
 
 A runner that uses Hermes-Agent's built-in execution environments

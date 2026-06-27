@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""EVM 链上客户端
+
+【产品经理理解要点】
+对接 EVM 兼容链（以太坊等）进行链上交互。
+- 余额和合约查询
+- 交易发送和事件监听
+
+─────────────────────────────────────────────────────────────────
+
 evm_client.py — EVM blockchain CLI tool for the Hermes Agent project.
 Zero external dependencies. Uses stdlib only: urllib, json, argparse, time, os, sys, typing.
 """

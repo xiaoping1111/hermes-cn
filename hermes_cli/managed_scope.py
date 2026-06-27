@@ -1,3 +1,14 @@
+
+"""受管配置层
+
+【产品经理理解要点】
+IT部门推送的不可变配置和环境变量层，优先级高于用户配置。
+- 系统级目录（/etc/hermes）提供不可覆盖的配置值
+- 与企业IT管理工具配合实现集中管控
+- 与HERMES_MANAGED写锁机制独立，可共存
+
+────────────────────────────────────────────────────────────────"""
+
 """Managed scope — IT-pushed, user-immutable config & env layer.
 
 A system-level directory (default ``/etc/hermes``, root-owned and not

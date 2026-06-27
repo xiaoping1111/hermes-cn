@@ -1,4 +1,14 @@
-"""Tests for acp_adapter.auth — provider detection."""
+"""ACP协议测试 - auth
+
+【产品经理理解要点】
+ACP协议层的工具注册、权限控制、会话管理、事件分发和MCP端到端通信中的auth验证。
+- 验证功能：auth功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：auth功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for acp_adapter.auth — provider detection.
+"""
 
 from acp_adapter.auth import (
     TERMINAL_SETUP_AUTH_METHOD_ID,

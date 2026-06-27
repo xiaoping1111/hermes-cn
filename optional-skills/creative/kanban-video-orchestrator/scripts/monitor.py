@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""视频管线监控
+
+【产品经理理解要点】
+监控看板驱动的视频生成管线状态。
+- 任务状态轮询
+- 失败检测和告警
+
+─────────────────────────────────────────────────────────────────
+
 Monitor a running video-production kanban. Polls `hermes kanban list` and
 `events` for a tenant and surfaces issues (stuck tasks, missing heartbeats,
 repeated retries, dependency deadlocks).

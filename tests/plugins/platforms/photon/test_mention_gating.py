@@ -1,4 +1,13 @@
-"""Group-chat mention-gating tests for PhotonAdapter.
+"""插件系统测试 - mention gating
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的mention gating验证。
+- 验证功能：mention gating功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：mention gating功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Group-chat mention-gating tests for PhotonAdapter.
 
 Parity with the BlueBubbles iMessage channel: when ``require_mention`` is
 enabled, group messages are dropped unless they hit a wake-word pattern,

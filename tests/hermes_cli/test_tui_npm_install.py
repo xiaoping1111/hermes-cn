@@ -1,4 +1,13 @@
-"""_tui_need_npm_install: auto npm when node_modules is behind the lockfile."""
+"""CLItui npm install测试
+
+【产品经理理解要点】
+CLItui npm install功能测试。
+- 验证功能：命令行tui npm install功能
+- 关键场景：配置、执行、验证
+- 业务影响：tui npm install命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+_tui_need_npm_install: auto npm when node_modules is behind the lockfile."""
 
 import os
 import types

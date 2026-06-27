@@ -1,4 +1,13 @@
-"""Regression tests for GitHub #16743 — atomic writes must preserve symlinks.
+"""测试 - atomic replace symlinks
+
+【产品经理理解要点】
+功能验证中的atomic replace symlinks验证。
+- 验证功能：atomic replace symlinks功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：atomic replace symlinks功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for GitHub #16743 — atomic writes must preserve symlinks.
 
 ``os.replace(tmp, target)`` replaces whatever exists at ``target`` — including
 symlinks, which it swaps for a regular file.  Managed deployments that

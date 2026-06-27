@@ -1,4 +1,12 @@
-"""Named RGB palettes for pixel_art() and pixel_art_video().
+"""像素艺术调色板
+
+【产品经理理解要点】
+像素艺术专用的调色板定义和管理。
+- 预设调色板集合
+- 颜色限制和映射
+
+─────────────────────────────────────────────────────────────────
+Named RGB palettes for pixel_art() and pixel_art_video().
 
 Palette RGB values sourced from pixel-art-studio (MIT License)
 https://github.com/Synero/pixel-art-studio — see ATTRIBUTION.md.

@@ -1,5 +1,16 @@
 """Stream diagnostics — per-attempt counters, exception chains, retry logging.
 
+流式诊断
+
+【产品经理理解要点】
+收集流式请求的诊断信息(字节数、异常链、重试日志)，用于故障排查。
+- 核心职责：按请求收集流式指标、异常链追踪、网关/CDN 边缘诊断
+- 关键业务概念：流式诊断头、异常链、重试计数、Cloudflare 边缘
+- 在系统中的位置：流式响应管线的可观测性层
+
+─────────────────────────────────────────────────────────────────
+
+
 When a streaming chat-completions request dies mid-response, we want to
 know why: which Cloudflare edge served the request, which OpenRouter
 downstream provider answered, how many bytes/chunks we got before the

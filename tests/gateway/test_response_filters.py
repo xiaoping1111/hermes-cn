@@ -1,3 +1,11 @@
+"""网关响应过滤测试
+
+【产品经理理解要点】
+网关响应过滤功能测试。
+- 验证功能：网关响应内容的过滤与静默判定
+- 关键场景：静默token识别、非静默响应判定、边界处理
+- 业务影响：响应过滤逻辑错误导致消息误静默或误发送
+"""
 from gateway.response_filters import (
     is_intentional_silence_agent_result,
     is_intentional_silence_response,

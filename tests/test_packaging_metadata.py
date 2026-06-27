@@ -1,4 +1,12 @@
 from pathlib import Path
+"""测试 - packaging metadata
+
+【产品经理理解要点】
+功能验证中的packaging metadata验证。
+- 验证功能：packaging metadata功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：packaging metadata功能异常或存在安全隐患"""
+
 import re
 import tomllib
 

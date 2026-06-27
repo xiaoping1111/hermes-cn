@@ -1,4 +1,12 @@
-"""
+"""进化快照查看
+
+【产品经理理解要点】
+查看 Darwinian Evolver 的进化快照和中间状态。
+- 快照内容展示
+- 代际比较
+
+─────────────────────────────────────────────────────────────────
+
 show_snapshot.py — Dump the population from a darwinian-evolver snapshot pickle.
 
 Usage:

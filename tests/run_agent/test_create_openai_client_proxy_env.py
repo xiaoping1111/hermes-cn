@@ -1,4 +1,13 @@
-"""Regression guard: _create_openai_client must honor HTTP(S)_PROXY env vars.
+"""Agent运行引擎测试 - create openai client proxy env
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的create openai client proxy env验证。
+- 验证功能：create openai client proxy env功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：create openai client proxy env功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression guard: _create_openai_client must honor HTTP(S)_PROXY env vars.
 
 When #11277 re-landed TCP keepalives, ``_create_openai_client`` began passing
 a custom ``transport=httpx.HTTPTransport(...)`` to ``httpx.Client``. httpx only

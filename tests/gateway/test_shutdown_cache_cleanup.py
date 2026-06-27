@@ -1,4 +1,13 @@
-"""Regression tests for gateway shutdown cleaning up cached agent memory providers (issue #11205).
+"""网关shutdown cache cleanup测试
+
+【产品经理理解要点】
+网关shutdown cache cleanup功能测试。
+- 验证功能：网关shutdown cache cleanup处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：shutdown cache cleanup功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for gateway shutdown cleaning up cached agent memory providers (issue #11205).
 
 When the gateway shuts down, ``stop()`` called ``_finalize_shutdown_agents()``
 which only drained agents in ``_running_agents``.  Idle agents sitting in
@@ -6,8 +15,7 @@ which only drained agents in ``_running_agents``.  Idle agents sitting in
 ``MemoryProvider.on_session_end()`` hooks never fired.
 
 The fix adds an explicit sweep of ``_agent_cache`` after
-``_finalize_shutdown_agents`` in the ``_stop_impl`` coroutine.
-"""
+``_finalize_shutdown_agents`` in the ``_stop_impl`` coroutine."""
 
 import asyncio
 import threading

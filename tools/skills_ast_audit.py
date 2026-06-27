@@ -1,4 +1,13 @@
 """
+技能AST深度审计
+
+【产品经理理解要点】
+对技能Python文件进行AST级代码审计，发现可能的安全风险模式（如动态导入、动态属性访问）。
+- 核心职责：扫描第三方技能代码中的潜在风险模式，输出审计发现供人工审查
+- 定位：这不是安全门禁，而是可选的诊断工具（`hermes skills audit --deep`），帮助运维人员审查第三方技能
+- 在系统中的位置：位于技能安装和技能安全门禁之间，是深度安全审查的辅助手段
+
+─────────────────────────────────────────────────────────────────
 AST-level deep audit for skill Python files — opt-in diagnostic, not a security gate.
 
 Per SECURITY.md §2.4, Skills Guard is in-process heuristics ("useful — not

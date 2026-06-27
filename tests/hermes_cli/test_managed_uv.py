@@ -1,4 +1,13 @@
-"""Tests for hermes_cli.managed_uv — one path, no guessing."""
+"""CLImanaged uv测试
+
+【产品经理理解要点】
+CLImanaged uv功能测试。
+- 验证功能：命令行managed uv功能
+- 关键场景：配置、执行、验证
+- 业务影响：managed uv命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.managed_uv — one path, no guessing."""
 
 from __future__ import annotations
 

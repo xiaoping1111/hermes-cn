@@ -1,4 +1,13 @@
-"""Regression test for #11884: _make_agent must resolve runtime provider.
+"""Agent供应商创建
+
+【产品经理理解要点】
+TUI层Agent供应商创建。
+- 验证功能：供应商实例配置
+- 关键场景：创建、配置注入
+- 业务影响：Agent供应商创建失败
+
+─────────────────────────────────────────────────────────────────────────
+Regression test for #11884: _make_agent must resolve runtime provider.
 
 Without resolve_runtime_provider(), bare-slug models in config
 (e.g. ``claude-opus-4-6`` with ``model.provider: anthropic``) leave

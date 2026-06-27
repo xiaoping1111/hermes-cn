@@ -1,12 +1,20 @@
-"""Per-platform streaming defaults + dashboard exposure.
+"""网关per platform streaming defaults测试
+
+【产品经理理解要点】
+网关per platform streaming defaults功能测试。
+- 验证功能：网关per platform streaming defaults处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：per platform streaming defaults功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Per-platform streaming defaults + dashboard exposure.
 
 Streaming is smooth on Telegram (native sendMessageDraft) but flickers on
 edit-only platforms like Discord. The shipped defaults encode that:
 display.platforms.telegram.streaming=true, .discord.streaming=false. These are
 gap-fillers (user values win via deep-merge) and, because the dashboard schema
 is generated from DEFAULT_CONFIG, they automatically appear as editable toggles
-in the web UI.
-"""
+in the web UI."""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""Regression tests for the Telegram text-batch adaptive-delay fast-path
+"""Telegram网关测试
+
+【产品经理理解要点】
+Telegram平台网关功能测试。
+- 验证功能：Telegram平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the Telegram text-batch adaptive-delay fast-path
 and _env_float_clamped helper introduced by PR #10388 (Telegram latency
 tuning).
 
@@ -7,8 +16,7 @@ configured cap as the upper bound, so an operator who tightens the cap
 gets the lower number on every tier.
 
 The env-clamped helper guarantees float env vars never produce NaN/Inf
-or out-of-bounds values that could break asyncio.sleep().
-"""
+or out-of-bounds values that could break asyncio.sleep()."""
 
 from __future__ import annotations
 

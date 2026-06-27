@@ -1,4 +1,13 @@
-"""Tests for sanitize_anthropic_kwargs (#31673).
+"""Agent核心测试 - anthropic kwargs sanitize
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的anthropic kwargs sanitize验证。
+- 验证功能：anthropic kwargs sanitize功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：anthropic kwargs sanitize功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for sanitize_anthropic_kwargs (#31673).
 
 Guards the Anthropic Messages dispatch boundary against Responses-API-only
 kwargs (``instructions``, ``input``, ``store``, ``parallel_tool_calls``)

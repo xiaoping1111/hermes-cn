@@ -1,4 +1,13 @@
-"""Unit tests for run_agent.py (AIAgent).
+"""Agent运行引擎测试 - run agent
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的run agent验证。
+- 验证功能：run agent功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：run agent功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for run_agent.py (AIAgent).
 
 Tests cover pure functions, state/structure methods, and conversation loop
 pieces. The OpenAI client and tool loading are mocked so no network calls

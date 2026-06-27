@@ -1,4 +1,13 @@
-"""disk-cleanup plugin — auto-cleanup of ephemeral Hermes session files.
+"""磁盘清理插件 — 自动回收会话临时文件
+
+【产品经理理解要点】
+无需 Agent 主动调用，通过钩子自动追踪和清理临时文件，零合规负担。
+- post_tool_call 钩子：静默追踪 write_file/terminal 创建的临时文件
+- on_session_end 钩子：会话结束时自动清理已追踪的测试文件
+- /disk-cleanup 斜杠命令：手动执行 status/dry-run/quick/deep 操作
+
+─────────────────────────────────────────────────────────────────
+disk-cleanup plugin — auto-cleanup of ephemeral Hermes session files.
 
 Wires three behaviours:
 

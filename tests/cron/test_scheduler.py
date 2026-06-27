@@ -1,4 +1,13 @@
-"""Tests for cron/scheduler.py — origin resolution, delivery routing, and error logging."""
+"""调度器核心
+
+【产品经理理解要点】
+定时任务调度器核心逻辑。
+- 验证功能：任务调度、触发与状态管理
+- 关键场景：调度循环、触发时机、状态转换
+- 业务影响：所有定时任务无法正常调度
+
+─────────────────────────────────────────────────────────────────────────
+Tests for cron/scheduler.py — origin resolution, delivery routing, and error logging."""
 
 import json
 import logging

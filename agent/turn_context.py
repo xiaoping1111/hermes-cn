@@ -1,5 +1,16 @@
 """Per-turn setup for ``run_conversation`` (the turn prologue).
 
+每轮对话初始化上下文
+
+【产品经理理解要点】
+每轮对话的前置准备：在模型调用之前完成消息清洗、系统提示构建、上下文压缩等初始化。
+- 核心职责：重试计数重置、消息脱敏、系统提示恢复/构建、预压缩检查、内存预取
+- 关键业务概念：轮次(turn)初始化、上下文预取、插件钩子(pre_llm_call)
+- 在系统中的位置：对话循环的启动器，将前置逻辑封装为 TurnContext 对象
+
+─────────────────────────────────────────────────────────────────
+
+
 ``run_conversation`` opened with ~470 lines of straight-line setup before the
 tool-calling loop ever started: stdio guarding, runtime-main wiring, retry-counter
 resets, user-message sanitization, todo/nudge-counter hydration, system-prompt

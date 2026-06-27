@@ -1,9 +1,17 @@
-"""Regression tests for custom_providers per-model context_length resolution.
+"""CLIcustom provider context length测试
+
+【产品经理理解要点】
+CLIcustom provider context length功能测试。
+- 验证功能：命令行custom provider context length功能
+- 关键场景：配置、执行、验证
+- 业务影响：custom provider context length命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for custom_providers per-model context_length resolution.
 
 Covers the fix for #15779 — mid-session /model switch to a named custom
 provider must honor ``custom_providers[].models.<id>.context_length`` the
-same way startup already does.
-"""
+same way startup already does."""
 from __future__ import annotations
 
 from unittest.mock import patch

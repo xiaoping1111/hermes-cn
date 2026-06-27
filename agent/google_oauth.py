@@ -1,5 +1,16 @@
 """Google OAuth PKCE flow for the Gemini (google-gemini-cli) inference provider.
 
+Google OAuth PKCE 流程
+
+【产品经理理解要点】
+实现 Google OAuth 授权码+PKCE 流程，为 Gemini 供应商获取 Access Token。
+- 核心职责：PKCE S256 授权码流程、Token 刷新、跨进程锁定、安全存储
+- 关键业务概念：OAuth PKCE、refresh_token、Google Code Assist 认证
+- 在系统中的位置：Gemini 供应商的认证前端
+
+─────────────────────────────────────────────────────────────────
+
+
 This module implements Authorization Code + PKCE (S256) OAuth against Google's
 accounts.google.com endpoints. The resulting access token is used by
 ``agent.gemini_cloudcode_adapter`` to talk to ``cloudcode-pa.googleapis.com``

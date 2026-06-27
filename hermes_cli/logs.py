@@ -1,4 +1,13 @@
-"""``hermes logs`` — view and filter Hermes log files.
+"""日志查看命令
+
+【产品经理理解要点】
+hermes logs子命令，查看和过滤Hermes日志文件。
+- 支持tail/follow实时跟踪
+- 按会话/级别/组件/时间段过滤
+- 多日志源：agent.log/errors.log/gateway.log等
+
+────────────────────────────────────────────────────────────────
+``hermes logs`` — view and filter Hermes log files.
 
 Supports tailing, following, session filtering, level filtering,
 component filtering, and relative time ranges.  All log files live
@@ -16,8 +25,7 @@ Usage examples::
     hermes logs --session abc123   # filter by session ID substring
     hermes logs --component tools  # only tool-related lines
     hermes logs --since 1h         # lines from the last hour
-    hermes logs --since 30m -f     # follow, starting 30 min ago
-"""
+    hermes logs --since 30m -f     # follow, starting 30 min ago"""
 
 import re
 import sys

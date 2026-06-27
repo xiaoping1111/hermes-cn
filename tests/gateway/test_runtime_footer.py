@@ -1,4 +1,13 @@
-"""Unit tests for gateway.runtime_footer — the opt-in runtime-metadata footer
+"""网关runtime footer测试
+
+【产品经理理解要点】
+网关runtime footer功能测试。
+- 验证功能：网关runtime footer处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：runtime footer功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for gateway.runtime_footer — the opt-in runtime-metadata footer
 appended to final gateway replies."""
 
 from __future__ import annotations

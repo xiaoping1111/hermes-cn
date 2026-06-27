@@ -1,4 +1,13 @@
-"""Tests for ``_get_cloud_provider()`` caching policy.
+"""工具系统测试 - browser cloud provider cache
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的browser cloud provider cache验证。
+- 验证功能：browser cloud provider cache功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：browser cloud provider cache功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ``_get_cloud_provider()`` caching policy.
 
 Regression coverage for issue #22324: a transient ``None`` from the resolver
 must not be cached for the lifetime of the process. Cache only when:

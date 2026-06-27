@@ -1,4 +1,13 @@
-"""Static dashboard tests for the Profiles navigation copy."""
+"""CLIdashboard profiles nav label测试
+
+【产品经理理解要点】
+CLIdashboard profiles nav label功能测试。
+- 验证功能：命令行dashboard profiles nav label功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard profiles nav label命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Static dashboard tests for the Profiles navigation copy."""
 from pathlib import Path
 
 

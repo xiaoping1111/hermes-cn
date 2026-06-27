@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Telephony helper for the Hermes optional telephony skill.
+"""电话服务工具
+
+【产品经理理解要点】
+提供电话拨打和语音消息功能。
+- 电话拨打和挂断
+- 语音消息录制和发送
+
+─────────────────────────────────────────────────────────────────
+Telephony helper for the Hermes optional telephony skill.
 
 Capabilities:
 - Persist telephony provider credentials to the Hermes .env file ($HERMES_HOME/.env)

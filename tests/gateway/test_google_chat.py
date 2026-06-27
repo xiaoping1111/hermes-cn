@@ -1,4 +1,12 @@
-"""
+"""Google Chat
+
+【产品经理理解要点】
+Google Chat适配器。
+- 验证功能：Google Chat平台适配
+- 关键场景：消息收发、空间管理、事件处理
+- 业务影响：Google Chat功能异常
+
+─────────────────────────────────────────────────────────────────────────
 Tests for Google Chat platform adapter.
 
 Covers: platform registration, env config loading, adapter init, connect
@@ -8,8 +16,7 @@ SSRF guard on attachment download, supervisor reconnect, and authorization
 (including the user_id_alt email match for GOOGLE_CHAT_ALLOWED_USERS).
 
 Note: the Google libraries may not be installed in the test environment.
-We shim the imports at module load so collection doesn't fail.
-"""
+We shim the imports at module load so collection doesn't fail."""
 
 import asyncio
 import json

@@ -1,4 +1,13 @@
-"""Regression for #47967 — empty-name phantom tool calls.
+"""Agent核心测试 - empty tool name loop dampening
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的empty tool name loop dampening验证。
+- 验证功能：empty tool name loop dampening功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：empty tool name loop dampening功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression for #47967 — empty-name phantom tool calls.
 
 Weak open models (mimo, nemotron-class) that see tool-call XML/JSON sitting in
 file contents or tool output get *primed* and emit their own structured tool

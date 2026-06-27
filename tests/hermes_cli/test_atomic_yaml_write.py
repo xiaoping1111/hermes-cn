@@ -1,4 +1,13 @@
-"""Tests for utils.atomic_yaml_write — crash-safe YAML file writes."""
+"""CLIatomic yaml write测试
+
+【产品经理理解要点】
+CLIatomic yaml write功能测试。
+- 验证功能：命令行atomic yaml write功能
+- 关键场景：配置、执行、验证
+- 业务影响：atomic yaml write命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for utils.atomic_yaml_write — crash-safe YAML file writes."""
 
 from unittest.mock import patch
 

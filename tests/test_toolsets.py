@@ -1,4 +1,14 @@
-"""Tests for toolsets.py — toolset resolution, validation, and composition."""
+"""测试 - toolsets
+
+【产品经理理解要点】
+功能验证中的toolsets验证。
+- 验证功能：toolsets功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：toolsets功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for toolsets.py — toolset resolution, validation, and composition.
+"""
 
 from tools.registry import ToolRegistry
 from toolsets import (

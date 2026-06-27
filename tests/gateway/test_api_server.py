@@ -1,4 +1,12 @@
-"""
+"""网关api server测试
+
+【产品经理理解要点】
+网关api server功能测试。
+- 验证功能：网关api server处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：api server功能异常
+
+─────────────────────────────────────────────────────────────────────────
 Tests for the OpenAI-compatible API server gateway adapter.
 
 Tests cover:
@@ -9,8 +17,7 @@ Tests cover:
 - /v1/models endpoint
 - /health endpoint
 - System prompt extraction
-- Error handling (invalid JSON, missing fields)
-"""
+- Error handling (invalid JSON, missing fields)"""
 
 import asyncio
 import json

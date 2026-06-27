@@ -1,4 +1,13 @@
-"""Tests for Matrix require-mention gating and auto-thread features."""
+"""Matrix提及
+
+【产品经理理解要点】
+Matrix提及处理。
+- 验证功能：Matrix平台@提及处理
+- 关键场景：提及解析、用户查找、通知
+- 业务影响：提及功能不工作
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Matrix require-mention gating and auto-thread features."""
 
 import json
 import time

@@ -1,4 +1,13 @@
-"""Tests for pending follow-up extraction in recursive _run_agent calls.
+"""空挂起事件
+
+【产品经理理解要点】
+空挂起事件处理。
+- 验证功能：无挂起事件时的处理逻辑
+- 关键场景：空事件检查、优雅处理
+- 业务影响：空事件导致异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for pending follow-up extraction in recursive _run_agent calls.
 
 When pending_event is None (Path B: pending comes from interrupt_message),
 accessing pending_event.channel_prompt previously raised AttributeError.
@@ -6,8 +15,7 @@ This verifies the fix: channel_prompt is captured inside the
 `if pending_event is not None:` block and falls back to None otherwise.
 
 Also verifies that internal control interrupt reasons like "Stop requested"
-do not get recycled into the pending-user-message follow-up path.
-"""
+do not get recycled into the pending-user-message follow-up path."""
 
 from types import SimpleNamespace
 

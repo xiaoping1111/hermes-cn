@@ -1,4 +1,14 @@
-"""Regression tests for Docker stage2 browser executable discovery."""
+"""测试 - docker stage2 browser discovery
+
+【产品经理理解要点】
+功能验证中的docker stage2 browser discovery验证。
+- 验证功能：docker stage2 browser discovery功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：docker stage2 browser discovery功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for Docker stage2 browser executable discovery.
+"""
 
 from pathlib import Path
 

@@ -1,4 +1,13 @@
-"""Unit tests for gateway/relay/auth.py — the gateway-side relay auth primitives.
+"""网关auth测试
+
+【产品经理理解要点】
+网关auth功能测试。
+- 验证功能：网关auth处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：auth功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for gateway/relay/auth.py — the gateway-side relay auth primitives.
 
 Two layers:
 
@@ -10,11 +19,7 @@ Two layers:
    changes its wire scheme, these vectors must be regenerated in lockstep
    (and that is the point — the test fails loudly on drift). Regenerate with:
 
-       node -e 'import("./dist/core/relayAuthToken.js").then(m=>{ \
-         const s="00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff"; \
-         console.log(m.makeToken("gw-instance-1", s, 0)); \
-         console.log(m.sign("1750000000."+JSON.stringify({a:1}), s)); })'
-"""
+       node -e 'import("./dist/core/relayAuthToken.js").then(m=>{          const s="00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff";          console.log(m.makeToken("gw-instance-1", s, 0));          console.log(m.sign("1750000000."+JSON.stringify({a:1}), s)); })'"""
 
 from __future__ import annotations
 

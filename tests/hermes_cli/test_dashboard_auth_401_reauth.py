@@ -1,4 +1,13 @@
-"""Phase 6 — 401 re-auth + ``next=`` propagation tests.
+"""CLIdashboard auth 401 reauth测试
+
+【产品经理理解要点】
+CLIdashboard auth 401 reauth功能测试。
+- 验证功能：命令行dashboard auth 401 reauth功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard auth 401 reauth命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Phase 6 — 401 re-auth + ``next=`` propagation tests.
 
 Verifies the contract documented in Phase 6 v2 of the plan:
 
@@ -13,8 +22,7 @@ Verifies the contract documented in Phase 6 v2 of the plan:
     keep replaying them.
   - ``set_session_cookies(refresh_token="")`` does NOT emit the
     ``hermes_session_rt`` cookie (contract V1: no RT to persist).
-  - ``/auth/callback?next=…`` honours the same-origin landing path.
-"""
+  - ``/auth/callback?next=…`` honours the same-origin landing path."""
 
 from __future__ import annotations
 

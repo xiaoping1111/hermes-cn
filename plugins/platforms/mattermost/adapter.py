@@ -1,4 +1,13 @@
-"""Mattermost gateway adapter.
+"""Mattermost 自建通讯平台适配器
+
+【产品经理理解要点】
+接入 Mattermost 自建或云实例，通过 REST API + WebSocket 实现消息收发。
+- 纯 aiohttp 实现，无需 Mattermost 专用 SDK
+- 支持 WebSocket 实时事件、频道消息、用户白名单
+- 适用于企业自建通讯场景
+
+─────────────────────────────────────────────────────────────────
+Mattermost gateway adapter.
 
 Connects to a self-hosted (or cloud) Mattermost instance via its REST API
 (v4) and WebSocket for real-time events.  No external Mattermost library

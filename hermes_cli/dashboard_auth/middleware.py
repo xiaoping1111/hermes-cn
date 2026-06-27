@@ -1,3 +1,14 @@
+
+"""Dashboard认证中间件
+
+【产品经理理解要点】
+Dashboard的认证门控中间件，验证请求的会话Cookie。
+- 白名单路径免认证（登录页/静态资源/auth回调）
+- HTML路由→重定向到/login，API路由→返回401
+- 本地绑定模式下此中间件不生效
+
+────────────────────────────────────────────────────────────────"""
+
 """Auth-gate middleware for the dashboard.
 
 Engaged when ``app.state.auth_required is True``. The gate's job:

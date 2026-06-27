@@ -1,4 +1,13 @@
-"""Tests for the stale-dashboard handling run at the end of ``hermes update``.
+"""CLIupdate stale dashboard测试
+
+【产品经理理解要点】
+CLIupdate stale dashboard功能测试。
+- 验证功能：命令行update stale dashboard功能
+- 关键场景：配置、执行、验证
+- 业务影响：update stale dashboard命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the stale-dashboard handling run at the end of ``hermes update``.
 
 ``hermes update`` detects ``hermes dashboard`` processes left over from the
 previous version and kills them (SIGTERM + SIGKILL grace, or ``taskkill /F``
@@ -8,8 +17,7 @@ against a freshly-updated JS bundle, producing 401s / empty data.
 History:
 - #16872 introduced the warn-only helper (``_warn_stale_dashboard_processes``).
 - #17049 fixed a Windows wmic UnicodeDecodeError crash on non-UTF-8 locales.
-- This file now also covers the kill semantics that replaced the warning.
-"""
+- This file now also covers the kill semantics that replaced the warning."""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""Clipboard image extraction for macOS, Windows, Linux, and WSL2.
+"""剪贴板图片提取
+
+【产品经理理解要点】
+从系统剪贴板提取图片数据，支持macOS/Windows/Linux/WSL2。
+- 跨平台剪贴板图片读取（无Python外部依赖）
+- 用户可直接粘贴截图发送给Agent
+- 多模态交互的入口之一
+
+────────────────────────────────────────────────────────────────
+Clipboard image extraction for macOS, Windows, Linux, and WSL2.
 
 Provides a single function `save_clipboard_image(dest)` that checks the
 system clipboard for image data, saves it to *dest* as PNG, and returns
@@ -9,8 +18,7 @@ Platform support:
   macOS   — osascript (always available), pngpaste (if installed)
   Windows — PowerShell via WinForms, Get-Clipboard, file-drop fallback
   WSL2    — powershell.exe via WinForms, Get-Clipboard, file-drop fallback
-  Linux   — wl-paste (Wayland), xclip (X11)
-"""
+  Linux   — wl-paste (Wayland), xclip (X11)"""
 
 import base64
 import logging

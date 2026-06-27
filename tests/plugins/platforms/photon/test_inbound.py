@@ -1,4 +1,13 @@
-"""Inbound dispatch + dedup tests for PhotonAdapter.
+"""插件系统测试 - inbound
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的inbound验证。
+- 验证功能：inbound功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：inbound功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Inbound dispatch + dedup tests for PhotonAdapter.
 
 These bypass the loopback HTTP stream — they call ``_dispatch_inbound`` /
 ``_on_inbound_line`` / ``_is_duplicate`` directly, exercising the

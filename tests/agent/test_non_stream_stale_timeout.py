@@ -1,4 +1,13 @@
-"""Tests for the non-stream stale-call detector context estimator.
+"""Agent核心测试 - non stream stale timeout
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的non stream stale timeout验证。
+- 验证功能：non stream stale timeout功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：non stream stale timeout功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the non-stream stale-call detector context estimator.
 
 Covers:
 - ``estimate_request_context_tokens`` for Chat Completions, Responses API,

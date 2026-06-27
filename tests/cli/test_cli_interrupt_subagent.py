@@ -1,4 +1,13 @@
-"""End-to-end test simulating CLI interrupt during subagent execution.
+"""CLI终端测试 - cli interrupt subagent
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的cli interrupt subagent验证。
+- 验证功能：cli interrupt subagent功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：cli interrupt subagent功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+End-to-end test simulating CLI interrupt during subagent execution.
 
 Reproduces the exact scenario:
 1. Parent agent calls delegate_task

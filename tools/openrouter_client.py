@@ -1,4 +1,12 @@
-"""Shared OpenRouter API client for Hermes tools.
+"""OpenRouter共享客户端
+
+【产品经理理解要点】
+为所有工具模块提供统一的OpenRouter API客户端，避免重复创建连接。
+- 核心职责：延迟创建并复用AsyncOpenAI客户端，通过中央路由器统一处理认证和请求格式
+- 在系统中的位置：位于工具模块和OpenRouter API之间，是API连接管理的基础组件
+
+─────────────────────────────────────────────────────────────────
+Shared OpenRouter API client for Hermes tools.
 
 Provides a single lazy-initialized AsyncOpenAI client that all tool modules
 can share.  Routes through the centralized provider router in

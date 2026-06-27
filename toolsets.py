@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""工具集定义与管理
+
+【产品经理理解要点】
+将数十个工具按功能分组为"工具集"（如网页、终端、文件、浏览器），支持按场景灵活组合。
+- 核心职责：定义工具到工具集的映射、工具集之间的组合复用、不同平台的工具白名单
+- 关键业务概念：核心工具列表(_HERMES_CORE_TOOLS)、工具集名称(web/terminal/file等)、平台差异适配
+- 在系统中的位置：连接 model_tools.py（工具调度）与各平台 Gateway（工具可见性控制）
+
+─────────────────────────────────────────────────────────────────
 Toolsets Module
 
 This module provides a flexible system for defining and managing tool aliases/toolsets.

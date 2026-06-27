@@ -1,4 +1,13 @@
-"""security-guidance plugin — fast pattern-matched security warnings on file writes.
+"""安全指引插件 — 文件写入时的安全告警
+
+【产品经理理解要点】
+扫描写入文件内容中的危险代码模式，附加警告而非阻止写入，让 Agent 自行判断。
+- transform_tool_result 钩子：扫描 write_file/patch 写入内容
+- 匹配 eval()、pickle.load、shell=True 等危险模式
+- 默认仅警告不阻止；设 SECURITY_GUIDANCE_BLOCK=1 可切换为阻止模式
+
+─────────────────────────────────────────────────────────────────
+security-guidance plugin — fast pattern-matched security warnings on file writes.
 
 Wires one behaviour:
 

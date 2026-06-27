@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""Web工具集成
+
+【产品经理理解要点】
+Web工具端到端正确性。
+- 验证功能：搜索/抓取工具集成
+- 关键场景：搜索、抓取、结果解析
+- 业务影响：Web工具无法正常工作
+
+─────────────────────────────────────────────────────────────────────────
 Comprehensive Test Suite for Web Tools Module
 
 This script tests all web tools functionality to ensure they work correctly.

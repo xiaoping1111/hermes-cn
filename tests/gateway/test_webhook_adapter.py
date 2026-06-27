@@ -1,4 +1,13 @@
-"""Unit tests for the generic webhook platform adapter.
+"""Webhook网关测试
+
+【产品经理理解要点】
+Webhook平台网关功能测试。
+- 验证功能：Webhook平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Webhook平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for the generic webhook platform adapter.
 
 Covers:
 - HMAC signature validation (GitHub, GitLab, generic)
@@ -11,8 +20,7 @@ Covers:
 - INSECURE_NO_AUTH bypass
 - Session isolation for concurrent webhooks
 - Delivery info cleanup after send()
-- connect / disconnect lifecycle
-"""
+- connect / disconnect lifecycle"""
 
 import asyncio
 import base64

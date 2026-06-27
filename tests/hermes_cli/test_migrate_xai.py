@@ -1,4 +1,13 @@
-"""Tests for ``hermes migrate xai`` — apply path with ruamel round-trip."""
+"""CLImigrate xai测试
+
+【产品经理理解要点】
+CLImigrate xai功能测试。
+- 验证功能：命令行migrate xai功能
+- 关键场景：配置、执行、验证
+- 业务影响：migrate xai命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ``hermes migrate xai`` — apply path with ruamel round-trip."""
 from __future__ import annotations
 
 from pathlib import Path

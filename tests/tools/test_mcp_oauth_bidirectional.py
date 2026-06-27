@@ -1,4 +1,13 @@
-"""Regression test for the ``HermesMCPOAuthProvider.async_auth_flow`` bidirectional
+"""工具系统测试 - mcp oauth bidirectional
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的mcp oauth bidirectional验证。
+- 验证功能：mcp oauth bidirectional功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：mcp oauth bidirectional功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression test for the ``HermesMCPOAuthProvider.async_auth_flow`` bidirectional
 generator bridge.
 
 PR #11383 introduced a subclass method that wrapped the SDK's ``auth_flow`` with::

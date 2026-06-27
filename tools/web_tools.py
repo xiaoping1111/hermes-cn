@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
 """
+Web工具模块
+
+【产品经理理解要点】
+为智能体提供网页搜索和内容提取能力，支持多种后端服务商自动切换。
+- 核心工具：web_search（搜索引擎查询）和 web_extract（网页内容提取与摘要）
+- 多后端支持：Exa、Firecrawl、Parallel、Tavily、SearXNG、Brave、DuckDuckGo、xAI，按优先级自动选择
+- 智能摘要：提取的网页内容经LLM压缩为结构化Markdown，大幅降低token消耗（超长内容分块处理再合成）
+- 安全机制：SSRF防护（阻止私网请求）、URL中内嵌密钥检测、网站访问策略检查
+- 在系统中的位置：位于智能体知识获取层和互联网之间，是智能体获取实时信息的主要通道
+
+─────────────────────────────────────────────────────────────────
 Standalone Web Tools Module
 
 This module provides generic web tools that work with multiple backend providers.

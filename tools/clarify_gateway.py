@@ -1,4 +1,13 @@
-"""Gateway-side clarify primitive (blocking event-based queue).
+"""网关侧澄清原语
+
+【产品经理理解要点】
+在网关模式下实现工具向用户提问并阻塞等待回答的机制，使 `clarify` 工具能跨平台工作。
+- 核心职责：存储待处理的澄清请求，阻塞智能体线程直到用户回复，支持超时
+- 业务价值：让智能体在不确定时主动询问用户，而非猜测——这是多平台（Telegram/Discord/Slack等）交互体验的关键
+- 在系统中的位置：位于clarify工具和平台适配器之间，是跨平台用户交互的桥梁
+
+─────────────────────────────────────────────────────────────────
+Gateway-side clarify primitive (blocking event-based queue).
 
 The ``clarify`` tool needs to ask the user a question and block the agent
 thread until they respond.  In CLI mode this is trivial — ``input()`` is

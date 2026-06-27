@@ -1,4 +1,13 @@
-"""Phase 7 — /api/status exposes auth-gate state + AuthWidget integration.
+"""CLIdashboard auth status endpoint测试
+
+【产品经理理解要点】
+CLIdashboard auth status endpoint功能测试。
+- 验证功能：命令行dashboard auth status endpoint功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard auth status endpoint命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Phase 7 — /api/status exposes auth-gate state + AuthWidget integration.
 
 The dashboard's status endpoint now reports ``auth_required`` and
 ``auth_providers`` so the AuthWidget + StatusPage can render the
@@ -8,8 +17,7 @@ test asserts both shapes (gated and loopback).
 The AuthWidget itself is .tsx — no Python test here. The widget's
 behaviour (renders nothing on 401, shows truncated user_id, etc.) is
 documented in AuthWidget.tsx; covered manually via the Phase 4.2
-smoke test against staging Portal.
-"""
+smoke test against staging Portal."""
 
 from __future__ import annotations
 

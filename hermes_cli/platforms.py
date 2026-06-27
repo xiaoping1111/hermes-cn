@@ -1,11 +1,18 @@
-"""
+"""平台注册表
+
+【产品经理理解要点】
+平台元数据的单一数据源，供skills_config和tools_config共享。
+- PLATFORMS字典：平台名称→元信息的映射
+- 消除skills_config和tools_config的重复定义
+- 新增平台只需在此注册
+
+────────────────────────────────────────────────────────────────
 Shared platform registry for Hermes Agent.
 
 Single source of truth for platform metadata consumed by both
 skills_config (label display) and tools_config (default toolset
 resolution).  Import ``PLATFORMS`` from here instead of maintaining
-duplicate dicts in each module.
-"""
+duplicate dicts in each module."""
 
 from collections import OrderedDict
 from typing import NamedTuple

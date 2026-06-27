@@ -1,5 +1,16 @@
 """API error classification for smart failover and recovery.
 
+API 错误分类器
+
+【产品经理理解要点】
+将 API 错误分类为结构化类型，决定恢复策略。
+- 核心职责：错误类型分类(速率限制/认证/上下文过长/服务器错误等)、恢复策略映射
+- 关键业务概念：故障转移原因(FailoverReason)、错误严重级别、恢复优先级
+- 在系统中的位置：主重试循环的错误分类中枢
+
+─────────────────────────────────────────────────────────────────
+
+
 Provides a structured taxonomy of API errors and a priority-ordered
 classification pipeline that determines the correct recovery action
 (retry, rotate credential, fallback to another provider, compress

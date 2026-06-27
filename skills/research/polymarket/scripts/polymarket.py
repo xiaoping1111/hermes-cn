@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Polymarket CLI helper — query prediction market data.
+"""Polymarket 预测市场数据获取
+
+【产品经理理解要点】
+获取 Polymarket 预测市场的合约和赔率数据。
+- 市场数据查询
+- 合约价格和概率获取
+
+─────────────────────────────────────────────────────────────────
+Polymarket CLI helper — query prediction market data.
 
 Usage:
     python3 polymarket.py search "bitcoin"

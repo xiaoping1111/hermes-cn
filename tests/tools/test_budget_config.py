@@ -1,4 +1,13 @@
-"""Unit tests for tools/budget_config.py.
+"""工具系统测试 - budget config
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的budget config验证。
+- 验证功能：budget config功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：budget config功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for tools/budget_config.py.
 
 Covers default values, resolve_threshold() priority chain
 (pinned > tool_overrides > registry > default), immutability,

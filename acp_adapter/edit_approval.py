@@ -1,4 +1,13 @@
-"""Pre-execution ACP edit approval helpers.
+"""ACP 编辑审批
+
+【产品经理理解要点】
+在 ACP 模式下，Agent 对文件的每次编辑都需要用户审批确认，防止误改代码。
+- 核心职责：拦截文件编辑操作，向 ACP 客户端（编辑器）弹出审批请求，等待用户允许/拒绝
+- 关键概念：敏感文件（.env、id_rsa 等）有更严格的自动审批策略；支持"仅本次""本次会话""始终允许"三种粒度
+- 系统定位：安全审批层，仅 ACP 会话生效，CLI/Gateway 模式不触发
+
+─────────────────────────────────────────────────────────────────────────
+Pre-execution ACP edit approval helpers.
 
 This module is intentionally isolated from the generic tool registry.  ACP binds
 an edit approval requester in a ContextVar for the duration of one ACP agent run;

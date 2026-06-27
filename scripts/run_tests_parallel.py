@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Per-file parallel test runner.
+"""并行测试运行器
+
+【产品经理理解要点】
+以文件为粒度并行运行 pytest，每个测试文件在独立子进程中执行，避免跨文件状态泄漏。
+- 核心职责：发现测试文件，按 CPU 核数并行 spawn 子进程运行，收集结果并汇总
+- 关键概念：选择文件级而非测试级并行——文件级隔离彻底避免模块级状态泄漏，且启动开销可控
+- 系统定位：CI 测试运行器，替代 pytest-xdist 以获得更可靠的隔离
+
+─────────────────────────────────────────────────────────────────
+Per-file parallel test runner.
 
 The minimum-viable replacement for pytest-xdist + a subprocess-isolation
 plugin. Discovers test files under ``tests/`` (excluding integration/e2e

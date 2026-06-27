@@ -1,4 +1,12 @@
-"""SearXNG search — plugin form.
+"""SearXNG 搜索提供者
+
+【产品经理理解要点】
+SearXNG 元搜索的具体实现。
+- 自建实例 API 调用
+- 多引擎结果聚合
+
+─────────────────────────────────────────────────────────────────
+SearXNG search — plugin form.
 
 Subclasses :class:`agent.web_search_provider.WebSearchProvider`. Same JSON
 API call (``/search?format=json``), same result normalization. The legacy

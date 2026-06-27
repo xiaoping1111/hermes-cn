@@ -1,3 +1,14 @@
+
+"""消息发送命令
+
+【产品经理理解要点】
+hermes send，从Shell脚本/CI/Cron向消息平台发送通知。
+- 复用Gateway已配置的凭证发送消息
+- 支持Telegram/Discord/Slack/Signal/SMS等
+- 运维脚本和监控守护进程的通知工具
+
+────────────────────────────────────────────────────────────────"""
+
 """CLI subcommand: ``hermes send`` — pipe text from shell scripts to any
 configured messaging platform (Telegram, Discord, Slack, Signal, SMS, etc.).
 

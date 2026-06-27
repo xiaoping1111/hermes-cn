@@ -1,3 +1,14 @@
+
+"""浏览器CDP连接助手
+
+【产品经理理解要点】
+附加Hermes到本地Chromium的CDP（Chrome DevTools Protocol）端口。
+- 检测本地Chrome/Chromium的调试端口
+- 建立CDP连接用于浏览器自动化工具
+- 处理不同操作系统上Chrome的路径差异
+
+────────────────────────────────────────────────────────────────"""
+
 """Shared helpers for attaching Hermes to a local Chromium-family CDP port."""
 
 from __future__ import annotations

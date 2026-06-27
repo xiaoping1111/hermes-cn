@@ -1,4 +1,13 @@
-"""A2 outbound capability action: the token-less ``follow_up`` op.
+"""中继跟进
+
+【产品经理理解要点】
+中继跟进消息。
+- 验证功能：中继模式下的跟进消息处理
+- 关键场景：上下文关联、消息关联
+- 业务影响：跟进消息与原消息断开
+
+─────────────────────────────────────────────────────────────────────────
+A2 outbound capability action: the token-less ``follow_up`` op.
 
 Proves the gateway can act on a shared-identity capability (e.g. a Discord
 interaction follow-up token) WITHOUT ever holding the credential: it names the
@@ -12,8 +21,7 @@ connector's resolve + tenant-match enforcement lives in the connector repo
   - the wire action carries NO token (only session_key + kind + content),
   - success/failure surfaces from the connector's resolve result,
   - a failed resolve (absent/expired/tenant mismatch) returns success=False
-    with nothing for the gateway to retry with.
-"""
+    with nothing for the gateway to retry with."""
 
 from __future__ import annotations
 

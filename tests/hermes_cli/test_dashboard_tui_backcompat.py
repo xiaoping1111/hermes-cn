@@ -1,4 +1,13 @@
-"""Regression test: `hermes dashboard --tui` must not hard-crash.
+"""CLIdashboard tui backcompat测试
+
+【产品经理理解要点】
+CLIdashboard tui backcompat功能测试。
+- 验证功能：命令行dashboard tui backcompat功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard tui backcompat命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression test: `hermes dashboard --tui` must not hard-crash.
 
 Older Hermes desktop app shells (<= 0.15.x) spawn the backend as::
 
@@ -13,8 +22,7 @@ start" with no actionable cause.
 
 The fix adds a hidden, deprecated, accepted-and-ignored ``--tui`` flag to the
 dashboard subparser so an old app shell + new CLI degrades gracefully instead
-of bricking. These tests pin that contract.
-"""
+of bricking. These tests pin that contract."""
 
 import os
 import subprocess

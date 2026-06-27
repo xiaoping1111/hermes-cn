@@ -1,4 +1,13 @@
-"""Tests for the /branch (/fork) command — session branching.
+"""CLI终端测试 - branch command
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的branch command验证。
+- 验证功能：branch command功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：branch command功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the /branch (/fork) command — session branching.
 
 Verifies that:
 - Branching creates a new session with copied conversation history

@@ -1,3 +1,14 @@
+
+"""运行时提供商解析
+
+【产品经理理解要点】
+共享的运行时提供商解析逻辑，供CLI/Gateway/Cron使用。
+- 解析模型运行时类型（auto/codex_app_server等）
+- 统一CLI和Gateway的提供商选择逻辑
+- Codex运行时的条件应用
+
+────────────────────────────────────────────────────────────────"""
+
 """Shared runtime provider resolution for CLI, gateway, cron, and helpers."""
 
 from __future__ import annotations

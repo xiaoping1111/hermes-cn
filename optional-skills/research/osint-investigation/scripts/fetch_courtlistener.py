@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Search court records via CourtListener (Free Law Project).
+"""CourtListener 司法数据查询
+
+【产品经理理解要点】
+查询 CourtListener 获取美国联邦法院案件信息。
+- 案件搜索和详情
+- 法院文档获取
+
+─────────────────────────────────────────────────────────────────
+Search court records via CourtListener (Free Law Project).
 
 Covers ~10M federal and state court opinions, plus PACER docket data
 where available. Public REST API v4 supports anonymous read access for

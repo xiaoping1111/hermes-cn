@@ -1,3 +1,11 @@
+"""CLIcodex models测试
+
+【产品经理理解要点】
+CLIcodex models功能测试。
+- 验证功能：命令行codex models功能
+- 关键场景：配置、执行、验证
+- 业务影响：codex models命令行功能失效"""
+
 import json
 from unittest.mock import patch
 

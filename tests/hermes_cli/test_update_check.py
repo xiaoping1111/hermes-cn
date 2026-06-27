@@ -1,4 +1,13 @@
-"""Tests for the update check mechanism in hermes_cli.banner."""
+"""CLIupdate check测试
+
+【产品经理理解要点】
+CLIupdate check功能测试。
+- 验证功能：命令行update check功能
+- 关键场景：配置、执行、验证
+- 业务影响：update check命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the update check mechanism in hermes_cli.banner."""
 
 import json
 import os

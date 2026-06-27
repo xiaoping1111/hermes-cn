@@ -1,4 +1,13 @@
-"""Tests for the process_loop RuntimeWarning fix -- issue #19285.
+"""测试 - process loop event loop warning
+
+【产品经理理解要点】
+功能验证中的process loop event loop warning验证。
+- 验证功能：process loop event loop warning功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：process loop event loop warning功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the process_loop RuntimeWarning fix -- issue #19285.
 
 In Python 3.10+, calling asyncio.get_event_loop() from a non-main thread
 that has no current event loop emits a DeprecationWarning (3.10/3.11) or

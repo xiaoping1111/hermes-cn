@@ -1,4 +1,13 @@
-"""Regression tests for #15165 (CLI sibling site) — CLI exit cleanup must
+"""CLI终端测试 - cli shutdown memory messages
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的cli shutdown memory messages验证。
+- 验证功能：cli shutdown memory messages功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：cli shutdown memory messages功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for #15165 (CLI sibling site) — CLI exit cleanup must
 forward the agent's conversation transcript to ``shutdown_memory_provider``
 so memory providers' ``on_session_end`` hooks see the real messages.
 

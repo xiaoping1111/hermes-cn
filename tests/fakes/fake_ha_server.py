@@ -1,4 +1,13 @@
-"""Fake Home Assistant server for integration testing.
+"""伪HA服务器
+
+【产品经理理解要点】
+伪高可用服务器。
+- 验证功能：测试用高可用模拟服务器
+- 关键场景：服务器启动、请求响应、故障模拟
+- 业务影响：集成测试无法模拟HA场景
+
+─────────────────────────────────────────────────────────────────────────
+Fake Home Assistant server for integration testing.
 
 Provides a real HTTP + WebSocket server (via aiohttp.web) that mimics the
 Home Assistant API surface used by hermes-agent:
@@ -14,8 +23,7 @@ Usage::
     async with FakeHAServer(token="test-token") as server:
         url = server.url            # e.g. "http://127.0.0.1:54321"
         await server.push_event(event_data)
-        assert server.received_notifications  # verify what arrived
-"""
+        assert server.received_notifications  # verify what arrived"""
 
 import asyncio
 import json

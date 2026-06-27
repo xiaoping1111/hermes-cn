@@ -1,4 +1,13 @@
-"""Tests for BaseEnvironment unified execution model.
+"""工具系统测试 - base environment
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的base environment验证。
+- 验证功能：base environment功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：base environment功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for BaseEnvironment unified execution model.
 
 Tests _wrap_command(), _extract_cwd_from_output(), _embed_stdin_heredoc(),
 init_session() failure handling, and the CWD marker contract.

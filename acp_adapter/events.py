@@ -1,4 +1,13 @@
-"""Callback factories for bridging AIAgent events to ACP notifications.
+"""ACP 事件桥接
+
+【产品经理理解要点】
+将 Hermes Agent 内部事件（工具调用、思考过程、任务更新等）转换为 ACP 通知推送给客户端。
+- 核心职责：为 AIAgent 的各类回调创建 ACP 通知工厂，实时推送会话状态变更
+- 关键概念：Agent 运行在子线程，ACP 事件循环在主线程，需用 asyncio.run_coroutine_threadsafe 跨线程调度
+- 系统定位：事件转换层，Agent 内部事件 → ACP 协议通知 → 编辑器 UI 更新
+
+─────────────────────────────────────────────────────────────────────────
+Callback factories for bridging AIAgent events to ACP notifications.
 
 Each factory returns a callable with the signature that AIAgent expects
 for its callbacks. Internally, the callbacks push ACP session updates

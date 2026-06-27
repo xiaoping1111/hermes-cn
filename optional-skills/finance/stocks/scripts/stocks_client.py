@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""股票数据客户端
+
+【产品经理理解要点】
+获取股票行情和财务数据。
+- 实时和历史行情
+- 基本面数据查询
+
+─────────────────────────────────────────────────────────────────
+
 stocks_client.py - Stock market data CLI tool for the Hermes Agent project.
 Zero external dependencies - Python stdlib only.
 """

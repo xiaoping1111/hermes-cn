@@ -1,4 +1,13 @@
-"""Tests for gateway/channel_directory.py — channel resolution and display."""
+"""网关channel directory测试
+
+【产品经理理解要点】
+网关channel directory功能测试。
+- 验证功能：网关channel directory处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：channel directory功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway/channel_directory.py — channel resolution and display."""
 
 import asyncio
 import json

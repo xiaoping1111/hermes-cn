@@ -1,4 +1,13 @@
-"""Tests for hermes_cli.plugins_cmd — the ``hermes plugins`` CLI subcommand."""
+"""CLIplugins cmd测试
+
+【产品经理理解要点】
+CLIplugins cmd功能测试。
+- 验证功能：命令行plugins cmd功能
+- 关键场景：配置、执行、验证
+- 业务影响：plugins cmd命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.plugins_cmd — the ``hermes plugins`` CLI subcommand."""
 
 from __future__ import annotations
 

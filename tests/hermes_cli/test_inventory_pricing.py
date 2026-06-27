@@ -1,9 +1,17 @@
-"""Tests for inventory._apply_pricing — the pricing/tier enrichment that
+"""CLIinventory pricing测试
+
+【产品经理理解要点】
+CLIinventory pricing功能测试。
+- 验证功能：命令行inventory pricing功能
+- 关键场景：配置、执行、验证
+- 业务影响：inventory pricing命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for inventory._apply_pricing — the pricing/tier enrichment that
 
 feeds the desktop GUI model picker (and onboarding) so it can show $/Mtok
 columns + Free/Pro badges and gate paid models on free Nous accounts, the
-same way the `hermes model` CLI picker does.
-"""
+same way the `hermes model` CLI picker does."""
 
 import hermes_cli.inventory as inv
 import hermes_cli.models as models_mod

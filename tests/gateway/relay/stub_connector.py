@@ -1,4 +1,13 @@
-"""Test-only in-memory stub connector implementing RelayTransport.
+"""桩连接器
+
+【产品经理理解要点】
+测试桩连接器。
+- 验证功能：中继测试用的桩连接器
+- 关键场景：连接模拟、消息收发模拟
+- 业务影响：中继测试无法模拟连接
+
+─────────────────────────────────────────────────────────────────────────
+Test-only in-memory stub connector implementing RelayTransport.
 
 MUST stay under tests/ — never under plugins/ or gateway/ (a CI guard in
 test_no_stub_leak.py asserts this). It lets Phase 1 prove the gateway side of
@@ -8,8 +17,7 @@ The stub:
   - hands back a fixed CapabilityDescriptor at handshake,
   - lets a test push synthetic inbound MessageEvents (push_inbound),
   - records every outbound action (sent/interrupts) for assertions,
-  - answers get_chat_info from a small fixture map.
-"""
+  - answers get_chat_info from a small fixture map."""
 
 from __future__ import annotations
 

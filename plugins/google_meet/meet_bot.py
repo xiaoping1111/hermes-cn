@@ -1,4 +1,12 @@
-"""Headless Google Meet bot — Playwright + live-caption scraping.
+"""Google Meet 会议机器人
+
+【产品经理理解要点】
+自动加入 Google Meet 会议的机器人实现。
+- 自动加入会议并开始转录
+- 会议结束检测和自动离开
+
+─────────────────────────────────────────────────────────────────
+Headless Google Meet bot — Playwright + live-caption scraping.
 
 Runs as a standalone subprocess spawned by ``process_manager.py``. Reads config
 from env vars, writes status + transcript to files under

@@ -1,4 +1,13 @@
-"""Regression tests for #28712 — kanban dispatcher must not auto-promote
+"""CLIkanban blocked sticky测试
+
+【产品经理理解要点】
+CLIkanban blocked sticky功能测试。
+- 验证功能：命令行kanban blocked sticky功能
+- 关键场景：配置、执行、验证
+- 业务影响：kanban blocked sticky命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for #28712 — kanban dispatcher must not auto-promote
 worker-initiated ``kanban_block`` (sticky blocks), but must keep
 auto-recovering circuit-breaker blocks.
 
@@ -24,8 +33,7 @@ The tangentially related schema-init ordering bug originally reported
 in #28712 (``init_db`` crashing on legacy DBs that pre-dated the
 ``session_id`` migration) is covered separately by
 ``test_kanban_db.py::test_connect_migrates_legacy_db_before_optional_column_indexes``,
-landed via #28754 / #28781 ahead of this fix.
-"""
+landed via #28754 / #28781 ahead of this fix."""
 
 from __future__ import annotations
 

@@ -1,9 +1,17 @@
-"""Tests for gateway weak credential rejection at startup.
+"""网关weak credential guard测试
+
+【产品经理理解要点】
+网关weak credential guard功能测试。
+- 验证功能：网关weak credential guard处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：weak credential guard功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway weak credential rejection at startup.
 
 Ported from openclaw/openclaw#64586: rejects known-weak placeholder
 tokens at gateway startup instead of letting them silently fail
-against platform APIs.
-"""
+against platform APIs."""
 
 import logging
 

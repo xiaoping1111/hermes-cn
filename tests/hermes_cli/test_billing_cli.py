@@ -1,10 +1,18 @@
-"""Tests for the /billing CLI handler (cli.py::_show_billing).
+"""CLIbilling cli测试
+
+【产品经理理解要点】
+CLIbilling cli功能测试。
+- 验证功能：命令行billing cli功能
+- 关键场景：配置、执行、验证
+- 业务影响：billing cli命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the /billing CLI handler (cli.py::_show_billing).
 
 Focus on the non-interactive (no live prompt_toolkit app) path — the same
 discipline as the /credits non-interactive test: it must render text, never
 invoke the modal (which would read the slash-worker's JSON-RPC stdin and hang).
-Plus role/kill-switch gating and logged-out handling.
-"""
+Plus role/kill-switch gating and logged-out handling."""
 
 from __future__ import annotations
 

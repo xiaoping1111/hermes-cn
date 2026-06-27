@@ -1,4 +1,13 @@
-"""Test real interrupt propagation through delegate_task with actual AIAgent.
+"""Agent运行引擎测试 - real interrupt subagent
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的real interrupt subagent验证。
+- 验证功能：real interrupt subagent功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：real interrupt subagent功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Test real interrupt propagation through delegate_task with actual AIAgent.
 
 This uses a real AIAgent with mocked HTTP responses to test the complete
 interrupt flow through _run_single_child → child.run_conversation().

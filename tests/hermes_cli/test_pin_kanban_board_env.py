@@ -1,12 +1,20 @@
-"""Tests for `_pin_kanban_board_env` helper invoked by `cmd_chat`.
+"""CLIpin kanban board env测试
+
+【产品经理理解要点】
+CLIpin kanban board env功能测试。
+- 验证功能：命令行pin kanban board env功能
+- 关键场景：配置、执行、验证
+- 业务影响：pin kanban board env命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for `_pin_kanban_board_env` helper invoked by `cmd_chat`.
 
 Regression coverage for #20074: a chat session must export the active kanban
 board into `HERMES_KANBAN_BOARD` at boot so subprocess shell-outs (e.g.
 `hermes kanban …`) inherit the same board the in-process kanban tools resolve.
 Without this, a concurrent `hermes kanban boards switch` from another session
 can flip the global current-board file mid-turn and silently divert the
-shell calls to a different DB.
-"""
+shell calls to a different DB."""
 import importlib
 import os
 

@@ -1,3 +1,14 @@
+
+"""中间件合约助手
+
+【产品经理理解要点】
+定义Hermes观察者和中间件的统一合约，供Agent循环和插件共享。
+- Observer：观察发生了什么，不修改行为
+- Middleware：可重写请求或包装执行回调
+- tool_request中间件：请求发送前的拦截和修改
+
+────────────────────────────────────────────────────────────────"""
+
 """Hermes middleware contract helpers.
 
 Observer hooks report what happened. Middleware can change what happens by

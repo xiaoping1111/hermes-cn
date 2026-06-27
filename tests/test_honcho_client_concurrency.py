@@ -1,4 +1,13 @@
-"""Concurrency test for get_honcho_client() — the TOCTOU race fix (#24759).
+"""Honcho客户端
+
+【产品经理理解要点】
+Honcho HTTP客户端连接与认证。
+- 验证功能：客户端连接正确性
+- 关键场景：连接、认证、请求
+- 业务影响：Honcho服务无法访问
+
+─────────────────────────────────────────────────────────────────────────
+Concurrency test for get_honcho_client() — the TOCTOU race fix (#24759).
 
 Proves the Honcho client is constructed exactly once even when many threads
 race the first call, by stubbing the SDK constructor and counting invocations.

@@ -1,4 +1,11 @@
-"""GMI Cloud provider profile."""
+"""GMI 模型提供者
+
+【产品经理理解要点】
+对接 GMI 模型服务。
+- GMI API 集成
+
+─────────────────────────────────────────────────────────────────
+GMI Cloud provider profile."""
 
 from hermes_cli import __version__ as _HERMES_VERSION
 from providers import register_provider

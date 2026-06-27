@@ -1,4 +1,14 @@
-"""Tests for OpenRouter response caching header injection."""
+"""Agent核心测试 - openrouter response cache
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的openrouter response cache验证。
+- 验证功能：openrouter response cache功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：openrouter response cache功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for OpenRouter response caching header injection.
+"""
 
 from types import SimpleNamespace
 from unittest.mock import patch

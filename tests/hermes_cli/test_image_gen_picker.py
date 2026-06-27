@@ -1,8 +1,16 @@
-"""Tests for plugin image_gen providers injecting themselves into the picker.
+"""CLIimage gen picker测试
+
+【产品经理理解要点】
+CLIimage gen picker功能测试。
+- 验证功能：命令行image gen picker功能
+- 关键场景：配置、执行、验证
+- 业务影响：image gen picker命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for plugin image_gen providers injecting themselves into the picker.
 
 Covers `_plugin_image_gen_providers`, `_visible_providers`, and
-`_toolset_needs_configuration_prompt` handling of plugin providers.
-"""
+`_toolset_needs_configuration_prompt` handling of plugin providers."""
 
 from __future__ import annotations
 

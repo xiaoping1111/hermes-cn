@@ -1,4 +1,13 @@
-"""Tests for the Kanban DB layer (hermes_cli.kanban_db)."""
+"""CLIkanban db测试
+
+【产品经理理解要点】
+CLIkanban db功能测试。
+- 验证功能：命令行kanban db功能
+- 关键场景：配置、执行、验证
+- 业务影响：kanban db命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Kanban DB layer (hermes_cli.kanban_db)."""
 
 from __future__ import annotations
 

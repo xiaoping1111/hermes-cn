@@ -1,9 +1,17 @@
-"""Regression tests for removed dead config keys.
+"""CLIconfig drift测试
+
+【产品经理理解要点】
+CLIconfig drift功能测试。
+- 验证功能：命令行config drift功能
+- 关键场景：配置、执行、验证
+- 业务影响：config drift命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for removed dead config keys.
 
 This file guards against accidental re-introduction of config keys that were
 documented or declared at some point but never actually wired up to read code.
-Future dead-config regressions can accumulate here.
-"""
+Future dead-config regressions can accumulate here."""
 
 import inspect
 

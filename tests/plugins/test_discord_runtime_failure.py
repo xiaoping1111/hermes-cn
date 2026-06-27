@@ -1,4 +1,12 @@
 import asyncio
+"""Discord插件系统测试
+
+【产品经理理解要点】
+Discord平台各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行。
+- 验证功能：Discord平台功能验证
+- 关键场景：Discord消息收发、连接管理
+- 业务影响：Discord平台功能不可用"""
+
 from unittest.mock import AsyncMock
 
 import pytest

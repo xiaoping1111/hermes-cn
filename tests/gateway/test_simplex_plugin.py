@@ -1,9 +1,17 @@
-"""Tests for the SimpleX Chat platform-plugin adapter.
+"""Simplex插件
+
+【产品经理理解要点】
+Simplex平台插件。
+- 验证功能：Simplex消息平台的适配插件
+- 关键场景：消息收发、加密支持
+- 业务影响：Simplex平台功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the SimpleX Chat platform-plugin adapter.
 
 Loaded via the ``_plugin_adapter_loader`` helper so this lives under
 ``plugin_adapter_simplex`` in ``sys.modules`` and cannot collide with
-sibling platform-plugin tests on the same xdist worker.
-"""
+sibling platform-plugin tests on the same xdist worker."""
 
 from __future__ import annotations
 

@@ -1,4 +1,14 @@
-"""Tests for acp_adapter.events — callback factories for ACP notifications."""
+"""ACP协议测试 - events
+
+【产品经理理解要点】
+ACP协议层的工具注册、权限控制、会话管理、事件分发和MCP端到端通信中的events验证。
+- 验证功能：events功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：events功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for acp_adapter.events — callback factories for ACP notifications.
+"""
 
 import asyncio
 import gc

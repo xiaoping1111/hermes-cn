@@ -1,4 +1,13 @@
-"""Tests for kb.specify_triage_task — the DB-layer atomic promotion
+"""CLIkanban specify db测试
+
+【产品经理理解要点】
+CLIkanban specify db功能测试。
+- 验证功能：命令行kanban specify db功能
+- 关键场景：配置、执行、验证
+- 业务影响：kanban specify db命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for kb.specify_triage_task — the DB-layer atomic promotion
 from the triage column to todo. LLM-free by design."""
 
 from __future__ import annotations

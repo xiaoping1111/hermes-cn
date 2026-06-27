@@ -1,3 +1,14 @@
+
+"""WhatsApp Cloud配置
+
+【产品经理理解要点】
+WhatsApp Cloud API的交互式配置向导。
+- 6个Meta凭据的逐步引导输入
+- 自动生成verify token
+- 输出cloudflared和Gateway的启动指引
+
+────────────────────────────────────────────────────────────────"""
+
 """
 Interactive setup wizard for the WhatsApp Cloud API adapter.
 

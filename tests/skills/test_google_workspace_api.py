@@ -1,4 +1,14 @@
-"""Tests for Google Workspace gws bridge and CLI wrapper."""
+"""Google Workspace API
+
+【产品经理理解要点】
+Workspace API调用。
+- 验证功能：Google API正确调用
+- 关键场景：Drive/Calendar/Gmail
+- 业务影响：Workspace API异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Google Workspace gws bridge and CLI wrapper.
+"""
 
 import importlib.util
 import json

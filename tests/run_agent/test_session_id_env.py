@@ -1,4 +1,14 @@
-"""Test that HERMES_SESSION_ID is exposed as an env var and ContextVar."""
+"""Agent运行引擎测试 - session id env
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的session id env验证。
+- 验证功能：session id env功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：session id env功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Test that HERMES_SESSION_ID is exposed as an env var and ContextVar.
+"""
 
 import os
 import sys

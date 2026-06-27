@@ -1,4 +1,13 @@
-"""Regression tests for ACP adapter detection under Azure Foundry Entra ID.
+"""Entra供应商检测
+
+【产品经理理解要点】
+微软Entra ID检测。
+- 验证功能：供应商自动检测
+- 关键场景：检测、配置、验证
+- 业务影响：Entra供应商未检测到
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for ACP adapter detection under Azure Foundry Entra ID.
 
 The ACP adapter's ``detect_provider`` previously gated on
 ``isinstance(api_key, str)`` and returned ``None`` for any runtime that

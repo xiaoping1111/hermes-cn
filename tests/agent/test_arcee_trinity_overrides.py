@@ -1,4 +1,13 @@
-"""Tests for Arcee Trinity Large Thinking per-model overrides.
+"""Agent核心测试 - arcee trinity overrides
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的arcee trinity overrides验证。
+- 验证功能：arcee trinity overrides功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：arcee trinity overrides功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Arcee Trinity Large Thinking per-model overrides.
 
 Arcee Trinity Large Thinking is a reasoning model that wants:
 - Fixed temperature=0.5 (vs the global default)

@@ -1,4 +1,12 @@
-"""
+"""测试 - timezone
+
+【产品经理理解要点】
+功能验证中的timezone验证。
+- 验证功能：timezone功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：timezone功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
 Tests for timezone support (hermes_time module + integration points).
 
 Covers:

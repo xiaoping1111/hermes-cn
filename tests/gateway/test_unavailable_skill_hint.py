@@ -1,4 +1,13 @@
-"""Tests for gateway.run._check_unavailable_skill.
+"""网关unavailable skill hint测试
+
+【产品经理理解要点】
+网关unavailable skill hint功能测试。
+- 验证功能：网关unavailable skill hint处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：unavailable skill hint功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway.run._check_unavailable_skill.
 
 Regression coverage for the dir-name-vs-frontmatter-name drift bug.
 The hint function used to compare the skill's parent-directory name
@@ -15,8 +24,7 @@ These tests pin the fixed behavior:
   :func:`agent.skill_commands.scan_skill_commands`), so the slug differs
   from the directory name when the declared name is multi-word.
 * ``disabled`` membership is checked by the declared name, because that
-  is what :func:`hermes_cli.skills_config.save_disabled_skills` stores.
-"""
+  is what :func:`hermes_cli.skills_config.save_disabled_skills` stores."""
 from __future__ import annotations
 
 from pathlib import Path

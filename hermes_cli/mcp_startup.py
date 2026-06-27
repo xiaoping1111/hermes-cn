@@ -1,3 +1,14 @@
+
+"""MCP后台启动
+
+【产品经理理解要点】
+CLI/TUI安全的MCP后台发现线程，避免阻塞主线程。
+- 后台线程异步发现可用MCP服务器
+- 线程锁确保只启动一次
+- CLI/TUI启动时非阻塞地准备MCP服务
+
+────────────────────────────────────────────────────────────────"""
+
 """Shared CLI/TUI-safe helpers for background MCP discovery."""
 
 from __future__ import annotations

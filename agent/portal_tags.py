@@ -1,5 +1,16 @@
 """Centralized Nous Portal request tags.
 
+Nous Portal 请求标签
+
+【产品经理理解要点】
+统一所有发往 Nous Portal 的请求的产品归属标签，确保用量统计准确。
+- 核心职责：生成标准化的 product/client 请求标签
+- 关键业务概念：产品归属(product=hermes-agent)、客户端版本标签、用量分桶
+- 在系统中的位置：所有 Nous Portal API 请求的标签注入点
+
+─────────────────────────────────────────────────────────────────
+
+
 Every Hermes request that hits the Nous Portal — main agent loop, auxiliary
 client (compression / titles / vision / web_extract / session_search / etc.),
 and any future code path — must carry the same product-attribution tags so

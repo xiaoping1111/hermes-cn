@@ -1,4 +1,12 @@
-"""Exa web search + content extraction — plugin form.
+"""Exa 搜索提供者
+
+【产品经理理解要点】
+Exa 神经搜索的具体实现。
+- API Key 认证
+- 语义搜索和内容提取
+
+─────────────────────────────────────────────────────────────────
+Exa web search + content extraction — plugin form.
 
 Subclasses :class:`agent.web_search_provider.WebSearchProvider`. Uses the
 official Exa SDK (``exa-py``) which is lazy-loaded via

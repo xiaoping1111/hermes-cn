@@ -1,4 +1,13 @@
-"""Tests for the Raft channel adapter."""
+"""Raft适配器
+
+【产品经理理解要点】
+Raft协议适配器。
+- 验证功能：Raft共识协议的适配器
+- 关键场景：领导选举、日志复制、状态机
+- 业务影响：分布式一致性无法保证
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Raft channel adapter."""
 
 import os
 from unittest.mock import AsyncMock, patch

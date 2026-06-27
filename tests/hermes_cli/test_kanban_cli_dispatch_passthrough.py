@@ -1,10 +1,18 @@
-"""Regression tests for #33488 (CLI max_in_progress / max_spawn / per-profile
+"""CLIkanban cli dispatch passthrough测试
+
+【产品经理理解要点】
+CLIkanban cli dispatch passthrough功能测试。
+- 验证功能：命令行kanban cli dispatch passthrough功能
+- 关键场景：配置、执行、验证
+- 业务影响：kanban cli dispatch passthrough命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for #33488 (CLI max_in_progress / max_spawn / per-profile
 config passthrough) and #29415 (kanban_swarm humanizer skill ref).
 
 These two fixes are bundled because they're both small, both touch the
 kanban dispatcher's CLI surface, and they each guard against a silent
-operator footgun that only manifests in long-running setups.
-"""
+operator footgun that only manifests in long-running setups."""
 from __future__ import annotations
 
 import argparse

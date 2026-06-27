@@ -1,4 +1,13 @@
 """
+定时任务管理工具
+
+【产品经理理解要点】
+让智能体创建和管理定时任务（类似cron），实现自动化工作流。
+- 核心职责：创建、查看、删除定时任务，支持cron表达式和一次性任务
+- 业务价值：用户可以让智能体在指定时间自动执行任务（如每日摘要、定时监控等）
+- 在系统中的位置：位于智能体对话和系统cron服务之间
+
+─────────────────────────────────────────────────────────────────
 Cron job management tools for Hermes Agent.
 
 Expose a single compressed action-oriented tool to avoid schema/context bloat.

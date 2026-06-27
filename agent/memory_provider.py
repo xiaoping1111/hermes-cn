@@ -1,5 +1,16 @@
 """Abstract base class for pluggable memory providers.
 
+记忆供应商抽象接口
+
+【产品经理理解要点】
+定义可插拔的记忆供应商接口，让智能体具备跨会话回忆能力。
+- 核心职责：生命周期管理(初始化-预取-同步-关闭)、工具暴露、系统提示块
+- 关键业务概念：记忆供应商(Honcho/Mem0等)、单一外部供应商、跨会话回忆
+- 在系统中的位置：MemoryManager 与具体记忆后端之间的接口层
+
+─────────────────────────────────────────────────────────────────
+
+
 Memory providers give the agent persistent recall across sessions.
 The MemoryManager enforces a one-external-provider limit to prevent
 tool schema bloat and conflicting memory backends.

@@ -1,4 +1,12 @@
-"""
+"""Photon Dashboard API 客户端与设备码登录流程
+
+【产品经理理解要点】
+处理 Photon（iMessage 服务）的管理面操作，包括登录、项目管理、用户注册等。
+- 使用 OAuth 2.0 设备码流程完成用户登录认证
+- 项目 ID 与 Spectrum Cloud 项目 ID 统一，无需单独配置
+- 支持项目密钥轮换、用户注册、iMessage 号码查询等管理操作
+
+─────────────────────────────────────────────────────────────────
 Photon Dashboard API client + device-code login flow.
 
 This module is pure Python — it intentionally does not depend on

@@ -1,4 +1,13 @@
-"""Tests for hermes_cli.web_server and related config utilities."""
+"""CLIweb server测试
+
+【产品经理理解要点】
+CLIweb server功能测试。
+- 验证功能：命令行web server功能
+- 关键场景：配置、执行、验证
+- 业务影响：web server命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.web_server and related config utilities."""
 
 import asyncio
 import os

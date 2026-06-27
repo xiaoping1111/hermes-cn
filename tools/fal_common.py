@@ -1,4 +1,12 @@
-"""Shared FAL.ai SDK plumbing.
+"""FAL.ai SDK共享组件
+
+【产品经理理解要点】
+为图片生成和视频生成工具提供FAL.ai平台的共享基础设施。
+- 核心职责：延迟导入FAL客户端、Nous托管网关客户端封装、队列URL格式标准化
+- 在系统中的位置：位于图片/视频生成工具和FAL.ai API之间，是AI媒体生成的基础库
+
+─────────────────────────────────────────────────────────────────
+Shared FAL.ai SDK plumbing.
 
 Holds the stateless atoms that every FAL-backed tool needs:
 

@@ -1,4 +1,12 @@
-"""Gateway runtime wiring for the Teams meeting pipeline plugin."""
+"""Teams 会议管线网关运行时
+
+【产品经理理解要点】
+将 Teams 会议管线接入 Hermes 网关的运行时接线。
+- 消息投递配置检查
+- 管线与网关事件系统对接
+
+─────────────────────────────────────────────────────────────────
+Gateway runtime wiring for the Teams meeting pipeline plugin."""
 
 from __future__ import annotations
 

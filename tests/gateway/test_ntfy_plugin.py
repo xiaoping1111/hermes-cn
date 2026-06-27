@@ -1,4 +1,13 @@
-"""Tests for the ntfy platform-plugin adapter.
+"""Ntfy网关测试
+
+【产品经理理解要点】
+Ntfy平台网关功能测试。
+- 验证功能：Ntfy平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Ntfy平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the ntfy platform-plugin adapter.
 
 Loaded via the ``_plugin_adapter_loader`` helper so this lives under
 ``plugin_adapter_ntfy`` in ``sys.modules`` and cannot collide with
@@ -9,8 +18,7 @@ Most tests target the adapter class directly. The plugin-shape tests
 presence) replace the core-file grep tests from the original PR — the
 ntfy adapter no longer modifies ``gateway/config.py``, ``gateway/run.py``,
 ``cron/scheduler.py``, ``toolsets.py``, etc.  Everything routes through
-the ``platform_registry``.
-"""
+the ``platform_registry``."""
 
 from __future__ import annotations
 

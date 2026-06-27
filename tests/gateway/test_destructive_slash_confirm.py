@@ -1,11 +1,19 @@
-"""Tests for the gateway's destructive-slash-confirm wrapper.
+"""网关destructive slash confirm测试
+
+【产品经理理解要点】
+网关destructive slash confirm功能测试。
+- 验证功能：网关destructive slash confirm处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：destructive slash confirm功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the gateway's destructive-slash-confirm wrapper.
 
 When ``approvals.destructive_slash_confirm`` is True (default), /new,
 /reset, and /undo route through the slash-confirm primitive — native
 yes/no buttons on Telegram/Discord/Slack, text fallback elsewhere.
 When False (after "Always Approve"), the destructive action runs
-immediately.
-"""
+immediately."""
 
 from __future__ import annotations
 

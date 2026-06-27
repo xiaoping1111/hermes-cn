@@ -1,3 +1,11 @@
+"""网关compression failure session sync测试
+
+【产品经理理解要点】
+网关compression failure session sync功能测试。
+- 验证功能：网关compression failure session sync处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：compression failure session sync功能异常"""
+
 import asyncio
 import sys
 import threading

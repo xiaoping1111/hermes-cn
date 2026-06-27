@@ -1,4 +1,13 @@
-"""Tests for Teams pipeline runtime wiring into the gateway."""
+"""Teams平台
+
+【产品经理理解要点】
+Microsoft Teams适配器。
+- 验证功能：Teams平台消息适配
+- 关键场景：消息收发、线程管理、格式转换
+- 业务影响：Teams平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Teams pipeline runtime wiring into the gateway."""
 
 from __future__ import annotations
 

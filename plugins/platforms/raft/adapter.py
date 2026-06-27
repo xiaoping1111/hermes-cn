@@ -1,4 +1,13 @@
-"""Raft channel platform adapter.
+"""Raft 频道平台适配器
+
+【产品经理理解要点】
+接入 Raft 频道通讯平台，通过本地唤醒端点和子进程桥接实现消息转发。
+- 启动本地 HTTP 唤醒端点 + spawn raft agent bridge 子进程
+- 将 Raft 消息注入 Hermes 网关的会话管道
+- 令牌和端口可自动生成，也可通过环境变量配置
+
+─────────────────────────────────────────────────────────────────
+Raft channel platform adapter.
 
 Starts a local wake endpoint, spawns ``raft agent bridge`` as a child process,
 and injects content-free wake hints into Hermes' normal gateway session pipeline.

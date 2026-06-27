@@ -1,4 +1,13 @@
-"""Regression guard for #14782: json.JSONDecodeError must not be classified
+"""Agent运行引擎测试 - jsondecodeerror retryable
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的jsondecodeerror retryable验证。
+- 验证功能：jsondecodeerror retryable功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：jsondecodeerror retryable功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression guard for #14782: json.JSONDecodeError must not be classified
 as a local validation error by the main agent loop.
 
 `json.JSONDecodeError` inherits from `ValueError`. The agent loop's

@@ -1,4 +1,13 @@
-"""Tests for OpenRouter variant tag preservation in model switching.
+"""CLImodel switch variant tags测试
+
+【产品经理理解要点】
+CLImodel switch variant tags功能测试。
+- 验证功能：命令行model switch variant tags功能
+- 关键场景：配置、执行、验证
+- 业务影响：model switch variant tags命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for OpenRouter variant tag preservation in model switching.
 
 Regression test for GitHub PR #6088 / Discord report: OpenRouter model IDs
 with variant suffixes like ``:free``, ``:extended``, ``:fast`` were being
@@ -6,8 +15,7 @@ mangled by the colon-to-slash conversion in model_switch.py Step c.
 
 The fix: Step c now skips colon→slash conversion when the model name already
 contains a forward slash (i.e. is already in ``vendor/model`` format), since
-the colon is a variant tag, not a vendor separator.
-"""
+the colon is a variant tag, not a vendor separator."""
 import pytest
 from unittest.mock import patch
 

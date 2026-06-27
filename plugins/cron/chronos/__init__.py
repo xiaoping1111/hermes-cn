@@ -1,4 +1,12 @@
-"""Chronos — NAS-mediated managed cron provider (scale-to-zero).
+"""Chronos 定时调度插件包
+
+【产品经理理解要点】
+Chronos 定时任务调度器实现，支持 NAS 部署和分布式调度。
+- 基于 Chronos 的分布式定时任务调度
+- 支持 NAS 环境下的持久化调度
+
+─────────────────────────────────────────────────────────────────
+Chronos — NAS-mediated managed cron provider (scale-to-zero).
 
 Chronos (the Greek god of time, alongside Hermes) is the first non-default
 ``CronScheduler``. It lets a hosted gateway scale to zero while idle and still

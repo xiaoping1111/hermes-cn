@@ -1,4 +1,13 @@
-"""Tests for website/scripts/generate-skill-docs.py.
+"""技能文档生成
+
+【产品经理理解要点】
+技能文档网站生成。
+- 验证功能：文档目录结构正确性
+- 关键场景：目录、内容、链接
+- 业务影响：技能文档生成异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for website/scripts/generate-skill-docs.py.
 
 The generator turns every `skills/**/SKILL.md` into a Docusaurus page before
 the `docs-site-checks` CI workflow runs `ascii-guard lint` on the result. If

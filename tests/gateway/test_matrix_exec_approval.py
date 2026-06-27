@@ -1,3 +1,11 @@
+"""Matrix网关测试
+
+【产品经理理解要点】
+Matrix平台网关功能测试。
+- 验证功能：Matrix平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Matrix平台功能不可用"""
+
 import types
 
 import pytest

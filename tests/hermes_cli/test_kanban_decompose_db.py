@@ -1,6 +1,14 @@
-"""Tests for kb.decompose_triage_task — the DB-layer atomic fan-out
-from the triage column. LLM-free by design.
-"""
+"""CLIkanban decompose db测试
+
+【产品经理理解要点】
+CLIkanban decompose db功能测试。
+- 验证功能：命令行kanban decompose db功能
+- 关键场景：配置、执行、验证
+- 业务影响：kanban decompose db命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for kb.decompose_triage_task — the DB-layer atomic fan-out
+from the triage column. LLM-free by design."""
 
 from __future__ import annotations
 

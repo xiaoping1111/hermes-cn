@@ -1,4 +1,13 @@
-"""Tests for cross-profile auth fallback.
+"""CLIauth profile fallback测试
+
+【产品经理理解要点】
+CLIauth profile fallback功能测试。
+- 验证功能：命令行auth profile fallback功能
+- 关键场景：配置、执行、验证
+- 业务影响：auth profile fallback命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for cross-profile auth fallback.
 
 When ``HERMES_HOME`` points to a named profile, ``read_credential_pool()``
 and ``get_provider_auth_state()`` fall back to the global-root
@@ -6,8 +15,7 @@ and ``get_provider_auth_state()`` fall back to the global-root
 provider.  Writes still target the profile only.
 
 See the #18594 follow-up report: profile workers couldn't see providers
-authenticated only at the global root.
-"""
+authenticated only at the global root."""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""Tests for the optional codex app-server runtime gate.
+"""Agent核心测试 - codex app server runtime
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的codex app server runtime验证。
+- 验证功能：codex app server runtime功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：codex app server runtime功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the optional codex app-server runtime gate.
 
 These are unit tests for the api_mode rewriter and the wire-level transport
 module. They do NOT require the `codex` CLI to be installed — that's

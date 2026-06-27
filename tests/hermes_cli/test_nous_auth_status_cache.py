@@ -1,12 +1,20 @@
-"""Tests for the get_nous_auth_status() process-level cache.
+"""CLInous auth status cache测试
+
+【产品经理理解要点】
+CLInous auth status cache功能测试。
+- 验证功能：命令行nous auth status cache功能
+- 关键场景：配置、执行、验证
+- 业务影响：nous auth status cache命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the get_nous_auth_status() process-level cache.
 
 The cache avoids re-validating Nous credentials on every menu paint —
 `hermes tools` → "All Platforms" used to fire ~31 OAuth refresh POSTs
 against portal.nousresearch.com during one render. The cache is keyed
 on auth.json path + mtime so profile switches stay isolated while
 login/logout flows invalidate naturally; tests and other writers can
-also call invalidate_nous_auth_status_cache().
-"""
+also call invalidate_nous_auth_status_cache()."""
 
 from __future__ import annotations
 

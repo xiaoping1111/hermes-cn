@@ -1,11 +1,19 @@
-"""End-to-end tests for inline image inputs on /v1/chat/completions and /v1/responses.
+"""网关api server multimodal测试
+
+【产品经理理解要点】
+网关api server multimodal功能测试。
+- 验证功能：网关api server multimodal处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：api server multimodal功能异常
+
+─────────────────────────────────────────────────────────────────────────
+End-to-end tests for inline image inputs on /v1/chat/completions and /v1/responses.
 
 Covers the multimodal normalization path added to the API server.  Unlike the
 adapter-level tests that patch ``_run_agent``, these tests patch
 ``AIAgent.run_conversation`` instead so the adapter's full request-handling
 path (including the ``run_agent`` prologue that used to crash on list content)
-executes against a real aiohttp app.
-"""
+executes against a real aiohttp app."""
 
 from unittest.mock import MagicMock, patch
 

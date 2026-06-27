@@ -1,3 +1,14 @@
+
+"""部分压缩功能
+
+【产品经理理解要点】
+用户可选择边界点，将之前的对话历史压缩为摘要。
+- 不同于/compress的全量压缩，支持选择性压缩
+- 保留压缩点之后的完整上下文
+- 灵感来自Claude Code的Rewind菜单
+
+────────────────────────────────────────────────────────────────"""
+
 """Boundary-aware partial compression — "summarize up to here".
 
 Inspired by Claude Code's Rewind menu "Summarize up to here" action

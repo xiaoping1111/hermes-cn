@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Watch GitHub activity — issues, pulls, releases, or commits — with dedup.
+"""GitHub 监控
+
+【产品经理理解要点】
+监控 GitHub 仓库的活动（PR、Issue、Release）。
+- 仓库事件轮询
+- 变更通知推送
+
+─────────────────────────────────────────────────────────────────
+Watch GitHub activity — issues, pulls, releases, or commits — with dedup.
 
 Usage (via cron with --no-agent):
 

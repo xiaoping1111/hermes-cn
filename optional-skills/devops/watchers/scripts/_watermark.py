@@ -1,4 +1,11 @@
-"""Shared watermark helper used by the three watcher scripts.
+"""Watcher 水印工具
+
+【产品经理理解要点】
+为 Watcher 监控数据添加时间水印。
+- 数据新鲜度标记
+
+─────────────────────────────────────────────────────────────────
+Shared watermark helper used by the three watcher scripts.
 
 A watermark is just a JSON file that records the IDs we've seen on previous
 runs, so the next run only emits items we haven't seen before.

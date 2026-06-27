@@ -1,11 +1,19 @@
-"""Regression tests for active-session TEXT follow-up queueing.
+"""活跃会话文本合并
+
+【产品经理理解要点】
+活跃会话文本合并。
+- 验证功能：活跃会话中多条文本消息的合并
+- 关键场景：消息合并、顺序保证、去重
+- 业务影响：消息显示乱序或重复
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for active-session TEXT follow-up queueing.
 
 When the agent is actively running, rapid text follow-ups should survive as
 one next-turn pending message instead of clobbering each other. In
 ``busy_text_mode=queue`` those active follow-ups first pass through a short
 debounce so bursty multi-message thoughts are merged before the active drain
-hands off the next turn.
-"""
+hands off the next turn."""
 
 from __future__ import annotations
 

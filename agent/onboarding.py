@@ -1,4 +1,13 @@
 """
+首次使用引导提示
+
+【产品经理理解要点】
+在用户首次触发某个行为分叉时展示一次性引导提示，不阻塞正常使用。
+- 核心职责：跟踪已看过的引导标志、首次触发时展示提示、config.yaml 持久化
+- 关键业务概念：一次性提示(one-time hint)、行为分叉、安装级追踪
+- 在系统中的位置：CLI 和 Gateway 的用户体验优化层
+
+─────────────────────────────────────────────────────────────────
 Contextual first-touch onboarding hints.
 
 Instead of blocking first-run questionnaires, show a one-time hint the *first*

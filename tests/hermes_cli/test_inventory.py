@@ -1,4 +1,13 @@
-"""Behavior tests for hermes_cli.inventory.
+"""CLIinventory测试
+
+【产品经理理解要点】
+CLIinventory功能测试。
+- 验证功能：命令行inventory功能
+- 关键场景：配置、执行、验证
+- 业务影响：inventory命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Behavior tests for hermes_cli.inventory.
 
 Locks the invariants the three migrated consumers (web_server.py
 /api/model/options, tui_gateway model.options, tui_gateway model.save_key)
@@ -14,8 +23,7 @@ depend on:
   canonical slugs in the providers: dict, and that flag must NOT demote
   them to the tail.
 - picker_hints adds authenticated/auth_type/key_env/warning per row,
-  matching the TUI ModelPickerDialog shape.
-"""
+  matching the TUI ModelPickerDialog shape."""
 
 from __future__ import annotations
 

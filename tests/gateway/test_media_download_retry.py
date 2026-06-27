@@ -1,4 +1,12 @@
-"""
+"""媒体下载重试
+
+【产品经理理解要点】
+媒体下载重试。
+- 验证功能：媒体文件下载的失败重试
+- 关键场景：重试策略、超时、降级
+- 业务影响：媒体文件下载失败
+
+─────────────────────────────────────────────────────────────────────────
 Tests for media download retry logic added in PR #2982.
 
 Covers:
@@ -8,8 +16,7 @@ Covers:
 - gateway/platforms/mattermost.py: MattermostAdapter._send_url_as_file
 
 All async tests use asyncio.run() directly — pytest-asyncio is not installed
-in this environment.
-"""
+in this environment."""
 
 import asyncio
 import sys

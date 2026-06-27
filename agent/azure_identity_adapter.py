@@ -1,5 +1,16 @@
 """Microsoft Entra ID adapter for Microsoft Foundry.
 
+Azure Entra ID 认证适配器
+
+【产品经理理解要点】
+为 Microsoft Foundry 提供无密认证(Azure AD/Entra ID)，替代 API Key 方式。
+- 核心职责：通过 azure-identity DefaultAzureCredential 链获取 Token、按需刷新
+- 关键业务概念：DefaultAzureCredential 链、Bearer Token Provider、无密认证
+- 在系统中的位置：Azure/Microsoft Foundry 供应商的认证层
+
+─────────────────────────────────────────────────────────────────
+
+
 Provides keyless authentication for Microsoft Foundry deployments using the
 `azure-identity` SDK's `DefaultAzureCredential` chain (env service principal
 → workload identity → managed identity → VS Code → Azure CLI → azd →

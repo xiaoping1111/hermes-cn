@@ -1,4 +1,13 @@
-"""Regression tests for #35809 — compression-exhaustion auto-reset loop.
+"""网关35809 auto reset clean context测试
+
+【产品经理理解要点】
+网关35809 auto reset clean context功能测试。
+- 验证功能：网关35809 auto reset clean context处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：35809 auto reset clean context功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for #35809 — compression-exhaustion auto-reset loop.
 
 After compression is exhausted the gateway auto-resets the session so the
 next message starts on a fresh, empty conversation (#9893 / #10063). That
@@ -28,8 +37,7 @@ Two tests:
   This is the load-bearing regression pin.
 * ``TestAutoResetLoadsCleanContext`` — a behavioral contract on the real
   ``SessionStore``: after ``reset_session`` the next turn loads an EMPTY
-  transcript for the new session_id, never the bloated child's transcript.
-"""
+  transcript for the new session_id, never the bloated child's transcript."""
 
 from __future__ import annotations
 

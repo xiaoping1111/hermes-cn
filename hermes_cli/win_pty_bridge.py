@@ -1,3 +1,14 @@
+
+"""Windows PTY桥接
+
+【产品经理理解要点】
+Windows ConPTY桥接，是POSIX pty_bridge的Windows等价实现。
+- 使用pywinpty替代fcntl/termios
+- 与POSIX版相同的公共接口
+- Dashboard聊天标签在Windows上的终端桥接
+
+────────────────────────────────────────────────────────────────"""
+
 """Windows ConPTY bridge for the `hermes dashboard` chat tab.
 
 Drop-in counterpart to ``hermes_cli.pty_bridge.PtyBridge`` for native

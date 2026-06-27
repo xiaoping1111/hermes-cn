@@ -1,4 +1,13 @@
-"""Tests for the light-mode terminal detection + color remap in cli.py.
+"""CLI终端测试 - cli light mode
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的cli light mode验证。
+- 验证功能：cli light mode功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：cli light mode功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the light-mode terminal detection + color remap in cli.py.
 
 Covers the env-override path and the SkinConfig.get_color() wrapper that
 the resize / light-mode salvage installs at module import time.  We don't

@@ -1,4 +1,13 @@
-"""Managed uv — one path, no guessing.
+"""托管式 uv 包管理器
+
+【产品经理理解要点】
+Hermes 自带的 uv 二进制管理，确保所有代码路径使用同一个 uv 版本。
+- 核心职责：在 $HERMES_HOME/bin/ 下安装和维护 uv 二进制，自动引导安装缺失的 uv，支持自更新
+- 关键概念：单一路径策略（不依赖 PATH 探测）、跨版本兼容返回值（_UvResult）、Windows 特殊处理
+- 系统定位：依赖安装和 hermes update 的基础设施，确保 uv 可用性
+
+─────────────────────────────────────────────────────────────────
+Managed uv — one path, no guessing.
 
 Hermes owns its own uv binary at ``$HERMES_HOME/bin/uv`` (or ``uv.exe`` on
 Windows).  Every code path that needs uv resolves it from that single location.

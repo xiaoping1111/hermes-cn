@@ -1,9 +1,17 @@
-"""Relay /stop interrupt routing (relay Phase 1, Task 1.4).
+"""中继中断
+
+【产品经理理解要点】
+中继中断处理。
+- 验证功能：中继模式的中断处理
+- 关键场景：中断检测、状态保存、恢复
+- 业务影响：中继中断后无法恢复
+
+─────────────────────────────────────────────────────────────────────────
+Relay /stop interrupt routing (relay Phase 1, Task 1.4).
 
 Proves a connector-delivered mid-turn interrupt reaches the existing per-session
 interrupt mechanism and cancels exactly the targeted session_key's turn — never
-a sibling's. Mirrors the isolation discipline of test_stop_thread_sibling.py.
-"""
+a sibling's. Mirrors the isolation discipline of test_stop_thread_sibling.py."""
 
 from __future__ import annotations
 

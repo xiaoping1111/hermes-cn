@@ -1,4 +1,14 @@
-"""Tests for the bundled observability/nemo_relay plugin."""
+"""插件系统测试 - nemo relay plugin
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的nemo relay plugin验证。
+- 验证功能：nemo relay plugin功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：nemo relay plugin功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the bundled observability/nemo_relay plugin.
+"""
 
 from __future__ import annotations
 

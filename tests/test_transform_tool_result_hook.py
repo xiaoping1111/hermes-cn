@@ -1,4 +1,13 @@
-"""Tests for the ``transform_tool_result`` plugin hook wired into
+"""测试 - transform tool result hook
+
+【产品经理理解要点】
+功能验证中的transform tool result hook验证。
+- 验证功能：transform tool result hook功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：transform tool result hook功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the ``transform_tool_result`` plugin hook wired into
 ``model_tools.handle_function_call``.
 
 Mirrors the ``transform_terminal_output`` hook tests from Phase 1 but

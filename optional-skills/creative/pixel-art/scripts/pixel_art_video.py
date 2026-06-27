@@ -1,4 +1,12 @@
-"""Pixel art video — overlay procedural animations onto a source image.
+"""像素艺术动画生成
+
+【产品经理理解要点】
+将像素艺术图序列生成动画视频。
+- 帧序列合成
+- 动画参数配置
+
+─────────────────────────────────────────────────────────────────
+Pixel art video — overlay procedural animations onto a source image.
 
 Takes any image (typically pre-processed with pixel_art()) and overlays
 animated pixel effects (stars, rain, fireflies, etc.), then encodes to MP4

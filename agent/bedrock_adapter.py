@@ -1,5 +1,16 @@
 """AWS Bedrock Converse API adapter for Hermes Agent.
 
+AWS Bedrock 适配器
+
+【产品经理理解要点】
+通过 Amazon Bedrock Converse API 原生集成 AWS 模型，支持 AWS 认证链。
+- 核心职责：OpenAI格式-Converse格式转换、AWS 认证链、模型发现、Guardrails
+- 关键业务概念：Bedrock Converse API、AWS 认证链(IAM/SSO)、跨区域推理
+- 在系统中的位置：AWS Bedrock 供应商的传输适配层
+
+─────────────────────────────────────────────────────────────────
+
+
 Provides native integration with Amazon Bedrock using the Converse API,
 bypassing the OpenAI-compatible endpoint in favor of direct AWS SDK calls.
 This enables full access to the Bedrock ecosystem:

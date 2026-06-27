@@ -1,4 +1,13 @@
-"""Tests for the end-of-turn completion explainer (#34452).
+"""Agent运行引擎测试 - turn completion explainer
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的turn completion explainer验证。
+- 验证功能：turn completion explainer功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：turn completion explainer功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the end-of-turn completion explainer (#34452).
 
 When a turn ends abnormally after tools (empty content after retries, a
 partial/truncated stream, exhausted retries, or an iteration/budget limit)

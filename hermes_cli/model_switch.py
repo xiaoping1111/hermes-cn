@@ -1,3 +1,14 @@
+
+"""模型切换共享逻辑
+
+【产品经理理解要点】
+CLI和Gateway的/model命令共享的核心模型切换管线。
+- 解析标志→别名解析→提供商解析→凭证解析→标准化→元数据查询
+- 确保CLI和Gateway切换行为完全一致
+- 切换后自动持久化到配置文件
+
+────────────────────────────────────────────────────────────────"""
+
 """Shared model-switching logic for CLI and gateway /model commands.
 
 Both the CLI (cli.py) and gateway (gateway/run.py) /model handlers

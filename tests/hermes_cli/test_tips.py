@@ -1,4 +1,13 @@
-"""Tests for hermes_cli/tips.py — random tip display at session start."""
+"""CLItips测试
+
+【产品经理理解要点】
+CLItips功能测试。
+- 验证功能：命令行tips功能
+- 关键场景：配置、执行、验证
+- 业务影响：tips命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli/tips.py — random tip display at session start."""
 
 from hermes_cli.tips import TIPS, get_random_tip
 

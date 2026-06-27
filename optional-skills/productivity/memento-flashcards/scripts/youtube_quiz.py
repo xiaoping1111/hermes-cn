@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Fetch YouTube transcripts for Memento quiz generation.
+"""YouTube 视频抽题
+
+【产品经理理解要点】
+从 YouTube 视频内容自动生成抽认卡测验。
+- 视频内容理解
+- 问题和答案生成
+
+─────────────────────────────────────────────────────────────────
+Fetch YouTube transcripts for Memento quiz generation.
 
 Requires: pip install youtube-transcript-api
 The quiz question *generation* is done by the agent's LLM — this script only fetches transcripts.

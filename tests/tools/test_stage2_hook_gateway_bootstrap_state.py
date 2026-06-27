@@ -1,4 +1,13 @@
-"""Contract test: the s6-overlay stage2 hook seeds gateway_state.json from
+"""工具系统测试 - stage2 hook gateway bootstrap state
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的stage2 hook gateway bootstrap state验证。
+- 验证功能：stage2 hook gateway bootstrap state功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：stage2 hook gateway bootstrap state功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Contract test: the s6-overlay stage2 hook seeds gateway_state.json from
 HERMES_GATEWAY_BOOTSTRAP_STATE on first boot, so a freshly-provisioned
 container can come up with the gateway already running.
 

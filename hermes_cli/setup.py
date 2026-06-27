@@ -1,4 +1,12 @@
-"""
+"""交互式设置向导
+
+【产品经理理解要点】
+hermes setup，模块化的首次配置向导。
+- 5个独立步骤：模型→终端后端→Agent设置→消息平台→工具
+- 每步可单独运行，不必一次性完成所有配置
+- 新用户的核心引导流程
+
+────────────────────────────────────────────────────────────────
 Interactive setup wizard for Hermes Agent.
 
 Modular wizard with independently-runnable sections:
@@ -8,8 +16,7 @@ Modular wizard with independently-runnable sections:
   4. Messaging Platforms — connect Telegram, Discord, etc.
   5. Tools — configure TTS, web search, image generation, etc.
 
-Config files are stored in ~/.hermes/ for easy access.
-"""
+Config files are stored in ~/.hermes/ for easy access."""
 
 import importlib.util
 import logging

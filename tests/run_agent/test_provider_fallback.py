@@ -1,4 +1,13 @@
-"""Tests for ordered provider fallback chain (salvage of PR #1761).
+"""Agent运行引擎测试 - provider fallback
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的provider fallback验证。
+- 验证功能：provider fallback功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：provider fallback功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ordered provider fallback chain (salvage of PR #1761).
 
 Extends the single-fallback tests in test_fallback_model.py to cover
 the new list-based ``fallback_providers`` config format and chain

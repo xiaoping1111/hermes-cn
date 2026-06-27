@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
 """
+文字转语音工具
+
+【产品经理理解要点】
+将智能体回复的文字转为语音播放，支持10+种TTS引擎自动切换。
+- 核心职责：将文本转为音频文件，支持多种TTS引擎（Edge TTS免费默认、ElevenLabs高质量、OpenAI、MiniMax、Gemini等）
+- 本地引擎：NeuTTS、KittenTTS、Piper——无需API密钥，离线可用，适合隐私敏感场景
+- 自定义引擎：用户可在config.yaml中声明shell命令类型的TTS引擎，灵活对接任意语音服务
+- 输出格式：Telegram用Opus（.ogg），其他平台用MP3
+- 在系统中的位置：位于智能体文本输出和用户语音感知之间，是语音模式闭环的关键组件
+
+─────────────────────────────────────────────────────────────────
 Text-to-Speech Tool Module
 
 Built-in TTS providers:

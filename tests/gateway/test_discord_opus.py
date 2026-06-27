@@ -1,4 +1,13 @@
-"""Tests for Discord Opus codec loading — must use ctypes.util.find_library."""
+"""Discord网关测试
+
+【产品经理理解要点】
+Discord平台网关功能测试。
+- 验证功能：Discord平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Discord平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Discord Opus codec loading — must use ctypes.util.find_library."""
 
 import inspect
 import types

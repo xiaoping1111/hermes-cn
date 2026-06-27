@@ -1,4 +1,13 @@
-"""Shared file safety rules used by both tools and ACP shims."""
+"""文件安全规则
+
+【产品经理理解要点】
+文件读写权限守卫：定义哪些目录可读写、哪些路径禁止访问，防止智能体误操作敏感文件。
+- 核心职责：读写路径校验、HERMES_HOME 保护、系统目录拒绝访问
+- 关键业务概念：路径黑名单、hermes_home 写保护、读阻止列表
+- 在系统中的位置：所有文件操作工具(read_file/write_file/patch)的安全检查层
+
+─────────────────────────────────────────────────────────────────
+Shared file safety rules used by both tools and ACP shims."""
 
 from __future__ import annotations
 

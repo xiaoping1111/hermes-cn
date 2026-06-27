@@ -1,4 +1,13 @@
-"""Tests for staged inactivity timeout in gateway agent runs.
+"""不活跃超时
+
+【产品经理理解要点】
+Cron不活跃超时。
+- 验证功能：长时间无活动任务的超时处理
+- 关键场景：超时检测、任务终止、资源释放
+- 业务影响：僵尸任务占用资源
+
+─────────────────────────────────────────────────────────────────────────
+Tests for staged inactivity timeout in gateway agent runs.
 
 Tests cover:
 - Warning fires once when inactivity reaches gateway_timeout_warning threshold
@@ -6,8 +15,7 @@ Tests cover:
 - Warning fires only once per run, not on every poll
 - Full timeout still fires at gateway_timeout threshold
 - Warning respects HERMES_AGENT_TIMEOUT_WARNING env var
-- Warning disabled when gateway_timeout_warning is 0
-"""
+- Warning disabled when gateway_timeout_warning is 0"""
 
 import concurrent.futures
 import os

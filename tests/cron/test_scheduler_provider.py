@@ -1,4 +1,13 @@
-"""Characterization tests for the cron trigger before/after the provider refactor.
+"""调度器Provider
+
+【产品经理理解要点】
+调度器Provider初始化。
+- 验证功能：调度器数据源加载
+- 关键场景：Provider注册、初始化顺序
+- 业务影响：定时任务无法正确加载Provider
+
+─────────────────────────────────────────────────────────────────────────
+Characterization tests for the cron trigger before/after the provider refactor.
 
 These lock the CURRENT in-process-ticker contract (Phase 0 of the pluggable
 CronScheduler plan, .hermes/plans/cron-scheduler-provider-interface.md). They
@@ -14,8 +23,7 @@ No production code is exercised beyond the two ticker entry points:
 Both call `cron.scheduler.tick(...)` on a loop and exit when their stop_event
 is set. We patch `cron.scheduler.tick` (both tickers import it locally as
 `cron_tick`, so the module-attribute patch is observed) and assert the loop
-drives it and stops promptly.
-"""
+drives it and stops promptly."""
 import threading
 import time
 from unittest.mock import patch

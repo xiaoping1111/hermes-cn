@@ -1,4 +1,13 @@
-"""Contract test: install.sh stamps the install method next to the code tree
+"""测试 - install sh install method stamp
+
+【产品经理理解要点】
+功能验证中的install sh install method stamp验证。
+- 验证功能：install sh install method stamp功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：install sh install method stamp功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Contract test: install.sh stamps the install method next to the code tree
 ($INSTALL_DIR), not into the shared $HERMES_HOME.
 
 Background (shared-$HERMES_HOME bug)

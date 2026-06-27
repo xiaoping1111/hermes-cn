@@ -1,12 +1,20 @@
-"""Tests for cron.jobs.rewrite_skill_refs — the curator integration that
+"""技能引用重写
+
+【产品经理理解要点】
+技能引用路径重写。
+- 验证功能：技能文件路径变更后的引用更新
+- 关键场景：路径重写、引用一致性
+- 业务影响：技能加载后引用失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for cron.jobs.rewrite_skill_refs — the curator integration that
 keeps scheduled cron jobs pointing at the right skill names after a
 consolidation / pruning pass.
 
 Bug this fixes: when the curator consolidates skill X into umbrella Y,
 any cron job whose ``skills`` list contains X would silently fail to
 load X at run time (the scheduler logs a warning and skips it), so the
-job runs without the instructions it was scheduled to follow.
-"""
+job runs without the instructions it was scheduled to follow."""
 
 from __future__ import annotations
 

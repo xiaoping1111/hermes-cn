@@ -1,4 +1,12 @@
 from datetime import datetime, timezone
+"""测试 - account usage
+
+【产品经理理解要点】
+功能验证中的account usage验证。
+- 验证功能：account usage功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：account usage功能异常或存在安全隐患"""
+
 
 from agent.account_usage import (
     AccountUsageSnapshot,

@@ -1,4 +1,14 @@
-"""Persistent multi-credential pool for same-provider failover."""
+"""多凭证池
+
+【产品经理理解要点】
+同一供应商的多个 API Key 池，429时自动轮换到下一个凭证。
+- 核心职责：从多种来源种子凭证、429时轮换、持久化到 auth.json
+- 关键业务概念：凭证池、429轮换、凭证来源(env/claude_code/pkce/gh_cli等)
+- 在系统中的位置：API 调用失败时的凭证自动恢复层
+
+─────────────────────────────────────────────────────────────────
+Persistent multi-credential pool for same-provider failover.
+"""
 
 from __future__ import annotations
 

@@ -1,3 +1,11 @@
+"""CLIstatus测试
+
+【产品经理理解要点】
+CLIstatus功能测试。
+- 验证功能：命令行status功能
+- 关键场景：配置、执行、验证
+- 业务影响：status命令行功能失效"""
+
 from types import SimpleNamespace
 
 from hermes_cli.status import show_status

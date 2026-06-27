@@ -1,4 +1,13 @@
-"""Regression tests for ``cmd_whatsapp`` env-var write ordering.
+"""CLIwhatsapp setup ordering测试
+
+【产品经理理解要点】
+CLIwhatsapp setup ordering功能测试。
+- 验证功能：命令行whatsapp setup ordering功能
+- 关键场景：配置、执行、验证
+- 业务影响：whatsapp setup ordering命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for ``cmd_whatsapp`` env-var write ordering.
 
 Before the fix, ``hermes whatsapp`` wrote ``WHATSAPP_ENABLED=true`` at
 step 2 — before npm install (step 4) and before QR pairing (step 6).
@@ -8,8 +17,7 @@ ready when the bridge still had no ``creds.json``.  Every subsequent
 WhatsApp for indefinite retries — looking like "the gateway is broken."
 
 The fix: only set ``WHATSAPP_ENABLED=true`` once pairing actually
-succeeds (creds.json exists).  Aborted setup leaves no enabled state.
-"""
+succeeds (creds.json exists).  Aborted setup leaves no enabled state."""
 
 from __future__ import annotations
 

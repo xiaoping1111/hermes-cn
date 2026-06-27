@@ -1,4 +1,13 @@
-"""Tests for the container-context sandbox-mirror guard (#32049 follow-up).
+"""Agent核心测试 - file safety container mirror
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的file safety container mirror验证。
+- 验证功能：file safety container mirror功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：file safety container mirror功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the container-context sandbox-mirror guard (#32049 follow-up).
 
 Brian's shape-based guard (#32213) catches paths that carry the full
 ``…/sandboxes/<backend>/<task>/home/.hermes/…`` prefix. This covers the

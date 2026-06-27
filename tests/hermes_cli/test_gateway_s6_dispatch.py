@@ -1,10 +1,18 @@
-"""Tests for the Phase 4 s6 dispatch helper in hermes_cli.gateway.
+"""CLIgateway s6 dispatch测试
+
+【产品经理理解要点】
+CLIgateway s6 dispatch功能测试。
+- 验证功能：命令行gateway s6 dispatch功能
+- 关键场景：配置、执行、验证
+- 业务影响：gateway s6 dispatch命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Phase 4 s6 dispatch helper in hermes_cli.gateway.
 
 `_dispatch_via_service_manager_if_s6` decides whether a
 `hermes gateway start/stop/restart` invocation should be routed to
 the in-container S6ServiceManager instead of falling through to the
-host systemd/launchd/windows code path.
-"""
+host systemd/launchd/windows code path."""
 from __future__ import annotations
 
 

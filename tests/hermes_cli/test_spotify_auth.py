@@ -1,5 +1,14 @@
 from __future__ import annotations
 
+"""CLIspotify auth测试
+
+【产品经理理解要点】
+CLIspotify auth功能测试。
+- 验证功能：命令行spotify auth功能
+- 关键场景：配置、执行、验证
+- 业务影响：spotify auth命令行功能失效"""
+
+
 from types import SimpleNamespace
 
 import pytest

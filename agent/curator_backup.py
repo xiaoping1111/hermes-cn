@@ -1,5 +1,16 @@
 """Curator snapshot + rollback.
 
+技能策展人备份与回滚
+
+【产品经理理解要点】
+技能目录变更前自动快照，支持一键回滚到之前的状态。
+- 核心职责：变更前全量快照(tar.gz)、manifest 记录、回滚恢复
+- 关键业务概念：策展人(curator)快照、manifest.json、增量备份、回滚
+- 在系统中的位置：技能策展人的安全网
+
+─────────────────────────────────────────────────────────────────
+
+
 A pre-run snapshot of ``~/.hermes/skills/`` (excluding ``.curator_backups/``
 itself) is taken before any mutating curator pass. Snapshots are tar.gz
 files under ``~/.hermes/skills/.curator_backups/<utc-iso>/`` with a

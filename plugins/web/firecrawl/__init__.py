@@ -1,4 +1,11 @@
-"""Firecrawl web search + extract plugin — bundled, auto-loaded.
+"""Firecrawl 搜索插件
+
+【产品经理理解要点】
+Firecrawl 搜索/抓取后端入口。
+- 支持搜索和网页抓取
+
+─────────────────────────────────────────────────────────────────
+Firecrawl web search + extract plugin — bundled, auto-loaded.
 
 Largest single plugin in this PR. Captures everything the previous
 inline implementation in tools/web_tools.py did:

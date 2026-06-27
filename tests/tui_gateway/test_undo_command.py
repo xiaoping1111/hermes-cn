@@ -1,4 +1,13 @@
-"""Tests for /undo handling in tui_gateway.
+"""撤销命令
+
+【产品经理理解要点】
+TUI撤销操作。
+- 验证功能：会话状态回滚
+- 关键场景：撤销、回滚、状态恢复
+- 业务影响：撤销操作不生效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for /undo handling in tui_gateway.
 
 The TUI routes ``/undo`` through ``command.dispatch`` (it's in
 ``_PENDING_INPUT_COMMANDS`` because the CLI handler queues input the

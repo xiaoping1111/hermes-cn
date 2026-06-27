@@ -1,4 +1,14 @@
-"""Tests for _repair_tool_call_arguments — malformed JSON repair pipeline."""
+"""Agent运行引擎测试 - repair tool call arguments
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的repair tool call arguments验证。
+- 验证功能：repair tool call arguments功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：repair tool call arguments功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for _repair_tool_call_arguments — malformed JSON repair pipeline.
+"""
 
 import json
 

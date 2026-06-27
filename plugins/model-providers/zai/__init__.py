@@ -1,4 +1,11 @@
-"""ZAI / GLM provider profile."""
+"""ZAI 模型提供者
+
+【产品经理理解要点】
+对接 ZAI 模型服务。
+- ZAI API 集成
+
+─────────────────────────────────────────────────────────────────
+ZAI / GLM provider profile."""
 
 from providers import register_provider
 from providers.base import ProviderProfile

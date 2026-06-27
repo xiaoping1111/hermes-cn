@@ -1,4 +1,13 @@
-r"""Tests for _TOOL_MEDIA_RE regex patterns in gateway/run.py.
+"""网关run tool media re测试
+
+【产品经理理解要点】
+网关run tool media re功能测试。
+- 验证功能：网关run tool media re处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：run tool media re功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for _TOOL_MEDIA_RE regex patterns in gateway/run.py.
 
 Issue #34632: The _TOOL_MEDIA_RE patterns in GatewayRunner used (?:/|~\/) to
 anchor paths, which only matched Unix-style absolute and home-relative paths.
@@ -12,8 +21,7 @@ Two identical _TOOL_MEDIA_RE patterns exist in run.py:
 2. Result scanning (~L17549): extracts new media tags from agent output
 
 This test file validates that both equivalent regex patterns correctly match
-Windows paths while preserving existing Unix path matching behavior.
-"""
+Windows paths while preserving existing Unix path matching behavior."""
 
 import re
 

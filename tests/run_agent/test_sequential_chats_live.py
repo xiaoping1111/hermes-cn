@@ -1,4 +1,13 @@
-"""Live regression guardrail for the keepalive/transport bug class (#10933).
+"""Agent运行引擎测试 - sequential chats live
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的sequential chats live验证。
+- 验证功能：sequential chats live功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：sequential chats live功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Live regression guardrail for the keepalive/transport bug class (#10933).
 
 AlexKucera reported on Discord (2026-04-16) that after ``hermes update`` pulled
 #10933, the FIRST chat in a session worked and EVERY subsequent chat failed

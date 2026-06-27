@@ -1,3 +1,14 @@
+
+"""建议管理命令
+
+【产品经理理解要点】
+/suggestions斜杠命令，管理Agent主动推送的使用建议。
+- 列出/接受/忽略建议
+- 接受后自动创建Cron任务执行建议
+- 帮助用户发现Agent的高级功能
+
+────────────────────────────────────────────────────────────────"""
+
 """Shared ``/suggestions`` command logic for CLI and gateway.
 
 Both surfaces call ``handle_suggestions_command(args, origin=...)`` and present

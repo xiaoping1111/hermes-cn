@@ -1,4 +1,12 @@
-"""Wire protocol for gateway ↔ node RPC.
+"""Google Meet Node 协议
+
+【产品经理理解要点】
+定义 Python-Node 侧车之间的通信协议。
+- 消息格式和序列化
+- 请求/响应协议定义
+
+─────────────────────────────────────────────────────────────────
+Wire protocol for gateway ↔ node RPC.
 
 Everything is a JSON object with the same envelope shape:
 

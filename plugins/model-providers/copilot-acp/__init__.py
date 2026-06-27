@@ -1,4 +1,12 @@
-"""GitHub Copilot ACP provider profile.
+"""GitHub Copilot ACP 模型提供者
+
+【产品经理理解要点】
+对接 GitHub Copilot Agent Coding Protocol。
+- Copilot ACP 协议集成
+- GitHub OAuth 认证
+
+─────────────────────────────────────────────────────────────────
+GitHub Copilot ACP provider profile.
 
 copilot-acp uses an external ACP subprocess — NOT the standard
 transport. api_mode="copilot_acp" is handled separately in run_agent.py.

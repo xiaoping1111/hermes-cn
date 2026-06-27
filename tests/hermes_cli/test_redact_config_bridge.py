@@ -1,4 +1,13 @@
-"""Regression test for config.yaml `security.redact_secrets: false` toggle.
+"""CLIredact config bridge测试
+
+【产品经理理解要点】
+CLIredact config bridge功能测试。
+- 验证功能：命令行redact config bridge功能
+- 关键场景：配置、执行、验证
+- 业务影响：redact config bridge命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression test for config.yaml `security.redact_secrets: false` toggle.
 
 Bug: `agent/redact.py` snapshots `_REDACT_ENABLED` from the env var
 `HERMES_REDACT_SECRETS` at module-import time. `hermes_cli/main.py` at
@@ -9,8 +18,7 @@ in .env), the toggle was silently ignored in both `hermes chat` and
 `hermes gateway run`.
 
 Fix: bridge `security.redact_secrets` from config.yaml → `HERMES_REDACT_SECRETS`
-env var in `hermes_cli/main.py` BEFORE the `setup_logging()` call.
-"""
+env var in `hermes_cli/main.py` BEFORE the `setup_logging()` call."""
 import os
 import subprocess
 import sys

@@ -1,4 +1,13 @@
-"""Tests for _snapshot_from_credits_state — the dev-fixture /usage renderer.
+"""Agent核心测试 - credits fixture snapshot
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的credits fixture snapshot验证。
+- 验证功能：credits fixture snapshot功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：credits fixture snapshot功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for _snapshot_from_credits_state — the dev-fixture /usage renderer.
 
 ``build_nous_credits_snapshot`` maps a live portal account; ``_snapshot_from_credits_state``
 maps a header-shaped CreditsState (e.g. a HERMES_DEV_CREDITS_FIXTURE) into the SAME

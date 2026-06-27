@@ -1,10 +1,18 @@
-"""Tests verifying interrupt key consistency between adapter and gateway.
+"""网关interrupt key match测试
+
+【产品经理理解要点】
+网关interrupt key match功能测试。
+- 验证功能：网关interrupt key match处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：interrupt key match功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests verifying interrupt key consistency between adapter and gateway.
 
 Regression test for a bug where monitor_for_interrupt() in _run_agent used
 source.chat_id to query the adapter, but the adapter stores interrupts under
 the full session key (build_session_key output).  This mismatch meant
-interrupts were never detected, causing subagents to ignore new messages.
-"""
+interrupts were never detected, causing subagents to ignore new messages."""
 
 import asyncio
 

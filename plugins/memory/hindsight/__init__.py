@@ -1,4 +1,13 @@
-"""Hindsight memory plugin — MemoryProvider interface.
+"""Hindsight 记忆插件 — 知识图谱与多策略检索
+
+【产品经理理解要点】
+提供知识图谱、实体解析和多策略检索的长期记忆，支持云端和本地模式。
+- 云端模式使用 Hindsight API，本地模式嵌入守护进程
+- 支持记忆保留标签、观察范围、对话转录等细粒度配置
+- 可配置请求超时和守护进程空闲超时
+
+─────────────────────────────────────────────────────────────────
+Hindsight memory plugin — MemoryProvider interface.
 
 Long-term memory with knowledge graph, entity resolution, and multi-strategy
 retrieval. Supports cloud (API key) and local modes.

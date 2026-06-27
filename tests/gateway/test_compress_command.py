@@ -1,4 +1,13 @@
-"""Tests for gateway /compress user-facing messaging."""
+"""网关compress command测试
+
+【产品经理理解要点】
+网关compress command功能测试。
+- 验证功能：网关compress command处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：compress command功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway /compress user-facing messaging."""
 
 from datetime import datetime
 from unittest.mock import MagicMock, patch

@@ -1,10 +1,18 @@
-"""Tests for SessionDB.get_messages_around (anchored-window primitive).
+"""周围消息获取
+
+【产品经理理解要点】
+获取目标周围消息。
+- 验证功能：获取指定消息周围的消息
+- 关键场景：上下文窗口、边界处理、排序
+- 业务影响：上下文消息获取不完整
+
+─────────────────────────────────────────────────────────────────────────
+Tests for SessionDB.get_messages_around (anchored-window primitive).
 
 Used by session_search both for the discovery shape (FTS5 match as anchor)
 and the scroll shape (user-supplied anchor). Returns a window of messages
 around the anchor plus before/after counts so callers can detect session
-boundaries.
-"""
+boundaries."""
 import pytest
 
 from hermes_state import SessionDB

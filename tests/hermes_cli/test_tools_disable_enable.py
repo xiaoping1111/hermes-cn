@@ -1,4 +1,13 @@
-"""Tests for hermes tools disable/enable/list command (backend)."""
+"""CLItools disable enable测试
+
+【产品经理理解要点】
+CLItools disable enable功能测试。
+- 验证功能：命令行tools disable enable功能
+- 关键场景：配置、执行、验证
+- 业务影响：tools disable enable命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes tools disable/enable/list command (backend)."""
 from argparse import Namespace
 from unittest.mock import patch
 

@@ -1,4 +1,13 @@
-"""Contract tests for the Docker stage2 immutable install-tree policy.
+"""工具系统测试 - stage2 hook immutable install
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的stage2 hook immutable install验证。
+- 验证功能：stage2 hook immutable install功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：stage2 hook immutable install功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Contract tests for the Docker stage2 immutable install-tree policy.
 
 Hosted/container Hermes keeps user-writable state under HERMES_HOME
 (/opt/data). The installed source, venv, TUI bundle, and node_modules under

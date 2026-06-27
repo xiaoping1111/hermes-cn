@@ -1,4 +1,13 @@
-"""Tests for auth subcommands backed by the credential pool."""
+"""CLIauth commands测试
+
+【产品经理理解要点】
+CLIauth commands功能测试。
+- 验证功能：命令行auth commands功能
+- 关键场景：配置、执行、验证
+- 业务影响：auth commands命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for auth subcommands backed by the credential pool."""
 
 from __future__ import annotations
 

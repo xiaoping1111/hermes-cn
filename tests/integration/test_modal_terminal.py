@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""Modal终端集成
+
+【产品经理理解要点】
+Modal云终端全流程。
+- 验证功能：云终端创建与执行
+- 关键场景：创建、执行、清理
+- 业务影响：云终端功能异常
+
+─────────────────────────────────────────────────────────────────────────
 Test Modal Terminal Tool
 
 This script tests that the Modal terminal backend is correctly configured

@@ -1,4 +1,12 @@
-"""NovitaAI provider profile."""
+"""Novita AI 模型提供者
+
+【产品经理理解要点】
+对接 Novita AI 模型服务。
+- Novita API 集成
+- GPU 推理服务
+
+─────────────────────────────────────────────────────────────────
+NovitaAI provider profile."""
 
 from providers import register_provider
 from providers.base import ProviderProfile

@@ -1,4 +1,13 @@
-"""Tests for website/scripts/extract-skills.py helpers.
+"""技能提取
+
+【产品经理理解要点】
+技能元数据提取。
+- 验证功能：技能解析逻辑正确性
+- 关键场景：解析、提取、校验
+- 业务影响：技能元数据提取错误
+
+─────────────────────────────────────────────────────────────────────────
+Tests for website/scripts/extract-skills.py helpers.
 
 Covers the two behavioral contracts added when the Skills Hub page gained
 per-skill source links and a cleaned-up category sidebar:

@@ -1,4 +1,13 @@
-"""Tests for follow-up fixes to the LSP integration (PR after #24168).
+"""Agent核心测试 - install and lint fixes
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的install and lint fixes验证。
+- 验证功能：install and lint fixes功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：install and lint fixes功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for follow-up fixes to the LSP integration (PR after #24168).
 
 Covers:
 

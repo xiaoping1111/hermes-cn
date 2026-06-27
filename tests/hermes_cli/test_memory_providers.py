@@ -1,4 +1,13 @@
-"""Tests for the declarative memory-provider registry."""
+"""CLImemory providers测试
+
+【产品经理理解要点】
+CLImemory providers功能测试。
+- 验证功能：命令行memory providers功能
+- 关键场景：配置、执行、验证
+- 业务影响：memory providers命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the declarative memory-provider registry."""
 
 from hermes_cli.memory_providers import (
     KIND_SECRET,

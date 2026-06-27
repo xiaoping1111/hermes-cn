@@ -1,4 +1,12 @@
-"""Hermes Achievements dashboard plugin backend.
+"""成就系统 Dashboard 插件 — 后端 API
+
+【产品经理理解要点】
+为 Dashboard 提供成就系统 API，追踪和展示用户使用成就。
+- 挂载于 /api/plugins/hermes-achievements/
+- 统计工具调用、错误率、会话时长等指标
+
+─────────────────────────────────────────────────────────────────
+Hermes Achievements dashboard plugin backend.
 
 Mounted at /api/plugins/hermes-achievements/ by Hermes dashboard.
 """

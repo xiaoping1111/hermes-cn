@@ -1,3 +1,14 @@
+
+"""提供商/模型清单
+
+【产品经理理解要点】
+统一的提供商和模型清单上下文，消除了Dashboard/TUI/Picker三处重复逻辑。
+- 合并models.dev目录、Hermes覆盖层和用户自定义配置
+- 为Dashboard API和TUI选择器提供一致的数据源
+- 修复了之前三处重复逻辑导致的数据不一致问题
+
+────────────────────────────────────────────────────────────────"""
+
 """Provider/model inventory context — shared substrate for the dashboard
 ``/api/model/options``, the TUI ``model.options``/``model.save_key``
 JSON-RPC handlers, and the interactive picker.

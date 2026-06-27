@@ -1,4 +1,13 @@
-"""Tests for hermes claw commands."""
+"""CLIclaw测试
+
+【产品经理理解要点】
+CLIclaw功能测试。
+- 验证功能：命令行claw功能
+- 关键场景：配置、执行、验证
+- 业务影响：claw命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes claw commands."""
 
 from argparse import Namespace
 import subprocess

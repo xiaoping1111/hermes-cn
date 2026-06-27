@@ -1,4 +1,13 @@
-"""Regression test: _compress_context tolerates plugin engines with strict signatures.
+"""Agent运行引擎测试 - compress focus plugin fallback
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的compress focus plugin fallback验证。
+- 验证功能：compress focus plugin fallback功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：compress focus plugin fallback功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression test: _compress_context tolerates plugin engines with strict signatures.
 
 Added to ``ContextEngine.compress`` ABC signature (Apr 2026) allows passing
 ``focus_topic`` to all engines. Older plugins written against the prior ABC

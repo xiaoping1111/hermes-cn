@@ -1,11 +1,19 @@
-"""Tests for ``hermes dashboard --stop`` / ``--status`` flags.
+"""CLIdashboard lifecycle flags测试
+
+【产品经理理解要点】
+CLIdashboard lifecycle flags功能测试。
+- 验证功能：命令行dashboard lifecycle flags功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard lifecycle flags命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ``hermes dashboard --stop`` / ``--status`` flags.
 
 These flags share the detection + kill path with the post-``hermes update``
 cleanup, so the heavy coverage of SIGTERM / SIGKILL / Windows taskkill lives
 in ``test_update_stale_dashboard.py``.  This file just verifies the flag
 dispatch: argparse wiring, no-op when nothing is running, and correct
-exit codes.
-"""
+exit codes."""
 
 from __future__ import annotations
 

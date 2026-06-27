@@ -1,4 +1,13 @@
-"""Regression tests for the TUI gateway's ``session.list`` handler.
+"""网关session list allowed sources测试
+
+【产品经理理解要点】
+网关session list allowed sources功能测试。
+- 验证功能：网关session list allowed sources处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：session list allowed sources功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the TUI gateway's ``session.list`` handler.
 
 History:
 - The original implementation hardcoded an allow-list of known gateway
@@ -10,8 +19,7 @@ History:
 - The handler now deny-lists only the internal/noisy source ``tool``
   (sub-agent runs) and surfaces every other source to the picker.
 - The default ``limit`` raised from 20 to 200 so longer-running users
-  can scroll through their history without hitting an artificial cap.
-"""
+  can scroll through their history without hitting an artificial cap."""
 
 from __future__ import annotations
 

@@ -1,10 +1,18 @@
-"""Tests that provider selection via `hermes model` always persists correctly.
+"""CLImodel provider persistence测试
+
+【产品经理理解要点】
+CLImodel provider persistence功能测试。
+- 验证功能：命令行model provider persistence功能
+- 关键场景：配置、执行、验证
+- 业务影响：model provider persistence命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests that provider selection via `hermes model` always persists correctly.
 
 Regression tests for the bug where _save_model_choice could save config.model
 as a plain string, causing subsequent provider writes (which check
 isinstance(model, dict)) to silently fail — leaving the provider unset and
-falling back to auto-detection.
-"""
+falling back to auto-detection."""
 
 from unittest.mock import patch, MagicMock
 

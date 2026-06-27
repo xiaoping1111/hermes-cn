@@ -1,4 +1,14 @@
-"""Tests for SSRF protection in url_safety module."""
+"""工具系统测试 - url safety
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的url safety验证。
+- 验证功能：url safety功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：url safety功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for SSRF protection in url_safety module.
+"""
 
 import socket
 from unittest.mock import patch

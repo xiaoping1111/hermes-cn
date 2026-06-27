@@ -1,4 +1,13 @@
-"""Tool-surface cwd contract tests for gateway workspaces.
+"""工具系统测试 - gateway cwd contract
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的gateway cwd contract验证。
+- 验证功能：gateway cwd contract功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：gateway cwd contract功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tool-surface cwd contract tests for gateway workspaces.
 
 These cover the platform-neutral part of #29265: once the gateway has resolved
 ``TERMINAL_CWD``, the user-visible tool surfaces should agree on that workspace.

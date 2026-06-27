@@ -1,4 +1,12 @@
-"""
+"""工具系统测试 - shared container task id
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的shared container task id验证。
+- 验证功能：shared container task id功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：shared container task id功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
 Regression tests for the shared-container task_id mapping.
 
 The top-level agent and all delegate_task subagents share a single

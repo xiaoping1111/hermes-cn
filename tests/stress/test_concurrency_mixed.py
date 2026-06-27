@@ -1,4 +1,13 @@
-"""Harder concurrency stress: mixed operations + larger scale.
+"""混合并发
+
+【产品经理理解要点】
+读写混合并发一致性。
+- 验证功能：混合并发数据一致
+- 关键场景：读写并发、锁、隔离
+- 业务影响：并发数据不一致
+
+─────────────────────────────────────────────────────────────────────────
+Harder concurrency stress: mixed operations + larger scale.
 
 Scales to 500 tasks, 10 workers, 60s runtime. Each worker randomly:
   - claims + completes (70%)

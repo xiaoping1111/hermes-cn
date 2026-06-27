@@ -1,4 +1,13 @@
-"""Tests for BasePlatformAdapter._keep_typing timeout-per-tick behavior.
+"""网关keep typing timeout测试
+
+【产品经理理解要点】
+网关keep typing timeout功能测试。
+- 验证功能：网关keep typing timeout处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：keep typing timeout功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for BasePlatformAdapter._keep_typing timeout-per-tick behavior.
 
 When the gateway is waiting on a long upstream provider response (e.g.
 Anthropic/opus-4.7 first-token latency climbing during an upstream blip),
@@ -18,8 +27,7 @@ The fix: bound each ``send_typing`` with ``asyncio.wait_for``. If a
 send_typing takes longer than the per-tick budget (default 1.5s when
 interval=2.0), abandon it and let the next scheduled tick fire a fresh
 call. As long as any one of them succeeds within the ~5s platform window,
-the bubble stays visible across provider stalls.
-"""
+the bubble stays visible across provider stalls."""
 
 import asyncio
 from unittest.mock import MagicMock

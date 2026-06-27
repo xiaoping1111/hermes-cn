@@ -1,4 +1,11 @@
-"""CLI commands for the google_meet plugin.
+"""Google Meet CLI 命令
+
+【产品经理理解要点】
+Google Meet 插件的命令行管理接口。
+- 机器人启动/停止/状态查看
+
+─────────────────────────────────────────────────────────────────
+CLI commands for the google_meet plugin.
 
 Wires ``hermes meet <subcommand>``:
   setup       — preflight playwright, chromium, auth file, print fixes

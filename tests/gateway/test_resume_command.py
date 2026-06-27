@@ -1,8 +1,16 @@
-"""Tests for /resume gateway slash command.
+"""恢复命令
+
+【产品经理理解要点】
+会话恢复命令。
+- 验证功能：暂停会话的恢复命令
+- 关键场景：会话查找、状态恢复、继续执行
+- 业务影响：无法恢复暂停的会话
+
+─────────────────────────────────────────────────────────────────────────
+Tests for /resume gateway slash command.
 
 Tests the _handle_resume_command handler (switch to a previously-named session)
-across gateway messenger platforms.
-"""
+across gateway messenger platforms."""
 
 from types import SimpleNamespace
 from unittest.mock import AsyncMock, MagicMock

@@ -1,4 +1,13 @@
-"""Tests for the plugin auxiliary-task registration API.
+"""CLIplugin auxiliary tasks测试
+
+【产品经理理解要点】
+CLIplugin auxiliary tasks功能测试。
+- 验证功能：命令行plugin auxiliary tasks功能
+- 关键场景：配置、执行、验证
+- 业务影响：plugin auxiliary tasks命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the plugin auxiliary-task registration API.
 
 Covers:
   - PluginContext.register_auxiliary_task() validation
@@ -6,8 +15,7 @@ Covers:
   - get_plugin_auxiliary_tasks() module-level helper
   - _all_aux_tasks() merge of built-in + plugin tasks
   - _reset_aux_to_auto() includes plugin tasks
-  - _get_auxiliary_task_config() layers plugin defaults under user config
-"""
+  - _get_auxiliary_task_config() layers plugin defaults under user config"""
 
 from __future__ import annotations
 

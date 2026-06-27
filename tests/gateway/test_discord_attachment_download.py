@@ -1,4 +1,13 @@
-"""Tests for Discord attachment downloads via the authenticated bot session.
+"""Discord网关测试
+
+【产品经理理解要点】
+Discord平台网关功能测试。
+- 验证功能：Discord平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Discord平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Discord attachment downloads via the authenticated bot session.
 
 Covers the three download paths (image / audio / document) in
 ``DiscordAdapter._handle_message()`` and the shared ``_cache_discord_*``
@@ -11,8 +20,7 @@ helpers. Verifies that:
   (image/audio) or SSRF-gated aiohttp (documents) when ``att.read()``
   isn't available or fails.
 - The document fallback path now runs through the SSRF gate for
-  defense-in-depth. (issue #11345)
-"""
+  defense-in-depth. (issue #11345)"""
 
 import sys
 from types import SimpleNamespace

@@ -1,9 +1,17 @@
-"""Unit tests for _print_loopback_ssh_hint() in hermes_cli/auth.py.
+"""CLIauth loopback ssh hint测试
+
+【产品经理理解要点】
+CLIauth loopback ssh hint功能测试。
+- 验证功能：命令行auth loopback ssh hint功能
+- 关键场景：配置、执行、验证
+- 业务影响：auth loopback ssh hint命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for _print_loopback_ssh_hint() in hermes_cli/auth.py.
 
 The helper exists to warn users that loopback OAuth flows (xAI Grok OAuth,
 Spotify) don't work over SSH unless they set up an `ssh -L` port forward
-between their laptop's browser and the remote host's loopback listener.
-"""
+between their laptop's browser and the remote host's loopback listener."""
 
 from __future__ import annotations
 

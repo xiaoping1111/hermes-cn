@@ -1,4 +1,13 @@
-"""Regression tests for PR #48127: cached agent max_iterations refresh.
+"""缓存Agent最大迭代
+
+【产品经理理解要点】
+缓存Agent最大迭代数。
+- 验证功能：缓存Agent的最大迭代次数控制
+- 关键场景：迭代计数、限制触发、降级
+- 业务影响：Agent无限循环或过早停止
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for PR #48127: cached agent max_iterations refresh.
 
 When a long-lived gateway reuses an agent from its cache, the agent must run
 the *current* configured iteration budget — not the budget it was constructed
@@ -14,8 +23,7 @@ with on the first turn of that session. Two pieces make that true:
    the operative cap the agent loop checks.
 
 These tests exercise the real code paths rather than asserting a plain
-assignment, so they fail if either contract regresses.
-"""
+assignment, so they fail if either contract regresses."""
 
 import time
 from types import SimpleNamespace

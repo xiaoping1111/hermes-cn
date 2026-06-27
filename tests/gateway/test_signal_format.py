@@ -1,9 +1,17 @@
-"""Tests for Signal _markdown_to_signal() formatting.
+"""网关signal format测试
+
+【产品经理理解要点】
+网关signal format功能测试。
+- 验证功能：网关signal format处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：signal format功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Signal _markdown_to_signal() formatting.
 
 Covers the markdown-to-bodyRanges conversion pipeline: bold, italic,
 strikethrough, monospace, code blocks, headings, and — critically — the
-false-positive regressions that caused spurious italics in production.
-"""
+false-positive regressions that caused spurious italics in production."""
 
 import pytest
 

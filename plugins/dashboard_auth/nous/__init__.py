@@ -1,4 +1,13 @@
-"""NousDashboardAuthProvider — Nous Portal OAuth (authorization-code + PKCE).
+"""Nous Portal OAuth 认证提供者 — Dashboard 登录
+
+【产品经理理解要点】
+对接 Nous Portal 实现授权码 + PKCE 登录流程，用于 Dashboard 认证。
+- 遵循 Nous Agent Dashboard OAuth 契约（agent:{instance_id} 格式 client_id）
+- 配置 client_id 后自动激活，未配置则不影响无认证模式
+- 支持 config.yaml 和环境变量两种配置方式
+
+─────────────────────────────────────────────────────────────────
+NousDashboardAuthProvider — Nous Portal OAuth (authorization-code + PKCE).
 
 Implements ``nous-account-service/docs/agent-dashboard-oauth-contract.md``
 (PR #180). The plugin auto-loads (bundled, kind=backend) but only registers

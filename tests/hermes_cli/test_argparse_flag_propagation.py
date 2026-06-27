@@ -1,4 +1,13 @@
-"""Tests for parent→subparser flag propagation.
+"""CLIargparse flag propagation测试
+
+【产品经理理解要点】
+CLIargparse flag propagation功能测试。
+- 验证功能：命令行argparse flag propagation功能
+- 关键场景：配置、执行、验证
+- 业务影响：argparse flag propagation命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for parent→subparser flag propagation.
 
 When flags like --yolo, -w, -s exist on both the parent parser and the 'chat'
 subparser, placing the flag BEFORE the subcommand (e.g. 'hermes --yolo chat')
@@ -8,8 +17,7 @@ Regression test for: argparse subparser default=False overwriting parent's
 parsed True when the same argument is defined on both parsers.
 
 Fix: chat subparser uses default=argparse.SUPPRESS for all duplicated flags,
-so the subparser only sets the attribute when the user explicitly provides it.
-"""
+so the subparser only sets the attribute when the user explicitly provides it."""
 
 import argparse
 import os

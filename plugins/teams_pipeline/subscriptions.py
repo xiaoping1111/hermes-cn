@@ -1,4 +1,12 @@
-"""Microsoft Graph subscription helpers for the Teams pipeline plugin."""
+"""Teams Graph 订阅管理
+
+【产品经理理解要点】
+管理 Microsoft Graph API 的 webhook 订阅，用于会议事件通知。
+- 订阅的创建、续订和删除
+- 变更通知配置
+
+─────────────────────────────────────────────────────────────────
+Microsoft Graph subscription helpers for the Teams pipeline plugin."""
 
 from __future__ import annotations
 

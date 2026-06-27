@@ -1,5 +1,16 @@
 """Stateful scrubber for reasoning/thinking blocks in streamed assistant text.
 
+推理块流式清洗器
+
+【产品经理理解要点】
+在流式输出中实时移除推理/思考标签，防止推理内容泄露给用户。
+- 核心职责：状态机追踪标签边界、跨 delta 缓冲部分标签、流结束冲刷
+- 关键业务概念：流式推理清洗、状态机、delta 边界处理、MiniMax 兼容
+- 在系统中的位置：流式响应管线的推理内容过滤层
+
+─────────────────────────────────────────────────────────────────
+
+
 ``run_agent._strip_think_blocks`` is regex-based and correct for a complete
 string, but when it runs *per-delta* in ``_fire_stream_delta`` it destroys
 the state that downstream consumers (CLI ``_stream_delta``, gateway

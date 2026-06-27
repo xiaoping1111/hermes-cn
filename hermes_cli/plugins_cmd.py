@@ -1,3 +1,14 @@
+
+"""插件管理命令
+
+【产品经理理解要点】
+hermes plugins子命令，安装/更新/删除/列出插件。
+- 从Git仓库安装到~/.hermes/plugins/
+- 支持owner/repo简写自动解析为GitHub
+- 安装后渲染after-install.md指引
+
+────────────────────────────────────────────────────────────────"""
+
 """``hermes plugins`` CLI subcommand — install, update, remove, and list plugins.
 
 Plugins are installed from Git repositories into ``~/.hermes/plugins/``.

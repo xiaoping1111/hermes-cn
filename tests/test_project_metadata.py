@@ -1,4 +1,14 @@
-"""Regression tests for packaging metadata in pyproject.toml."""
+"""测试 - project metadata
+
+【产品经理理解要点】
+功能验证中的project metadata验证。
+- 验证功能：project metadata功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：project metadata功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for packaging metadata in pyproject.toml.
+"""
 
 from pathlib import Path
 import tomllib

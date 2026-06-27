@@ -1,4 +1,13 @@
-"""Shared helper for loading platform-plugin ``adapter.py`` modules in tests.
+"""插件适配器加载器
+
+【产品经理理解要点】
+插件适配器加载器。
+- 验证功能：网关插件适配器的加载
+- 关键场景：插件发现、加载、初始化
+- 业务影响：插件无法被加载
+
+─────────────────────────────────────────────────────────────────────────
+Shared helper for loading platform-plugin ``adapter.py`` modules in tests.
 
 Every platform plugin under ``plugins/platforms/<name>/`` ships its own
 ``adapter.py``. If two tests independently do::
@@ -21,8 +30,7 @@ other plugin's adapter module.
 
 The ``tests/gateway/conftest.py`` guard rejects the anti-pattern at
 collection time so this can't regress when new plugin adapter tests are
-added.
-"""
+added."""
 
 from __future__ import annotations
 

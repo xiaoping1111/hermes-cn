@@ -1,4 +1,12 @@
-"""Hugging Face provider profile."""
+"""HuggingFace 模型提供者
+
+【产品经理理解要点】
+对接 HuggingFace Inference API。
+- HF 托管模型推理
+- HF_API_KEY 认证
+
+─────────────────────────────────────────────────────────────────
+Hugging Face provider profile."""
 
 from providers import register_provider
 from providers.base import ProviderProfile

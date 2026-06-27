@@ -1,4 +1,13 @@
-"""Tests for Telegram bot mention detection (bug #12545).
+"""Telegram网关测试
+
+【产品经理理解要点】
+Telegram平台网关功能测试。
+- 验证功能：Telegram平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Telegram bot mention detection (bug #12545).
 
 The old implementation used a naive substring check
 (`f"@{bot_username}" in text.lower()`), which incorrectly matched partial
@@ -9,8 +18,7 @@ emits for real mentions. A bare `@username` substring in message text without
 a corresponding `MENTION` entity is NOT a mention — this correctly ignores
 @handles that appear inside URLs, code blocks, email-like strings, or quoted
 text, because Telegram's parser does not emit mention entities for any of
-those contexts.
-"""
+those contexts."""
 from types import SimpleNamespace
 
 from gateway.config import Platform, PlatformConfig

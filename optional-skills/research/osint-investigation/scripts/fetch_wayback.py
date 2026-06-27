@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Search the Internet Archive Wayback Machine via the CDX server.
+"""Wayback Machine 查询
+
+【产品经理理解要点】
+查询 Internet Archive Wayback Machine 获取历史网页。
+- 网页快照获取
+- 历史版本时间线
+
+─────────────────────────────────────────────────────────────────
+Search the Internet Archive Wayback Machine via the CDX server.
 
 The CDX API indexes ~900B+ archived web pages. Anonymous read access,
 no auth required. Useful for finding deleted / changed pages by URL,

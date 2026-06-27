@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""工具系统测试 - code execution
 
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的code execution验证。
+- 验证功能：code execution功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：code execution功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
 Tests for the code execution sandbox (programmatic tool calling).
 
 These tests monkeypatch handle_function_call so they don't require API keys

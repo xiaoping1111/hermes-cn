@@ -1,4 +1,13 @@
-"""Tests for hermes_cli.skin_engine — the data-driven skin/theme system."""
+"""CLIskin engine测试
+
+【产品经理理解要点】
+CLIskin engine功能测试。
+- 验证功能：命令行skin engine功能
+- 关键场景：配置、执行、验证
+- 业务影响：skin engine命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.skin_engine — the data-driven skin/theme system."""
 
 import pytest
 

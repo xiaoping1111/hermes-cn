@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Memento card storage, spaced-repetition engine, and CSV I/O.
+"""抽认卡管理
+
+【产品经理理解要点】
+创建和管理 Memento 抽认卡集合。
+- 卡片增删改查
+- 间隔重复调度
+
+─────────────────────────────────────────────────────────────────
+Memento card storage, spaced-repetition engine, and CSV I/O.
 
 Stdlib-only. All output is JSON for agent parsing.
 Data file: $HERMES_HOME/skills/productivity/memento-flashcards/data/cards.json

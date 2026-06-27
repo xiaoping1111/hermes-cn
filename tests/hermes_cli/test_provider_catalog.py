@@ -1,10 +1,18 @@
-"""Tests for the unified provider catalog (hermes_cli.provider_catalog).
+"""CLIprovider catalog测试
+
+【产品经理理解要点】
+CLIprovider catalog功能测试。
+- 验证功能：命令行provider catalog功能
+- 关键场景：配置、执行、验证
+- 业务影响：provider catalog命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the unified provider catalog (hermes_cli.provider_catalog).
 
 These are invariant tests, not snapshots: they assert the parity *contract*
 between what ``hermes model`` shows (``CANONICAL_PROVIDERS``) and what the
 catalog exposes, plus how each provider's ``auth_type`` maps to a desktop tab —
-never a specific provider count or a frozen vendor list (both change over time).
-"""
+never a specific provider count or a frozen vendor list (both change over time)."""
 
 from hermes_cli.models import CANONICAL_PROVIDERS
 from hermes_cli.provider_catalog import (

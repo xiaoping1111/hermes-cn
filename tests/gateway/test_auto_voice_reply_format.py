@@ -1,4 +1,13 @@
-"""Tests for gateway auto-TTS voice reply audio format selection."""
+"""自动语音回复格式
+
+【产品经理理解要点】
+自动语音回复格式。
+- 验证功能：自动语音回复的格式处理
+- 关键场景：TTS触发、格式选择、媒体路由
+- 业务影响：语音回复格式错误
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway auto-TTS voice reply audio format selection."""
 
 import json
 from pathlib import Path

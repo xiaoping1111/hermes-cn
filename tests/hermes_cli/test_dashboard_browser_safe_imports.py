@@ -1,4 +1,13 @@
-"""Static dashboard tests for browser-safe @nous-research/ui imports."""
+"""CLIdashboard browser safe imports测试
+
+【产品经理理解要点】
+CLIdashboard browser safe imports功能测试。
+- 验证功能：命令行dashboard browser safe imports功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard browser safe imports命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Static dashboard tests for browser-safe @nous-research/ui imports."""
 from pathlib import Path
 
 

@@ -1,4 +1,12 @@
-"""Google Gemini provider profiles.
+"""Google Gemini 模型提供者
+
+【产品经理理解要点】
+对接 Google Gemini 系列模型。
+- Gemini 2.x 系列模型接入
+- Google AI API Key 认证
+
+─────────────────────────────────────────────────────────────────
+Google Gemini provider profiles.
 
 gemini:            Google AI Studio (API key) — uses GeminiNativeClient
 google-gemini-cli: Google Cloud Code Assist (OAuth) — uses GeminiCloudCodeClient

@@ -1,4 +1,13 @@
-"""Tests for /goal handling in tui_gateway.
+"""目标命令
+
+【产品经理理解要点】
+Goal目标管理。
+- 验证功能：目标设置与完成判定
+- 关键场景：设置、查询、完成
+- 业务影响：目标管理功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for /goal handling in tui_gateway.
 
 The TUI routes ``/goal`` through ``command.dispatch`` (not ``slash.exec``)
 because the CLI's ``_handle_goal_command`` queues the kickoff message onto

@@ -1,4 +1,14 @@
-"""Regression tests for curator skill activity timestamps."""
+"""Agent核心测试 - curator activity
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的curator activity验证。
+- 验证功能：curator activity功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：curator activity功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for curator skill activity timestamps.
+"""
 
 import importlib
 from datetime import datetime, timedelta, timezone

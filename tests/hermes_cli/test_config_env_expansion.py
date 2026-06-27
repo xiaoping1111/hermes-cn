@@ -1,4 +1,13 @@
-"""Tests for ${ENV_VAR} substitution in config.yaml values."""
+"""CLIconfig env expansion测试
+
+【产品经理理解要点】
+CLIconfig env expansion功能测试。
+- 验证功能：命令行config env expansion功能
+- 关键场景：配置、执行、验证
+- 业务影响：config env expansion命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ${ENV_VAR} substitution in config.yaml values."""
 
 import pytest
 from hermes_cli.config import _expand_env_vars, load_config

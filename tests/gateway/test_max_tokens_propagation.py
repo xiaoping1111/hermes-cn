@@ -1,4 +1,13 @@
-"""Regression tests for max_tokens propagation from config.yaml to AIAgent.
+"""网关max tokens propagation测试
+
+【产品经理理解要点】
+网关max tokens propagation功能测试。
+- 验证功能：网关max tokens propagation处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：max tokens propagation功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for max_tokens propagation from config.yaml to AIAgent.
 
 Covers #20741: `model.max_tokens` was silently dropped before reaching the
 gateway-spawned agent, so providers without a hardcoded default (OpenRouter
@@ -7,8 +16,7 @@ generations with `finish_reason="length"`.
 
 Precedence verified here:
     HERMES_MAX_TOKENS env  >  model.max_tokens  >  per-provider
-    max_output_tokens  >  None
-"""
+    max_output_tokens  >  None"""
 
 import importlib
 import os

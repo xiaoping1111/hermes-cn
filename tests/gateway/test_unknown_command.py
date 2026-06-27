@@ -1,9 +1,17 @@
-"""Tests for gateway warning when an unrecognized /command is dispatched.
+"""未知命令
+
+【产品经理理解要点】
+未知命令处理。
+- 验证功能：无法识别命令的优雅处理
+- 关键场景：错误提示、帮助信息
+- 业务影响：用户输入未知命令后无响应
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway warning when an unrecognized /command is dispatched.
 
 Without this warning, unknown slash commands get forwarded to the LLM as plain
 text, which often leads to silent failure (e.g. the model inventing a bogus
-delegate_task call instead of telling the user the command doesn't exist).
-"""
+delegate_task call instead of telling the user the command doesn't exist)."""
 
 from datetime import datetime
 from types import SimpleNamespace

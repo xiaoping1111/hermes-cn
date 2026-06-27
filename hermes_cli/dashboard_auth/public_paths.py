@@ -1,3 +1,14 @@
+
+"""Dashboard免认证路径
+
+【产品经理理解要点】
+共享的/api/*免认证路径白名单。
+- 两个中间件（loopback和gated）共享同一份白名单
+- 之前两处维护的列表已统一到此模块
+- 新增免认证API端点只需在此添加
+
+────────────────────────────────────────────────────────────────"""
+
 """Shared allowlist of ``/api/*`` paths that bypass dashboard auth.
 
 Two middlewares enforce dashboard auth and previously kept independent

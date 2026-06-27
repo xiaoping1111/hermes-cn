@@ -1,4 +1,13 @@
-"""Tests for ``list_picker_providers`` — the /model picker filter.
+"""CLIlist picker providers测试
+
+【产品经理理解要点】
+CLIlist picker providers功能测试。
+- 验证功能：命令行list picker providers功能
+- 关键场景：配置、执行、验证
+- 业务影响：list picker providers命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ``list_picker_providers`` — the /model picker filter.
 
 ``list_picker_providers`` wraps ``list_authenticated_providers`` and
 post-processes the result for interactive pickers (Telegram, Discord):
@@ -12,8 +21,7 @@ post-processes the result for interactive pickers (Telegram, Discord):
 
 These tests exercise the filter in isolation by mocking
 ``list_authenticated_providers`` and ``fetch_openrouter_models`` so no
-network or auth state is required.
-"""
+network or auth state is required."""
 
 import pytest
 from hermes_cli import model_switch

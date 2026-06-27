@@ -1,4 +1,14 @@
-"""Tests for Gemini free-tier detection and blocking."""
+"""Agent核心测试 - gemini free tier gate
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的gemini free tier gate验证。
+- 验证功能：gemini free tier gate功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：gemini free tier gate功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Gemini free-tier detection and blocking.
+"""
 from __future__ import annotations
 
 from unittest.mock import MagicMock, patch

@@ -1,4 +1,13 @@
-"""Contract: media-send overrides must accept the ``metadata`` kwarg.
+"""网关media metadata contract测试
+
+【产品经理理解要点】
+网关media metadata contract功能测试。
+- 验证功能：网关media metadata contract处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：media metadata contract功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Contract: media-send overrides must accept the ``metadata`` kwarg.
 
 ``BasePlatformAdapter.send_multiple_images`` passes ``metadata=metadata``
 to ``send_image`` / ``send_image_file`` / ``send_animation`` on every send.
@@ -8,8 +17,7 @@ which is exactly how image delivery broke on WhatsApp and email.
 
 This mirrors ``test_discord_media_metadata.py`` but covers the two
 adapters that previously slipped, plus a best-effort sweep over every
-adapter that imports cleanly so the next slip is caught at test time.
-"""
+adapter that imports cleanly so the next slip is caught at test time."""
 
 from __future__ import annotations
 

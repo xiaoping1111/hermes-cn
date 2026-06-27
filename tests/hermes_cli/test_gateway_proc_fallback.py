@@ -1,10 +1,18 @@
-"""Tests for /proc-based gateway PID detection in Docker environments.
+"""CLIgateway proc fallback测试
+
+【产品经理理解要点】
+CLIgateway proc fallback功能测试。
+- 验证功能：命令行gateway proc fallback功能
+- 关键场景：配置、执行、验证
+- 业务影响：gateway proc fallback命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for /proc-based gateway PID detection in Docker environments.
 
 Verifies that _scan_gateway_pids() uses /proc/*/cmdline when available
 (Docker without procps) and falls back to ps only when /proc is absent.
 
-See: NousResearch/hermes-agent#7622
-"""
+See: NousResearch/hermes-agent#7622"""
 
 import os
 from unittest.mock import MagicMock, patch

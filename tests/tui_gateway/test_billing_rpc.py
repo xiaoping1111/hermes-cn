@@ -1,4 +1,13 @@
-"""Tests for the Phase 2b billing JSON-RPC methods (tui_gateway/server.py).
+"""计费RPC
+
+【产品经理理解要点】
+TUI计费服务调用。
+- 验证功能：用量展示正确性
+- 关键场景：RPC调用、用量查询
+- 业务影响：用量信息显示错误
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Phase 2b billing JSON-RPC methods (tui_gateway/server.py).
 
 Verifies the structured envelope contract the Ink side branches on:
 - billing.state serializes BillingState (Decimals → strings) + fails open.

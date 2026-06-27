@@ -1,11 +1,19 @@
-"""Tests for WhatsApp reply_prefix config.yaml support.
+"""WhatsApp网关测试
+
+【产品经理理解要点】
+WhatsApp平台网关功能测试。
+- 验证功能：WhatsApp平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：WhatsApp平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for WhatsApp reply_prefix config.yaml support.
 
 Covers:
 - config.yaml whatsapp.reply_prefix bridging into PlatformConfig.extra
 - WhatsAppAdapter reading reply_prefix from config.extra
 - Bridge subprocess receiving WHATSAPP_REPLY_PREFIX env var
-- Config version covers all ENV_VARS_BY_VERSION keys (regression guard)
-"""
+- Config version covers all ENV_VARS_BY_VERSION keys (regression guard)"""
 
 from unittest.mock import patch
 

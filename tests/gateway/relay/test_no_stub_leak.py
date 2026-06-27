@@ -1,9 +1,17 @@
-"""CI guard: the test-only StubConnector must never leak into production paths.
+"""无桩泄露
+
+【产品经理理解要点】
+无桩泄露检测。
+- 验证功能：测试桩不会泄露到生产代码
+- 关键场景：桩清理、隔离验证
+- 业务影响：测试桩污染生产环境
+
+─────────────────────────────────────────────────────────────────────────
+CI guard: the test-only StubConnector must never leak into production paths.
 
 The relay stub connector lives under tests/ and exists only to prove the
 gateway side of the relay without the real (Node) connector. If it ever appears
-under gateway/ or plugins/, that's a production leak — fail loudly.
-"""
+under gateway/ or plugins/, that's a production leak — fail loudly."""
 
 from __future__ import annotations
 

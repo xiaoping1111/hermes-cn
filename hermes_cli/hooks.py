@@ -1,3 +1,14 @@
+
+"""Shell钩子管理命令
+
+【产品经理理解要点】
+hermes hooks子命令，检查和管理Shell脚本钩子的执行和授权。
+- 钩子列表/测试/撤销/诊断
+- 用户授权白名单管理，防止恶意命令执行
+- Agent执行Shell命令的安全审计层
+
+────────────────────────────────────────────────────────────────"""
+
 """hermes hooks — inspect and manage shell-script hooks.
 
 Usage::

@@ -1,4 +1,13 @@
-"""Tests for hermes_cli.copilot_auth — Copilot token validation and resolution."""
+"""CLIcopilot auth测试
+
+【产品经理理解要点】
+CLIcopilot auth功能测试。
+- 验证功能：命令行copilot auth功能
+- 关键场景：配置、执行、验证
+- 业务影响：copilot auth命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.copilot_auth — Copilot token validation and resolution."""
 
 import pytest
 from unittest.mock import patch

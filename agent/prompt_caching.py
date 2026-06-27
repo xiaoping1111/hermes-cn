@@ -1,5 +1,16 @@
 """Anthropic prompt caching strategy.
 
+Anthropic 提示缓存策略
+
+【产品经理理解要点】
+为 Anthropic 供应商配置提示缓存断点，减少多轮对话的输入 Token 成本约75%。
+- 核心职责：在系统提示+最近3条消息设置 cache_control 断点
+- 关键业务概念：cache_control、缓存 TTL(5m/1h)、输入成本节省
+- 在系统中的位置：Anthropic 供应商请求构建时的缓存策略层
+
+─────────────────────────────────────────────────────────────────
+
+
 Single layout: ``system_and_3``. 4 cache_control breakpoints — system
 prompt + last 3 non-system messages, all at the same TTL (5m or 1h).
 Reduces input token costs by ~75% on multi-turn conversations within a

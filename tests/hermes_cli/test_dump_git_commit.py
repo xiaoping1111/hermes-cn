@@ -1,12 +1,20 @@
-"""Tests for hermes_cli.dump._get_git_commit — git SHA resolution for ``hermes dump``.
+"""CLIdump git commit测试
+
+【产品经理理解要点】
+CLIdump git commit功能测试。
+- 验证功能：命令行dump git commit功能
+- 关键场景：配置、执行、验证
+- 业务影响：dump git commit命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.dump._get_git_commit — git SHA resolution for ``hermes dump``.
 
 ``hermes dump`` prints the running commit so support bug reports identify the
 exact version.  Source installs resolve it live via ``git rev-parse``; the
 published Docker image excludes ``.git`` and falls back to the baked SHA
 written by the Dockerfile's ``HERMES_GIT_SHA`` build-arg.
 
-These tests cover both paths plus the failure modes (no git, no baked file).
-"""
+These tests cover both paths plus the failure modes (no git, no baked file)."""
 
 from unittest.mock import MagicMock, patch
 

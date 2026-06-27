@@ -1,5 +1,16 @@
 """Per-attempt recovery bookkeeping for the conversation turn loop.
 
+轮次重试状态
+
+【产品经理理解要点】
+追踪每轮对话中各恢复策略的一次性使用状态。
+- 核心职责：管理约16个一次性重试标志、确保每种恢复策略每轮最多触发一次
+- 关键业务概念：一次性重试标志、429凭证轮换、OAuth刷新、压缩重启
+- 在系统中的位置：对话循环重试逻辑的状态管理器
+
+─────────────────────────────────────────────────────────────────
+
+
 The inner retry loop in ``run_conversation`` (``while retry_count <
 max_retries``) makes several distinct recovery attempts on a single model API
 call: a credential-pool 429 retry, a per-provider OAuth refresh (codex,

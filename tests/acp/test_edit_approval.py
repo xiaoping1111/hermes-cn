@@ -1,4 +1,14 @@
-"""Tests for ACP pre-edit approval gating."""
+"""ACP编辑审批
+
+【产品经理理解要点】
+ACP文件编辑审批。
+- 验证功能：编辑安全门控
+- 关键场景：审批、门控、拒绝
+- 业务影响：未审批编辑被执行
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ACP pre-edit approval gating.
+"""
 
 from __future__ import annotations
 

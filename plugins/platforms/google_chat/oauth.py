@@ -1,4 +1,13 @@
-"""User OAuth helper for the Google Chat gateway adapter.
+"""Google Chat 用户 OAuth 授权助手
+
+【产品经理理解要点】
+处理 Google Chat 文件上传所需的用户级 OAuth 认证，服务账号无法上传文件。
+- 首次使用时用户需在 DM 中授权 bot 的 chat.messages.create 权限
+- 后续自动使用 refresh token 代理用户调用 media.upload 上传附件
+- 同时提供 CLI 命令（--check、--revoke 等）管理授权状态
+
+─────────────────────────────────────────────────────────────────
+User OAuth helper for the Google Chat gateway adapter.
 
 Google Chat's ``media.upload`` REST endpoint hard-rejects service-account
 authentication:

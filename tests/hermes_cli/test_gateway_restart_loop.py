@@ -1,10 +1,18 @@
-"""Tests for gateway restart-loop defenses (#30719).
+"""CLIgateway restart loop测试
+
+【产品经理理解要点】
+CLIgateway restart loop功能测试。
+- 验证功能：命令行gateway restart loop功能
+- 关键场景：配置、执行、验证
+- 业务影响：gateway restart loop命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway restart-loop defenses (#30719).
 
 Covers:
 - Defense 1: gateway stop/restart refuse when _HERMES_GATEWAY=1
 - Defense 2: cron create rejects prompts containing gateway lifecycle commands
-- _contains_gateway_lifecycle_command pattern matching
-"""
+- _contains_gateway_lifecycle_command pattern matching"""
 
 import json
 import os

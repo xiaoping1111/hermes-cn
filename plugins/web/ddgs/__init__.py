@@ -1,4 +1,11 @@
-"""DuckDuckGo search plugin — bundled, auto-loaded.
+"""DuckDuckGo 搜索插件
+
+【产品经理理解要点】
+DuckDuckGo 搜索后端入口。
+- 隐私友好的搜索引擎集成
+
+─────────────────────────────────────────────────────────────────
+DuckDuckGo search plugin — bundled, auto-loaded.
 
 Backed by the community ``ddgs`` Python package which scrapes DDG's HTML
 results page. No API key required, but the package itself must be installed

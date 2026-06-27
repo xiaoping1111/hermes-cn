@@ -1,3 +1,14 @@
+
+"""看板Swarm拓扑
+
+【产品经理理解要点】
+在看板上实现轻量Swarm拓扑：规划根→并行worker→验证器→综合器。
+- 不引入新调度器，复用Kanban内核的任务图
+- worker并行执行，完成后触发验证
+- 验证通过后综合器汇总结果
+
+────────────────────────────────────────────────────────────────"""
+
 """Kanban Swarm v1: thin swarm topology helpers on top of Kanban.
 
 This module intentionally does not introduce a second scheduler. It writes a

@@ -1,5 +1,16 @@
 """Models.dev registry integration — primary database for providers and models.
 
+模型注册表数据源
+
+【产品经理理解要点】
+模型百科全书：从 models.dev 获取 4000+ 模型的元数据，支持模型选择和成本计算。
+- 核心职责：获取供应商/模型元数据(上下文窗口、价格、能力标签)、离线优先缓存
+- 关键业务概念：模型能力(推理/工具/视觉/PDF/音频)、成本($/M tokens)、上下文窗口
+- 在系统中的位置：供应商选择和成本估算的数据源，支持离线/在线/缓存三级回退
+
+─────────────────────────────────────────────────────────────────
+
+
 Fetches from https://models.dev/api.json — a community-maintained database
 of 4000+ models across 109+ providers.  Provides:
 

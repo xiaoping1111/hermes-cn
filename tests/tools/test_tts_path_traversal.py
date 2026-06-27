@@ -1,4 +1,13 @@
-"""Regression: text_to_speech_tool output_path must reject '..' traversal.
+"""工具系统测试 - tts path traversal
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的tts path traversal验证。
+- 验证功能：tts path traversal功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：tts path traversal功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression: text_to_speech_tool output_path must reject '..' traversal.
 
 The TTS surface accepts agent/user-supplied absolute paths (writing to a
 chosen file is the whole point). What it must reject is paths that use

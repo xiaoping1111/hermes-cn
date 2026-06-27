@@ -1,4 +1,13 @@
-"""Hermes CLI skin/theme engine.
+"""皮肤主题引擎
+
+【产品经理理解要点】
+数据驱动的CLI皮肤系统，用户可自定义视觉外观。
+- YAML格式定义皮肤，无需改代码
+- ~/.hermes/skins/目录存放自定义皮肤
+- 内置预设 + 用户自定义双层体系
+
+────────────────────────────────────────────────────────────────
+Hermes CLI skin/theme engine.
 
 A data-driven skin system that lets users customize the CLI's visual appearance.
 Skins are defined as YAML files in ~/.hermes/skins/ or as built-in presets.
@@ -109,8 +118,7 @@ USER SKINS
 ==========
 
 Drop a YAML file in ``~/.hermes/skins/<name>.yaml`` following the schema above.
-Activate with ``/skin <name>`` in the CLI or ``display.skin: <name>`` in config.yaml.
-"""
+Activate with ``/skin <name>`` in the CLI or ``display.skin: <name>`` in config.yaml."""
 
 import logging
 from dataclasses import dataclass, field

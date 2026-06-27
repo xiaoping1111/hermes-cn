@@ -1,4 +1,13 @@
-"""Tests for Discord channel_skill_bindings auto-skill resolution."""
+"""Discord频道技能
+
+【产品经理理解要点】
+Discord频道技能。
+- 验证功能：Discord频道级别的技能配置
+- 关键场景：技能绑定、激活、去激活
+- 业务影响：频道技能配置不生效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Discord channel_skill_bindings auto-skill resolution."""
 from unittest.mock import MagicMock
 
 

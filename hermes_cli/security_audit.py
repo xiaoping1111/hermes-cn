@@ -1,3 +1,14 @@
+
+"""供应链审计
+
+【产品经理理解要点】
+按需审计Hermes安装的供应链安全性。
+- 扫描Hermes venv的所有PyPI包
+- 审计用户插件的依赖声明
+- 检查MCP服务器的npx/uvx引用安全性
+
+────────────────────────────────────────────────────────────────"""
+
 """On-demand supply-chain audit for Hermes Agent installs.
 
 Scans three surfaces a Hermes user actually controls and we can map to

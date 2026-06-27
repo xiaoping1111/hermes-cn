@@ -1,4 +1,13 @@
-"""Tests for the update_session_meta fix.
+"""ACP会话DB私有访问
+
+【产品经理理解要点】
+ACP数据库访问隔离。
+- 验证功能：私有访问安全
+- 关键场景：隔离、访问控制
+- 业务影响：数据库访问隔离失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the update_session_meta fix.
 
 Verifies that:
 1. SessionDB.update_session_meta() exists and works correctly via the

@@ -1,11 +1,19 @@
-"""Structured stream-event protocol + dispatcher behavior.
+"""流事件
+
+【产品经理理解要点】
+流式事件处理。
+- 验证功能：SSE/WebSocket流式事件分发
+- 关键场景：事件序列、背压控制、断流恢复
+- 业务影响：流式响应中断或乱序
+
+─────────────────────────────────────────────────────────────────────────
+Structured stream-event protocol + dispatcher behavior.
 
 Covers the agent→gateway delivery contract introduced to decouple *what
 happened* (typed events) from *how it's delivered* (adapter decides).  The
 default BasePlatformAdapter rendering must reproduce today's behavior exactly;
 an adapter may override format_tool_event to eat tool chrome on platforms that
-can't render it.
-"""
+can't render it."""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""SelfHostedOIDCProvider — generic self-hosted OpenID Connect dashboard auth.
+"""自托管 OIDC 认证提供者 — 通用 OpenID Connect Dashboard 登录
+
+【产品经理理解要点】
+对接任意标准 OIDC 身份提供商（Keycloak、Authentik、Zitadel 等）实现 Dashboard 认证。
+- 纯标准 OIDC 协议，支持 PKCE、RS256/ES256 ID 令牌验证
+- 与 Nous 提供者并列，共享 Dashboard 会话管理框架
+- 配置 issuer + client_id 即可对接，无需定制化开发
+
+─────────────────────────────────────────────────────────────────
+SelfHostedOIDCProvider — generic self-hosted OpenID Connect dashboard auth.
 
 A standards-compliant OpenID Connect Relying Party for the ``hermes dashboard``
 OAuth gate. Unlike the bundled ``nous`` provider (which encodes Nous Portal's

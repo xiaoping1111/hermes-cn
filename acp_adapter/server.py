@@ -1,4 +1,13 @@
-"""ACP agent server — exposes Hermes Agent via the Agent Client Protocol."""
+"""ACP 代理服务器
+
+【产品经理理解要点】
+Hermes Agent 对外暴露的核心 ACP 服务器，处理所有来自编辑器的 JSON-RPC 请求。
+- 核心职责：实现 ACP 协议的全部 RPC 方法（创建/加载/恢复会话、发送消息、切换模型等）
+- 关键概念：支持多会话并行、会话 fork、MCP 工具发现、图片/音频多模态内容、流式输出
+- 系统定位：协议实现层，是 ACP 适配器中代码量最大、最核心的模块
+
+─────────────────────────────────────────────────────────────────────────
+ACP agent server — exposes Hermes Agent via the Agent Client Protocol."""
 
 from __future__ import annotations
 

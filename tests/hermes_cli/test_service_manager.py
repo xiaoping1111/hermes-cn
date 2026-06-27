@@ -1,10 +1,18 @@
-"""Tests for hermes_cli.service_manager — the abstract ServiceManager
+"""CLIservice manager测试
+
+【产品经理理解要点】
+CLIservice manager功能测试。
+- 验证功能：命令行service manager功能
+- 关键场景：配置、执行、验证
+- 业务影响：service manager命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.service_manager — the abstract ServiceManager
 protocol, the detect_service_manager() entry point, and the host-side
 adapter wrappers (Systemd / Launchd / Windows).
 
 The s6 backend is added in Phase 3; its tests live alongside the
-implementation in this same file once that phase ships.
-"""
+implementation in this same file once that phase ships."""
 from __future__ import annotations
 
 import pytest

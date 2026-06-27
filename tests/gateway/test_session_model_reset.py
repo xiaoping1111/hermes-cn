@@ -1,4 +1,13 @@
-"""Tests that /new (and its /reset alias) clears session-scoped overrides."""
+"""会话模型重置
+
+【产品经理理解要点】
+会话模型重置。
+- 验证功能：会话关联模型的切换与重置
+- 关键场景：模型切换、状态清理、配置更新
+- 业务影响：模型切换后会话状态异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests that /new (and its /reset alias) clears session-scoped overrides."""
 from datetime import datetime
 from types import SimpleNamespace
 from unittest.mock import AsyncMock, MagicMock

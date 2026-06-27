@@ -1,4 +1,13 @@
-"""Tests for get_hermes_home() profile-mode fallback warning.
+"""测试 - hermes home profile warning
+
+【产品经理理解要点】
+功能验证中的hermes home profile warning验证。
+- 验证功能：hermes home profile warning功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：hermes home profile warning功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for get_hermes_home() profile-mode fallback warning.
 
 Regression test for https://github.com/NousResearch/hermes-agent/issues/18594.
 

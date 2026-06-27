@@ -1,3 +1,11 @@
+"""CLImodel cost guard测试
+
+【产品经理理解要点】
+CLImodel cost guard功能测试。
+- 验证功能：命令行model cost guard功能
+- 关键场景：配置、执行、验证
+- 业务影响：model cost guard命令行功能失效"""
+
 from decimal import Decimal
 
 from agent.models_dev import ModelInfo

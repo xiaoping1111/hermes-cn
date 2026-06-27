@@ -1,4 +1,13 @@
-"""Tests for /compress <focus> — guided compression with focus topic.
+"""CLI终端测试 - compress focus
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的compress focus验证。
+- 验证功能：compress focus功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：compress focus功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for /compress <focus> — guided compression with focus topic.
 
 Inspired by Claude Code's /compact <focus> feature.
 """

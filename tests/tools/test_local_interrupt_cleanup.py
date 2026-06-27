@@ -1,4 +1,13 @@
-"""Regression tests for _wait_for_process subprocess cleanup on exception exit.
+"""工具系统测试 - local interrupt cleanup
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的local interrupt cleanup验证。
+- 验证功能：local interrupt cleanup功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：local interrupt cleanup功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for _wait_for_process subprocess cleanup on exception exit.
 
 When the poll loop exits via KeyboardInterrupt or SystemExit (SIGTERM via
 cli.py signal handler, SIGINT on the main thread in non-interactive -q mode,

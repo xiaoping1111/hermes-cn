@@ -1,4 +1,13 @@
-"""Phase 3: secondary-profile adapter registry + same-token conflict detection."""
+"""网关multiplex adapter registry测试
+
+【产品经理理解要点】
+网关multiplex adapter registry功能测试。
+- 验证功能：网关multiplex adapter registry处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：multiplex adapter registry功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Phase 3: secondary-profile adapter registry + same-token conflict detection."""
 import pytest
 
 from gateway.run import GatewayRunner

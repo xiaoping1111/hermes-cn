@@ -1,4 +1,13 @@
-"""Tests for systemd optional-directive normalization (issue #41119).
+"""CLIsystemd optional directives测试
+
+【产品经理理解要点】
+CLIsystemd optional directives功能测试。
+- 验证功能：命令行systemd optional directives功能
+- 关键场景：配置、执行、验证
+- 业务影响：systemd optional directives命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for systemd optional-directive normalization (issue #41119).
 
 On older systemd versions that don't support RestartMaxDelaySec /
 RestartSteps, the installed unit file has those directives silently
@@ -7,8 +16,7 @@ perpetually report the unit as outdated because the strict text
 comparison sees a difference.
 
 The fix: _strip_optional_systemd_directives() removes those directives
-from both the installed and expected text before comparison.
-"""
+from both the installed and expected text before comparison."""
 
 from __future__ import annotations
 

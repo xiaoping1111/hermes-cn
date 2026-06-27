@@ -1,4 +1,13 @@
-"""Verify `hermes -c` picks the session the user most recently used."""
+"""CLIresolve last session测试
+
+【产品经理理解要点】
+CLIresolve last session功能测试。
+- 验证功能：命令行resolve last session功能
+- 关键场景：配置、执行、验证
+- 业务影响：resolve last session命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Verify `hermes -c` picks the session the user most recently used."""
 
 from __future__ import annotations
 

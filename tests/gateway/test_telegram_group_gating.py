@@ -1,3 +1,11 @@
+"""Telegram群组门控
+
+【产品经理理解要点】
+Telegram群组访问控制。
+- 验证功能：Telegram群组消息的访问控制
+- 关键场景：群组白名单、消息过滤
+- 业务影响：未授权群组消息泄露"""
+
 import asyncio
 import json
 from types import SimpleNamespace

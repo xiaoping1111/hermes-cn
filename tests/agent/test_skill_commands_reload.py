@@ -1,4 +1,13 @@
-"""Tests for ``agent.skill_commands.reload_skills``.
+"""Agent核心测试 - skill commands reload
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的skill commands reload验证。
+- 验证功能：skill commands reload功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：skill commands reload功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ``agent.skill_commands.reload_skills``.
 
 Covers the helper that powers ``/reload-skills`` (CLI + gateway slash command).
 The helper rescans the skills directory and returns a diff of what changed.

@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Read the in-app terminal pane in the Hermes desktop GUI.
+"""终端面板读取工具
+
+【产品经理理解要点】
+让智能体读取Hermes桌面GUI中内嵌终端的输出内容。
+- 核心职责：通过网关的阻塞提示桥接机制，从桌面渲染器中获取终端缓冲区内容
+- 在系统中的位置：位于智能体和桌面GUI终端渲染器之间
+
+─────────────────────────────────────────────────────────────────
+Read the in-app terminal pane in the Hermes desktop GUI.
 
 The embedded terminal's buffer lives in the desktop renderer (xterm.js), so this
 tool round-trips through the gateway's blocking-prompt bridge — the same one

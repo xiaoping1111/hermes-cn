@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""取证证据存储
+
+【产品经理理解要点】
+OSS 取证分析的证据存储和管理工具。
+- 证据索引和检索
+- 链式保管日志
+
+─────────────────────────────────────────────────────────────────
+
 OSS Forensics Evidence Store Manager
 Manages a JSON-based evidence store for forensic investigations.
 

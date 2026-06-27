@@ -1,4 +1,13 @@
-"""Tests for ``hermes gui`` desktop launcher wiring."""
+"""CLIgui command测试
+
+【产品经理理解要点】
+CLIgui command功能测试。
+- 验证功能：命令行gui command功能
+- 关键场景：配置、执行、验证
+- 业务影响：gui command命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ``hermes gui`` desktop launcher wiring."""
 
 from __future__ import annotations
 

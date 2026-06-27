@@ -1,4 +1,13 @@
-"""Tests for agent.auxiliary_client._try_custom_endpoint's anthropic_messages branch.
+"""Agent核心测试 - auxiliary client anthropic custom
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的auxiliary client anthropic custom验证。
+- 验证功能：auxiliary client anthropic custom功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：auxiliary client anthropic custom功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for agent.auxiliary_client._try_custom_endpoint's anthropic_messages branch.
 
 When a user configures a custom endpoint with ``api_mode: anthropic_messages``
 (e.g. MiniMax, Zhipu GLM, LiteLLM in Anthropic-proxy mode), auxiliary tasks

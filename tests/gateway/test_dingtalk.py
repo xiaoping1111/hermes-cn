@@ -1,4 +1,13 @@
-"""Tests for DingTalk platform adapter."""
+"""钉钉网关测试
+
+【产品经理理解要点】
+钉钉平台网关功能测试。
+- 验证功能：钉钉平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：钉钉平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for DingTalk platform adapter."""
 import asyncio
 from datetime import datetime, timezone
 from types import SimpleNamespace

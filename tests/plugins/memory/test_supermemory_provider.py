@@ -1,4 +1,12 @@
 import json
+"""插件系统测试 - supermemory provider
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的supermemory provider验证。
+- 验证功能：supermemory provider功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：supermemory provider功能异常或存在安全隐患"""
+
 import os
 import stat
 import threading

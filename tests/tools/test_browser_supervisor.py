@@ -1,4 +1,13 @@
-"""Integration tests for tools.browser_supervisor.
+"""工具系统测试 - browser supervisor
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的browser supervisor验证。
+- 验证功能：browser supervisor功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：browser supervisor功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Integration tests for tools.browser_supervisor.
 
 Exercises the supervisor end-to-end against a real local Chrome
 (``--remote-debugging-port``).  Skipped when Chrome is not installed

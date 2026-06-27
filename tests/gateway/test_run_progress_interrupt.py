@@ -1,12 +1,20 @@
-"""Tests for interrupt-aware tool-progress suppression in gateway.
+"""网关run progress interrupt测试
+
+【产品经理理解要点】
+网关run progress interrupt功能测试。
+- 验证功能：网关run progress interrupt处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：run progress interrupt功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for interrupt-aware tool-progress suppression in gateway.
 
 When a user sends `stop` while the agent is executing a batch of parallel
 tool calls, the gateway's progress_callback should stop queuing 🔍 bubbles
 and the drain loop should drop any already-queued events.  Without this
 guard, the stop acknowledgement appears first but is followed by a trail
 of tool-progress bubbles for calls that were already parsed from the LLM
-response — making the interrupt feel ignored.
-"""
+response — making the interrupt feel ignored."""
 
 import importlib
 import sys

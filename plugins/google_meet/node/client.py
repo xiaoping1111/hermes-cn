@@ -1,4 +1,12 @@
-"""Gateway-side RPC client for a remote meet node.
+"""Google Meet Node 客户端
+
+【产品经理理解要点】
+与 Node 侧车通信的 Python 客户端。
+- HTTP/WebSocket 通信
+- JSON-RPC 调用
+
+─────────────────────────────────────────────────────────────────
+Gateway-side RPC client for a remote meet node.
 
 Each call opens a short-lived synchronous WebSocket to the node, sends
 exactly one request, reads exactly one response, and closes. This keeps

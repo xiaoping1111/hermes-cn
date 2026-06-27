@@ -1,4 +1,14 @@
-"""Tests for agent/runtime_cwd.py — the single source of truth for the agent working directory."""
+"""Agent核心测试 - runtime cwd
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的runtime cwd验证。
+- 验证功能：runtime cwd功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：runtime cwd功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for agent/runtime_cwd.py — the single source of truth for the agent working directory.
+"""
 
 import os
 from pathlib import Path

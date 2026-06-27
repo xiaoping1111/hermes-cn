@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Generate per-skill Docusaurus pages from skills/ and optional-skills/ SKILL.md files.
+"""技能文档页面生成
+
+【产品经理理解要点】
+从 SKILL.md 文件自动生成每个技能的 Docusaurus 文档页面和目录索引，保持文档与代码同步。
+- 核心职责：为每个技能生成独立文档页，同时更新技能目录表和侧边栏配置
+- 关键概念：内置技能和可选技能分别放在 bundled/ 和 optional/ 子目录下
+- 系统定位：文档构建脚本，确保技能文档始终与技能实现保持同步
+
+─────────────────────────────────────────────────────────────────
+Generate per-skill Docusaurus pages from skills/ and optional-skills/ SKILL.md files.
 
 Each skill gets website/docs/user-guide/skills/<source>/<category>/<skill-name>.md
 where <source> is "bundled" or "optional".

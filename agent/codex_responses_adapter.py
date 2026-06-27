@@ -1,5 +1,16 @@
 """Codex Responses API adapter.
 
+Codex Responses API 适配器
+
+【产品经理理解要点】
+OpenAI Responses API 的格式转换和标准化逻辑，用于 Codex/xAI/GitHub Models。
+- 核心职责：OpenAI格式-Responses格式转换、响应标准化、无状态纯函数
+- 关键业务概念：Responses API、流式适配、格式归一化
+- 在系统中的位置：Codex/xAI 供应商的 Responses API 适配层
+
+─────────────────────────────────────────────────────────────────
+
+
 Pure format-conversion and normalization logic for the OpenAI Responses API
 (used by OpenAI Codex, xAI, GitHub Models, and other Responses-compatible endpoints).
 

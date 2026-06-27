@@ -1,11 +1,19 @@
-"""Tests for GHSA-ppp5-vxwm-4cf7 — Host-header validation.
+"""CLIweb server host header测试
+
+【产品经理理解要点】
+CLIweb server host header功能测试。
+- 验证功能：命令行web server host header功能
+- 关键场景：配置、执行、验证
+- 业务影响：web server host header命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for GHSA-ppp5-vxwm-4cf7 — Host-header validation.
 
 DNS rebinding defence: a victim browser that has the dashboard open
 could be tricked into fetching from an attacker-controlled hostname
 that TTL-flips to 127.0.0.1. Same-origin / CORS checks won't help —
 the browser now treats the attacker origin as same-origin. Validating
-the Host header at the application layer rejects the attack.
-"""
+the Host header at the application layer rejects the attack."""
 
 from __future__ import annotations
 

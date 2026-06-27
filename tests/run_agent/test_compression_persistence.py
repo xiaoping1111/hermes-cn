@@ -1,4 +1,13 @@
-"""Tests for context compression persistence in the gateway.
+"""Agent运行引擎测试 - compression persistence
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的compression persistence验证。
+- 验证功能：compression persistence功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：compression persistence功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for context compression persistence in the gateway.
 
 Verifies that when context compression fires during run_conversation(),
 the compressed messages are properly persisted to both SQLite (via the

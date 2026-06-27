@@ -1,4 +1,14 @@
-"""URL safety checks — blocks requests to private/internal network addresses.
+"""URL安全检查
+
+【产品经理理解要点】
+阻止智能体访问内网/私有网络地址，防止SSRF（服务端请求伪造）攻击。
+- 核心职责：在请求发起前检查URL的目标IP是否属于私有/保留地址段（如169.254.169.254云元数据端点、localhost、内网IP）
+- 安全价值：防止恶意提示词或技能通过智能体发起内网探测（如窃取云服务凭证）
+- 云元数据端点始终拦截：即使全局关闭私网URL检查，云元数据地址也永不放行
+- 在系统中的位置：位于web_tools、vision_tools、平台适配器等所有对外请求模块和网络层之间
+
+─────────────────────────────────────────────────────────────────
+URL safety checks — blocks requests to private/internal network addresses.
 
 Prevents SSRF (Server-Side Request Forgery) where a malicious prompt or
 skill could trick the agent into fetching internal resources like cloud

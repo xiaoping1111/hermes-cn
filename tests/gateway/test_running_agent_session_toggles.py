@@ -1,4 +1,13 @@
-"""Regression tests: /yolo and /verbose dispatch mid-agent-run.
+"""网关running agent session toggles测试
+
+【产品经理理解要点】
+网关running agent session toggles功能测试。
+- 验证功能：网关running agent session toggles处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：running agent session toggles功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests: /yolo and /verbose dispatch mid-agent-run.
 
 When an agent is running, the gateway's running-agent guard rejects most
 slash commands with "⏳ Agent is running — /{cmd} can't run mid-turn"
@@ -16,8 +25,7 @@ catch-all by design:
   * /reasoning — writes config.yaml only
 
 These tests lock in both behaviors so the allowlist doesn't silently
-grow or shrink.
-"""
+grow or shrink."""
 
 from datetime import datetime
 from types import SimpleNamespace

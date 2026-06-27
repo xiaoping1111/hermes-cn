@@ -1,6 +1,15 @@
 from __future__ import annotations
 
 """
+Discord 语音混音器
+
+【产品经理理解要点】
+在 Discord 语音频道中实现多路音频混合，让背景音和语音自然叠加而非停播切换。
+- 核心场景：持续播放"思考中"氛围音，同时 TTS 语音叠加播放，自动压低背景音量
+- 混音原理：每 20ms 将多路 PCM 帧叠加、限幅后输出为单路，discord.py 无需感知
+- 支持淡入淡出、语音结束后背景音渐恢复，实现类似 Grok 语音模式的平滑体验
+
+─────────────────────────────────────────────────────────────────
 Continuous PCM audio mixer for Discord voice channels.
 
 discord.py (Rapptz) ships no audio mixer: ``VoiceClient.play()`` accepts a

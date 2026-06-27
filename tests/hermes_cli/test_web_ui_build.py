@@ -1,10 +1,18 @@
-"""Tests for _web_ui_build_needed — staleness check for the web UI dist.
+"""CLIweb ui build测试
+
+【产品经理理解要点】
+CLIweb ui build功能测试。
+- 验证功能：命令行web ui build功能
+- 关键场景：配置、执行、验证
+- 业务影响：web ui build命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for _web_ui_build_needed — staleness check for the web UI dist.
 
 Critical invariant: the dashboard Vite build outputs to hermes_cli/web_dist/
 (vite.config.ts: outDir: "../../hermes_cli/web_dist"), NOT web/dist/.
 The sentinel must be checked in the correct output directory or the
-freshness check is a no-op and the OOM rebuild always runs.
-"""
+freshness check is a no-op and the OOM rebuild always runs."""
 
 import os
 import time

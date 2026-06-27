@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Build the Hermes Skills Index — a centralized JSON catalog of all skills.
+"""构建技能索引
+
+【产品经理理解要点】
+爬取所有技能来源（skills.sh、GitHub taps、ClawHub、LobeHub 等），生成统一的 JSON 技能索引供 CLI 搜索/安装。
+- 核心职责：从多个技能源聚合技能元数据，输出 skills-index.json 部署到文档站点
+- 关键概念：技能来源包括官方内置、社区贡献、第三方市场；索引每天构建两次保持新鲜
+- 系统定位：数据发布脚本，支持 `hermes skills search/install` 无需直接调 GitHub API
+
+─────────────────────────────────────────────────────────────────
+Build the Hermes Skills Index — a centralized JSON catalog of all skills.
 
 This script crawls every skill source (skills.sh, GitHub taps, official,
 clawhub, lobehub, claude-marketplace) and writes a JSON index with resolved

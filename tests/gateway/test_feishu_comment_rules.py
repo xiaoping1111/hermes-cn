@@ -1,4 +1,13 @@
-"""Tests for feishu_comment_rules — 3-tier access control rule engine."""
+"""飞书评论
+
+【产品经理理解要点】
+飞书评论处理。
+- 验证功能：飞书文档评论事件处理
+- 关键场景：评论接收、解析、回复
+- 业务影响：飞书评论功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for feishu_comment_rules — 3-tier access control rule engine."""
 
 import json
 import os

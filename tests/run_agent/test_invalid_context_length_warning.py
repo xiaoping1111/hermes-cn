@@ -1,4 +1,14 @@
-"""Tests that invalid context_length values in config produce visible warnings."""
+"""Agent运行引擎测试 - invalid context length warning
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的invalid context length warning验证。
+- 验证功能：invalid context length warning功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：invalid context length warning功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests that invalid context_length values in config produce visible warnings.
+"""
 
 from unittest.mock import patch
 

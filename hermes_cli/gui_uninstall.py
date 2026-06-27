@@ -1,4 +1,12 @@
-"""
+"""桌面GUI卸载器
+
+【产品经理理解要点】
+卸载Hermes桌面应用（Electron GUI），不影响Python Agent和用户数据。
+- 识别源码构建和AppImage两种GUI安装形态
+- 只删除GUI相关文件，保留~/.hermes/配置和数据
+- 支持macOS/Linux/Windows三平台清理
+
+────────────────────────────────────────────────────────────────
 Hermes Desktop (Chat GUI) uninstaller.
 
 The desktop GUI ships in two shapes and this module knows how to find and
@@ -32,8 +40,7 @@ Chromium cache — pure GUI state, safe to remove on a GUI uninstall.
 
 The functions here are deliberately import-light and side-effect-free at
 import time so the Electron main process can shell out to
-``hermes uninstall --gui`` (and friends) without paying for the full CLI.
-"""
+``hermes uninstall --gui`` (and friends) without paying for the full CLI."""
 
 import os
 import shutil

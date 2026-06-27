@@ -1,8 +1,16 @@
-"""Unit tests for hermes_cli.security_audit — parsers + OSV plumbing.
+"""CLIsecurity audit测试
+
+【产品经理理解要点】
+CLIsecurity audit功能测试。
+- 验证功能：命令行security audit功能
+- 关键场景：配置、执行、验证
+- 业务影响：security audit命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for hermes_cli.security_audit — parsers + OSV plumbing.
 
 These never hit the live OSV API; HTTP is monkeypatched. The live-call path
-is exercised in the E2E test embedded in PR validation, not here.
-"""
+is exercised in the E2E test embedded in PR validation, not here."""
 
 from __future__ import annotations
 

@@ -1,4 +1,12 @@
-"""Remove unreferenced files from an unpacked PPTX directory.
+"""PPT 清理工具
+
+【产品经理理解要点】
+清理 PowerPoint 文件中的冗余内容和格式。
+- 元数据清理
+- 文件压缩优化
+
+─────────────────────────────────────────────────────────────────
+Remove unreferenced files from an unpacked PPTX directory.
 
 Usage: python clean.py <unpacked_dir>
 

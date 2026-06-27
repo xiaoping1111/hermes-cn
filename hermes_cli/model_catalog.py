@@ -1,3 +1,14 @@
+
+"""远程模型目录
+
+【产品经理理解要点】
+从Hermes官网获取最新模型清单，带本地缓存和离线回退。
+- TTL缓存避免频繁请求
+- 磁盘缓存~/.hermes/cache/model_catalog.json
+- 网络不可用时回退到内嵌的硬编码列表
+
+────────────────────────────────────────────────────────────────"""
+
 """Remote model catalog fetcher.
 
 The Hermes docs site hosts a JSON manifest of curated models for providers

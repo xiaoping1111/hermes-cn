@@ -1,4 +1,11 @@
-"""CLI commands for Honcho integration management.
+"""Honcho CLI 命令
+
+【产品经理理解要点】
+提供 Honcho 记忆系统的命令行管理操作。
+- 会话列表、状态查看等管理命令
+
+─────────────────────────────────────────────────────────────────
+CLI commands for Honcho integration management.
 
 Handles: hermes honcho setup | status | sessions | map | peer
 """

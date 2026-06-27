@@ -1,10 +1,18 @@
-"""Each standalone config loader (gateway, TUI/desktop, cron) must honor managed scope.
+"""CLImanaged scope loaders测试
+
+【产品经理理解要点】
+CLImanaged scope loaders功能测试。
+- 验证功能：命令行managed scope loaders功能
+- 关键场景：配置、执行、验证
+- 业务影响：managed scope loaders命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Each standalone config loader (gateway, TUI/desktop, cron) must honor managed scope.
 
 These loaders build their own config dict instead of routing through
 hermes_cli.config.load_config, so the managed overlay has to be wired into each.
 This is the regression guard for the whole bug class (a managed display.skin was
-silently ignored by the TUI; the same gap existed in the gateway and cron).
-"""
+silently ignored by the TUI; the same gap existed in the gateway and cron)."""
 import textwrap
 
 import pytest

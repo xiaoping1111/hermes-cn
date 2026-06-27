@@ -1,4 +1,13 @@
-"""Regression tests for issue #8340.
+"""工具系统测试 - local background child hang
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的local background child hang验证。
+- 验证功能：local background child hang功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：local background child hang功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for issue #8340.
 
 When a user command backgrounds a child process (``cmd &``, ``setsid cmd &
 disown``, etc.), the backgrounded grandchild inherits the write-end of our

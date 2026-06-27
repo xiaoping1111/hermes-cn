@@ -1,4 +1,13 @@
-"""Tests for ``_is_anthropic_oauth`` guard against third-party Anthropic-compatible providers.
+"""Agent运行引擎测试 - anthropic third party oauth guard
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的anthropic third party oauth guard验证。
+- 验证功能：anthropic third party oauth guard功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：anthropic third party oauth guard功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ``_is_anthropic_oauth`` guard against third-party Anthropic-compatible providers.
 
 The invariant: ``self._is_anthropic_oauth`` must only ever be True when
 ``self.provider == 'anthropic'`` (native Anthropic).  Third-party providers

@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""ComfyUI 依赖自动修复
+
+【产品经理理解要点】
+自动检测并安装 ComfyUI 缺失的依赖。
+- 依赖自动安装
+- 版本兼容性处理
+
+─────────────────────────────────────────────────────────────────
+
 auto_fix_deps.py — Run check_deps.py, then attempt to install whatever is missing.
 
 For local servers:

@@ -1,4 +1,13 @@
-"""Regression tests for PR #6656 — skill uninstall + bundle hash + pairing lock.
+"""工具系统测试 - pr 6656 regressions
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的pr 6656 regressions验证。
+- 验证功能：pr 6656 regressions功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：pr 6656 regressions功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for PR #6656 — skill uninstall + bundle hash + pairing lock.
 
 Three independent fixes that were salvaged together:
 
@@ -10,7 +19,7 @@ Three independent fixes that were salvaged together:
 2. ``bundle_content_hash`` / ``content_hash`` filename inclusion: the
    previous hash mixed only file CONTENTS, so swapping ``SKILL.md`` and
    ``scripts/run.sh`` contents between two paths produced the same digest.
-   Now both functions prefix each entry with ``rel_path + \\x00`` and
+   Now both functions prefix each entry with ``rel_path + \x00`` and
    stay symmetric (one on disk, one on in-memory bundle).
 
 3. ``PairingStore.list_pending`` TOCTOU: previously called

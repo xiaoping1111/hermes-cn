@@ -1,8 +1,16 @@
-"""Unit tests for hermes_cli.pty_bridge — PTY spawning + byte forwarding.
+"""CLIpty bridge测试
+
+【产品经理理解要点】
+CLIpty bridge功能测试。
+- 验证功能：命令行pty bridge功能
+- 关键场景：配置、执行、验证
+- 业务影响：pty bridge命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for hermes_cli.pty_bridge — PTY spawning + byte forwarding.
 
 These tests drive the bridge with minimal POSIX processes (echo, env, sleep,
-printf) to verify it behaves like a PTY you can read/write/resize/close.
-"""
+printf) to verify it behaves like a PTY you can read/write/resize/close."""
 
 from __future__ import annotations
 

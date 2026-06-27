@@ -1,4 +1,13 @@
-"""Tests for session_meta filtering — issue #4715.
+"""Agent运行引擎测试 - session meta filtering
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的session meta filtering验证。
+- 验证功能：session meta filtering功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：session meta filtering功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for session_meta filtering — issue #4715.
 
 Ensures that transcript-only session_meta messages never reach the
 chat-completions API, via both the API-boundary guard in

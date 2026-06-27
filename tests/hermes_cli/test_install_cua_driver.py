@@ -1,4 +1,13 @@
-"""Tests for ``install_cua_driver`` upgrade semantics and architecture pre-check.
+"""CLIinstall cua driver测试
+
+【产品经理理解要点】
+CLIinstall cua driver功能测试。
+- 验证功能：命令行install cua driver功能
+- 关键场景：配置、执行、验证
+- 业务影响：install cua driver命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ``install_cua_driver`` upgrade semantics and architecture pre-check.
 
 The cua-driver upstream installer always pulls the latest release tag, so
 re-running it is the canonical upgrade path. ``install_cua_driver(upgrade=True)``
@@ -11,8 +20,7 @@ must:
 * Preserve original ``upgrade=False`` behaviour for the toolset-enable flow:
   skip if installed, install otherwise, warn on non-macOS.
 * Pre-check architecture compatibility before downloading to avoid raw 404
-  errors on Intel macOS when the upstream release lacks x86_64 assets.
-"""
+  errors on Intel macOS when the upstream release lacks x86_64 assets."""
 
 from __future__ import annotations
 

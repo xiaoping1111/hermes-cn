@@ -1,8 +1,16 @@
-"""Minimal e2e tests for Discord mention stripping + /command detection.
+"""Discord适配器E2E
+
+【产品经理理解要点】
+Discord适配器端到端测试。
+- 验证功能：Discord平台完整交互链路
+- 关键场景：连接、消息收发、断线重连
+- 业务影响：Discord平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Minimal e2e tests for Discord mention stripping + /command detection.
 
 Covers the fix for slash commands not being recognized when sent via
-@mention in a channel, especially after auto-threading.
-"""
+@mention in a channel, especially after auto-threading."""
 
 import asyncio
 from types import SimpleNamespace

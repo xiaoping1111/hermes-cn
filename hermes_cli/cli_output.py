@@ -1,9 +1,17 @@
-"""Shared CLI output helpers for Hermes CLI modules.
+"""CLI输出辅助函数
+
+【产品经理理解要点】
+统一的CLI输出格式化函数，替代各模块的重复print实现。
+- print_info/success/warning/error：带颜色的分级输出
+- 统一的prompt()输入提示函数
+- 密码输入的masked_secret_prompt封装
+
+────────────────────────────────────────────────────────────────
+Shared CLI output helpers for Hermes CLI modules.
 
 Extracts the identical ``print_info/success/warning/error`` and ``prompt()``
 functions previously duplicated across setup.py, tools_config.py,
-mcp_config.py, and memory_setup.py.
-"""
+mcp_config.py, and memory_setup.py."""
 
 from hermes_cli.colors import Colors, color
 from hermes_cli.secret_prompt import masked_secret_prompt

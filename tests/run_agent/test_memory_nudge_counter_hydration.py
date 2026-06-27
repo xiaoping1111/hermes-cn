@@ -1,4 +1,13 @@
-"""Regression test for issue #22357 — gateway memory-nudge counter hydration.
+"""Agent运行引擎测试 - memory nudge counter hydration
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的memory nudge counter hydration验证。
+- 验证功能：memory nudge counter hydration功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：memory nudge counter hydration功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression test for issue #22357 — gateway memory-nudge counter hydration.
 
 The gateway creates a fresh AIAgent for each inbound message in several
 common scenarios (cache miss, 1h idle eviction at gateway/run.py

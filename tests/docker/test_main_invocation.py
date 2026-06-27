@@ -1,4 +1,13 @@
-"""Harness: docker run <image> [cmd...] invocation patterns.
+"""Docker部署测试 - main invocation
+
+【产品经理理解要点】
+Docker容器化部署：权限、网关、僵尸进程回收、不可变安装等运维正确性中的main invocation验证。
+- 验证功能：main invocation功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：main invocation功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Harness: docker run <image> [cmd...] invocation patterns.
 
 These tests MUST pass on the current tini-based image AND continue to
 pass after the Phase 2 s6 migration. Any behavior drift is a regression.

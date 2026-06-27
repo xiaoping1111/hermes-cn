@@ -1,4 +1,12 @@
-"""Pipeline orchestration for Microsoft Teams meeting summaries."""
+"""Teams 会议管线编排
+
+【产品经理理解要点】
+Teams 会议摘要的完整管线编排：获取转录 → 生成摘要 → 投递结果。
+- 转录获取 + LLM 摘要 + 结果投递
+- 录音下载和临时文件管理
+
+─────────────────────────────────────────────────────────────────
+Pipeline orchestration for Microsoft Teams meeting summaries."""
 
 from __future__ import annotations
 

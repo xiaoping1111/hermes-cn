@@ -1,4 +1,13 @@
-"""WebSocket transport for the tui_gateway JSON-RPC server.
+"""TUI WebSocket 传输
+
+【产品经理理解要点】
+为 TUI 网关提供 WebSocket 传输方式，使 iOS/Web 客户端也能通过 WS 连接使用 Agent。
+- 核心职责：复用 server.dispatch 处理所有 JSON-RPC 请求，仅替换传输通道为 WebSocket
+- 关键概念：协议格式与 stdio 完全一致（换行分隔的 JSON-RPC），连接后立即发送 gateway.ready 事件
+- 系统定位：传输实现层，Web/iOS 客户端 ←WebSocket+JSON-RPC→ 本模块 → server.dispatch
+
+─────────────────────────────────────────────────────────────────────────
+WebSocket transport for the tui_gateway JSON-RPC server.
 
 Reuses :func:`tui_gateway.server.dispatch` verbatim so every RPC method, every
 slash command, every approval/clarify/sudo flow, and every agent event flows

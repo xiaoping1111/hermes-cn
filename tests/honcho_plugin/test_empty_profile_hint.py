@@ -1,4 +1,14 @@
-"""Tests for honcho_profile's empty-card hint (#5137 follow-up)."""
+"""空用户画像提示
+
+【产品经理理解要点】
+用户无画像时的提示逻辑。
+- 验证功能：新用户引导体验
+- 关键场景：空画像检测、默认提示
+- 业务影响：新用户引导体验异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for honcho_profile's empty-card hint (#5137 follow-up).
+"""
 
 from __future__ import annotations
 

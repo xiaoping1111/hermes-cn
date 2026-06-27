@@ -1,4 +1,13 @@
-"""Regression test for #28181 — kanban worker SIGTERM must terminate the process.
+"""CLIsignal handler kanban worker测试
+
+【产品经理理解要点】
+CLIsignal handler kanban worker功能测试。
+- 验证功能：命令行signal handler kanban worker功能
+- 关键场景：配置、执行、验证
+- 业务影响：signal handler kanban worker命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression test for #28181 — kanban worker SIGTERM must terminate the process.
 
 The single-query signal handler in cli.py (``_signal_handler_q``) raises
 ``KeyboardInterrupt`` to unwind the main thread on SIGTERM/SIGHUP. That works
@@ -17,8 +26,7 @@ reclaims the stale claim on the next dispatcher tick.
 
 These tests use a synthetic Python script that mirrors the cli.py signal
 handler shape so we can exercise the exit-path contract without booting the
-full CLI (which needs a real provider config).
-"""
+full CLI (which needs a real provider config)."""
 from __future__ import annotations
 
 import os

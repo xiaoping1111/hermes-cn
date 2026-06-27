@@ -1,4 +1,14 @@
-"""Tests for skills/media/youtube-content/scripts/fetch_transcript.py (issue #22243)."""
+"""视频字幕获取
+
+【产品经理理解要点】
+视频平台字幕获取。
+- 验证功能：转录文本获取能力
+- 关键场景：平台适配、格式解析
+- 业务影响：字幕获取功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for skills/media/youtube-content/scripts/fetch_transcript.py (issue #22243).
+"""
 
 import sys
 from pathlib import Path

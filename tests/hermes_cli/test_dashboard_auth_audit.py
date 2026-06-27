@@ -1,9 +1,17 @@
-"""Audit log for dashboard-auth events.
+"""CLIdashboard auth audit测试
+
+【产品经理理解要点】
+CLIdashboard auth audit功能测试。
+- 验证功能：命令行dashboard auth audit功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard auth audit命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Audit log for dashboard-auth events.
 
 Profile-aware location: ``$HERMES_HOME/logs/dashboard-auth.log``.
 Format: one JSON object per line. Token-like kwargs are dropped before
-serialisation so we never leak refresh tokens or JWTs to disk.
-"""
+serialisation so we never leak refresh tokens or JWTs to disk."""
 from __future__ import annotations
 
 import json

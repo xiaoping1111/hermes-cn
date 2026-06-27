@@ -1,4 +1,14 @@
-"""Tests for the Teams pipeline plugin package."""
+"""Teams插件系统测试
+
+【产品经理理解要点】
+Teams平台各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行。
+- 验证功能：Teams平台功能验证
+- 关键场景：Teams消息收发、连接管理
+- 业务影响：Teams平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Teams pipeline plugin package.
+"""
 
 from __future__ import annotations
 

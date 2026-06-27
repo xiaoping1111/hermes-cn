@@ -1,4 +1,13 @@
-"""Tests for banner toolset name normalization and skin color usage."""
+"""CLIbanner测试
+
+【产品经理理解要点】
+CLIbanner功能测试。
+- 验证功能：命令行banner功能
+- 关键场景：配置、执行、验证
+- 业务影响：banner命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for banner toolset name normalization and skin color usage."""
 
 from unittest.mock import patch
 

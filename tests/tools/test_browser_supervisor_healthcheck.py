@@ -1,4 +1,13 @@
-"""Unit tests for _SupervisorRegistry cache-hit healthcheck.
+"""工具系统测试 - browser supervisor healthcheck
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的browser supervisor healthcheck验证。
+- 验证功能：browser supervisor healthcheck功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：browser supervisor healthcheck功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for _SupervisorRegistry cache-hit healthcheck.
 
 Verifies that get_or_start() does NOT return a cached supervisor whose
 thread has exited or whose event loop has stopped. Avoids a real Chrome —

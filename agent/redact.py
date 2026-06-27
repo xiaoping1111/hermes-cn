@@ -1,5 +1,16 @@
 """Regex-based secret redaction for logs and tool output.
 
+敏感信息脱敏
+
+【产品经理理解要点】
+在日志和工具输出中遮蔽 API Key、Token 等敏感信息，防止泄露。
+- 核心职责：正则匹配敏感值、长 Token 保留首6尾4、短 Token 全遮蔽
+- 关键业务概念：API Key 脱敏、日志安全、Token 部分保留(可调试)
+- 在系统中的位置：日志写入和工具输出结果的过滤层
+
+─────────────────────────────────────────────────────────────────
+
+
 Applies pattern matching to mask API keys, tokens, and credentials
 before they reach log files, verbose output, or gateway logs.
 

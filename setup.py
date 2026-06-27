@@ -1,5 +1,16 @@
 from __future__ import annotations
 
+"""项目打包构建配置
+
+【产品经理理解要点】
+setuptools 构建脚本：定义 pip install 时的包结构和构建步骤，支持只读源码树构建。
+- 核心职责：收集子包、生成 entry_points、处理只读源码树时的临时构建目录
+- 关键业务概念：pip 可安装包、命令行入口点(hermes/hermes-agent)、只读构建模式
+- 在系统中的位置：项目发布基础设施，执行 pip install -e . 时运行
+
+─────────────────────────────────────────────────────────────────
+"""
+
 from collections import defaultdict
 from pathlib import Path
 import tempfile

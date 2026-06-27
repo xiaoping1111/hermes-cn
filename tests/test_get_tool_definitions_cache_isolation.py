@@ -1,8 +1,17 @@
-"""Regression tests for issue #17335.
+"""测试 - get tool definitions cache isolation
+
+【产品经理理解要点】
+功能验证中的get tool definitions cache isolation验证。
+- 验证功能：get tool definitions cache isolation功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：get tool definitions cache isolation功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for issue #17335.
 
 The ``quiet_mode=True`` fast path in :func:`model_tools.get_tool_definitions`
 memoizes results to avoid re-walking the registry on every Gateway call. The
-cached object must NOT be aliased into callers' return values \u2014 long-lived
+cached object must NOT be aliased into callers' return values — long-lived
 Gateway processes mutate the returned list (``run_agent`` appends memory and
 LCM context-engine tool schemas to ``self.tools``), and a shared list would
 poison subsequent agent inits with duplicate tool names. Providers that

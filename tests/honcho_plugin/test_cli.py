@@ -1,4 +1,14 @@
-"""Tests for plugins/memory/honcho/cli.py."""
+"""Honcho插件测试 - cli
+
+【产品经理理解要点】
+Honcho会话管理、用户画像、异步记忆等核心交互能力中的cli验证。
+- 验证功能：cli功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：cli功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for plugins/memory/honcho/cli.py.
+"""
 
 from types import SimpleNamespace
 import json

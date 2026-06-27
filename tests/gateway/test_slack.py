@@ -1,12 +1,19 @@
-"""
+"""Slack网关测试
+
+【产品经理理解要点】
+Slack平台网关功能测试。
+- 验证功能：Slack平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Slack平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
 Tests for Slack platform adapter.
 
 Covers: app_mention handler, send_document, send_video,
         incoming document handling, message routing.
 
 Note: slack-bolt may not be installed in the test environment.
-We mock the slack modules at import time to avoid collection errors.
-"""
+We mock the slack modules at import time to avoid collection errors."""
 
 import asyncio
 import contextlib

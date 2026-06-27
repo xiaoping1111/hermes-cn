@@ -1,4 +1,13 @@
-"""Tests for the config.yaml → env var bridge logic in gateway/run.py.
+"""网关config cwd bridge测试
+
+【产品经理理解要点】
+网关config cwd bridge功能测试。
+- 验证功能：网关config cwd bridge处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：config cwd bridge功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the config.yaml → env var bridge logic in gateway/run.py.
 
 Specifically tests that top-level `cwd:` and `backend:` in config.yaml
 are correctly bridged to TERMINAL_CWD / TERMINAL_ENV env vars as
@@ -6,8 +15,7 @@ convenience aliases for `terminal.cwd` / `terminal.backend`.
 
 The bridge logic is module-level code in gateway/run.py, so we test
 the semantics by reimplementing the relevant config bridge snippet and
-asserting the expected env var outcomes.
-"""
+asserting the expected env var outcomes."""
 
 import os
 import json

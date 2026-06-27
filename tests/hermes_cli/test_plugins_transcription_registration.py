@@ -1,12 +1,20 @@
-"""Tests for PluginContext.register_transcription_provider().
+"""CLIplugins transcription registration测试
+
+【产品经理理解要点】
+CLIplugins transcription registration功能测试。
+- 验证功能：命令行plugins transcription registration功能
+- 关键场景：配置、执行、验证
+- 业务影响：plugins transcription registration命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for PluginContext.register_transcription_provider().
 
 Exercises the plugin context hook end-to-end: drops a fake plugin into
 ``$HERMES_HOME/plugins/``, runs ``PluginManager().discover_and_load()``,
 and asserts the registration result.
 
 Mirrors the shape of ``test_plugins_tts_registration.py`` (companion
-TTS hook from issue #30398).
-"""
+TTS hook from issue #30398)."""
 
 from __future__ import annotations
 

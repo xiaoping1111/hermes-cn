@@ -1,4 +1,14 @@
-"""Tests for hermes_state.py — SessionDB SQLite CRUD, FTS5 search, export."""
+"""测试 - hermes state
+
+【产品经理理解要点】
+功能验证中的hermes state验证。
+- 验证功能：hermes state功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：hermes state功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_state.py — SessionDB SQLite CRUD, FTS5 search, export.
+"""
 
 import sqlite3
 import time

@@ -1,4 +1,12 @@
-"""
+"""ComfyUI 公共工具函数
+
+【产品经理理解要点】
+ComfyUI 技能脚本的共享工具函数和常量。
+- API 通信辅助
+- 路径和配置管理
+
+─────────────────────────────────────────────────────────────────
+
 _common.py — Shared logic for ComfyUI skill scripts.
 
 Single source of truth for:

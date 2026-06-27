@@ -1,4 +1,13 @@
-"""Tests for tui_gateway/entry.py sys.path hardening (issue #15989).
+"""入口路径
+
+【产品经理理解要点】
+TUI入口sys.path设置。
+- 验证功能：模块发现正确性
+- 关键场景：路径设置、模块发现
+- 业务影响：模块无法被发现
+
+─────────────────────────────────────────────────────────────────────────
+Tests for tui_gateway/entry.py sys.path hardening (issue #15989).
 
 When the TUI backend is spawned by Node.js, the Python interpreter may have
 '' or '.' at the front of sys.path, allowing a local utils/ directory in CWD

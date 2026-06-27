@@ -1,10 +1,18 @@
-"""Tests for WhatsApp message formatting and chunking.
+"""WhatsApp格式化
+
+【产品经理理解要点】
+WhatsApp消息格式化。
+- 验证功能：WhatsApp平台消息格式转换
+- 关键场景：文本格式、换行处理、链接格式
+- 业务影响：WhatsApp消息显示异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for WhatsApp message formatting and chunking.
 
 Covers:
 - format_message(): markdown → WhatsApp syntax conversion
 - send(): message chunking for long responses
-- MAX_MESSAGE_LENGTH: practical UX limit
-"""
+- MAX_MESSAGE_LENGTH: practical UX limit"""
 
 import asyncio
 from unittest.mock import AsyncMock, MagicMock

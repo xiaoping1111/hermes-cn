@@ -1,4 +1,13 @@
-"""Invariants for scripts/build_skills_index.py's health-check guard.
+"""脚本测试 - build skills index health
+
+【产品经理理解要点】
+发布脚本和构建索引的健康检查逻辑中的build skills index health验证。
+- 验证功能：build skills index health功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：build skills index health功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Invariants for scripts/build_skills_index.py's health-check guard.
 
 Regression context (June 2026): a GitHub API rate limit zeroed every
 api.github.com-backed source (github / claude-marketplace / well-known) at

@@ -1,4 +1,12 @@
-"""DuckDuckGo search — plugin form (via the ``ddgs`` package).
+"""DuckDuckGo 搜索提供者
+
+【产品经理理解要点】
+DuckDuckGo Search 的具体实现。
+- 使用 duckduckgo_search 库
+- 无需 API Key
+
+─────────────────────────────────────────────────────────────────
+DuckDuckGo search — plugin form (via the ``ddgs`` package).
 
 Subclasses the plugin-facing :class:`agent.web_search_provider.WebSearchProvider`.
 The legacy in-tree module ``tools.web_providers.ddgs`` was removed in the

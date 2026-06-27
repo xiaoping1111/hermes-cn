@@ -1,4 +1,14 @@
-"""Tests that verify SQL injection mitigations in insights and state modules."""
+"""测试 - sql injection
+
+【产品经理理解要点】
+功能验证中的sql injection验证。
+- 验证功能：sql injection功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：sql injection功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests that verify SQL injection mitigations in insights and state modules.
+"""
 
 import re
 

@@ -1,9 +1,17 @@
-"""Tests for Telegram document-size cap.
+"""Telegram网关测试
+
+【产品经理理解要点】
+Telegram平台网关功能测试。
+- 验证功能：Telegram平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Telegram document-size cap.
 
 The public Telegram Bot API caps `getFile` at 20MB. A locally-hosted
 `telegram-bot-api` server raises that ceiling to 2GB. We treat the presence
-of `extra.base_url` as the explicit opt-in to the higher cap.
-"""
+of `extra.base_url` as the explicit opt-in to the higher cap."""
 
 import sys
 from unittest.mock import MagicMock

@@ -1,4 +1,13 @@
-"""End-to-end integration test for the destructive-slash inline-skip path.
+"""CLI终端测试 - destructive slash inline skip e2e
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的destructive slash inline skip e2e验证。
+- 验证功能：destructive slash inline skip e2e功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：destructive slash inline skip e2e功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+End-to-end integration test for the destructive-slash inline-skip path.
 
 Drives ``HermesCLI.process_command("/reset now")`` against a minimal stand-in
 and verifies:

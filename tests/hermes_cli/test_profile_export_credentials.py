@@ -1,9 +1,17 @@
-"""Tests for credential exclusion during profile export.
+"""CLIprofile export credentials测试
+
+【产品经理理解要点】
+CLIprofile export credentials功能测试。
+- 验证功能：命令行profile export credentials功能
+- 关键场景：配置、执行、验证
+- 业务影响：profile export credentials命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for credential exclusion during profile export.
 
 Profile exports should NEVER include auth.json or .env — these contain
 API keys, OAuth tokens, and credential pool data. Users share exported
-profiles; leaking credentials in the archive is a security issue.
-"""
+profiles; leaking credentials in the archive is a security issue."""
 
 import tarfile
 

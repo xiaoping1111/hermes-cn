@@ -1,3 +1,14 @@
+
+"""Dashboard登录页
+
+【产品经理理解要点】
+服务端渲染的/login页面，无需React/JS依赖。
+- 列出所有注册的认证Provider
+- 点击Provider跳转OAuth授权
+- 遵循Nous Research设计系统的视觉风格
+
+────────────────────────────────────────────────────────────────"""
+
 """Server-rendered /login page.
 
 No React, no JavaScript dependency. Listed providers come from the

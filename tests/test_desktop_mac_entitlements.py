@@ -1,4 +1,13 @@
-"""Regression for #37718: macOS microphone entitlement must be inherited.
+"""测试 - desktop mac entitlements
+
+【产品经理理解要点】
+功能验证中的desktop mac entitlements验证。
+- 验证功能：desktop mac entitlements功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：desktop mac entitlements功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression for #37718: macOS microphone entitlement must be inherited.
 
 Hermes Desktop signs with ``hardenedRuntime: true`` and points electron-builder
 at two entitlement files (see ``apps/desktop/package.json``):

@@ -1,4 +1,13 @@
-"""Randomized property testing for the Kanban kernel.
+"""属性模糊测试
+
+【产品经理理解要点】
+随机输入验证不变量。
+- 验证功能：边界条件缺陷发现
+- 关键场景：随机输入、不变量检查
+- 业务影响：边界条件缺陷未被发现
+
+─────────────────────────────────────────────────────────────────────────
+Randomized property testing for the Kanban kernel.
 
 Generates 1000 random operation sequences, each 20-50 ops, on small
 task graphs. After each step, checks the full invariant set:

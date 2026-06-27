@@ -1,4 +1,13 @@
-"""Harness: PID 1 must reap orphaned zombie processes.
+"""Docker部署测试 - zombie reaping
+
+【产品经理理解要点】
+Docker容器化部署：权限、网关、僵尸进程回收、不可变安装等运维正确性中的zombie reaping验证。
+- 验证功能：zombie reaping功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：zombie reaping功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Harness: PID 1 must reap orphaned zombie processes.
 
 tini (current PID 1) reaps zombies via its built-in subreaper behavior.
 s6-overlay's ``/init`` (Phase 2 PID 1) does the same. This invariant is

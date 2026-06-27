@@ -1,10 +1,18 @@
-"""Interactive prompt callbacks for terminal_tool integration.
+"""交互式提示回调
+
+【产品经理理解要点】
+桥接terminal_tool的交互提示（澄清/审批/sudo）到prompt_toolkit事件循环。
+- 澄清回调：Agent需要更多信息时弹出选择题
+- 审批回调：敏感操作前的用户确认
+- sudo回调：需要提权时的密码输入
+
+────────────────────────────────────────────────────────────────
+Interactive prompt callbacks for terminal_tool integration.
 
 These bridge terminal_tool's interactive prompts (clarify, sudo, approval)
 into prompt_toolkit's event loop. Each function takes the HermesCLI instance
 as its first argument and uses its state (queues, app reference) to coordinate
-with the TUI.
-"""
+with the TUI."""
 
 import queue
 import time as _time

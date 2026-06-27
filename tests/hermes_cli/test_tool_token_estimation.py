@@ -1,4 +1,13 @@
-"""Tests for tool token estimation and curses_ui status_fn support."""
+"""CLItool token estimation测试
+
+【产品经理理解要点】
+CLItool token estimation功能测试。
+- 验证功能：命令行tool token estimation功能
+- 关键场景：配置、执行、验证
+- 业务影响：tool token estimation命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for tool token estimation and curses_ui status_fn support."""
 
 
 import pytest

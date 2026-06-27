@@ -1,4 +1,13 @@
-"""Tests for config.yaml structure validation (validate_config_structure)."""
+"""CLIconfig validation测试
+
+【产品经理理解要点】
+CLIconfig validation功能测试。
+- 验证功能：命令行config validation功能
+- 关键场景：配置、执行、验证
+- 业务影响：config validation命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for config.yaml structure validation (validate_config_structure)."""
 
 
 from hermes_cli.config import validate_config_structure, ConfigIssue

@@ -1,10 +1,18 @@
-"""Tests for hermes_cli.uninstall.remove_node_symlinks.
+"""CLIuninstall node symlinks测试
+
+【产品经理理解要点】
+CLIuninstall node symlinks功能测试。
+- 验证功能：命令行uninstall node symlinks功能
+- 关键场景：配置、执行、验证
+- 业务影响：uninstall node symlinks命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.uninstall.remove_node_symlinks.
 
 Regression for #34536: the POSIX installer drops node/npm/npx symlinks in
 ~/.local/bin pointing into $HERMES_HOME/node and prepends ~/.local/bin to
 PATH, shadowing an existing nvm. Uninstall must remove those symlinks, but
-only when they still resolve into the Hermes-managed node dir.
-"""
+only when they still resolve into the Hermes-managed node dir."""
 
 import os
 from pathlib import Path

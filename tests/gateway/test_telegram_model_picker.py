@@ -1,4 +1,13 @@
-"""Tests for Telegram model picker thread fallback."""
+"""Telegram网关测试
+
+【产品经理理解要点】
+Telegram平台网关功能测试。
+- 验证功能：Telegram平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Telegram model picker thread fallback."""
 
 import sys
 from types import SimpleNamespace

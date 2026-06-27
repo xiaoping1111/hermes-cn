@@ -1,4 +1,13 @@
-"""Tests for the AsyncHttpxClientWrapper.__del__ neuter fix.
+"""Agent运行引擎测试 - async httpx del neuter
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的async httpx del neuter验证。
+- 验证功能：async httpx del neuter功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：async httpx del neuter功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the AsyncHttpxClientWrapper.__del__ neuter fix.
 
 The OpenAI SDK's ``AsyncHttpxClientWrapper.__del__`` schedules
 ``aclose()`` via ``asyncio.get_running_loop().create_task()``.  When GC

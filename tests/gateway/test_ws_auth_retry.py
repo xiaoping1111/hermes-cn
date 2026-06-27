@@ -1,10 +1,18 @@
-"""Tests for auth-aware retry in Mattermost WS and Matrix sync loops.
+"""网关ws auth retry测试
+
+【产品经理理解要点】
+网关ws auth retry功能测试。
+- 验证功能：网关ws auth retry处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：ws auth retry功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for auth-aware retry in Mattermost WS and Matrix sync loops.
 
 Both Mattermost's _ws_loop and Matrix's _sync_loop previously caught all
 exceptions with a broad ``except Exception`` and retried forever. Permanent
 auth failures (401, 403, M_UNKNOWN_TOKEN) would loop indefinitely instead
-of stopping. These tests verify that auth errors now stop the reconnect.
-"""
+of stopping. These tests verify that auth errors now stop the reconnect."""
 
 import asyncio
 from unittest.mock import AsyncMock, MagicMock, patch

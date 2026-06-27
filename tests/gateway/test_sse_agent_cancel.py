@@ -1,10 +1,18 @@
-"""Tests for SSE client disconnect → agent task cancellation.
+"""网关sse agent cancel测试
+
+【产品经理理解要点】
+网关sse agent cancel功能测试。
+- 验证功能：网关sse agent cancel处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：sse agent cancel功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for SSE client disconnect → agent task cancellation.
 
 When a streaming /v1/chat/completions client disconnects mid-stream
 (network drop, browser tab close), the agent is interrupted via
 agent.interrupt() so it stops making LLM API calls, and the asyncio
-task wrapper is cancelled.
-"""
+task wrapper is cancelled."""
 
 import asyncio
 import queue

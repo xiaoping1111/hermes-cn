@@ -1,4 +1,12 @@
-"""Inbound cron-fire token verification for Chronos (Phase 4E.1).
+"""Chronos 环境验证
+
+【产品经理理解要点】
+验证 Chronos 调度器的运行环境和依赖是否就绪。
+- 检查 NAS 连接和权限
+- 验证调度器配置完整性
+
+─────────────────────────────────────────────────────────────────
+Inbound cron-fire token verification for Chronos (Phase 4E.1).
 
 When NAS relays an external scheduler fire to the agent, it POSTs
 ``/api/cron/fire`` with a short-lived NAS-minted JWT. This module verifies that

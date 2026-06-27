@@ -1,5 +1,16 @@
 """Automatic context window compression for long conversations.
 
+上下文压缩器
+
+【产品经理理解要点】
+长对话自动压缩：用廉价辅助模型摘要中间轮次，保留首尾关键上下文。
+- 核心职责：判断压缩时机、摘要中间轮次、Token 预算尾保护、工具输出精简
+- 关键业务概念：首尾保护、中间轮摘要、辅助模型、Token 预算管理
+- 在系统中的位置：对话接近上下文窗口限制时的自动压缩引擎
+
+─────────────────────────────────────────────────────────────────
+
+
 Self-contained class with its own OpenAI client for summarization.
 Uses auxiliary model (cheap/fast) to summarize middle turns while
 protecting head and tail context.

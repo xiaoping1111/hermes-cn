@@ -1,5 +1,16 @@
 """Tool-call execution — sequential and concurrent dispatch.
 
+工具执行器
+
+【产品经理理解要点】
+工具调用的实际执行：顺序或并发分发工具调用请求并收集结果。
+- 核心职责：顺序执行(_sequential)和并发执行(_concurrent)两种模式
+- 关键业务概念：工具执行调度、并发线程池、中断检测
+- 在系统中的位置：对话引擎与工具注册表之间的执行层
+
+─────────────────────────────────────────────────────────────────
+
+
 Both AIAgent methods (``_execute_tool_calls_sequential`` and
 ``_execute_tool_calls_concurrent``) live here as module-level
 functions that take the parent ``AIAgent`` as their first argument.

@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""ComfyUI 依赖检查
+
+【产品经理理解要点】
+检查 ComfyUI 运行所需的依赖是否安装。
+- Python 包和模型检查
+- 缺失依赖报告
+
+─────────────────────────────────────────────────────────────────
+
 check_deps.py — Verify a ComfyUI workflow's dependencies (custom nodes, models,
 embeddings) against a running server.
 

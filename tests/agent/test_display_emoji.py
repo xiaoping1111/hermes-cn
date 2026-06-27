@@ -1,4 +1,14 @@
-"""Tests for get_tool_emoji in agent/display.py — skin + registry integration."""
+"""Agent核心测试 - display emoji
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的display emoji验证。
+- 验证功能：display emoji功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：display emoji功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for get_tool_emoji in agent/display.py — skin + registry integration.
+"""
 
 from unittest.mock import patch as mock_patch, MagicMock
 

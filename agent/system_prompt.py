@@ -1,5 +1,16 @@
 """System-prompt assembly for :class:`AIAgent`.
 
+系统提示组装
+
+【产品经理理解要点】
+构建智能体系统提示的三层结构：稳定层、上下文层、易变层。
+- 核心职责：组装 stable/context/volatile 三层提示、每会话构建一次保留缓存
+- 关键业务概念：SOUL.md 身份、工具引导、内存快照、上下文压缩触发重建
+- 在系统中位置：系统提示是整个对话的人设和规则基础
+
+─────────────────────────────────────────────────────────────────
+
+
 The agent's system prompt is built once per session and reused across all
 turns — only context compression triggers a rebuild.  This keeps the
 upstream prefix cache warm.  See ``hermes-agent-dev``'s

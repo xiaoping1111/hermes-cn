@@ -1,4 +1,13 @@
-"""Tests for user-configured ``model.default_headers`` in the auxiliary client.
+"""Agent核心测试 - auxiliary user default headers
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的auxiliary user default headers验证。
+- 验证功能：auxiliary user default headers功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：auxiliary user default headers功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for user-configured ``model.default_headers`` in the auxiliary client.
 
 Companion to ``tests/run_agent/test_provider_attribution_headers.py`` (which
 covers the main agent client). The main agent turn and the auxiliary client

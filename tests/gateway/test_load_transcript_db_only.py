@@ -1,4 +1,13 @@
-"""Verify load_transcript returns SQLite messages without any JSONL file."""
+"""网关load transcript db only测试
+
+【产品经理理解要点】
+网关load transcript db only功能测试。
+- 验证功能：网关load transcript db only处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：load transcript db only功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Verify load_transcript returns SQLite messages without any JSONL file."""
 
 
 from gateway.session import SessionStore

@@ -1,11 +1,19 @@
-"""Tests for /update live streaming, prompt forwarding, and gateway IPC.
+"""网关update streaming测试
+
+【产品经理理解要点】
+网关update streaming功能测试。
+- 验证功能：网关update streaming处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：update streaming功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for /update live streaming, prompt forwarding, and gateway IPC.
 
 Tests the new --gateway mode for hermes update, including:
 - _gateway_prompt() file-based IPC
 - _watch_update_progress() output streaming and prompt detection
 - Message interception for update prompt responses
-- _restore_stashed_changes() with input_fn parameter
-"""
+- _restore_stashed_changes() with input_fn parameter"""
 
 import json
 import os

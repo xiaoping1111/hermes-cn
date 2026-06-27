@@ -1,9 +1,17 @@
-"""Tests for Qwen OAuth provider authentication (hermes_cli/auth.py).
+"""CLIauth qwen provider测试
+
+【产品经理理解要点】
+CLIauth qwen provider功能测试。
+- 验证功能：命令行auth qwen provider功能
+- 关键场景：配置、执行、验证
+- 业务影响：auth qwen provider命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Qwen OAuth provider authentication (hermes_cli/auth.py).
 
 Covers: _qwen_cli_auth_path, _read_qwen_cli_tokens, _save_qwen_cli_tokens,
 _qwen_access_token_is_expiring, _refresh_qwen_cli_tokens,
-resolve_qwen_runtime_credentials, get_qwen_auth_status.
-"""
+resolve_qwen_runtime_credentials, get_qwen_auth_status."""
 
 import json
 import stat

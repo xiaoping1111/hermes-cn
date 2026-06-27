@@ -1,3 +1,11 @@
+"""CLI搜索界面测试
+
+【产品经理理解要点】
+CLI搜索界面功能测试。
+- 验证功能：终端界面(TUI)搜索与过滤功能
+- 关键场景：模糊搜索、光标移动、键盘交互
+- 业务影响：终端界面搜索功能不可用
+"""
 from hermes_cli.curses_ui import (
     _SearchState,
     _filter_indices,

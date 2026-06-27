@@ -1,4 +1,13 @@
-"""Tests for ``hermes update`` / ``--check`` inside the Docker container.
+"""CLIcmd update docker测试
+
+【产品经理理解要点】
+CLIcmd update docker功能测试。
+- 验证功能：命令行cmd update docker功能
+- 关键场景：配置、执行、验证
+- 业务影响：cmd update docker命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ``hermes update`` / ``--check`` inside the Docker container.
 
 Background: ``.dockerignore`` excludes ``.git``, so the existing git-pull
 update path can never succeed inside the published image.  Before this
@@ -11,8 +20,7 @@ These tests pin the new behaviour: when ``detect_install_method`` reports
 ``"docker"`` (stamped by ``docker/stage2-hook.sh``), both the apply path
 (``cmd_update``) and the check path (``_cmd_update_check``) print the
 ``docker pull`` guidance from ``format_docker_update_message`` and exit
-with status 1, without running ``git fetch`` / ``subprocess.run``.
-"""
+with status 1, without running ``git fetch`` / ``subprocess.run``."""
 
 from __future__ import annotations
 

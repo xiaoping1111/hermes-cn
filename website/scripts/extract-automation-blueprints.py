@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Generate the Automation Blueprints catalog JSON for the docs site.
+"""自动化蓝图目录生成
+
+【产品经理理解要点】
+从代码中提取自动化蓝图（定时任务模板）的元数据，生成 JSON 目录供文档站点展示。
+- 核心职责：导入蓝图定义，输出 JSON 数组供文档页渲染为卡片（含描述、调度、斜杠命令、深链接）
+- 关键概念：蓝图的单一数据源在 cron/blueprint_catalog.py，本脚本仅做格式转换
+- 系统定位：文档构建脚本，由 prebuild.mjs 在 npm start/build 前自动调用
+
+─────────────────────────────────────────────────────────────────
+Generate the Automation Blueprints catalog JSON for the docs site.
 
 Mirrors ``extract-skills.py``: imports the single-source-of-truth blueprint
 definitions from ``cron/blueprint_catalog.py`` and emits a flat JSON array the

@@ -1,3 +1,14 @@
+
+"""自动化蓝图命令
+
+【产品经理理解要点】
+在聊天界面中通过对话填表创建自动化蓝图，对应Dashboard的可视化表单。
+- 对话式填表：用户选择蓝图→Agent逐步提问→自动创建
+- 与Dashboard蓝图表单的功能等价
+- 支持CLI、TUI和Gateway三种交互面
+
+────────────────────────────────────────────────────────────────"""
+
 """Shared ``/blueprint`` command logic for CLI, TUI, and gateway.
 
 The conversational counterpart to the dashboard's Automation Blueprints form. Where a

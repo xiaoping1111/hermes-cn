@@ -1,4 +1,13 @@
-"""Tests for agent.api_max_retries config surface.
+"""Agent运行引擎测试 - api max retries config
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的api max retries config验证。
+- 验证功能：api max retries config功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：api max retries config功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for agent.api_max_retries config surface.
 
 Closes #11616 — make the hardcoded ``max_retries = 3`` in the agent's API
 retry loop user-configurable so fallback-provider setups can fail over

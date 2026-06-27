@@ -1,4 +1,13 @@
-"""Tests for the webhook adapter's ``deliver_only`` route mode.
+"""Webhook仅投递
+
+【产品经理理解要点】
+Webhook仅投递模式。
+- 验证功能：Webhook适配器的仅投递模式
+- 关键场景：消息投递、不等待回复
+- 业务影响：Webhook消息投递失败
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the webhook adapter's ``deliver_only`` route mode.
 
 ``deliver_only`` lets external services (Supabase webhooks, monitoring
 alerts, background jobs, other agents) push plain-text notifications to
@@ -10,8 +19,7 @@ Covers:
 - Rendered content is delivered to the target platform adapter
 - HTTP returns 200 OK on success, 502 on delivery failure
 - Startup validation rejects ``deliver_only`` without a real delivery target
-- HMAC auth, rate limiting, and idempotency still apply
-"""
+- HMAC auth, rate limiting, and idempotency still apply"""
 
 import asyncio
 import json

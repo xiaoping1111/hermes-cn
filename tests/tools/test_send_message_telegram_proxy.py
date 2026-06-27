@@ -1,4 +1,13 @@
-"""Regression tests for the standalone Telegram send path's proxy support.
+"""Telegram工具系统测试
+
+【产品经理理解要点】
+Telegram平台工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性。
+- 验证功能：Telegram平台功能验证
+- 关键场景：Telegram消息收发、连接管理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the standalone Telegram send path's proxy support.
 
 The ``send_message`` tool, when invoked from a process *other than* the
 gateway (agent / TUI / cron), runs ``_send_telegram`` directly instead of

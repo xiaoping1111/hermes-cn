@@ -1,4 +1,13 @@
-"""Regression test for /model context-length display on provider-capped models.
+"""CLImodel switch context display测试
+
+【产品经理理解要点】
+CLImodel switch context display功能测试。
+- 验证功能：命令行model switch context display功能
+- 关键场景：配置、执行、验证
+- 业务影响：model switch context display命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression test for /model context-length display on provider-capped models.
 
 Bug (April 2026): `/model gpt-5.5` on openai-codex (ChatGPT OAuth) showed
 "Context: 1,050,000 tokens" because the display code used the raw models.dev
@@ -8,8 +17,7 @@ OAuth's enforced cap — so the display was lying to the user.
 
 Fix: ``resolve_display_context_length()`` prefers
 ``agent.model_metadata.get_model_context_length`` (which knows about Codex OAuth,
-Copilot, Nous, etc.) and falls back to models.dev only if that returns nothing.
-"""
+Copilot, Nous, etc.) and falls back to models.dev only if that returns nothing."""
 from __future__ import annotations
 
 from unittest.mock import patch

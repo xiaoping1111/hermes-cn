@@ -1,4 +1,13 @@
-"""CLI entry point for the hermes-agent ACP adapter.
+"""ACP 适配器入口
+
+【产品经理理解要点】
+ACP 适配器的启动入口，初始化环境变量、日志并启动 ACP 服务。
+- 核心职责：加载 ~/.hermes/.env 配置，设置日志输出到 stderr（stdout 留给 JSON-RPC 通信），启动 ACP 服务
+- 关键概念：stdout 被保留为 ACP 协议的 JSON-RPC 传输通道，因此日志必须走 stderr
+- 系统定位：启动引导层，串联命令行参数与 ACP 服务运行
+
+─────────────────────────────────────────────────────────────────────────
+CLI entry point for the hermes-agent ACP adapter.
 
 Loads environment variables from ``~/.hermes/.env``, configures logging
 to write to stderr (so stdout is reserved for ACP JSON-RPC transport),

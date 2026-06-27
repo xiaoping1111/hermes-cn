@@ -1,4 +1,13 @@
-"""Tests for the post_setup install-state gate in `_toolset_needs_configuration_prompt`.
+"""CLIpost setup gating测试
+
+【产品经理理解要点】
+CLIpost setup gating功能测试。
+- 验证功能：命令行post setup gating功能
+- 关键场景：配置、执行、验证
+- 业务影响：post setup gating命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the post_setup install-state gate in `_toolset_needs_configuration_prompt`.
 
 Regression coverage for the cua-driver silent-no-op bug (issue #22737).
 
@@ -8,8 +17,7 @@ When a no-key provider's only install side-effect is a `post_setup` hook
 empty `env_vars` — causing `hermes tools` to write the toolset to config
 and exit `✓ Saved` without ever invoking the post_setup install. These
 tests pin the new predicate-aware behaviour so the regression doesn't
-sneak back in.
-"""
+sneak back in."""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""Best-effort WebSocket publisher transport for the PTY-side gateway.
+"""TUI 侧边栏事件发布
+
+【产品经理理解要点】
+通过 WebSocket 将 TUI 网关的工具/推理/状态事件镜像推送到 Dashboard 侧边栏，实现实时事件展示。
+- 核心职责：建立到 Dashboard 的 back-WS 连接，将每条网关事件透传给侧边栏
+- 关键概念：best-effort 模式——WS 断开时静默降级，绝不阻塞 Agent 主循环；使用有界队列+守护线程
+- 系统定位：事件旁路层，TUI 网关事件 → WS → Dashboard 侧边栏实时展示
+
+─────────────────────────────────────────────────────────────────────────
+Best-effort WebSocket publisher transport for the PTY-side gateway.
 
 The dashboard's `/api/pty` spawns `hermes --tui` as a child process, which
 spawns its own ``tui_gateway.entry``.  Tool/reasoning/status events fire on

@@ -1,4 +1,13 @@
-"""Yuanbao recall: branch A1 (exact id) and A2 (content-match) against DB-only transcripts.
+"""网关yuanbao recall db only测试
+
+【产品经理理解要点】
+网关yuanbao recall db only功能测试。
+- 验证功能：网关yuanbao recall db only处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：yuanbao recall db only功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Yuanbao recall: branch A1 (exact id) and A2 (content-match) against DB-only transcripts.
 
 state.db persists the platform-side ``message_id`` via the
 ``platform_message_id`` column (added in the salvage of PR #29211) and
@@ -6,8 +15,7 @@ state.db persists the platform-side ``message_id`` via the
 — so the recall guard's exact-id match path stays canonical even with the
 JSONL file gone.  When a row has no platform id (e.g. agent-processed
 @bot messages whose adapter didn't carry a msg_id, or pre-column legacy
-rows), recall falls through to content-match.
-"""
+rows), recall falls through to content-match."""
 from gateway.session import SessionStore
 from gateway.config import GatewayConfig
 

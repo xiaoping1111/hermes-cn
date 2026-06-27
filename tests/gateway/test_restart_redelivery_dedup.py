@@ -1,10 +1,18 @@
-"""Tests for /restart idempotency guard against Telegram update re-delivery.
+"""网关restart redelivery dedup测试
+
+【产品经理理解要点】
+网关restart redelivery dedup功能测试。
+- 验证功能：网关restart redelivery dedup处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：restart redelivery dedup功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for /restart idempotency guard against Telegram update re-delivery.
 
 When PTB's graceful-shutdown ACK call (the final `get_updates` on exit) fails
 with a network error, Telegram re-delivers the `/restart` message to the new
 gateway process.  Without a dedup guard, the new gateway would process
-`/restart` again and immediately restart — a self-perpetuating loop.
-"""
+`/restart` again and immediately restart — a self-perpetuating loop."""
 import json
 import time
 from unittest.mock import MagicMock

@@ -1,9 +1,17 @@
-"""Tests for IRC gateway configuration via `hermes setup gateway` UI.
+"""CLIsetup irc测试
+
+【产品经理理解要点】
+CLIsetup irc功能测试。
+- 验证功能：命令行setup irc功能
+- 关键场景：配置、执行、验证
+- 业务影响：setup irc命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for IRC gateway configuration via `hermes setup gateway` UI.
 
 Covers the full plugin-platform discovery → status → configure flow so that
 a fresh Hermes install (no state, no env vars) can set up IRC through the
-interactive setup menus.
-"""
+interactive setup menus."""
 
 import os
 

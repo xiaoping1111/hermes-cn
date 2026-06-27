@@ -1,4 +1,13 @@
-"""Tests for the model-providers plugin discovery system.
+"""插件发现
+
+【产品经理理解要点】
+供应商插件自动发现。
+- 验证功能：插件注册机制
+- 关键场景：扫描、注册、初始化
+- 业务影响：插件无法自动加载
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the model-providers plugin discovery system.
 
 Verifies that:
  1. All bundled providers at plugins/model-providers/<name>/ are discovered

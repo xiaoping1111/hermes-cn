@@ -1,5 +1,16 @@
 from __future__ import annotations
 
+
+"""FastMCP API 封装模板
+
+【产品经理理解要点】
+FastMCP 外部 API 封装服务器的模板实现。
+- REST API 封装为 MCP 工具
+- 认证和请求处理
+
+─────────────────────────────────────────────────────────────────
+"""
+
 import os
 from typing import Any
 

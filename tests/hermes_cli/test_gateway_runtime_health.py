@@ -1,3 +1,11 @@
+"""CLIgateway runtime health测试
+
+【产品经理理解要点】
+CLIgateway runtime health功能测试。
+- 验证功能：命令行gateway runtime health功能
+- 关键场景：配置、执行、验证
+- 业务影响：gateway runtime health命令行功能失效"""
+
 from hermes_cli.gateway import _runtime_health_lines
 
 

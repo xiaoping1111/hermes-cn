@@ -1,4 +1,13 @@
-"""Regression test for #17758 — chained pending-message drains must not
+"""排空无递归
+
+【产品经理理解要点】
+排空无递归保护。
+- 验证功能：排空处理的递归深度保护
+- 关键场景：递归深度限制、栈保护
+- 业务影响：排空处理栈溢出
+
+─────────────────────────────────────────────────────────────────────────
+Regression test for #17758 — chained pending-message drains must not
 grow the call stack.
 
 Before the fix, ``_process_message_background`` finished a turn, found a
@@ -16,8 +25,7 @@ chain length.
 We assert the invariant directly: count nested
 ``_process_message_background`` frames at handler entry across a chain
 of N follow-ups.  Recursion makes depth grow linearly (1, 2, 3, …, N);
-task spawning keeps it constant (1 every time).
-"""
+task spawning keeps it constant (1 every time)."""
 
 import asyncio
 import sys

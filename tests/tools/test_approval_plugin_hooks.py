@@ -1,4 +1,13 @@
-"""Tests for pre_approval_request / post_approval_response plugin hooks.
+"""工具系统测试 - approval plugin hooks
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的approval plugin hooks验证。
+- 验证功能：approval plugin hooks功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：approval plugin hooks功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for pre_approval_request / post_approval_response plugin hooks.
 
 These hooks fire in tools/approval.py::check_all_command_guards whenever a
 dangerous command needs user approval. They are observer-only (return values

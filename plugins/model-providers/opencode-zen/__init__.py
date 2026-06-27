@@ -1,4 +1,11 @@
-"""OpenCode provider profiles (Zen + Go).
+"""OpenCode Zen 模型提供者
+
+【产品经理理解要点】
+对接 OpenCode Zen 模型服务。
+- OpenCode Zen API 集成
+
+─────────────────────────────────────────────────────────────────
+OpenCode provider profiles (Zen + Go).
 
 Both use per-model api_mode routing:
   - OpenCode Zen: Claude → anthropic_messages, GPT-5/Codex → codex_responses,

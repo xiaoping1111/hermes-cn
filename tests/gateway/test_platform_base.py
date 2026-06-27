@@ -1,4 +1,13 @@
-"""Tests for gateway/platforms/base.py — MessageEvent, media extraction, message truncation."""
+"""平台基类
+
+【产品经理理解要点】
+平台适配器基类。
+- 验证功能：消息平台适配器的基类行为
+- 关键场景：连接管理、消息路由、错误处理
+- 业务影响：平台适配器行为不一致
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway/platforms/base.py — MessageEvent, media extraction, message truncation."""
 
 import os
 import time

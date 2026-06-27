@@ -1,4 +1,12 @@
 from types import SimpleNamespace
+"""Agent核心测试 - custom provider extra body
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的custom provider extra body验证。
+- 验证功能：custom provider extra body功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：custom provider extra body功能异常或存在安全隐患"""
+
 
 from agent.agent_init import _merge_custom_provider_extra_body
 

@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""工具调度层
+
+【产品经理理解要点】
+工具总线：连接智能体对话引擎与各类工具的调度中心，负责工具注册发现与执行分发。
+- 核心职责：触发工具自注册、按工具集过滤可用工具、异步/同步统一调度执行
+- 关键业务概念：工具定义(schema)、工具集(toolset)、工具注册表(registry)、异步桥接
+- 在系统中的位置：对话引擎(run_agent)与具体工具(tools/*)之间的中间层
+
+─────────────────────────────────────────────────────────────────
 Model Tools Module
 
 Thin orchestration layer over the tool registry. Each tool file in tools/

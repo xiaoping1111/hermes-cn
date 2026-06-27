@@ -1,4 +1,13 @@
-"""Tests for opt-in cleanup of temporary progress bubbles.
+"""运行清理进度
+
+【产品经理理解要点】
+运行清理与进度。
+- 验证功能：Agent运行的清理与进度跟踪
+- 关键场景：进度上报、运行清理、资源释放
+- 业务影响：运行进度不可见或资源泄露
+
+─────────────────────────────────────────────────────────────────────────
+Tests for opt-in cleanup of temporary progress bubbles.
 
 When ``display.platforms.<plat>.cleanup_progress: true`` is set for a
 platform whose adapter supports message deletion (e.g. Telegram), the
@@ -7,8 +16,7 @@ messages sent during a run are deleted after the final response is
 delivered.
 
 Failed runs skip cleanup so the bubbles remain as breadcrumbs.
-Adapters without ``delete_message`` silently no-op.
-"""
+Adapters without ``delete_message`` silently no-op."""
 
 import asyncio
 import importlib

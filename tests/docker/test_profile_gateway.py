@@ -1,4 +1,13 @@
-"""Harness: per-profile gateway start/stop inside the container.
+"""Docker部署测试 - profile gateway
+
+【产品经理理解要点】
+Docker容器化部署：权限、网关、僵尸进程回收、不可变安装等运维正确性中的profile gateway验证。
+- 验证功能：profile gateway功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：profile gateway功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Harness: per-profile gateway start/stop inside the container.
 
 Phase 4 wires `hermes -p <profile> gateway start/stop` through the s6
 ServiceManager dispatch path inside the container — so the lifecycle

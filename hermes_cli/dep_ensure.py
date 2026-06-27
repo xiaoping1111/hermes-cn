@@ -1,3 +1,14 @@
+
+"""依赖启动引导
+
+【产品经理理解要点】
+检测并提示安装非Python运行时依赖（如Node.js、ffmpeg等）。
+- 检测系统级工具是否安装（node, ffmpeg, ripgrep等）
+- 交互式提示安装缺失依赖
+- 优雅降级：可选依赖缺失不阻断运行
+
+────────────────────────────────────────────────────────────────"""
+
 """Lazy dependency bootstrapper for non-Python runtime deps.
 
 Detection and prompting live here in Python — not in install.sh — because:

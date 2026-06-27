@@ -1,4 +1,11 @@
-"""Xiaomi MiMo provider profile."""
+"""小米 模型提供者
+
+【产品经理理解要点】
+对接小米大模型服务。
+- 小米 API 集成
+
+─────────────────────────────────────────────────────────────────
+Xiaomi MiMo provider profile."""
 
 from providers import register_provider
 from providers.base import ProviderProfile

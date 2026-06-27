@@ -1,5 +1,16 @@
 """Shared auxiliary client router for side tasks.
 
+辅助模型客户端路由
+
+【产品经理理解要点】
+为压缩、标题生成、视觉分析等辅助任务自动选择最佳可用模型后端。
+- 核心职责：按任务类型(文本/视觉)选择辅助模型、多供应商回退链
+- 关键业务概念：辅助模型路由、回退链(主模型-OpenRouter-Nous-Anthropic等)
+- 在系统中的位置：所有非对话主流程的 LLM 调用入口
+
+─────────────────────────────────────────────────────────────────
+
+
 Provides a single resolution chain so every consumer (context compression,
 session search, web extraction, vision analysis, browser vision) picks up
 the best available backend without duplicating fallback logic.

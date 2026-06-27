@@ -1,4 +1,14 @@
-"""Tests for AIAgent._sanitize_tool_call_arguments."""
+"""Agent运行引擎测试 - tool call args sanitizer
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的tool call args sanitizer验证。
+- 验证功能：tool call args sanitizer功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：tool call args sanitizer功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for AIAgent._sanitize_tool_call_arguments.
+"""
 
 import copy
 import logging

@@ -1,5 +1,16 @@
 """Best-effort early import for the OpenAI SDK's native streaming parser.
 
+Jiter 原生扩展预加载
+
+【产品经理理解要点】
+提前加载 OpenAI SDK 的 jiter 解析器扩展，避免 Windows 上的导入顺序失败。
+- 核心职责：在 agent 包导入时预加载 jiter 原生扩展
+- 关键业务概念：Windows 兼容性、导入顺序、原生扩展
+- 在系统中的位置：agent/__init__.py 中的早期导入
+
+─────────────────────────────────────────────────────────────────
+
+
 The OpenAI SDK imports ``jiter`` while constructing streaming chat-completion
 responses.  On some Windows installs the native extension can be imported
 directly from the Hermes venv, but the first import fails when it happens later

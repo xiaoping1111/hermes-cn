@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Search NYC property records via ACRIS (Automated City Register Information System).
+"""NYC ACRIS 查询
+
+【产品经理理解要点】
+查询纽约市房产记录数据库。
+- 房产交易搜索
+- 所有权和历史记录
+
+─────────────────────────────────────────────────────────────────
+Search NYC property records via ACRIS (Automated City Register Information System).
 
 Uses the city's Socrata-backed open data API. No auth required for read access.
 

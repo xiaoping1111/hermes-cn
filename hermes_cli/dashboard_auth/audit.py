@@ -1,3 +1,14 @@
+
+"""Dashboard审计日志
+
+【产品经理理解要点】
+Dashboard认证事件的审计日志记录。
+- JSON格式一行一条，存储在logs/dashboard-auth.log
+- Token类字段自动脱敏防止泄露
+- 最小依赖面，不影响启动性能
+
+────────────────────────────────────────────────────────────────"""
+
 """Audit log for dashboard-auth events.
 
 Profile-aware location: ``$HERMES_HOME/logs/dashboard-auth.log``.

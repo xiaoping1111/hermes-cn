@@ -1,4 +1,13 @@
-"""Tests for tool call argument repair in the streaming assembly path.
+"""Agent运行引擎测试 - streaming tool call repair
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的streaming tool call repair验证。
+- 验证功能：streaming tool call repair功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：streaming tool call repair功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for tool call argument repair in the streaming assembly path.
 
 The streaming path (run_agent._call_chat_completions) assembles tool call
 deltas into full arguments.  When a model truncates or malforms the JSON

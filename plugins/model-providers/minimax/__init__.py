@@ -1,4 +1,11 @@
-"""MiniMax provider profiles (international + China).
+"""MiniMax 模型提供者
+
+【产品经理理解要点】
+对接 MiniMax 大模型服务。
+- MiniMax API 集成
+
+─────────────────────────────────────────────────────────────────
+MiniMax provider profiles (international + China).
 
 The default API-key routes use anthropic_messages because their base URLs end
 with /anthropic. Users can opt MiniMax-M3 into the OpenAI-compatible endpoint

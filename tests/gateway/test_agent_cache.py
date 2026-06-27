@@ -1,4 +1,13 @@
-"""Integration tests for gateway AIAgent caching.
+"""网关agent cache测试
+
+【产品经理理解要点】
+网关agent cache功能测试。
+- 验证功能：网关agent cache处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：agent cache功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Integration tests for gateway AIAgent caching.
 
 Verifies that the agent cache correctly:
 - Reuses agents across messages (same config → same instance)
@@ -6,8 +15,7 @@ Verifies that the agent cache correctly:
 - Updates reasoning_config in-place without rebuilding
 - Evicts on session reset
 - Evicts on fallback activation
-- Preserves frozen system prompt across turns
-"""
+- Preserves frozen system prompt across turns"""
 
 import threading
 from unittest.mock import MagicMock, patch

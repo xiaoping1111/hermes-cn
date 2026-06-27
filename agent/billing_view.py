@@ -1,5 +1,16 @@
 """Surface-agnostic core for the Phase 2b terminal-billing screens.
 
+账单视图核心
+
+【产品经理理解要点】
+解析服务器账单数据为结构化视图，供 CLI/TUI/Gateway 统一消费。
+- 核心职责：解析账单负载为冻结 dataclass、失败时优雅降级(永远不崩溃)
+- 关键业务概念：Decimal 精确金额、fail-open 设计、surface 无关
+- 在系统中的位置：/billing 斜杠命令和 TUI 账单页的数据层
+
+─────────────────────────────────────────────────────────────────
+
+
 One fetch/parse per concern, consumed identically by the CLI handler
 (``cli.py::_show_billing``), the TUI JSON-RPC methods
 (``tui_gateway/server.py``), and any other surface. Mirrors the proven

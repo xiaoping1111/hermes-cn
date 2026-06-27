@@ -1,4 +1,13 @@
-"""MCP catalog — curated, Nous-approved MCP servers shipped with the repo.
+"""MCP 服务器目录 — Nous 审核通过的 MCP 服务器清单
+
+【产品经理理解要点】
+管理官方审核的 MCP 服务器目录，用户可通过 `hermes mcp install` 一键安装。
+- 核心职责：解析 manifest.yaml 清单、安装 MCP 服务器（git 克隆+依赖安装）、管理认证配置、探测工具列表并让用户选择启用
+- 关键概念：MCP 目录策略（仅 PR 合入 = Nous 审核）、manifest 版本控制、oauth/api_key 认证、工具白名单
+- 系统定位：MCP 生态的"应用商店"，位于 hermes mcp picker 和 hermes mcp install 的底层
+
+─────────────────────────────────────────────────────────────────
+MCP catalog — curated, Nous-approved MCP servers shipped with the repo.
 
 Mirrors the optional-skills/ pattern: each catalog entry lives under
 ``optional-mcps/<name>/manifest.yaml`` and ships disabled. Users discover

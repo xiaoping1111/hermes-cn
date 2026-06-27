@@ -1,4 +1,13 @@
-"""Regression tests for MCP server availability in cron jobs.
+"""MCP初始化
+
+【产品经理理解要点】
+调度器MCP初始化。
+- 验证功能：MCP服务器在调度器中的初始化
+- 关键场景：MCP服务启动、配置加载
+- 业务影响：定时任务无法调用MCP工具
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for MCP server availability in cron jobs.
 
 Background
 ==========
@@ -10,8 +19,7 @@ paths do at startup. Cron jobs therefore never saw any MCP tools from
 The fix inserts ``discover_mcp_tools()`` before the ``AIAgent(...)`` call,
 wrapped in try/except so a broken MCP server can't kill an otherwise
 working cron job. ``discover_mcp_tools`` is idempotent — subsequent ticks
-short-circuit on already-connected servers.
-"""
+short-circuit on already-connected servers."""
 
 from __future__ import annotations
 

@@ -1,4 +1,12 @@
-"""Holographic Reduced Representations (HRR) with phase encoding.
+"""全息记忆核心实现
+
+【产品经理理解要点】
+全息记忆系统的主逻辑，管理记忆的存储、检索和生命周期。
+- 基于向量嵌入的记忆存储和相似度检索
+- 支持记忆的增删改查和上下文组装
+
+─────────────────────────────────────────────────────────────────
+Holographic Reduced Representations (HRR) with phase encoding.
 
 HRRs are a vector symbolic architecture for encoding compositional structure
 into fixed-width distributed representations. This module uses *phase vectors*:

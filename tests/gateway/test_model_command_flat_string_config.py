@@ -1,4 +1,13 @@
-"""Regression tests for gateway /model --global persistence when config.yaml
+"""网关model command flat string config测试
+
+【产品经理理解要点】
+网关model command flat string config功能测试。
+- 验证功能：网关model command flat string config处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：model command flat string config功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for gateway /model --global persistence when config.yaml
 has a flat-string ``model:`` value instead of a nested dict.
 
 Before fix: ``cfg.setdefault("model", {})`` returned the existing string and
@@ -8,8 +17,7 @@ silently and the user-visible result was "switch failed" with no persist.
 
 After fix: the persist block coerces a scalar ``model:`` into a nested dict
 before mutation, so ``--global`` succeeds and the config is rewritten in
-the proper ``model: {default: ..., provider: ...}`` form.
-"""
+the proper ``model: {default: ..., provider: ...}`` form."""
 
 import yaml
 import pytest

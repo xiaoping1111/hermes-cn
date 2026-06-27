@@ -1,11 +1,19 @@
-"""Tests for `hermes memory setup [provider]` routing.
+"""CLImemory setup provider arg测试
+
+【产品经理理解要点】
+CLImemory setup provider arg功能测试。
+- 验证功能：命令行memory setup provider arg功能
+- 关键场景：配置、执行、验证
+- 业务影响：memory setup provider arg命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for `hermes memory setup [provider]` routing.
 
 The `memory setup` subcommand accepts an optional positional ``provider`` so a
 fresh install can configure a specific provider directly (e.g.
 ``hermes memory setup honcho``) without the interactive picker — which matters
 because the per-provider ``hermes <provider>`` subcommand is only registered
-once that provider is active.
-"""
+once that provider is active."""
 
 from types import SimpleNamespace
 from unittest.mock import patch

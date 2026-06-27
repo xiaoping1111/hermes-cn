@@ -1,4 +1,13 @@
-"""Tests for ``agent.conversation_loop._restore_or_build_system_prompt``.
+"""Agent核心测试 - system prompt restore
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的system prompt restore验证。
+- 验证功能：system prompt restore功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：system prompt restore功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ``agent.conversation_loop._restore_or_build_system_prompt``.
 
 Validates the gateway DB-roundtrip path that keeps the system prompt
 byte-stable across turns (fresh AIAgent → must restore from session DB

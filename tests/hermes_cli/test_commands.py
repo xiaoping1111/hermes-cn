@@ -1,4 +1,13 @@
-"""Tests for the central command registry and autocomplete."""
+"""CLIcommands测试
+
+【产品经理理解要点】
+CLIcommands功能测试。
+- 验证功能：命令行commands功能
+- 关键场景：配置、执行、验证
+- 业务影响：commands命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the central command registry and autocomplete."""
 
 from prompt_toolkit.completion import CompleteEvent
 from prompt_toolkit.document import Document

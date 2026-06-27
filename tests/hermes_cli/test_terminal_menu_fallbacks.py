@@ -1,4 +1,13 @@
-"""Regression tests for numbered fallbacks when the interactive curses menu
+"""CLIterminal menu fallbacks测试
+
+【产品经理理解要点】
+CLIterminal menu fallbacks功能测试。
+- 验证功能：命令行terminal menu fallbacks功能
+- 关键场景：配置、执行、验证
+- 业务影响：terminal menu fallbacks命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for numbered fallbacks when the interactive curses menu
 cannot initialize (e.g. non-TTY, curses unavailable, terminal error)."""
 
 import subprocess

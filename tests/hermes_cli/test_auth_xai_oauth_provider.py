@@ -1,4 +1,13 @@
-"""Tests for xAI Grok OAuth — tokens stored in Hermes auth store (~/.hermes/auth.json)."""
+"""CLIauth xai oauth provider测试
+
+【产品经理理解要点】
+CLIauth xai oauth provider功能测试。
+- 验证功能：命令行auth xai oauth provider功能
+- 关键场景：配置、执行、验证
+- 业务影响：auth xai oauth provider命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for xAI Grok OAuth — tokens stored in Hermes auth store (~/.hermes/auth.json)."""
 
 import base64
 import json

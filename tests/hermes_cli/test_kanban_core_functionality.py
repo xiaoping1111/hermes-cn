@@ -1,12 +1,20 @@
-"""Core-functionality tests for the kanban kernel + CLI additions.
+"""CLIkanban core functionality测试
+
+【产品经理理解要点】
+CLIkanban core functionality功能测试。
+- 验证功能：命令行kanban core functionality功能
+- 关键场景：配置、执行、验证
+- 业务影响：kanban core functionality命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Core-functionality tests for the kanban kernel + CLI additions.
 
 Complements tests/hermes_cli/test_kanban_db.py (schema + CAS atomicity)
 and tests/hermes_cli/test_kanban_cli.py (end-to-end run_slash).  The
 tests here exercise the pieces added as part of the kanban hardening
 pass: circuit breaker, crash detection, daemon loop, idempotency,
 retention/gc, stats, notify subscriptions, worker log accessor, run_slash
-parity across every registered verb.
-"""
+parity across every registered verb."""
 
 from __future__ import annotations
 

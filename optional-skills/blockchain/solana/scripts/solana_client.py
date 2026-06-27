@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""Solana 链上客户端
+
+【产品经理理解要点】
+对接 Solana 区块链进行链上数据查询和交易。
+- 余额和交易查询
+- SPL Token 操作
+
+─────────────────────────────────────────────────────────────────
+
 Solana Blockchain CLI Tool for Hermes Agent
 --------------------------------------------
 Queries the Solana JSON-RPC API and CoinGecko for enriched on-chain data.

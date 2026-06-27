@@ -1,4 +1,13 @@
-"""Regression guard: don't send Anthropic ``thinking`` to Kimi's /coding endpoint.
+"""Agent核心测试 - kimi coding anthropic thinking
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的kimi coding anthropic thinking验证。
+- 验证功能：kimi coding anthropic thinking功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：kimi coding anthropic thinking功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression guard: don't send Anthropic ``thinking`` to Kimi's /coding endpoint.
 
 Kimi's ``api.kimi.com/coding`` endpoint speaks the Anthropic Messages protocol
 but has its own thinking semantics.  When ``thinking.enabled`` is present in

@@ -1,5 +1,16 @@
 """Bitwarden Secrets Manager (`bws` CLI) integration.
 
+Bitwarden Secrets Manager 集成
+
+【产品经理理解要点】
+从 Bitwarden 安全拉取 API Key，避免在 .env 中存储明文密钥。
+- 核心职责：自动安装 bws CLI、拉取 Bitwarden secrets、进程内缓存、启动不阻塞
+- 关键业务概念：bws CLI 自动安装、SHA-256 校验、缓存 TTL、失败不阻塞
+- 在系统中的位置：启动时凭据补充的 Bitwarden 适配实现
+
+─────────────────────────────────────────────────────────────────
+
+
 Hermes pulls API keys from Bitwarden Secrets Manager at process startup
 so they don't have to live in plaintext in ``~/.hermes/.env``.
 

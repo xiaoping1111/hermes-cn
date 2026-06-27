@@ -1,3 +1,11 @@
+"""CLIweb server oauth write测试
+
+【产品经理理解要点】
+CLIweb server oauth write功能测试。
+- 验证功能：命令行web server oauth write功能
+- 关键场景：配置、执行、验证
+- 业务影响：web server oauth write命令行功能失效"""
+
 import os
 
 import pytest

@@ -1,3 +1,11 @@
+"""CLImodel picker expensive confirm测试
+
+【产品经理理解要点】
+CLImodel picker expensive confirm功能测试。
+- 验证功能：命令行model picker expensive confirm功能
+- 关键场景：配置、执行、验证
+- 业务影响：model picker expensive confirm命令行功能失效"""
+
 from types import SimpleNamespace
 
 from hermes_cli.model_switch import ModelSwitchResult

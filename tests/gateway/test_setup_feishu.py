@@ -1,8 +1,16 @@
-"""Tests for _setup_feishu() in hermes_cli/gateway.py.
+"""飞书网关测试
+
+【产品经理理解要点】
+飞书平台网关功能测试。
+- 验证功能：飞书平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：飞书平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for _setup_feishu() in hermes_cli/gateway.py.
 
 Verifies that the interactive setup writes env vars that correctly drive the
-Feishu adapter: credentials, connection mode, DM policy, and group policy.
-"""
+Feishu adapter: credentials, connection mode, DM policy, and group policy."""
 
 import os
 from unittest.mock import patch

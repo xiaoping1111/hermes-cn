@@ -1,3 +1,14 @@
+
+"""Windows子进程兼容层
+
+【产品经理理解要点】
+解决Hermes在Windows上执行子命令时的兼容性问题。
+- 处理Windows上npm/cmd等批处理脚本的执行差异
+- 跨平台的subprocess调用封装
+- 确保Linux/macOS/Windows三端子进程行为一致
+
+────────────────────────────────────────────────────────────────"""
+
 """Windows subprocess compatibility helpers.
 
 Hermes is developed on Linux / macOS and tested natively on Windows too.

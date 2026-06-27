@@ -1,4 +1,13 @@
-"""Regressions for the context-engine host contract.
+"""Agent核心测试 - context engine host contract
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的context engine host contract验证。
+- 验证功能：context engine host contract功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：context engine host contract功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regressions for the context-engine host contract.
 
 These tests pin the five generic host-side guarantees that external context
 engine plugins (e.g. hermes-lcm) rely on:

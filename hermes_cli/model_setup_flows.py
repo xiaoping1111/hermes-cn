@@ -1,3 +1,14 @@
+
+"""模型选择向导流程
+
+【产品经理理解要点】
+hermes setup/model的每个提供商交互式配置流程。
+- 18个_model_flow_*函数覆盖所有提供商
+- 从main.py提取，行为无变化
+- 每个流程引导用户选择提供商→模型→API密钥
+
+────────────────────────────────────────────────────────────────"""
+
 """Per-provider model-selection wizard flows for ``hermes setup`` / ``hermes model``.
 
 Extracted from ``hermes_cli/main.py`` as part of the god-file decomposition

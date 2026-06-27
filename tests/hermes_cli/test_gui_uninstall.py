@@ -1,10 +1,18 @@
-"""Tests for hermes_cli.gui_uninstall — GUI-only uninstall + install discovery.
+"""CLIgui uninstall测试
+
+【产品经理理解要点】
+CLIgui uninstall功能测试。
+- 验证功能：命令行gui uninstall功能
+- 关键场景：配置、执行、验证
+- 业务影响：gui uninstall命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.gui_uninstall — GUI-only uninstall + install discovery.
 
 Covers the cross-platform artifact discovery, the agent/GUI detection the
 desktop UI gates options on, and that ``uninstall_gui`` removes only GUI
 artifacts (built renderer/release/node_modules, packaged bundle, Electron
-userData) while leaving the Python agent + config/sessions/.env intact.
-"""
+userData) while leaving the Python agent + config/sessions/.env intact."""
 
 import sys
 from pathlib import Path

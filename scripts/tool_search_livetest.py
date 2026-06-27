@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Live test harness for Hermes Agent's Tool Search feature.
+"""工具搜索实测
+
+【产品经理理解要点】
+启动真实 Agent 对真实模型运行工具搜索场景，对比开启/关闭工具搜索的效果差异。
+- 核心职责：注册~20个模拟 MCP 工具，运行多场景实测，记录完整的消息转录/工具调用序列/耗时
+- 关键概念：每个场景运行两次（tool_search 开启 vs 关闭），生成对照数据供 analyze_livetest.py 分析
+- 系统定位：端到端质量验证脚本，验证工具搜索特性的真实效果
+
+─────────────────────────────────────────────────────────────────
+Live test harness for Hermes Agent's Tool Search feature.
 
 Spins up a real AIAgent against a real model, registers ~20 fake "MCP" tools
 with realistic shapes (github-like, slack-like, calendar-like, search-like),

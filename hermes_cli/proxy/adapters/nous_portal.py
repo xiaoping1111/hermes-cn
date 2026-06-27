@@ -1,3 +1,14 @@
+
+"""Nous Portal适配器
+
+【产品经理理解要点】
+Nous Portal的OAuth认证代理适配器，读取和刷新JWT。
+- 从~/.hermes/auth.json读取Nous OAuth状态
+- 自动验证和刷新即将过期的推理JWT
+- 暴露上游base_url和bearer供代理转发
+
+────────────────────────────────────────────────────────────────"""
+
 """Nous Portal upstream adapter.
 
 Reads the user's Nous OAuth state from ``~/.hermes/auth.json`` through the

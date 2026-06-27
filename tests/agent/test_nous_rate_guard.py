@@ -1,4 +1,14 @@
-"""Tests for agent/nous_rate_guard.py — cross-session Nous Portal rate limit guard."""
+"""Agent核心测试 - nous rate guard
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的nous rate guard验证。
+- 验证功能：nous rate guard功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：nous rate guard功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for agent/nous_rate_guard.py — cross-session Nous Portal rate limit guard.
+"""
 
 import json
 import os

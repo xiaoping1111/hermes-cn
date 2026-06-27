@@ -1,4 +1,13 @@
-"""Integration tests for the docker orphan-reaper wiring in terminal_tool.
+"""工具系统测试 - docker orphan reaper integration
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的docker orphan reaper integration验证。
+- 验证功能：docker orphan reaper integration功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：docker orphan reaper integration功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Integration tests for the docker orphan-reaper wiring in terminal_tool.
 
 The reaper itself is unit-tested in tests/tools/test_docker_environment.py
 under the "Orphan reaper" section. These tests cover the terminal_tool-side

@@ -1,12 +1,20 @@
-"""Tests for plugin CLI registration system.
+"""CLIplugin cli registration测试
+
+【产品经理理解要点】
+CLIplugin cli registration功能测试。
+- 验证功能：命令行plugin cli registration功能
+- 关键场景：配置、执行、验证
+- 业务影响：plugin cli registration命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for plugin CLI registration system.
 
 Covers:
   - PluginContext.register_cli_command()
   - PluginManager._cli_commands storage
   - get_plugin_cli_commands() convenience function
   - Memory plugin CLI discovery (discover_plugin_cli_commands)
-  - Honcho register_cli() builds correct argparse tree
-"""
+  - Honcho register_cli() builds correct argparse tree"""
 
 import sys
 from unittest.mock import MagicMock

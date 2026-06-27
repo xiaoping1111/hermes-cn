@@ -1,6 +1,14 @@
-"""Tests for the profile.yaml metadata layer (description + description_auto)
-and the profile_describer LLM module.
-"""
+"""CLIprofile describer测试
+
+【产品经理理解要点】
+CLIprofile describer功能测试。
+- 验证功能：命令行profile describer功能
+- 关键场景：配置、执行、验证
+- 业务影响：profile describer命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the profile.yaml metadata layer (description + description_auto)
+and the profile_describer LLM module."""
 
 from __future__ import annotations
 

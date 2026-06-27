@@ -1,3 +1,14 @@
+
+"""Shell补全脚本生成
+
+【产品经理理解要点】
+从argparse解析树动态生成bash/zsh/fish补全脚本。
+- 遍历argparse树提取子命令和标志
+- 生成永远与当前版本同步的补全脚本
+- 无需手动维护子命令列表
+
+────────────────────────────────────────────────────────────────"""
+
 """Shell completion script generation for hermes CLI.
 
 Walks the live argparse parser tree to generate accurate, always-up-to-date

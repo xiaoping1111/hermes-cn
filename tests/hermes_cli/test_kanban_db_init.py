@@ -1,5 +1,14 @@
 from __future__ import annotations
 
+"""CLIkanban db init测试
+
+【产品经理理解要点】
+CLIkanban db init功能测试。
+- 验证功能：命令行kanban db init功能
+- 关键场景：配置、执行、验证
+- 业务影响：kanban db init命令行功能失效"""
+
+
 import sqlite3
 import threading
 from pathlib import Path

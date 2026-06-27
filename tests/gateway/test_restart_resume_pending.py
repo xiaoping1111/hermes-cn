@@ -1,4 +1,13 @@
-"""Tests for the resume_pending session continuity path.
+"""重启恢复挂起
+
+【产品经理理解要点】
+重启恢复挂起任务。
+- 验证功能：服务重启后挂起任务的恢复
+- 关键场景：任务发现、状态恢复、重新调度
+- 业务影响：重启后挂起任务丢失
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the resume_pending session continuity path.
 
 Covers the behaviour introduced to fix the ``Gateway shutting down ...
 task will be interrupted`` follow-up bug (spec: PR #11852, builds on
@@ -22,8 +31,7 @@ PRs #9850, #9934, #7536):
 
 4. The existing ``.restart_failure_counts`` stuck-loop counter from
    PR #7536 remains the single source of escalation — no parallel
-   counter is added on ``SessionEntry``.
-"""
+   counter is added on ``SessionEntry``."""
 
 import asyncio
 import time

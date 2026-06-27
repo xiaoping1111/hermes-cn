@@ -1,4 +1,13 @@
-"""Regression tests for Google Workspace OAuth setup.
+"""Google OAuth设置
+
+【产品经理理解要点】
+Google OAuth授权流程。
+- 验证功能：OAuth配置与令牌管理
+- 关键场景：授权、令牌、刷新
+- 业务影响：Google OAuth失败
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for Google Workspace OAuth setup.
 
 These tests cover the headless/manual auth-code flow where the browser step and
 code exchange happen in separate process invocations.

@@ -1,10 +1,18 @@
-"""Tests for the cronjob tool schema shape.
+"""CronJob模式
+
+【产品经理理解要点】
+CronJob数据模式校验。
+- 验证功能：定时任务配置的数据格式校验
+- 关键场景：字段校验、默认值、序列化
+- 业务影响：配置格式错误导致任务无法加载
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the cronjob tool schema shape.
 
 Guards the description text that flags ``schedule`` (and ``prompt``) as
 REQUIRED for ``action=create`` — the load-bearing fix for description-driven
 models (e.g. Grok) that omit schedule when the schema only lists ``action``
-in ``required[]``. See issue #32427 / PR #32448.
-"""
+in ``required[]``. See issue #32427 / PR #32448."""
 
 from __future__ import annotations
 

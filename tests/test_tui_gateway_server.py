@@ -1,4 +1,12 @@
 import json
+"""测试 - tui gateway server
+
+【产品经理理解要点】
+功能验证中的tui gateway server验证。
+- 验证功能：tui gateway server功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：tui gateway server功能异常或存在安全隐患"""
+
 import os
 import subprocess
 import sys

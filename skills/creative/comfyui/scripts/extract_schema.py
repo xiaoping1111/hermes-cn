@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""ComfyUI Schema 提取
+
+【产品经理理解要点】
+提取 ComfyUI 节点的输入输出 Schema。
+- 节点参数解析
+- 类型信息提取
+
+─────────────────────────────────────────────────────────────────
+
 extract_schema.py — Analyze a ComfyUI API-format workflow and extract
 controllable parameters.
 

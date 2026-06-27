@@ -1,4 +1,13 @@
-"""Tests for Telegram DM Private Chat Topics (Bot API 9.4).
+"""网关dm topics测试
+
+【产品经理理解要点】
+网关dm topics功能测试。
+- 验证功能：网关dm topics处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：dm topics功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Telegram DM Private Chat Topics (Bot API 9.4).
 
 Covers:
 - _setup_dm_topics: loading persisted thread_ids from config
@@ -6,8 +15,7 @@ Covers:
 - _persist_dm_topic_thread_id: saving thread_id back to config.yaml
 - _get_dm_topic_info: looking up topic config by thread_id
 - _cache_dm_topic_from_message: caching thread_ids from incoming messages
-- _build_message_event: DM topic resolution in message events
-"""
+- _build_message_event: DM topic resolution in message events"""
 
 import os
 import sys

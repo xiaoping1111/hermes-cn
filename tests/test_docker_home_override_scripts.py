@@ -1,4 +1,14 @@
-"""Regression tests for Docker HOME overrides under s6/with-contenv."""
+"""测试 - docker home override scripts
+
+【产品经理理解要点】
+功能验证中的docker home override scripts验证。
+- 验证功能：docker home override scripts功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：docker home override scripts功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for Docker HOME overrides under s6/with-contenv.
+"""
 
 from pathlib import Path
 

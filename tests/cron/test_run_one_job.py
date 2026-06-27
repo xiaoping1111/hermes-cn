@@ -1,4 +1,13 @@
-"""Characterization + unit tests for the `run_one_job` shared helper (Phase 4A).
+"""单任务执行
+
+【产品经理理解要点】
+单个定时任务执行流程。
+- 验证功能：任务触发与执行的完整链路
+- 关键场景：任务触发、环境准备、执行、结果处理
+- 业务影响：定时任务无法正常执行
+
+─────────────────────────────────────────────────────────────────────────
+Characterization + unit tests for the `run_one_job` shared helper (Phase 4A).
 
 `tick`'s per-job body (`_process_job`) is the execute → save → deliver → mark
 sequence that fires ONE due job. Phase 4A extracts it into a module-level
@@ -8,8 +17,7 @@ correctness.
 
 The first test characterizes the sequence as driven through `tick()` (proving
 the extraction didn't change `tick`'s behavior); the rest unit-test the
-extracted helper directly.
-"""
+extracted helper directly."""
 import cron.scheduler as s
 
 

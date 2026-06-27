@@ -1,3 +1,14 @@
+
+"""容器启动协调
+
+【产品经理理解要点】
+Docker容器重启时，从持久化卷重建s6服务目录并恢复上次运行状态。
+- 容器tmpfs重启后服务配置丢失，此模块负责重建
+- 读取gateway_state.json恢复之前运行中的网关
+- Dockerfile中的启动钩子，确保服务连续性
+
+────────────────────────────────────────────────────────────────"""
+
 """Container-boot reconciliation of per-profile gateway s6 services.
 
 Service directories under /run/service/ live on **tmpfs** and are wiped

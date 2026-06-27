@@ -1,5 +1,16 @@
 """OpenAI-compatible facade over Google AI Studio's native Gemini API.
 
+Gemini Native API 适配器
+
+【产品经理理解要点】
+将 Hermes 的 OpenAI 格式请求直接转为 Gemini 原生 API 格式，绕过兼容层。
+- 核心职责：OpenAI-Gemini 原生格式转换、流式响应转换、工具声明翻译
+- 关键业务概念：generateContent API、原生 Gemini 格式、SSE 流式
+- 在系统中的位置：Gemini 供应商的原生传输适配层
+
+─────────────────────────────────────────────────────────────────
+
+
 Hermes keeps ``api_mode='chat_completions'`` for the ``gemini`` provider so the
 main agent loop can keep using its existing OpenAI-shaped message flow.
 This adapter is the transport shim that converts those OpenAI-style

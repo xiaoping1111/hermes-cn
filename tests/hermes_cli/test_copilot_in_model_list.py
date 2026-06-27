@@ -1,4 +1,13 @@
-"""Tests for GitHub Copilot entries shown in the /model picker."""
+"""CLIcopilot in model list测试
+
+【产品经理理解要点】
+CLIcopilot in model list功能测试。
+- 验证功能：命令行copilot in model list功能
+- 关键场景：配置、执行、验证
+- 业务影响：copilot in model list命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for GitHub Copilot entries shown in the /model picker."""
 
 import os
 from unittest.mock import patch

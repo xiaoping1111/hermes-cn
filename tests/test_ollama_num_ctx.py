@@ -1,4 +1,13 @@
-"""Tests for Ollama num_ctx context length detection and injection.
+"""测试 - ollama num ctx
+
+【产品经理理解要点】
+功能验证中的ollama num ctx验证。
+- 验证功能：ollama num ctx功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：ollama num ctx功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Ollama num_ctx context length detection and injection.
 
 Covers:
   agent/model_metadata.py — query_ollama_num_ctx()

@@ -1,4 +1,13 @@
-"""Tests for the WhatsApp Cloud API setup wizard.
+"""CLIwhatsapp cloud setup测试
+
+【产品经理理解要点】
+CLIwhatsapp cloud setup功能测试。
+- 验证功能：命令行whatsapp cloud setup功能
+- 关键场景：配置、执行、验证
+- 业务影响：whatsapp cloud setup命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the WhatsApp Cloud API setup wizard.
 
 Covers:
 - Field-shape validators (catch the #1 setup mistake — phone number in
@@ -9,8 +18,7 @@ Covers:
   optional fields can be skipped, and the SETUP COMPLETE block prints
   the post-setup tunnel + Meta-dashboard instructions the user needs
   (the wizard can't smoke-test reachability itself because the gateway
-  isn't running yet during setup).
-"""
+  isn't running yet during setup)."""
 
 from __future__ import annotations
 

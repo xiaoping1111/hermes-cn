@@ -1,3 +1,11 @@
+"""CLIruntime provider resolution测试
+
+【产品经理理解要点】
+CLIruntime provider resolution功能测试。
+- 验证功能：命令行runtime provider resolution功能
+- 关键场景：配置、执行、验证
+- 业务影响：runtime provider resolution命令行功能失效"""
+
 import pytest
 
 from hermes_cli import runtime_provider as rp

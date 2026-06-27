@@ -1,4 +1,12 @@
-"""
+"""Hermes CLI 包初始化
+
+【产品经理理解要点】
+Hermes CLI 的包入口，定义版本号并确保终端编码为 UTF-8。
+- 核心职责：统一管理 CLI 版本信息，防止非 UTF-8 环境下的中文/特殊字符崩溃
+- 关键概念：版本号（__version__）、发布日期（__release_date__）、UTF-8 强制修复
+- 系统定位：所有 CLI 子命令的公共基础，最先被导入
+
+─────────────────────────────────────────────────────────────────
 Hermes CLI - Unified command-line interface for Hermes Agent.
 
 Provides subcommands for:

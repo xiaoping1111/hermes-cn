@@ -1,4 +1,12 @@
-"""
+"""顶层参数解析器
+
+【产品经理理解要点】
+构建hermes CLI的顶层argparse解析树，供主入口和其他模块引用。
+- 定义全局参数（如--profile）和chat子解析器
+- 供relaunch等模块内省已注册的命令行标志
+- 与main.py配合完成完整的命令行参数体系
+
+────────────────────────────────────────────────────────────────
 Top-level argparse construction for the hermes CLI.
 
 Lives in its own module so other modules (e.g. ``relaunch.py``) can
@@ -7,8 +15,7 @@ introspect the parser to discover which flags exist without running the
 
 Only the top-level parser and the ``chat`` subparser live here. Every other
 subparser (model, gateway, sessions, …) is built inline in ``main.py``
-because its dispatch is tightly coupled to module-level ``cmd_*`` functions.
-"""
+because its dispatch is tightly coupled to module-level ``cmd_*`` functions."""
 
 import argparse
 

@@ -1,5 +1,16 @@
 """CJK/wide-character-aware re-alignment of model-emitted markdown tables.
 
+Markdown 表格对齐修复
+
+【产品经理理解要点】
+修复包含中文字符的 Markdown 表格对齐问题，确保终端显示整齐。
+- 核心职责：使用 wcwidth 计算字符显示宽度、重算列填充、保持管道符对齐
+- 关键业务概念：CJK 字符宽度(2单元格)、终端对齐、wcwidth 库
+- 在系统中的位置：CLI 显示管线的后处理环节
+
+─────────────────────────────────────────────────────────────────
+
+
 Models pad markdown tables assuming each character occupies one terminal
 cell. CJK glyphs and most emoji render as two cells, so the model's
 spacing collapses into drift the moment a table reaches a real terminal —

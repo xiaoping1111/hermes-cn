@@ -1,11 +1,19 @@
-"""Tests for TelegramAdapter.send_or_update_status (issue #30045).
+"""Telegram网关测试
+
+【产品经理理解要点】
+Telegram平台网关功能测试。
+- 验证功能：Telegram平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for TelegramAdapter.send_or_update_status (issue #30045).
 
 The status-update path must:
   1. Send a fresh message on the first call for a (chat_id, status_key) pair.
   2. Edit that same message on subsequent calls with the same key.
   3. Fall back to sending fresh when the cached message edit fails.
-  4. Keep distinct keys independent (no cross-talk).
-"""
+  4. Keep distinct keys independent (no cross-talk)."""
 
 from __future__ import annotations
 

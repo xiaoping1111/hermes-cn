@@ -1,4 +1,12 @@
-"""
+"""OpenRouter Parrot 评估器
+
+【产品经理理解要点】
+通过 OpenRouter 运行 Parrot 评估指标。
+- 模型输出评估
+- OpenRouter API 集成
+
+─────────────────────────────────────────────────────────────────
+
 parrot_openrouter: same as the upstream `parrot` example but the LLM call goes
 through OpenRouter (OpenAI SDK) instead of Anthropic native. Lets us run an
 end-to-end evolution with whatever model the user already has paid access to.

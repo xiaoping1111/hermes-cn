@@ -1,4 +1,12 @@
-"""hermes-memory-store — holographic memory plugin using MemoryProvider interface.
+"""全息记忆插件包
+
+【产品经理理解要点】
+全息记忆系统入口，基于向量存储的长期记忆实现。
+- 提供存储、检索和记忆管理的完整实现
+- 面向需要高性能向量检索的记忆场景
+
+─────────────────────────────────────────────────────────────────
+hermes-memory-store — holographic memory plugin using MemoryProvider interface.
 
 Registers as a MemoryProvider plugin, giving the agent structured fact storage
 with entity resolution, trust scoring, and HRR-based compositional retrieval.

@@ -1,4 +1,13 @@
-"""Invariant: the @assistant-ui dependency cluster agrees on one tap version.
+"""测试 - assistant ui tap compat
+
+【产品经理理解要点】
+功能验证中的assistant ui tap compat验证。
+- 验证功能：assistant ui tap compat功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：assistant ui tap compat功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Invariant: the @assistant-ui dependency cluster agrees on one tap version.
 
 The Hermes desktop app (``apps/desktop``) is built from source on every
 install/update via ``scripts/install.ps1`` → ``npm ci``/``npm install`` →

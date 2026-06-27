@@ -1,10 +1,17 @@
-"""
+"""Telegram网络
+
+【产品经理理解要点】
+Telegram网络处理。
+- 验证功能：Telegram平台网络连接与重连
+- 关键场景：连接建立、断线重连、超时
+- 业务影响：Telegram连接不稳定
+
+─────────────────────────────────────────────────────────────────────────
 Tests for Telegram polling network error recovery.
 
 Specifically tests the fix for #3173 — when start_polling() fails after a
 network error, the adapter must self-reschedule the next reconnect attempt
-rather than silently leaving polling dead.
-"""
+rather than silently leaving polling dead."""
 
 import asyncio
 import sys

@@ -1,3 +1,11 @@
+"""CLIwindows native docs测试
+
+【产品经理理解要点】
+CLIwindows native docs功能测试。
+- 验证功能：命令行windows native docs功能
+- 关键场景：配置、执行、验证
+- 业务影响：windows native docs命令行功能失效"""
+
 from pathlib import Path
 
 

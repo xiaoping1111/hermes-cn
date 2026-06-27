@@ -1,4 +1,13 @@
 """
+浏览器供应商注册表
+
+【产品经理理解要点】
+管理云端浏览器后端插件(Browserbase/Browser Use/Firecrawl等)。
+- 核心职责：云端浏览器供应商注册与选择、本地/云端模式自动切换
+- 关键业务概念：云端浏览器(browser-use/browserbase/firecrawl)、cloud_provider 配置
+- 在系统中的位置：browser_* 工具的云端模式调度入口
+
+─────────────────────────────────────────────────────────────────
 Browser Provider Registry
 =========================
 

@@ -1,4 +1,12 @@
-"""
+"""Photon CLI 子命令
+
+【产品经理理解要点】
+提供 hermes photon 相关的命令行管理操作，用于 iMessage 服务的初始配置和状态查看。
+- setup：一站式首次配置（设备登录 + 项目创建 + 用户注册 + sidecar 安装）
+- status：查看登录状态、项目信息和 sidecar 运行状态
+- install-sidecar：安装 Node sidecar 依赖
+
+─────────────────────────────────────────────────────────────────
 ``hermes photon ...`` CLI subcommands — registered by the plugin via
 ``ctx.register_cli_command()``.
 

@@ -1,4 +1,13 @@
-"""disk_cleanup — ephemeral file cleanup for Hermes Agent.
+"""磁盘清理 — 临时文件自动回收
+
+【产品经理理解要点】
+自动清理 Hermes 运行产生的临时文件，防止磁盘空间无限增长。
+- 清理规则：测试文件立即删除、临时文件7天、cron输出14天、空目录立即
+- 仅作用域 HERMES_HOME 和 /tmp/hermes-*，绝不触碰系统目录
+- 大文件（>500MB）和长期文件仅提示，不自动删除
+
+─────────────────────────────────────────────────────────────────
+disk_cleanup — ephemeral file cleanup for Hermes Agent.
 
 Library module wrapping the deterministic cleanup rules written by
 @LVT382009 in PR #12212. The plugin ``__init__.py`` wires these

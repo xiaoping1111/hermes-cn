@@ -1,12 +1,20 @@
-"""Regression tests for dashboard profile-scoped skills/toolsets management.
+"""CLIweb server skills profiles测试
+
+【产品经理理解要点】
+CLIweb server skills profiles功能测试。
+- 验证功能：命令行web server skills profiles功能
+- 关键场景：配置、执行、验证
+- 业务影响：web server skills profiles命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for dashboard profile-scoped skills/toolsets management.
 
 "Set as active" on the Profiles page only flips the sticky ``active_profile``
 file (future CLI/gateway runs) — it never retargets the running dashboard
 process. Before the ``profile`` parameter existed, toggling a skill after
 "activating" a profile silently wrote into the dashboard's own config.
 These tests pin the new behavior: reads and writes land in the REQUESTED
-profile's HERMES_HOME, and the dashboard's own profile stays untouched.
-"""
+profile's HERMES_HOME, and the dashboard's own profile stays untouched."""
 import pytest
 import yaml
 

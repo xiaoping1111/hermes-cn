@@ -1,4 +1,13 @@
-"""Tests for auxiliary model config bridging — verifies that config.yaml values
+"""Agent核心测试 - auxiliary config bridge
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的auxiliary config bridge验证。
+- 验证功能：auxiliary config bridge功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：auxiliary config bridge功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for auxiliary model config bridging — verifies that config.yaml values
 are properly mapped to environment variables by both CLI and gateway loaders.
 
 Also tests the vision_tools and browser_tool model override env vars.

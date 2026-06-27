@@ -1,4 +1,13 @@
-"""Tests for the gateway-side clarify primitive (tools/clarify_gateway.py).
+"""工具系统测试 - clarify gateway
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的clarify gateway验证。
+- 验证功能：clarify gateway功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：clarify gateway功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the gateway-side clarify primitive (tools/clarify_gateway.py).
 
 The clarify tool needs to ask the user a question and block the agent
 thread until they respond.  These tests cover the module-level state

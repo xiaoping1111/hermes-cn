@@ -1,12 +1,20 @@
-"""Tests for the session race guard that prevents concurrent agent runs.
+"""会话竞态保护
+
+【产品经理理解要点】
+会话竞态保护。
+- 验证功能：并发会话操作的竞态条件保护
+- 关键场景：锁机制、操作排队、冲突解决
+- 业务影响：并发操作导致数据损坏
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the session race guard that prevents concurrent agent runs.
 
 The sentinel-based guard ensures that when _handle_message passes the
 "is an agent already running?" check and proceeds to the slow async
 setup path (vision enrichment, STT, hooks, session hygiene), a second
 message for the same session is correctly recognized as "already running"
 and routed through the interrupt/queue path instead of spawning a
-duplicate agent.
-"""
+duplicate agent."""
 
 import asyncio
 from unittest.mock import AsyncMock, MagicMock, patch

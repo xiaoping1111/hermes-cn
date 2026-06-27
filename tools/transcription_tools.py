@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
 """
+语音转文字工具
+
+【产品经理理解要点】
+将用户发送的语音消息转为文字，是语音交互闭环的入口。
+- 核心职责：支持6种STT引擎自动切换（本地faster-whisper免费默认、Groq免费、OpenAI、Mistral、xAI、ElevenLabs）
+- 在系统中的位置：位于消息网关（Telegram/Discord/WhatsApp等）和智能体对话引擎之间，是语音消息自动转写的核心组件
+
+─────────────────────────────────────────────────────────────────
 Transcription Tools Module
 
 Provides speech-to-text transcription with six providers:

@@ -1,4 +1,12 @@
-"""Shared path validation helpers for tool implementations.
+"""路径安全校验工具
+
+【产品经理理解要点】
+验证文件路径是否在允许的目录范围内，防止路径穿越攻击。
+- 核心职责：检查路径解析后是否仍在指定根目录内，阻止通过 `..` 或符号链接逃逸
+- 在系统中的位置：被技能管理、凭证文件、定时任务等多个工具模块共同调用的基础安全组件
+
+─────────────────────────────────────────────────────────────────
+Shared path validation helpers for tool implementations.
 
 Extracts the ``resolve() + relative_to()`` and ``..`` traversal check
 patterns previously duplicated across skill_manager_tool, skills_tool,

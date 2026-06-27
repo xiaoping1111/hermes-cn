@@ -1,4 +1,13 @@
-"""Multi-process concurrency stress test for the Kanban kernel.
+"""并发测试
+
+【产品经理理解要点】
+多会话并发执行。
+- 验证功能：并发资源隔离
+- 关键场景：并发执行、资源隔离
+- 业务影响：并发会话互相干扰
+
+─────────────────────────────────────────────────────────────────────────
+Multi-process concurrency stress test for the Kanban kernel.
 
 5 worker processes race for claims on a shared DB with 100 tasks. Each
 worker loops: claim -> simulate work -> complete. Asserts the invariants

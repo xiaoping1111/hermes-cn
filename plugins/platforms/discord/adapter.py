@@ -1,6 +1,16 @@
 from __future__ import annotations
 
 """
+Discord 平台适配器
+
+【产品经理理解要点】
+Hermes 接入 Discord 的核心模块，负责消息收发、斜杠命令、语音频道、审批按钮等全部交互。
+- 接收 Discord 服务器和私聊消息，转发给对话引擎处理
+- 支持斜杠命令（/ask、/reset、/status、/stop）、按钮审批、自动线程、反应反馈
+- 语音频道：加入/离开、TTS 播报、语音接收转文字、氛围音混音
+- 多智能体过滤：识别消息 @ 的是其他机器人时自动忽略，避免多 Agent 冲突
+
+─────────────────────────────────────────────────────────────────
 Discord platform adapter.
 
 Uses discord.py library for:

@@ -1,4 +1,13 @@
-"""Regression tests for #30479 — session-scoped /model and /reasoning overrides
+"""网关session override thread recovery测试
+
+【产品经理理解要点】
+网关session override thread recovery功能测试。
+- 验证功能：网关session override thread recovery处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：session override thread recovery功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for #30479 — session-scoped /model and /reasoning overrides
 silently lost on Telegram forum/DM topics and after compression session splits.
 
 Root cause: ``_handle_message_with_agent`` rewrites ``source.thread_id`` via
@@ -11,8 +20,7 @@ override was dropped.
 
 Fix: both command handlers normalize the source via
 ``_normalize_source_for_session_key`` before deriving the override key, so
-storage and read keys are identical.
-"""
+storage and read keys are identical."""
 
 import threading
 from unittest.mock import MagicMock
