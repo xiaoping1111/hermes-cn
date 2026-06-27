@@ -1,4 +1,14 @@
-"""Tests for feishu_doc_tool and feishu_drive_tool — registration and schema validation."""
+"""飞书工具系统测试
+
+【产品经理理解要点】
+飞书平台工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性。
+- 验证功能：飞书平台功能验证
+- 关键场景：飞书消息收发、连接管理
+- 业务影响：飞书平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for feishu_doc_tool and feishu_drive_tool — registration and schema validation.
+"""
 
 import importlib
 import unittest

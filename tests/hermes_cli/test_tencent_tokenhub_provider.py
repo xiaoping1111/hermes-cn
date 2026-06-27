@@ -1,4 +1,13 @@
-"""Tests for Tencent TokenHub provider support (Hy3 Preview)."""
+"""CLItencent tokenhub provider测试
+
+【产品经理理解要点】
+CLItencent tokenhub provider功能测试。
+- 验证功能：命令行tencent tokenhub provider功能
+- 关键场景：配置、执行、验证
+- 业务影响：tencent tokenhub provider命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Tencent TokenHub provider support (Hy3 Preview)."""
 
 import json
 import os

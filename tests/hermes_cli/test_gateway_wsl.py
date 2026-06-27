@@ -1,4 +1,13 @@
-"""Tests for WSL detection and WSL-aware gateway behavior."""
+"""CLIgateway wsl测试
+
+【产品经理理解要点】
+CLIgateway wsl功能测试。
+- 验证功能：命令行gateway wsl功能
+- 关键场景：配置、执行、验证
+- 业务影响：gateway wsl命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for WSL detection and WSL-aware gateway behavior."""
 
 import subprocess
 from types import SimpleNamespace

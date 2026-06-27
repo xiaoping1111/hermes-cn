@@ -1,4 +1,12 @@
-"""
+"""Web UI服务器
+
+【产品经理理解要点】
+FastAPI后端，提供Dashboard前端和REST API。
+- Vite/React前端托管 + REST API
+- 配置/环境变量/会话的管理接口
+- 默认http://127.0.0.1:9119
+
+────────────────────────────────────────────────────────────────
 Hermes Agent — Web UI server.
 
 Provides a FastAPI backend serving the Vite/React frontend and REST API
@@ -6,8 +14,7 @@ endpoints for managing configuration, environment variables, and sessions.
 
 Usage:
     python -m hermes_cli.main web          # Start on http://127.0.0.1:9119
-    python -m hermes_cli.main web --port 8080
-"""
+    python -m hermes_cli.main web --port 8080"""
 
 from contextlib import asynccontextmanager, contextmanager
 

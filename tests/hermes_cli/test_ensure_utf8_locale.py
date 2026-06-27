@@ -1,4 +1,13 @@
-"""Regression tests for hermes_cli._ensure_utf8().
+"""CLIensure utf8 locale测试
+
+【产品经理理解要点】
+CLIensure utf8 locale功能测试。
+- 验证功能：命令行ensure utf8 locale功能
+- 关键场景：配置、执行、验证
+- 业务影响：ensure utf8 locale命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for hermes_cli._ensure_utf8().
 
 Covers the crash class where the setup wizard (and other banner-printing
 commands) emit box-drawing characters and the ⚕ glyph, which raise
@@ -8,8 +17,7 @@ Historically the repair was gated on ``sys.platform == "win32"`` and only
 caught the Windows cp1252 case. Linux hosts with a latin-1 / C / POSIX locale
 (common on minimal Debian installs and Raspberry Pi) hit the identical crash
 in ``hermes setup`` because the repair returned early. See the Raspberry Pi
-report: latin-1 locale → UnicodeEncodeError before the wizard could start.
-"""
+report: latin-1 locale → UnicodeEncodeError before the wizard could start."""
 
 import io
 import os

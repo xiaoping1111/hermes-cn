@@ -1,9 +1,17 @@
-"""Tests for container-aware CLI routing (NixOS container mode).
+"""CLIcontainer aware cli测试
+
+【产品经理理解要点】
+CLIcontainer aware cli功能测试。
+- 验证功能：命令行container aware cli功能
+- 关键场景：配置、执行、验证
+- 业务影响：container aware cli命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for container-aware CLI routing (NixOS container mode).
 
 When container.enable = true in the NixOS module, the activation script
 writes a .container-mode metadata file. The host CLI detects this and
-execs into the container instead of running locally.
-"""
+execs into the container instead of running locally."""
 import os
 import subprocess
 from pathlib import Path

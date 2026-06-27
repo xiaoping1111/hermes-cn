@@ -1,11 +1,19 @@
-"""Tests for the dashboard admin API endpoints (MCP, pairing, webhooks,
+"""CLIdashboard admin endpoints测试
+
+【产品经理理解要点】
+CLIdashboard admin endpoints功能测试。
+- 验证功能：命令行dashboard admin endpoints功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard admin endpoints命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the dashboard admin API endpoints (MCP, pairing, webhooks,
 credential pool, memory, gateway lifecycle, ops, skills hub).
 
 These endpoints turn the web dashboard into an administration panel for
 operators without CLI access to the host. The tests assert the request
 contract and the CLI-config parity (servers/keys written via the API are
-visible to the CLI data layer), not specific catalog values.
-"""
+visible to the CLI data layer), not specific catalog values."""
 
 import pytest
 

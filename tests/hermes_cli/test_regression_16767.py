@@ -1,3 +1,11 @@
+"""CLIregression 16767测试
+
+【产品经理理解要点】
+CLIregression 16767功能测试。
+- 验证功能：命令行regression 16767功能
+- 关键场景：配置、执行、验证
+- 业务影响：regression 16767命令行功能失效"""
+
 import sys
 
 import hermes_cli.model_switch as ms

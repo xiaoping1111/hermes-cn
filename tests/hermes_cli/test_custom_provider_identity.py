@@ -1,12 +1,20 @@
-"""Unit tests for find_custom_provider_identity (base_url → custom:<name>).
+"""CLIcustom provider identity测试
+
+【产品经理理解要点】
+CLIcustom provider identity功能测试。
+- 验证功能：命令行custom provider identity功能
+- 关键场景：配置、执行、验证
+- 业务影响：custom provider identity命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for find_custom_provider_identity (base_url → custom:<name>).
 
 Reverse lookup used by tui_gateway session persistence to recover a named
 ``providers:`` / ``custom_providers:`` entry from the only durable fact the
 session row keeps once the provider has been resolved to the literal string
 "custom": the endpoint URL. See
 tests/tui_gateway/test_custom_provider_session_persistence.py for the
-end-to-end persist/resume round-trip.
-"""
+end-to-end persist/resume round-trip."""
 
 import hermes_cli.runtime_provider as rp
 

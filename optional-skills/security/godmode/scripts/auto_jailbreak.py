@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""自动越狱测试
+
+【产品经理理解要点】
+GodMode 安全测试的自动越狱尝试脚本。
+- 多策略越狱提示生成
+- 安全边界测试
+
+─────────────────────────────────────────────────────────────────
+
 Auto-Jailbreak Pipeline
 
 Automatically tests jailbreak techniques against the current model,

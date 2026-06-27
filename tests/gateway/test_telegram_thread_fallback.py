@@ -1,12 +1,20 @@
-"""Tests for Telegram topic/thread routing fallbacks.
+"""Telegram网关测试
+
+【产品经理理解要点】
+Telegram平台网关功能测试。
+- 验证功能：Telegram平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Telegram topic/thread routing fallbacks.
 
 Supergroup forum topics route with ``message_thread_id``. Hermes-created
 private DM topic lanes are different: live Telegram testing showed they only
 stay in the expected lane when sends include both the private topic
 ``message_thread_id`` and a ``reply_to_message_id`` anchor to the triggering
 user message. If either anchor is unavailable or rejected, the adapter must
-avoid retrying with a partial topic route that can render outside the lane.
-"""
+avoid retrying with a partial topic route that can render outside the lane."""
 
 import sys
 import types

@@ -1,4 +1,13 @@
-"""End-to-end: a built wheel, installed without a source tree, must resolve
+"""测试 - wheel locales e2e
+
+【产品经理理解要点】
+功能验证中的wheel locales e2e验证。
+- 验证功能：wheel locales e2e功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：wheel locales e2e功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+End-to-end: a built wheel, installed without a source tree, must resolve
 i18n catalogs and render human strings — not raw key paths.
 
 This is the test that would have caught #27632 / #35374 / #23943. Metadata

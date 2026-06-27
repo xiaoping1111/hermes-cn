@@ -1,4 +1,13 @@
-"""Write-guard tests — managed keys can't be set/removed by the user."""
+"""CLImanaged scope writeguard测试
+
+【产品经理理解要点】
+CLImanaged scope writeguard功能测试。
+- 验证功能：命令行managed scope writeguard功能
+- 关键场景：配置、执行、验证
+- 业务影响：managed scope writeguard命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Write-guard tests — managed keys can't be set/removed by the user."""
 import pytest
 
 

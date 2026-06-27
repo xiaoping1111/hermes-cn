@@ -1,4 +1,12 @@
-"""OpenAI Realtime API WebSocket client + file-queue speaker.
+"""Google Meet OpenAI 实时客户端
+
+【产品经理理解要点】
+使用 OpenAI Realtime API 处理 Google Meet 音频。
+- OpenAI Realtime API 集成
+- 实时语音转文字
+
+─────────────────────────────────────────────────────────────────
+OpenAI Realtime API WebSocket client + file-queue speaker.
 
 This module is the "output" side of the v2 voice bridge: it takes text,
 sends it to the OpenAI Realtime API, receives audio deltas back, and

@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Search Wikipedia + Wikidata for an entity (person, company, place, concept).
+"""Wikipedia 查询
+
+【产品经理理解要点】
+查询 Wikipedia 获取实体背景信息。
+- 条目搜索和摘要
+- 多语言支持
+
+─────────────────────────────────────────────────────────────────
+Search Wikipedia + Wikidata for an entity (person, company, place, concept).
 
 Two free APIs:
   - Wikipedia OpenSearch + REST summary endpoint for narrative bio

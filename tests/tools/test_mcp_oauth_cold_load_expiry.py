@@ -1,4 +1,13 @@
-"""Tests for cold-load token expiry tracking in MCP OAuth.
+"""工具系统测试 - mcp oauth cold load expiry
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的mcp oauth cold load expiry验证。
+- 验证功能：mcp oauth cold load expiry功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：mcp oauth cold load expiry功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for cold-load token expiry tracking in MCP OAuth.
 
 PR #11383's consolidation fixed external-refresh reloading (mtime disk-watch)
 and 401 dedup, but left two underlying latent bugs in place:

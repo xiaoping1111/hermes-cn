@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Fake worker process that exercises the real subprocess contract.
+"""压力与稳定性测试 -  fake worker
+
+【产品经理理解要点】
+高并发、竞态条件、模糊输入等极端场景下的系统健壮性中的 fake worker验证。
+- 验证功能： fake worker功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响： fake worker功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Fake worker process that exercises the real subprocess contract.
 
 Reads HERMES_KANBAN_TASK from env, heartbeats periodically, does short
 work, completes via the CLI. Designed to be spawned by the dispatcher

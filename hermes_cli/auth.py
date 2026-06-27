@@ -1,4 +1,12 @@
-"""
+"""多提供商认证系统
+
+【产品经理理解要点】
+统一管理 Hermes 与各 AI 提供商（Nous/OpenAI/xAI/Anthropic 等）的认证，支持 OAuth 和 API Key 两种方式。
+- 核心职责：OAuth 设备码流程、API Key 解析与刷新、凭证持久化（auth.json）、跨进程文件锁、多提供商优先级链
+- 关键概念：提供商注册表（PROVIDER_REGISTRY）、认证存储（auth.json）、凭证池（credential_pool）、安全模式部署
+- 系统定位：所有 AI 推理调用的认证入口，网关和 CLI 共用，确保 token 自动刷新不中断服务
+
+─────────────────────────────────────────────────────────────────
 Multi-provider authentication system for Hermes Agent.
 
 Supports OAuth device code flows (Nous Portal, future: OpenAI Codex) and

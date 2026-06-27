@@ -1,4 +1,14 @@
-"""Tests for agent/skill_commands.py — skill slash command scanning and platform filtering."""
+"""Agent核心测试 - skill commands
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的skill commands验证。
+- 验证功能：skill commands功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：skill commands功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for agent/skill_commands.py — skill slash command scanning and platform filtering.
+"""
 
 import os
 from pathlib import Path

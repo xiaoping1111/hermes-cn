@@ -1,11 +1,19 @@
-"""Test that overlay providers with mismatched models.dev keys resolve correctly.
+"""CLIoverlay slug resolution测试
+
+【产品经理理解要点】
+CLIoverlay slug resolution功能测试。
+- 验证功能：命令行overlay slug resolution功能
+- 关键场景：配置、执行、验证
+- 业务影响：overlay slug resolution命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Test that overlay providers with mismatched models.dev keys resolve correctly.
 
 HERMES_OVERLAYS keys may be models.dev IDs (e.g. "github-copilot") while
 _PROVIDER_MODELS and config.yaml use Hermes IDs ("copilot").  The slug
 resolution in list_authenticated_providers() Section 2 must bridge this gap.
 
-Covers: #5223, #6492
-"""
+Covers: #5223, #6492"""
 
 import os
 from unittest.mock import patch

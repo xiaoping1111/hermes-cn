@@ -1,4 +1,13 @@
-"""Tests for Tavily web backend integration.
+"""Web工具集成
+
+【产品经理理解要点】
+Web工具端到端正确性。
+- 验证功能：搜索/抓取工具集成
+- 关键场景：搜索、抓取、结果解析
+- 业务影响：Web工具无法正常工作
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Tavily web backend integration.
 
 Coverage:
   _tavily_request() — API key handling, endpoint construction, error propagation.

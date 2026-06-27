@@ -1,4 +1,13 @@
-"""Unit tests for the MiniMax provider profile.
+"""插件系统测试 - minimax profile
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的minimax profile验证。
+- 验证功能：minimax profile功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：minimax profile功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for the MiniMax provider profile.
 
 Three MiniMax provider profiles (`minimax` direct API, `minimax-cn` China direct
 API, `minimax-oauth` browser OAuth) all advertise a `default_aux_model` on

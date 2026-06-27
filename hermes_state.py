@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""SQLite 会话状态存储
+
+【产品经理理解要点】
+会话持久化引擎：用 SQLite 数据库存储所有对话记录，支持全文搜索和会话管理。
+- 核心职责：会话元数据存储、消息历史持久化、FTS5 全文搜索、会话分支与压缩
+- 关键业务概念：会话(session)、分支(branch)、压缩链(compression chain)、来源标签(cli/telegram等)
+- 在系统中的位置：核心数据层，CLI 和 Gateway 的会话持久化均依赖此模块
+
+─────────────────────────────────────────────────────────────────
 SQLite State Store for Hermes Agent.
 
 Provides persistent session storage with FTS5 full-text search, replacing

@@ -1,4 +1,13 @@
-"""Tests for _verify_core_dependencies_installed.
+"""CLIverify core dependencies测试
+
+【产品经理理解要点】
+CLIverify core dependencies功能测试。
+- 验证功能：命令行verify core dependencies功能
+- 关键场景：配置、执行、验证
+- 业务影响：verify core dependencies命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for _verify_core_dependencies_installed.
 
 Regression coverage for the partial-install bug where uv's incremental
 resolver silently failed to land ``pathspec`` (and similar newly-added
@@ -11,8 +20,7 @@ The verification step:
   2. Filters by environment markers so cross-platform exclusions don't
      false-positive (e.g. ``ptyprocess ; sys_platform != 'win32'`` on Windows).
   3. Probes ``importlib.metadata.version()`` in the venv interpreter.
-  4. Reinstalls with --reinstall, then per-package, if anything's missing.
-"""
+  4. Reinstalls with --reinstall, then per-package, if anything's missing."""
 
 from __future__ import annotations
 

@@ -1,3 +1,11 @@
+"""CLIchat skills flag测试
+
+【产品经理理解要点】
+CLIchat skills flag功能测试。
+- 验证功能：命令行chat skills flag功能
+- 关键场景：配置、执行、验证
+- 业务影响：chat skills flag命令行功能失效"""
+
 import sys
 
 

@@ -1,8 +1,16 @@
-"""Regression tests for hermes secrets bitwarden setup non-TTY guard.
+"""CLIsecrets bitwarden non tty测试
+
+【产品经理理解要点】
+CLIsecrets bitwarden non tty功能测试。
+- 验证功能：命令行secrets bitwarden non tty功能
+- 关键场景：配置、执行、验证
+- 业务影响：secrets bitwarden non tty命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for hermes secrets bitwarden setup non-TTY guard.
 
 Issue #40274: cmd_setup() crashes with EOFError when stdin is not a TTY
-because getpass.getpass() and console.input() require an interactive terminal.
-"""
+because getpass.getpass() and console.input() require an interactive terminal."""
 from __future__ import annotations
 
 import argparse

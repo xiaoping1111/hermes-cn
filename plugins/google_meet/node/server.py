@@ -1,4 +1,12 @@
-"""Remote node server.
+"""Google Meet Node 服务器
+
+【产品经理理解要点】
+Node 侧车的 HTTP/WebSocket 服务器实现。
+- WebSocket 连接管理
+- 请求路由和分发
+
+─────────────────────────────────────────────────────────────────
+Remote node server.
 
 Runs on the machine that will host the Meet bot (typically the user's
 Mac laptop with a signed-in Chrome). Exposes a WebSocket endpoint that

@@ -1,4 +1,12 @@
 from contextlib import nullcontext
+"""测试 - cli manual compress
+
+【产品经理理解要点】
+功能验证中的cli manual compress验证。
+- 验证功能：cli manual compress功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：cli manual compress功能异常或存在安全隐患"""
+
 
 from cli import HermesCLI
 

@@ -1,4 +1,13 @@
-"""Integration tests for the xAI video gen plugin's simplified surface.
+"""插件系统测试 - xai plugin integration
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的xai plugin integration验证。
+- 验证功能：xai plugin integration功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：xai plugin integration功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Integration tests for the xAI video gen plugin's simplified surface.
 
 xAI exposes only text-to-video and image-to-video through the unified
 ``video_generate`` tool. We assert the endpoint hit and the payload shape

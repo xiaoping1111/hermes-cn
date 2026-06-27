@@ -1,9 +1,17 @@
-"""Tests for interrupted-install self-heal (the ``.update-incomplete`` marker).
+"""CLIupdate interrupted recovery测试
+
+【产品经理理解要点】
+CLIupdate interrupted recovery功能测试。
+- 验证功能：命令行update interrupted recovery功能
+- 关键场景：配置、执行、验证
+- 业务影响：update interrupted recovery命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for interrupted-install self-heal (the ``.update-incomplete`` marker).
 
 Covers the breadcrumb lifecycle and the launch-time recovery guard added so a
 ``hermes update`` killed mid-install (Ctrl-C, terminal close, WSL OOM) gets
-finished automatically on the next launch instead of leaving a half-built venv.
-"""
+finished automatically on the next launch instead of leaving a half-built venv."""
 
 from __future__ import annotations
 

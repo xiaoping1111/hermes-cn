@@ -1,4 +1,13 @@
-"""Host-specific gating in ``hermes_cli.gateway._all_platforms()``.
+"""CLIgateway platform gating测试
+
+【产品经理理解要点】
+CLIgateway platform gating功能测试。
+- 验证功能：命令行gateway platform gating功能
+- 关键场景：配置、执行、验证
+- 业务影响：gateway platform gating命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Host-specific gating in ``hermes_cli.gateway._all_platforms()``.
 
 Some messaging platforms can't function on every host. The gate lives
 in one place — ``_all_platforms()`` — so the setup wizard, the curses
@@ -9,8 +18,7 @@ Currently:
 - Matrix is hidden on Windows. The ``[matrix]`` extra pulls
   ``mautrix[encryption]`` -> ``python-olm``, which has no Windows wheel
   and needs ``make`` + libolm to build from sdist. There's no native
-  Windows path that works.
-"""
+  Windows path that works."""
 
 
 

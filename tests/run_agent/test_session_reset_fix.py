@@ -1,4 +1,13 @@
-"""Tests for session reset completeness (fixes #2635).
+"""Agent运行引擎测试 - session reset fix
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的session reset fix验证。
+- 验证功能：session reset fix功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：session reset fix功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for session reset completeness (fixes #2635).
 
 /clear and /new must not carry stale state into the next session.
 Two fields were added after reset_session_state() was written and were

@@ -1,4 +1,12 @@
 from __future__ import annotations
+"""Hyperliquid交易技能
+
+【产品经理理解要点】
+加密货币交易查询。
+- 验证功能：交易数据查询展示
+- 关键场景：数据获取、解析、展示
+- 业务影响：交易查询功能异常"""
+
 
 import importlib.util
 import json

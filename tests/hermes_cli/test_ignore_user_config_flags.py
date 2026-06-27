@@ -1,4 +1,13 @@
-"""Tests for --ignore-user-config and --ignore-rules flags on `hermes chat`.
+"""CLIignore user config flags测试
+
+【产品经理理解要点】
+CLIignore user config flags功能测试。
+- 验证功能：命令行ignore user config flags功能
+- 关键场景：配置、执行、验证
+- 业务影响：ignore user config flags命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for --ignore-user-config and --ignore-rules flags on `hermes chat`.
 
 Ported from openai/codex#18646 (`feat: add --ignore-user-config and --ignore-rules`).
 Codex's flags fully isolate a run from user-level config and exec-policy .rules
@@ -11,8 +20,7 @@ files. In Hermes the equivalent isolation is:
   skip_memory=True)``).
 
 Both flags are wired via env vars so they work cleanly across the
-argparse → cmd_chat → cli.main() → HermesCLI → AIAgent call chain.
-"""
+argparse → cmd_chat → cli.main() → HermesCLI → AIAgent call chain."""
 
 from __future__ import annotations
 

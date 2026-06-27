@@ -1,11 +1,19 @@
-"""`hermes debug` must report the EFFECTIVE terminal backend.
+"""CLIdump terminal backend测试
+
+【产品经理理解要点】
+CLIdump terminal backend功能测试。
+- 验证功能：命令行dump terminal backend功能
+- 关键场景：配置、执行、验证
+- 业务影响：dump terminal backend命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+`hermes debug` must report the EFFECTIVE terminal backend.
 
 ``terminal.backend`` in config.yaml is bridged to the ``TERMINAL_ENV`` env var,
 but a ``TERMINAL_ENV`` set in .env / the shell overrides config and is what
 ``terminal_tool`` actually uses.  The dump used to print only the config value,
 which hid the override and made users believe the agent was running ``local``
-while it was really jailed in a docker/podman sandbox (and vice-versa).
-"""
+while it was really jailed in a docker/podman sandbox (and vice-versa)."""
 
 from pathlib import Path
 from types import SimpleNamespace

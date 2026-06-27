@@ -1,4 +1,13 @@
-"""Accretion caps for _read_tracker (file_tools) and _completion_consumed
+"""工具系统测试 - accretion caps
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的accretion caps验证。
+- 验证功能：accretion caps功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：accretion caps功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Accretion caps for _read_tracker (file_tools) and _completion_consumed
 (process_registry).
 
 Both structures are process-lifetime singletons that previously grew

@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""ComfyUI 批量执行
+
+【产品经理理解要点】
+批量提交和执行 ComfyUI 工作流。
+- 批量任务提交
+- 结果收集和错误处理
+
+─────────────────────────────────────────────────────────────────
+
 run_batch.py — Run a workflow many times, varying parameters per run.
 
 Two modes:

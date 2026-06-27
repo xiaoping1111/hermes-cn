@@ -1,4 +1,15 @@
 #!/usr/bin/env python3
+
+"""写入审批命令
+
+【产品经理理解要点】
+/memory和/skills写入审批的共享处理函数。
+- 列出/批准/拒绝/查看差异/切换模式
+- CLI和Gateway行为完全一致
+- 保护用户数据不被Agent意外修改
+
+────────────────────────────────────────────────────────────────"""
+
 """Shared handlers for the /memory and /skills write-approval subcommands.
 
 Both the interactive CLI (``cli.py``) and the gateway (``gateway/run.py``) call

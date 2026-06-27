@@ -1,3 +1,14 @@
+
+"""增强键盘输入
+
+【产品经理理解要点】
+扩展prompt_toolkit的输入解析以支持现代键盘协议。
+- Kitty和xterm modifyOtherKeys的键序列映射
+- 在CLI启动时一次性安装
+- 独立模块便于单元测试
+
+────────────────────────────────────────────────────────────────"""
+
 """Augmentations to prompt_toolkit's input-parsing tables.
 
 Imported once at CLI startup. Each helper installs a small mapping into

@@ -1,4 +1,12 @@
-"""Add a new slide to an unpacked PPTX directory.
+"""PPT 添加幻灯片
+
+【产品经理理解要点】
+向 PowerPoint 文件添加新幻灯片。
+- 幻灯片插入和布局
+- 内容填充
+
+─────────────────────────────────────────────────────────────────
+Add a new slide to an unpacked PPTX directory.
 
 Usage: python add_slide.py <unpacked_dir> <source>
 

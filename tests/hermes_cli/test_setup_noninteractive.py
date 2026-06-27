@@ -1,4 +1,13 @@
-"""Tests for non-interactive setup and first-run headless behavior."""
+"""CLIsetup noninteractive测试
+
+【产品经理理解要点】
+CLIsetup noninteractive功能测试。
+- 验证功能：命令行setup noninteractive功能
+- 关键场景：配置、执行、验证
+- 业务影响：setup noninteractive命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for non-interactive setup and first-run headless behavior."""
 
 from argparse import Namespace
 from unittest.mock import patch

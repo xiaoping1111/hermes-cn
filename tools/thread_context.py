@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Propagate agent-turn context into worker threads that dispatch Hermes tools.
+"""线程上下文传播
+
+【产品经理理解要点】
+确保工具在工作线程中执行时不丢失审批会话和安全上下文，防止危险命令绕过用户确认。
+- 核心职责：捕获主线程的ContextVars和线程本地变量，安装到工作线程中，保证审批门控和安全检查在线程池中正常工作
+- 业务价值：修复了网关模式下工具在后台线程执行时自动批准危险命令的安全漏洞
+- 在系统中的位置：位于工具调度器和线程池之间，是并发安全的重要保障
+
+─────────────────────────────────────────────────────────────────
+Propagate agent-turn context into worker threads that dispatch Hermes tools.
 
 A bare ``threading.Thread`` / ``ThreadPoolExecutor`` worker starts with an
 empty ``contextvars.Context`` and no thread-local approval/sudo callbacks.

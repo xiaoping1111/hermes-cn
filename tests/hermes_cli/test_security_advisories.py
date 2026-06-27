@@ -1,10 +1,18 @@
-"""Tests for hermes_cli.security_advisories.
+"""CLIsecurity advisories测试
+
+【产品经理理解要点】
+CLIsecurity advisories功能测试。
+- 验证功能：命令行security advisories功能
+- 关键场景：配置、执行、验证
+- 业务影响：security advisories命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.security_advisories.
 
 The advisory module is the user-facing detection / remediation surface
 for supply-chain attacks (e.g. the Mini Shai-Hulud worm of May 2026 that
 poisoned mistralai 2.4.6 on PyPI). These tests exercise the public API in
-isolation — no real package metadata, no real config, no real cache.
-"""
+isolation — no real package metadata, no real config, no real cache."""
 
 from __future__ import annotations
 

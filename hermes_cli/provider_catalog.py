@@ -1,3 +1,14 @@
+
+"""统一提供商目录
+
+【产品经理理解要点】
+CLI和Desktop共享的单一提供商目录数据源。
+- 合并models.dev目录、Hermes覆盖层和插件注册
+- 确保CLI选择器和Desktop设置页显示相同的提供商集
+- 修复了之前CLI和Desktop列表不同步的问题
+
+────────────────────────────────────────────────────────────────"""
+
 """Unified provider catalog — one source of truth for the provider universe.
 
 The provider list shown by ``hermes model`` (CLI/TUI) and the desktop Settings

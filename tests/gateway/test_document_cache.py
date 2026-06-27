@@ -1,9 +1,16 @@
-"""
+"""网关document cache测试
+
+【产品经理理解要点】
+网关document cache功能测试。
+- 验证功能：网关document cache处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：document cache功能异常
+
+─────────────────────────────────────────────────────────────────────────
 Tests for document cache utilities in gateway/platforms/base.py.
 
 Covers: get_document_cache_dir, cache_document_from_bytes,
-        cleanup_document_cache, SUPPORTED_DOCUMENT_TYPES.
-"""
+        cleanup_document_cache, SUPPORTED_DOCUMENT_TYPES."""
 
 import os
 import time

@@ -1,4 +1,12 @@
-"""Hybrid keyword/BM25 retrieval for the memory store.
+"""全息记忆检索模块
+
+【产品经理理解要点】
+处理记忆的向量检索和相似度匹配逻辑。
+- 向量相似度检索和排序
+- 支持多种检索策略和过滤条件
+
+─────────────────────────────────────────────────────────────────
+Hybrid keyword/BM25 retrieval for the memory store.
 
 Ported from KIK memory_agent.py — combines FTS5 full-text search with
 Jaccard similarity reranking and trust-weighted scoring.

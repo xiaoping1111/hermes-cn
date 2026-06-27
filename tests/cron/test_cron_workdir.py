@@ -1,4 +1,13 @@
-"""Tests for per-job workdir support in cron jobs.
+"""Cron工作目录
+
+【产品经理理解要点】
+Cron任务工作目录。
+- 验证功能：定时任务的工作目录管理
+- 关键场景：目录创建、权限、环境变量
+- 业务影响：任务在错误目录下执行
+
+─────────────────────────────────────────────────────────────────────────
+Tests for per-job workdir support in cron jobs.
 
 Covers:
   - jobs.create_job: param plumbing, validation, default-None preserved
@@ -7,8 +16,7 @@ Covers:
   - tools.cronjob_tools.cronjob: create + update JSON round-trip, schema
     includes workdir, _format_job exposes it when set
   - scheduler.tick(): partitions workdir jobs off the thread pool, restores
-    TERMINAL_CWD in finally, honours the env override during run_job
-"""
+    TERMINAL_CWD in finally, honours the env override during run_job"""
 
 from __future__ import annotations
 

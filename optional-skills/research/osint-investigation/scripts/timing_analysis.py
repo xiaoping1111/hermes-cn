@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Permutation test for donation/contract timing correlation (stdlib-only).
+"""时间线分析
+
+【产品经理理解要点】
+对事件进行时间排序和模式分析。
+- 事件时间排序
+- 异常时间模式检测
+
+─────────────────────────────────────────────────────────────────
+Permutation test for donation/contract timing correlation (stdlib-only).
 
 For each (donor, vendor) pair, compute the mean number of days between each
 donation and the nearest contract award. Then shuffle contract award dates

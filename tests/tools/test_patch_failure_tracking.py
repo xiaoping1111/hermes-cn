@@ -1,4 +1,13 @@
-"""Tests for per-file consecutive patch-failure tracking.
+"""工具系统测试 - patch failure tracking
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的patch failure tracking验证。
+- 验证功能：patch failure tracking功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：patch failure tracking功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for per-file consecutive patch-failure tracking.
 
 When the agent repeatedly fails to patch the same file with similar but
 non-matching old_strings, it's usually stuck in a loop with a stale view

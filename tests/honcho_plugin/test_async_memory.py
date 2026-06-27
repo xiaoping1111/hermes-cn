@@ -1,4 +1,13 @@
-"""Tests for the async-memory Honcho improvements.
+"""异步记忆
+
+【产品经理理解要点】
+Honcho异步记忆存取。
+- 验证功能：长对话记忆持久化
+- 关键场景：存取、持久化、一致性
+- 业务影响：长对话记忆丢失
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the async-memory Honcho improvements.
 
 Covers:
   - write_frequency parsing (async / turn / session / int)

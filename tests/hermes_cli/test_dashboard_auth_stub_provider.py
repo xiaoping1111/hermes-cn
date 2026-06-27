@@ -1,9 +1,17 @@
-"""Contract test for the StubAuthProvider used in dashboard-auth E2E tests.
+"""CLIdashboard auth stub provider测试
+
+【产品经理理解要点】
+CLIdashboard auth stub provider功能测试。
+- 验证功能：命令行dashboard auth stub provider功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard auth stub provider命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Contract test for the StubAuthProvider used in dashboard-auth E2E tests.
 
 Phase 2 of the dashboard-OAuth plan. Validates the stub against the
 provider protocol so subsequent phases that depend on its behavior
-have a guarantee.
-"""
+have a guarantee."""
 from __future__ import annotations
 
 import pytest

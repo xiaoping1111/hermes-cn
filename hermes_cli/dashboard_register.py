@@ -1,3 +1,14 @@
+
+"""Dashboard注册命令
+
+【产品经理理解要点】
+hermes dashboard register，自动注册自托管Dashboard的OAuth客户端。
+- 用现有Nous登录获取Portal访问令牌
+- 自动创建OAuth客户端ID并写入.env
+- 免去手动在Portal网页操作的步骤
+
+────────────────────────────────────────────────────────────────"""
+
 """``hermes dashboard register`` — register a self-hosted dashboard OAuth client.
 
 Automates what a user otherwise does by hand: open the Nous Portal

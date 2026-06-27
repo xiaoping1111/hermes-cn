@@ -1,4 +1,13 @@
-"""Tests for hermes_cli.auth._update_config_for_provider clearing stale fields.
+"""CLIupdate config clears custom fields测试
+
+【产品经理理解要点】
+CLIupdate config clears custom fields功能测试。
+- 验证功能：命令行update config clears custom fields功能
+- 关键场景：配置、执行、验证
+- 业务影响：update config clears custom fields命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.auth._update_config_for_provider clearing stale fields.
 
 When the user switches from a custom provider (e.g. MiniMax with
 ``api_mode: anthropic_messages``, ``api_key: mxp-...``) to a built-in
@@ -8,8 +17,7 @@ otherwise override the new provider's credentials and transport choice.
 Built-in providers that legitimately need a specific ``api_mode`` (copilot,
 xai) compute it at request-resolution time in
 ``_copilot_runtime_api_mode`` / ``_detect_api_mode_for_url``, so removing
-the persisted value here is safe.
-"""
+the persisted value here is safe."""
 
 from __future__ import annotations
 

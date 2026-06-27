@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Recalculate an .xlsx file's formulas using LibreOffice headless.
+"""Excel 公式重算
+
+【产品经理理解要点】
+触发 Excel 文件中公式的重新计算。
+- 公式刷新和缓存更新
+- 循环引用检测
+
+─────────────────────────────────────────────────────────────────
+Recalculate an .xlsx file's formulas using LibreOffice headless.
 
 Usage: python recalc.py <path.xlsx> [timeout_seconds]
 

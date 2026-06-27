@@ -1,3 +1,11 @@
+"""网关shared group sender prefix测试
+
+【产品经理理解要点】
+网关shared group sender prefix功能测试。
+- 验证功能：网关shared group sender prefix处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：shared group sender prefix功能异常"""
+
 import pytest
 
 from gateway.config import GatewayConfig, Platform, PlatformConfig

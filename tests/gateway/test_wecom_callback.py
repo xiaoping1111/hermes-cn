@@ -1,4 +1,13 @@
-"""Tests for the WeCom callback-mode adapter."""
+"""企微回调
+
+【产品经理理解要点】
+企业微信回调处理。
+- 验证功能：企业微信平台回调事件处理
+- 关键场景：回调验证、事件分发、签名校验
+- 业务影响：企微回调事件丢失
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the WeCom callback-mode adapter."""
 
 import asyncio
 from xml.etree import ElementTree as ET

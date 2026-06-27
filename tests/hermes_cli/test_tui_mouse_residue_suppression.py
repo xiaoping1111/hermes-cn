@@ -1,4 +1,13 @@
-"""Tests for the TUI-hot-path mouse-residue suppression.
+"""CLItui mouse residue suppression测试
+
+【产品经理理解要点】
+CLItui mouse residue suppression功能测试。
+- 验证功能：命令行tui mouse residue suppression功能
+- 关键场景：配置、执行、验证
+- 业务影响：tui mouse residue suppression命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the TUI-hot-path mouse-residue suppression.
 
 The Python launcher (`hermes --tui …`) has a ~100–300ms cold-start window
 where stdin is still in cooked + echo mode. If a previous Hermes session
@@ -6,8 +15,7 @@ left DEC mouse-tracking asserted, any mouse motion during that window
 echoes literal ``^[[<…M`` text into the user's scrollback.
 
 `_suppress_mouse_residue_early()` writes the disable sequence to stdout
-before the heavy imports so the terminal stops emitting events ASAP.
-"""
+before the heavy imports so the terminal stops emitting events ASAP."""
 
 from __future__ import annotations
 

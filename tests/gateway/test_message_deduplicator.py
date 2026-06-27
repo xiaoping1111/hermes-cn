@@ -1,4 +1,13 @@
-"""Tests for MessageDeduplicator TTL enforcement (#10306).
+"""网关message deduplicator测试
+
+【产品经理理解要点】
+网关message deduplicator功能测试。
+- 验证功能：网关message deduplicator处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：message deduplicator功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for MessageDeduplicator TTL enforcement (#10306).
 
 Previously, is_duplicate() returned True for any previously seen ID without
 checking its age — expired entries were only purged when cache size exceeded
@@ -6,8 +15,7 @@ max_size.  Normal workloads never overflowed, so messages stayed "duplicate"
 forever.
 
 The fix checks TTL at query time: if the entry's timestamp plus TTL is in
-the past, the entry is treated as expired and the message is allowed through.
-"""
+the past, the entry is treated as expired and the message is allowed through."""
 
 import time
 

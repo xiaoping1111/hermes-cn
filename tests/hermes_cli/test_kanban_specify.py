@@ -1,9 +1,17 @@
-"""Tests for the specifier module + `hermes kanban specify` CLI surface.
+"""CLIkanban specify测试
+
+【产品经理理解要点】
+CLIkanban specify功能测试。
+- 验证功能：命令行kanban specify功能
+- 关键场景：配置、执行、验证
+- 业务影响：kanban specify命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the specifier module + `hermes kanban specify` CLI surface.
 
 The auxiliary LLM client is mocked — these tests don't hit any network or
 real provider. They exercise the prompt plumbing, response parsing, DB
-writes, and CLI flag surface.
-"""
+writes, and CLI flag surface."""
 
 from __future__ import annotations
 

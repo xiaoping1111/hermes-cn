@@ -1,4 +1,13 @@
-"""Tests for the WAL→DELETE journal-mode fallback on NFS / SMB / FUSE.
+"""测试 - hermes state wal fallback
+
+【产品经理理解要点】
+功能验证中的hermes state wal fallback验证。
+- 验证功能：hermes state wal fallback功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：hermes state wal fallback功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the WAL→DELETE journal-mode fallback on NFS / SMB / FUSE.
 
 When ``PRAGMA journal_mode=WAL`` raises ``OperationalError("locking protocol")``
 (SQLITE_PROTOCOL — typical on NFS/SMB), Hermes must fall back to

@@ -1,4 +1,13 @@
-"""Tests for AWS Bedrock integration in the model picker and provider catalog.
+"""CLIbedrock model picker测试
+
+【产品经理理解要点】
+CLIbedrock model picker功能测试。
+- 验证功能：命令行bedrock model picker功能
+- 关键场景：配置、执行、验证
+- 业务影响：bedrock model picker命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for AWS Bedrock integration in the model picker and provider catalog.
 
 Covers the three paths changed by fix/bedrock-provider-model-ids-live-discovery:
 
@@ -13,8 +22,7 @@ Covers the three paths changed by fix/bedrock-provider-model-ids-live-discovery:
      when no AWS_REGION / AWS_DEFAULT_REGION env vars are set, so EU/AP users
      in eu-central-1 get eu.* profile IDs, not us.* ones.
 
-All Bedrock API calls are mocked — no real AWS credentials needed.
-"""
+All Bedrock API calls are mocked — no real AWS credentials needed."""
 
 from contextlib import contextmanager
 from types import ModuleType

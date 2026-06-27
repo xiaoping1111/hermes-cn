@@ -1,3 +1,14 @@
+
+"""MCP服务器选择器
+
+【产品经理理解要点】
+交互式MCP服务器目录浏览和操作界面。
+- 列出目录中所有MCP服务器+用户自定义服务器
+- 根据安装状态自动路由到安装/启用/配置流程
+- 与hermes plugin选择器相同的键盘导航UX
+
+────────────────────────────────────────────────────────────────"""
+
 """MCP picker — interactive `hermes mcp picker` (also the default `hermes mcp`).
 
 Lists every catalog entry plus any custom MCP servers the user has added via

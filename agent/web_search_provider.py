@@ -1,4 +1,13 @@
 """
+网页搜索供应商抽象接口
+
+【产品经理理解要点】
+定义网页搜索和内容提取的插件化后端接口，支持多种搜索引擎切换。
+- 核心职责：定义 WebSearchProvider ABC(search/extract)、供应商注册与选择
+- 关键业务概念：搜索后端(brave/ddgs/searxng/exa/tavily/firecrawl)、插件注册
+- 在系统中的位置：web_search/web_extract 工具的供应商抽象层
+
+─────────────────────────────────────────────────────────────────
 Web Search Provider ABC
 =======================
 

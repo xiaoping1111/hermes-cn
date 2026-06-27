@@ -1,8 +1,16 @@
-"""Regression harness — pins config/env load behavior BEFORE managed scope exists.
+"""CLImanaged scope regression测试
+
+【产品经理理解要点】
+CLImanaged scope regression功能测试。
+- 验证功能：命令行managed scope regression功能
+- 关键场景：配置、执行、验证
+- 业务影响：managed scope regression命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression harness — pins config/env load behavior BEFORE managed scope exists.
 
 Every test here must keep passing through all later phases when NO managed scope
-is present. They are the 'managed scope is invisible when absent' contract.
-"""
+is present. They are the 'managed scope is invisible when absent' contract."""
 import os
 import textwrap
 

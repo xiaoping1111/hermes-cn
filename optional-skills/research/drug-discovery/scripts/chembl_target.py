@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""ChEMBL 靶点查询
+
+【产品经理理解要点】
+查询 ChEMBL 数据库获取靶点相关化合物活性数据。
+- 靶点搜索和匹配
+- 活性数据提取和整理
+
+─────────────────────────────────────────────────────────────────
+
 chembl_target.py — Search ChEMBL for a target and retrieve top active compounds.
 Usage: python3 chembl_target.py "EGFR" --min-pchembl 7 --limit 20
 No external dependencies.

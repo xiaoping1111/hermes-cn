@@ -1,4 +1,13 @@
-"""Shared ANSI color utilities for Hermes CLI modules."""
+"""ANSI颜色工具库
+
+【产品经理理解要点】
+CLI模块共享的终端颜色判断和ANSI转义码工具。
+- should_use_color()：判断是否应使用彩色输出
+- 遵循NO_COLOR环境变量和TERM=dumb约定
+- 所有CLI模块的彩色输出基础
+
+────────────────────────────────────────────────────────────────
+Shared ANSI color utilities for Hermes CLI modules."""
 
 import os
 import sys

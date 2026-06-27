@@ -1,4 +1,13 @@
-"""Tests for Discord /skill 32-char clamp collision warnings.
+"""CLIdiscord skill clamp warning测试
+
+【产品经理理解要点】
+CLIdiscord skill clamp warning功能测试。
+- 验证功能：命令行discord skill clamp warning功能
+- 关键场景：配置、执行、验证
+- 业务影响：discord skill clamp warning命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Discord /skill 32-char clamp collision warnings.
 
 Discord's per-command name limit is 32 chars, so
 ``discord_skill_commands_by_category`` clamps skill slugs to that width
@@ -10,8 +19,7 @@ short of noticing that their skill was missing from the autocomplete.
 
 This module pins the upgraded behavior: a WARNING log with both full
 cmd_keys + the clamped name, so whoever named the skills sees the
-collision and can rename one.
-"""
+collision and can rename one."""
 from __future__ import annotations
 
 import logging

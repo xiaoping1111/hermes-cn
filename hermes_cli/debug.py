@@ -1,4 +1,13 @@
-"""``hermes debug`` debug tools for Hermes Agent.
+"""调试工具命令
+
+【产品经理理解要点】
+hermes debug子命令，上传脱敏后的调试报告到粘贴服务。
+- 自动收集系统信息和日志
+- 默认通过redact_sensitive_text脱敏凭证
+- 生成可分享的调试URL用于问题反馈
+
+────────────────────────────────────────────────────────────────
+``hermes debug`` debug tools for Hermes Agent.
 
 Currently supports:
     hermes debug share    Upload debug report (system info + logs) to a
@@ -8,8 +17,7 @@ Currently supports:
                           ``force=True`` before upload so credentials in
                           ``~/.hermes/logs/*.log`` are not leaked into
                           the public paste service. Pass ``--no-redact``
-                          to disable.
-"""
+                          to disable."""
 
 import io
 import json

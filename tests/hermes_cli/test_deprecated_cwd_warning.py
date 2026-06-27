@@ -1,4 +1,13 @@
-"""Tests for warn_deprecated_cwd_env_vars() migration warning."""
+"""CLIdeprecated cwd warning测试
+
+【产品经理理解要点】
+CLIdeprecated cwd warning功能测试。
+- 验证功能：命令行deprecated cwd warning功能
+- 关键场景：配置、执行、验证
+- 业务影响：deprecated cwd warning命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for warn_deprecated_cwd_env_vars() migration warning."""
 
 
 

@@ -1,4 +1,14 @@
-"""Tests for the Discord server introspection and management tool."""
+"""Discord工具系统测试
+
+【产品经理理解要点】
+Discord平台工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性。
+- 验证功能：Discord平台功能验证
+- 关键场景：Discord消息收发、连接管理
+- 业务影响：Discord平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Discord server introspection and management tool.
+"""
 
 import json
 import urllib.error

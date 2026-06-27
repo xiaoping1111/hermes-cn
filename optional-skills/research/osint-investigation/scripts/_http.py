@@ -1,4 +1,12 @@
-"""Tiny stdlib HTTP helper used by fetch_*.py scripts.
+"""OSINT HTTP 工具
+
+【产品经理理解要点】
+OSINT 脚本共享的 HTTP 请求工具。
+- 带重试的 HTTP 请求
+- 速率限制和 User-Agent 管理
+
+─────────────────────────────────────────────────────────────────
+Tiny stdlib HTTP helper used by fetch_*.py scripts.
 
 Provides polite retry + JSON convenience + User-Agent enforcement.
 """

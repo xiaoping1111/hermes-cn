@@ -1,4 +1,13 @@
-"""Tests for Ollama Cloud provider integration."""
+"""CLIollama cloud provider测试
+
+【产品经理理解要点】
+CLIollama cloud provider功能测试。
+- 验证功能：命令行ollama cloud provider功能
+- 关键场景：配置、执行、验证
+- 业务影响：ollama cloud provider命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Ollama Cloud provider integration."""
 
 import pytest
 from unittest.mock import patch, MagicMock

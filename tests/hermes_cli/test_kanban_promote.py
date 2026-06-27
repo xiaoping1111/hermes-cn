@@ -1,10 +1,18 @@
-"""Tests for the kanban `promote` verb (issue #28822).
+"""CLIkanban promote测试
+
+【产品经理理解要点】
+CLIkanban promote功能测试。
+- 验证功能：命令行kanban promote功能
+- 关键场景：配置、执行、验证
+- 业务影响：kanban promote命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the kanban `promote` verb (issue #28822).
 
 The realistic bug scenario from #28822 is: a child task ends up in
 ``todo`` with all its parents already ``done`` (because the
 auto-promote daemon hasn't run, or a manual close raced it).
-Direct-SQL setup is used to construct that state deterministically.
-"""
+Direct-SQL setup is used to construct that state deterministically."""
 
 from __future__ import annotations
 

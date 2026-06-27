@@ -1,4 +1,13 @@
-"""Regression tests for terminal navigation/focus escape sequences.
+"""CLI终端测试 - cli terminal shortcuts
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的cli terminal shortcuts验证。
+- 验证功能：cli terminal shortcuts功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：cli terminal shortcuts功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for terminal navigation/focus escape sequences.
 
 Ghostty/macOS window and tab navigation can deliver terminal focus reports
 (CSI I / CSI O) to the running TUI. These must be consumed by the input parser,

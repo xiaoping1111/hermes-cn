@@ -1,4 +1,13 @@
-"""Tests for plugins/plugin_utils.py — thread-safe lazy singleton helpers.
+"""测试 - plugin utils
+
+【产品经理理解要点】
+功能验证中的plugin utils验证。
+- 验证功能：plugin utils功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：plugin utils功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for plugins/plugin_utils.py — thread-safe lazy singleton helpers.
 
 These exercise the actual concurrency guarantee with real threads (not mocks):
 a barrier releases N threads simultaneously into the accessor, and we assert

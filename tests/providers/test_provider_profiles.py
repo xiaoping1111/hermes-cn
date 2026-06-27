@@ -1,4 +1,14 @@
-"""Tests for the provider module registry and profiles."""
+"""供应商Profile
+
+【产品经理理解要点】
+AI供应商Profile管理。
+- 验证功能：Profile默认值与合并
+- 关键场景：默认值、覆盖、合并
+- 业务影响：供应商配置异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the provider module registry and profiles.
+"""
 
 from providers import get_provider_profile, _REGISTRY
 from providers.base import ProviderProfile, OMIT_TEMPERATURE

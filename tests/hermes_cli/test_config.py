@@ -1,4 +1,13 @@
-"""Tests for hermes_cli configuration management."""
+"""CLIconfig测试
+
+【产品经理理解要点】
+CLIconfig功能测试。
+- 验证功能：命令行config功能
+- 关键场景：配置、执行、验证
+- 业务影响：config命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli configuration management."""
 
 import os
 from pathlib import Path

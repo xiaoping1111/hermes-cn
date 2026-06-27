@@ -1,4 +1,13 @@
-"""Test that tool_name is correctly persisted to the session DB for tool-result messages.
+"""Agent运行引擎测试 - tool name db persistence
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的tool name db persistence验证。
+- 验证功能：tool name db persistence功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：tool name db persistence功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Test that tool_name is correctly persisted to the session DB for tool-result messages.
 
 make_tool_result_message() sets tool_name on every tool-result dict at construction
 time. This test verifies that the value survives the flush path into the session DB.

@@ -1,4 +1,12 @@
 from pathlib import Path
+"""XURL文章摄取
+
+【产品经理理解要点】
+URL文章内容抓取。
+- 验证功能：文章内容文档化
+- 关键场景：抓取、解析、文档化
+- 业务影响：文章摄取功能异常"""
+
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]

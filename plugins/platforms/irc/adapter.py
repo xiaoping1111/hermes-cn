@@ -1,4 +1,13 @@
 """
+IRC 平台适配器
+
+【产品经理理解要点】
+接入 IRC 聊天协议，让 Agent 在 IRC 频道中收发消息，零外部依赖。
+- 纯标准库实现 IRC 协议（asyncio），无需安装额外 SDK
+- 支持 TLS 加密连接、NickServ 认证、用户白名单
+- 适用于技术社区（如 Libera.Chat）场景
+
+─────────────────────────────────────────────────────────────────
 IRC Platform Adapter for Hermes Agent.
 
 A plugin-based gateway adapter that connects to an IRC server and relays

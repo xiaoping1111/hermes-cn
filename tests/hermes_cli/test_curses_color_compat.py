@@ -1,4 +1,13 @@
-"""Tests for curses color compatibility on low-color terminals (Docker).
+"""CLIcurses color compat测试
+
+【产品经理理解要点】
+CLIcurses color compat功能测试。
+- 验证功能：命令行curses color compat功能
+- 关键场景：配置、执行、验证
+- 业务影响：curses color compat命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for curses color compatibility on low-color terminals (Docker).
 
 Regression test for #13688: ``hermes plugins`` crashes with
 ``curses.error: init_pair() : color number is greater than COLORS-1``
@@ -6,8 +15,7 @@ in Docker containers where curses.COLORS == 8 (only colors 0-7 exist).
 
 The bug was ``curses.init_pair(4, 8, -1)`` using raw color 8 ("bright
 black" / dim gray) which does not exist on 8-color terminals.  The fix
-clamps with ``min(8, curses.COLORS - 1)``.
-"""
+clamps with ``min(8, curses.COLORS - 1)``."""
 import sys
 
 import pytest

@@ -1,4 +1,13 @@
 """
+Shell 脚本钩子桥接
+
+【产品经理理解要点】
+让用户通过 YAML 配置在特定事件时运行 Shell 脚本，扩展 Hermes 的行为。
+- 核心职责：读取 hooks 配置、首次使用确认、注册为插件钩子回调
+- 关键业务概念：Shell 钩子、事件回调、白名单同意、安全执行(shell=False)
+- 在系统中的位置：插件钩子系统的 Shell 脚本扩展层
+
+─────────────────────────────────────────────────────────────────
 Shell-script hooks bridge.
 
 Reads the ``hooks:`` block from ``cli-config.yaml``, prompts the user for

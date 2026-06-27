@@ -1,4 +1,12 @@
-"""Mem0 memory plugin — MemoryProvider interface.
+"""Mem0 记忆插件
+
+【产品经理理解要点】
+基于 Mem0 的记忆系统实现，提供自动化的记忆提取和检索。
+- 自动从对话中提取和更新记忆
+- 支持结构化和语义化的记忆检索
+
+─────────────────────────────────────────────────────────────────
+Mem0 memory plugin — MemoryProvider interface.
 
 Server-side LLM fact extraction, semantic search, and automatic deduplication
 via the Mem0 Platform API (cloud) or OSS (self-hosted) via Memory.

@@ -1,4 +1,13 @@
-"""BasicAuthProvider — username/password dashboard auth (no OAuth IDP).
+"""基础认证提供者 — 用户名/密码 Dashboard 登录
+
+【产品经理理解要点】
+为自托管 Dashboard 提供最简单的密码保护，无需外部身份提供商。
+- 无需数据库或 OAuth IDP，凭据预配置，会话为 HMAC 签名令牌
+- 适合单机自托管场景，零基础设施依赖
+- 登录后与 OAuth 路径完全一致（会话 cookie、验证、刷新、登出）
+
+─────────────────────────────────────────────────────────────────
+BasicAuthProvider — username/password dashboard auth (no OAuth IDP).
 
 A self-hosted "just put a password on my dashboard" provider. It plugs
 into the same ``DashboardAuthProvider`` framework as the Nous OAuth

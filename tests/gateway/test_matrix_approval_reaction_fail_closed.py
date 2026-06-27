@@ -1,10 +1,18 @@
-"""Tests for Matrix adapter fail-closed approval reaction auth.
+"""Matrix网关测试
+
+【产品经理理解要点】
+Matrix平台网关功能测试。
+- 验证功能：Matrix平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Matrix平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Matrix adapter fail-closed approval reaction auth.
 
 When MATRIX_ALLOWED_USERS is not configured, _on_reaction must deny
 approval reactions by default unless GATEWAY_ALLOW_ALL_USERS=true.
 Mirrors the Telegram _is_callback_user_authorized fix (commit 89d32052e,
-PR #28494).
-"""
+PR #28494)."""
 
 import asyncio
 import sys

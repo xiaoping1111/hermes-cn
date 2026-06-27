@@ -1,4 +1,13 @@
-"""Shared fixtures for gateway e2e tests (Telegram, Discord).
+"""E2E conftest测试
+
+【产品经理理解要点】
+conftest端到端测试。
+- 验证功能：conftest端到端功能
+- 关键场景：完整链路、集成验证
+- 业务影响：conftest端到端流程不可用
+
+─────────────────────────────────────────────────────────────────────────
+Shared fixtures for gateway e2e tests (Telegram, Discord).
 
 These tests exercise the full async message flow:
     adapter.handle_message(event)
@@ -6,8 +15,7 @@ These tests exercise the full async message flow:
         → GatewayRunner._handle_message (command dispatch)
         → adapter.send() (captured by mock)
 
-No LLM, no real platform connections.
-"""
+No LLM, no real platform connections."""
 
 import asyncio
 import sys

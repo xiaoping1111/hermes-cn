@@ -1,12 +1,20 @@
-"""Tests for /approve and /deny gateway commands.
+"""网关approve deny commands测试
+
+【产品经理理解要点】
+网关approve deny commands功能测试。
+- 验证功能：网关approve deny commands处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：approve deny commands功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for /approve and /deny gateway commands.
 
 Verifies that dangerous command approvals use the blocking gateway approval
 mechanism — the agent thread blocks until the user responds with /approve
 or /deny, mirroring the CLI's synchronous input() flow.
 
 Supports multiple concurrent approvals (parallel subagents, execute_code)
-via a per-session queue.
-"""
+via a per-session queue."""
 
 import os
 import threading

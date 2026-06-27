@@ -1,8 +1,16 @@
-"""Regression harness for the dashboard auth gate.
+"""CLIdashboard auth gate测试
+
+【产品经理理解要点】
+CLIdashboard auth gate功能测试。
+- 验证功能：命令行dashboard auth gate功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard auth gate命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression harness for the dashboard auth gate.
 
 Phase 0 — establish a baseline pin on the current (pre-OAuth) behavior so
-later phases can prove they didn't break loopback mode.
-"""
+later phases can prove they didn't break loopback mode."""
 import pytest
 
 # Phase 5 / Phase 6: these tests mutate ``web_server.app.state.auth_required``

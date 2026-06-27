@@ -1,7 +1,17 @@
-"""Tests for CodexEventProjector — codex item/* events → Hermes messages list.
+"""Agent核心测试 - codex event projector
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的codex event projector验证。
+- 验证功能：codex event projector功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：codex event projector功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for CodexEventProjector — codex item/* events → Hermes messages list.
 
 Drives projection against fixture notifications captured from codex 0.130.0
-plus synthetic ones for item types we couldn't auth-test live."""
+plus synthetic ones for item types we couldn't auth-test live.
+"""
 
 from __future__ import annotations
 

@@ -1,8 +1,15 @@
-"""
+"""Slack网关测试
+
+【产品经理理解要点】
+Slack平台网关功能测试。
+- 验证功能：Slack平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Slack平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
 Tests for Slack mention gating (require_mention / free_response_channels).
 
-Follows the same pattern as test_whatsapp_group_gating.py.
-"""
+Follows the same pattern as test_whatsapp_group_gating.py."""
 
 import sys
 from unittest.mock import MagicMock

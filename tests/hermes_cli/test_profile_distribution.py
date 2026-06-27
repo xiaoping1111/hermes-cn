@@ -1,12 +1,20 @@
-"""Tests for hermes_cli.profile_distribution — git-based profile installs.
+"""CLIprofile distribution测试
+
+【产品经理理解要点】
+CLIprofile distribution功能测试。
+- 验证功能：命令行profile distribution功能
+- 关键场景：配置、执行、验证
+- 业务影响：profile distribution命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.profile_distribution — git-based profile installs.
 
 Covers manifest parsing, version requirement checks, install / update / describe
 on local-directory sources, and guards on what can and can't be installed.
 
 Transport-layer tests (git clone, URL handling) are exercised through live
 E2E runs, not unit tests — git itself is tested upstream, and subprocess-
-mocking git would just test the mock.
-"""
+mocking git would just test the mock."""
 
 from __future__ import annotations
 

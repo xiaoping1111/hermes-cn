@@ -1,3 +1,11 @@
+"""CLIxai model flow测试
+
+【产品经理理解要点】
+CLIxai model flow功能测试。
+- 验证功能：命令行xai model flow功能
+- 关键场景：配置、执行、验证
+- 业务影响：xai model flow命令行功能失效"""
+
 import argparse
 
 

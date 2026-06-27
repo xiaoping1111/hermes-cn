@@ -1,4 +1,13 @@
-"""Tests for transient-error handling in Telegram progress-message editing.
+"""Telegram网关测试
+
+【产品经理理解要点】
+Telegram平台网关功能测试。
+- 验证功能：Telegram平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for transient-error handling in Telegram progress-message editing.
 
 Issue: #27828
 
@@ -12,8 +21,7 @@ Two layers are tested:
 1. The ``_TRANSIENT_EDIT_MARKERS`` / retryable classification logic in
    ``TelegramAdapter.edit_message``.
 2. The ``send_progress_messages`` caller in ``run.py`` honours
-   ``result.retryable`` and keeps ``can_edit = True``.
-"""
+   ``result.retryable`` and keeps ``can_edit = True``."""
 
 from __future__ import annotations
 

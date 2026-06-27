@@ -1,7 +1,15 @@
-"""Tests for Matrix voice message support (MSC3245).
+"""Matrix网关测试
 
-Updated for the mautrix-python SDK (no more matrix-nio / nio imports).
-"""
+【产品经理理解要点】
+Matrix平台网关功能测试。
+- 验证功能：Matrix平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Matrix平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Matrix voice message support (MSC3245).
+
+Updated for the mautrix-python SDK (no more matrix-nio / nio imports)."""
 import os
 import tempfile
 import types

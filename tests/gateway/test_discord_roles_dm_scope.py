@@ -1,4 +1,13 @@
-"""Regression guard: DISCORD_ALLOWED_ROLES must be guild-scoped, not global.
+"""Discord网关测试
+
+【产品经理理解要点】
+Discord平台网关功能测试。
+- 验证功能：Discord平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Discord平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Regression guard: DISCORD_ALLOWED_ROLES must be guild-scoped, not global.
 
 Prior to this fix, ``_is_allowed_user`` iterated ``self._client.guilds`` and
 returned True if the user held any allowed role in ANY mutual guild. This
@@ -12,8 +21,7 @@ allowed a cross-guild DM bypass:
 
 The fix scopes role checks to the originating guild and disables role-based
 auth on DMs unless ``discord.dm_role_auth_guild`` in config.yaml explicitly
-opts into a single trusted guild.
-"""
+opts into a single trusted guild."""
 
 from types import SimpleNamespace
 from unittest.mock import MagicMock

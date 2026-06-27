@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Drive the Hermes TUI under HERMES_DEV_PERF and summarize the pipeline.
+"""TUI 性能剖析
+
+【产品经理理解要点】
+在性能剖析模式下驱动 TUI，模拟用户按键操作并汇总渲染/响应延迟数据。
+- 核心职责：启动 TUI 进程，自动发送按键事件（如翻页），收集 perf.log 中的延迟统计
+- 关键概念：用于发现 TUI 渲染瓶颈——首次渲染时间、帧率、内存占用等
+- 系统定位：性能测试脚本，开发/优化 TUI 时使用
+
+─────────────────────────────────────────────────────────────────
+Drive the Hermes TUI under HERMES_DEV_PERF and summarize the pipeline.
 
 Usage:
   scripts/profile-tui.py [--session SID] [--hold KEY] [--seconds N] [--rate HZ]

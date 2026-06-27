@@ -1,4 +1,12 @@
-"""Virtual audio bridge for feeding generated speech into Chrome's mic.
+"""Google Meet 音频桥接
+
+【产品经理理解要点】
+将 Google Meet 音频流桥接到语音识别服务。
+- 音频流转发和格式转换
+- 与 ASR 服务对接
+
+─────────────────────────────────────────────────────────────────
+Virtual audio bridge for feeding generated speech into Chrome's mic.
 
 v2 module. Provisions a platform-specific virtual audio device so the
 Meet bot's Chromium instance can be pointed at an input source we

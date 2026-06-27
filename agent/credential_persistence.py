@@ -1,5 +1,16 @@
 """Credential-pool disk-boundary sanitization helpers.
 
+凭证持久化边界
+
+【产品经理理解要点】
+定义哪些凭证可以写入磁盘(auth.json)，哪些是借用的运行时秘密必须排除。
+- 核心职责：判断凭证来源是否可持久化、清理借用凭证的原始值
+- 关键业务概念：可持久化来源(hermes_pkce/device_code等)、借用凭证、磁盘边界
+- 在系统中的位置：凭证池写入 auth.json 前的安全过滤器
+
+─────────────────────────────────────────────────────────────────
+
+
 These helpers define which credential-pool entries are references to borrowed
 runtime secrets and strip raw values before those entries are written to
 ``auth.json``.  They intentionally have no dependency on ``hermes_cli.auth`` so

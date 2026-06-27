@@ -1,3 +1,14 @@
+
+"""环境变量加载器
+
+【产品经理理解要点】
+一致的.env文件加载逻辑，处理凭证值的安全清洗。
+- 从~/.hermes/.env和项目.env加载环境变量
+- 凭证后缀的值自动清理非ASCII字符
+- 重复加载时去重和警告
+
+────────────────────────────────────────────────────────────────"""
+
 """Helpers for loading Hermes .env files consistently across entrypoints."""
 
 from __future__ import annotations

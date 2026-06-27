@@ -1,3 +1,14 @@
+
+"""斜杠命令注册表
+
+【产品经理理解要点】
+所有斜杠命令的中央注册表，供CLI帮助、Gateway分发、自动补全等使用。
+- COMMAND_REGISTRY：命令定义的单一数据源
+- 添加命令只需新增一条CommandDef
+- 别名系统：一个命令可有多个短名
+
+────────────────────────────────────────────────────────────────"""
+
 """Slash command definitions and autocomplete for the Hermes CLI.
 
 Central registry for all slash commands. Every consumer -- CLI help, gateway

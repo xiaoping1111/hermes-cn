@@ -1,4 +1,13 @@
-"""hermes webhook — manage dynamic webhook subscriptions from the CLI.
+"""Webhook管理命令
+
+【产品经理理解要点】
+hermes webhook子命令，管理动态Webhook订阅。
+- 订阅/列表/删除/测试Webhook端点
+- 配置持久化到~/.hermes/webhook_subscriptions.json
+- Gateway热重载，无需重启即生效
+
+────────────────────────────────────────────────────────────────
+hermes webhook — manage dynamic webhook subscriptions from the CLI.
 
 Usage:
     hermes webhook subscribe <name> [options]
@@ -7,8 +16,7 @@ Usage:
     hermes webhook test <name> [--payload '{"key": "value"}']
 
 Subscriptions persist to ~/.hermes/webhook_subscriptions.json and are
-hot-reloaded by the webhook adapter without a gateway restart.
-"""
+hot-reloaded by the webhook adapter without a gateway restart."""
 
 import json
 import os

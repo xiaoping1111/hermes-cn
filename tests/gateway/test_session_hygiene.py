@@ -1,12 +1,20 @@
-"""Tests for gateway session hygiene — auto-compression of large sessions.
+"""网关session hygiene测试
+
+【产品经理理解要点】
+网关session hygiene功能测试。
+- 验证功能：网关session hygiene处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：session hygiene功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway session hygiene — auto-compression of large sessions.
 
 Verifies that the gateway detects pathologically large transcripts and
 triggers auto-compression before running the agent.  (#628)
 
 The hygiene system uses the SAME compression config as the agent:
   compression.threshold × model context length
-so CLI and messaging platforms behave identically.
-"""
+so CLI and messaging platforms behave identically."""
 
 import importlib
 import sys

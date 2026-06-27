@@ -1,4 +1,12 @@
-"""Simplify tracked changes by merging adjacent w:ins or w:del elements.
+"""修订标记简化
+
+【产品经理理解要点】
+简化 Word 文档中的修订标记（redline）。
+- 修订变更解析
+- 标记清理和合并
+
+─────────────────────────────────────────────────────────────────
+Simplify tracked changes by merging adjacent w:ins or w:del elements.
 
 Merges adjacent <w:ins> elements from the same author into a single element.
 Same for <w:del> elements. This makes heavily-redlined documents easier to

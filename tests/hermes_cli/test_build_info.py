@@ -1,9 +1,17 @@
-"""Tests for hermes_cli.build_info — baked-in build SHA resolution.
+"""CLIbuild info测试
+
+【产品经理理解要点】
+CLIbuild info功能测试。
+- 验证功能：命令行build info功能
+- 关键场景：配置、执行、验证
+- 业务影响：build info命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.build_info — baked-in build SHA resolution.
 
 The build SHA is written by the Dockerfile's ``HERMES_GIT_SHA`` build-arg
 into ``<project_root>/.hermes_build_sha``.  These tests cover the read-side
-helper: missing file, malformed file, truncation, and error tolerance.
-"""
+helper: missing file, malformed file, truncation, and error tolerance."""
 
 from pathlib import Path
 from unittest.mock import patch

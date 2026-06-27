@@ -1,4 +1,13 @@
-"""Tests for hermes_cli/webhook.py — webhook subscription CLI."""
+"""CLIwebhook cli测试
+
+【产品经理理解要点】
+CLIwebhook cli功能测试。
+- 验证功能：命令行webhook cli功能
+- 关键场景：配置、执行、验证
+- 业务影响：webhook cli命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli/webhook.py — webhook subscription CLI."""
 
 import json
 import os

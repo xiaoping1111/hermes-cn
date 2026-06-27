@@ -1,4 +1,13 @@
-"""Tests for the web tools provider architecture.
+"""工具系统测试 - web providers
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的web providers验证。
+- 验证功能：web providers功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：web providers功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the web tools provider architecture.
 
 Covers:
 - WebSearchProvider / WebExtractProvider ABC enforcement

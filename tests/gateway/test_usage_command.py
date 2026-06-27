@@ -1,4 +1,13 @@
-"""Tests for gateway /usage command — agent cache lookup and output fields."""
+"""用量命令
+
+【产品经理理解要点】
+用量查询命令。
+- 验证功能：Token/模型用量查询命令
+- 关键场景：用量统计、格式化输出
+- 业务影响：用户无法查看使用量
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway /usage command — agent cache lookup and output fields."""
 
 import threading
 from unittest.mock import MagicMock, patch

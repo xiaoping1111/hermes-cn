@@ -1,4 +1,13 @@
-"""Regression test: temp file cleanup when materializing data URLs for vision.
+"""Agent运行引擎测试 - materialize data url cleanup
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的materialize data url cleanup验证。
+- 验证功能：materialize data url cleanup功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：materialize data url cleanup功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression test: temp file cleanup when materializing data URLs for vision.
 
 `_materialize_data_url_for_vision` creates a `NamedTemporaryFile(delete=False)`
 so the path can be handed to vision backends.  If `base64.b64decode` raises on

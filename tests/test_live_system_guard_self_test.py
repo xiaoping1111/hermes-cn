@@ -1,4 +1,13 @@
-"""Self-test for the live-system guard fixture in tests/conftest.py.
+"""测试 - live system guard self test
+
+【产品经理理解要点】
+功能验证中的live system guard self test验证。
+- 验证功能：live system guard self test功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：live system guard self test功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Self-test for the live-system guard fixture in tests/conftest.py.
 
 This file is the canary. If anyone removes a guard or weakens it, these
 tests fail. If anyone adds a NEW kill primitive to the codebase without

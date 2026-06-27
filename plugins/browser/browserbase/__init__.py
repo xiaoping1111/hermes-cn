@@ -1,4 +1,12 @@
-"""Browserbase cloud browser plugin — bundled, auto-loaded.
+"""Browserbase 浏览器插件
+
+【产品经理理解要点】
+基于 Browserbase 的云端浏览器后端。
+- 云端浏览器实例管理
+- 无需本地浏览器
+
+─────────────────────────────────────────────────────────────────
+Browserbase cloud browser plugin — bundled, auto-loaded.
 
 Mirrors the ``plugins/web/<vendor>/`` and ``plugins/image_gen/openai/``
 layout: ``provider.py`` holds the provider class; ``__init__.py::register``

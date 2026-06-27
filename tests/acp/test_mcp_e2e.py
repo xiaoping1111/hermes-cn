@@ -1,4 +1,13 @@
-"""End-to-end tests for ACP MCP server registration and tool-result reporting.
+"""ACP MCP端到端
+
+【产品经理理解要点】
+ACP与MCP端到端调用。
+- 验证功能：MCP工具调用链路
+- 关键场景：发现、调用、结果
+- 业务影响：MCP工具端到端失败
+
+─────────────────────────────────────────────────────────────────────────
+End-to-end tests for ACP MCP server registration and tool-result reporting.
 
 Exercises the full flow through the ACP server layer:
   new_session(mcpServers) → MCP tools registered → prompt() →

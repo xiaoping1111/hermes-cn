@@ -1,12 +1,20 @@
-"""Tests for Discord reply_to_mode functionality.
+"""Discord网关测试
+
+【产品经理理解要点】
+Discord平台网关功能测试。
+- 验证功能：Discord平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Discord平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Discord reply_to_mode functionality.
 
 Covers the threading behavior control for multi-chunk replies:
 - "off": Never reply-reference to original message
 - "first": Only first chunk uses reply reference (default)
 - "all": All chunks reply-reference the original message
 
-Also covers reply_to_text extraction from incoming messages.
-"""
+Also covers reply_to_text extraction from incoming messages."""
 import os
 import sys
 from datetime import datetime, timezone

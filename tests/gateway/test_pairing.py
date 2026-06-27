@@ -1,4 +1,13 @@
-"""Tests for gateway/pairing.py — DM pairing security system."""
+"""配对
+
+【产品经理理解要点】
+设备配对。
+- 验证功能：设备/用户的配对流程
+- 关键场景：配对请求、验证、完成
+- 业务影响：设备无法完成配对
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway/pairing.py — DM pairing security system."""
 
 import json
 import os

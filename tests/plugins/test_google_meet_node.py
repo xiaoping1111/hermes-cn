@@ -1,4 +1,13 @@
-"""Tests for the google_meet node primitive.
+"""插件系统测试 - google meet node
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的google meet node验证。
+- 验证功能：google meet node功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：google meet node功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the google_meet node primitive.
 
 Covers protocol helpers, the file-backed registry, the server's
 token-and-dispatch machinery, a mocked client, and the CLI plumbing.

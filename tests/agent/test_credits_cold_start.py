@@ -1,4 +1,13 @@
-"""Tests for cold-start credits hydration at session open.
+"""Agent核心测试 - credits cold start
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的credits cold start验证。
+- 验证功能：credits cold start功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：credits cold start功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for cold-start credits hydration at session open.
 
 The L3 cold-start seed primes agent._credits_state from /api/oauth/account (or a
 HERMES_DEV_CREDITS_FIXTURE) so depletion AND the 90% grant warning fire immediately

@@ -1,4 +1,13 @@
-"""test_yuanbao_shutdown.py - Yuanbao adapter shutdown teardown timing.
+"""测试 - yuanbao shutdown
+
+【产品经理理解要点】
+功能验证中的yuanbao shutdown验证。
+- 验证功能：yuanbao shutdown功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：yuanbao shutdown功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+test_yuanbao_shutdown.py - Yuanbao adapter shutdown teardown timing.
 
 Regression coverage for #40383: a non-responsive Yuanbao WS server must not
 stall gateway shutdown. ``websockets`` ``ws.close()`` blocks up to the

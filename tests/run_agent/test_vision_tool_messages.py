@@ -1,4 +1,13 @@
-"""Tests for proactive vision-tool-message downgrade (issue #41072).
+"""Agent运行引擎测试 - vision tool messages
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的vision tool messages验证。
+- 验证功能：vision tool messages功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：vision tool messages功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for proactive vision-tool-message downgrade (issue #41072).
 
 When a provider supports vision in user messages but rejects list-type
 tool message content (e.g. Xiaomi MiMo's 400 "text is not set"),

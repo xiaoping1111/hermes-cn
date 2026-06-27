@@ -1,4 +1,12 @@
 import re
+"""测试 - dashboard sidecar close on disconnect
+
+【产品经理理解要点】
+功能验证中的dashboard sidecar close on disconnect验证。
+- 验证功能：dashboard sidecar close on disconnect功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：dashboard sidecar close on disconnect功能异常或存在安全隐患"""
+
 from pathlib import Path
 
 CHAT_SIDEBAR = Path(__file__).resolve().parent.parent / "web/src/components/ChatSidebar.tsx"

@@ -1,9 +1,17 @@
-"""Tests for the decomposer module + `hermes kanban decompose` CLI surface.
+"""CLIkanban decompose测试
+
+【产品经理理解要点】
+CLIkanban decompose功能测试。
+- 验证功能：命令行kanban decompose功能
+- 关键场景：配置、执行、验证
+- 业务影响：kanban decompose命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the decomposer module + `hermes kanban decompose` CLI surface.
 
 The auxiliary LLM client is mocked — no network calls. Tests exercise the
 prompt plumbing, response parsing, DB writes (via the real DB helper),
-and the assignee-fallback logic.
-"""
+and the assignee-fallback logic."""
 
 from __future__ import annotations
 

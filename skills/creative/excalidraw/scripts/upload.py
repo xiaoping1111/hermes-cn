@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""
+"""Excalidraw 图表上传
+
+【产品经理理解要点】
+将 Excalidraw 图表上传到指定服务。
+- 文件上传和链接生成
+
+─────────────────────────────────────────────────────────────────
+
 Upload an .excalidraw file to excalidraw.com and print a shareable URL.
 
 No account required. The diagram is encrypted client-side (AES-GCM) before

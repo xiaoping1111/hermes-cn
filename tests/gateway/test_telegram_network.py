@@ -1,4 +1,13 @@
-"""Tests for plugins.platforms.telegram.telegram_network – fallback transport layer.
+"""Telegram网络
+
+【产品经理理解要点】
+Telegram网络处理。
+- 验证功能：Telegram平台网络连接与重连
+- 关键场景：连接建立、断线重连、超时
+- 业务影响：Telegram连接不稳定
+
+─────────────────────────────────────────────────────────────────
+Tests for plugins.platforms.telegram.telegram_network – fallback transport layer.
 
 Background
 ----------

@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 """
+模糊匹配模块
+
+【产品经理理解要点】
+为文件编辑操作提供8级递进式模糊匹配，解决LLM生成代码与实际文件之间的空白/缩进差异。
+- 核心职责：从精确匹配逐级降级到上下文感知匹配，最大化编辑成功率
+- 业务价值：LLM生成的代码常有空白差异，直接字符串匹配失败率高，此模块大幅提升代码编辑工具的可靠性
+- 在系统中的位置：位于文件编辑工具和文件系统之间，是代码修改操作的关键辅助
+
+─────────────────────────────────────────────────────────────────
 Fuzzy Matching Module for File Operations
 
 Implements a multi-strategy matching chain to robustly find and replace text,

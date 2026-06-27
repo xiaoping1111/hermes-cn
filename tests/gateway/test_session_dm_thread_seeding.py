@@ -1,4 +1,13 @@
-"""Tests for DM thread session isolation.
+"""DM线程播种
+
+【产品经理理解要点】
+DM线程播种。
+- 验证功能：私信会话的线程初始化
+- 关键场景：线程创建、消息关联、状态初始化
+- 业务影响：私信会话无法正常创建
+
+─────────────────────────────────────────────────────────────────────────
+Tests for DM thread session isolation.
 
 DM thread sessions must start empty — no parent transcript seeding.
 Thread context is handled by platform adapters (e.g. Slack's
@@ -11,8 +20,7 @@ Covers:
 - Group/channel thread sessions also start empty
 - Multiple threads from same parent are independent
 - Existing thread sessions are not mutated on re-access
-- Cross-platform: consistent behavior for Slack, Telegram, Discord
-"""
+- Cross-platform: consistent behavior for Slack, Telegram, Discord"""
 
 import pytest
 

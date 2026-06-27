@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Write-approval gate + pending store for memory and skill writes.
+"""写入审批门控
+
+【产品经理理解要点】
+控制智能体对记忆文件和技能文件的写入权限，防止后台自审叉进程擅自修改用户数据。
+- 核心职责：为记忆（MEMORY.md/USER.md）和技能（SKILL.md）的写入提供审批门控，区分前台交互和后台自审两种写入来源
+- 业务价值：解决用户反映"后台自审产生错误假设"的问题——后台写入必须经过用户批准
+- 在系统中的位置：位于工具写入操作和文件系统之间，是数据安全的重要防线
+
+─────────────────────────────────────────────────────────────────
+Write-approval gate + pending store for memory and skill writes.
 
 Background
 ----------

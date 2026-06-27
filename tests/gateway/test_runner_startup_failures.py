@@ -1,3 +1,11 @@
+"""网关runner startup failures测试
+
+【产品经理理解要点】
+网关runner startup failures功能测试。
+- 验证功能：网关runner startup failures处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：runner startup failures功能异常"""
+
 import pytest
 from unittest.mock import AsyncMock
 

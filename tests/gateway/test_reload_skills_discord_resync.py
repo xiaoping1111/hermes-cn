@@ -1,4 +1,13 @@
-"""Tests for `/reload-skills` resyncing the Discord ``/skill`` autocomplete.
+"""Discord网关测试
+
+【产品经理理解要点】
+Discord平台网关功能测试。
+- 验证功能：Discord平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Discord平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for `/reload-skills` resyncing the Discord ``/skill`` autocomplete.
 
 Before this change, ``_register_skill_group`` captured the skill catalog
 in closure variables (``entries`` and ``skill_lookup``) so that the one
@@ -18,8 +27,7 @@ connected adapters and calls the method on any that expose it.
 
 No ``tree.sync()`` is required because Discord fetches autocomplete
 options dynamically on every keystroke — we only need to rebind the
-data the live callbacks already read from.
-"""
+data the live callbacks already read from."""
 from __future__ import annotations
 
 from unittest.mock import MagicMock

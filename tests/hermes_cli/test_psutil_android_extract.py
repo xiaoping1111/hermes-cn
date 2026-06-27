@@ -1,4 +1,13 @@
-"""Regression tests for the Android psutil compatibility installer."""
+"""CLIpsutil android extract测试
+
+【产品经理理解要点】
+CLIpsutil android extract功能测试。
+- 验证功能：命令行psutil android extract功能
+- 关键场景：配置、执行、验证
+- 业务影响：psutil android extract命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the Android psutil compatibility installer."""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""Regression tests for GitHub #36823 — the TUI must reset terminal input
+"""CLI终端测试 - tui terminal reset on exit
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的tui terminal reset on exit验证。
+- 验证功能：tui terminal reset on exit功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：tui terminal reset on exit功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for GitHub #36823 — the TUI must reset terminal input
 modes on exit so focus-reporting / mouse-tracking escape sequences don't leak
 into the next shell session sharing the tab.
 

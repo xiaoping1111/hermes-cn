@@ -1,5 +1,16 @@
 """Curator — background skill maintenance orchestrator.
 
+技能策展人
+
+【产品经理理解要点】
+后台自动维护技能集合：根据使用频率存档低活跃技能、合并重复技能。
+- 核心职责：基于活跃度自动迁移生命周期状态、后台审查fork、仅归档不删除
+- 关键业务概念：策展人(curator)、生命周期迁移、归档(archive)、钉选(pin)
+- 在系统中的位置：技能库的自动维护引擎
+
+─────────────────────────────────────────────────────────────────
+
+
 The curator is an auxiliary-model task that periodically reviews agent-created
 skills and maintains the collection. It runs inactivity-triggered (no cron
 daemon): when the agent is idle and the last curator run was longer than

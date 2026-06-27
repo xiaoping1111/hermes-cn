@@ -1,9 +1,17 @@
-"""Tests for the outbound silence-narration filter (anti-loop control).
+"""投递静默过滤
+
+【产品经理理解要点】
+投递静默过滤。
+- 验证功能：消息投递的静默规则过滤
+- 关键场景：静默规则匹配、消息过滤
+- 业务影响：应静默的消息被投递
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the outbound silence-narration filter (anti-loop control).
 
 See the gateway delivery path: hallucinated "silence" tokens like ``*(silent)*``
 are dropped pre-send so bot-to-bot channels can't mirror them into a token-burning
-loop that crashes a model with "no content after all retries".
-"""
+loop that crashes a model with "no content after all retries"."""
 
 import pytest
 

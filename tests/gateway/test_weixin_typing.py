@@ -1,4 +1,13 @@
-"""Tests for WeChat iLink typing ticket refresh logic (issue #38085)."""
+"""微信输入状态
+
+【产品经理理解要点】
+微信输入状态指示。
+- 验证功能：微信平台输入状态提示
+- 关键场景：状态发送、超时取消
+- 业务影响：用户无法看到输入状态
+
+─────────────────────────────────────────────────────────────────────────
+Tests for WeChat iLink typing ticket refresh logic (issue #38085)."""
 
 import asyncio
 import time

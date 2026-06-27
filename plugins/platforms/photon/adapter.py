@@ -1,4 +1,13 @@
 """
+Photon Spectrum (iMessage) 平台适配器
+
+【产品经理理解要点】
+接入 iMessage 通讯，通过 Node sidecar 桥接 spectrum-ts SDK 实现 Apple 消息收发。
+- 入站：SDK gRPC 流 → sidecar 序列化为 JSON → 本地 HTTP 流 → 网关处理
+- 出站：网关 → sidecar HTTP API → SDK 发送
+- 无需公网端点或 Webhook，所有通信走本地回环
+
+─────────────────────────────────────────────────────────────────
 Photon Spectrum (iMessage) platform adapter for Hermes Agent.
 
 Both directions of traffic flow through a small supervised Node sidecar

@@ -1,4 +1,13 @@
-"""Regression tests: failed-connect path must call adapter.disconnect().
+"""网关safe adapter disconnect测试
+
+【产品经理理解要点】
+网关safe adapter disconnect功能测试。
+- 验证功能：网关safe adapter disconnect处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：safe adapter disconnect功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests: failed-connect path must call adapter.disconnect().
 
 When adapter.connect() returns False or raises, the adapter may have
 allocated resources (aiohttp.ClientSession, poll tasks, child
@@ -7,8 +16,7 @@ these leak and surface as "Unclosed client session" warnings at
 process exit (seen on the 2026-04-18 18:08:16 gateway restart).
 
 The fix: gateway/run.py wraps each adapter connect() with a safety-net
-call to _safe_adapter_disconnect() in the failure branches.
-"""
+call to _safe_adapter_disconnect() in the failure branches."""
 
 import asyncio
 import logging

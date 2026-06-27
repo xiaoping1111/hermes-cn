@@ -1,4 +1,12 @@
-"""Nous Portal provider profile."""
+"""Nous 模型提供者
+
+【产品经理理解要点】
+对接 Nous Research 模型服务。
+- Nous 托管模型接入
+- Nous OAuth 认证
+
+─────────────────────────────────────────────────────────────────
+Nous Portal provider profile."""
 
 from typing import Any
 

@@ -1,4 +1,12 @@
 from __future__ import annotations
+"""电话技能
+
+【产品经理理解要点】
+电话技能功能。
+- 验证功能：电话拨打/接听/挂断
+- 关键场景：命令解析、执行
+- 业务影响：电话技能不可用"""
+
 
 import importlib.util
 import json

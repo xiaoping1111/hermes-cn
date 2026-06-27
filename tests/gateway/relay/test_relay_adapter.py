@@ -1,4 +1,13 @@
-"""RelayAdapter capability-advertisement tests (relay Phase 1, Task 1.1)."""
+"""中继适配器
+
+【产品经理理解要点】
+中继适配器。
+- 验证功能：中继模式的适配器逻辑
+- 关键场景：消息转发、格式转换、状态同步
+- 业务影响：中继消息转发失败
+
+─────────────────────────────────────────────────────────────────────────
+RelayAdapter capability-advertisement tests (relay Phase 1, Task 1.1)."""
 
 import pytest
 

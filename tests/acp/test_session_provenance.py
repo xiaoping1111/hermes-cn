@@ -1,4 +1,13 @@
-"""Tests for ACP session-provenance derivation (issue #33617).
+"""ACP会话来源
+
+【产品经理理解要点】
+ACP会话来源追踪。
+- 验证功能：数据隔离正确性
+- 关键场景：来源追踪、隔离
+- 业务影响：会话数据交叉泄露
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ACP session-provenance derivation (issue #33617).
 
 Exercises acp_adapter.provenance against a real SessionDB — no mocks — covering
 the acceptance-criteria matrix: root session, compression-split continuation,

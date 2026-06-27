@@ -1,4 +1,12 @@
-"""xAI (Grok) provider profile."""
+"""xAI Grok 模型提供者
+
+【产品经理理解要点】
+对接 xAI Grok 系列模型。
+- Grok 系列模型接入
+- xAI OAuth 或 API Key 认证
+
+─────────────────────────────────────────────────────────────────
+xAI (Grok) provider profile."""
 
 from providers import register_provider
 from providers.base import ProviderProfile

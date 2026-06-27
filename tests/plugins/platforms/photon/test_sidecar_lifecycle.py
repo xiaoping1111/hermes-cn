@@ -1,4 +1,13 @@
-"""Sidecar lifecycle tests: orphan reaping and parent-death wiring.
+"""插件系统测试 - sidecar lifecycle
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的sidecar lifecycle验证。
+- 验证功能：sidecar lifecycle功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：sidecar lifecycle功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Sidecar lifecycle tests: orphan reaping and parent-death wiring.
 
 A hard gateway exit used to leave the detached Node sidecar squatting the
 loopback port with a token the next gateway run doesn't know — every

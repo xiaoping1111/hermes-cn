@@ -1,5 +1,16 @@
 """Lightweight internationalization (i18n) for Hermes static user-facing messages.
 
+国际化(i18n)
+
+【产品经理理解要点】
+Hermes 界面文案的国际化支持，按语言加载 YAML 翻译目录。
+- 核心职责：按语言加载翻译、dotted-path key 查找、缺省回退到英文
+- 关键业务概念：HERMES_LANGUAGE 配置、locales/<lang>.yaml 目录、{count} 格式化
+- 在系统中的位置：审批提示和网关斜杠命令的文案国际化层
+
+─────────────────────────────────────────────────────────────────
+
+
 Scope (thin slice, by design): only the highest-impact static strings shown
 to the user by Hermes itself -- approval prompts, a handful of gateway slash
 command replies, restart-drain notices.  Agent-generated output, log lines,

@@ -1,3 +1,14 @@
+
+"""代理HTTP服务器
+
+【产品经理理解要点】
+纯转发的HTTP服务器，替换Authorization头后将请求流式转发到上游。
+- 监听/v1/<path>并转发到上游base_url
+- 流式回传响应（SSE兼容）
+- 不修改请求/响应体，纯粹的凭证附加转发
+
+────────────────────────────────────────────────────────────────"""
+
 """HTTP server that forwards OpenAI-compatible requests to a configured upstream.
 
 Listens on ``http://<host>:<port>/v1/<path>`` and forwards each request to

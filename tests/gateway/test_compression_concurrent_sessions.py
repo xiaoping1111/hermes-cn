@@ -1,4 +1,13 @@
-"""Behavioral tests for concurrent compression across distinct and shared sessions.
+"""网关compression concurrent sessions测试
+
+【产品经理理解要点】
+网关compression concurrent sessions功能测试。
+- 验证功能：网关compression concurrent sessions处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：compression concurrent sessions功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Behavioral tests for concurrent compression across distinct and shared sessions.
 
 Complements ``test_compression_concurrent_fork.py`` (which tests the
 agent-level lock against a real ``SessionDB``) by focusing on gateway-level
@@ -12,8 +21,7 @@ isolation guarantees:
 The stub-compressor pattern mirrors ``test_compression_concurrent_fork.py``:
 the compressor returns deterministic output and sleeps briefly so threads
 actually overlap at the OS level, making the absence of aliasing a genuine
-stress test rather than a timing accident.
-"""
+stress test rather than a timing accident."""
 
 from __future__ import annotations
 

@@ -1,9 +1,17 @@
-"""Tests for the WS-upgrade ticket store (Phase 5 task 5.1).
+"""CLIdashboard auth ws tickets测试
+
+【产品经理理解要点】
+CLIdashboard auth ws tickets功能测试。
+- 验证功能：命令行dashboard auth ws tickets功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard auth ws tickets命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the WS-upgrade ticket store (Phase 5 task 5.1).
 
 The store is process-local and threading-safe. Tests run with xdist so
 each worker has its own module instance — no cross-worker bleed — but we
-call ``_reset_for_tests`` between tests to keep things deterministic.
-"""
+call ``_reset_for_tests`` between tests to keep things deterministic."""
 
 from __future__ import annotations
 

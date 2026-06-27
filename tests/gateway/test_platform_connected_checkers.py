@@ -1,8 +1,15 @@
-"""
+"""网关platform connected checkers测试
+
+【产品经理理解要点】
+网关platform connected checkers功能测试。
+- 验证功能：网关platform connected checkers处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：platform connected checkers功能异常
+
+─────────────────────────────────────────────────────────────────────────
 Verify that every gateway platform — built-in and plugin — has a connection
 checker so ``GatewayConfig.get_connected_platforms()`` doesn't silently drop
-platforms with bespoke auth requirements.
-"""
+platforms with bespoke auth requirements."""
 
 from unittest.mock import MagicMock
 

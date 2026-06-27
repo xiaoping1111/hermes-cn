@@ -1,4 +1,13 @@
-"""Stream read timeout must never preempt the stale-stream detector.
+"""Agent核心测试 - stream read timeout floor
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的stream read timeout floor验证。
+- 验证功能：stream read timeout floor功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：stream read timeout floor功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Stream read timeout must never preempt the stale-stream detector.
 
 Reasoning models (e.g. Opus) routinely pause mid-stream for minutes during
 extended thinking.  The stale-stream detector is deliberately scaled up to

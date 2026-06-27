@@ -1,4 +1,12 @@
-"""
+"""配置文件管理命令
+
+【产品经理理解要点】
+hermes profile子命令，管理多个隔离的Hermes实例。
+- 每个Profile是完全独立的HERMES_HOME
+- 创建/删除/切换/克隆Profile
+- 默认Profile就是~/.hermes（向后兼容）
+
+────────────────────────────────────────────────────────────────
 Profile management for multiple isolated Hermes instances.
 
 Each profile is a fully independent HERMES_HOME directory with its own
@@ -16,8 +24,7 @@ Usage::
     coder chat                           # use via wrapper alias
     hermes -p coder chat                 # or via flag
     hermes profile use coder             # set as sticky default
-    hermes profile delete coder          # remove profile + alias + service
-"""
+    hermes profile delete coder          # remove profile + alias + service"""
 
 import json
 import os

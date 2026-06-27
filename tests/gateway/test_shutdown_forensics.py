@@ -1,4 +1,13 @@
-"""Tests for gateway.shutdown_forensics — fast snapshot + async diag spawn."""
+"""关闭取证
+
+【产品经理理解要点】
+关闭取证分析。
+- 验证功能：系统关闭时的取证信息收集
+- 关键场景：状态快照、原因记录、日志保存
+- 业务影响：关闭原因无法追溯
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway.shutdown_forensics — fast snapshot + async diag spawn."""
 
 from __future__ import annotations
 

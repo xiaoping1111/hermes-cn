@@ -1,4 +1,12 @@
-"""Brave Search (free tier) — plugin form.
+"""Brave 免费搜索提供者
+
+【产品经理理解要点】
+Brave Search 免费层的具体实现。
+- HTTP 请求 Brave Search API
+- 结果解析和格式化
+
+─────────────────────────────────────────────────────────────────
+Brave Search (free tier) — plugin form.
 
 Subclasses :class:`agent.web_search_provider.WebSearchProvider` (the
 plugin-facing ABC). The legacy in-tree module

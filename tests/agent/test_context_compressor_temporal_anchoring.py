@@ -1,4 +1,13 @@
-"""Tests for temporal anchoring in context-compaction summaries.
+"""Agent核心测试 - context compressor temporal anchoring
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的context compressor temporal anchoring验证。
+- 验证功能：context compressor temporal anchoring功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：context compressor temporal anchoring功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for temporal anchoring in context-compaction summaries.
 
 The summarizer is handed the current date and instructed to rewrite completed
 actions as absolute, dated, past-tense facts (e.g. "email John" ->

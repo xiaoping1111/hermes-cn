@@ -1,4 +1,12 @@
-"""
+"""GodMode 配置加载
+
+【产品经理理解要点】
+加载 GodMode 安全测试的配置和数据集。
+- 测试用例加载
+- 模型安全策略配置
+
+─────────────────────────────────────────────────────────────────
+
 Loader for G0DM0D3 scripts. Handles the exec-scoping issues.
 
 Usage in execute_code:

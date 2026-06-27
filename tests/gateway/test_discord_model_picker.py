@@ -1,10 +1,18 @@
-"""Regression tests for the Discord /model picker.
+"""Discord网关测试
+
+【产品经理理解要点】
+Discord平台网关功能测试。
+- 验证功能：Discord平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Discord平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the Discord /model picker.
 
 Uses the shared discord mock from tests/gateway/conftest.py (installed
 at collection time via _ensure_discord_mock()). Previously this file
 installed its own mock at module-import time and clobbered sys.modules,
-breaking other gateway tests under pytest-xdist.
-"""
+breaking other gateway tests under pytest-xdist."""
 
 from types import SimpleNamespace
 from unittest.mock import AsyncMock

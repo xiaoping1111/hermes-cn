@@ -1,12 +1,20 @@
-"""Regression tests for the fresh-final-for-long-lived-previews path.
+"""流消费者终稿
+
+【产品经理理解要点】
+流消费者终稿模式。
+- 验证功能：流式响应的终稿消费逻辑
+- 关键场景：终稿识别、替换、完成
+- 业务影响：最终消息未正确替换草稿
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the fresh-final-for-long-lived-previews path.
 
 Ported from openclaw/openclaw#72038.  When a streamed preview has been
 visible long enough that the platform's edit timestamp would be
 noticeably stale by completion time, the stream consumer delivers the
 final reply as a brand-new message and best-effort deletes the old
 preview.  This makes Telegram's visible timestamp reflect completion
-time instead of first-token time.
-"""
+time instead of first-token time."""
 
 from __future__ import annotations
 

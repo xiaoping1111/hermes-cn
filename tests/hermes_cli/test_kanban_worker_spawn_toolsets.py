@@ -1,5 +1,14 @@
 from __future__ import annotations
 
+"""CLIkanban worker spawn toolsets测试
+
+【产品经理理解要点】
+CLIkanban worker spawn toolsets功能测试。
+- 验证功能：命令行kanban worker spawn toolsets功能
+- 关键场景：配置、执行、验证
+- 业务影响：kanban worker spawn toolsets命令行功能失效"""
+
+
 import subprocess
 
 

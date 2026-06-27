@@ -1,9 +1,17 @@
-"""Shared curses-based UI components for Hermes CLI.
+"""Curses交互组件
+
+【产品经理理解要点】
+基于curses的交互式多选列表，用于hermes tools/skills的选择界面。
+- 键盘导航的多选列表
+- 搜索过滤：输入关键字实时筛选
+- 无curses环境的文本回退方案
+
+────────────────────────────────────────────────────────────────
+Shared curses-based UI components for Hermes CLI.
 
 Used by `hermes tools` and `hermes skills` for interactive checklists.
 Provides a curses multi-select with keyboard navigation, plus a
-text-based numbered fallback for terminals without curses support.
-"""
+text-based numbered fallback for terminals without curses support."""
 import sys
 from dataclasses import dataclass
 from typing import Callable, List, Optional, Set

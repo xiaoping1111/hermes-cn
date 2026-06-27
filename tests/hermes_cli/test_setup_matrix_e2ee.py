@@ -1,4 +1,13 @@
-"""Test that setup.py has shutil available for Matrix E2EE auto-install."""
+"""CLIsetup matrix e2ee测试
+
+【产品经理理解要点】
+CLIsetup matrix e2ee功能测试。
+- 验证功能：命令行setup matrix e2ee功能
+- 关键场景：配置、执行、验证
+- 业务影响：setup matrix e2ee命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Test that setup.py has shutil available for Matrix E2EE auto-install."""
 import ast
 
 

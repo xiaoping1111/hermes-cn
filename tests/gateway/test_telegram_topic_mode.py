@@ -1,8 +1,16 @@
-"""Tests for Telegram private-chat topic-mode routing.
+"""Telegram话题模式
+
+【产品经理理解要点】
+Telegram话题模式。
+- 验证功能：Telegram论坛话题模式支持
+- 关键场景：话题创建、消息关联、权限
+- 业务影响：Telegram话题功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Telegram private-chat topic-mode routing.
 
 Topic mode makes the root Telegram DM a system lobby while user-created
-Telegram topics act as independent Hermes session lanes.
-"""
+Telegram topics act as independent Hermes session lanes."""
 
 from datetime import datetime
 from types import SimpleNamespace

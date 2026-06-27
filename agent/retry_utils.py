@@ -1,5 +1,16 @@
 """Retry utilities — jittered backoff for decorrelated retries.
 
+重试退避工具
+
+【产品经理理解要点】
+提供抖动指数退避算法，防止多会话同时重试导致雪崩。
+- 核心职责：计算带随机抖动的退避延迟、线程安全的抖动种子
+- 关键业务概念：抖动退避(jittered backoff)、防雷群效应(thundering herd)
+- 在系统中的位置：API 调用失败重试的基础设施
+
+─────────────────────────────────────────────────────────────────
+
+
 Replaces fixed exponential backoff with jittered delays to prevent
 thundering-herd retry spikes when multiple sessions hit the same
 rate-limited provider concurrently.

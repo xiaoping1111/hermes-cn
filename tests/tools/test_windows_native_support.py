@@ -1,4 +1,13 @@
-"""Behavioral tests for Windows-specific compatibility fixes.
+"""工具系统测试 - windows native support
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的windows native support验证。
+- 验证功能：windows native support功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：windows native support功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Behavioral tests for Windows-specific compatibility fixes.
 
 Complements ``tests/tools/test_windows_compat.py`` (which does source-level
 pattern linting) with cross-platform-mocked tests that exercise the actual

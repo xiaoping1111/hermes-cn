@@ -1,4 +1,12 @@
-"""OpenAI Codex (Responses API) provider profile."""
+"""OpenAI Codex 模型提供者
+
+【产品经理理解要点】
+对接 OpenAI Codex/ChatGPT OAuth 认证的模型服务。
+- Codex OAuth 认证
+- 无需 API Key
+
+─────────────────────────────────────────────────────────────────
+OpenAI Codex (Responses API) provider profile."""
 
 from providers import register_provider
 from providers.base import ProviderProfile

@@ -1,8 +1,16 @@
-"""Tests for the persistent parallel pool and running-job guard in cron/scheduler.py.
+"""并行池
+
+【产品经理理解要点】
+并行任务池管理。
+- 验证功能：多任务并发执行控制
+- 关键场景：并发度限制、任务排队、异常隔离
+- 业务影响：并行任务执行失控或阻塞
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the persistent parallel pool and running-job guard in cron/scheduler.py.
 
 These verify the fix for the tick-blocking issue where as_completed(timeout=600)
-prevented the ticker thread from firing, causing all other jobs to be fast-forwarded.
-"""
+prevented the ticker thread from firing, causing all other jobs to be fast-forwarded."""
 
 import concurrent.futures
 import threading

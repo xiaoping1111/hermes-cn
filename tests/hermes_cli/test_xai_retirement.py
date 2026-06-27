@@ -1,4 +1,13 @@
-"""Unit tests for hermes_cli.xai_retirement (May 15, 2026 model retirement)."""
+"""CLIxai retirement测试
+
+【产品经理理解要点】
+CLIxai retirement功能测试。
+- 验证功能：命令行xai retirement功能
+- 关键场景：配置、执行、验证
+- 业务影响：xai retirement命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for hermes_cli.xai_retirement (May 15, 2026 model retirement)."""
 from __future__ import annotations
 
 

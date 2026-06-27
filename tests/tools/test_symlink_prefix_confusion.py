@@ -1,4 +1,13 @@
-"""Tests for the symlink boundary check prefix confusion fix in skills_guard.py.
+"""工具系统测试 - symlink prefix confusion
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的symlink prefix confusion验证。
+- 验证功能：symlink prefix confusion功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：symlink prefix confusion功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the symlink boundary check prefix confusion fix in skills_guard.py.
 
 Regression test: the original check used startswith() without a trailing
 separator, so a symlink resolving to 'axolotl-backdoor/' passed the check

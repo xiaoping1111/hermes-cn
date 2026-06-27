@@ -1,5 +1,16 @@
 """Assorted AIAgent runtime helpers — moved out of run_agent.py for clarity.
 
+智能体运行时辅助函数
+
+【产品经理理解要点】
+从 run_agent.py 提取的运行时工具：消息修复、凭证轮换、API 客户端创建等。
+- 核心职责：消息序列修复、思考块剥离、凭证池恢复、OpenAI 客户端构建
+- 关键业务概念：消息交替性修复、429凭证轮换、推理字段提取
+- 在系统中的位置：AIAgent 实例的辅助方法集
+
+─────────────────────────────────────────────────────────────────
+
+
 Each function takes the parent ``AIAgent`` as its first argument
 (``agent``) except for the static helpers (``sanitize_tool_call_arguments``,
 ``drop_thinking_only_and_merge_users``) which are stateless.  AIAgent

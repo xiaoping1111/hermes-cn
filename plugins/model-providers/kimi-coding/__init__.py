@@ -1,4 +1,12 @@
-"""Kimi / Moonshot provider profiles.
+"""Kimi 编码模型提供者
+
+【产品经理理解要点】
+对接 Moonshot Kimi 编码专用模型。
+- 面向代码生成
+- Kimi API 认证
+
+─────────────────────────────────────────────────────────────────
+Kimi / Moonshot provider profiles.
 
 Kimi has dual endpoints:
   - sk-kimi-* keys → api.kimi.com/coding (Anthropic Messages API)

@@ -1,4 +1,13 @@
-"""Regression tests for Nous OAuth refresh and inference JWT interactions."""
+"""CLIauth nous provider测试
+
+【产品经理理解要点】
+CLIauth nous provider功能测试。
+- 验证功能：命令行auth nous provider功能
+- 关键场景：配置、执行、验证
+- 业务影响：auth nous provider命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for Nous OAuth refresh and inference JWT interactions."""
 
 import base64
 import json

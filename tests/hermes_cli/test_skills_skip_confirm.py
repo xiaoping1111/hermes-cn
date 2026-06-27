@@ -1,4 +1,12 @@
-"""
+"""CLIskills skip confirm测试
+
+【产品经理理解要点】
+CLIskills skip confirm功能测试。
+- 验证功能：命令行skills skip confirm功能
+- 关键场景：配置、执行、验证
+- 业务影响：skills skip confirm命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
 Tests for skip_confirm and invalidate_cache behavior in /skills install
 and /skills uninstall slash commands.
 
@@ -7,8 +15,7 @@ Cache invalidation is deferred by default; --now opts into immediate
 invalidation (at the cost of breaking prompt cache mid-session).
 
 Based on PR #1595 by 333Alden333 (salvaged).
-Updated for PR #3586 (cache-aware install/uninstall).
-"""
+Updated for PR #3586 (cache-aware install/uninstall)."""
 
 from unittest.mock import patch
 

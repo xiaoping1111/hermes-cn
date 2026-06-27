@@ -1,4 +1,13 @@
-"""Regression tests for #17140.
+"""工具系统测试 - tts dotenv fallback
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的tts dotenv fallback验证。
+- 验证功能：tts dotenv fallback功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：tts dotenv fallback功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for #17140.
 
 TTS provider tools must resolve API keys from ``~/.hermes/.env`` (via
 ``hermes_cli.config.get_env_value``) and not only from ``os.environ`` —

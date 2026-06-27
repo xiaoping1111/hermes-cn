@@ -1,4 +1,13 @@
-"""Regression tests for MCP error messages when str(exc) is empty.
+"""工具系统测试 - mcp empty error message
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的mcp empty error message验证。
+- 验证功能：mcp empty error message功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：mcp empty error message功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for MCP error messages when str(exc) is empty.
 
 Issue #19417: ClosedResourceError (and similar exceptions raised without a
 message argument) produced ``MCP call failed: ClosedResourceError: `` with

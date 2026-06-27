@@ -1,4 +1,13 @@
-"""Tests for `_print_curator_recent_run_notice`.
+"""CLIcurator recent run notice测试
+
+【产品经理理解要点】
+CLIcurator recent run notice功能测试。
+- 验证功能：命令行curator recent run notice功能
+- 关键场景：配置、执行、验证
+- 业务影响：curator recent run notice命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for `_print_curator_recent_run_notice`.
 
 The notice prints the most recent curator run summary on `hermes update`,
 exactly once per run. Show-once is enforced by stamping
@@ -6,8 +15,7 @@ exactly once per run. Show-once is enforced by stamping
 
 Why this matters: the curator runs in the background (gateway tick + CLI
 session start) so users normally never see the rename map. `hermes update`
-is the high-attention surface where consolidations should land.
-"""
+is the high-attention surface where consolidations should land."""
 
 from __future__ import annotations
 

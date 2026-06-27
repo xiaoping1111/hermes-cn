@@ -1,4 +1,13 @@
-"""Regression tests for #35314 — empty model on the post-interrupt recovery turn.
+"""网关empty model recovery测试
+
+【产品经理理解要点】
+网关empty model recovery功能测试。
+- 验证功能：网关empty model recovery处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：empty model recovery功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for #35314 — empty model on the post-interrupt recovery turn.
 
 After a ``stream_interrupt_abort`` during an active gateway session, the recovery
 turn was sometimes built with ``model=""`` (a transient config-cache miss returned
@@ -10,8 +19,7 @@ These tests pin two fixes:
   1. ``_resolve_session_agent_runtime`` caches the last successfully-resolved
      model per session and recovers it when a fresh resolution comes back empty.
   2. ``_has_pending_fallback`` gates the "trying fallback..." status so it is only
-     announced when a fallback chain actually exists.
-"""
+     announced when a fallback chain actually exists."""
 
 import threading
 

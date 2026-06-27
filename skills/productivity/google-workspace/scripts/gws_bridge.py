@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Bridge between Hermes OAuth token and gws CLI.
+"""Google Workspace 桥接
+
+【产品经理理解要点】
+连接 Google Workspace API 的桥接模块。
+- 多服务统一认证
+- API 调用封装
+
+─────────────────────────────────────────────────────────────────
+Bridge between Hermes OAuth token and gws CLI.
 
 Refreshes the token if expired, then executes gws with the valid access token.
 """

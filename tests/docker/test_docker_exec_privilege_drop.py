@@ -1,4 +1,13 @@
-"""Regression tests for the docker-exec privilege-drop shim.
+"""Docker部署测试 - docker exec privilege drop
+
+【产品经理理解要点】
+Docker容器化部署：权限、网关、僵尸进程回收、不可变安装等运维正确性中的docker exec privilege drop验证。
+- 验证功能：docker exec privilege drop功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：docker exec privilege drop功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the docker-exec privilege-drop shim.
 
 The shim (docker/hermes-exec-shim.sh, installed at /opt/hermes/bin/hermes)
 exists to prevent the auth.json ownership-mismatch bug where

@@ -1,4 +1,14 @@
-"""Tests for agent.rate_limit_tracker — header parsing and formatting."""
+"""Agent核心测试 - rate limit tracker
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的rate limit tracker验证。
+- 验证功能：rate limit tracker功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：rate limit tracker功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for agent.rate_limit_tracker — header parsing and formatting.
+"""
 
 import time
 import pytest

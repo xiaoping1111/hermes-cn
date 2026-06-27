@@ -1,4 +1,13 @@
-"""Tests for ``hermes_cli.voice`` — the TUI gateway's voice wrapper.
+"""CLIvoice wrapper测试
+
+【产品经理理解要点】
+CLIvoice wrapper功能测试。
+- 验证功能：命令行voice wrapper功能
+- 关键场景：配置、执行、验证
+- 业务影响：voice wrapper命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ``hermes_cli.voice`` — the TUI gateway's voice wrapper.
 
 The module is imported *lazily* by ``tui_gateway/server.py`` so that a
 box with missing audio deps fails at call time (returning a clean RPC
@@ -6,8 +15,7 @@ error) rather than at gateway startup. These tests therefore only
 assert the public contract the gateway depends on: the three symbols
 exist, ``stop_and_transcribe`` is a no-op when nothing is recording,
 and ``speak_text`` tolerates empty input without touching the provider
-stack.
-"""
+stack."""
 
 import os
 import sys

@@ -1,4 +1,12 @@
-"""ByteRover memory plugin — MemoryProvider interface.
+"""Byterover 记忆插件
+
+【产品经理理解要点】
+Byterover 记忆系统实现，提供代码上下文感知的长期记忆。
+- 面向代码助手场景的记忆管理
+- 支持代码片段和项目上下文的记忆存储
+
+─────────────────────────────────────────────────────────────────
+ByteRover memory plugin — MemoryProvider interface.
 
 Persistent memory via the ByteRover CLI (``brv``). Organizes knowledge into
 a hierarchical context tree with tiered retrieval (fuzzy text → LLM-driven

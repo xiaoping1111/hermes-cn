@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Fetch federal contracts/awards from USAspending.gov API v2.
+"""USAspending 查询
+
+【产品经理理解要点】
+查询 USAspending 获取美国政府支出数据。
+- 合同和拨款搜索
+- 承包商支出分析
+
+─────────────────────────────────────────────────────────────────
+Fetch federal contracts/awards from USAspending.gov API v2.
 
 No auth required. POST to /api/v2/search/spending_by_award/ with filters.
 """

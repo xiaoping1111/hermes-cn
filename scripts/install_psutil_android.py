@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Install psutil on Termux/Android by patching upstream platform detection.
+"""Android psutil 安装补丁
+
+【产品经理理解要点】
+在 Termux/Android 环境下修补 psutil 安装包，使其能正确编译（psutil 官方不支持 android 平台标识）。
+- 核心职责：下载 psutil 源码包，补丁平台检测逻辑，本地安装修补后的版本
+- 关键概念：Termux 上 Python 报告 platform=android，但 psutil 实际可复用 Linux 源码编译
+- 系统定位：环境适配脚本，Android/Termux 用户安装 Hermes 时使用
+
+─────────────────────────────────────────────────────────────────
+Install psutil on Termux/Android by patching upstream platform detection.
 
 psutil's setup currently gates Linux sources behind
 ``sys.platform.startswith('linux')``. On Termux, Python reports

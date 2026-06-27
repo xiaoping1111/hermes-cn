@@ -1,5 +1,16 @@
 """Model metadata, context lengths, and token estimation utilities.
 
+模型元数据
+
+【产品经理理解要点】
+查询模型的上下文窗口、最大输出、Token 估算等元数据，用于预算计算。
+- 核心职责：获取模型上下文窗口/最大输出、Token 估算、供应商能力查询
+- 关键业务概念：上下文窗口、最大输出 Token、rough Token 估算
+- 在系统中的位置：上下文压缩和 Token 预算计算的数据源
+
+─────────────────────────────────────────────────────────────────
+
+
 Pure utility functions with no AIAgent dependency. Used by ContextCompressor
 and run_agent.py for pre-flight context checks.
 """

@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""视频管线初始化
+
+【产品经理理解要点】
+初始化看板驱动的视频生成管线。
+- 看板结构创建
+- 管线配置和启动
+
+─────────────────────────────────────────────────────────────────
+
 Bootstrap a video production kanban from a structured plan JSON.
 
 Reads a plan.json describing the team + brief, expands templates from

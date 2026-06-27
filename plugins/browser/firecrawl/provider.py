@@ -1,4 +1,12 @@
-"""Firecrawl cloud browser provider — plugin form.
+"""Firecrawl 浏览器提供者
+
+【产品经理理解要点】
+Firecrawl 浏览器自动化的具体实现。
+- Firecrawl API 集成
+- 页面抓取和截图
+
+─────────────────────────────────────────────────────────────────
+Firecrawl cloud browser provider — plugin form.
 
 Subclasses :class:`agent.browser_provider.BrowserProvider` (the plugin-facing
 ABC introduced in PR #25214). The legacy in-tree module

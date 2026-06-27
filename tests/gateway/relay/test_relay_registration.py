@@ -1,11 +1,19 @@
-"""RelayAdapter registration via the platform registry.
+"""中继注册
+
+【产品经理理解要点】
+中继注册。
+- 验证功能：中继节点的注册与发现
+- 关键场景：注册、心跳、注销
+- 业务影响：中继节点注册失败
+
+─────────────────────────────────────────────────────────────────────────
+RelayAdapter registration via the platform registry.
 
 The relay platform is registered when a connector relay URL is configured
 (``GATEWAY_RELAY_URL`` env or ``gateway.relay_url`` in config.yaml) — the same
 config-driven shape as ``gateway.proxy_url``, not a separate feature flag. With
 no URL configured, registration is a no-op so direct/single-tenant deployments
-are unaffected. ``force=True`` registers a transport-less adapter for tests.
-"""
+are unaffected. ``force=True`` registers a transport-less adapter for tests."""
 
 from __future__ import annotations
 

@@ -1,4 +1,12 @@
-"""Shared entity-name normalization helpers (stdlib-only).
+"""OSINT 数据标准化
+
+【产品经理理解要点】
+开源情报数据的标准化和清洗工具。
+- 实体名称标准化
+- 日期和地址格式统一
+
+─────────────────────────────────────────────────────────────────
+Shared entity-name normalization helpers (stdlib-only).
 
 Used by entity_resolution.py and timing_analysis.py.
 """

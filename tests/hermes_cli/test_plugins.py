@@ -1,4 +1,13 @@
-"""Tests for the Hermes plugin system (hermes_cli.plugins)."""
+"""CLIplugins测试
+
+【产品经理理解要点】
+CLIplugins功能测试。
+- 验证功能：命令行plugins功能
+- 关键场景：配置、执行、验证
+- 业务影响：plugins命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Hermes plugin system (hermes_cli.plugins)."""
 
 import logging
 import sys

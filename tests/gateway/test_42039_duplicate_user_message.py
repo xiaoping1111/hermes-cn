@@ -1,4 +1,13 @@
-"""Tests for #42039 — user messages stored twice in state.db.
+"""网关42039 duplicate user message测试
+
+【产品经理理解要点】
+网关42039 duplicate user message功能测试。
+- 验证功能：网关42039 duplicate user message处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：42039 duplicate user message功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for #42039 — user messages stored twice in state.db.
 
 When the agent has its own SessionDB reference (``_session_db is not None``),
 ``_flush_messages_to_session_db()`` persists messages to SQLite during the
@@ -11,8 +20,7 @@ This test covers the two fallback paths that previously lacked
 
 1. ``agent_failed_early`` path — transient 429/timeout failures
 2. ``not new_messages`` path — edge case where ``history_offset`` exceeds
-   the actual message count
-"""
+   the actual message count"""
 
 import sys
 import types

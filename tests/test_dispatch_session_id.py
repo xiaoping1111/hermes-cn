@@ -1,4 +1,14 @@
-"""Tests that handle_function_call forwards session_id into registry.dispatch."""
+"""测试 - dispatch session id
+
+【产品经理理解要点】
+功能验证中的dispatch session id验证。
+- 验证功能：dispatch session id功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：dispatch session id功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests that handle_function_call forwards session_id into registry.dispatch.
+"""
 
 import json
 from unittest.mock import MagicMock, patch

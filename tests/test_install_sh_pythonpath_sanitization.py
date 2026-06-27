@@ -1,4 +1,13 @@
-"""Regression tests for install.sh Python environment sanitization.
+"""测试 - install sh pythonpath sanitization
+
+【产品经理理解要点】
+功能验证中的install sh pythonpath sanitization验证。
+- 验证功能：install sh pythonpath sanitization功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：install sh pythonpath sanitization功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for install.sh Python environment sanitization.
 
 When install.sh is launched from another Python-driven tool session, inherited
 PYTHONPATH/PYTHONHOME can shadow the freshly installed checkout. The installer

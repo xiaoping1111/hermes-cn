@@ -1,4 +1,13 @@
-"""Session persistence must not strip a custom provider's identity.
+"""自定义供应商会话持久化
+
+【产品经理理解要点】
+自定义供应商配置持久化。
+- 验证功能：会话级配置保存
+- 关键场景：保存、加载、一致性
+- 业务影响：自定义配置重启后丢失
+
+─────────────────────────────────────────────────────────────────────────
+Session persistence must not strip a custom provider's identity.
 
 ``_runtime_model_config`` persists the live agent's RESOLVED provider into
 the session row's ``model_config`` JSON. For any named ``providers:`` /

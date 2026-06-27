@@ -1,11 +1,19 @@
-"""Tests for cgroup-aware TUI V8 heap sizing.
+"""CLItui heap sizing测试
+
+【产品经理理解要点】
+CLItui heap sizing功能测试。
+- 验证功能：命令行tui heap sizing功能
+- 关键场景：配置、执行、验证
+- 业务影响：tui heap sizing命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for cgroup-aware TUI V8 heap sizing.
 
 V8 is not cgroup-aware: a flat ``--max-old-space-size=8192`` lets the heap grow
 toward 8GB in a memory-limited container, so the cgroup OOM-killer SIGKILLs Node
 before V8's own monitor fires — leaving the user with only a bare gateway
 ``stdin EOF`` and no breadcrumb. ``_resolve_tui_heap_mb`` reads the real cgroup
-limit and sizes the cap below it so V8 exits gracefully instead.
-"""
+limit and sizes the cap below it so V8 exits gracefully instead."""
 
 import builtins
 import io

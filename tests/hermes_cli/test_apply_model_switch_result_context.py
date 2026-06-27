@@ -1,4 +1,13 @@
-"""Regression test for the `/model` picker confirmation display.
+"""CLIapply model switch result context测试
+
+【产品经理理解要点】
+CLIapply model switch result context功能测试。
+- 验证功能：命令行apply model switch result context功能
+- 关键场景：配置、执行、验证
+- 业务影响：apply model switch result context命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression test for the `/model` picker confirmation display.
 
 Bug (April 2026): after choosing a model from the interactive `/model` picker,
 ``HermesCLI._apply_model_switch_result()`` printed ``ModelInfo.context_window``
@@ -9,8 +18,7 @@ particular, ChatGPT Codex OAuth enforces 272K on the same slug. The sibling
 ``resolve_display_context_length()``; the picker path was missed, causing
 "sometimes 1M, sometimes 272K" for the same model across sibling UI paths.
 
-Fix: both display paths now go through ``resolve_display_context_length()``.
-"""
+Fix: both display paths now go through ``resolve_display_context_length()``."""
 from __future__ import annotations
 
 from unittest.mock import patch

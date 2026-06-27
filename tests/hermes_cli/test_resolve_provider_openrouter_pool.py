@@ -1,4 +1,13 @@
-"""Regression tests for issue #42130.
+"""CLIresolve provider openrouter pool测试
+
+【产品经理理解要点】
+CLIresolve provider openrouter pool功能测试。
+- 验证功能：命令行resolve provider openrouter pool功能
+- 关键场景：配置、执行、验证
+- 业务影响：resolve provider openrouter pool命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for issue #42130.
 
 A credential added via `hermes auth add openrouter` lives in the credential
 pool, NOT as an OPENROUTER_API_KEY env var. Before the fix, resolve_provider()
@@ -7,8 +16,7 @@ the provider failed to resolve (AuthError) or resolved without a key, and
 requests went out with no Authorization header — OpenRouter's
 "HTTP 401: Missing Authentication header".
 
-These tests lock in that auto-detection consults the OpenRouter pool.
-"""
+These tests lock in that auto-detection consults the OpenRouter pool."""
 
 import uuid
 

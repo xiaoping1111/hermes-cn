@@ -1,3 +1,14 @@
+
+"""Nous Portal命令
+
+【产品经理理解要点】
+hermes portal，一站式Nous Portal登录和配置。
+- OAuth登录→选模型→切换提供商→启用工具网关
+- 等同于hermes auth add nous --type oauth的友好版本
+- 与hermes setup --portal行为一致
+
+────────────────────────────────────────────────────────────────"""
+
 """``hermes portal`` — the human-readable entry point for Nous Portal.
 
 Running ``hermes portal`` with no subcommand performs the one-shot Portal

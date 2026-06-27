@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Hermes Agent Release Script
+"""发版脚本
+
+【产品经理理解要点】
+自动化 Hermes Agent 的发版流程：生成变更日志、打 CalVer 标签、创建 GitHub Release。
+- 核心职责：从 Git 历史自动生成变更日志，同步更新版本号（pyproject.toml + ACP 清单），创建 GitHub Release
+- 关键概念：使用日历版本号（CalVer，如 2026.6.25），支持 major/minor/patch 级别递增
+- 系统定位：发版流水线核心脚本，CI/CD 中由维护者手动触发
+
+─────────────────────────────────────────────────────────────────
+Hermes Agent Release Script
 
 Generates changelogs and creates GitHub releases with CalVer tags.
 

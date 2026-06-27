@@ -1,4 +1,13 @@
-"""Tests for /restart notification — the gateway notifies the requester on comeback."""
+"""网关restart notification测试
+
+【产品经理理解要点】
+网关restart notification功能测试。
+- 验证功能：网关restart notification处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：restart notification功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for /restart notification — the gateway notifies the requester on comeback."""
 
 import json
 from pathlib import Path

@@ -1,4 +1,13 @@
-"""Tests for the dashboard-managed file browser API."""
+"""CLIweb server files测试
+
+【产品经理理解要点】
+CLIweb server files功能测试。
+- 验证功能：命令行web server files功能
+- 关键场景：配置、执行、验证
+- 业务影响：web server files命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the dashboard-managed file browser API."""
 
 from types import SimpleNamespace
 

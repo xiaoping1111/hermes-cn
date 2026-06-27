@@ -1,10 +1,18 @@
-"""Tests for plugin video_gen providers in the tools picker.
+"""CLIvideo gen picker测试
+
+【产品经理理解要点】
+CLIvideo gen picker功能测试。
+- 验证功能：命令行video gen picker功能
+- 关键场景：配置、执行、验证
+- 业务影响：video gen picker命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for plugin video_gen providers in the tools picker.
 
 Covers the reconfigure path that previously failed to write
 ``video_gen.provider`` when a user picked an xAI/etc. plugin backend
 through Reconfigure tool → Video Generation. The first-time configure
-path already handled it; the reconfigure path forgot to mirror it.
-"""
+path already handled it; the reconfigure path forgot to mirror it."""
 
 from __future__ import annotations
 

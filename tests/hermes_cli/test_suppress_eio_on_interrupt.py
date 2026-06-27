@@ -1,4 +1,13 @@
-"""Tests for OSError EIO suppression during interrupt shutdown (#13710).
+"""CLIsuppress eio on interrupt测试
+
+【产品经理理解要点】
+CLIsuppress eio on interrupt功能测试。
+- 验证功能：命令行suppress eio on interrupt功能
+- 关键场景：配置、执行、验证
+- 业务影响：suppress eio on interrupt命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for OSError EIO suppression during interrupt shutdown (#13710).
 
 When the user interrupts a running task, prompt_toolkit tries to flush
 stdout during emergency shutdown.  If stdout is already in a broken state
@@ -7,8 +16,7 @@ stdout during emergency shutdown.  If stdout is already in a broken state
 
 The ``_suppress_closed_loop_errors`` asyncio exception handler and the
 outer ``except (KeyError, OSError)`` block must both suppress this error
-to prevent a hard crash.
-"""
+to prevent a hard crash."""
 
 from __future__ import annotations
 

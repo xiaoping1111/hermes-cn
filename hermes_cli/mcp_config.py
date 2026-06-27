@@ -1,12 +1,19 @@
-"""
+"""MCP服务器管理命令
+
+【产品经理理解要点】
+hermes mcp子命令，管理MCP服务器的添加/删除/列表/测试/配置。
+- MCP（Model Context Protocol）服务器的生命周期管理
+- 配置存储在config.yaml的mcp_servers键下
+- 交互式添加向导：选择/安装/配置MCP服务
+
+────────────────────────────────────────────────────────────────
 MCP Server Management CLI — ``hermes mcp`` subcommand.
 
 Implements ``hermes mcp add/remove/list/test/configure`` for interactive
 MCP server lifecycle management (issue #690 Phase 2).
 
 Relies on tools/mcp_tool.py for connection/discovery and keeps
-configuration in ~/.hermes/config.yaml under the ``mcp_servers`` key.
-"""
+configuration in ~/.hermes/config.yaml under the ``mcp_servers`` key."""
 
 import asyncio
 import logging

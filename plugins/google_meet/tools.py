@@ -1,4 +1,12 @@
-"""Agent-facing tools for the google_meet plugin.
+"""Google Meet 工具集
+
+【产品经理理解要点】
+注册 Google Meet 相关的 Agent 工具。
+- 加入/离开会议工具
+- 会议状态查询工具
+
+─────────────────────────────────────────────────────────────────
+Agent-facing tools for the google_meet plugin.
 
 Tools:
   meet_join        — join a Google Meet URL (spawns Playwright bot locally

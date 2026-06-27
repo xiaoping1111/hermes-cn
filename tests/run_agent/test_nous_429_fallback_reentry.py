@@ -1,4 +1,13 @@
-"""Regression guard: a genuine Nous 429 must re-enter the retry loop so the
+"""Agent运行引擎测试 - nous 429 fallback reentry
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的nous 429 fallback reentry验证。
+- 验证功能：nous 429 fallback reentry功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：nous 429 fallback reentry功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression guard: a genuine Nous 429 must re-enter the retry loop so the
 top-of-loop Nous rate-limit guard can activate the fallback chain.
 
 Bug (found in the #44061 audit): the genuine-rate-limit branch in

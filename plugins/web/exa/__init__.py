@@ -1,4 +1,11 @@
-"""Exa web search + extract plugin — bundled, auto-loaded.
+"""Exa 搜索插件
+
+【产品经理理解要点】
+Exa 神经搜索后端入口。
+- 基于嵌入的语义搜索
+
+─────────────────────────────────────────────────────────────────
+Exa web search + extract plugin — bundled, auto-loaded.
 
 Backed by the official Exa SDK (``exa-py``). Both search and extract are
 sync; the dispatcher in :mod:`tools.web_tools` handles the wrap when the

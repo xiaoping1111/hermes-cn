@@ -1,3 +1,14 @@
+
+"""Dashboard认证路由
+
+【产品经理理解要点】
+Dashboard OAuth往返的HTTP路由定义。
+- /login→登录页, /auth/login→IDP跳转, /auth/callback→回调
+- /auth/logout→注销, /api/auth/providers→Provider列表
+- /api/auth/me→当前会话信息
+
+────────────────────────────────────────────────────────────────"""
+
 """HTTP routes for the dashboard-auth OAuth round trip.
 
 Mounted at root (no prefix) by ``web_server.py``. The router does not

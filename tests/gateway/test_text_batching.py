@@ -1,12 +1,20 @@
-"""Tests for text message batching across all gateway adapters.
+"""网关text batching测试
+
+【产品经理理解要点】
+网关text batching功能测试。
+- 验证功能：网关text batching处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：text batching功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for text message batching across all gateway adapters.
 
 When a user sends a long message, the messaging client splits it at the
 platform's character limit.  Each adapter should buffer rapid successive
 text messages from the same session and aggregate them before dispatching.
 
 Covers: Discord, Matrix, WeCom, and the adaptive delay logic for
-Telegram and Feishu.
-"""
+Telegram and Feishu."""
 
 import asyncio
 from unittest.mock import AsyncMock

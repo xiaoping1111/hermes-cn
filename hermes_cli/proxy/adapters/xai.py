@@ -1,3 +1,14 @@
+
+"""xAI代理适配器
+
+【产品经理理解要点】
+xAI Grok的OAuth上游代理适配器。
+- 从凭证池读取xAI OAuth状态
+- 自动刷新即将过期的xAI令牌
+- 支持xAI API的请求转发
+
+────────────────────────────────────────────────────────────────"""
+
 """xAI Grok OAuth upstream adapter."""
 
 from __future__ import annotations

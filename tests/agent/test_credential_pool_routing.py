@@ -1,4 +1,13 @@
-"""Tests for credential pool preservation through turn config and 429 recovery.
+"""Agent核心测试 - credential pool routing
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的credential pool routing验证。
+- 验证功能：credential pool routing功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：credential pool routing功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for credential pool preservation through turn config and 429 recovery.
 
 Covers:
 1. CLI _resolve_turn_agent_config passes credential_pool to runtime dict

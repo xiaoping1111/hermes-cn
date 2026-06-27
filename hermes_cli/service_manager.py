@@ -1,3 +1,14 @@
+
+"""服务管理器接口
+
+【产品经理理解要点】
+跨平台的系统服务管理抽象，统一systemd/launchd/Windows/s6。
+- Protocol接口：start/stop/status/install/uninstall
+- Linux→systemd, macOS→launchd, Windows→计划任务, 容器→s6
+- s6后端额外支持运行时注册（逐Profile网关）
+
+────────────────────────────────────────────────────────────────"""
+
 """Abstract service manager interface.
 
 Wraps the existing systemd (Linux host), launchd (macOS host), Windows

@@ -1,4 +1,13 @@
-"""Tests for cronjob no_agent mode — script-driven jobs that skip the LLM.
+"""无Agent任务
+
+【产品经理理解要点】
+无Agent的Cron任务。
+- 验证功能：没有关联Agent的定时任务处理
+- 关键场景：错误提示、优雅降级
+- 业务影响：无Agent任务异常崩溃
+
+─────────────────────────────────────────────────────────────────────────
+Tests for cronjob no_agent mode — script-driven jobs that skip the LLM.
 
 Covers:
 
@@ -6,8 +15,7 @@ Covers:
 * ``cronjob(action='create', no_agent=True)`` tool-level validation.
 * ``cronjob(action='update')`` flipping no_agent on/off.
 * ``scheduler.run_job`` short-circuit path: success/silent/failure.
-* Shell script support in ``_run_job_script`` (.sh runs via bash).
-"""
+* Shell script support in ``_run_job_script`` (.sh runs via bash)."""
 
 from __future__ import annotations
 

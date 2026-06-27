@@ -1,3 +1,14 @@
+
+"""Slack命令
+
+【产品经理理解要点】
+hermes slack子命令，生成Slack App Manifest。
+- 将Gateway所有斜杠命令注册为Slack原生斜杠
+- 输出可直接粘贴到Slack App配置的JSON
+- 让Slack用户获得与Discord/Telegram一致的斜杠体验
+
+────────────────────────────────────────────────────────────────"""
+
 """``hermes slack ...`` CLI subcommands.
 
 Today only ``hermes slack manifest`` is implemented — it generates the

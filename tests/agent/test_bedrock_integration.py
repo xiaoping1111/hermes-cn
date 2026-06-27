@@ -1,4 +1,13 @@
-"""Integration tests for the AWS Bedrock provider wiring.
+"""Agent核心测试 - bedrock integration
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的bedrock integration验证。
+- 验证功能：bedrock integration功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：bedrock integration功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Integration tests for the AWS Bedrock provider wiring.
 
 Verifies that the Bedrock provider is correctly registered in the
 provider registry, model catalog, and runtime resolution pipeline.

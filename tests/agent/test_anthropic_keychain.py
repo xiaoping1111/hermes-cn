@@ -1,4 +1,14 @@
-"""Tests for Bug #12905 fixes in agent/anthropic_adapter.py — macOS Keychain support."""
+"""Agent核心测试 - anthropic keychain
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的anthropic keychain验证。
+- 验证功能：anthropic keychain功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：anthropic keychain功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Bug #12905 fixes in agent/anthropic_adapter.py — macOS Keychain support.
+"""
 
 import json
 from unittest.mock import patch, MagicMock

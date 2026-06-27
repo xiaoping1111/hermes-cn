@@ -1,10 +1,18 @@
-"""Tests for the unified profile→machine dashboard launch routing.
+"""CLIdashboard unified launch测试
+
+【产品经理理解要点】
+CLIdashboard unified launch功能测试。
+- 验证功能：命令行dashboard unified launch功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard unified launch命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the unified profile→machine dashboard launch routing.
 
 `<profile> dashboard` routes to ONE machine-level dashboard instead of
 spawning a per-profile server: attach (open browser at ?profile=) when one
 is already listening, else re-exec as the machine dashboard with the
-launching profile preselected. `--isolated` opts out.
-"""
+launching profile preselected. `--isolated` opts out."""
 import sys
 import types
 import pytest

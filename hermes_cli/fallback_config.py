@@ -1,3 +1,14 @@
+
+"""回退配置读取
+
+【产品经理理解要点】
+从config.yaml读取生效的回退提供商链。
+- 解析config.yaml中的fallback_providers配置
+- 规范化base_url用于匹配
+- 纯数据读取，无副作用
+
+────────────────────────────────────────────────────────────────"""
+
 """Helpers for reading the effective fallback provider chain from config."""
 
 from __future__ import annotations

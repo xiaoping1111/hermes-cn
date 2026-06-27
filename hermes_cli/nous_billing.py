@@ -1,3 +1,14 @@
+
+"""Nous计费客户端
+
+【产品经理理解要点】
+Nous Portal的终端计费API客户端，管理额度购买和自动充值。
+- 购买额度/查询充值状态/配置自动充值
+- 金额始终使用Decimal，永不使用float
+- 写操作：与nous_account的只读查询互补
+
+────────────────────────────────────────────────────────────────"""
+
 """Nous Portal terminal-billing HTTP client (Phase 2b).
 
 Thin, fail-loud client for the four ``/api/billing/*`` endpoints the terminal

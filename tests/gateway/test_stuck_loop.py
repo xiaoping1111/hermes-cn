@@ -1,9 +1,17 @@
-"""Tests for stuck-session loop detection (#7536).
+"""死循环检测
+
+【产品经理理解要点】
+死循环检测与恢复。
+- 验证功能：Agent执行死循环的检测与恢复
+- 关键场景：循环检测、强制中断、状态重置
+- 业务影响：Agent陷入死循环无法响应
+
+─────────────────────────────────────────────────────────────────────────
+Tests for stuck-session loop detection (#7536).
 
 When a session is active across 3+ consecutive gateway restarts (the agent
 gets stuck, gateway restarts, same session gets stuck again), the session
-is auto-suspended on startup so the user gets a clean slate.
-"""
+is auto-suspended on startup so the user gets a clean slate."""
 
 import json
 from unittest.mock import MagicMock

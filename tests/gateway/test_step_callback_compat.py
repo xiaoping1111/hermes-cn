@@ -1,9 +1,17 @@
-"""Tests for step_callback backward compatibility.
+"""网关step callback compat测试
+
+【产品经理理解要点】
+网关step callback compat功能测试。
+- 验证功能：网关step callback compat处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：step callback compat功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for step_callback backward compatibility.
 
 Verifies that the gateway's step_callback normalization keeps
 ``tool_names`` as a list of strings for backward-compatible hooks,
-while also providing the enriched ``tools`` list with results.
-"""
+while also providing the enriched ``tools`` list with results."""
 
 import asyncio
 

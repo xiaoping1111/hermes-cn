@@ -1,8 +1,16 @@
-"""Unit tests for gateway.slash_access — per-platform slash command access control.
+"""网关slash access测试
+
+【产品经理理解要点】
+网关slash access功能测试。
+- 验证功能：网关slash access处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：slash access功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for gateway.slash_access — per-platform slash command access control.
 
 Tests the pure policy resolver (no gateway plumbing). Integration tests that
-exercise the dispatch site live in test_slash_access_dispatch.py.
-"""
+exercise the dispatch site live in test_slash_access_dispatch.py."""
 from __future__ import annotations
 
 from gateway.config import GatewayConfig, Platform, PlatformConfig

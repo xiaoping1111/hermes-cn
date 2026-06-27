@@ -1,4 +1,13 @@
-"""Regression test: DeepSeek V4 thinking mode reasoning_content echo.
+"""Agent运行引擎测试 - deepseek reasoning content echo
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的deepseek reasoning content echo验证。
+- 验证功能：deepseek reasoning content echo功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：deepseek reasoning content echo功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression test: DeepSeek V4 thinking mode reasoning_content echo.
 
 DeepSeek V4-flash / V4-pro thinking mode requires ``reasoning_content`` on
 every assistant message that carries ``tool_calls``. When a persisted

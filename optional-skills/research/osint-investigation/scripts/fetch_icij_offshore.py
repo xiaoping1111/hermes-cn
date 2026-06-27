@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Search ICIJ Offshore Leaks via the bulk CSV database.
+"""ICIJ 离岸数据查询
+
+【产品经理理解要点】
+查询 ICIJ 离岸泄密数据库。
+- 离岸实体搜索
+- 关联网络分析
+
+─────────────────────────────────────────────────────────────────
+Search ICIJ Offshore Leaks via the bulk CSV database.
 
 The old reconcile endpoint (https://offshoreleaks.icij.org/reconcile) returns
 404 — ICIJ has removed it. The remaining stable access path is the public

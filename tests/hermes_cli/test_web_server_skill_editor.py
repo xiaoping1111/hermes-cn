@@ -1,4 +1,13 @@
-"""Tests for the dashboard skill editor endpoints and cron skill attachment.
+"""CLIweb server skill editor测试
+
+【产品经理理解要点】
+CLIweb server skill editor功能测试。
+- 验证功能：命令行web server skill editor功能
+- 关键场景：配置、执行、验证
+- 业务影响：web server skill editor命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the dashboard skill editor endpoints and cron skill attachment.
 
 The Skills page can now create/edit custom skills (SKILL.md) and the Cron
 page can attach skills to jobs — closing the "SSH + nano is the only way"
@@ -9,8 +18,7 @@ gap for headless/VPS users. These tests pin:
   as the agent's ``skill_manage`` tool (frontmatter validation enforced).
 - PUT /api/skills/content rewrites an existing SKILL.md (404 on unknown).
 - POST /api/cron/jobs accepts ``skills`` and persists it on the job;
-  PUT /api/cron/jobs/{id} can update the list.
-"""
+  PUT /api/cron/jobs/{id} can update the list."""
 import pytest
 
 

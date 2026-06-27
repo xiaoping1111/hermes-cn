@@ -1,5 +1,16 @@
 """Context compression — extract the AIAgent methods that drive summarisation.
 
+对话压缩驱动
+
+【产品经理理解要点】
+上下文压缩的执行逻辑：可行性检查、压缩调用、会话拆分、提示重建。
+- 核心职责：压缩模型可行性检查、执行压缩、SQLite 会话拆分/ID 轮换
+- 关键业务概念：压缩可行性、会话拆分、session_id 轮换、图像缩小恢复
+- 在系统中的位置：AIAgent 压缩方法的提取实现
+
+─────────────────────────────────────────────────────────────────
+
+
 Three concerns live here:
 
 * :func:`check_compression_model_feasibility` — startup probe of the

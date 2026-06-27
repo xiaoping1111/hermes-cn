@@ -1,3 +1,11 @@
+"""看板通知
+
+【产品经理理解要点】
+看板通知器。
+- 验证功能：Kanban看板变更通知
+- 关键场景：变更检测、通知发送、订阅管理
+- 业务影响：看板变更无通知"""
+
 import asyncio
 from pathlib import Path
 

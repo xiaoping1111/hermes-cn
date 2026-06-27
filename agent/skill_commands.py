@@ -1,5 +1,16 @@
 """Shared slash command helpers for skills.
 
+技能斜杠命令
+
+【产品经理理解要点】
+CLI 和 Gateway 共享的技能斜杠命令处理：/skill-name 加载技能内容到对话。
+- 核心职责：注册技能名-技能文件映射、斜杠命令触发技能内容加载
+- 关键业务概念：技能斜杠命令、技能名sanitization、平台共享
+- 在系统中的位置：CLI 和 Gateway 斜杠命令系统的技能分支
+
+─────────────────────────────────────────────────────────────────
+
+
 Shared between CLI (cli.py) and gateway (gateway/run.py) so both surfaces
 can invoke skills via /skill-name commands.
 """

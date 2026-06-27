@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Diff ruff + ty diagnostic reports between two git refs.
+"""Lint 差异对比
+
+【产品经理理解要点】
+对比两个 Git 版本之间的 ruff/ty 诊断报告差异，生成 PR 评审用的 Markdown 摘要。
+- 核心职责：按稳定键（文件+规则+行号）对比新增/修复的 lint 问题，过滤行号偏移噪音
+- 关键概念：用于 CI 流水线，将增量 lint 结果附加到 PR 评论和 GitHub Step Summary
+- 系统定位：CI 辅助脚本，PR 质量门禁的一部分
+
+─────────────────────────────────────────────────────────────────
+Diff ruff + ty diagnostic reports between two git refs.
 
 Produces a Markdown summary suitable for `$GITHUB_STEP_SUMMARY` and for PR
 comments. Compares issues by a stable key (file, rule, line) so line-only

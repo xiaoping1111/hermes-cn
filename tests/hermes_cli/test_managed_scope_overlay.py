@@ -1,4 +1,13 @@
-"""apply_managed_overlay() — the shared helper used by every standalone loader."""
+"""CLImanaged scope overlay测试
+
+【产品经理理解要点】
+CLImanaged scope overlay功能测试。
+- 验证功能：命令行managed scope overlay功能
+- 关键场景：配置、执行、验证
+- 业务影响：managed scope overlay命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+apply_managed_overlay() — the shared helper used by every standalone loader."""
 import textwrap
 
 import pytest

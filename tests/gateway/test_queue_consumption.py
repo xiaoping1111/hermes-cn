@@ -1,9 +1,17 @@
-"""Tests for /queue message consumption after normal agent completion.
+"""网关queue consumption测试
+
+【产品经理理解要点】
+网关queue consumption功能测试。
+- 验证功能：网关queue consumption处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：queue consumption功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for /queue message consumption after normal agent completion.
 
 Verifies that messages queued via /queue (which store in
 adapter._pending_messages WITHOUT triggering an interrupt) are consumed
-after the agent finishes its current task — not silently dropped.
-"""
+after the agent finishes its current task — not silently dropped."""
 
 import asyncio
 from unittest.mock import MagicMock

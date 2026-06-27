@@ -1,4 +1,14 @@
-"""Tests for acp_adapter.tools — tool kind mapping and ACP content building."""
+"""ACP协议测试 - tools
+
+【产品经理理解要点】
+ACP协议层的工具注册、权限控制、会话管理、事件分发和MCP端到端通信中的tools验证。
+- 验证功能：tools功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：tools功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for acp_adapter.tools — tool kind mapping and ACP content building.
+"""
 
 
 from acp_adapter.edit_approval import EditProposal

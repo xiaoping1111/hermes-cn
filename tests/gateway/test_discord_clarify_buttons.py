@@ -1,4 +1,13 @@
-"""Tests for Discord clarify button rendering and resolution.
+"""Discord网关测试
+
+【产品经理理解要点】
+Discord平台网关功能测试。
+- 验证功能：Discord平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Discord平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Discord clarify button rendering and resolution.
 
 Mirrors test_telegram_clarify_buttons.py for the Discord ``send_clarify``
 override and the ``ClarifyChoiceView`` callbacks. Discord uses ``discord.ui.View``
@@ -8,8 +17,7 @@ dispatcher like Telegram — the auth + resolution path is the same:
   · numeric choice → resolve_gateway_clarify(clarify_id, choice_text)
   · "Other" button → mark_awaiting_text(clarify_id) so the text-intercept
     captures the next user message in this session
-  · already-resolved or unauthorized → ephemeral "this prompt..." reply
-"""
+  · already-resolved or unauthorized → ephemeral "this prompt..." reply"""
 
 import sys
 from pathlib import Path

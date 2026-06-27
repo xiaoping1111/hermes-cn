@@ -1,4 +1,13 @@
-"""Regression tests for gateway /model support of config.yaml custom_providers."""
+"""网关model command custom providers测试
+
+【产品经理理解要点】
+网关model command custom providers功能测试。
+- 验证功能：网关model command custom providers处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：model command custom providers功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for gateway /model support of config.yaml custom_providers."""
 
 import yaml
 import pytest

@@ -1,11 +1,19 @@
-"""Tests for GHSA-3vpc-7q5r-276h — Telegram webhook secret required.
+"""Telegram网关测试
+
+【产品经理理解要点】
+Telegram平台网关功能测试。
+- 验证功能：Telegram平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for GHSA-3vpc-7q5r-276h — Telegram webhook secret required.
 
 Previously, when TELEGRAM_WEBHOOK_URL was set but TELEGRAM_WEBHOOK_SECRET
 was not, python-telegram-bot received secret_token=None and the webhook
 endpoint accepted any HTTP POST.
 
-The fix refuses to start the adapter in webhook mode without the secret.
-"""
+The fix refuses to start the adapter in webhook mode without the secret."""
 
 from __future__ import annotations
 

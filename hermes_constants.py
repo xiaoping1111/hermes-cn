@@ -1,4 +1,13 @@
-"""Shared constants for Hermes Agent.
+"""Hermes 智能体共享常量
+
+【产品经理理解要点】
+全局常量与配置中心：定义项目路径、API 地址、配置文件位置等全系统共享的常量。
+- 核心职责：提供无副作用的全局常量（路径、URL、默认值），任何模块可安全导入
+- 关键业务概念：HERMES_HOME 路径解析、模型供应商 Base URL、多 Profile 支持
+- 在系统中的位置：基础设施层，被所有其他模块依赖，不含任何业务逻辑
+
+─────────────────────────────────────────────────────────────────
+Shared constants for Hermes Agent.
 
 Import-safe module with no dependencies — can be imported from anywhere
 without risk of circular imports.

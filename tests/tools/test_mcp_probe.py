@@ -1,4 +1,14 @@
-"""Tests for probe_mcp_server_tools() in tools.mcp_tool."""
+"""工具系统测试 - mcp probe
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的mcp probe验证。
+- 验证功能：mcp probe功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：mcp probe功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for probe_mcp_server_tools() in tools.mcp_tool.
+"""
 
 import asyncio
 from types import SimpleNamespace

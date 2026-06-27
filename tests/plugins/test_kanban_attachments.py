@@ -1,4 +1,13 @@
-"""Tests for Kanban task file attachments (#35338).
+"""插件系统测试 - kanban attachments
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的kanban attachments验证。
+- 验证功能：kanban attachments功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：kanban attachments功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Kanban task file attachments (#35338).
 
 Covers three layers:
   * ``hermes_cli.kanban_db`` accessors (add/list/get/delete + path helpers)

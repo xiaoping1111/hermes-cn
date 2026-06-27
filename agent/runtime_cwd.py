@@ -1,5 +1,16 @@
 """Single source of truth for the agent working directory.
 
+运行时工作目录
+
+【产品经理理解要点】
+确定智能体的工作目录(CWD)，确保系统提示、工具和上下文文件使用一致路径。
+- 核心职责：解析当前会话工作目录、支持多会话网关的 per-session CWD
+- 关键业务概念：TERMINAL_CWD、会话 CWD、contextvar 隔离
+- 在系统中的位置：系统提示和工具执行的路径基础
+
+─────────────────────────────────────────────────────────────────
+
+
 `TERMINAL_CWD` is the runtime carrier for the configured working directory
 (design #19214/#19242: `terminal.cwd` is bridged once to `TERMINAL_CWD` at
 gateway/cron startup). The local-CLI backend deliberately leaves it unset and

@@ -1,3 +1,14 @@
+
+"""Android psutil兼容
+
+【产品经理理解要点】
+Android平台psutil的临时兼容安装器。
+- Android上psutil需要特殊补丁才能编译
+- 固定已知可用的psutil版本
+- Termux等Android终端环境的支持
+
+────────────────────────────────────────────────────────────────"""
+
 """Helpers for the temporary psutil-on-Android compatibility installer."""
 
 from __future__ import annotations

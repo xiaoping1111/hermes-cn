@@ -1,3 +1,14 @@
+
+"""记忆提供商配置声明
+
+【产品经理理解要点】
+声明式定义桌面记忆提供商的可配置界面，驱动通用UI渲染。
+- 新增提供商只需声明字段，无需编写UI组件
+- 统一的GET/PUT API端点驱动所有提供商配置
+- 纯数据模块，不依赖config/env层
+
+────────────────────────────────────────────────────────────────"""
+
 """Declarative configuration schema for desktop memory providers.
 
 Each memory provider *declares* its configurable surface here — the fields, their

@@ -1,4 +1,13 @@
-"""Tests for transcript history offset fix.
+"""网关transcript offset测试
+
+【产品经理理解要点】
+网关transcript offset功能测试。
+- 验证功能：网关transcript offset处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：transcript offset功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for transcript history offset fix.
 
 Regression tests for a bug where the gateway transcript lost 1 message
 per turn from turn 2 onwards.  The raw transcript history includes
@@ -9,8 +18,7 @@ plus new messages from the current turn.
 The old code used ``len(history)`` (raw count, includes session_meta)
 to slice ``agent_messages``, which caused the slice to skip valid new
 messages.  The fix adds ``history_offset`` (the filtered history length)
-to ``_run_agent``'s return dict and uses it for the slice.
-"""
+to ``_run_agent``'s return dict and uses it for the slice."""
 
 
 from gateway.run import _preserve_queued_followup_history_offset

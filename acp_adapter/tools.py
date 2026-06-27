@@ -1,4 +1,13 @@
-"""ACP tool-call helpers for mapping hermes tools to ACP ToolKind and building content."""
+"""ACP 工具映射
+
+【产品经理理解要点】
+将 Hermes 内部工具（文件读写、终端执行、浏览器操作等）映射为 ACP 协议的工具类型，供编辑器渲染。
+- 核心职责：定义工具名→ACP ToolKind 的映射表，构建工具调用的开始/进度/完成消息
+- 关键概念：ACP 定义了 read/edit/execute/search/fetch/other 六种工具类型，决定编辑器中的图标和行为
+- 系统定位：工具表示层，Agent 内部工具调用 → ACP 工具通知 → 编辑器工具面板展示
+
+─────────────────────────────────────────────────────────────────────────
+ACP tool-call helpers for mapping hermes tools to ACP ToolKind and building content."""
 
 from __future__ import annotations
 

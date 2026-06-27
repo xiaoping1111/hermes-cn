@@ -1,4 +1,13 @@
-"""Tests for gateway /status behavior and token persistence."""
+"""状态命令
+
+【产品经理理解要点】
+状态查询命令。
+- 验证功能：系统/会话状态查询命令
+- 关键场景：状态聚合、格式化、展示
+- 业务影响：用户无法查看系统状态
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway /status behavior and token persistence."""
 
 from datetime import datetime
 import time

@@ -1,4 +1,13 @@
-"""Tests for issue #860 — SQLite session transcript deduplication.
+"""Agent运行引擎测试 - 860 dedup
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的860 dedup验证。
+- 验证功能：860 dedup功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：860 dedup功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for issue #860 — SQLite session transcript deduplication.
 
 Verifies that:
 1. _flush_messages_to_session_db uses _last_flushed_db_idx to avoid re-writing

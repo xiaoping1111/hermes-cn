@@ -1,4 +1,13 @@
-"""Regression tests for the _run_async() event-loop lifecycle.
+"""测试 - model tools async bridge
+
+【产品经理理解要点】
+功能验证中的model tools async bridge验证。
+- 验证功能：model tools async bridge功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：model tools async bridge功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the _run_async() event-loop lifecycle.
 
 These tests verify the fix for GitHub issue #2104:
   "Event loop is closed" after vision_analyze used as first call in session.

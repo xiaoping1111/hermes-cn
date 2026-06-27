@@ -1,4 +1,13 @@
-"""Test that HMAC signature validation happens BEFORE rate limiting.
+"""Webhook网关测试
+
+【产品经理理解要点】
+Webhook平台网关功能测试。
+- 验证功能：Webhook平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Webhook平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Test that HMAC signature validation happens BEFORE rate limiting.
 
 This verifies the fix for bug #12544: invalid signature requests must NOT
 consume rate-limit quota. Before the fix, rate limiting was applied before
@@ -10,8 +19,7 @@ The correct order is:
 1. Read body
 2. Validate HMAC signature (reject 401 if invalid)
 3. Rate limit check (reject 429 if over limit)
-4. Process the webhook
-"""
+4. Process the webhook"""
 
 import hashlib
 import hmac

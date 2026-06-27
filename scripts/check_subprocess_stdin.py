@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Check that subprocess calls in TUI-context code specify stdin=.
+"""子进程 stdin 安全检查
+
+【产品经理理解要点】
+检查 TUI 模式下的子进程调用是否显式设置了 stdin 参数，防止继承网关的 JSON-RPC 通道导致意外退出。
+- 核心职责：扫描 agent/tools/plugins/tui_gateway 目录中的 subprocess 调用，报告未指定 stdin= 的违规
+- 关键概念：TUI 模式下 stdin 是与父进程的 JSON-RPC 通道，子进程若继承此 fd 会造成 EOF 退出
+- 系统定位：CI 质量门禁脚本，防止 TUI 模式下的 stdin 泄漏
+
+─────────────────────────────────────────────────────────────────
+Check that subprocess calls in TUI-context code specify stdin=.
 
 When Hermes runs in TUI mode, the gateway child process communicates with
 the Node.js parent over a JSON-RPC protocol on stdin. Subprocess calls that

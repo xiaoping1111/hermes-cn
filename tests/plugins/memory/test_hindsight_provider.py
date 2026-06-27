@@ -1,4 +1,13 @@
-"""Tests for the Hindsight memory provider plugin.
+"""插件系统测试 - hindsight provider
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的hindsight provider验证。
+- 验证功能：hindsight provider功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：hindsight provider功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Hindsight memory provider plugin.
 
 Tests cover config loading, tool handlers (tags, max_tokens, types),
 prefetch (auto_recall, preamble, query truncation), sync_turn (auto_retain,

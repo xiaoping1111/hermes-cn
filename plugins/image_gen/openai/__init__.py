@@ -1,4 +1,13 @@
-"""OpenAI image generation backend.
+"""OpenAI 图像生成后端
+
+【产品经理理解要点】
+对接 OpenAI 的 gpt-image-2 模型，支持文生图和图编辑（最多 16 张参考图）。
+- 三个质量档位：low（~15s）、medium（~40s，默认）、high（~2min），底层均为同一模型
+- 图编辑通过 images.edit() 接口实现，支持上传源图进行修改
+- 需要 OPENAI_API_KEY 认证
+
+─────────────────────────────────────────────────────────────────
+OpenAI image generation backend.
 
 Exposes OpenAI's ``gpt-image-2`` model at three quality tiers as an
 :class:`ImageGenProvider` implementation. The tiers are implemented as

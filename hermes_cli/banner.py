@@ -1,7 +1,15 @@
-"""Welcome banner, ASCII art, skills summary, and update check for the CLI.
+"""欢迎横幅与更新检查
 
-Pure display functions with no HermesCLI state dependency.
-"""
+【产品经理理解要点】
+显示CLI启动时的ASCII艺术横幅、技能摘要和版本更新提示。
+- 首屏体验：ASCII Logo + 系统摘要 + 提示
+- 后台检查新版本可用性（非阻塞）
+- 纯展示函数，无状态依赖
+
+────────────────────────────────────────────────────────────────
+Welcome banner, ASCII art, skills summary, and update check for the CLI.
+
+Pure display functions with no HermesCLI state dependency."""
 
 import json
 import logging

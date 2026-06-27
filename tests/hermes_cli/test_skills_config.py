@@ -1,4 +1,13 @@
-"""Tests for hermes_cli/skills_config.py and skills_tool disabled filtering."""
+"""CLIskills config测试
+
+【产品经理理解要点】
+CLIskills config功能测试。
+- 验证功能：命令行skills config功能
+- 关键场景：配置、执行、验证
+- 业务影响：skills config命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli/skills_config.py and skills_tool disabled filtering."""
 from unittest.mock import patch
 
 

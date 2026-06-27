@@ -1,4 +1,13 @@
-"""Behavior-parity check for the STT plugin hook + command-provider registry.
+"""插件系统测试 - check parity vs main
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的check parity vs main验证。
+- 验证功能：check parity vs main功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：check parity vs main功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Behavior-parity check for the STT plugin hook + command-provider registry.
 
 Spawns one subprocess per (version, scenario) cell — pinned to either
 ``origin/main`` (no plugin hook, no STT command-provider registry; only

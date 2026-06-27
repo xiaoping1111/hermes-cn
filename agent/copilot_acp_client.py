@@ -1,5 +1,16 @@
 """OpenAI-compatible shim that forwards Hermes requests to `copilot --acp`.
 
+GitHub Copilot ACP 客户端
+
+【产品经理理解要点】
+将 GitHub Copilot ACP 服务器包装为 OpenAI 兼容的后端。
+- 核心职责：管理 ACP 会话生命周期、双向消息格式转换
+- 关键业务概念：ACP 协议、短生命周期会话、消息转换
+- 在系统中的位置：GitHub Copilot 供应商的传输适配层
+
+─────────────────────────────────────────────────────────────────
+
+
 This adapter lets Hermes treat the GitHub Copilot ACP server as a chat-style
 backend. Each request starts a short-lived ACP session, sends the formatted
 conversation as a single prompt, collects text chunks, and converts the result

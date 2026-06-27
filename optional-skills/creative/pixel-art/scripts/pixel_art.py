@@ -1,4 +1,12 @@
-"""Pixel art converter — Floyd-Steinberg dithering with preset or named palette.
+"""像素艺术生成
+
+【产品经理理解要点】
+生成像素风格的艺术图片。
+- 图像像素化处理
+- 调色板量化和抖动
+
+─────────────────────────────────────────────────────────────────
+Pixel art converter — Floyd-Steinberg dithering with preset or named palette.
 
 Named hardware palettes (NES, GameBoy, PICO-8, C64, etc.) ported from
 pixel-art-studio (MIT) — see ATTRIBUTION.md.

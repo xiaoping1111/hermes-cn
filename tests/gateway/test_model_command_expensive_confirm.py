@@ -1,4 +1,13 @@
-"""Gateway typed ``/model <name>`` must route through the expensive-model
+"""网关model command expensive confirm测试
+
+【产品经理理解要点】
+网关model command expensive confirm功能测试。
+- 验证功能：网关model command expensive confirm处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：model command expensive confirm功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Gateway typed ``/model <name>`` must route through the expensive-model
 confirmation gate.
 
 The pickers (Telegram/Discord inline keyboards, TUI, dashboard) confirm
@@ -10,8 +19,7 @@ These tests pin the typed path:
 - warning fires → handler returns the slash-confirm prompt, switch NOT applied
 - confirm ("once") → switch applies (session override set)
 - cancel → switch not applied, current model unchanged
-- no warning (cheap model) → switch applies immediately, no prompt
-"""
+- no warning (cheap model) → switch applies immediately, no prompt"""
 
 from types import SimpleNamespace
 

@@ -1,4 +1,13 @@
-"""Tests for context token tracking in run_agent.py's usage extraction.
+"""Agent运行引擎测试 - context token tracking
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的context token tracking验证。
+- 验证功能：context token tracking功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：context token tracking功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for context token tracking in run_agent.py's usage extraction.
 
 The context counter (status bar) must show the TOTAL prompt tokens including
 Anthropic's cached portions. This is an integration test for the token

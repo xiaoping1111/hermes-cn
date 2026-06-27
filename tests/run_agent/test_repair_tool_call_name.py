@@ -1,4 +1,13 @@
-"""Tests for AIAgent._repair_tool_call — tool-name normalization.
+"""Agent运行引擎测试 - repair tool call name
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的repair tool call name验证。
+- 验证功能：repair tool call name功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：repair tool call name功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for AIAgent._repair_tool_call — tool-name normalization.
 
 Regression guard for #14784: Claude-style models sometimes emit
 class-like tool-call names (``TodoTool_tool``, ``Patch_tool``,

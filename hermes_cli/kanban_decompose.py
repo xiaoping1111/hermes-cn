@@ -1,3 +1,14 @@
+
+"""看板任务分解
+
+【产品经理理解要点】
+将一个分诊任务展开为子任务图，由LLM自动规划分解方案。
+- 调用辅助LLM生成任务分解JSON
+- 原子性创建子任务并建立父子关系
+- 根任务完成后自动唤醒上层
+
+────────────────────────────────────────────────────────────────"""
+
 """Kanban decomposer — fan a triage task out into a graph of child tasks.
 
 Invoked by ``hermes kanban decompose [task_id | --all]`` and the

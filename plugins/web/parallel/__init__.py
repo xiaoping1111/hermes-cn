@@ -1,4 +1,11 @@
-"""Parallel.ai web search + extract plugin — bundled, auto-loaded.
+"""Parallel 搜索插件
+
+【产品经理理解要点】
+Parallel 多引擎聚合搜索后端入口。
+- 并发调用多个搜索引擎并合并结果
+
+─────────────────────────────────────────────────────────────────
+Parallel.ai web search + extract plugin — bundled, auto-loaded.
 
 First plugin in this repo to expose an async :meth:`extract` — Parallel's
 SDK is async-native (``AsyncParallel.beta.extract``). The web_extract_tool

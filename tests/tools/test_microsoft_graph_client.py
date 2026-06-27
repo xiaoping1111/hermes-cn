@@ -1,4 +1,14 @@
-"""Tests for tools/microsoft_graph_client.py."""
+"""工具系统测试 - microsoft graph client
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的microsoft graph client验证。
+- 验证功能：microsoft graph client功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：microsoft graph client功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for tools/microsoft_graph_client.py.
+"""
 
 from __future__ import annotations
 

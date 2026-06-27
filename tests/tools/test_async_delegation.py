@@ -1,4 +1,13 @@
-"""Tests for async (background) delegation — tools/async_delegation.py.
+"""工具系统测试 - async delegation
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的async delegation验证。
+- 验证功能：async delegation功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：async delegation功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for async (background) delegation — tools/async_delegation.py.
 
 Covers the dispatch handle, non-blocking behavior, completion-event delivery
 onto the shared process_registry.completion_queue, the rich re-injection block

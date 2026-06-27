@@ -1,4 +1,13 @@
-"""Regression tests for #30170.
+"""子Agent保护
+
+【产品经理理解要点】
+子Agent安全保护。
+- 验证功能：子Agent调用的安全边界保护
+- 关键场景：权限隔离、资源限制、调用深度
+- 业务影响：子Agent越权或资源耗尽
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for #30170.
 
 #30170: Sending a message while ``delegate_task`` is running killed the
 subagent because the gateway always called ``running_agent.interrupt()``
@@ -20,8 +29,7 @@ These tests pin down the gateway-side guard introduced for #30170:
   pending queue, ack reflects the demotion) when the parent has active
   subagents.
 * The ``queue`` and ``steer`` configured modes still behave exactly as
-  before — the guard is interrupt-only.
-"""
+  before — the guard is interrupt-only."""
 
 from __future__ import annotations
 

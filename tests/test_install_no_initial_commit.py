@@ -1,4 +1,13 @@
-"""Regression for #40998: installer fails on an interrupted prior clone.
+"""测试 - install no initial commit
+
+【产品经理理解要点】
+功能验证中的install no initial commit验证。
+- 验证功能：install no initial commit功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：install no initial commit功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression for #40998: installer fails on an interrupted prior clone.
 
 A previous clone that died before its first commit leaves ``$INSTALL_DIR/.git``
 present but with no resolvable ``HEAD``. ``git rev-parse --is-inside-work-tree``

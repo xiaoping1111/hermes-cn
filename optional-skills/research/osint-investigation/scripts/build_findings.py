@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Build a structured findings.json with evidence chains (stdlib-only).
+"""OSINT 调查报告生成
+
+【产品经理理解要点】
+汇总所有 OSINT 数据源生成调查报告。
+- 多源数据整合
+- 时间线和关系图构建
+
+─────────────────────────────────────────────────────────────────
+Build a structured findings.json with evidence chains (stdlib-only).
 
 Aggregates cross_links.csv (entity_resolution output) and an optional
 timing.json (timing_analysis output) into a single evidence-chain document.

@@ -1,4 +1,13 @@
-"""Regression tests for _release_running_agent_state and SessionDB shutdown.
+"""会话状态清理
+
+【产品经理理解要点】
+会话状态清理。
+- 验证功能：会话结束后的状态清理
+- 关键场景：资源释放、缓存清理、持久化
+- 业务影响：会话结束后资源泄露
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for _release_running_agent_state and SessionDB shutdown.
 
 Before this change, running-agent state lived in three dicts that drifted
 out of sync:
@@ -13,8 +22,7 @@ the other two; one site only popped ``_running_agents`` and
 three.  Each missed entry was a small persistent leak.
 
 Also: SessionDB connections were never closed on gateway shutdown,
-leaving WAL locks in place until Python actually exited.
-"""
+leaving WAL locks in place until Python actually exited."""
 
 import threading
 from unittest.mock import MagicMock

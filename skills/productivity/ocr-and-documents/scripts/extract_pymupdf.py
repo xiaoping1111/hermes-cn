@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Extract text from documents using pymupdf. Lightweight (~25MB), no models.
+"""PyMuPDF 文档提取
+
+【产品经理理解要点】
+使用 PyMuPDF 从 PDF 中提取文本和表格。
+- PDF 文本提取
+- 表格和图片识别
+
+─────────────────────────────────────────────────────────────────
+Extract text from documents using pymupdf. Lightweight (~25MB), no models.
 
 Usage:
     python extract_pymupdf.py document.pdf

@@ -1,4 +1,13 @@
-"""Regression tests for two OpenAI/OpenRouter model-picker bugs.
+"""CLIopenai picker curated测试
+
+【产品经理理解要点】
+CLIopenai picker curated功能测试。
+- 验证功能：命令行openai picker curated功能
+- 关键场景：配置、执行、验证
+- 业务影响：openai picker curated命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for two OpenAI/OpenRouter model-picker bugs.
 
 Bug 1 — OpenAI picker dumped the raw ``/v1/models`` catalog
     ``provider_model_ids("openai")`` hit ``api.openai.com/v1/models`` and
@@ -15,8 +24,7 @@ Bug 2 — OpenRouter appeared authenticated whenever OPENAI_API_KEY was set
     a provider has credentials, so any OpenAI user saw a phantom OpenRouter
     row. The overlay entry is removed; runtime credential resolution still
     falls back to OPENAI_API_KEY for explicitly-selected OpenRouter (handled
-    in runtime_provider.py, independent of the overlay).
-"""
+    in runtime_provider.py, independent of the overlay)."""
 
 import os
 from unittest.mock import patch

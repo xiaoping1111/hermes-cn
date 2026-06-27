@@ -1,4 +1,14 @@
-"""Tests for Honcho client configuration."""
+"""Honcho客户端
+
+【产品经理理解要点】
+Honcho HTTP客户端连接与认证。
+- 验证功能：客户端连接正确性
+- 关键场景：连接、认证、请求
+- 业务影响：Honcho服务无法访问
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Honcho client configuration.
+"""
 
 import json
 import os

@@ -1,11 +1,18 @@
-"""
+"""CLIskills install flags测试
+
+【产品经理理解要点】
+CLIskills install flags功能测试。
+- 验证功能：命令行skills install flags功能
+- 关键场景：配置、执行、验证
+- 业务影响：skills install flags命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
 Tests for --yes / --force flag separation in `hermes skills install`.
 
 --yes / -y  → skip_confirm (bypass interactive prompt, needed in TUI mode)
 --force     → force (install despite blocked scan verdict)
 
-Based on PR #1595 by 333Alden333 (salvaged).
-"""
+Based on PR #1595 by 333Alden333 (salvaged)."""
 
 import sys
 

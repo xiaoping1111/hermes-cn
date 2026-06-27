@@ -1,11 +1,19 @@
-"""Regression: _update_via_zip must reject ZIP members with symlink mode.
+"""CLIupdate zip symlink reject测试
+
+【产品经理理解要点】
+CLIupdate zip symlink reject功能测试。
+- 验证功能：命令行update zip symlink reject功能
+- 关键场景：配置、执行、验证
+- 业务影响：update zip symlink reject命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression: _update_via_zip must reject ZIP members with symlink mode.
 
 A symlink member in a downloaded update ZIP would let an attacker who can
 serve / MITM the update mirror plant a symlink that extractall() then
 follows, writing arbitrary file content outside the staging directory.
 The Linux mode bits live in the upper 16 bits of ``ZipInfo.external_attr``;
-we explicitly reject any member whose type bits are S_IFLNK.
-"""
+we explicitly reject any member whose type bits are S_IFLNK."""
 
 import os
 import stat

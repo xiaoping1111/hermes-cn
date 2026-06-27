@@ -1,4 +1,13 @@
-"""Tests for subprocess.run() timeout coverage in CLI utilities."""
+"""CLIsubprocess timeouts测试
+
+【产品经理理解要点】
+CLIsubprocess timeouts功能测试。
+- 验证功能：命令行subprocess timeouts功能
+- 关键场景：配置、执行、验证
+- 业务影响：subprocess timeouts命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for subprocess.run() timeout coverage in CLI utilities."""
 import ast
 from pathlib import Path
 

@@ -1,4 +1,13 @@
-"""Tests for per-platform prompt-hint overrides (config.yaml → platform_hints).
+"""Agent核心测试 - platform hint overrides
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的platform hint overrides验证。
+- 验证功能：platform hint overrides功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：platform hint overrides功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for per-platform prompt-hint overrides (config.yaml → platform_hints).
 
 Covers agent/system_prompt.py::_resolve_platform_hint — the resolver that
 applies append/replace overrides to a platform's default hint. Feature added

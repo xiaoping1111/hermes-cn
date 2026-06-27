@@ -1,12 +1,20 @@
-"""Tests for hermes_cli.container_boot — the cont-init.d-time
+"""CLIcontainer boot测试
+
+【产品经理理解要点】
+CLIcontainer boot功能测试。
+- 验证功能：命令行container boot功能
+- 关键场景：配置、执行、验证
+- 业务影响：container boot命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.container_boot — the cont-init.d-time
 reconciliation that recreates per-profile gateway s6 service slots
 from the persistent profiles directory.
 
 These tests run against a fake $HERMES_HOME under tmp_path; no real
 s6 supervision tree is required. The in-container integration test
 covering end-to-end "docker restart" survival lives in
-tests/docker/test_container_restart.py.
-"""
+tests/docker/test_container_restart.py."""
 from __future__ import annotations
 
 import json

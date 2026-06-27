@@ -1,11 +1,19 @@
-"""Tests for the clean shutdown marker that prevents unwanted session auto-resets.
+"""网关clean shutdown marker测试
+
+【产品经理理解要点】
+网关clean shutdown marker功能测试。
+- 验证功能：网关clean shutdown marker处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：clean shutdown marker功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the clean shutdown marker that prevents unwanted session auto-resets.
 
 When the gateway shuts down gracefully (hermes update, gateway restart, /restart),
 it writes a .clean_shutdown marker.  On the next startup, if the marker exists,
 suspend_recently_active() is skipped so users don't lose their sessions.
 
-After a crash (no marker), suspension still fires as a safety net for stuck sessions.
-"""
+After a crash (no marker), suspension still fires as a safety net for stuck sessions."""
 
 from datetime import datetime, timedelta
 from unittest.mock import AsyncMock, MagicMock, patch

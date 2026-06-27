@@ -1,4 +1,13 @@
-"""Tests for gateway proxy mode — forwarding messages to a remote API server."""
+"""网关proxy mode测试
+
+【产品经理理解要点】
+网关proxy mode功能测试。
+- 验证功能：网关proxy mode处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：proxy mode功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway proxy mode — forwarding messages to a remote API server."""
 
 from unittest.mock import AsyncMock, MagicMock, patch
 

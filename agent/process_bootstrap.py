@@ -1,5 +1,16 @@
 """Process-level bootstrap helpers for ``run_agent``.
 
+进程级启动引导
+
+【产品经理理解要点】
+OpenAI SDK 懒加载(省240ms)、崩溃安全的 stdio 写入、HTTP 代理解析。
+- 核心职责：延迟导入 OpenAI SDK、安全 stdio 封装、HTTP/HTTPS 代理解析
+- 关键业务概念：懒加载代理、管道崩溃保护、NO_PROXY 规则
+- 在系统中的位置：AIAgent 启动时的 I/O 和客户端初始化层
+
+─────────────────────────────────────────────────────────────────
+
+
 Three concerns, all tied to ``AIAgent`` boot-time / runtime IO setup:
 
 1. **Lazy OpenAI SDK import** — ``_load_openai_cls`` + ``_OpenAIProxy``

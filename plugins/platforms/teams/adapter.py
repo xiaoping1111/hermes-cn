@@ -1,4 +1,13 @@
 """
+Microsoft Teams 企业通讯平台适配器
+
+【产品经理理解要点】
+接入 Microsoft Teams，通过 Webhook 接收消息，SDK 发送回复，面向企业用户。
+- 使用 microsoft-teams-apps SDK 处理认证和活动
+- 运行 aiohttp Webhook 服务器接收 Teams 消息
+- 支持 1:1 聊天和频道消息，需 Azure AD 应用凭据
+
+─────────────────────────────────────────────────────────────────
 Microsoft Teams platform adapter for Hermes Agent.
 
 Uses the microsoft-teams-apps SDK for authentication and activity processing.

@@ -1,4 +1,13 @@
-"""Regression for #21454: re-running install.sh on a symlinked prior install.
+"""测试 - install sh symlink stomp
+
+【产品经理理解要点】
+功能验证中的install sh symlink stomp验证。
+- 验证功能：install sh symlink stomp功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：install sh symlink stomp功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression for #21454: re-running install.sh on a symlinked prior install.
 
 Older versions of ``install.sh`` created ``$command_link_dir/hermes`` as a
 symlink to the pip-generated entry point at ``$HERMES_BIN`` (i.e.

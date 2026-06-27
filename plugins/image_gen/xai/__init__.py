@@ -1,4 +1,13 @@
-"""xAI image generation backend.
+"""xAI Grok 图像生成后端
+
+【产品经理理解要点】
+对接 xAI 的 grok-imagine-image 模型，支持文生图和图编辑。
+- 文生图使用 grok-imagine-image，图编辑使用 grok-imagine-image-quality
+- 支持多种宽高比（1:1、16:9、9:16 等）和两种分辨率（1K、2K）
+- 支持 xAI OAuth 或 XAI_API_KEY 两种认证方式
+
+─────────────────────────────────────────────────────────────────
+xAI image generation backend.
 
 Exposes xAI's ``grok-imagine-image`` model as an
 :class:`ImageGenProvider` implementation.

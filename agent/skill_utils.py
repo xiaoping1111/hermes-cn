@@ -1,5 +1,16 @@
 """Lightweight skill metadata utilities shared by prompt_builder and skills_tool.
 
+技能元数据工具
+
+【产品经理理解要点】
+技能(Skill)的元数据查询：读取技能描述、条件、禁用列表等，供系统提示构建使用。
+- 核心职责：解析 SKILL.md frontmatter、枚举已安装技能目录、平台/条件过滤
+- 关键业务概念：技能条件(conditions)、技能描述(description)、禁用技能
+- 在系统中的位置：prompt_builder 和 skills_tool 的共享依赖，轻量无副作用
+
+─────────────────────────────────────────────────────────────────
+
+
 This module intentionally avoids importing the tool registry, CLI config, or any
 heavy dependency chain.  It is safe to import at module level without triggering
 tool registration or provider resolution.

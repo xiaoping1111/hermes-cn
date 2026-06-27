@@ -1,4 +1,13 @@
-"""Unit tests for hermes_cli.managed_scope (resolver + loaders + key helpers)."""
+"""CLImanaged scope测试
+
+【产品经理理解要点】
+CLImanaged scope功能测试。
+- 验证功能：命令行managed scope功能
+- 关键场景：配置、执行、验证
+- 业务影响：managed scope命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for hermes_cli.managed_scope (resolver + loaders + key helpers)."""
 import textwrap
 
 import pytest

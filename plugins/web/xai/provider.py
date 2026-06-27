@@ -1,4 +1,12 @@
-"""xAI Web Search — plugin form.
+"""xAI 搜索提供者
+
+【产品经理理解要点】
+xAI Grok 搜索的具体实现。
+- xAI API 集成
+- OAuth 或 API Key 认证
+
+─────────────────────────────────────────────────────────────────
+xAI Web Search — plugin form.
 
 Routes ``web_search`` tool calls through xAI's agentic Web Search tool
 (server-side ``web_search`` on the Responses API). Grok runs the actual

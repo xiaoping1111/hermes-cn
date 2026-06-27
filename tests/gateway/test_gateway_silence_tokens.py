@@ -1,4 +1,13 @@
-"""Gateway intentional-silence token behavior."""
+"""网关gateway silence tokens测试
+
+【产品经理理解要点】
+网关gateway silence tokens功能测试。
+- 验证功能：网关gateway silence tokens处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：gateway silence tokens功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Gateway intentional-silence token behavior."""
 
 from datetime import datetime
 from unittest.mock import AsyncMock, MagicMock

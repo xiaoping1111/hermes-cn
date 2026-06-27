@@ -1,10 +1,18 @@
-"""Tests for the TTS plugin picker surface in hermes_cli/tools_config.py (issue #30398).
+"""CLItts picker测试
+
+【产品经理理解要点】
+CLItts picker功能测试。
+- 验证功能：命令行tts picker功能
+- 关键场景：配置、执行、验证
+- 业务影响：tts picker命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the TTS plugin picker surface in hermes_cli/tools_config.py (issue #30398).
 
 Covers ``_plugin_tts_providers()`` and the ``_visible_providers()``
 integration that injects plugin rows into the Text-to-Speech category.
 
-Mirrors the structure of existing image_gen / browser picker tests.
-"""
+Mirrors the structure of existing image_gen / browser picker tests."""
 
 from __future__ import annotations
 

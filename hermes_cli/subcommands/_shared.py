@@ -1,3 +1,14 @@
+
+"""子命令共享工具
+
+【产品经理理解要点】
+多个子命令构建器共享的参数解析辅助函数。
+- add_accept_hooks_flag等通用参数标志
+- 从main.py提取以避免循环导入
+- main.py重新导出以保持向后兼容
+
+────────────────────────────────────────────────────────────────"""
+
 """Shared parser helpers used across multiple CLI subcommand builders.
 
 These were module-level helpers in ``hermes_cli/main.py``. They are pulled

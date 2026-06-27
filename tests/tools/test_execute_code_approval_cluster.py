@@ -1,4 +1,13 @@
-"""Regression tests for the execute_code approval-bypass cluster.
+"""工具系统测试 - execute code approval cluster
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的execute code approval cluster验证。
+- 验证功能：execute code approval cluster功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：execute code approval cluster功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the execute_code approval-bypass cluster.
 
 Covers the canonical fix for issues #4146, #27303, #30882, #33057:
 

@@ -1,4 +1,13 @@
-"""Tests for percentage clamping at 100% across display paths.
+"""Agent运行引擎测试 - percentage clamp
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的percentage clamp验证。
+- 验证功能：percentage clamp功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：percentage clamp功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for percentage clamping at 100% across display paths.
 
 PR #3480 capped context pressure percentage at 100% in agent/display.py
 but missed the same unclamped pattern in 4 other files. When token counts

@@ -1,4 +1,13 @@
-"""Test that AuthError triggers fallback provider resolution (#7230)."""
+"""认证降级
+
+【产品经理理解要点】
+认证降级处理。
+- 验证功能：主认证失败后的降级策略
+- 关键场景：降级触发、备用认证、安全审计
+- 业务影响：认证失败后无法降级
+
+─────────────────────────────────────────────────────────────────────────
+Test that AuthError triggers fallback provider resolution (#7230)."""
 
 from unittest.mock import patch
 

@@ -1,10 +1,18 @@
-"""Regression tests for Telegram channel_post updates.
+"""Telegram网关测试
+
+【产品经理理解要点】
+Telegram平台网关功能测试。
+- 验证功能：Telegram平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for Telegram channel_post updates.
 
 Telegram channel broadcasts are delivered as ``Update.channel_post`` rather than
 ``Update.message``.  The adapter should use ``effective_message`` so channel
 posts are converted into Hermes gateway events instead of being silently
-ignored.
-"""
+ignored."""
 
 import importlib
 import importlib.util

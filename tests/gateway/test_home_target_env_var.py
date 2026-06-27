@@ -1,12 +1,20 @@
-"""Regression tests for /sethome env-var resolution.
+"""网关home target env var测试
+
+【产品经理理解要点】
+网关home target env var功能测试。
+- 验证功能：网关home target env var处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：home target env var功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for /sethome env-var resolution.
 
 The `/sethome` command writes to a platform's home-target env var. Two platforms
 don't follow the `{PLATFORM}_HOME_CHANNEL` convention: matrix uses
 `MATRIX_HOME_ROOM` and email uses `EMAIL_HOME_ADDRESS`. Before PR #12698
 `/sethome` hardcoded the `_HOME_CHANNEL` suffix, so Matrix and Email saves went
 to env vars nothing read on startup — the home channel appeared to set
-successfully but was lost on every new gateway session.
-"""
+successfully but was lost on every new gateway session."""
 
 from gateway.run import _home_target_env_var, _home_thread_env_var
 

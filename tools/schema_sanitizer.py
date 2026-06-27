@@ -1,4 +1,14 @@
-"""Sanitize tool JSON schemas for broad LLM-backend compatibility.
+"""工具Schema清洗器
+
+【产品经理理解要点】
+清洗工具的JSON Schema，确保兼容各类LLM后端（尤其是llama.cpp等本地推理引擎）。
+- 核心职责：修复不兼容的Schema结构（如裸字符串类型、nullable联合体、$ref旁的default等），使工具定义能被所有后端正确解析
+- 业务价值：当工具数量多、Schema复杂时，一个不兼容的Schema会导致整次请求被后端拒绝（HTTP 400），此模块在发送前自动修复
+- 触发时机：MCP工具动态加载后、工具定义发送给模型前
+- 在系统中的位置：位于工具注册表和模型API调用之间，是"最后一道防线"
+
+─────────────────────────────────────────────────────────────────
+Sanitize tool JSON schemas for broad LLM-backend compatibility.
 
 Some local inference backends (notably llama.cpp's ``json-schema-to-grammar``
 converter used to build GBNF tool-call parsers) are strict about what JSON

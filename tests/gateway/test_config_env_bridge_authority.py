@@ -1,11 +1,19 @@
-"""Regression tests for the config.yaml → env var bridge in gateway/run.py.
+"""配置环境桥接权限
+
+【产品经理理解要点】
+配置环境桥接权限。
+- 验证功能：环境变量桥接的配置权限控制
+- 关键场景：权限校验、桥接安全
+- 业务影响：环境变量桥接越权
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the config.yaml → env var bridge in gateway/run.py.
 
 Guards against the 60-vs-500 bug where a stale `.env HERMES_MAX_ITERATIONS=60`
 entry silently shadowed `agent.max_turns: 500` in config.yaml because the
 bridge used `if X not in os.environ` guards. After PR#18413 the bridge
 treats config.yaml as authoritative and unconditionally overwrites .env
-values for `agent.*`, `display.*`, `timezone`, and `security.*` keys.
-"""
+values for `agent.*`, `display.*`, `timezone`, and `security.*` keys."""
 
 from __future__ import annotations
 

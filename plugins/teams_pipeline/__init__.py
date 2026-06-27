@@ -1,4 +1,12 @@
-"""Teams meeting pipeline plugin.
+"""Teams 会议管线插件
+
+【产品经理理解要点】
+Teams 会议管线插件入口，注册 CLI 管理命令。
+- 面向运维人员的 CLI 命令
+- 不注册 Agent 可调用的工具
+
+─────────────────────────────────────────────────────────────────
+Teams meeting pipeline plugin.
 
 Registers only operator-facing CLI surfaces. The agent should invoke these via
 the terminal tool; no model tools are added by this plugin.

@@ -1,9 +1,17 @@
-"""Tests for the ``hermes send`` CLI subcommand.
+"""CLIsend cmd测试
+
+【产品经理理解要点】
+CLIsend cmd功能测试。
+- 验证功能：命令行send cmd功能
+- 关键场景：配置、执行、验证
+- 业务影响：send cmd命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the ``hermes send`` CLI subcommand.
 
 Covers the argument parsing / stdin / file / list behavior of
 ``hermes_cli.send_cmd``. The underlying ``send_message_tool`` is stubbed so
-no network I/O or gateway is required.
-"""
+no network I/O or gateway is required."""
 
 from __future__ import annotations
 

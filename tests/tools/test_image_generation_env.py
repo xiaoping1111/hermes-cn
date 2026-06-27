@@ -1,4 +1,14 @@
-"""FAL_KEY env var normalization (whitespace-only treated as unset)."""
+"""工具系统测试 - image generation env
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的image generation env验证。
+- 验证功能：image generation env功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：image generation env功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+FAL_KEY env var normalization (whitespace-only treated as unset).
+"""
 
 
 def test_fal_key_whitespace_is_unset(monkeypatch):

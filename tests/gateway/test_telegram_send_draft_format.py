@@ -1,4 +1,13 @@
-"""TelegramAdapter.send_draft MarkdownV2 formatting parity.
+"""Telegram网关测试
+
+【产品经理理解要点】
+Telegram平台网关功能测试。
+- 验证功能：Telegram平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+TelegramAdapter.send_draft MarkdownV2 formatting parity.
 
 Bot API 9.5 ``sendMessageDraft`` powers the animated streaming preview in
 DMs.  The regular ``send`` path renders with MarkdownV2, so the draft must
@@ -11,8 +20,7 @@ These tests pin:
      text (formatting parity with the final message).
   2. A MarkdownV2 BadRequest triggers a single plain-text retry rather than
      killing draft streaming for the whole response.
-  3. A non-BadRequest failure propagates so the caller falls back to edit.
-"""
+  3. A non-BadRequest failure propagates so the caller falls back to edit."""
 import sys
 from unittest.mock import AsyncMock, MagicMock
 

@@ -1,4 +1,13 @@
-"""Tests for utils.atomic_json_write — crash-safe JSON file writes."""
+"""CLIatomic json write测试
+
+【产品经理理解要点】
+CLIatomic json write功能测试。
+- 验证功能：命令行atomic json write功能
+- 关键场景：配置、执行、验证
+- 业务影响：atomic json write命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for utils.atomic_json_write — crash-safe JSON file writes."""
 
 import json
 import os

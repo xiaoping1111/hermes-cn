@@ -1,4 +1,13 @@
-"""Regression tests for the gateway platform fd-leak fix (#37011).
+"""网关platform reconnect fd leak测试
+
+【产品经理理解要点】
+网关platform reconnect fd leak功能测试。
+- 验证功能：网关platform reconnect fd leak处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：platform reconnect fd leak功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the gateway platform fd-leak fix (#37011).
 
 Without an explicit ``disconnect()`` on adapters that fail to connect in
 the reconnect watcher, every retry leaks the resources the adapter
@@ -15,8 +24,7 @@ exception during connect) to call ``adapter.disconnect()`` on the
 unowned adapter, plus the path-level ``APIServerAdapter.disconnect()``
 behavior of also closing the ``ResponseStore``. The pre-fix
 implementation did not call ``disconnect()`` on any of these paths;
-this file would have caught the regression and now pins the fix.
-"""
+this file would have caught the regression and now pins the fix."""
 
 from __future__ import annotations
 

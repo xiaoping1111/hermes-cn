@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""ComfyUI 健康检查
+
+【产品经理理解要点】
+检查 ComfyUI 服务是否正常运行。
+- 服务可达性检测
+- API 响应验证
+
+─────────────────────────────────────────────────────────────────
+
 health_check.py — One-stop verification that the ComfyUI environment is ready.
 
 Runs through the verification checklist:

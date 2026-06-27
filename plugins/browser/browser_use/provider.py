@@ -1,4 +1,12 @@
-"""Browser Use cloud browser provider — plugin form.
+"""Browser Use 浏览器提供者
+
+【产品经理理解要点】
+browser-use AI 浏览器自动化的具体实现。
+- LLM 驱动的页面操作
+- 视觉定位和交互执行
+
+─────────────────────────────────────────────────────────────────
+Browser Use cloud browser provider — plugin form.
 
 Subclasses :class:`agent.browser_provider.BrowserProvider` (the plugin-facing
 ABC introduced in PR #25214). The legacy in-tree module

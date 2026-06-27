@@ -1,4 +1,13 @@
-"""Contract test: the s6-overlay stage2 hook must NOT stamp the install method
+"""工具系统测试 - stage2 hook install method stamp
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的stage2 hook install method stamp验证。
+- 验证功能：stage2 hook install method stamp功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：stage2 hook install method stamp功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Contract test: the s6-overlay stage2 hook must NOT stamp the install method
 into the shared $HERMES_HOME, and must heal a stale 'docker' stamp left there
 by older images.
 

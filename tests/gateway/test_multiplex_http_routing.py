@@ -1,4 +1,13 @@
-"""Phase 1: HTTP-inbound /p/<profile>/ routing for the webhook adapter."""
+"""网关multiplex http routing测试
+
+【产品经理理解要点】
+网关multiplex http routing功能测试。
+- 验证功能：网关multiplex http routing处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：multiplex http routing功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Phase 1: HTTP-inbound /p/<profile>/ routing for the webhook adapter."""
 import pytest
 
 from gateway.config import GatewayConfig, Platform

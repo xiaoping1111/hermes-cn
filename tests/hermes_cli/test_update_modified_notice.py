@@ -1,4 +1,13 @@
-"""Guard: every `hermes update` path that reports user-modified skills must
+"""CLIupdate modified notice测试
+
+【产品经理理解要点】
+CLIupdate modified notice功能测试。
+- 验证功能：命令行update modified notice功能
+- 关键场景：配置、执行、验证
+- 业务影响：update modified notice命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Guard: every `hermes update` path that reports user-modified skills must
 also tell the user how to find them.
 
 `hermes update` keeps (does not overwrite) bundled skills the user edited and
@@ -11,8 +20,7 @@ exists.
 
 This is an *invariant* test (the two sibling notices must agree), not a literal
 snapshot: it asserts the relationship "count line ⇒ discovery hint", so it
-keeps holding if the wording is reworded, as long as both sites stay in sync.
-"""
+keeps holding if the wording is reworded, as long as both sites stay in sync."""
 
 import re
 from pathlib import Path

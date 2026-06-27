@@ -1,10 +1,17 @@
-"""
+"""信息导出命令
+
+【产品经理理解要点】
+hermes dump子命令，输出纯文本的系统配置摘要用于问题反馈。
+- 无ANSI颜色，可直接复制粘贴到Issue
+- 包含版本、平台、模型、技能等关键信息
+- 支持场景：用户反馈问题时提供环境上下文
+
+────────────────────────────────────────────────────────────────
 Dump command for hermes CLI.
 
 Outputs a compact, plain-text summary of the user's Hermes setup
 that can be copy-pasted into Discord/GitHub/Telegram for support context.
-No ANSI colors, no checkmarks — just data.
-"""
+No ANSI colors, no checkmarks — just data."""
 
 import json
 import os

@@ -1,4 +1,13 @@
-"""Local-environment toolchain probe for the system prompt.
+"""本地环境探测
+
+【产品经理理解要点】
+检测本地Python工具链状态（Python版本、pip可用性、PEP 668限制），在系统提示中告知模型以避免踩坑。
+- 核心职责：快速探测（~50ms）本地Python/pip环境异常，生成一条短提示注入系统提示
+- 业务价值：避免模型因pip不可用或版本不匹配而反复尝试安装包，减少用户困惑
+- 在系统中的位置：位于系统提示构建和本地环境之间，是本地执行模式的前置检测
+
+─────────────────────────────────────────────────────────────────
+Local-environment toolchain probe for the system prompt.
 
 When the terminal backend is local (the agent's tools run on the same
 machine as Hermes itself), we surface a single deterministic line about

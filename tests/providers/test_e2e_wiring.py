@@ -1,4 +1,13 @@
-"""E2E tests: verify _build_kwargs_from_profile produces correct output.
+"""端到端接线
+
+【产品经理理解要点】
+配置到调用完整接线。
+- 验证功能：全链路配置正确性
+- 关键场景：配置→客户端→调用
+- 业务影响：模型调用链路断裂
+
+─────────────────────────────────────────────────────────────────────────
+E2E tests: verify _build_kwargs_from_profile produces correct output.
 
 These tests call _build_kwargs_from_profile on the transport directly,
 without importing run_agent (which would cause xdist worker contamination).

@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""GodMode 竞赛评估
+
+【产品经理理解要点】
+运行 GodMode 安全竞赛评估流程。
+- 多模型安全对比评估
+- 评分和排名计算
+
+─────────────────────────────────────────────────────────────────
+
 ULTRAPLINIAN Multi-Model Racing Engine
 Ported from G0DM0D3 (elder-plinius/G0DM0D3).
 

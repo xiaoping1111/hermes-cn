@@ -1,4 +1,13 @@
-"""End-to-end relay round-trip for Telegram against the in-memory stub.
+"""中继Telegram往返
+
+【产品经理理解要点】
+Telegram中继往返。
+- 验证功能：Telegram平台中继消息的往返验证
+- 关键场景：发送→中继→接收→回复
+- 业务影响：Telegram中继消息丢失
+
+─────────────────────────────────────────────────────────────────────────
+End-to-end relay round-trip for Telegram against the in-memory stub.
 
 Companion to ``test_relay_roundtrip.py`` (Discord). Proves the relay generalizes
 beyond Discord — the Phase 1 exit gate requires *both* Telegram and Discord
@@ -14,8 +23,7 @@ Telegram's discriminator profile differs from Discord's, which is the point:
   - ``len_unit="utf16"`` (Telegram counts UTF-16 code units) and
     ``markdown_dialect="markdown_v2"`` — distinct from Discord's chars/discord.
 
-If the descriptor or session-keying only worked for Discord, these fail.
-"""
+If the descriptor or session-keying only worked for Discord, these fail."""
 
 from __future__ import annotations
 

@@ -1,3 +1,14 @@
+
+"""斜杠命令处理混入
+
+【产品经理理解要点】
+HermesCLI的混入类，承载交互式斜杠命令（/model, /skills等）的处理函数。
+- 所有/xxx斜杠命令的处理器定义
+- 从cli.py提取，保持MRO调用链不变
+- CLI和Gateway共享的命令逻辑
+
+────────────────────────────────────────────────────────────────"""
+
 """Slash-command handlers for the interactive CLI (god-file decomposition Phase 4).
 
 This module hosts the ``_handle_*_command`` slash-command handlers lifted out of

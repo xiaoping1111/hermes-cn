@@ -1,4 +1,13 @@
-"""ntfy platform adapter (Hermes plugin).
+"""ntfy 推送通知平台适配器
+
+【产品经理理解要点】
+接入 ntfy.sh 或自建 ntfy 服务器，通过 HTTP 流式订阅接收消息，POST 发送回复。
+- 轻量级推送方案，无需公网端点，只需订阅一个 topic 即可收消息
+- 支持自建 ntfy 服务器、Bearer/Basic 认证、Markdown 格式
+- 适合轻量通知和命令式交互场景
+
+─────────────────────────────────────────────────────────────────
+ntfy platform adapter (Hermes plugin).
 
 Subscribes to a topic on ntfy.sh or any self-hosted ntfy server via
 HTTP streaming (``/json`` endpoint with ``poll=false``) and publishes

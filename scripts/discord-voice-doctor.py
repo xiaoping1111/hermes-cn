@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Discord Voice Doctor — diagnostic tool for voice channel support.
+"""Discord 语音诊断
+
+【产品经理理解要点】
+诊断 Discord 语音模式所需的全部依赖、配置和 Bot 权限，输出检查报告。
+- 核心职责：逐项检查 Discord.py 库、FFmpeg、Bot Token、语音权限等前置条件
+- 关键概念：Discord 语音模式依赖较多系统级组件，此脚本帮助用户快速定位缺失项
+- 系统定位：用户支持脚本，运行 `hermes doctor` 时可能调用
+
+─────────────────────────────────────────────────────────────────
+Discord Voice Doctor — diagnostic tool for voice channel support.
 
 Checks all dependencies, configuration, and bot permissions needed
 for Discord voice mode to work correctly.

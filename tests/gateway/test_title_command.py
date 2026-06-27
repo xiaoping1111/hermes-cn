@@ -1,8 +1,16 @@
-"""Tests for /title gateway slash command.
+"""标题命令
+
+【产品经理理解要点】
+会话标题命令。
+- 验证功能：会话标题设置与修改
+- 关键场景：标题设置、自动生成、显示
+- 业务影响：会话标题管理失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for /title gateway slash command.
 
 Tests the _handle_title_command handler (set/show session titles)
-across all gateway messenger platforms.
-"""
+across all gateway messenger platforms."""
 
 from types import SimpleNamespace
 from unittest.mock import AsyncMock, MagicMock

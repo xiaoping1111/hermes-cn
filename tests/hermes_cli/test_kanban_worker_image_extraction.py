@@ -1,4 +1,13 @@
-"""Worker-side image enrichment for kanban tasks.
+"""CLIkanban worker image extraction测试
+
+【产品经理理解要点】
+CLIkanban worker image extraction功能测试。
+- 验证功能：命令行kanban worker image extraction功能
+- 关键场景：配置、执行、验证
+- 业务影响：kanban worker image extraction命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Worker-side image enrichment for kanban tasks.
 
 When a kanban task body contains a local image path or an ``http(s)://``
 image URL, the worker must surface that image to the model on its first
@@ -10,8 +19,7 @@ itself never appears in argv; the worker has to read it from the kanban
 DB during startup. These tests cover the round-trip:
 
   task body  →  kanban_db.get_task  →  extract_image_refs  →
-  build_native_content_parts  →  multimodal user turn
-"""
+  build_native_content_parts  →  multimodal user turn"""
 from __future__ import annotations
 
 import base64

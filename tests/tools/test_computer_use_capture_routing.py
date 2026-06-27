@@ -1,4 +1,13 @@
-"""End-to-end regression for #24015 — capture routing via auxiliary.vision.
+"""工具系统测试 - computer use capture routing
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的computer use capture routing验证。
+- 验证功能：computer use capture routing功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：computer use capture routing功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+End-to-end regression for #24015 — capture routing via auxiliary.vision.
 
 When ``computer_use(action='capture', mode='som'|'vision')`` returns a
 screenshot, ``_capture_response`` previously always returned a

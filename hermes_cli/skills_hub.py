@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""技能市场命令
+
+【产品经理理解要点】
+hermes skills子命令和/skills斜杠命令的统一入口。
+- 浏览/安装/搜索技能市场的技能
+- CLI和斜杠命令共享同一套do_*函数
+- 技能是Agent扩展能力的核心单元
+
+────────────────────────────────────────────────────────────────
 Skills Hub CLI — Unified interface for the Hermes Skills Hub.
 
 Powers both:
@@ -7,8 +15,7 @@ Powers both:
   - `/skills <subcommand>` (slash command in the interactive chat)
 
 All logic lives in shared do_* functions. The CLI entry point and slash command
-handler are thin wrappers that parse args and delegate.
-"""
+handler are thin wrappers that parse args and delegate."""
 
 import json
 import re

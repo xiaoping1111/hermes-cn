@@ -1,5 +1,16 @@
 """The agent conversation loop — extracted from ``run_agent.AIAgent``.
 
+对话循环主逻辑
+
+【产品经理理解要点】
+智能体对话的核心驱动：一轮完整的 模型调用-工具执行-重试-压缩 循环。
+- 核心职责：驱动整轮对话(模型调用、工具分发、重试回退、压缩、后轮钩子)
+- 关键业务概念：工具调用循环、重试策略、上下文压缩触发、后台记忆/技能审查
+- 在系统中的位置：从 run_agent.py 提取的核心循环，AIAgent.run_conversation 的主体
+
+─────────────────────────────────────────────────────────────────
+
+
 This is the biggest single chunk pulled out of ``run_agent.py``: the
 roughly 3,900-line :func:`run_conversation` body that drives one user
 turn through the agent (model call, tool dispatch, retries, fallbacks,

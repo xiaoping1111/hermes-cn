@@ -1,4 +1,12 @@
-"""
+"""测试 - mcp serve
+
+【产品经理理解要点】
+功能验证中的mcp serve验证。
+- 验证功能：mcp serve功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：mcp serve功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
 Tests for mcp_serve — Hermes MCP server.
 
 Three layers of tests:

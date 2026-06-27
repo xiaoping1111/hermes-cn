@@ -1,4 +1,13 @@
-"""Tests for `_sanitize_tool_error` in model_tools.
+"""测试 - sanitize tool error
+
+【产品经理理解要点】
+功能验证中的sanitize tool error验证。
+- 验证功能：sanitize tool error功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：sanitize tool error功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for `_sanitize_tool_error` in model_tools.
 
 Ported from ironclaw#1639 — defense-in-depth on tool exception strings before
 they enter the model's `tool` message content. Note that `json.dumps()` in

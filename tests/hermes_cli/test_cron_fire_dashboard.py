@@ -1,4 +1,13 @@
-"""Tests for the Chronos cron-fire webhook ON THE DASHBOARD APP (web_server).
+"""CLIcron fire dashboard测试
+
+【产品经理理解要点】
+CLIcron fire dashboard功能测试。
+- 验证功能：命令行cron fire dashboard功能
+- 关键场景：配置、执行、验证
+- 业务影响：cron fire dashboard命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Chronos cron-fire webhook ON THE DASHBOARD APP (web_server).
 
 Regression guard for the relocation bug: the fire webhook MUST live on the
 dashboard FastAPI app (`hermes_cli.web_server.app`) — the agent's public HTTP
@@ -10,8 +19,7 @@ hosted agents don't expose). It must:
   - reject a bad/missing NAS-JWT with 401 (the JWT is the real gate),
   - 400 on missing job_id,
   - on a valid token, resolve the job's profile and run fire_due in the
-    background, returning 202.
-"""
+    background, returning 202."""
 
 import pytest
 from starlette.testclient import TestClient

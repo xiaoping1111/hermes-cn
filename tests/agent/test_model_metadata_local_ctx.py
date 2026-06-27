@@ -1,4 +1,13 @@
-"""Tests for _query_local_context_length and the local server fallback in
+"""Agent核心测试 - model metadata local ctx
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的model metadata local ctx验证。
+- 验证功能：model metadata local ctx功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：model metadata local ctx功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for _query_local_context_length and the local server fallback in
 get_model_context_length.
 
 All tests use synthetic inputs — no filesystem or live server required.

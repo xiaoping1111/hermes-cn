@@ -1,4 +1,13 @@
-"""Tests for duplicate reply suppression across the gateway stack.
+"""网关duplicate reply suppression测试
+
+【产品经理理解要点】
+网关duplicate reply suppression功能测试。
+- 验证功能：网关duplicate reply suppression处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：duplicate reply suppression功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for duplicate reply suppression across the gateway stack.
 
 Covers four fix paths:
   1. base.py: stale response suppressed when interrupt_event is set and a
@@ -9,8 +18,7 @@ Covers four fix paths:
      final response was actually streamed, not merely when partial output existed
   4. stream_consumer.py cancellation handler: only confirms final delivery
      when the best-effort send actually succeeds, not merely because partial
-     content was sent earlier
-"""
+     content was sent earlier"""
 
 import asyncio
 from types import SimpleNamespace

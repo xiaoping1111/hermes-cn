@@ -1,4 +1,13 @@
-"""Focused tests for GMI Cloud first-class provider wiring."""
+"""CLIgmi provider测试
+
+【产品经理理解要点】
+CLIgmi provider功能测试。
+- 验证功能：命令行gmi provider功能
+- 关键场景：配置、执行、验证
+- 业务影响：gmi provider命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Focused tests for GMI Cloud first-class provider wiring."""
 
 from __future__ import annotations
 

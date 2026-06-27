@@ -1,10 +1,18 @@
-"""Tests for #17775: unauthorized users must be blocked in the busy-session path.
+"""网关busy session auth bypass测试
+
+【产品经理理解要点】
+网关busy session auth bypass功能测试。
+- 验证功能：网关busy session auth bypass处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：busy session auth bypass功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for #17775: unauthorized users must be blocked in the busy-session path.
 
 When an active session exists for a shared thread (thread_sessions_per_user=False),
 messages from non-allowlisted users must be silently dropped — matching the cold-path
 behavior in _handle_message. Previously, the busy path skipped the auth check entirely,
-allowing unauthorized users to inject text into another user's running session.
-"""
+allowing unauthorized users to inject text into another user's running session."""
 import time
 from unittest.mock import AsyncMock, MagicMock
 

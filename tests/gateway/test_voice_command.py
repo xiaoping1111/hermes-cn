@@ -1,4 +1,13 @@
-"""Tests for the /voice command and auto voice reply in the gateway."""
+"""语音命令
+
+【产品经理理解要点】
+语音命令处理。
+- 验证功能：语音相关命令的解析与执行
+- 关键场景：语音输入识别、TTS输出
+- 业务影响：语音交互功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the /voice command and auto voice reply in the gateway."""
 
 import importlib.util
 import json

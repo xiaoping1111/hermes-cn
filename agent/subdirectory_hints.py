@@ -1,5 +1,16 @@
 """Progressive subdirectory hint discovery.
 
+子目录上下文发现
+
+【产品经理理解要点】
+当智能体进入子目录时自动发现并加载该目录的项目上下文文件(AGENTS.md等)。
+- 核心职责：跟踪已访问子目录、扫描 AGENTS.md/.cursorrules 等上下文文件、注入工具结果
+- 关键业务概念：渐进式上下文发现、目录级 AGENTS.md、上下文注入
+- 在系统中的位置：工具调用结果的增强层，不影响系统提示(保留缓存)
+
+─────────────────────────────────────────────────────────────────
+
+
 As the agent navigates into subdirectories via tool calls (read_file, terminal,
 search_files, etc.), this module discovers and loads project context files
 (AGENTS.md, CLAUDE.md, .cursorrules) from those directories.  Discovered hints

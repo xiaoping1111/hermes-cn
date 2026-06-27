@@ -1,5 +1,16 @@
 """Auto-generate short session titles from the first user/assistant exchange.
 
+会话标题生成器
+
+【产品经理理解要点】
+根据首轮对话内容自动生成简短会话标题，异步执行不阻塞用户。
+- 核心职责：异步生成3-7词标题、首次交换后后台执行、会话存储
+- 关键业务概念：异步标题生成、首次交换、后台辅助调用
+- 在系统中的位置：会话创建后的后台增强功能
+
+─────────────────────────────────────────────────────────────────
+
+
 Runs asynchronously after the first response is delivered so it never
 adds latency to the user-facing reply.
 """

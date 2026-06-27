@@ -1,12 +1,20 @@
-"""Tests for Telegram native partial-quote handling in _build_message_event.
+"""Telegram网关测试
+
+【产品经理理解要点】
+Telegram平台网关功能测试。
+- 验证功能：Telegram平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Telegram native partial-quote handling in _build_message_event.
 
 When a Telegram user replies using Telegram's native quote feature to
 select only part of a prior message, the adapter must use ``message.quote.text``
 (the user-selected substring) rather than ``message.reply_to_message.text``
 (the entire replied-to message). Otherwise the agent receives the full prior
 message as ``reply_to_text``, which can cause it to act on unrelated
-actionable-looking text the user did not quote (#22619).
-"""
+actionable-looking text the user did not quote (#22619)."""
 
 import sys
 from types import SimpleNamespace

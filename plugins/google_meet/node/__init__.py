@@ -1,4 +1,11 @@
-"""Remote 'node host' primitive for the google_meet plugin.
+"""Google Meet Node 侧车包
+
+【产品经理理解要点】
+Google Meet Node.js 侧车子包。
+- Node.js 侧车通信
+
+─────────────────────────────────────────────────────────────────
+Remote 'node host' primitive for the google_meet plugin.
 
 Lets the Meet bot (Playwright + Chrome) run on a different machine than
 the hermes-agent gateway. The gateway speaks a small JSON-over-WebSocket

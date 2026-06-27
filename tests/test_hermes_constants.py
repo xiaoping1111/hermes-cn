@@ -1,4 +1,14 @@
-"""Tests for hermes_constants module."""
+"""测试 - hermes constants
+
+【产品经理理解要点】
+功能验证中的hermes constants验证。
+- 验证功能：hermes constants功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：hermes constants功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_constants module.
+"""
 
 import os
 from pathlib import Path

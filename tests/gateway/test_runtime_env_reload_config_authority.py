@@ -1,9 +1,17 @@
-"""Regression tests for gateway per-turn env reload preserving config authority.
+"""网关runtime env reload config authority测试
+
+【产品经理理解要点】
+网关runtime env reload config authority功能测试。
+- 验证功能：网关runtime env reload config authority处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：runtime env reload config authority功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for gateway per-turn env reload preserving config authority.
 
 Issue #19158: startup bridges config.yaml agent.max_turns into
 HERMES_MAX_ITERATIONS, but a later per-turn load_dotenv(..., override=True)
-can restore a stale .env HERMES_MAX_ITERATIONS value before the next turn.
-"""
+can restore a stale .env HERMES_MAX_ITERATIONS value before the next turn."""
 
 from __future__ import annotations
 

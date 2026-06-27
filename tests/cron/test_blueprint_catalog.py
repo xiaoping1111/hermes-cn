@@ -1,10 +1,18 @@
-"""Tests for Automation Blueprints — the parameterized automation blueprint system.
+"""蓝图目录
+
+【产品经理理解要点】
+Cron蓝图目录。
+- 验证功能：定时任务模板目录管理
+- 关键场景：模板发现、注册、实例化
+- 业务影响：无法使用预定义任务模板
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Automation Blueprints — the parameterized automation blueprint system.
 
 Covers the core catalog/slot schema/renderers/fill (cron/blueprint_catalog.py),
 the shared /blueprint command handler (hermes_cli/blueprint_cmd.py), and
 the docs generator. Uses an isolated HERMES_HOME for anything that touches the
-cron job store.
-"""
+cron job store."""
 
 import importlib
 import json

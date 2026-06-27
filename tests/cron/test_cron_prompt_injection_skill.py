@@ -1,4 +1,13 @@
-"""Regression guard: skill content loaded at cron runtime must be scanned.
+"""提示注入技能
+
+【产品经理理解要点】
+Cron提示注入技能防护。
+- 验证功能：定时任务中的提示注入攻击防护
+- 关键场景：注入检测、技能隔离
+- 业务影响：恶意提示注入攻击成功
+
+─────────────────────────────────────────────────────────────────────────
+Regression guard: skill content loaded at cron runtime must be scanned.
 
 #3968 attack chain: `_scan_cron_prompt` runs on the user-supplied prompt
 at cron-create/cron-update time but the skill content loaded inside
@@ -9,8 +18,7 @@ executed with full tool access every tick.
 Fix: `_build_job_prompt` now runs the fully-assembled prompt (user
 prompt + cron hint + skill content) through the same scanner and raises
 `CronPromptInjectionBlocked` on match. `run_job` catches that and
-surfaces a clean "job blocked" delivery instead of running the agent.
-"""
+surfaces a clean "job blocked" delivery instead of running the agent."""
 
 import sys
 from pathlib import Path

@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Contributor Audit Script
+"""贡献者审计
+
+【产品经理理解要点】
+交叉比对 Git 提交者、Co-authored-by 标注和 PR 描述，找出遗漏在发版说明中的贡献者。
+- 核心职责：从 Git 历史提取贡献者信息，与发版说明文件比对，报告遗漏名单
+- 关键概念：确保每位代码贡献者都在发版说明中获得致谢，维护开源社区的认可感
+- 系统定位：发版辅助脚本
+
+─────────────────────────────────────────────────────────────────
+Contributor Audit Script
 
 Cross-references git authors, Co-authored-by trailers, and salvaged PR
 descriptions to find any contributors missing from the release notes.

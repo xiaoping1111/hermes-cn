@@ -1,4 +1,13 @@
-"""Regression tests for tool-using response silent drop (issue #29346).
+"""网关tool response drop recovery测试
+
+【产品经理理解要点】
+网关tool response drop recovery功能测试。
+- 验证功能：网关tool response drop recovery处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：tool response drop recovery功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for tool-using response silent drop (issue #29346).
 
 When the agent returns a non-empty response that the extract pipeline
 (extract_media / extract_images / extract_local_files / inline directive
@@ -16,8 +25,7 @@ the silent-drop pattern is observable).  When even the sanitized recovery
 yields nothing deliverable, a ``response_delivery_dropped`` ERROR fires so a
 genuinely-lost response is never silent.
 
-Salvaged and de-scoped from the superseded Discord-only PR #33842.
-"""
+Salvaged and de-scoped from the superseded Discord-only PR #33842."""
 
 import asyncio
 import logging

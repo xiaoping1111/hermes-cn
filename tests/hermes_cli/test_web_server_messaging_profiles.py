@@ -1,12 +1,20 @@
-"""Regression tests for profile-scoped dashboard Channels endpoints.
+"""CLIweb server messaging profiles测试
+
+【产品经理理解要点】
+CLIweb server messaging profiles功能测试。
+- 验证功能：命令行web server messaging profiles功能
+- 关键场景：配置、执行、验证
+- 业务影响：web server messaging profiles命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for profile-scoped dashboard Channels endpoints.
 
 Before the ``profile`` parameter existed, ``/api/messaging/platforms`` always
 read/wrote the dashboard process's own (root) ``.env`` via ``load_env()`` /
 ``save_env_value()`` — so a dashboard switched to a freshly created profile
 still displayed and persisted the ROOT install's messaging credentials.
 These tests pin the new behavior: reads and writes land in the REQUESTED
-profile's HERMES_HOME, and the dashboard's own profile stays untouched.
-"""
+profile's HERMES_HOME, and the dashboard's own profile stays untouched."""
 import pytest
 import yaml
 

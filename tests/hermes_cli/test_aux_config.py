@@ -1,4 +1,13 @@
-"""Tests for the auxiliary-model configuration UI in ``hermes model``.
+"""CLIaux config测试
+
+【产品经理理解要点】
+CLIaux config功能测试。
+- 验证功能：命令行aux config功能
+- 关键场景：配置、执行、验证
+- 业务影响：aux config命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the auxiliary-model configuration UI in ``hermes model``.
 
 Covers the helper functions:
   - ``_save_aux_choice`` writes to config.yaml without touching main model config
@@ -7,8 +16,7 @@ Covers the helper functions:
   - ``_AUX_TASKS`` stays in sync with ``DEFAULT_CONFIG["auxiliary"]``
 
 These are pure-function tests — the interactive menu loops are not covered
-here (they're stdin-driven curses prompts).
-"""
+here (they're stdin-driven curses prompts)."""
 
 from __future__ import annotations
 

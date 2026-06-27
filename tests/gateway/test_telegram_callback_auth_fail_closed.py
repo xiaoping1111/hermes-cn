@@ -1,8 +1,16 @@
-"""Tests for Telegram adapter fail-closed auth fallback (#24457).
+"""Telegram网关测试
+
+【产品经理理解要点】
+Telegram平台网关功能测试。
+- 验证功能：Telegram平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Telegram adapter fail-closed auth fallback (#24457).
 
 The _is_callback_user_authorized fallback must deny users by default
-when TELEGRAM_ALLOWED_USERS is empty, instead of allowing everyone.
-"""
+when TELEGRAM_ALLOWED_USERS is empty, instead of allowing everyone."""
 
 import sys
 import types

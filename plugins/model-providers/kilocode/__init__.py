@@ -1,4 +1,11 @@
-"""Kilo Code provider profile."""
+"""Kilocode 模型提供者
+
+【产品经理理解要点】
+对接 Kilocode 模型服务。
+- Kilocode API 集成
+
+─────────────────────────────────────────────────────────────────
+Kilo Code provider profile."""
 
 from providers import register_provider
 from providers.base import ProviderProfile

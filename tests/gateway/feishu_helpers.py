@@ -1,4 +1,13 @@
-"""Shared fixtures for Feishu adapter tests (admission, group policy, dispatch)."""
+"""飞书辅助
+
+【产品经理理解要点】
+飞书测试辅助函数。
+- 验证功能：飞书平台测试辅助工具
+- 关键场景：API模拟、事件构造、断言辅助
+- 业务影响：飞书测试辅助工具不可用
+
+─────────────────────────────────────────────────────────────────────────
+Shared fixtures for Feishu adapter tests (admission, group policy, dispatch)."""
 
 from __future__ import annotations
 

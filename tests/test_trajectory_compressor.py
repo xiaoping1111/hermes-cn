@@ -1,4 +1,14 @@
-"""Tests for trajectory_compressor.py — config, metrics, and compression logic."""
+"""测试 - trajectory compressor
+
+【产品经理理解要点】
+功能验证中的trajectory compressor验证。
+- 验证功能：trajectory compressor功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：trajectory compressor功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for trajectory_compressor.py — config, metrics, and compression logic.
+"""
 
 import importlib
 import os

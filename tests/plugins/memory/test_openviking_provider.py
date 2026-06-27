@@ -1,4 +1,12 @@
 import json
+"""OpenViking插件
+
+【产品经理理解要点】
+OpenViking数据源接入。
+- 验证功能：数据源插件集成
+- 关键场景：注册、配置、调用
+- 业务影响：OpenViking数据不可用"""
+
 import os
 import stat
 import time

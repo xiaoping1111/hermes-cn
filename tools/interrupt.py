@@ -1,4 +1,13 @@
-"""Per-thread interrupt signaling for all tools.
+"""线程级中断信号
+
+【产品经理理解要点】
+为工具提供中断检测能力，支持多会话并发运行时独立中断。
+- 核心职责：提供线程作用域的中断标记，工具调用 is_interrupted() 即可知道当前会话是否被用户中断
+- 设计要点：网关模式下多个智能体在同一进程并发运行，中断必须按线程隔离，否则一个用户的中断会影响其他会话
+- 在系统中的位置：被所有长时运行工具（终端、浏览器、文件操作等）调用的基础信号组件
+
+─────────────────────────────────────────────────────────────────
+Per-thread interrupt signaling for all tools.
 
 Provides thread-scoped interrupt tracking so that interrupting one agent
 session does not kill tools running in other sessions.  This is critical

@@ -1,4 +1,13 @@
-"""Tests for the ``/bundles`` gateway slash command handler.
+"""Bundle命令
+
+【产品经理理解要点】
+Bundle命令。
+- 验证功能：技能Bundle管理命令
+- 关键场景：Bundle列表、安装、卸载
+- 业务影响：技能Bundle管理失败
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the ``/bundles`` gateway slash command handler.
 
 Verifies that:
 - ``_handle_bundles_command`` returns useful text when no bundles are
@@ -8,8 +17,7 @@ Verifies that:
 
 The actual ``/<bundle-slug>`` → combined-message build is tested in
 ``tests/agent/test_skill_bundles.py``; this file only checks the gateway
-glue (handler wiring, dispatch ordering, event.text rewrite).
-"""
+glue (handler wiring, dispatch ordering, event.text rewrite)."""
 
 import asyncio
 from types import SimpleNamespace

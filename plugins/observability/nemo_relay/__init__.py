@@ -1,4 +1,12 @@
-"""nemo_relay — optional Hermes plugin for NeMo Relay observability."""
+"""Nemo Relay 可观测性插件
+
+【产品经理理解要点】
+对接 NVIDIA Nemo Relay 实现模型调用监控。
+- NVIDIA 模型调用监控
+- 遥测数据中继
+
+─────────────────────────────────────────────────────────────────
+nemo_relay — optional Hermes plugin for NeMo Relay observability."""
 
 from __future__ import annotations
 

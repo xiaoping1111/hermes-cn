@@ -1,9 +1,17 @@
-"""Tests for user-defined providers (providers: dict) in /model.
+"""CLIuser providers model switch测试
+
+【产品经理理解要点】
+CLIuser providers model switch功能测试。
+- 验证功能：命令行user providers model switch功能
+- 关键场景：配置、执行、验证
+- 业务影响：user providers model switch命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for user-defined providers (providers: dict) in /model.
 
 These tests ensure that providers defined in the config.yaml ``providers:`` section
 are properly resolved for model switching and that their full ``models:`` lists
-are exposed in the model picker.
-"""
+are exposed in the model picker."""
 
 import pytest
 from hermes_cli.model_switch import list_authenticated_providers, switch_model

@@ -1,3 +1,14 @@
+
+"""WebSocket认证票据
+
+【产品经理理解要点】
+Dashboard受管模式下WebSocket升级的认证方案。
+- 单次票据：SPA通过REST获取，30秒TTL，用后即焚
+- 内部凭证：服务端WebSocket客户端的进程级认证
+- 解决浏览器WebSocket无法设Authorization头的问题
+
+────────────────────────────────────────────────────────────────"""
+
 """WS-upgrade auth credentials for gated mode.
 
 Browsers cannot set ``Authorization`` on a WebSocket upgrade. In loopback

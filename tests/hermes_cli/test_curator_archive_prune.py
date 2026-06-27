@@ -1,4 +1,13 @@
-"""Tests for `hermes curator archive` and `hermes curator prune`.
+"""CLIcurator archive prune测试
+
+【产品经理理解要点】
+CLIcurator archive prune功能测试。
+- 验证功能：命令行curator archive prune功能
+- 关键场景：配置、执行、验证
+- 业务影响：curator archive prune命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for `hermes curator archive` and `hermes curator prune`.
 
 Covers:
 - archive refuses pinned skills with an `unpin` hint
@@ -7,8 +16,7 @@ Covers:
 - prune falls back to created_at when last_activity_at is null
 - prune --dry-run makes no state changes
 - prune --yes skips confirmation
-- prune --days validation
-"""
+- prune --days validation"""
 
 from __future__ import annotations
 

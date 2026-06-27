@@ -1,4 +1,13 @@
-"""Gateway STT config tests — honor stt.enabled: false from config.yaml."""
+"""网关stt config测试
+
+【产品经理理解要点】
+网关stt config功能测试。
+- 验证功能：网关stt config处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：stt config功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Gateway STT config tests — honor stt.enabled: false from config.yaml."""
 
 from pathlib import Path
 from unittest.mock import AsyncMock, patch

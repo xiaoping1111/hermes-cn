@@ -1,11 +1,19 @@
-"""Tests for the Telegram bot status indicator.
+"""Telegram网关测试
+
+【产品经理理解要点】
+Telegram平台网关功能测试。
+- 验证功能：Telegram平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Telegram bot status indicator.
 
 Telegram bots have no real online/offline presence dot (that's a user-account
 feature). The closest Bot API surface is the bot's *short description* — the
 line shown under the bot's name in its profile. When `extra.status_indicator`
 is enabled, the adapter sets it to "Online" on connect and "Offline" on clean
-disconnect so users can tell whether the gateway is up.
-"""
+disconnect so users can tell whether the gateway is up."""
 
 import sys
 from unittest.mock import AsyncMock, MagicMock

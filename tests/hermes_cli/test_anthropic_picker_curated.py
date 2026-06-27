@@ -1,4 +1,13 @@
-"""Regression tests for the Anthropic model-picker dropping curated aliases.
+"""CLIanthropic picker curated测试
+
+【产品经理理解要点】
+CLIanthropic picker curated功能测试。
+- 验证功能：命令行anthropic picker curated功能
+- 关键场景：配置、执行、验证
+- 业务影响：anthropic picker curated命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the Anthropic model-picker dropping curated aliases.
 
 Bug — newly-routed curated aliases vanished on a native Anthropic setup
     ``provider_model_ids("anthropic")`` returned the live ``/v1/models`` dump
@@ -8,8 +17,7 @@ Bug — newly-routed curated aliases vanished on a native Anthropic setup
     curated entry disappeared from the picker. The picker now merges the
     curated ``_PROVIDER_MODELS["anthropic"]`` list with the live catalog —
     curated entries first, live-only models appended, deduped — mirroring the
-    OpenAI curated-merge philosophy.
-"""
+    OpenAI curated-merge philosophy."""
 
 from unittest.mock import patch
 

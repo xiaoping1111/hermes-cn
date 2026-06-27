@@ -1,4 +1,13 @@
-"""Tests for surrogate character sanitization in user input.
+"""CLI终端测试 - surrogate sanitization
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的surrogate sanitization验证。
+- 验证功能：surrogate sanitization功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：surrogate sanitization功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for surrogate character sanitization in user input.
 
 Surrogates (U+D800..U+DFFF) are invalid in UTF-8 and crash json.dumps()
 inside the OpenAI SDK. They can appear via clipboard paste from rich-text

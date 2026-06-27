@@ -1,4 +1,12 @@
-"""
+"""网关send retry测试
+
+【产品经理理解要点】
+网关send retry功能测试。
+- 验证功能：网关send retry处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：send retry功能异常
+
+─────────────────────────────────────────────────────────────────────────
 Tests for BasePlatformAdapter._send_with_retry and _is_retryable_error.
 
 Verifies that:
@@ -6,8 +14,7 @@ Verifies that:
 - Permanent errors fall back to plain-text immediately (no retry)
 - User receives a delivery-failure notice when all retries are exhausted
 - Successful sends on retry return success
-- SendResult.retryable flag is respected
-"""
+- SendResult.retryable flag is respected"""
 import pytest
 from unittest.mock import AsyncMock, patch
 

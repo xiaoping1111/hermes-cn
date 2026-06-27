@@ -1,3 +1,11 @@
+"""CLIactive sessions测试
+
+【产品经理理解要点】
+CLIactive sessions功能测试。
+- 验证功能：命令行active sessions功能
+- 关键场景：配置、执行、验证
+- 业务影响：active sessions命令行功能失效"""
+
 import logging
 import os
 import subprocess

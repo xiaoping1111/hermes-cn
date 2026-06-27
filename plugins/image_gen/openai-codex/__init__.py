@@ -1,4 +1,13 @@
-"""OpenAI image generation backend — ChatGPT/Codex OAuth variant.
+"""OpenAI Codex 图像生成后端
+
+【产品经理理解要点】
+通过 ChatGPT/Codex OAuth 认证生成图像，用户无需单独配置 API Key。
+- 使用 Codex Responses API 的 image_generation 工具生图，而非直接调用 images.generate 接口
+- 仅支持文生图（text-to-image），不支持图生图/编辑
+- 提供三个质量档位：low（~15s）、medium（~40s，默认）、high（~2min）
+
+─────────────────────────────────────────────────────────────────
+OpenAI image generation backend — ChatGPT/Codex OAuth variant.
 
 Identical model catalog and tier semantics to the ``openai`` image-gen plugin
 (``gpt-image-2`` at low/medium/high quality), but routes the request through

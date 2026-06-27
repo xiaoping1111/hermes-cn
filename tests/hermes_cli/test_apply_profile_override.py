@@ -1,4 +1,13 @@
-"""Regression tests for _apply_profile_override HERMES_HOME guard (issue #22502).
+"""CLIapply profile override测试
+
+【产品经理理解要点】
+CLIapply profile override功能测试。
+- 验证功能：命令行apply profile override功能
+- 关键场景：配置、执行、验证
+- 业务影响：apply profile override命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for _apply_profile_override HERMES_HOME guard (issue #22502).
 
 When HERMES_HOME is set to the hermes root (e.g. systemd hardcodes
 HERMES_HOME=/root/.hermes), _apply_profile_override must still read
@@ -6,8 +15,7 @@ active_profile and update HERMES_HOME to the profile directory.
 
 When HERMES_HOME is already a profile directory (.../profiles/<name>),
 _apply_profile_override must trust it and return without re-reading
-active_profile (child-process inheritance contract).
-"""
+active_profile (child-process inheritance contract)."""
 
 from __future__ import annotations
 

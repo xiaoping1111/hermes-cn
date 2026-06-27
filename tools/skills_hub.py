@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 """
+技能市场（Skills Hub）
+
+【产品经理理解要点】
+技能生态的核心基础设施，管理技能来源、安装来源追踪、隔离区管理等全生命周期。
+- 核心职责：GitHub认证（PAT/gh CLI/GitHub App）、技能来源抽象层（官方可选技能、GitHub仓库技能）、安装锁定文件、隔离区和审计日志
+- 关键业务概念：Tap（类似Homebrew的第三方来源）、HubLockFile（追踪已安装技能的来源以便更新/卸载）、隔离区（quarantine，新安装技能的临时隔离）
+- 在系统中的位置：位于CLI命令（`hermes skills`）和技能文件系统之间，是技能市场管理的底层引擎
+
+─────────────────────────────────────────────────────────────────
 Skills Hub — Source adapters and hub state management for the Hermes Skills Hub.
 
 This is a library module (not an agent tool). It provides:

@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""域名情报收集
+
+【产品经理理解要点】
+收集域名的 WHOIS、DNS、安全等多维情报。
+- WHOIS 和 DNS 解析
+- 安全评分和历史记录
+
+─────────────────────────────────────────────────────────────────
+
 Domain Intelligence — Passive OSINT via Python stdlib.
 
 Usage:

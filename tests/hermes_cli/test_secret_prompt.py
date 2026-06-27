@@ -1,3 +1,11 @@
+"""CLIsecret prompt测试
+
+【产品经理理解要点】
+CLIsecret prompt功能测试。
+- 验证功能：命令行secret prompt功能
+- 关键场景：配置、执行、验证
+- 业务影响：secret prompt命令行功能失效"""
+
 import pytest
 
 from hermes_cli.secret_prompt import _collect_masked_input, masked_secret_prompt

@@ -1,4 +1,13 @@
-"""Phase 4: lifecycle guard + per-profile observability."""
+"""多路复用生命周期
+
+【产品经理理解要点】
+多路复用生命周期。
+- 验证功能：多路复用适配器的生命周期管理
+- 关键场景：启动、运行、关闭、错误恢复
+- 业务影响：多路复用服务无法稳定运行
+
+─────────────────────────────────────────────────────────────────────────
+Phase 4: lifecycle guard + per-profile observability."""
 import pytest
 
 

@@ -1,4 +1,13 @@
-"""Regression test: set_runtime_main() must pass base_url/api_key/api_mode
+"""Agent核心测试 - set runtime main custom provider
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的set runtime main custom provider验证。
+- 验证功能：set runtime main custom provider功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：set runtime main custom provider功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression test: set_runtime_main() must pass base_url/api_key/api_mode
 so that _resolve_auto() can route custom: providers in Step 1.
 
 Fixes https://github.com/NousResearch/hermes-agent/issues/34777

@@ -1,4 +1,12 @@
-"""Skill write-origin provenance — ContextVar for distinguishing agent-sediment skill writes from foreground user-directed writes.
+"""技能写入来源追踪
+
+【产品经理理解要点】
+区分技能是由用户前台请求创建还是由后台自审自动创建，确保后台创建的技能才可被自动整理。
+- 核心职责：通过ContextVar传播写入来源标记，前台创建的技能属于用户不可自动修改，后台创建的可被策展器整理
+- 在系统中的位置：位于技能写入操作和策展器之间，是保护用户数据的权限边界
+
+─────────────────────────────────────────────────────────────────
+Skill write-origin provenance — ContextVar for distinguishing agent-sediment skill writes from foreground user-directed writes.
 
 The curator only consolidates/prunes skills it autonomously created via the
 background self-improvement review fork. Skills a user asks a foreground

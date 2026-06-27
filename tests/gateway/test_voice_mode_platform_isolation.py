@@ -1,10 +1,18 @@
-"""Tests for voice mode platform isolation (bug #12542).
+"""网关voice mode platform isolation测试
+
+【产品经理理解要点】
+网关voice mode platform isolation功能测试。
+- 验证功能：网关voice mode platform isolation处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：voice mode platform isolation功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for voice mode platform isolation (bug #12542).
 
 Voice mode state stored as {chat_id: mode} without a platform namespace
 caused collisions: Telegram chat '123' and Slack chat '123' shared the
 same key. The fix prefixes keys with platform value: 'telegram:123' vs
-'slack:123'.
-"""
+'slack:123'."""
 
 import json
 import tempfile

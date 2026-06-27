@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""批量运行器集成
+
+【产品经理理解要点】
+多会话批量执行。
+- 验证功能：批量调度与并发
+- 关键场景：调度、并发、结果收集
+- 业务影响：批量任务执行异常
+
+─────────────────────────────────────────────────────────────────────────
 Test script for batch runner
 
 This script tests the batch runner with a small sample dataset

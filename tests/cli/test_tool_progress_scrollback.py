@@ -1,4 +1,13 @@
-"""Tests for stacked tool progress scrollback lines in the CLI TUI.
+"""CLI终端测试 - tool progress scrollback
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的tool progress scrollback验证。
+- 验证功能：tool progress scrollback功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：tool progress scrollback功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for stacked tool progress scrollback lines in the CLI TUI.
 
 When tool_progress_mode is "all" or "new", _on_tool_progress should print
 persistent lines to scrollback on tool.completed, restoring the stacked

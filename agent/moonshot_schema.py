@@ -1,5 +1,16 @@
 """Helpers for translating OpenAI-style tool schemas to Moonshot's schema subset.
 
+Moonshot 模型 Schema 适配
+
+【产品经理理解要点】
+将标准 OpenAI 工具 Schema 转换为 Moonshot(Kimi)的严格子集格式。
+- 核心职责：为每个属性补全 type 字段、处理 anyOf 中 type 的位置、$defs 引用重写
+- 关键业务概念：Moonshot Schema 限制、type 必需、anyOf 类型位置
+- 在系统中的位置：Moonshot 供应商请求构建的 Schema 转换层
+
+─────────────────────────────────────────────────────────────────
+
+
 Moonshot (Kimi) accepts a stricter subset of JSON Schema than standard OpenAI
 tool calling.  Requests that violate it fail with HTTP 400:
 

@@ -1,4 +1,13 @@
-"""Integration tests for the Daytona terminal backend.
+"""Daytona终端集成
+
+【产品经理理解要点】
+Daytona终端集成。
+- 验证功能：开发环境终端集成
+- 关键场景：创建、执行、通信
+- 业务影响：Daytona终端不可用
+
+─────────────────────────────────────────────────────────────────────────
+Integration tests for the Daytona terminal backend.
 
 Requires DAYTONA_API_KEY to be set. Run with:
     TERMINAL_ENV=daytona pytest tests/integration/test_daytona_terminal.py -v

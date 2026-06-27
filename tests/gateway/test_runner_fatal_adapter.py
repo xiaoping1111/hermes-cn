@@ -1,3 +1,11 @@
+"""运行器致命适配器
+
+【产品经理理解要点】
+运行器致命错误适配器。
+- 验证功能：Agent运行器致命错误的适配处理
+- 关键场景：错误捕获、适配器恢复、降级
+- 业务影响：致命错误导致服务崩溃"""
+
 from unittest.mock import AsyncMock
 
 import pytest

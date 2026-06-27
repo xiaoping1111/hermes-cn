@@ -1,9 +1,17 @@
-"""Regression tests for /model support of config.yaml custom_providers.
+"""CLImodel switch custom providers测试
+
+【产品经理理解要点】
+CLImodel switch custom providers功能测试。
+- 验证功能：命令行model switch custom providers功能
+- 关键场景：配置、执行、验证
+- 业务影响：model switch custom providers命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for /model support of config.yaml custom_providers.
 
 The terminal `hermes model` flow already exposes `custom_providers`, but the
 shared slash-command pipeline (`/model` in CLI/gateway/Telegram) historically
-only looked at `providers:`.
-"""
+only looked at `providers:`."""
 
 import hermes_cli.providers as providers_mod
 from hermes_cli.model_switch import list_authenticated_providers, switch_model

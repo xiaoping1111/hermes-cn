@@ -1,5 +1,16 @@
 """Message and tool-payload sanitization helpers.
 
+消息清洗工具
+
+【产品经理理解要点】
+清洗消息和工具负载中的非法字符，防止 API 调用因编码问题崩溃。
+- 核心职责：替换 UTF-8 孤立代理字符、修复损坏的 JSON、清理模型输出中的非法字符
+- 关键业务概念：代理字符(surrogate)清洗、JSON 序列化保护、OpenAI SDK 兼容
+- 在系统中的位置：消息发送前的安全检查层
+
+─────────────────────────────────────────────────────────────────
+
+
 Pure functions extracted from ``run_agent.py`` so the AIAgent module can
 stay focused on the conversation loop.  These walk OpenAI-format message
 lists and structured payloads, repairing or stripping problematic

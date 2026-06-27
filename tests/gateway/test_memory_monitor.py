@@ -1,9 +1,17 @@
-"""Tests for gateway.memory_monitor — periodic process memory logging.
+"""网关memory monitor测试
+
+【产品经理理解要点】
+网关memory monitor功能测试。
+- 验证功能：网关memory monitor处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：memory monitor功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway.memory_monitor — periodic process memory logging.
 
 Ported from cline/cline#10343.  The module logs a structured
 ``[MEMORY] rss=...MB ...`` line periodically so long-running gateway
-leaks show up as a time series in agent.log / gateway.log.
-"""
+leaks show up as a time series in agent.log / gateway.log."""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""Tests for tui_gateway.entry.wait_for_mcp_discovery (PR #35245).
+"""MCP发现等待
+
+【产品经理理解要点】
+MCP服务发现等待。
+- 验证功能：启动时MCP发现
+- 关键场景：超时、重试、发现
+- 业务影响：MCP服务发现超时
+
+─────────────────────────────────────────────────────────────────────────
+Tests for tui_gateway.entry.wait_for_mcp_discovery (PR #35245).
 
 MCP tool discovery runs in a background daemon thread so a slow/dead server
 can't freeze ``gateway.ready``.  The agent snapshots its tool list once at

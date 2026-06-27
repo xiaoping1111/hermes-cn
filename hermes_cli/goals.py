@@ -1,3 +1,14 @@
+
+"""持久化会话目标
+
+【产品经理理解要点】
+Ralph循环：用户设定目标后，Agent自动持续工作直到目标完成。
+- 目标持续：每轮判定目标是否达成，未达成则自动续轮
+- 持久化到SessionDB，/resume可恢复
+- 用户新消息优先级高于目标循环
+
+────────────────────────────────────────────────────────────────"""
+
 """Persistent session goals — the Ralph loop for Hermes.
 
 A goal is a free-form user objective that stays active across turns. After

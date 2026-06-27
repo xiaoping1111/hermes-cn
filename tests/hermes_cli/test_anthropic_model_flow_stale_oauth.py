@@ -1,10 +1,18 @@
-"""Tests for Bug #12905 fix — stale OAuth token detection in hermes model flow.
+"""CLIanthropic model flow stale oauth测试
+
+【产品经理理解要点】
+CLIanthropic model flow stale oauth功能测试。
+- 验证功能：命令行anthropic model flow stale oauth功能
+- 关键场景：配置、执行、验证
+- 业务影响：anthropic model flow stale oauth命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Bug #12905 fix — stale OAuth token detection in hermes model flow.
 
 Bug 3: `hermes model` with `provider=anthropic` skips OAuth re-authentication
 when a stale ANTHROPIC_TOKEN exists in ~/.hermes/.env but no valid
 Claude Code credentials are available. The fast-path silently proceeds to
-model selection with a broken token instead of offering re-auth.
-"""
+model selection with a broken token instead of offering re-auth."""
 
 
 from hermes_cli.config import save_env_value

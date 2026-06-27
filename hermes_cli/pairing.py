@@ -1,12 +1,19 @@
-"""
+"""配对管理命令
+
+【产品经理理解要点】
+hermes pairing子命令，管理DM配对系统的审批和撤销。
+- 列出/审批/撤销配对请求
+- 跨平台（Telegram/Discord等）的配对码机制
+- 防止未授权用户访问Agent
+
+────────────────────────────────────────────────────────────────
 CLI commands for the DM pairing system.
 
 Usage:
     hermes pairing list              # Show all pending + approved users
     hermes pairing approve <platform> <code>  # Approve a pairing code
     hermes pairing revoke <platform> <user_id> # Revoke user access
-    hermes pairing clear-pending     # Clear all expired/pending codes
-"""
+    hermes pairing clear-pending     # Clear all expired/pending codes"""
 
 def pairing_command(args):
     """Handle hermes pairing subcommands."""

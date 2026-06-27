@@ -1,4 +1,12 @@
-"""
+"""Hermes MCP 服务器
+
+【产品经理理解要点】
+将 Hermes 对外暴露为 MCP 工具服务器，让 Claude Code / Cursor 等外部客户端能操控 Hermes 会话。
+- 核心职责：启动 stdio MCP 服务器，提供会话列表、消息读写、事件轮询、权限审批等 9+1 个工具
+- 关键业务概念：MCP 协议（Model Context Protocol）、stdio 传输、外部客户端集成
+- 在系统中的位置：对外开放接口层，让第三方 AI 工具直接操作 Hermes 的消息通道
+
+─────────────────────────────────────────────────────────────────
 Hermes MCP Server — expose messaging conversations as MCP tools.
 
 Starts a stdio MCP server that lets any MCP client (Claude Code, Cursor, Codex,

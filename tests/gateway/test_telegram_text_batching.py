@@ -1,9 +1,17 @@
-"""Tests for Telegram text message aggregation.
+"""Telegram网关测试
+
+【产品经理理解要点】
+Telegram平台网关功能测试。
+- 验证功能：Telegram平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Telegram text message aggregation.
 
 When a user sends a long message, Telegram clients split it into multiple
 updates.  The TelegramAdapter should buffer rapid successive text messages
-from the same session and aggregate them before dispatching.
-"""
+from the same session and aggregate them before dispatching."""
 
 import asyncio
 from types import SimpleNamespace

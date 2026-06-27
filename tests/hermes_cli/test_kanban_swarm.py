@@ -1,4 +1,12 @@
 
+"""CLIkanban swarm测试
+
+【产品经理理解要点】
+CLIkanban swarm功能测试。
+- 验证功能：命令行kanban swarm功能
+- 关键场景：配置、执行、验证
+- 业务影响：kanban swarm命令行功能失效"""
+
 from hermes_cli import kanban_db as kb
 from hermes_cli.kanban_swarm import (
     SwarmWorkerSpec,

@@ -1,4 +1,13 @@
-"""Auto-compaction status re-tagging for the desktop "Summarizing…" indicator.
+"""压缩状态
+
+【产品经理理解要点】
+上下文压缩状态指示。
+- 验证功能：压缩进度显示
+- 关键场景：状态指示、进度更新
+- 业务影响：压缩状态显示异常
+
+─────────────────────────────────────────────────────────────────────────
+Auto-compaction status re-tagging for the desktop "Summarizing…" indicator.
 
 Auto-compaction reaches the gateway as a generic ``lifecycle`` status. The
 gateway re-tags it as ``kind="compacting"`` so drivers (the desktop app) can

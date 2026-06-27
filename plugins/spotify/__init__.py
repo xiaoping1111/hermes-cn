@@ -1,4 +1,12 @@
-"""Spotify integration plugin — bundled, auto-loaded.
+"""Spotify 集成插件
+
+【产品经理理解要点】
+Spotify 音乐服务插件入口，自动加载并注册 7 个音乐控制工具。
+- 内置 + kind:backend 自动加载，无需用户手动启用
+- 未认证时工具注册但不执行，运行时检查防止调度
+
+─────────────────────────────────────────────────────────────────
+Spotify integration plugin — bundled, auto-loaded.
 
 Registers 7 tools (playback, devices, queue, search, playlists, albums,
 library) into the ``spotify`` toolset. Each tool's handler is gated by

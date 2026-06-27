@@ -1,4 +1,13 @@
-"""Tests for cross-session _previous_summary contamination bug (#38788).
+"""Agent核心测试 - context compressor cross session guard
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的context compressor cross session guard验证。
+- 验证功能：context compressor cross session guard功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：context compressor cross session guard功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for cross-session _previous_summary contamination bug (#38788).
 
 ContextCompressor._previous_summary is an instance variable that stores the
 previous compaction summary for iterative updates.  It is cleared by

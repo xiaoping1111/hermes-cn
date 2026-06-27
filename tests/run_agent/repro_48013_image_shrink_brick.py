@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Runnable proof for issue #48013 — image-dimension 400 session brick.
+"""Agent运行引擎测试 - repro 48013 image shrink brick
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的repro 48013 image shrink brick验证。
+- 验证功能：repro 48013 image shrink brick功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：repro 48013 image shrink brick功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Runnable proof for issue #48013 — image-dimension 400 session brick.
 
 Before the fix, ``agent.conversation_compression.try_shrink_image_parts_in_messages``
 silently discarded a *pixel-correct* downscale whenever the re-encoded PNG was

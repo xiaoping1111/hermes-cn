@@ -1,12 +1,20 @@
-"""Text-debounce batching for the WhatsApp adapter (issue #35301).
+"""WhatsApp网关测试
+
+【产品经理理解要点】
+WhatsApp平台网关功能测试。
+- 验证功能：WhatsApp平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：WhatsApp平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Text-debounce batching for the WhatsApp adapter (issue #35301).
 
 WhatsApp delivers rapid multi-message bursts (forwarded batches, paste-splits)
 individually.  Without debounce each fragment triggers a separate agent
 invocation, wasting tokens and flooding the user with reply fragments.  This
 mirrors the Telegram/WeCom/Feishu pattern.
 
-Batch delays are read from ``config.extra`` (config.yaml), not env vars.
-"""
+Batch delays are read from ``config.extra`` (config.yaml), not env vars."""
 
 import asyncio
 

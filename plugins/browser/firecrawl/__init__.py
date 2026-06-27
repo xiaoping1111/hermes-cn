@@ -1,4 +1,12 @@
-"""Firecrawl cloud browser plugin — bundled, auto-loaded.
+"""Firecrawl 浏览器插件
+
+【产品经理理解要点】
+基于 Firecrawl 的网页抓取和渲染后端。
+- JavaScript 渲染的网页抓取
+- 结构化内容提取
+
+─────────────────────────────────────────────────────────────────
+Firecrawl cloud browser plugin — bundled, auto-loaded.
 
 Distinct from ``plugins/web/firecrawl/`` (the web search/extract/crawl
 plugin); both share the FIRECRAWL_API_KEY but speak to different endpoints

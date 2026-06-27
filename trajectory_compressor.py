@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""轨迹压缩器
+
+【产品经理理解要点】
+对话轨迹压缩：在保留训练信号质量的前提下，将长对话压缩到目标 token 预算内。
+- 核心职责：保护首尾轮次、压缩中间轮次、用摘要替换冗长工具输出
+- 关键业务概念：Token 预算、首尾保护策略、中间轮次摘要化、训练数据质量
+- 在系统中的位置：后处理管线，处理 batch_runner 产出的轨迹用于训练数据生成
+
+─────────────────────────────────────────────────────────────────
 Trajectory Compressor
 
 Post-processes completed agent trajectories to compress them within a target

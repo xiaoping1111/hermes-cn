@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""DCF 估值模型验证
+
+【产品经理理解要点】
+验证折现现金流（DCF）估值模型的输入和计算。
+- 假设合理性检查
+- 估值敏感性分析
+
+─────────────────────────────────────────────────────────────────
+
 DCF Model Validation Script
 Validates Excel DCF models for formula errors and common DCF mistakes
 """

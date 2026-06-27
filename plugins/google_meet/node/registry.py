@@ -1,4 +1,12 @@
-"""Local JSON registry of approved remote meet nodes.
+"""Google Meet Node 注册表
+
+【产品经理理解要点】
+管理 Node 侧车实例的注册和发现。
+- 侧车实例注册
+- 端口和状态追踪
+
+─────────────────────────────────────────────────────────────────
+Local JSON registry of approved remote meet nodes.
 
 Lives at ``$HERMES_HOME/workspace/meetings/nodes.json``. The gateway
 consults it to resolve a ``chrome_node`` name to a ``(url, token)`` pair

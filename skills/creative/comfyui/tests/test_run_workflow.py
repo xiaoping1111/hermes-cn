@@ -1,4 +1,11 @@
-"""Tests for run_workflow.py — focuses on logic that doesn't require a server."""
+"""ComfyUI 工作流运行测试
+
+【产品经理理解要点】
+ComfyUI 工作流执行的单元测试。
+- 工作流提交和结果验证
+
+─────────────────────────────────────────────────────────────────
+Tests for run_workflow.py — focuses on logic that doesn't require a server."""
 
 from __future__ import annotations
 

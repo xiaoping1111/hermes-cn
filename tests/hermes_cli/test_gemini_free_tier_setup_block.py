@@ -1,4 +1,13 @@
-"""Tests for the Gemini free-tier block in the setup wizard."""
+"""CLIgemini free tier setup block测试
+
+【产品经理理解要点】
+CLIgemini free tier setup block功能测试。
+- 验证功能：命令行gemini free tier setup block功能
+- 关键场景：配置、执行、验证
+- 业务影响：gemini free tier setup block命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Gemini free-tier block in the setup wizard."""
 from __future__ import annotations
 
 from unittest.mock import patch

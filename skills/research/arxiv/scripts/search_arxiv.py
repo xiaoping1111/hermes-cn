@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Search arXiv and display results in a clean format.
+"""arXiv 论文搜索
+
+【产品经理理解要点】
+搜索 arXiv 学术论文数据库。
+- 关键词和作者搜索
+- 论文摘要和元数据获取
+
+─────────────────────────────────────────────────────────────────
+Search arXiv and display results in a clean format.
 
 Usage:
     python search_arxiv.py "GRPO reinforcement learning"

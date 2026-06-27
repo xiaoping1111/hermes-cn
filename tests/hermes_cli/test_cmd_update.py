@@ -1,4 +1,13 @@
-"""Tests for cmd_update — branch fallback when remote branch doesn't exist."""
+"""CLIcmd update测试
+
+【产品经理理解要点】
+CLIcmd update功能测试。
+- 验证功能：命令行cmd update功能
+- 关键场景：配置、执行、验证
+- 业务影响：cmd update命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for cmd_update — branch fallback when remote branch doesn't exist."""
 
 import subprocess
 from types import SimpleNamespace

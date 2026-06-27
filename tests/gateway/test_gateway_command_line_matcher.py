@@ -1,11 +1,19 @@
-"""Tests for the strict gateway command-line matcher.
+"""网关命令行匹配
+
+【产品经理理解要点】
+网关命令行匹配器。
+- 验证功能：网关命令的行匹配逻辑
+- 关键场景：命令识别、参数提取、路由
+- 业务影响：命令无法被正确识别
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the strict gateway command-line matcher.
 
 Regression guard for the Windows ``hermes gateway restart`` silent-outage bug:
 the previous loose substring match (``"... gateway" in cmdline``) false-matched
 ``gateway status``/``dashboard`` siblings and unrelated processes such as
 ``python -m tui_gateway``, which let ``restart()`` race a still-draining old
-process and ``status``/``start`` report false positives.
-"""
+process and ``status``/``start`` report false positives."""
 
 from __future__ import annotations
 

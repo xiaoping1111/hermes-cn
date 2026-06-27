@@ -1,4 +1,13 @@
-"""Tests that init_session() respects the configured cwd.
+"""工具系统测试 - init session cwd respect
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的init session cwd respect验证。
+- 验证功能：init session cwd respect功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：init session cwd respect功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests that init_session() respects the configured cwd.
 
 The bug: when terminal.cwd is set in config.yaml, the configured path was
 displayed in the TUI banner but actual terminal commands ran in os.getcwd()

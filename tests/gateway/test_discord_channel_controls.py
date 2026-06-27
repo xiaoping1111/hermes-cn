@@ -1,4 +1,13 @@
-"""Tests for Discord ignored_channels and no_thread_channels config."""
+"""Discord频道控制
+
+【产品经理理解要点】
+Discord频道控制。
+- 验证功能：Discord频道访问与操作控制
+- 关键场景：频道白名单、权限、开关
+- 业务影响：频道控制失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Discord ignored_channels and no_thread_channels config."""
 
 from types import SimpleNamespace
 from datetime import datetime, timezone

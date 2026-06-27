@@ -1,4 +1,14 @@
-"""Tests for acp_adapter.server — HermesACPAgent ACP server."""
+"""ACP协议测试 - server
+
+【产品经理理解要点】
+ACP协议层的工具注册、权限控制、会话管理、事件分发和MCP端到端通信中的server验证。
+- 验证功能：server功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：server功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for acp_adapter.server — HermesACPAgent ACP server.
+"""
 
 import asyncio
 import os

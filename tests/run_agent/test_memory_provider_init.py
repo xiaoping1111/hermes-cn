@@ -1,4 +1,14 @@
-"""Regression tests for memory provider selection during AIAgent init."""
+"""Agent运行引擎测试 - memory provider init
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的memory provider init验证。
+- 验证功能：memory provider init功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：memory provider init功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for memory provider selection during AIAgent init.
+"""
 
 from types import SimpleNamespace
 from unittest.mock import patch

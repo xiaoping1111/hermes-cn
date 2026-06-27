@@ -1,4 +1,11 @@
-"""`hermes meet node ...` subcommand tree.
+"""Google Meet Node CLI
+
+【产品经理理解要点】
+Node 侧车的命令行管理。
+- 侧车启停和状态管理
+
+─────────────────────────────────────────────────────────────────
+`hermes meet node ...` subcommand tree.
 
 Wired into the existing ``hermes meet`` parser by the plugin's top-level
 CLI. This module only defines the subparsers and their dispatch — it

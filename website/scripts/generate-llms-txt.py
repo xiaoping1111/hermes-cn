@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Generate llms.txt and llms-full.txt for the Hermes docs site.
+"""LLMs.txt 文件生成
+
+【产品经理理解要点】
+生成 llmstxt.org 标准格式的文档索引文件，让 AI 编程助手（如 Cursor、Windsurf）能自动发现和索引 Hermes 文档。
+- 核心职责：扫描文档目录，生成精简索引（llms.txt）和全文合并版（llms-full.txt）
+- 关键概念：llms.txt 类似 robots.txt，是为 LLM 客户端优化的文档发现协议
+- 系统定位：文档构建脚本，提升 Hermes 在 AI 编程助手中的可见性
+
+─────────────────────────────────────────────────────────────────
+Generate llms.txt and llms-full.txt for the Hermes docs site.
 
 Outputs:
   website/static/llms.txt        — short curated index of the docs, one link per page,

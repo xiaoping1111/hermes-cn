@@ -1,12 +1,20 @@
-"""Tests for the `hermes memory reset` CLI command.
+"""CLImemory reset测试
+
+【产品经理理解要点】
+CLImemory reset功能测试。
+- 验证功能：命令行memory reset功能
+- 关键场景：配置、执行、验证
+- 业务影响：memory reset命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the `hermes memory reset` CLI command.
 
 Covers:
 - Reset both stores (MEMORY.md + USER.md)
 - Reset individual stores (--target memory / --target user)
 - Skip confirmation with --yes
 - Graceful handling when no memory files exist
-- Profile-scoped reset (uses HERMES_HOME)
-"""
+- Profile-scoped reset (uses HERMES_HOME)"""
 
 import pytest
 

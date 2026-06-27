@@ -1,4 +1,13 @@
-"""Tests for opencode-go / opencode-zen flat-namespace model handling.
+"""CLIopencode go flat namespace测试
+
+【产品经理理解要点】
+CLIopencode go flat namespace功能测试。
+- 验证功能：命令行opencode go flat namespace功能
+- 关键场景：配置、执行、验证
+- 业务影响：opencode go flat namespace命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for opencode-go / opencode-zen flat-namespace model handling.
 
 OpenCode Go is NOT a vendor/model aggregator like OpenRouter — its
 ``/v1/models`` endpoint returns bare IDs (``minimax-m2.7``, ``deepseek-v4-flash``)
@@ -18,8 +27,7 @@ Two bugs this exercises:
    contained prefixed fallback entries (commonly copied from aggregator slugs),
    the fallback activation path sent ``minimax/minimax-m2.7`` to opencode-go
    which returned HTTP 401.  Fix: opencode-go/opencode-zen strip ANY leading
-   ``vendor/`` prefix because their APIs are flat-namespace.
-"""
+   ``vendor/`` prefix because their APIs are flat-namespace."""
 
 from unittest.mock import patch
 

@@ -1,4 +1,13 @@
-"""Tests for GHSA-96vc-wcxf-jjff and GHSA-qg5c-hvr5-hjgr.
+"""ACP审批隔离
+
+【产品经理理解要点】
+ACP审批状态隔离。
+- 验证功能：会话间审批隔离
+- 关键场景：隔离、独立、不干扰
+- 业务影响：审批状态跨会话泄露
+
+─────────────────────────────────────────────────────────────────────────
+Tests for GHSA-96vc-wcxf-jjff and GHSA-qg5c-hvr5-hjgr.
 
 Two related ACP approval-flow issues:
 - 96vc: ACP didn't set HERMES_EXEC_ASK, so `check_all_command_guards`

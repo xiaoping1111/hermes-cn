@@ -1,10 +1,17 @@
-"""
+"""图片文件发送
+
+【产品经理理解要点】
+图片文件发送。
+- 验证功能：图片文件消息的发送
+- 关键场景：文件读取、格式检测、发送
+- 业务影响：图片消息无法发送
+
+─────────────────────────────────────────────────────────────────────────
 Tests for send_image_file() on Telegram, Discord, and Slack platforms,
 and MEDIA: .png extraction/routing in the base platform adapter.
 
 Covers: local image file sending, file-not-found handling, fallback on error,
-        MEDIA: tag extraction for image extensions, and routing to send_image_file.
-"""
+        MEDIA: tag extraction for image extensions, and routing to send_image_file."""
 
 import asyncio
 import os

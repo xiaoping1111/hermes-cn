@@ -1,4 +1,14 @@
-"""Tests for ProviderProfile.fetch_models base_url override (issue #47009)."""
+"""模型列表获取
+
+【产品经理理解要点】
+从自定义URL获取模型列表。
+- 验证功能：模型发现能力
+- 关键场景：URL解析、API调用、列表解析
+- 业务影响：自定义模型不可发现
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ProviderProfile.fetch_models base_url override (issue #47009).
+"""
 
 import json
 from http.server import HTTPServer, BaseHTTPRequestHandler

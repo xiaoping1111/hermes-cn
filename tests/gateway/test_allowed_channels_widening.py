@@ -1,4 +1,13 @@
-"""Tests for the allowed_{channels,chats,rooms} whitelist extension
+"""网关allowed channels widening测试
+
+【产品经理理解要点】
+网关allowed channels widening功能测试。
+- 验证功能：网关allowed channels widening处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：allowed channels widening功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the allowed_{channels,chats,rooms} whitelist extension
 added alongside PR #7401 (Slack).
 
 Covers: Telegram, Matrix, Mattermost, DingTalk.
@@ -8,8 +17,7 @@ For each platform:
 - When set, messages from non-listed chats/rooms are silently ignored.
 - DMs are never filtered.
 - @mention does NOT bypass the whitelist.
-- config.yaml → env var bridging (via load_gateway_config) where applicable.
-"""
+- config.yaml → env var bridging (via load_gateway_config) where applicable."""
 
 from types import SimpleNamespace
 from unittest.mock import AsyncMock

@@ -1,4 +1,13 @@
-"""Tests for the LINE platform adapter plugin.
+"""LINE网关测试
+
+【产品经理理解要点】
+LINE平台网关功能测试。
+- 验证功能：LINE平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：LINE平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the LINE platform adapter plugin.
 
 Covers the seven synthesis areas from the PR review:
 
@@ -9,8 +18,7 @@ Covers the seven synthesis areas from the PR review:
 5. RequestCache state machine (PENDING → READY → DELIVERED, ERROR)
 6. Markdown stripping with URL preservation + LINE-sized chunking
 7. send routing: reply token preferred → push fallback → batched at 5/call
-8. register() metadata + standalone_send shape
-"""
+8. register() metadata + standalone_send shape"""
 
 from __future__ import annotations
 

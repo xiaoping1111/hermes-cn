@@ -1,4 +1,12 @@
-"""Normalized models for the Teams meeting pipeline plugin."""
+"""Teams 会议管线数据模型
+
+【产品经理理解要点】
+Teams 会议管线的标准化数据模型定义。
+- 会议引用、制品、订阅等数据类
+- 日期时间解析和标准化
+
+─────────────────────────────────────────────────────────────────
+Normalized models for the Teams meeting pipeline plugin."""
 
 from __future__ import annotations
 

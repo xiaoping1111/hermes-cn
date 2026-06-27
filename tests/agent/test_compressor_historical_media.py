@@ -1,4 +1,13 @@
-"""Tests for post-compression historical-media stripping.
+"""Agent核心测试 - compressor historical media
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的compressor historical media验证。
+- 验证功能：compressor historical media功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：compressor historical media功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for post-compression historical-media stripping.
 
 Port of Kilo-Org/kilocode#9434 (adapted for OpenAI-style message lists).
 Without this pass, tail messages keep their original multi-MB base-64 image

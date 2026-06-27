@@ -1,4 +1,13 @@
-"""Regression tests for Codex refresh_token self-heal (cross-store rotation).
+"""CLIauth codex self heal测试
+
+【产品经理理解要点】
+CLIauth codex self heal功能测试。
+- 验证功能：命令行auth codex self heal功能
+- 关键场景：配置、执行、验证
+- 业务影响：auth codex self heal命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for Codex refresh_token self-heal (cross-store rotation).
 
 Hermes keeps its OWN copy of the Codex OAuth token (per profile + top-level),
 separate from the Codex CLI's ``~/.codex/auth.json``. OAuth refresh_tokens are
@@ -7,8 +16,7 @@ token, the frozen copy's refresh_token goes stale and ``refresh_codex_oauth_pure
 fails with a relogin-required error. ``_refresh_codex_auth_tokens`` must then
 recover by re-importing the canonical token from ``~/.codex/auth.json`` instead of
 surfacing a hard 401 — but ONLY for relogin-required failures, never for transient
-ones (e.g. 429 quota, where the stored token is still valid).
-"""
+ones (e.g. 429 quota, where the stored token is still valid)."""
 
 import json
 

@@ -1,4 +1,13 @@
-"""Tests for auxiliary client routing of the ``azure-foundry`` provider.
+"""Agent核心测试 - auxiliary client azure foundry
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的auxiliary client azure foundry验证。
+- 验证功能：auxiliary client azure foundry功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：auxiliary client azure foundry功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for auxiliary client routing of the ``azure-foundry`` provider.
 
 Covers the dedicated branch in ``agent.auxiliary_client.resolve_provider_client``
 that delegates to :func:`hermes_cli.runtime_provider._resolve_azure_foundry_runtime`

@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""Parseltongue 编码
+
+【产品经理理解要点】
+Parseltongue 编码/解码工具，用于安全测试中的提示混淆。
+- 提示词编码变换
+- 可逆编码/解码
+
+─────────────────────────────────────────────────────────────────
+
 Parseltongue v4 — Input Obfuscation Engine
 Ported from G0DM0D3 (elder-plinius/G0DM0D3) JavaScript to Python.
 

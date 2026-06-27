@@ -1,10 +1,18 @@
-"""Tests for PR1 pluggable image gen: scanner recursion, kinds, path keys.
+"""CLIplugin scanner recursion测试
+
+【产品经理理解要点】
+CLIplugin scanner recursion功能测试。
+- 验证功能：命令行plugin scanner recursion功能
+- 关键场景：配置、执行、验证
+- 业务影响：plugin scanner recursion命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for PR1 pluggable image gen: scanner recursion, kinds, path keys.
 
 Covers ``_scan_directory`` recursion into category namespaces
 (``plugins/image_gen/openai/``), ``kind`` parsing, path-derived registry
 keys, and the new gate logic (bundled backends auto-load; user backends
-still opt-in; exclusive kind skipped; unknown kinds → standalone warning).
-"""
+still opt-in; exclusive kind skipped; unknown kinds → standalone warning)."""
 
 from __future__ import annotations
 

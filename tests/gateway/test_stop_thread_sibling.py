@@ -1,12 +1,20 @@
-"""Regression tests: /stop can interrupt a sibling participant's run in a
+"""网关stop thread sibling测试
+
+【产品经理理解要点】
+网关stop thread sibling功能测试。
+- 验证功能：网关stop thread sibling处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：stop thread sibling功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests: /stop can interrupt a sibling participant's run in a
 per-user thread.
 
 When ``thread_sessions_per_user=True``, each participant in a thread gets an
 isolated session key (``...:{thread_id}:{user_id}``).  A run another user
 started lives under a different key, so the caller's own ``/stop`` used to find
 nothing and reply "no active task to stop".  Authorized users should be able to
-stop any run in the same thread.
-"""
+stop any run in the same thread."""
 
 import pytest
 

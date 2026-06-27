@@ -1,12 +1,20 @@
-"""Regression tests for arrow-key decoding in the curses menus.
+"""CLIcurses arrow keys测试
+
+【产品经理理解要点】
+CLIcurses arrow keys功能测试。
+- 验证功能：命令行curses arrow keys功能
+- 关键场景：配置、执行、验证
+- 业务影响：curses arrow keys命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for arrow-key decoding in the curses menus.
 
 Root cause these guard against: on many terminals/terminfo entries, cursor
 keys are delivered to ``getch()`` as raw CSI/SS3 escape byte sequences
 (``27, 91, 66`` for arrow-down) even when ``keypad(True)`` is set. The menus
 used to treat the leading ``27`` as ESC/cancel, which dumped the setup wizard's
 provider/model picker into its numbered "Select [1-N]" fallback the instant a
-user pressed up or down.
-"""
+user pressed up or down."""
 import sys
 
 import pytest

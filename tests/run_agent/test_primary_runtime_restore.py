@@ -1,4 +1,13 @@
-"""Tests for per-turn primary runtime restoration and transport recovery.
+"""Agent运行引擎测试 - primary runtime restore
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的primary runtime restore验证。
+- 验证功能：primary runtime restore功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：primary runtime restore功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for per-turn primary runtime restoration and transport recovery.
 
 Verifies that:
 1. Fallback is turn-scoped: a new turn restores the primary model/provider

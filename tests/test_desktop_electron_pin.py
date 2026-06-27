@@ -1,4 +1,13 @@
-"""Regression: the desktop Electron dependency must be an exact, consistent pin.
+"""测试 - desktop electron pin
+
+【产品经理理解要点】
+功能验证中的desktop electron pin验证。
+- 验证功能：desktop electron pin功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：desktop electron pin功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression: the desktop Electron dependency must be an exact, consistent pin.
 
 The Windows desktop install failed at "Building desktop app" because Electron
 changed its install mechanism mid patch-series:

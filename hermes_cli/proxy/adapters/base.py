@@ -1,3 +1,14 @@
+
+"""代理适配器基类
+
+【产品经理理解要点】
+定义上游适配器的抽象接口：认证、凭证刷新、URL解析。
+- UpstreamAdapter抽象类：提供商无关的代理契约
+- locate→refresh→resolve的三步认证流程
+- 代理服务器通过此接口与提供商解耦
+
+────────────────────────────────────────────────────────────────"""
+
 """Abstract base for proxy upstream adapters.
 
 An :class:`UpstreamAdapter` represents one OAuth-authenticated provider the

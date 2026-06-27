@@ -1,4 +1,13 @@
-"""Unit tests for tools.computer_use.vision_routing.
+"""工具系统测试 - computer use vision routing
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的computer use vision routing验证。
+- 验证功能：computer use vision routing功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：computer use vision routing功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for tools.computer_use.vision_routing.
 
 Cover the small ``should_route_capture_to_aux_vision`` policy helper that
 decides whether a captured screenshot from ``computer_use(action='capture')``

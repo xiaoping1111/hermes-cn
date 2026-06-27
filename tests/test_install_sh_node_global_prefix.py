@@ -1,4 +1,13 @@
-"""Regression tests for the Hermes-managed Node's npm global prefix.
+"""测试 - install sh node global prefix
+
+【产品经理理解要点】
+功能验证中的install sh node global prefix验证。
+- 验证功能：install sh node global prefix功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：install sh node global prefix功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the Hermes-managed Node's npm global prefix.
 
 When the installer falls back to a bundled Node under ``$HERMES_HOME/node``,
 npm's default global prefix is that Node dir, so ``npm install -g <pkg>``

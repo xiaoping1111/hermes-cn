@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Search OpenCorporates company registry data.
+"""OpenCorporates 查询
+
+【产品经理理解要点】
+查询 OpenCorporates 获取公司注册信息。
+- 公司搜索和详情
+- 跨国关联查询
+
+─────────────────────────────────────────────────────────────────
+Search OpenCorporates company registry data.
 
 OpenCorporates aggregates ~200M companies from 130+ jurisdictions. The
 public API requires an API token (free tier: 500 calls/month). Set

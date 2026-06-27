@@ -1,4 +1,13 @@
-"""Tests for gateway /verbose command (config-gated tool progress cycling)."""
+"""详细命令
+
+【产品经理理解要点】
+详细输出命令。
+- 验证功能：详细/调试输出模式切换
+- 关键场景：模式切换、输出格式
+- 业务影响：调试信息不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway /verbose command (config-gated tool progress cycling)."""
 
 from unittest.mock import AsyncMock, MagicMock
 

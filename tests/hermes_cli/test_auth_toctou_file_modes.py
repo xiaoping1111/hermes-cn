@@ -1,4 +1,13 @@
-"""Regression tests for TOCTOU-safe credential file writers in ``hermes_cli.auth``.
+"""CLIauth toctou file modes测试
+
+【产品经理理解要点】
+CLIauth toctou file modes功能测试。
+- 验证功能：命令行auth toctou file modes功能
+- 关键场景：配置、执行、验证
+- 业务影响：auth toctou file modes命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for TOCTOU-safe credential file writers in ``hermes_cli.auth``.
 
 Background
 ==========
@@ -13,8 +22,7 @@ shipped for ``agent/google_oauth.py`` (#19673) and ``tools/mcp_oauth.py``
 
 These tests stay green only while the token file and its parent directory
 end up at ``0o600`` / ``0o700`` after every write. POSIX-only — the mode-bit
-enforcement does not exist on Windows.
-"""
+enforcement does not exist on Windows."""
 
 from __future__ import annotations
 

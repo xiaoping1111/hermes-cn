@@ -1,4 +1,13 @@
-"""End-to-end behavioural tests for the dashboard auth gate.
+"""CLIdashboard auth middleware测试
+
+【产品经理理解要点】
+CLIdashboard auth middleware功能测试。
+- 验证功能：命令行dashboard auth middleware功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard auth middleware命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+End-to-end behavioural tests for the dashboard auth gate.
 
 Uses ``StubAuthProvider`` so the OAuth round trip can complete in-process
 without any external IDP.  Exercises:
@@ -10,8 +19,7 @@ without any external IDP.  Exercises:
   * /assets/* still passes through unauthenticated
   * Full /auth/login → /auth/callback → / round trip with the stub
   * Invalid / missing cookies return 401 (api) or 302 (html)
-  * Zero-providers + gate-on fails closed
-"""
+  * Zero-providers + gate-on fails closed"""
 from __future__ import annotations
 
 import pytest

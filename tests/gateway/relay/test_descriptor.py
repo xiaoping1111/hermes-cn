@@ -1,4 +1,13 @@
-"""Tests for the experimental CapabilityDescriptor (relay Phase 0, Task 0.2)."""
+"""描述符
+
+【产品经理理解要点】
+中继描述符。
+- 验证功能：中继节点的描述符定义
+- 关键场景：描述符解析、校验、序列化
+- 业务影响：中继描述符格式错误
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the experimental CapabilityDescriptor (relay Phase 0, Task 0.2)."""
 
 from gateway.relay.descriptor import CONTRACT_VERSION, CapabilityDescriptor
 

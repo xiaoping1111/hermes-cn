@@ -1,4 +1,13 @@
-"""Tests for the secret-source tracking in ``hermes_cli.env_loader``.
+"""测试 - env loader secret sources
+
+【产品经理理解要点】
+功能验证中的env loader secret sources验证。
+- 验证功能：env loader secret sources功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：env loader secret sources功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the secret-source tracking in ``hermes_cli.env_loader``.
 
 These cover the small public surface that lets `hermes model` / `hermes setup`
 label detected credentials with their origin ("from Bitwarden") so users

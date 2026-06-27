@@ -1,4 +1,13 @@
-"""Tests for hermes_cli.telegram_managed_bot — QR codes, deep links, pairing."""
+"""CLItelegram managed bot测试
+
+【产品经理理解要点】
+CLItelegram managed bot功能测试。
+- 验证功能：命令行telegram managed bot功能
+- 关键场景：配置、执行、验证
+- 业务影响：telegram managed bot命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.telegram_managed_bot — QR codes, deep links, pairing."""
 
 from __future__ import annotations
 

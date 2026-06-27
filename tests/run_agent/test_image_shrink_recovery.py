@@ -1,4 +1,13 @@
-"""Tests for reactive image-shrink recovery.
+"""Agent运行引擎测试 - image shrink recovery
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的image shrink recovery验证。
+- 验证功能：image shrink recovery功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：image shrink recovery功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for reactive image-shrink recovery.
 
 Covers the full chain for Anthropic's 5 MB per-image ceiling (and any
 future provider that returns an image-too-large error):

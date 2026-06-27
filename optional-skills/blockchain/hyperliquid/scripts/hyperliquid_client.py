@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""Hyperliquid 交易客户端
+
+【产品经理理解要点】
+对接 Hyperliquid 去中心化永续合约交易所。
+- 账户和仓位查询
+- 下单和撤单操作
+
+─────────────────────────────────────────────────────────────────
+
 Hyperliquid CLI Tool for Hermes Agent
 -------------------------------------
 Queries the Hyperliquid info endpoint for market and account data.

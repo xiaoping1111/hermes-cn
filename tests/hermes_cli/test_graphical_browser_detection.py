@@ -1,4 +1,13 @@
-"""Tests for `_can_open_graphical_browser()` in hermes_cli.auth.
+"""CLIgraphical browser detection测试
+
+【产品经理理解要点】
+CLIgraphical browser detection功能测试。
+- 验证功能：命令行graphical browser detection功能
+- 关键场景：配置、执行、验证
+- 业务影响：graphical browser detection命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for `_can_open_graphical_browser()` in hermes_cli.auth.
 
 Guards the fix for the May 2026 report where `hermes auth add xai-oauth`
 launched a text-mode browser (w3m) INSIDE the terminal on a headless Linux
@@ -8,8 +17,7 @@ to a console browser and hijacked the TTY.
 
 The helper distinguishes "a real windowed browser will pop up" from "a console
 browser will hijack the terminal" so OAuth callsites can fall back to printing
-the URL / manual paste instead of auto-opening.
-"""
+the URL / manual paste instead of auto-opening."""
 
 from __future__ import annotations
 

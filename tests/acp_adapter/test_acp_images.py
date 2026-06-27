@@ -1,4 +1,12 @@
 import base64
+"""ACP图片
+
+【产品经理理解要点】
+ACP图片处理。
+- 验证功能：图片上传下载处理
+- 关键场景：上传、下载、引用
+- 业务影响：ACP图片处理异常"""
+
 
 import pytest
 from acp.schema import (

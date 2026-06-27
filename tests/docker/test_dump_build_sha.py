@@ -1,4 +1,13 @@
-"""Regression test: ``hermes dump`` reports a real git SHA inside the container.
+"""Docker部署测试 - dump build sha
+
+【产品经理理解要点】
+Docker容器化部署：权限、网关、僵尸进程回收、不可变安装等运维正确性中的dump build sha验证。
+- 验证功能：dump build sha功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：dump build sha功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression test: ``hermes dump`` reports a real git SHA inside the container.
 
 Background: ``.dockerignore`` excludes ``.git``, so ``git rev-parse HEAD``
 fails inside the published image and ``hermes dump`` used to report

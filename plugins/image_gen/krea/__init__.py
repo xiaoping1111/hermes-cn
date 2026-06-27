@@ -1,4 +1,13 @@
-"""Krea image generation backend.
+"""Krea 图像生成后端
+
+【产品经理理解要点】
+对接 Krea 2 基础图像模型（Medium + Large），支持风格迁移和参考图引导生成。
+- Krea API 为异步模式：提交任务后轮询 job_id 获取结果，本插件封装为同步调用
+- Medium 擅长插画/动漫/绘画风格，Large 擅长写真/质感风格
+- 最多支持 10 张参考图，支持 moodboard 创意板
+
+─────────────────────────────────────────────────────────────────
+Krea image generation backend.
 
 Exposes Krea's `Krea 2` foundation image model family — Krea 2 Medium and
 Krea 2 Large — as an :class:`ImageGenProvider` implementation.

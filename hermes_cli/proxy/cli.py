@@ -1,3 +1,14 @@
+
+"""代理CLI处理
+
+【产品经理理解要点】
+hermes proxy子命令的CLI入口处理函数。
+- 代理服务的启停控制
+- 配置代理监听端口和上游提供商
+- 代理状态和日志查看
+
+────────────────────────────────────────────────────────────────"""
+
 """CLI handlers for the ``hermes proxy`` subcommand."""
 
 from __future__ import annotations

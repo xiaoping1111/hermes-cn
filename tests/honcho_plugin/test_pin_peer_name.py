@@ -1,4 +1,13 @@
-"""Tests for the ``pinPeerName`` / ``pinUserPeer`` config flag.
+"""固定对等方名称
+
+【产品经理理解要点】
+会话中固定对等方名称。
+- 验证功能：对话身份一致性
+- 关键场景：名称固定、会话绑定
+- 业务影响：对话身份不一致
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the ``pinPeerName`` / ``pinUserPeer`` config flag.
 
 Under a gateway (Telegram, Discord, Slack, ...) Hermes passes the
 platform-native user ID as ``runtime_user_peer_name`` into

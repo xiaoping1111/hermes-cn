@@ -1,4 +1,14 @@
-"""Tests for optional-skills/productivity/memento-flashcards/scripts/memento_cards.py"""
+"""备忘卡片技能
+
+【产品经理理解要点】
+Memento记忆卡片。
+- 验证功能：记忆卡片生成管理
+- 关键场景：卡片生成、存储、展示
+- 业务影响：记忆卡片功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for optional-skills/productivity/memento-flashcards/scripts/memento_cards.py
+"""
 
 import csv
 import json

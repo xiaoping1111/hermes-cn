@@ -1,4 +1,13 @@
-"""Target the reclaim race specifically.
+"""并发回收竞态
+
+【产品经理理解要点】
+并发资源回收安全。
+- 验证功能：竞态条件防护
+- 关键场景：并发回收、锁、原子性
+- 业务影响：并发竞态导致数据损坏
+
+─────────────────────────────────────────────────────────────────────────
+Target the reclaim race specifically.
 
 Workers claim tasks with a 1s TTL but sleep 2s before completing. The
 reclaimer runs every 200ms. Scenario: worker claims, reclaimer expires

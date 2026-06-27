@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Generate a meme image by overlaying text on a template.
+"""Meme 图片生成
+
+【产品经理理解要点】
+生成带文字的 Meme 表情包图片。
+- 模板选择和文字叠加
+- 图片合成和导出
+
+─────────────────────────────────────────────────────────────────
+Generate a meme image by overlaying text on a template.
 
 Usage:
     python generate_meme.py <template_id_or_name> <output_path> <text1> [text2] [text3] [text4]

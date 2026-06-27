@@ -1,3 +1,14 @@
+
+"""claw子命令解析器
+
+【产品经理理解要点】
+hermes claw子命令的argparse解析器构建。
+- OpenClaw迁移子命令参数定义
+- 从main.py提取（god-file Phase 2）
+- 处理器通过依赖注入传入
+
+────────────────────────────────────────────────────────────────"""
+
 """``hermes claw`` subcommand parser.
 
 Extracted from ``hermes_cli/main.py:main()`` (god-file Phase 2 follow-up).

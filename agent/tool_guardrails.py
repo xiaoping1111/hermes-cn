@@ -1,5 +1,16 @@
 """Pure tool-call loop guardrail primitives.
 
+工具调用护栏
+
+【产品经理理解要点】
+防止智能体陷入工具调用死循环：检测重复调用、无限循环、可疑模式并触发保护机制。
+- 核心职责：幂等工具识别、重复调用检测、循环模式识别、调用预算控制
+- 关键业务概念：工具调用护栏(guardrail)、幂等操作、轮次预算、静默终止
+- 在系统中的位置：对话循环中的安全阀门，防止工具爆炸消耗资源
+
+─────────────────────────────────────────────────────────────────
+
+
 The controller in this module is intentionally side-effect free: it tracks
 per-turn tool-call observations and returns decisions. Runtime code owns whether
 those decisions become warning guidance, synthetic tool results, or controlled

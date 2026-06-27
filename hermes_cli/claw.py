@@ -1,4 +1,13 @@
-"""hermes claw — OpenClaw migration commands.
+"""OpenClaw迁移命令
+
+【产品经理理解要点】
+hermes claw子命令，从OpenClaw迁移配置到Hermes Agent。
+- 自动转换Agent配置和提示词格式
+- 预览模式(--dry-run)：迁移前查看将要变更的内容
+- 清理模式：归档迁移后残留的OpenClaw目录
+
+────────────────────────────────────────────────────────────────
+hermes claw — OpenClaw migration commands.
 
 Usage:
     hermes claw migrate              # Preview then migrate (always shows preview first)
@@ -7,8 +16,7 @@ Usage:
     hermes claw migrate --preset full --overwrite --migrate-secrets  # Full run w/ secrets
     hermes claw migrate --no-backup  # Skip pre-migration snapshot
     hermes claw cleanup              # Archive leftover OpenClaw directories
-    hermes claw cleanup --dry-run    # Preview what would be archived
-"""
+    hermes claw cleanup --dry-run    # Preview what would be archived"""
 
 import importlib.util
 import logging

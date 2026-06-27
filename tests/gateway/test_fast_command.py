@@ -1,4 +1,13 @@
-"""Tests for gateway /fast support and Priority Processing routing."""
+"""网关fast command测试
+
+【产品经理理解要点】
+网关fast command功能测试。
+- 验证功能：网关fast command处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：fast command功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway /fast support and Priority Processing routing."""
 
 import sys
 import threading

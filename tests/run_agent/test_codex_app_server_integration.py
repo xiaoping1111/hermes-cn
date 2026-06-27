@@ -1,4 +1,13 @@
-"""Integration test for the codex_app_server runtime path through AIAgent.
+"""Agent运行引擎测试 - codex app server integration
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的codex app server integration验证。
+- 验证功能：codex app server integration功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：codex app server integration功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Integration test for the codex_app_server runtime path through AIAgent.
 
 Verifies that:
   - api_mode='codex_app_server' is accepted on AIAgent construction

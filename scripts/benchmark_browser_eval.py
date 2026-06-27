@@ -1,4 +1,13 @@
-"""Quick benchmark: subprocess eval vs supervisor-WS eval.
+"""浏览器执行基准测试
+
+【产品经理理解要点】
+对比浏览器操作在子进程模式与 WebSocket 监控模式下的性能差异，输出对比表格。
+- 核心职责：启动真实 Chrome，分别用两种执行路径运行相同操作，统计耗时对比
+- 关键概念：用于 PR 评审时量化性能改进，非自动化测试而是手动运行的基准脚本
+- 系统定位：性能基准测试脚本
+
+─────────────────────────────────────────────────────────────────
+Quick benchmark: subprocess eval vs supervisor-WS eval.
 
 Runs both paths against the same live Chrome and prints a comparison table.
 Not a pytest — a script you run manually for the PR description.

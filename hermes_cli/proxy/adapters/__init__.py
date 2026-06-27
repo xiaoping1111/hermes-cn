@@ -1,9 +1,17 @@
-"""Upstream adapter registry for the local proxy server.
+"""代理适配器注册表
+
+【产品经理理解要点】
+注册和查找可用的上游代理适配器。
+- ADAPTERS字典：适配器名→类的映射
+- 每个适配器封装一个OAuth提供商的认证状态
+- 新增提供商只需新增适配器类
+
+────────────────────────────────────────────────────────────────
+Upstream adapter registry for the local proxy server.
 
 Each adapter wraps a provider's OAuth state and exposes a uniform interface
 the proxy server can use to forward requests with a freshly-minted bearer
-token. See :class:`UpstreamAdapter` for the contract.
-"""
+token. See :class:`UpstreamAdapter` for the contract."""
 
 from typing import Dict, Type
 

@@ -1,4 +1,13 @@
-"""Tests for MiniMax OAuth provider (hermes_cli/auth.py).
+"""测试 - minimax oauth
+
+【产品经理理解要点】
+功能验证中的minimax oauth验证。
+- 验证功能：minimax oauth功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：minimax oauth功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for MiniMax OAuth provider (hermes_cli/auth.py).
 
 Covers:
 - PKCE pair generation (S256 challenge)

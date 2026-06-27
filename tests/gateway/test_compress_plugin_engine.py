@@ -1,4 +1,13 @@
-"""Regression test: /compress works with context engine plugins.
+"""网关compress plugin engine测试
+
+【产品经理理解要点】
+网关compress plugin engine功能测试。
+- 验证功能：网关compress plugin engine处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：compress plugin engine功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression test: /compress works with context engine plugins.
 
 Reported by @selfhostedsoul (Discord, Apr 2026) with the LCM plugin installed:
 
@@ -11,8 +20,7 @@ part of the generic ContextEngine ABC, so any plugin engine (LCM, etc.)
 raised AttributeError.
 
 The fix promotes the preflight into an optional ABC method
-(has_content_to_compress) with a safe default of True.
-"""
+(has_content_to_compress) with a safe default of True."""
 
 from datetime import datetime
 from typing import Any, Dict, List

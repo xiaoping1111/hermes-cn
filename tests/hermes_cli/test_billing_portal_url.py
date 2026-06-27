@@ -1,9 +1,17 @@
-"""Portal-URL resolution for Phase 2b billing errors (nous_billing).
+"""CLIbilling portal url测试
+
+【产品经理理解要点】
+CLIbilling portal url功能测试。
+- 验证功能：命令行billing portal url功能
+- 关键场景：配置、执行、验证
+- 业务影响：billing portal url命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Portal-URL resolution for Phase 2b billing errors (nous_billing).
 
 The server emits ``portalUrl`` relative by design (``/billing?topup=open``); the
 client must resolve it against the active portal base so deep-links are clickable
-on whatever deployment (preview / staging / prod) the user is pointed at.
-"""
+on whatever deployment (preview / staging / prod) the user is pointed at."""
 
 from __future__ import annotations
 

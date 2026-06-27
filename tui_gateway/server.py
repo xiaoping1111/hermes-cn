@@ -1,3 +1,13 @@
+"""TUI 网关服务器
+
+【产品经理理解要点】
+TUI 网关的核心分发器，处理所有 JSON-RPC 请求（消息发送、审批、斜杠命令等），是 TUI 模式的心脏。
+- 核心职责：接收 JSON-RPC 请求并路由到对应处理函数，管理 Agent 生命周期、会话状态、工具调用
+- 关键概念：支持流式输出、MCP 工具发现、审批流（approve/deny/clarify/sudo）、看板、定时任务等全部 Agent 功能
+- 系统定位：核心业务层，是 hermes-agent 中代码量最大的单文件（~11000行），串联所有子系统
+
+─────────────────────────────────────────────────────────────────────────
+"""
 import atexit
 import concurrent.futures
 import contextlib

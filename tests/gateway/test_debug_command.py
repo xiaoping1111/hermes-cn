@@ -1,4 +1,13 @@
-"""Tests for the gateway /debug command."""
+"""网关debug command测试
+
+【产品经理理解要点】
+网关debug command功能测试。
+- 验证功能：网关debug command处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：debug command功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the gateway /debug command."""
 
 from unittest.mock import patch
 

@@ -1,4 +1,13 @@
-"""Phase 0 regression harness for the relay/connector work.
+"""网关relay capability surface测试
+
+【产品经理理解要点】
+网关relay capability surface功能测试。
+- 验证功能：网关relay capability surface处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：relay capability surface功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Phase 0 regression harness for the relay/connector work.
 
 Locks the *behavioral contract* that the future ``RelayAdapter`` must reproduce:
 the gateway's ``stream_consumer`` and ``BasePlatformAdapter`` read per-platform
@@ -10,8 +19,7 @@ the existing consumer with no consumer changes.
 These are deliberately *behavioral* (construct an adapter, drive the code,
 assert the observable outcome) rather than source-string snapshots, per the
 repo's "don't write change-detector tests" rule. They pass on ``main`` before
-any ``RelayAdapter`` exists — they describe the contract, not the relay.
-"""
+any ``RelayAdapter`` exists — they describe the contract, not the relay."""
 
 import inspect
 

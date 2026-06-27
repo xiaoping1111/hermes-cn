@@ -1,3 +1,11 @@
+"""CLIsessions delete测试
+
+【产品经理理解要点】
+CLIsessions delete功能测试。
+- 验证功能：命令行sessions delete功能
+- 关键场景：配置、执行、验证
+- 业务影响：sessions delete命令行功能失效"""
+
 import sys
 
 

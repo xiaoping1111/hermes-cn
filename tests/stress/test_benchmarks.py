@@ -1,4 +1,13 @@
-"""Scale benchmarks for the Kanban kernel.
+"""基准性能
+
+【产品经理理解要点】
+核心操作耗时基线。
+- 验证功能：性能回归检测
+- 关键场景：耗时测量、基线比对
+- 业务影响：性能回归未被发现
+
+─────────────────────────────────────────────────────────────────────────
+Scale benchmarks for the Kanban kernel.
 
 Measures:
   - dispatch_once latency at 100, 1000, 10000 tasks

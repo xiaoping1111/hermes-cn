@@ -1,4 +1,13 @@
-"""Tests for hermes_cli/goals.py — persistent cross-turn goals."""
+"""CLIgoals测试
+
+【产品经理理解要点】
+CLIgoals功能测试。
+- 验证功能：命令行goals功能
+- 关键场景：配置、执行、验证
+- 业务影响：goals命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli/goals.py — persistent cross-turn goals."""
 
 from __future__ import annotations
 

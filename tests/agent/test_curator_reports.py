@@ -1,4 +1,13 @@
-"""Tests for the curator per-run report writer (run.json + REPORT.md).
+"""Agent核心测试 - curator reports
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的curator reports验证。
+- 验证功能：curator reports功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：curator reports功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the curator per-run report writer (run.json + REPORT.md).
 
 Reports live under ``~/.hermes/logs/curator/{YYYYMMDD-HHMMSS}/`` alongside
 the standard log dir, not inside the user's ``skills/`` data directory.

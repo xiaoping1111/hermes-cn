@@ -1,4 +1,13 @@
-"""Tests that gateway /model switch persists across messages.
+"""模型切换持久化
+
+【产品经理理解要点】
+模型切换持久化。
+- 验证功能：模型切换后的持久化保存
+- 关键场景：配置保存、重启恢复
+- 业务影响：模型切换重启后丢失
+
+─────────────────────────────────────────────────────────────────────────
+Tests that gateway /model switch persists across messages.
 
 The gateway /model command stores session overrides in
 ``_session_model_overrides``.  These must:
@@ -8,8 +17,7 @@ The gateway /model command stores session overrides in
 3. Survive across multiple messages until /reset clears them.
 
 Tests exercise the real ``_apply_session_model_override()`` and
-``_is_intentional_model_switch()`` methods on ``GatewayRunner``.
-"""
+``_is_intentional_model_switch()`` methods on ``GatewayRunner``."""
 
 from datetime import datetime
 from types import SimpleNamespace

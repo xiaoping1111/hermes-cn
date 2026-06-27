@@ -1,4 +1,13 @@
-"""Regression tests for OpenCode /v1 stripping during /model switch.
+"""CLImodel switch opencode anthropic测试
+
+【产品经理理解要点】
+CLImodel switch opencode anthropic功能测试。
+- 验证功能：命令行model switch opencode anthropic功能
+- 关键场景：配置、执行、验证
+- 业务影响：model switch opencode anthropic命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for OpenCode /v1 stripping during /model switch.
 
 When switching to an Anthropic-routed OpenCode model mid-session (e.g.
 ``/model minimax-m2.7`` on opencode-go, or ``/model claude-sonnet-4-6``
@@ -12,8 +21,7 @@ requests hit ``https://opencode.ai/zen/go/v1/v1/messages`` — a double
 ``hermes_cli.runtime_provider.resolve_runtime_provider`` already strips
 ``/v1`` at fresh agent init (PR #4918), but the ``/model`` mid-session
 switch path in ``hermes_cli.model_switch.switch_model`` was missing the
-same logic — these tests guard against that regression.
-"""
+same logic — these tests guard against that regression."""
 
 from unittest.mock import patch
 

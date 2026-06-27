@@ -1,3 +1,11 @@
+"""CLImanaged installs测试
+
+【产品经理理解要点】
+CLImanaged installs功能测试。
+- 验证功能：命令行managed installs功能
+- 关键场景：配置、执行、验证
+- 业务影响：managed installs命令行功能失效"""
+
 from types import SimpleNamespace
 from unittest.mock import patch
 

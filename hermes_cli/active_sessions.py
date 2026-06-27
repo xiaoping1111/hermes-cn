@@ -1,3 +1,14 @@
+
+"""活跃会话租约管理
+
+【产品经理理解要点】
+跨进程追踪当前打开的聊天会话，包含尚未写入数据库的空闲会话。
+- 会话租约：记录CLI/TUI中打开但可能未持久化的会话
+- 跨进程可见：通过共享存储让gateway和CLI都能看到活跃会话
+- 防止重复恢复同一会话
+
+────────────────────────────────────────────────────────────────"""
+
 """Cross-process active chat session leases.
 
 The session database records persisted conversations.  This module records

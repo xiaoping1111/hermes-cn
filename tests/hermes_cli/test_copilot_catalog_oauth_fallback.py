@@ -1,4 +1,13 @@
-"""Catalog-API-key fallback for the Copilot ``/model`` picker.
+"""认证降级
+
+【产品经理理解要点】
+认证降级处理。
+- 验证功能：主认证失败后的降级策略
+- 关键场景：降级触发、备用认证、安全审计
+- 业务影响：认证失败后无法降级
+
+─────────────────────────────────────────────────────────────────────────
+Catalog-API-key fallback for the Copilot ``/model`` picker.
 
 Regression for #16708: when the user's only Copilot credential is a
 ``gho_*`` token (typically obtained via device-code login) stored in
@@ -7,8 +16,7 @@ Regression for #16708: when the user's only Copilot credential is a
 is set in ``~/.hermes/.env`` — the picker was silently dropping back to
 a stale hardcoded list because ``_resolve_copilot_catalog_api_key``
 only consulted env vars / ``gh auth token`` and never read the
-credential pool.
-"""
+credential pool."""
 
 from unittest.mock import patch
 

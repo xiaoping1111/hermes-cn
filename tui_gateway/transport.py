@@ -1,4 +1,13 @@
-"""Transport abstraction for the tui_gateway JSON-RPC server.
+"""TUI 传输抽象
+
+【产品经理理解要点】
+抽象 TUI 网关的 I/O 传输层，使同一分发逻辑可同时支持 stdio 和 WebSocket 两种传输方式。
+- 核心职责：定义 Transport 协议接口，通过 contextvars 追踪当前请求的传输通道，实现请求级别的路由
+- 关键概念：StdioTransport（标准输入输出）、WsTransport（WebSocket）、TeeTransport（多路广播）三种实现
+- 系统定位：I/O 抽象层，解耦 JSON-RPC 处理逻辑与底层传输通道
+
+─────────────────────────────────────────────────────────────────────────
+Transport abstraction for the tui_gateway JSON-RPC server.
 
 Historically the gateway wrote every JSON frame directly to real stdout.  This
 module decouples the I/O sink from the handler logic so the same dispatcher

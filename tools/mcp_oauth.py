@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 """
+MCP OAuth 2.1 客户端
+
+【产品经理理解要点】
+为需要OAuth认证的MCP服务器实现浏览器授权流程，让用户通过浏览器登录授权。
+- 核心职责：实现OAuth 2.1授权码流程（带PKCE），包括令牌持久化存储、本地回调服务器、自动令牌刷新
+- 业务价值：使MCP工具能对接需要用户登录的第三方服务（如Google Drive、Notion等），而非仅支持静态API密钥
+- 在系统中的位置：位于MCP工具调度器和需要OAuth的MCP服务器之间
+
+─────────────────────────────────────────────────────────────────
 MCP OAuth 2.1 Client Support
 
 Implements the browser-based OAuth 2.1 authorization code flow with PKCE

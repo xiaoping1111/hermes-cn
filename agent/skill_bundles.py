@@ -1,5 +1,16 @@
 """Skill bundles — aliases that load multiple skills under one slash command.
 
+技能捆绑包
+
+【产品经理理解要点】
+一条斜杠命令同时加载多个技能，减少用户手动逐个切换的操作成本。
+- 核心职责：从 YAML 文件加载技能捆绑定定义、/bundle-name 触发批量技能注入
+- 关键业务概念：技能捆绑定、YAML 定义、冲突解决
+- 在系统中的位置：斜杠命令系统中的技能批量加载功能
+
+─────────────────────────────────────────────────────────────────
+
+
 A skill bundle is a small YAML file that names a set of skills to load
 together. Invoking ``/<bundle-name>`` from the CLI or gateway loads every
 referenced skill's full content into a single user message, the same way

@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Tests for the FAL.ai image generation plugin.
+"""插件系统测试 - fal provider
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的fal provider验证。
+- 验证功能：fal provider功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：fal provider功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the FAL.ai image generation plugin.
 
 The plugin is a thin registration adapter — actual FAL pipeline logic
 lives in ``tools.image_generation_tool`` and is exercised by

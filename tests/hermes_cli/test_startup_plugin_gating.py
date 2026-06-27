@@ -1,4 +1,13 @@
-"""Guards for CLI startup performance regression.
+"""CLIstartup plugin gating测试
+
+【产品经理理解要点】
+CLIstartup plugin gating功能测试。
+- 验证功能：命令行startup plugin gating功能
+- 关键场景：配置、执行、验证
+- 业务影响：startup plugin gating命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Guards for CLI startup performance regression.
 
 ``hermes_cli.main`` skips eager plugin discovery at argparse-setup time
 when the invocation is clearly targeting a known built-in subcommand.
@@ -15,8 +24,7 @@ Two invariants:
    could shadow the name — also bad.
 
 2. ``_plugin_cli_discovery_needed()`` returns the right answer for the
-   flag/positional parsing cases it's meant to handle.
-"""
+   flag/positional parsing cases it's meant to handle."""
 
 from __future__ import annotations
 

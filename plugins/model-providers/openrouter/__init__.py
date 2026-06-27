@@ -1,4 +1,12 @@
-"""OpenRouter provider profile."""
+"""OpenRouter 模型提供者
+
+【产品经理理解要点】
+对接 OpenRouter 模型路由服务，统一访问多家模型。
+- 多模型路由代理
+- OPENROUTER_API_KEY 认证
+
+─────────────────────────────────────────────────────────────────
+OpenRouter provider profile."""
 
 import logging
 from typing import Any

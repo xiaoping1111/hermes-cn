@@ -1,4 +1,13 @@
-"""Unit tests for hermes_cli.win_pty_bridge — ConPTY spawning + byte forwarding.
+"""CLIwin pty bridge测试
+
+【产品经理理解要点】
+CLIwin pty bridge功能测试。
+- 验证功能：命令行win pty bridge功能
+- 关键场景：配置、执行、验证
+- 业务影响：win pty bridge命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for hermes_cli.win_pty_bridge — ConPTY spawning + byte forwarding.
 
 Windows-only counterpart to tests/hermes_cli/test_pty_bridge.py.  Drives
 ``WinPtyBridge`` with minimal Windows processes (``cmd.exe``, ``python -c …``)
@@ -9,8 +18,7 @@ that run on every OS so the import surface stays exercised in CI.
 The bridge is the ConPTY backend behind the dashboard ``/chat`` tab — see
 ``hermes_cli/web_server.py`` ``/api/pty`` handler — so these tests are the
 unit-level half of the integration check that the dashboard chat pane is
-actually live on native Windows.
-"""
+actually live on native Windows."""
 
 from __future__ import annotations
 

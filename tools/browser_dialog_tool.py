@@ -1,4 +1,13 @@
-"""Agent-facing tool: respond to a native JS dialog captured by the CDP supervisor.
+"""浏览器对话框响应工具
+
+【产品经理理解要点】
+让智能体能够响应网页弹出的原生JavaScript对话框（alert/confirm/prompt）。
+- 核心职责：读取浏览器快照中的待处理对话框，接受或关闭对话框
+- 交互流程：先通过 browser_snapshot 发现对话框 → 再用 browser_dialog 做出响应
+- 在系统中的位置：位于浏览器自动化模块和网页交互之间，是浏览器工具集的补充组件
+
+─────────────────────────────────────────────────────────────────
+Agent-facing tool: respond to a native JS dialog captured by the CDP supervisor.
 
 This tool is response-only — the agent first reads ``pending_dialogs`` from
 ``browser_snapshot`` output, then calls ``browser_dialog(action=...)`` to

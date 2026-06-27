@@ -1,4 +1,13 @@
-"""Tests for banner get_available_skills() — disabled and platform filtering."""
+"""CLIbanner skills测试
+
+【产品经理理解要点】
+CLIbanner skills功能测试。
+- 验证功能：命令行banner skills功能
+- 关键场景：配置、执行、验证
+- 业务影响：banner skills命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for banner get_available_skills() — disabled and platform filtering."""
 
 from unittest.mock import patch
 

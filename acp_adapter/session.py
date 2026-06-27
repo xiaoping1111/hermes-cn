@@ -1,4 +1,13 @@
-"""ACP session manager — maps ACP sessions to Hermes AIAgent instances.
+"""ACP 会话管理
+
+【产品经理理解要点】
+管理 ACP 会话与 Hermes AIAgent 实例的映射关系，会话持久化到本地数据库以支持断线重连。
+- 核心职责：创建/加载/恢复 ACP 会话，将 ACP 会话 ID 映射到 Hermes 内部的 AIAgent 实例
+- 关键概念：会话持久化到 ~/.hermes/state.db，编辑器重启后可恢复完整对话历史；支持 WSL 路径转换
+- 系统定位：会话生命周期管理层，是 ACP 服务器与会话存储之间的桥梁
+
+─────────────────────────────────────────────────────────────────────────
+ACP session manager — maps ACP sessions to Hermes AIAgent instances.
 
 Sessions are persisted to the shared SessionDB (``~/.hermes/state.db``) so they
 survive process restarts and appear in ``session_search``.  When the editor

@@ -1,8 +1,15 @@
-"""
+"""诊断命令
+
+【产品经理理解要点】
+hermes doctor子命令，自动诊断Hermes安装和配置问题。
+- 检查Python版本、依赖完整性、网络连通性
+- 验证API密钥和凭证配置
+- 给出具体修复建议
+
+────────────────────────────────────────────────────────────────
 Doctor command for hermes CLI.
 
-Diagnoses issues with Hermes Agent setup.
-"""
+Diagnoses issues with Hermes Agent setup."""
 
 import os
 import sys

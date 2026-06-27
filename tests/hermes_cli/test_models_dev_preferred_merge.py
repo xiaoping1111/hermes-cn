@@ -1,4 +1,13 @@
-"""Tests for the models.dev-preferred merge behavior in provider_model_ids
+"""CLImodels dev preferred merge测试
+
+【产品经理理解要点】
+CLImodels dev preferred merge功能测试。
+- 验证功能：命令行models dev preferred merge功能
+- 关键场景：配置、执行、验证
+- 业务影响：models dev preferred merge命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the models.dev-preferred merge behavior in provider_model_ids
 and list_authenticated_providers.
 
 These guard the contract:
@@ -14,8 +23,7 @@ These guard the contract:
     fallback — no crash, no empty list.
 
 Merging is what lets new models (e.g. ``mimo-v2.5-pro`` on opencode-go)
-appear in ``/model`` without a Hermes release.
-"""
+appear in ``/model`` without a Hermes release."""
 
 from unittest.mock import patch
 

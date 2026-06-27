@@ -1,4 +1,13 @@
-"""Tests for MCP tools interactive configuration in hermes_cli.tools_config."""
+"""CLImcp tools config测试
+
+【产品经理理解要点】
+CLImcp tools config功能测试。
+- 验证功能：命令行mcp tools config功能
+- 关键场景：配置、执行、验证
+- 业务影响：mcp tools config命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for MCP tools interactive configuration in hermes_cli.tools_config."""
 
 from unittest.mock import patch
 

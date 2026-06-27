@@ -1,4 +1,13 @@
-"""Tests for cron/jobs.py — schedule parsing, job CRUD, and due-job detection."""
+"""定时任务管理
+
+【产品经理理解要点】
+定时任务CRUD与生命周期。
+- 验证功能：任务增删改查与持久化
+- 关键场景：任务创建、更新、删除、查询
+- 业务影响：定时任务无法被管理或执行
+
+─────────────────────────────────────────────────────────────────────────
+Tests for cron/jobs.py — schedule parsing, job CRUD, and due-job detection."""
 
 import threading
 import pytest

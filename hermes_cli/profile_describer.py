@@ -1,3 +1,14 @@
+
+"""配置文件描述生成
+
+【产品经理理解要点】
+利用LLM自动为Profile生成描述文字。
+- 读取Profile的技能/模型/名称等上下文
+- 调用辅助LLM生成1-2句描述
+- Dashboard可标注为AI生成并请求用户审核
+
+────────────────────────────────────────────────────────────────"""
+
 """Profile describer — auto-generate ``description`` for a profile.
 
 Used by ``hermes profile describe <name> --auto`` and the dashboard's

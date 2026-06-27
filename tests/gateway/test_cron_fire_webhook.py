@@ -1,11 +1,19 @@
-"""Tests for the Chronos cron-fire webhook (POST /api/cron/fire) — Phase 4E.2.
+"""Cron触发Webhook
+
+【产品经理理解要点】
+Cron触发Webhook。
+- 验证功能：定时任务触发Webhook通知
+- 关键场景：Webhook构造、发送、重试
+- 业务影响：定时任务触发通知失败
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Chronos cron-fire webhook (POST /api/cron/fire) — Phase 4E.2.
 
 The webhook authenticates a NAS-minted JWT via the pluggable fire-verifier
 (NOT API_SERVER_KEY), then runs the job via the resolved provider's fire_due in
 the background, returning 202. These tests monkeypatch the verifier and
 resolve_cron_scheduler — the verifier itself is tested with real crypto in
-test_chronos_verify.py.
-"""
+test_chronos_verify.py."""
 
 import asyncio
 

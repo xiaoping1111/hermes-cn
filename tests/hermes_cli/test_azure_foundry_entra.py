@@ -1,4 +1,13 @@
-"""Tests for Azure Foundry Entra ID runtime resolution.
+"""CLIazure foundry entra测试
+
+【产品经理理解要点】
+CLIazure foundry entra功能测试。
+- 验证功能：命令行azure foundry entra功能
+- 关键场景：配置、执行、验证
+- 业务影响：azure foundry entra命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Azure Foundry Entra ID runtime resolution.
 
 Covers the contract introduced in PR for Microsoft Entra ID auth on
 ``azure-foundry``:
@@ -16,8 +25,7 @@ Covers the contract introduced in PR for Microsoft Entra ID auth on
   * ``_get_azure_foundry_auth_status`` is structural — never mints a
     token (verified by checking the credential cache untouched).
   * ``has_usable_secret`` for ``AZURE_FOUNDRY_API_KEY`` is irrelevant
-    when ``auth_mode == entra_id``.
-"""
+    when ``auth_mode == entra_id``."""
 
 from __future__ import annotations
 

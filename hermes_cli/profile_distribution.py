@@ -1,3 +1,14 @@
+
+"""配置文件分发
+
+【产品经理理解要点】
+可分享的Hermes Profile打包为Git仓库，一键安装。
+- Profile发布为Git仓库供他人安装
+- 安装时保留本地的记忆/会话/凭证
+- hermes profile export/import是本地备份/恢复的补充
+
+────────────────────────────────────────────────────────────────"""
+
 """Profile distributions — shareable, packaged Hermes profiles via git.
 
 A distribution is a Hermes profile published as a git repository (or

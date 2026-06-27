@@ -1,11 +1,19 @@
-"""Tests for the Discord continuous voice mixer (ambient + ducked speech)
+"""Discord语音混音
+
+【产品经理理解要点】
+Discord语音混音器。
+- 验证功能：Discord平台语音混音处理
+- 关键场景：音频混合、音量控制、输出
+- 业务影响：语音混音功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Discord continuous voice mixer (ambient + ducked speech)
 and the verbal-ack-before-tool-calls hook.
 
 The mixer (plugins/platforms/discord/voice_mixer.py) is pure-PCM and has no
 discord.py dependency, so its core is tested directly.  The adapter
 integration (install on join, play routing, ack) is tested with the standard
-``object.__new__(DiscordAdapter)`` helper used elsewhere in the voice suite.
-"""
+``object.__new__(DiscordAdapter)`` helper used elsewhere in the voice suite."""
 
 import os
 import sys

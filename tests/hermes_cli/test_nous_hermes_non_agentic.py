@@ -1,4 +1,13 @@
-"""Tests for the Nous-Hermes-3/4 non-agentic warning detector.
+"""CLInous hermes non agentic测试
+
+【产品经理理解要点】
+CLInous hermes non agentic功能测试。
+- 验证功能：命令行nous hermes non agentic功能
+- 关键场景：配置、执行、验证
+- 业务影响：nous hermes non agentic命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Nous-Hermes-3/4 non-agentic warning detector.
 
 Prior to this check, the warning fired on any model whose name contained
 ``"hermes"`` anywhere (case-insensitive). That false-positived on unrelated
@@ -6,8 +15,7 @@ local Modelfiles such as ``hermes-brain:qwen3-14b-ctx16k`` — a tool-capable
 Qwen3 wrapper that happens to live under the "hermes" tag namespace.
 
 ``is_nous_hermes_non_agentic`` should only match the actual Nous Research
-Hermes-3 / Hermes-4 chat family.
-"""
+Hermes-3 / Hermes-4 chat family."""
 
 from __future__ import annotations
 

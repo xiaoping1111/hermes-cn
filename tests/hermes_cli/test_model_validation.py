@@ -1,4 +1,13 @@
-"""Tests for provider-aware `/model` validation in hermes_cli.models."""
+"""CLImodel validation测试
+
+【产品经理理解要点】
+CLImodel validation功能测试。
+- 验证功能：命令行model validation功能
+- 关键场景：配置、执行、验证
+- 业务影响：model validation命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for provider-aware `/model` validation in hermes_cli.models."""
 
 from unittest.mock import MagicMock, patch
 

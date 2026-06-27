@@ -1,5 +1,16 @@
 """Helper functions for the chat-completions code path.
 
+Chat Completion 辅助函数
+
+【产品经理理解要点】
+从 AIAgent 提取的 chat-completions 代码路径辅助：请求构建、回退激活、资源清理。
+- 核心职责：非流式 API 调用、请求参数构建、供应商回退激活、轮次资源清理
+- 关键业务概念：chat-completions 路径、max-iterations 处理、提供商回退
+- 在系统中的位置：AIAgent chat-completions 传输路径的辅助层
+
+─────────────────────────────────────────────────────────────────
+
+
 Extracted from :class:`AIAgent` for cleanliness — bodies of the
 non-streaming API call, request kwargs builder, assistant-message
 materializer, provider-fallback activator, max-iterations handler,

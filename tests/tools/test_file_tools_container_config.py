@@ -1,4 +1,14 @@
-"""Tests for docker container_config key propagation in file_tools."""
+"""工具系统测试 - file tools container config
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的file tools container config验证。
+- 验证功能：file tools container config功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：file tools container config功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for docker container_config key propagation in file_tools.
+"""
 
 from unittest.mock import patch, MagicMock
 import tools.file_tools as file_tools

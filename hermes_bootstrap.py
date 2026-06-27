@@ -1,4 +1,13 @@
-"""Windows UTF-8 bootstrap for Hermes entry points.
+"""Windows UTF-8 启动引导
+
+【产品经理理解要点】
+解决 Windows 控制台中文/特殊字符乱码问题：在程序启动最早期将标准输出强制设为 UTF-8。
+- 核心职责：仅对 Windows 生效——设置 PYTHONUTF8=1、重配 sys.stdout/stderr 编码
+- 关键业务概念：入口点首行导入、跨进程编码一致性、POSIX 无操作
+- 在系统中的位置：所有入口脚本（cli.py、gateway.run 等）的第一个 import
+
+─────────────────────────────────────────────────────────────────
+Windows UTF-8 bootstrap for Hermes entry points.
 
 Python on Windows has two long-standing text-encoding footguns:
 

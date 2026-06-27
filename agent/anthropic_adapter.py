@@ -1,5 +1,16 @@
 """Anthropic Messages API adapter for Hermes Agent.
 
+Anthropic Messages API 适配器
+
+【产品经理理解要点】
+在 Hermes 的 OpenAI 格式和 Anthropic Messages API 之间双向转换。
+- 核心职责：消息格式转换、工具 Schema 转换、多种认证方式(API Key/OAuth/Claude Code)
+- 关键业务概念：Anthropic Messages API、OAuth PKCE、Claude Code 凭证
+- 在系统中的位置：Anthropic 供应商的传输适配层
+
+─────────────────────────────────────────────────────────────────
+
+
 Translates between Hermes's internal OpenAI-style message format and
 Anthropic's Messages API. Follows the same pattern as the codex_responses
 adapter — all provider-specific logic is isolated here.

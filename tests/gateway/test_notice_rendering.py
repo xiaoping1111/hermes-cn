@@ -1,9 +1,17 @@
-"""Unit tests for messaging-gateway credit-notice rendering.
+"""通知渲染
+
+【产品经理理解要点】
+通知渲染。
+- 验证功能：系统通知的渲染逻辑
+- 关键场景：模板选择、变量替换、格式化
+- 业务影响：通知显示格式错误
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for messaging-gateway credit-notice rendering.
 
 Covers render_notice_line — the pure helper that turns an AgentNotice into the
 single plaintext line pushed standalone over a messaging platform (no status
-bar, unlike the TUI). Behavior contracts, not data snapshots.
-"""
+bar, unlike the TUI). Behavior contracts, not data snapshots."""
 from agent.credits_tracker import AgentNotice
 from gateway.run import render_notice_line
 

@@ -1,11 +1,19 @@
-"""Tests for the /model picker background cache prewarm.
+"""CLIpicker prewarm测试
+
+【产品经理理解要点】
+CLIpicker prewarm功能测试。
+- 验证功能：命令行picker prewarm功能
+- 关键场景：配置、执行、验证
+- 业务影响：picker prewarm命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the /model picker background cache prewarm.
 
 ``prewarm_picker_cache_async()`` warms the provider-models disk cache off the
 user's critical path so the first ``/model`` open in a session is fast instead
 of blocking ~1-2s on serial /v1/models fetches. These pin the two contracts
 that matter: it runs the warm path exactly once per process (no thread leak),
-and it delegates to ``list_authenticated_providers`` to do the warming.
-"""
+and it delegates to ``list_authenticated_providers`` to do the warming."""
 
 from __future__ import annotations
 

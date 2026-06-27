@@ -1,4 +1,13 @@
-"""pytest config for the stress/ subdirectory.
+"""压力与稳定性测试 - conftest
+
+【产品经理理解要点】
+高并发、竞态条件、模糊输入等极端场景下的系统健壮性中的conftest验证。
+- 验证功能：conftest功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：conftest功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+pytest config for the stress/ subdirectory.
 
 These tests are slow (30s+), spawn subprocesses, and are not run by
 default. Enable via `pytest --run-stress` or by running the scripts

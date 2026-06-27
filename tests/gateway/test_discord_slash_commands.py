@@ -1,4 +1,13 @@
-"""Tests for native Discord slash command fast-paths (thread creation & auto-thread)."""
+"""Discord斜杠命令
+
+【产品经理理解要点】
+Discord斜杠命令。
+- 验证功能：Discord平台斜杠命令处理
+- 关键场景：命令注册、处理、响应
+- 业务影响：Discord斜杠命令失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for native Discord slash command fast-paths (thread creation & auto-thread)."""
 
 from types import SimpleNamespace
 from unittest.mock import AsyncMock, MagicMock, patch

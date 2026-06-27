@@ -1,11 +1,19 @@
-"""Tests for gateway /goal verdict-message delivery.
+"""目标判定发送
+
+【产品经理理解要点】
+目标判定结果发送。
+- 验证功能：Agent目标达成判定的结果发送
+- 关键场景：判定逻辑、结果格式化、发送
+- 业务影响：目标判定结果未送达
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway /goal verdict-message delivery.
 
 The judge verdict message ("✓ Goal achieved", "⏸ budget exhausted", etc.)
 must reach the user after each turn. Before this fix the code checked
 ``hasattr(adapter, "send_message")`` — but adapters expose ``send()``,
 never ``send_message``, so the check always evaluated False and users
-never saw verdicts. This test locks in the fix.
-"""
+never saw verdicts. This test locks in the fix."""
 
 from __future__ import annotations
 

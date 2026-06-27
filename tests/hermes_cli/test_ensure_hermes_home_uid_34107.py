@@ -1,4 +1,13 @@
-"""Regression tests for #34107 — Docker UID/GID handling in ensure_hermes_home.
+"""CLIensure hermes home uid 34107测试
+
+【产品经理理解要点】
+CLIensure hermes home uid 34107功能测试。
+- 验证功能：命令行ensure hermes home uid 34107功能
+- 关键场景：配置、执行、验证
+- 业务影响：ensure hermes home uid 34107命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for #34107 — Docker UID/GID handling in ensure_hermes_home.
 
 When Hermes runs in Docker with ``HERMES_UID=1000`` / ``HERMES_GID=911``,
 the entrypoint chowns the top-level ``HERMES_HOME`` once at startup. But
@@ -9,8 +18,7 @@ uid-mapped worker invocations with ``PermissionError [Errno 13]``.
 
 The fix is a ``_chown_to_hermes_uid`` helper that reads the env vars and
 applies chown after ``mkdir``, invoked from ``_secure_dir`` (which already
-runs after every directory creation in the home-init path).
-"""
+runs after every directory creation in the home-init path)."""
 from __future__ import annotations
 
 import os

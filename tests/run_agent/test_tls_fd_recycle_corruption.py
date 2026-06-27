@@ -1,4 +1,13 @@
-"""Regressions for issue #29507 — cross-thread close of the per-request OpenAI
+"""Agent运行引擎测试 - tls fd recycle corruption
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的tls fd recycle corruption验证。
+- 验证功能：tls fd recycle corruption功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：tls fd recycle corruption功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regressions for issue #29507 — cross-thread close of the per-request OpenAI
 client could release a TLS socket FD whose integer was still cached in the
 owning httpx worker's SSL BIO. The kernel then recycled the FD into the next
 ``open()`` (e.g. the kanban dispatcher's ``kanban.db``), and the worker's

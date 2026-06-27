@@ -1,4 +1,12 @@
-"""
+"""安全模式定义 — 危险代码正则匹配
+
+【产品经理理解要点】
+定义已知危险代码模式（eval、pickle.load、shell=True 等）的正则表达式，用于写入时安全告警。
+- 纯数据 + 纯函数，无副作用，可独立导入
+- 源自 Anthropic claude-plugins-official，Apache 2.0 许可
+
+─────────────────────────────────────────────────────────────────
+
 Regex-based security pattern definitions for the security-guidance plugin.
 
 Pure data + one pure helper. No env-var reads, no I/O — kept side-effect-free

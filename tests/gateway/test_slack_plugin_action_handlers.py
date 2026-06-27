@@ -1,12 +1,20 @@
-"""Tests for plugin-registered Slack Block Kit action handlers.
+"""Slack网关测试
+
+【产品经理理解要点】
+Slack平台网关功能测试。
+- 验证功能：Slack平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Slack平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for plugin-registered Slack Block Kit action handlers.
 
 Covers:
 * ``PluginContext.register_slack_action_handler`` validation + queuing
 * ``PluginManager.get_slack_action_handlers`` accessor
 * ``SlackAdapter.connect`` wiring those handlers into the AsyncApp
 * Defensive wrapping: a plugin handler that raises does NOT take down
-  the gateway and Slack still gets an ack.
-"""
+  the gateway and Slack still gets an ack."""
 
 from __future__ import annotations
 

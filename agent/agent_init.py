@@ -1,5 +1,16 @@
 """Implementation of :meth:`AIAgent.__init__` — extracted as a module function.
 
+智能体初始化
+
+【产品经理理解要点】
+AIAgent.__init__ 的实现：60+ 参数的属性初始化、供应商检测、凭证解析。
+- 核心职责：初始化全部属性、自动检测供应商、解析凭证、引导上下文引擎
+- 关键业务概念：供应商自动检测、凭证解析链、上下文引擎引导
+- 在系统中的位置：AIAgent 构造函数的提取实现
+
+─────────────────────────────────────────────────────────────────
+
+
 ``AIAgent.__init__`` is one of the longest methods in the codebase (60+
 parameters, ~1,400 lines of attribute initialization, provider
 auto-detection, credential resolution, context-engine bootstrap, etc.).

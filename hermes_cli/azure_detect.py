@@ -1,3 +1,14 @@
+
+"""Azure端点自动检测
+
+【产品经理理解要点】
+自动检测Azure Foundry / Azure OpenAI端点的API传输类型和可用模型。
+- 区分OpenAI风格和Anthropic风格传输协议
+- 自动发现Azure部署的模型列表
+- 为每个模型解析上下文长度等元数据
+
+────────────────────────────────────────────────────────────────"""
+
 """Azure Foundry endpoint auto-detection.
 
 Inspect a Microsoft Foundry / Azure OpenAI endpoint to determine:

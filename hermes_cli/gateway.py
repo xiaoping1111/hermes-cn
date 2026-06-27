@@ -1,8 +1,15 @@
-"""
+"""网关子命令
+
+【产品经理理解要点】
+hermes gateway子命令，管理Gateway服务的启停和状态。
+- start/stop/restart：网关服务的启停控制
+- status：查看网关运行状态
+- install/uninstall：注册为系统服务
+
+────────────────────────────────────────────────────────────────
 Gateway subcommand for hermes CLI.
 
-Handles: hermes gateway [run|start|stop|restart|status|install|uninstall|setup]
-"""
+Handles: hermes gateway [run|start|stop|restart|status|install|uninstall|setup]"""
 
 import asyncio
 import json

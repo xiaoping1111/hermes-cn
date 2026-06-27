@@ -1,3 +1,14 @@
+
+"""看板数据库层
+
+【产品经理理解要点】
+SQLite多配置文件多项目看板的数据持久层。
+- 跨配置文件共享看板：worker和dispatcher在同一看板上协作
+- 任务状态流转：triage→todo→doing→done
+- 工作区和日志的文件管理
+
+────────────────────────────────────────────────────────────────"""
+
 """SQLite-backed Kanban board for multi-profile, multi-project collaboration.
 
 In a fresh install the board lives at ``<root>/kanban.db`` where

@@ -1,4 +1,13 @@
-"""E2E: dispatcher spawns real Python subprocess workers.
+"""子进程端到端压力
+
+【产品经理理解要点】
+子进程高负载稳定性。
+- 验证功能：子进程生命周期管理
+- 关键场景：创建、通信、清理
+- 业务影响：子进程资源泄露
+
+─────────────────────────────────────────────────────────────────────────
+E2E: dispatcher spawns real Python subprocess workers.
 
 This validates the IPC + lifecycle story that mocks can't:
   - spawn_fn returns a real PID

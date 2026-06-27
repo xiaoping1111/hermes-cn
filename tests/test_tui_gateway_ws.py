@@ -1,4 +1,12 @@
 import asyncio
+"""测试 - tui gateway ws
+
+【产品经理理解要点】
+功能验证中的tui gateway ws验证。
+- 验证功能：tui gateway ws功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：tui gateway ws功能异常或存在安全隐患"""
+
 import threading
 import time
 

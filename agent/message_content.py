@@ -1,5 +1,17 @@
 from __future__ import annotations
 
+"""消息内容提取
+
+消息内容提取
+
+【产品经理理解要点】
+从 OpenAI 格式消息中提取纯文本内容，忽略图片/音频等非文本部分。
+- 核心职责：遍历消息 content parts、提取文本、跳过图片/音频
+- 关键业务概念：消息内容结构、text/image/audio part 类型过滤
+- 在系统中的位置：消息处理管线中的文本提取工具
+
+─────────────────────────────────────────────────────────────────
+"""
 from collections.abc import Mapping
 from typing import Any
 

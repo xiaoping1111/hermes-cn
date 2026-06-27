@@ -1,4 +1,12 @@
-"""Thin HTTP client for the agent → NAS ``agent-cron`` endpoints (Chronos).
+"""Chronos NAS 客户端
+
+【产品经理理解要点】
+与 NAS 存储交互的客户端，用于 Chronos 调度器的持久化。
+- NAS 文件系统的读写操作
+- 调度状态的持久化和恢复
+
+─────────────────────────────────────────────────────────────────
+Thin HTTP client for the agent → NAS ``agent-cron`` endpoints (Chronos).
 
 The Chronos provider speaks ONLY to NAS — it names no scheduler vendor and
 holds no scheduler credentials. NAS owns the external scheduler (an internal

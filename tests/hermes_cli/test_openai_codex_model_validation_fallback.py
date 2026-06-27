@@ -1,4 +1,13 @@
-"""Regression tests for OpenAI Codex model validation when the listing lags behind
+"""CLIopenai codex model validation fallback测试
+
+【产品经理理解要点】
+CLIopenai codex model validation fallback功能测试。
+- 验证功能：命令行openai codex model validation fallback功能
+- 关键场景：配置、执行、验证
+- 业务影响：openai codex model validation fallback命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for OpenAI Codex model validation when the listing lags behind
 actually usable backend model IDs.
 
 The bug originally reported in #16172: `/model` and `switch_model()` rejected
@@ -12,8 +21,7 @@ so the real-world Spark request takes the `recognized=True` fast path. This
 test still uses Spark as the example slug but explicitly mocks
 ``provider_model_ids`` to omit it, exercising the soft-accept path generically
 for any future entitlement-gated Codex slug that ships before Hermes catalogs
-it.
-"""
+it."""
 
 from unittest.mock import patch
 

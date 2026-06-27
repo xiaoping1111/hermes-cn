@@ -1,3 +1,11 @@
+"""CLIcli active session limit测试
+
+【产品经理理解要点】
+CLIcli active session limit功能测试。
+- 验证功能：命令行cli active session limit功能
+- 关键场景：配置、执行、验证
+- 业务影响：cli active session limit命令行功能失效"""
+
 from cli import HermesCLI
 from hermes_cli.active_sessions import (
     active_session_registry_snapshot,

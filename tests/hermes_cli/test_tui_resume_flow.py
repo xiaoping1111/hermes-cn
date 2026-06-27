@@ -1,3 +1,11 @@
+"""CLItui resume flow测试
+
+【产品经理理解要点】
+CLItui resume flow功能测试。
+- 验证功能：命令行tui resume flow功能
+- 关键场景：配置、执行、验证
+- 业务影响：tui resume flow命令行功能失效"""
+
 from argparse import Namespace
 import os
 from pathlib import Path

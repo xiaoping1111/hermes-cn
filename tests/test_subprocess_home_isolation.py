@@ -1,4 +1,13 @@
-"""Tests for subprocess HOME handling in profile mode.
+"""测试 - subprocess home isolation
+
+【产品经理理解要点】
+功能验证中的subprocess home isolation验证。
+- 验证功能：subprocess home isolation功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：subprocess home isolation功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for subprocess HOME handling in profile mode.
 
 Hermes state stays profile-scoped through HERMES_HOME. Host subprocesses should
 keep the user's real HOME by default so external CLIs find existing credentials.

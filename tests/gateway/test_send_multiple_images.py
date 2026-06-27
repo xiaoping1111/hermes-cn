@@ -1,4 +1,12 @@
-"""
+"""多图发送
+
+【产品经理理解要点】
+多图片发送。
+- 验证功能：多图片消息的发送处理
+- 关键场景：图片收集、批量发送、顺序保证
+- 业务影响：多图片消息发送失败
+
+─────────────────────────────────────────────────────────────────────────
 Tests for ``send_multiple_images`` native batching across platforms.
 
 Covers:
@@ -9,8 +17,7 @@ Covers:
     - Mattermost: single post with ``file_ids`` list (chunk at 5)
     - Email: single email with multiple MIME attachments
 
-Signal's native implementation is covered by test_signal.py.
-"""
+Signal's native implementation is covered by test_signal.py."""
 
 import asyncio
 import sys

@@ -1,4 +1,13 @@
-"""Regression tests for subagent timeout diagnostic dump (issue #14726).
+"""工具系统测试 - delegate subagent timeout diagnostic
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的delegate subagent timeout diagnostic验证。
+- 验证功能：delegate subagent timeout diagnostic功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：delegate subagent timeout diagnostic功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for subagent timeout diagnostic dump (issue #14726).
 
 When delegate_task's child subagent times out without having made any API
 call, a structured diagnostic file is written under

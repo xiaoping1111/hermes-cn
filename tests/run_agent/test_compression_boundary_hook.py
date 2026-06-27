@@ -1,4 +1,13 @@
-"""Test: the context engine is notified of a compression-boundary rollover.
+"""Agent运行引擎测试 - compression boundary hook
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的compression boundary hook验证。
+- 验证功能：compression boundary hook功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：compression boundary hook功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Test: the context engine is notified of a compression-boundary rollover.
 
 When _compress_context rotates session_id (compression split), the active
 context engine receives on_session_start(new_sid, boundary_reason="compression",

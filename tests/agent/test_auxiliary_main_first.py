@@ -1,4 +1,13 @@
-"""Regression tests for the ``auto`` → main-model-first policy.
+"""Agent核心测试 - auxiliary main first
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的auxiliary main first验证。
+- 验证功能：auxiliary main first功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：auxiliary main first功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the ``auto`` → main-model-first policy.
 
 Prior to this change, aggregator users (OpenRouter / Nous Portal) had aux
 tasks routed through a cheap provider-side default (Gemini Flash) while

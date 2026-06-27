@@ -1,4 +1,13 @@
-"""Tests for config-driven platform access policies at the gateway layer.
+"""网关config driven access policy测试
+
+【产品经理理解要点】
+网关config driven access policy功能测试。
+- 验证功能：网关config driven access policy处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：config driven access policy功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for config-driven platform access policies at the gateway layer.
 
 Background (#34515): WeCom, Weixin, Yuanbao, QQBot, and WhatsApp expose a
 documented config-driven access surface (``dm_policy`` / ``group_policy`` /
@@ -22,8 +31,7 @@ admitted the whole external network with no operator-configured allowlist — th
 fail-open SECURITY.md §2.6 forbids for network-exposed adapters ("an allowlist
 is required for every enabled network-exposed adapter ... code paths that fail
 open when no allowlist is configured are code bugs"). Open access requires an
-explicit ``{PLATFORM}_ALLOW_ALL_USERS`` / ``GATEWAY_ALLOW_ALL_USERS`` opt-in.
-"""
+explicit ``{PLATFORM}_ALLOW_ALL_USERS`` / ``GATEWAY_ALLOW_ALL_USERS`` opt-in."""
 
 from types import SimpleNamespace
 from unittest.mock import AsyncMock, MagicMock

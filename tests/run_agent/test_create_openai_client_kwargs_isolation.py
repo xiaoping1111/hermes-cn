@@ -1,4 +1,13 @@
-"""Guardrail: _create_openai_client must not mutate its input kwargs.
+"""Agent运行引擎测试 - create openai client kwargs isolation
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的create openai client kwargs isolation验证。
+- 验证功能：create openai client kwargs isolation功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：create openai client kwargs isolation功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Guardrail: _create_openai_client must not mutate its input kwargs.
 
 #10933 injected an httpx.Client directly into the caller's ``client_kwargs``.
 When the dict was ``self._client_kwargs``, the shared transport was torn down

@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""批量智能体运行器
+
+【产品经理理解要点】
+批量跑题工具：从数据集中并行运行智能体，支持断点续跑和结果统计。
+- 核心职责：加载提示词数据集，按批次并行执行智能体对话，汇总工具使用统计
+- 关键业务概念：数据集批量处理、断点续跑（checkpoint）、工具集分布抽样
+- 在系统中的位置：批量评估/训练数据生成的入口，与 run_agent.py 配合使用
+
+─────────────────────────────────────────────────────────────────
 Batch Agent Runner
 
 This module provides parallel batch processing capabilities for running the agent

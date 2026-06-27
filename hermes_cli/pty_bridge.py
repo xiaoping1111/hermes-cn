@@ -1,3 +1,14 @@
+
+"""PTY桥接（POSIX）
+
+【产品经理理解要点】
+Dashboard聊天标签的伪终端桥接，将子进程ANSI输出流式传送到浏览器。
+- 包装子进程为伪终端以保留ANSI输出
+- xterm.js在浏览器端还原终端显示
+- 仅限POSIX（macOS/Linux）
+
+────────────────────────────────────────────────────────────────"""
+
 """PTY bridge for `hermes dashboard` chat tab.
 
 Wraps a child process behind a pseudo-terminal so its ANSI output can be

@@ -1,3 +1,14 @@
+
+"""Bitwarden密钥管理
+
+【产品经理理解要点】
+hermes secrets bitwarden子命令，集成Bitwarden密钥管理器。
+- setup：安装bws CLI + 配置项目令牌
+- sync：从Bitwarden获取密钥并写入.env
+- 企业级密钥管理的外部集成方案
+
+────────────────────────────────────────────────────────────────"""
+
 """CLI handlers for ``hermes secrets bitwarden ...``.
 
 Subcommands:

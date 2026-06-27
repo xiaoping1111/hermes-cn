@@ -1,3 +1,11 @@
+"""网关unauthorized dm behavior测试
+
+【产品经理理解要点】
+网关unauthorized dm behavior功能测试。
+- 验证功能：网关unauthorized dm behavior处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：unauthorized dm behavior功能异常"""
+
 from types import SimpleNamespace
 from unittest.mock import AsyncMock, MagicMock
 

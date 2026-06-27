@@ -1,4 +1,13 @@
-"""Tests for the KeyboardInterrupt guard around slash command dispatch.
+"""CLI终端测试 - slash command interrupt
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的slash command interrupt验证。
+- 验证功能：slash command interrupt功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：slash command interrupt功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the KeyboardInterrupt guard around slash command dispatch.
 
 A Ctrl+C during a slow slash command (e.g. /skills browse on a large
 skill tree, or /sessions list against a multi-GB SQLite DB) used to

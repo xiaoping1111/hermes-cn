@@ -1,4 +1,13 @@
-"""Regression test: google-workspace SKILL.md must declare required_credential_files.
+"""Google Workspace凭证
+
+【产品经理理解要点】
+Workspace凭证管理。
+- 验证功能：凭证安全存储加载
+- 关键场景：存储、加载、验证
+- 业务影响：Workspace凭证异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression test: google-workspace SKILL.md must declare required_credential_files.
 
 PR #9931 accidentally removed the required_credential_files header, which broke
 credential file mounting in Docker/Modal remote backends (#16452). This test

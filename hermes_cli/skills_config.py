@@ -1,4 +1,12 @@
-"""
+"""技能配置管理
+
+【产品经理理解要点】
+hermes skills子命令，管理技能的全局和按平台启用/禁用。
+- 配置存储在config.yaml的skills:键下
+- 全局禁用列表 + 按平台覆盖
+- 与tools_config配合管理Agent的工具集
+
+────────────────────────────────────────────────────────────────
 Skills configuration for Hermes Agent.
 `hermes skills` enters this module.
 
@@ -9,8 +17,7 @@ Config stored in ~/.hermes/config.yaml under:
     disabled: [skill-a, skill-b]          # global disabled list
     platform_disabled:                    # per-platform overrides
       telegram: [skill-c]
-      cli: []
-"""
+      cli: []"""
 from typing import List, Optional, Set
 
 from hermes_cli.config import cfg_get, load_config, save_config

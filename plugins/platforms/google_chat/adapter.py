@@ -1,4 +1,13 @@
 """
+Google Chat 企业通讯平台适配器
+
+【产品经理理解要点】
+接入 Google Chat，通过 Cloud Pub/Sub 接收消息，通过 Chat REST API 发送回复。
+- 无需公网端点：使用 Pub/Sub 拉取订阅接收消息，类似 Slack Socket Mode
+- 支持文件附件上传（需用户 OAuth 授权）
+- 支持空间/DM 消息、斜杠命令、卡片交互等 Google Chat 特有功能
+
+─────────────────────────────────────────────────────────────────
 Google Chat platform adapter.
 
 Uses Google Cloud Pub/Sub (pull subscription) for inbound events and the

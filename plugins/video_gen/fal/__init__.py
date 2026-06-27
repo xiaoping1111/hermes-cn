@@ -1,4 +1,13 @@
-"""FAL.ai video generation backend.
+"""FAL.ai 视频生成后端
+
+【产品经理理解要点】
+对接 FAL.ai 的视频生成模型族（Pixverse、Veo、Kling、LTX 等），支持文生视频和图生视频。
+- 自动路由：有 image_url 走图生视频，否则走文生视频
+- 6 个模型族覆盖低价和高端档位
+- 支持 FAL_KEY 直连和托管网关两种认证
+
+─────────────────────────────────────────────────────────────────
+FAL.ai video generation backend.
 
 User-facing surface: pick a **model family** (e.g. "Pixverse v6",
 "Veo 3.1", "Seedance 2.0", "Kling v3 4K", "LTX 2.3", "Happy Horse").

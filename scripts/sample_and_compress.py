@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""数据集采样与压缩
+
+【产品经理理解要点】
+从 HuggingFace 下载 Agent 轨迹数据集，随机采样后运行轨迹压缩，控制在目标 token 预算内。
+- 核心职责：多数据集并行下载 → 随机采样 → 压缩长轨迹 → 输出符合 token 预算的训练数据
+- 关键概念：用于 SFT 数据准备——原始轨迹可能超长，压缩后既保留关键信息又控制训练成本
+- 系统定位：数据准备脚本，模型训练流水线的前置步骤
+
+─────────────────────────────────────────────────────────────────
 Sample and Compress HuggingFace Datasets
 
 Downloads trajectories from multiple HuggingFace datasets, randomly samples them,

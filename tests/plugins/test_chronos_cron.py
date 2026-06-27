@@ -1,4 +1,13 @@
-"""Unit tests for the Chronos NAS-mediated cron provider (Phase 4D).
+"""插件系统测试 - chronos cron
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的chronos cron验证。
+- 验证功能：chronos cron功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：chronos cron功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for the Chronos NAS-mediated cron provider (Phase 4D).
 
 All NAS calls are mocked — ZERO live network. These prove:
   - is_available is config-only (no network), false without config.

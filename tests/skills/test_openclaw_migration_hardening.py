@@ -1,4 +1,13 @@
-"""Tests for the OpenClaw→Hermes migration hardening features.
+"""OpenClaw迁移加固
+
+【产品经理理解要点】
+迁移后安全加固。
+- 验证功能：迁移安全措施有效性
+- 关键场景：加固检测、验证
+- 业务影响：迁移后安全漏洞
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the OpenClaw→Hermes migration hardening features.
 
 Covers the changes in the "claw migrate hardening" PR:
   - secret redaction (engine-level, applied to report JSON)

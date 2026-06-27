@@ -1,5 +1,16 @@
 """Cross-session rate limit guard for Nous Portal.
 
+Nous Portal 跨会话限速守卫
+
+【产品经理理解要点】
+跨会话共享限速状态文件，防止多个会话同时重试导致的请求放大效应。
+- 核心职责：429时写入限速状态文件、后续请求前检查是否在冷却期
+- 关键业务概念：跨进程限速共享、RPH 耗尽、重试放大抑制
+- 在系统中的位置：所有 Nous Portal 请求前的限速检查层
+
+─────────────────────────────────────────────────────────────────
+
+
 Writes rate limit state to a shared file so all sessions (CLI, gateway,
 cron, auxiliary) can check whether Nous Portal is currently rate-limited
 before making requests.  Prevents retry amplification when RPH is tapped.

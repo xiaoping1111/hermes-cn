@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Extract skill metadata into website/static/api/skills.json for the Skills Hub page.
+"""技能元数据提取
+
+【产品经理理解要点】
+从技能源文件和统一索引中提取技能元数据，生成 skills.json 供文档站点的 Skills Hub 页面展示。
+- 核心职责：合并本地 SKILL.md（完整元数据）和统一索引（全量技能列表），输出静态 JSON
+- 关键概念：50k+ 技能若打入 JS chunk 会导致 26MB 页面，因此改为静态 JSON 懒加载
+- 系统定位：文档构建脚本，生成 /api/skills.json 和 /api/skills-meta.json
+
+─────────────────────────────────────────────────────────────────
+Extract skill metadata into website/static/api/skills.json for the Skills Hub page.
 
 Two data sources:
 

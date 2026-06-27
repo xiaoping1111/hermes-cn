@@ -1,3 +1,11 @@
+"""Codex执行路径
+
+【产品经理理解要点】
+Codex执行路径。
+- 验证功能：Codex模式的任务执行路径
+- 关键场景：路径解析、环境适配
+- 业务影响：任务执行路径错误"""
+
 import asyncio
 import sys
 import types

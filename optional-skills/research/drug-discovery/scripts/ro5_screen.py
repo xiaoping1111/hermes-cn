@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""类药五规则筛选
+
+【产品经理理解要点】
+根据 Lipinski 类药五规则筛选化合物。
+- 分子量、LogP、氢键供受体计算
+- 类药性判断和报告
+
+─────────────────────────────────────────────────────────────────
+
 ro5_screen.py — Batch Lipinski Ro5 + Veber screening via PubChem API.
 Usage: python3 ro5_screen.py aspirin ibuprofen paracetamol
 No external dependencies beyond stdlib.

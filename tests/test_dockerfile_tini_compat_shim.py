@@ -1,4 +1,13 @@
-"""Regression test for #34192 — Dockerfile must keep the tini compat shim
+"""测试 - dockerfile tini compat shim
+
+【产品经理理解要点】
+功能验证中的dockerfile tini compat shim验证。
+- 验证功能：dockerfile tini compat shim功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：dockerfile tini compat shim功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression test for #34192 — Dockerfile must keep the tini compat shim
 for orchestration templates that still reference /usr/bin/tini.
 
 This is a documentation-as-test guard: removing the shim is a real

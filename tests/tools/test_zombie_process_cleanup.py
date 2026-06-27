@@ -1,4 +1,13 @@
-"""Tests for zombie process cleanup — verifies processes spawned by tools
+"""工具系统测试 - zombie process cleanup
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的zombie process cleanup验证。
+- 验证功能：zombie process cleanup功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：zombie process cleanup功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for zombie process cleanup — verifies processes spawned by tools
 are properly reaped when agent sessions end.
 
 Reproduction for issue #7131: zombie process accumulation on long-running

@@ -1,12 +1,20 @@
-"""Tests for cron job inactivity-based timeout.
+"""不活跃超时
+
+【产品经理理解要点】
+Cron不活跃超时。
+- 验证功能：长时间无活动任务的超时处理
+- 关键场景：超时检测、任务终止、资源释放
+- 业务影响：僵尸任务占用资源
+
+─────────────────────────────────────────────────────────────────────────
+Tests for cron job inactivity-based timeout.
 
 Tests cover:
 - Active agent runs indefinitely (no inactivity timeout)
 - Idle agent triggers inactivity timeout with diagnostic info
 - Unlimited timeout (HERMES_CRON_TIMEOUT=0)
 - Backward compat: HERMES_CRON_TIMEOUT env var still works
-- Error message includes activity summary
-"""
+- Error message includes activity summary"""
 
 import concurrent.futures
 import os

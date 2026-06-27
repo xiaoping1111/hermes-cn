@@ -1,4 +1,13 @@
-"""Unit tests for hermes_cli/dingtalk_auth.py (QR device-flow registration)."""
+"""CLIdingtalk auth测试
+
+【产品经理理解要点】
+CLIdingtalk auth功能测试。
+- 验证功能：命令行dingtalk auth功能
+- 关键场景：配置、执行、验证
+- 业务影响：dingtalk auth命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for hermes_cli/dingtalk_auth.py (QR device-flow registration)."""
 from __future__ import annotations
 
 import sys

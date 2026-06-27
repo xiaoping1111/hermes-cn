@@ -1,8 +1,16 @@
-"""Tests for busy-session acknowledgment when user sends messages during active agent runs.
+"""网关busy session ack测试
+
+【产品经理理解要点】
+网关busy session ack功能测试。
+- 验证功能：网关busy session ack处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：busy session ack功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for busy-session acknowledgment when user sends messages during active agent runs.
 
 Verifies that users get an immediate status response instead of total silence
-when the agent is working on a task. See PR fix for the @Lonely__MH report.
-"""
+when the agent is working on a task. See PR fix for the @Lonely__MH report."""
 import time
 from unittest.mock import AsyncMock, MagicMock, patch
 

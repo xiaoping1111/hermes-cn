@@ -1,4 +1,13 @@
-"""SimpleX Chat platform adapter (Hermes plugin).
+"""SimpleX 隐私聊天平台适配器
+
+【产品经理理解要点】
+接入 SimpleX Chat 守护进程，通过 WebSocket 双向收发消息，主打隐私通讯。
+- SimpleX 无用户 ID 设计，通过连接地址而非账号标识用户
+- 支持自动接受联系人请求、用户白名单过滤
+- 守护进程可通过 Docker 或本地 simplex-chat 命令启动
+
+─────────────────────────────────────────────────────────────────
+SimpleX Chat platform adapter (Hermes plugin).
 
 Connects to a simplex-chat daemon running in WebSocket mode.
 Inbound messages arrive via a persistent WebSocket connection.

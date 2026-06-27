@@ -1,4 +1,13 @@
-"""Tests for Arcee AI provider support — standard direct API provider."""
+"""CLIarcee provider测试
+
+【产品经理理解要点】
+CLIarcee provider功能测试。
+- 验证功能：命令行arcee provider功能
+- 关键场景：配置、执行、验证
+- 业务影响：arcee provider命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Arcee AI provider support — standard direct API provider."""
 
 import types
 

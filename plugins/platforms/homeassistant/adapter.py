@@ -1,4 +1,13 @@
 """
+Home Assistant 智能家居平台适配器
+
+【产品经理理解要点】
+接入 Home Assistant 智能家居系统，实现语音助手对家居设备的感知与控制。
+- 通过 HA WebSocket API 实时监听设备状态变化，转为消息事件交给 Agent 处理
+- Agent 的回复以 HA 持久通知的形式推送到 Home Assistant 界面
+- 需要 HASS_TOKEN（长期访问令牌）和 HASS_URL 环境变量
+
+─────────────────────────────────────────────────────────────────
 Home Assistant platform adapter.
 
 Connects to the HA WebSocket API for real-time event monitoring.

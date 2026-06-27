@@ -1,4 +1,13 @@
-"""Tests for KeyboardInterrupt handling in exit cleanup paths.
+"""Agent运行引擎测试 - exit cleanup interrupt
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的exit cleanup interrupt验证。
+- 验证功能：exit cleanup interrupt功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：exit cleanup interrupt功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for KeyboardInterrupt handling in exit cleanup paths.
 
 ``except Exception`` does not catch ``KeyboardInterrupt`` (which inherits
 from ``BaseException``).  A second Ctrl+C during exit cleanup must not

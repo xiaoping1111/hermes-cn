@@ -1,4 +1,13 @@
 """
+浏览器供应商抽象接口
+
+【产品经理理解要点】
+定义云端浏览器的插件化后端接口，支持 Browserbase/Browser Use/Firecrawl 等。
+- 核心职责：定义 CloudBrowserProvider ABC(create_session/navigate等)、会话生命周期
+- 关键业务概念：云端浏览器会话、CDP 连接、会话元数据契约
+- 在系统中的位置：browser_* 工具的云端模式供应商抽象层
+
+─────────────────────────────────────────────────────────────────
 Browser Provider ABC
 ====================
 

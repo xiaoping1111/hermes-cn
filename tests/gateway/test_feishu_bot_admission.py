@@ -1,4 +1,13 @@
-"""Adapter-layer tests for Feishu bot-sender admission (``FeishuAdapter._admit``)."""
+"""飞书网关测试
+
+【产品经理理解要点】
+飞书平台网关功能测试。
+- 验证功能：飞书平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：飞书平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Adapter-layer tests for Feishu bot-sender admission (``FeishuAdapter._admit``)."""
 
 from __future__ import annotations
 

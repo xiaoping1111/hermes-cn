@@ -1,4 +1,13 @@
-"""Tests for custom_providers[].models[].supports_vision override (#41036).
+"""Agent核心测试 - custom providers vision
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的custom providers vision验证。
+- 验证功能：custom providers vision功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：custom providers vision功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for custom_providers[].models[].supports_vision override (#41036).
 
 When a named custom provider declares per-model supports_vision via the
 legacy list-style custom_providers config, image_routing should honor it

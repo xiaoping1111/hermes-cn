@@ -1,4 +1,13 @@
-"""Centralized logging setup for Hermes Agent.
+"""Hermes 日志系统
+
+【产品经理理解要点】
+统一日志管理：按模块分文件记录运行日志，自动脱敏敏感信息，支持按会话 ID 追踪。
+- 核心职责：初始化日志（agent.log/errors.log/gateway.log/gui.log）、日志轮转、密钥脱敏
+- 关键业务概念：会话上下文追踪（session_id）、跨进程日志轮转、Windows 文件锁兼容
+- 在系统中的位置：基础设施层，所有模块通过 logging.getLogger() 输出日志
+
+─────────────────────────────────────────────────────────────────
+Centralized logging setup for Hermes Agent.
 
 Provides a single ``setup_logging()`` entry point that both the CLI and
 gateway call early in their startup path.  All log files live under

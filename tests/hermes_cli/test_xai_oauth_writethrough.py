@@ -1,4 +1,13 @@
-"""Regression tests for xAI OAuth refresh write-through to the global root.
+"""CLIxai oauth writethrough测试
+
+【产品经理理解要点】
+CLIxai oauth writethrough功能测试。
+- 验证功能：命令行xai oauth writethrough功能
+- 关键场景：配置、执行、验证
+- 业务影响：xai oauth writethrough命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for xAI OAuth refresh write-through to the global root.
 
 Companion to ``test_xai_oauth_profile_auth.py``. That file covers the READ
 fallback (profile -> credential pool -> global root). These cover the WRITE
@@ -10,8 +19,7 @@ refresh token and every other profile reading root's stale grant dies with
 
 The tests drive the real ``_save_xai_oauth_tokens`` against real on-disk auth
 stores (profile + root under ``tmp_path``) rather than mocking the save
-boundary, so they exercise the actual atomic write path.
-"""
+boundary, so they exercise the actual atomic write path."""
 
 import json
 

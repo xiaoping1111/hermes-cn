@@ -1,4 +1,13 @@
-"""Tests for edge cases in tools/file_operations.py.
+"""工具系统测试 - file operations edge cases
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的file operations edge cases验证。
+- 验证功能：file operations edge cases功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：file operations edge cases功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for edge cases in tools/file_operations.py.
 
 Covers:
 - ``_is_likely_binary()`` content-analysis branch (dead-code removal regression guard)

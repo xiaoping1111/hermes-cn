@@ -1,12 +1,20 @@
-"""Tests for /v1/runs endpoints: start, status, events, and stop.
+"""网关api server runs测试
+
+【产品经理理解要点】
+网关api server runs功能测试。
+- 验证功能：网关api server runs处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：api server runs功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for /v1/runs endpoints: start, status, events, and stop.
 
 Covers:
 - POST /v1/runs — start a run (202)
 - GET /v1/runs/{run_id} — poll run status
 - GET /v1/runs/{run_id}/events — SSE event stream
 - POST /v1/runs/{run_id}/stop — interrupt a running agent
-- Auth, error handling, and cleanup
-"""
+- Auth, error handling, and cleanup"""
 
 import asyncio
 import threading

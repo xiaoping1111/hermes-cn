@@ -1,4 +1,13 @@
-"""Tests for get_cute_tool_message todo progress display.
+"""Agent核心测试 - display todo progress
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的display todo progress验证。
+- 验证功能：display todo progress功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：display todo progress功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for get_cute_tool_message todo progress display.
 
 Verifies the completion status rendering (done/total ✓) on all three
 todo tool call paths: read, create (merge=False), update (merge=True).

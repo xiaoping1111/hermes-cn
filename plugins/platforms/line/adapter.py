@@ -1,4 +1,13 @@
 """
+LINE Messaging API 平台适配器
+
+【产品经理理解要点】
+接入 LINE 官方消息 API，通过 Webhook 接收消息，优先使用免费 Reply Token 回复。
+- Reply Token 有 60 秒有效期且仅一次使用，超时则降级为付费 Push API
+- LLM 响应慢时发送按钮模板，用户点击后用新 Token 投递缓存结果（省钱策略）
+- 支持文字、图片、文件、Flex 消息等 LINE 特有消息类型
+
+─────────────────────────────────────────────────────────────────
 LINE Messaging API platform adapter for Hermes Agent.
 
 A bundled platform plugin that runs an aiohttp webhook server, accepts LINE

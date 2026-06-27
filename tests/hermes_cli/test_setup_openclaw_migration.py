@@ -1,4 +1,13 @@
-"""Tests for OpenClaw migration integration in the setup wizard."""
+"""CLIsetup openclaw migration测试
+
+【产品经理理解要点】
+CLIsetup openclaw migration功能测试。
+- 验证功能：命令行setup openclaw migration功能
+- 关键场景：配置、执行、验证
+- 业务影响：setup openclaw migration命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for OpenClaw migration integration in the setup wizard."""
 
 from argparse import Namespace
 from types import ModuleType

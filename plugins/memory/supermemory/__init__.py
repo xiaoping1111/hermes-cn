@@ -1,4 +1,12 @@
-"""Supermemory memory plugin using the MemoryProvider interface.
+"""SuperMemory 记忆插件
+
+【产品经理理解要点】
+基于 SuperMemory 的记忆系统实现，提供云端记忆管理能力。
+- 云端记忆存储和跨设备同步
+- 支持多种记忆类型和检索方式
+
+─────────────────────────────────────────────────────────────────
+Supermemory memory plugin using the MemoryProvider interface.
 
 Provides semantic long-term memory with profile recall, semantic search,
 explicit memory tools, cleaned turn capture, and session-end conversation ingest.

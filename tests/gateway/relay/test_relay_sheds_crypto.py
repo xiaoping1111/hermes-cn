@@ -1,4 +1,13 @@
-"""Invariant: the relay path sheds platform crypto — it re-validates nothing.
+"""中继脱密
+
+【产品经理理解要点】
+中继脱密处理。
+- 验证功能：中继模式下加密消息的脱密处理
+- 关键场景：加密识别、解密、明文传递
+- 业务影响：加密消息中继失败
+
+─────────────────────────────────────────────────────────────────────────
+Invariant: the relay path sheds platform crypto — it re-validates nothing.
 
 Under the A2 trust model (see docs/relay-connector-contract.md §6), the
 *connector* is the sole crypto/identity boundary: it verifies/decrypts every
@@ -15,8 +24,7 @@ already-trusted events. This test fails if someone bolts re-validation onto the
 relay path, re-coupling the gateway to platform secrets it must never hold.
 
 It is an invariant (asserts the *relation* "relay imports no crypto"), not a
-change-detector snapshot of a frozen import list.
-"""
+change-detector snapshot of a frozen import list."""
 
 from __future__ import annotations
 

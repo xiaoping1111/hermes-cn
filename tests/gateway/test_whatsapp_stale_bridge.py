@@ -1,4 +1,13 @@
-"""Tests for the WhatsApp stale-bridge staleness handshake.
+"""WhatsApp网关测试
+
+【产品经理理解要点】
+WhatsApp平台网关功能测试。
+- 验证功能：WhatsApp平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：WhatsApp平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the WhatsApp stale-bridge staleness handshake.
 
 Regression tests for the stale-bridge trap: ``connect()`` reused any
 already-running bridge with ``status: connected`` unconditionally, and
@@ -13,8 +22,7 @@ and restarts the bridge on mismatch.  Bridges that predate the handshake
 report no hash and are treated as stale by definition.
 
 Also covers the npm dependency-refresh stamp: deps are reinstalled when
-package.json changes, not only when node_modules is missing.
-"""
+package.json changes, not only when node_modules is missing."""
 
 import asyncio
 from pathlib import Path

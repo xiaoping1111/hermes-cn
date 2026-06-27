@@ -1,5 +1,16 @@
 """Rate limit tracking for inference API responses.
 
+API 速率限制追踪
+
+【产品经理理解要点】
+追踪模型供应商的速率限制状态，帮助用户了解还能发多少请求、何时恢复。
+- 核心职责：解析响应头 x-ratelimit-* 字段，计算剩余配额(请求/Token，分钟/小时维度)
+- 关键业务概念：RPM/RPH/TPM/TPH 限制、剩余配额、窗口重置倒计时
+- 在系统中的位置：/usage 斜杠命令的数据源，为用户提供用量可见性
+
+─────────────────────────────────────────────────────────────────
+
+
 Captures x-ratelimit-* headers from provider responses and provides
 formatted display for the /usage slash command.  Currently supports
 the Nous Portal header format (also used by OpenRouter and OpenAI-compatible

@@ -1,4 +1,12 @@
-"""AWS Bedrock provider profile."""
+"""AWS Bedrock 模型提供者
+
+【产品经理理解要点】
+对接 AWS Bedrock 托管模型服务。
+- Bedrock 托管模型接入
+- AWS 凭证认证
+
+─────────────────────────────────────────────────────────────────
+AWS Bedrock provider profile."""
 
 from providers import register_provider
 from providers.base import ProviderProfile

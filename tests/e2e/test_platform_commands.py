@@ -1,4 +1,13 @@
-"""E2E tests for gateway slash commands (Telegram, Discord).
+"""平台命令E2E
+
+【产品经理理解要点】
+平台命令端到端测试。
+- 验证功能：跨平台命令处理端到端验证
+- 关键场景：命令解析、执行、响应
+- 业务影响：平台命令无法正常工作
+
+─────────────────────────────────────────────────────────────────────────
+E2E tests for gateway slash commands (Telegram, Discord).
 
 Each test drives a message through the full async pipeline:
     adapter.handle_message(event)
@@ -7,8 +16,7 @@ Each test drives a message through the full async pipeline:
         → adapter.send() (captured for assertions)
 
 No LLM involved — only gateway-level commands are tested.
-Tests are parametrized over platforms via the ``platform`` fixture in conftest.
-"""
+Tests are parametrized over platforms via the ``platform`` fixture in conftest."""
 
 import asyncio
 from unittest.mock import AsyncMock, MagicMock

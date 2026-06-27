@@ -1,4 +1,13 @@
-"""Phase 0 foundations for multi-profile gateway multiplexing.
+"""多路复用Phase0
+
+【产品经理理解要点】
+多路复用初始阶段。
+- 验证功能：多路复用适配器的初始阶段
+- 关键场景：配置加载、连接建立、路由初始化
+- 业务影响：多路复用无法初始化
+
+─────────────────────────────────────────────────────────────────────────
+Phase 0 foundations for multi-profile gateway multiplexing.
 
 Covers the three Phase 0 deliverables:
   1. ``gateway.multiplex_profiles`` config flag (default False, round-trips).
@@ -6,8 +15,7 @@ Covers the three Phase 0 deliverables:
   3. Profile-stamped ``build_session_key`` that is BYTE-IDENTICAL when the
      flag is off (the orphan-every-session guard) and namespace-segmented when
      on, without disturbing the positional key layout downstream parsers rely
-     on.
-"""
+     on."""
 import pytest
 from unittest.mock import patch
 

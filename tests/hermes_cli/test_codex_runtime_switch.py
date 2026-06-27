@@ -1,4 +1,13 @@
-"""Tests for the /codex-runtime slash-command shared logic.
+"""CLIcodex runtime switch测试
+
+【产品经理理解要点】
+CLIcodex runtime switch功能测试。
+- 验证功能：命令行codex runtime switch功能
+- 关键场景：配置、执行、验证
+- 业务影响：codex runtime switch命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the /codex-runtime slash-command shared logic.
 
 These cover the pure-Python state machine; CLI and gateway handlers are
 tested separately because they involve config persistence and prompt

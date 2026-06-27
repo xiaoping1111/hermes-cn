@@ -1,4 +1,13 @@
-"""Tests for tui_gateway background-review summary delivery.
+"""评审摘要回调
+
+【产品经理理解要点】
+后台评审摘要回调。
+- 验证功能：评审完成通知
+- 关键场景：回调触发、摘要展示
+- 业务影响：评审结果未展示
+
+─────────────────────────────────────────────────────────────────────────
+Tests for tui_gateway background-review summary delivery.
 
 When the self-improvement background review fires and saves a skill or
 memory entry, it calls ``agent.background_review_callback(message)``. In

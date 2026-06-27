@@ -1,4 +1,13 @@
-"""Tests that callable api_key (Entra ID bearer provider) flows through
+"""Agent运行引擎测试 - callable api key
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的callable api key验证。
+- 验证功能：callable api key功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：callable api key功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests that callable api_key (Entra ID bearer provider) flows through
 the agent stack without coercion.
 
 The OpenAI Python SDK accepts ``api_key: str | None | Callable[[], str]``,

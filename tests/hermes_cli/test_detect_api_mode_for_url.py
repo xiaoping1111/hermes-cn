@@ -1,4 +1,13 @@
-"""Tests for hermes_cli.runtime_provider._detect_api_mode_for_url.
+"""CLIdetect api mode for url测试
+
+【产品经理理解要点】
+CLIdetect api mode for url功能测试。
+- 验证功能：命令行detect api mode for url功能
+- 关键场景：配置、执行、验证
+- 业务影响：detect api mode for url命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.runtime_provider._detect_api_mode_for_url.
 
 The helper maps base URLs to api_modes for three cases:
   * api.openai.com  → codex_responses
@@ -9,8 +18,7 @@ The helper maps base URLs to api_modes for three cases:
 Consolidating the /anthropic detection in this helper (instead of three
 inline ``endswith`` checks spread across _resolve_runtime_from_pool_entry,
 the explicit-provider path, and the api-key-provider path) means every
-future update to the detection logic lives in one place.
-"""
+future update to the detection logic lives in one place."""
 
 from __future__ import annotations
 

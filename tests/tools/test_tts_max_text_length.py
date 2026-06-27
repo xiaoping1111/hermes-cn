@@ -1,4 +1,13 @@
-"""Tests for per-provider TTS input-character limits.
+"""工具系统测试 - tts max text length
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的tts max text length验证。
+- 验证功能：tts max text length功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：tts max text length功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for per-provider TTS input-character limits.
 
 Replaces the old global ``MAX_TEXT_LENGTH = 4000`` cap that truncated every
 provider at 4000 chars even though OpenAI allows 4096, xAI allows 15000,

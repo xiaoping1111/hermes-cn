@@ -1,4 +1,11 @@
-"""Tests for extract_schema.py."""
+"""ComfyUI Schema 提取测试
+
+【产品经理理解要点】
+ComfyUI 节点 Schema 提取的单元测试。
+- Schema 解析正确性验证
+
+─────────────────────────────────────────────────────────────────
+Tests for extract_schema.py."""
 
 from __future__ import annotations
 

@@ -1,3 +1,14 @@
+
+"""一次性执行模式
+
+【产品经理理解要点】
+hermes -z模式：发送提示词→获取结果→退出，无交互界面。
+- 跳过Banner/Spinner等交互元素
+- 自动进入YOLO模式跳过审批
+- 适合脚本调用和CI管道集成
+
+────────────────────────────────────────────────────────────────"""
+
 """Oneshot (-z) mode: send a prompt, get the final content block, exit.
 
 Bypasses cli.py entirely.  No banner, no spinner, no session_id line,

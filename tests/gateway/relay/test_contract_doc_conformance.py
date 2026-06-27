@@ -1,4 +1,13 @@
-"""Cross-repo contract conformance: docs/relay-connector-contract.md ⟷ Python.
+"""契约文档一致性
+
+【产品经理理解要点】
+契约文档一致性。
+- 验证功能：API契约与文档的一致性验证
+- 关键场景：契约校验、文档同步
+- 业务影响：API与文档不一致
+
+─────────────────────────────────────────────────────────────────────────
+Cross-repo contract conformance: docs/relay-connector-contract.md ⟷ Python.
 
 The contract doc is the formal interface the connector repo
 (NousResearch/gateway-gateway) implements against. The connector's TypeScript
@@ -19,8 +28,7 @@ They are invariants, NOT change-detector snapshots: they assert the *relation*
 between two artifacts that must move together, not a frozen list of names. Add
 a field to the descriptor and the doc, and the test stays green; add it to only
 one, and CI fails — which is exactly the lockstep guarantee the plan's
-Cross-Repo Coordination Checklist calls for.
-"""
+Cross-Repo Coordination Checklist calls for."""
 
 from __future__ import annotations
 

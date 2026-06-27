@@ -1,4 +1,12 @@
-"""Native Anthropic provider profile."""
+"""Anthropic Claude 模型提供者
+
+【产品经理理解要点】
+对接 Anthropic Claude 系列模型。
+- Claude 3.5/4 系列模型接入
+- ANTHROPIC_API_KEY 认证
+
+─────────────────────────────────────────────────────────────────
+Native Anthropic provider profile."""
 
 import json
 import logging

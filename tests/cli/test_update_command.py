@@ -1,4 +1,13 @@
-"""Tests for the /update slash command in the classic CLI and TUI launcher.
+"""CLI终端测试 - update command
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的update command验证。
+- 验证功能：update command功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：update command功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the /update slash command in the classic CLI and TUI launcher.
 
 Verifies that ``HermesCLI._handle_update_command`` correctly:
 - Refuses to run under a managed install (Homebrew, Docker, etc.)

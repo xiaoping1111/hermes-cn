@@ -1,4 +1,12 @@
-"""Honcho client initialization and configuration.
+"""Honcho API 客户端
+
+【产品经理理解要点】
+与 Honcho 后端通信的 HTTP 客户端封装。
+- 封装 Honcho REST API 调用
+- 处理认证、重试和错误转换
+
+─────────────────────────────────────────────────────────────────
+Honcho client initialization and configuration.
 
 Resolution order for config file:
   1. $HERMES_HOME/honcho.json  (instance-local, enables isolated Hermes instances)

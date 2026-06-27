@@ -1,10 +1,18 @@
-"""Tests that `hermes model` always shows the model selection menu for custom
+"""CLIcustom provider model switch测试
+
+【产品经理理解要点】
+CLIcustom provider model switch功能测试。
+- 验证功能：命令行custom provider model switch功能
+- 关键场景：配置、执行、验证
+- 业务影响：custom provider model switch命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests that `hermes model` always shows the model selection menu for custom
 providers, even when a model is already saved.
 
 Regression test for the bug where _model_flow_named_custom() returned
 immediately when provider_info had a saved ``model`` field, making it
-impossible to switch models on multi-model endpoints.
-"""
+impossible to switch models on multi-model endpoints."""
 
 from unittest.mock import patch
 

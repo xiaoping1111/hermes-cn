@@ -1,4 +1,13 @@
-"""Tests for git worktree isolation (CLI --worktree / -w flag).
+"""CLI终端测试 - worktree
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的worktree验证。
+- 验证功能：worktree功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：worktree功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for git worktree isolation (CLI --worktree / -w flag).
 
 Verifies worktree creation, cleanup, .worktreeinclude handling,
 .gitignore management, and integration with the CLI.  (#652)

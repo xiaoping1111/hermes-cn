@@ -1,12 +1,20 @@
-"""Tests for reply-to pointer injection in _prepare_inbound_message_text.
+"""网关reply to injection测试
+
+【产品经理理解要点】
+网关reply to injection功能测试。
+- 验证功能：网关reply to injection处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：reply to injection功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for reply-to pointer injection in _prepare_inbound_message_text.
 
 The `[Replying to: "..."]` prefix is a *disambiguation pointer*, not
 deduplication. It must always be injected when the user explicitly replies
 to a prior message — even when the quoted text already exists somewhere
 in the conversation history. History can contain the same or similar text
 multiple times, and without an explicit pointer the agent has to guess
-which prior message the user is referencing.
-"""
+which prior message the user is referencing."""
 import pytest
 
 from gateway.config import GatewayConfig, Platform, PlatformConfig

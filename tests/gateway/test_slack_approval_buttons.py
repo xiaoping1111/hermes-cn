@@ -1,4 +1,13 @@
-"""Tests for Slack Block Kit approval buttons and thread context fetching."""
+"""Slack网关测试
+
+【产品经理理解要点】
+Slack平台网关功能测试。
+- 验证功能：Slack平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Slack平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Slack Block Kit approval buttons and thread context fetching."""
 
 import asyncio
 import sys

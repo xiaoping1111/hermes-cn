@@ -1,5 +1,16 @@
 """Unified removal contract for every credential source Hermes reads from.
 
+凭证来源统一管理
+
+【产品经理理解要点】
+统一管理所有凭证来源的移除操作，确保 auth remove 后凭证不再复活。
+- 核心职责：为每种凭证来源定义移除操作，确保移除后凭证不再复活
+- 关键业务概念：凭证来源(env/claude_code/hermes_pkce/device_code/gh_cli等)、移除契约
+- 在系统中的位置：hermes auth remove 命令的后端实现
+
+─────────────────────────────────────────────────────────────────
+
+
 Hermes seeds its credential pool from many places:
 
     env:<VAR>     — os.environ / ~/.hermes/.env

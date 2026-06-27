@@ -1,4 +1,13 @@
-"""Regression tests for the transcription_tools variant of #17140.
+"""工具系统测试 - transcription dotenv fallback
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的transcription dotenv fallback验证。
+- 验证功能：transcription dotenv fallback功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：transcription dotenv fallback功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for the transcription_tools variant of #17140.
 
 Same class of bug as ``tools/tts_tool.py`` (fixed in PR #17163): the STT
 provider call sites read API keys via ``os.getenv()``, which bypasses

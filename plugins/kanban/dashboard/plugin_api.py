@@ -1,4 +1,13 @@
-"""Kanban dashboard plugin — backend API routes.
+"""看板 Dashboard 插件 — 后端 API 路由
+
+【产品经理理解要点】
+为 Dashboard 提看板管理 API，包括任务增删改查和实时事件推送。
+- 挂载于 /api/plugins/kanban/，通过会话令牌认证
+- WebSocket /events 实时推送任务变更事件
+- 所有写操作复用 CLI 和网关的代码路径，保证一致性
+
+─────────────────────────────────────────────────────────────────
+Kanban dashboard plugin — backend API routes.
 
 Mounted at /api/plugins/kanban/ by the dashboard plugin system.
 

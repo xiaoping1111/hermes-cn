@@ -1,4 +1,13 @@
-"""Tests for defensive terminal control-response stripping in the CLI.
+"""CLI终端测试 - cli terminal response sanitizer
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的cli terminal response sanitizer验证。
+- 验证功能：cli terminal response sanitizer功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：cli terminal response sanitizer功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for defensive terminal control-response stripping in the CLI.
 
 Covers Cursor Position Report (CPR / DSR) responses that occasionally
 leak into the input buffer after terminal resize storms or multiplexer

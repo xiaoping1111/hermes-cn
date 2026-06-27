@@ -1,4 +1,13 @@
-"""Tests for placeholder API key detection in hermes_cli.auth."""
+"""CLIauth usable secret测试
+
+【产品经理理解要点】
+CLIauth usable secret功能测试。
+- 验证功能：命令行auth usable secret功能
+- 关键场景：配置、执行、验证
+- 业务影响：auth usable secret命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for placeholder API key detection in hermes_cli.auth."""
 
 from hermes_cli.auth import has_usable_secret
 

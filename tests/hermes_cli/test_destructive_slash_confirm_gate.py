@@ -1,4 +1,13 @@
-"""Tests for the approvals.destructive_slash_confirm config gate.
+"""CLIdestructive slash confirm gate测试
+
+【产品经理理解要点】
+CLIdestructive slash confirm gate功能测试。
+- 验证功能：命令行destructive slash confirm gate功能
+- 关键场景：配置、执行、验证
+- 业务影响：destructive slash confirm gate命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the approvals.destructive_slash_confirm config gate.
 
 Destructive session slash commands (/clear, /new, /reset, /undo) discard
 conversation state.  This config key (default True) gates a three-option
@@ -6,8 +15,7 @@ confirmation prompt — "Always Approve" flips the key to False so future
 destructive commands run silently.
 
 See gateway/run.py::_maybe_confirm_destructive_slash and
-cli.py::_confirm_destructive_slash for the runtime gate.
-"""
+cli.py::_confirm_destructive_slash for the runtime gate."""
 
 from __future__ import annotations
 

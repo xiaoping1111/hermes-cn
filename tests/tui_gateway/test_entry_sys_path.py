@@ -1,4 +1,13 @@
-"""Tests for tui_gateway/entry.py sys.path hardening (issues #15989, #51286).
+"""入口路径
+
+【产品经理理解要点】
+TUI入口sys.path设置。
+- 验证功能：模块发现正确性
+- 关键场景：路径设置、模块发现
+- 业务影响：模块无法被发现
+
+─────────────────────────────────────────────────────────────────
+Tests for tui_gateway/entry.py sys.path hardening (issues #15989, #51286).
 
 When the TUI backend is spawned by Node.js, the launch directory may shadow
 Hermes's own top-level modules (``utils``, ``proxy``, ``ui``).  entry.py must

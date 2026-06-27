@@ -1,4 +1,13 @@
-"""End-to-end relay round-trip against the in-memory stub connector.
+"""中继往返
+
+【产品经理理解要点】
+中继消息往返。
+- 验证功能：中继模式消息的完整往返验证
+- 关键场景：发送→中继→接收→回复
+- 业务影响：中继消息丢失或乱序
+
+─────────────────────────────────────────────────────────────────────────
+End-to-end relay round-trip against the in-memory stub connector.
 
 Proves the gateway side of the relay works with no real connector:
   - connect() registers the inbound handler,
@@ -7,8 +16,7 @@ Proves the gateway side of the relay works with no real connector:
   - an outbound send round-trips through the transport.
 
 These target the transport contract + session-key derivation (Task 1.2's gate),
-not the full agent turn — handle_message is patched to capture the event.
-"""
+not the full agent turn — handle_message is patched to capture the event."""
 
 from __future__ import annotations
 

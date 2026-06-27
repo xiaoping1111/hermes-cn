@@ -1,4 +1,13 @@
-"""Tests for the platform adapter registry and dynamic Platform enum."""
+"""平台注册表
+
+【产品经理理解要点】
+平台注册表。
+- 验证功能：消息平台的注册与发现
+- 关键场景：平台注册、能力查询、生命周期
+- 业务影响：平台无法被发现或注册
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the platform adapter registry and dynamic Platform enum."""
 
 import os
 import pytest

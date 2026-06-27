@@ -1,4 +1,14 @@
-"""Regression tests for identity-based SessionDB flushing (#46053)."""
+"""Agent运行引擎测试 - identity flush
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的identity flush验证。
+- 验证功能：identity flush功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：identity flush功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for identity-based SessionDB flushing (#46053).
+"""
 
 import os
 import tempfile

@@ -1,4 +1,12 @@
-"""
+"""配置管理模块
+
+【产品经理理解要点】
+管理 Hermes 的所有配置文件（config.yaml 和 .env），是系统设置的读写中枢。
+- 核心职责：加载/保存配置、目录初始化与安全加固、安装方式检测、环境变量写入黑名单防护、托管模式（NixOS/Homebrew）适配
+- 关键概念：配置文件路径（~/.hermes/）、默认配置模板（DEFAULT_CONFIG）、环境变量安全写入、容器感知权限、配置缓存加速
+- 系统定位：所有功能模块的配置基础，setup 向导、CLI 命令和网关都依赖此模块读写设置
+
+─────────────────────────────────────────────────────────────────
 Configuration management for Hermes Agent.
 
 Config files are stored in ~/.hermes/ for easy access:

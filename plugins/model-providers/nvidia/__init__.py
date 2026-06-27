@@ -1,4 +1,12 @@
-"""NVIDIA NIM provider profile."""
+"""NVIDIA NIM 模型提供者
+
+【产品经理理解要点】
+对接 NVIDIA NIM 推理微服务。
+- NVIDIA GPU 推理服务
+- NIM API 集成
+
+─────────────────────────────────────────────────────────────────
+NVIDIA NIM provider profile."""
 
 from providers import register_provider
 from providers.base import ProviderProfile

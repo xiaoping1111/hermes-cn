@@ -1,3 +1,14 @@
+
+"""Dashboard认证基类
+
+【产品经理理解要点】
+Dashboard认证提供者的抽象基类和数据类定义。
+- Session/LoginStart/AuthError等核心数据类
+- DashboardAuthProvider抽象基类定义接口契约
+- 所有Provider实现必须继承此基类
+
+────────────────────────────────────────────────────────────────"""
+
 """Abstract base + dataclasses + exceptions for dashboard auth providers."""
 from __future__ import annotations
 

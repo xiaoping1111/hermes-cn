@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""Hermes 智能体命令行界面
+
+【产品经理理解要点】
+终端交互入口：用户在命令行中与智能体对话的完整体验，包含输入、工具展示、流式输出等。
+- 核心职责：REPL 交互循环、工具集选择、ASCII 品牌、富文本渲染、图片/代码块展示
+- 关键业务概念：交互式对话、斜杠命令、工具调用可视化、会话管理
+- 在系统中的位置：面向终端用户的主入口，调用 run_agent.py 驱动对话
+
+─────────────────────────────────────────────────────────────────
 Hermes Agent CLI - Interactive Terminal Interface
 
 A beautiful command-line interface for the Hermes Agent, inspired by Claude Code.

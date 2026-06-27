@@ -1,4 +1,13 @@
-"""Hermetic tests for the Bitwarden Secrets Manager integration.
+"""测试 - bitwarden secrets
+
+【产品经理理解要点】
+功能验证中的bitwarden secrets验证。
+- 验证功能：bitwarden secrets功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：bitwarden secrets功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Hermetic tests for the Bitwarden Secrets Manager integration.
 
 We never hit GitHub or Bitwarden in tests — subprocess + urllib are
 mocked so the suite stays fast and offline-safe.  The "live" pull and

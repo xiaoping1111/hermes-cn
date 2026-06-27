@@ -1,4 +1,13 @@
-"""Test that opencode-go appears in /model list when credentials are set."""
+"""CLIopencode go in model list测试
+
+【产品经理理解要点】
+CLIopencode go in model list功能测试。
+- 验证功能：命令行opencode go in model list功能
+- 关键场景：配置、执行、验证
+- 业务影响：opencode go in model list命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Test that opencode-go appears in /model list when credentials are set."""
 
 import os
 from unittest.mock import patch

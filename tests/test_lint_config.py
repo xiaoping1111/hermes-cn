@@ -1,4 +1,13 @@
-"""Tests for ruff lint config — guards against accidental rule removal.
+"""测试 - lint config
+
+【产品经理理解要点】
+功能验证中的lint config验证。
+- 验证功能：lint config功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：lint config功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ruff lint config — guards against accidental rule removal.
 
 PLW1514 (unspecified-encoding) was enabled after a debug session on
 Windows turned up three separate UTF-8 regressions in execute_code.

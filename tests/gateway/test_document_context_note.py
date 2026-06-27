@@ -1,4 +1,13 @@
-"""Tests for the document context note prepended to user turns with attachments.
+"""文档上下文笔记
+
+【产品经理理解要点】
+文档上下文笔记。
+- 验证功能：文档上下文的笔记功能
+- 关键场景：笔记创建、关联、检索
+- 业务影响：文档笔记功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the document context note prepended to user turns with attachments.
 
 A user who attaches a PDF / DOCX in chat used to see the agent treat it as
 "unreadable" because the context note told the model to "Ask the user what
@@ -7,8 +16,7 @@ is perfectly capable of reading. These tests pin the contract:
 
 - text documents: note confirms the (adapter-)inlined content + records path.
 - binary documents (PDF/DOCX/…): note tells the agent to extract the text
-  itself and never tells it to punt back to the user.
-"""
+  itself and never tells it to punt back to the user."""
 
 import importlib
 

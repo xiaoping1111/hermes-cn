@@ -1,4 +1,13 @@
-"""Tests for CLI placeholder text in config/setup output."""
+"""CLIplaceholder usage测试
+
+【产品经理理解要点】
+CLIplaceholder usage功能测试。
+- 验证功能：命令行placeholder usage功能
+- 关键场景：配置、执行、验证
+- 业务影响：placeholder usage命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for CLI placeholder text in config/setup output."""
 
 import os
 from argparse import Namespace

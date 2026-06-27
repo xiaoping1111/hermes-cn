@@ -1,10 +1,18 @@
-"""Tests for provider-group folding (display-only picker grouping).
+"""CLIprovider groups测试
+
+【产品经理理解要点】
+CLIprovider groups功能测试。
+- 验证功能：命令行provider groups功能
+- 关键场景：配置、执行、验证
+- 业务影响：provider groups命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for provider-group folding (display-only picker grouping).
 
 These are invariant tests, not catalog snapshots: they assert how
 ``group_providers`` folds a flat slug list and how member slugs relate to
 ``PROVIDER_GROUPS`` / ``CANONICAL_PROVIDERS`` — not the specific set of
-vendors, which is expected to change over time.
-"""
+vendors, which is expected to change over time."""
 
 from hermes_cli.models import (
     CANONICAL_PROVIDERS,

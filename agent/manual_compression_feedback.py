@@ -1,4 +1,14 @@
-"""User-facing summaries for manual compression commands."""
+"""手动压缩反馈
+
+【产品经理理解要点】
+用户手动触发压缩命令后的反馈摘要：压缩前后的消息数和 Token 数对比。
+- 核心职责：生成压缩前后对比摘要(消息数/Token数变化)
+- 关键业务概念：手动压缩、压缩效果反馈
+- 在系统中的位置：/compress 斜杠命令的反馈生成器
+
+─────────────────────────────────────────────────────────────────
+User-facing summaries for manual compression commands.
+"""
 
 from __future__ import annotations
 

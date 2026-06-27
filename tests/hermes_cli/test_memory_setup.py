@@ -1,3 +1,11 @@
+"""CLImemory setup测试
+
+【产品经理理解要点】
+CLImemory setup功能测试。
+- 验证功能：命令行memory setup功能
+- 关键场景：配置、执行、验证
+- 业务影响：memory setup命令行功能失效"""
+
 from types import SimpleNamespace
 from unittest.mock import MagicMock
 

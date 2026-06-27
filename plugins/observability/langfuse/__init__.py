@@ -1,4 +1,12 @@
-"""langfuse — Hermes plugin for Langfuse observability.
+"""Langfuse 可观测性插件
+
+【产品经理理解要点】
+对接 Langfuse 平台实现 LLM 调用追踪和评估。
+- LLM 调用链追踪
+- 延迟和成本监控
+
+─────────────────────────────────────────────────────────────────
+langfuse — Hermes plugin for Langfuse observability.
 
 Traces Hermes conversations, LLM calls, and tool usage to Langfuse.
 

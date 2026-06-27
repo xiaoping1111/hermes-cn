@@ -1,4 +1,13 @@
-"""Shared concurrency helpers for plugin authors.
+"""插件并发安全工具集
+
+【产品经理理解要点】
+为插件开发者提供线程安全的单例模式工具，防止多会话并发时资源泄漏。
+- 解决的核心问题：多线程同时初始化同一个客户端（如API连接），导致资源泄漏
+- 提供两种工具：lazy_singleton（零参数装饰器）和 SingletonSlot（带参数的手动插槽）
+- 仅依赖标准库 threading，任何插件都可轻量引入
+
+─────────────────────────────────────────────────────────────────
+Shared concurrency helpers for plugin authors.
 
 The most common plugin footgun is the lazy process-wide singleton:
 

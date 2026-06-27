@@ -1,5 +1,16 @@
 """Abstract base class for pluggable context engines.
 
+上下文引擎抽象接口
+
+【产品经理理解要点】
+可插拔的上下文管理引擎接口，允许第三方替换内置的压缩策略。
+- 核心职责：定义上下文引擎生命周期(初始化-更新-压缩-结束)、插件注册
+- 关键业务概念：上下文引擎、压缩时机判断、会话生命周期、工具暴露
+- 在系统中的位置：上下文管理的扩展点，内置 ContextCompressor 也可被替换
+
+─────────────────────────────────────────────────────────────────
+
+
 A context engine controls how conversation context is managed when
 approaching the model's token limit. The built-in ContextCompressor
 is the default implementation. Third-party engines (e.g. LCM) can

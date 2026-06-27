@@ -1,3 +1,14 @@
+
+"""技能包管理命令
+
+【产品经理理解要点】
+hermes bundles子命令，管理将多个技能打包为一组的bundle。
+- bundle是一组技能的集合，可通过单个斜杠命令加载
+- 支持列出/查看/创建bundle
+- 减少逐个启用技能的操作成本
+
+────────────────────────────────────────────────────────────────"""
+
 """Implementation of the ``hermes bundles`` CLI subcommand.
 
 Mirrors the structure of ``hermes_cli/skills_hub.py`` but for skill

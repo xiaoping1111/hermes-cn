@@ -1,4 +1,13 @@
-"""Tool-surface routing matrix: every (provider, model, modality) combo.
+"""Matrix工具系统测试
+
+【产品经理理解要点】
+Matrix平台工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性。
+- 验证功能：Matrix平台功能验证
+- 关键场景：Matrix消息收发、连接管理
+- 业务影响：Matrix平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tool-surface routing matrix: every (provider, model, modality) combo.
 
 This is the integration test for the question Teknium asked: regardless
 of which provider+model the user picks and whether they pass an

@@ -1,4 +1,13 @@
-"""ACP auth helpers — detect and advertise Hermes authentication methods."""
+"""ACP 认证助手
+
+【产品经理理解要点】
+检测并广播 Hermes 的认证方式，确保 ACP 客户端（如编辑器）能正确完成身份验证。
+- 核心职责：探测当前可用的认证提供方（OpenRouter/Azure 等），构建 ACP 认证方法列表
+- 关键概念：ACP 注册中心要求智能体至少声明一种可用认证方式，否则握手会失败
+- 系统定位：认证层，保障 ACP 会话建立前双方身份可信
+
+─────────────────────────────────────────────────────────────────
+ACP auth helpers — detect and advertise Hermes authentication methods."""
 
 from __future__ import annotations
 

@@ -1,3 +1,14 @@
+
+"""看板诊断信号
+
+【产品经理理解要点】
+为看板任务生成结构化的可操作诊断报告。
+- 诊断类型：幻觉ID/崩溃循环/长期阻塞等
+- 严重度分级：warning/error/critical
+- 每个诊断附带建议操作供Dashboard展示
+
+────────────────────────────────────────────────────────────────"""
+
 """Kanban diagnostics — structured, actionable distress signals for tasks.
 
 A ``Diagnostic`` is a machine-readable description of something that's wrong

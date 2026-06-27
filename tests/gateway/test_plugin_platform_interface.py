@@ -1,9 +1,16 @@
-"""
+"""网关plugin platform interface测试
+
+【产品经理理解要点】
+网关plugin platform interface功能测试。
+- 验证功能：网关plugin platform interface处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：plugin platform interface功能异常
+
+─────────────────────────────────────────────────────────────────────────
 Interface compliance tests for all plugin-based gateway platforms.
 
 Discovers platforms dynamically under ``plugins/platforms/`` — no manual
-enumeration — and verifies each one implements the required contract.
-"""
+enumeration — and verifies each one implements the required contract."""
 
 import importlib
 import sys

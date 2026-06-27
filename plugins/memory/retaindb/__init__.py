@@ -1,4 +1,14 @@
-"""RetainDB memory plugin — MemoryProvider interface.
+"""RetainDB 记忆插件 — 云端跨会话记忆
+
+【产品经理理解要点】
+通过 RetainDB 云 API 实现跨会话记忆，包括语义搜索、用户画像、辩证综合等能力。
+- 语义搜索 + 用户画像查询 + 上下文去重
+- 辩证综合：LLM 驱动的用户理解，每轮预取
+- Agent 自模型：从 SOUL.md 提取人设和指令
+- 提供显式记忆工具（profile、search、context、remember、forget）
+
+─────────────────────────────────────────────────────────────────
+RetainDB memory plugin — MemoryProvider interface.
 
 Cross-session memory via RetainDB cloud API.
 

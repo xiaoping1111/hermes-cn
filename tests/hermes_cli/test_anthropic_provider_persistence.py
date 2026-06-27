@@ -1,4 +1,13 @@
-"""Tests for Anthropic credential persistence helpers."""
+"""CLIanthropic provider persistence测试
+
+【产品经理理解要点】
+CLIanthropic provider persistence功能测试。
+- 验证功能：命令行anthropic provider persistence功能
+- 关键场景：配置、执行、验证
+- 业务影响：anthropic provider persistence命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Anthropic credential persistence helpers."""
 
 from hermes_cli.config import load_env
 

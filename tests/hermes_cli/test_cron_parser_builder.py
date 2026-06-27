@@ -1,9 +1,17 @@
-"""Unit tests for the extracted ``hermes cron`` parser builder.
+"""CLIcron parser builder测试
+
+【产品经理理解要点】
+CLIcron parser builder功能测试。
+- 验证功能：命令行cron parser builder功能
+- 关键场景：配置、执行、验证
+- 业务影响：cron parser builder命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for the extracted ``hermes cron`` parser builder.
 
 Confirms ``build_cron_parser`` wires up the same subactions, aliases, options,
 and ``func=cmd_cron`` dispatch that lived inline in ``main()`` before the
-god-file Phase 2 extraction.
-"""
+god-file Phase 2 extraction."""
 
 from __future__ import annotations
 

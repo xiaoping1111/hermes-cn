@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""检查点恢复
+
+【产品经理理解要点】
+Agent中断后恢复。
+- 验证功能：对话完整性保障
+- 关键场景：检查点保存、恢复、验证
+- 业务影响：中断后对话丢失
+
+─────────────────────────────────────────────────────────────────────────
 Test script to verify checkpoint behavior in batch_runner.py
 
 This script simulates batch processing with intentional failures to test:

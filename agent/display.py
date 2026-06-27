@@ -1,5 +1,16 @@
 """CLI presentation -- spinner, kawaii faces, tool preview formatting.
 
+CLI 显示效果
+
+【产品经理理解要点】
+CLI 的视觉反馈：旋转加载动画、表情变化、工具调用预览格式化。
+- 核心职责：KawaiiSpinner 动画、工具状态标记(成功/失败)、文件变更预览
+- 关键业务概念：Spinner 动画、工具执行可视化、差异展示
+- 在系统中的位置：CLI 工具调用反馈的渲染层
+
+─────────────────────────────────────────────────────────────────
+
+
 Pure display functions and classes with no AIAgent dependency.
 Used by AIAgent._execute_tool_calls for CLI feedback.
 """

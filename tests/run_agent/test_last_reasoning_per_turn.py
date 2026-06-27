@@ -1,4 +1,13 @@
-"""Tests for per-turn reasoning extraction in AIAgent.run_conversation.
+"""Agent运行引擎测试 - last reasoning per turn
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的last reasoning per turn验证。
+- 验证功能：last reasoning per turn功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：last reasoning per turn功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for per-turn reasoning extraction in AIAgent.run_conversation.
 
 Verifies the reasoning field returned to display layers (CLI reasoning box,
 gateway reasoning footer, TUI reasoning event) only reflects the CURRENT

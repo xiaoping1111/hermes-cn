@@ -1,4 +1,13 @@
-"""Verify compression trigger excludes reasoning/completion tokens (#12026).
+"""Agent运行引擎测试 - compression trigger excludes reasoning
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的compression trigger excludes reasoning验证。
+- 验证功能：compression trigger excludes reasoning功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：compression trigger excludes reasoning功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Verify compression trigger excludes reasoning/completion tokens (#12026).
 
 Thinking models (GLM-5.1, QwQ, DeepSeek R1) inflate completion_tokens with
 reasoning tokens that don't consume context window space.  The compression

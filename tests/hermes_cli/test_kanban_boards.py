@@ -1,4 +1,13 @@
-"""Tests for the multi-board kanban layer (``hermes kanban boards …``).
+"""CLIkanban boards测试
+
+【产品经理理解要点】
+CLIkanban boards功能测试。
+- 验证功能：命令行kanban boards功能
+- 关键场景：配置、执行、验证
+- 业务影响：kanban boards命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the multi-board kanban layer (``hermes kanban boards …``).
 
 Covers the pieces added when boards became a first-class concept:
 
@@ -10,8 +19,7 @@ Covers the pieces added when boards became a first-class concept:
 * ``connect(board=)`` isolation — writes on one board don't leak.
 * ``create_board`` / ``list_boards`` / ``remove_board`` round trip.
 * CLI surface: ``hermes kanban boards list/create/switch/rm``.
-* ``_default_spawn`` injects ``HERMES_KANBAN_BOARD`` into worker env.
-"""
+* ``_default_spawn`` injects ``HERMES_KANBAN_BOARD`` into worker env."""
 
 from __future__ import annotations
 

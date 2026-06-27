@@ -1,4 +1,13 @@
-"""Tests for the scrolling viewport logic in _curses_prompt_choice (issue #5755).
+"""测试 - model picker scroll
+
+【产品经理理解要点】
+功能验证中的model picker scroll验证。
+- 验证功能：model picker scroll功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：model picker scroll功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the scrolling viewport logic in _curses_prompt_choice (issue #5755).
 
 The "More providers" submenu has 13 entries (11 extended + custom + cancel).
 Before the fix, _curses_prompt_choice rendered items starting unconditionally

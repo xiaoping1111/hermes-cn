@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""Windows 跨平台陷阱检查
+
+【产品经理理解要点】
+扫描代码中常见的 Windows 兼容性陷阱（如硬编码路径分隔符、信号处理差异），防止跨平台回归。
+- 核心职责：用正则匹配已知的 Windows 陷阱模式，报告违规位置
+- 关键概念：Hermus 需同时支持 Linux/macOS/Windows，某些 POSIX 习惯用法在 Windows 上会静默出错
+- 系统定位：CI 质量门禁脚本，PR 提交前运行
+
+─────────────────────────────────────────────────────────────────
 Grep-based checker for Windows cross-platform footguns.
 
 Flags common patterns that break silently on Windows. Run before PRs —

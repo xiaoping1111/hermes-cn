@@ -1,3 +1,14 @@
+
+"""Nous订阅管理
+
+【产品经理理解要点】
+Nous订阅的托管工具能力查询和配置。
+- 查询当前订阅等级和可用功能
+- 托管工具的路由和能力声明
+- 订阅状态影响可用工具集
+
+────────────────────────────────────────────────────────────────"""
+
 """Helpers for Nous subscription managed-tool capabilities."""
 
 from __future__ import annotations

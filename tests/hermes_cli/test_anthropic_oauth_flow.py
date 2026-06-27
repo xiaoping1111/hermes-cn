@@ -1,4 +1,13 @@
-"""Tests for Anthropic OAuth setup flow behavior."""
+"""CLIanthropic oauth flow测试
+
+【产品经理理解要点】
+CLIanthropic oauth flow功能测试。
+- 验证功能：命令行anthropic oauth flow功能
+- 关键场景：配置、执行、验证
+- 业务影响：anthropic oauth flow命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Anthropic OAuth setup flow behavior."""
 
 from hermes_cli.config import load_env, save_env_value
 

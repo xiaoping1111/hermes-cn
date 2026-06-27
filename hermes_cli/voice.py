@@ -1,3 +1,14 @@
+
+"""语音录制与TTS
+
+【产品经理理解要点】
+TUI Gateway的语音录制和文字转语音API封装。
+- 语音录制→转文字（faster-whisper）
+- 文字转语音（TTS API）
+- Gateway JSON-RPC的voice.*处理端入口
+
+────────────────────────────────────────────────────────────────"""
+
 """Process-wide voice recording + TTS API for the TUI gateway.
 
 Wraps ``tools.voice_mode`` (recording/transcription) and ``tools.tts_tool``

@@ -1,8 +1,16 @@
-"""Unit tests for extracted subcommand parser builders (profile, gateway).
+"""CLIsubcommands profile gateway测试
+
+【产品经理理解要点】
+CLIsubcommands profile gateway功能测试。
+- 验证功能：命令行subcommands profile gateway功能
+- 关键场景：配置、执行、验证
+- 业务影响：subcommands profile gateway命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Unit tests for extracted subcommand parser builders (profile, gateway).
 
 Confirms the builders attach the same subactions and ``func=`` dispatch that
-lived inline in ``main()`` before the god-file Phase 2 extraction.
-"""
+lived inline in ``main()`` before the god-file Phase 2 extraction."""
 
 from __future__ import annotations
 

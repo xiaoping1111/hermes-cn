@@ -1,4 +1,13 @@
-"""Tests for the configurable default interface (cli vs tui).
+"""CLIdefault interface resolution测试
+
+【产品经理理解要点】
+CLIdefault interface resolution功能测试。
+- 验证功能：命令行default interface resolution功能
+- 关键场景：配置、执行、验证
+- 业务影响：default interface resolution命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the configurable default interface (cli vs tui).
 
 `hermes` launches the classic prompt_toolkit REPL by default, but users can
 flip ``display.interface: tui`` in config.yaml to make the modern Ink TUI the
@@ -17,8 +26,7 @@ These tests pin that precedence at every layer that makes the decision:
     mouse-residue suppression and the Termux fast paths, before argparse and
     ``hermes_cli.config`` are importable.
   * the argument parser   — both ``--cli`` and ``--tui`` parse at the top
-    level and under the ``chat`` subcommand and are relaunch-inherited.
-"""
+    level and under the ``chat`` subcommand and are relaunch-inherited."""
 
 from __future__ import annotations
 

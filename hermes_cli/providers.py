@@ -1,3 +1,14 @@
+
+"""提供商身份来源
+
+【产品经理理解要点】
+运行时合并三方数据源确定提供商身份信息。
+- models.dev目录（109+提供商）为主数据源
+- Hermes覆盖层补充传输类型和认证模式
+- 用户config.yaml的providers:是最高优先级
+
+────────────────────────────────────────────────────────────────"""
+
 """
 Single source of truth for provider identity in Hermes Agent.
 

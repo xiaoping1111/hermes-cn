@@ -1,4 +1,13 @@
-"""Regression coverage for #35344: a resumed session must not let a stale
+"""Agent核心测试 - resume stale active task
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的resume stale active task验证。
+- 验证功能：resume stale active task功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：resume stale active task功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression coverage for #35344: a resumed session must not let a stale
 historical task snapshot from an inherited compaction handoff hijack the reply to a
 new, unrelated user message.
 

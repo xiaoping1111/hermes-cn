@@ -1,4 +1,13 @@
-"""Container-restart survives per-profile gateway registrations.
+"""Docker部署测试 - container restart
+
+【产品经理理解要点】
+Docker容器化部署：权限、网关、僵尸进程回收、不可变安装等运维正确性中的container restart验证。
+- 验证功能：container restart功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：container restart功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Container-restart survives per-profile gateway registrations.
 
 The s6 dynamic scandir at /run/service/ lives on tmpfs and is wiped
 on every container restart. Phase 4 Task 4.0's container_boot module

@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""YouTube 字幕获取
+
+【产品经理理解要点】
+获取 YouTube 视频的字幕/转录文本。
+- 多语言字幕获取
+- 自动生成字幕回退
+
+─────────────────────────────────────────────────────────────────
+
 Fetch a YouTube video transcript and output it as structured JSON.
 
 Usage:

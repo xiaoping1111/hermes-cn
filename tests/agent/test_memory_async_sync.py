@@ -1,4 +1,13 @@
-"""Regression guard: end-of-turn memory sync must not block the turn.
+"""Agent核心测试 - memory async sync
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的memory async sync验证。
+- 验证功能：memory async sync功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：memory async sync功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression guard: end-of-turn memory sync must not block the turn.
 
 Before this fix, ``MemoryManager.sync_all`` / ``queue_prefetch_all`` looped
 ``provider.sync_turn`` / ``provider.queue_prefetch`` INLINE on the

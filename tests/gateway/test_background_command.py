@@ -1,8 +1,16 @@
-"""Tests for /background gateway slash command.
+"""网关background command测试
+
+【产品经理理解要点】
+网关background command功能测试。
+- 验证功能：网关background command处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：background command功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for /background gateway slash command.
 
 Tests the _handle_background_command handler (run a prompt in a separate
-background session) across gateway messenger platforms.
-"""
+background session) across gateway messenger platforms."""
 
 import asyncio
 from unittest.mock import AsyncMock, MagicMock, patch

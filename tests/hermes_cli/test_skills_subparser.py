@@ -1,4 +1,13 @@
-"""Test that skills subparser doesn't conflict (regression test for #898)."""
+"""CLIskills subparser测试
+
+【产品经理理解要点】
+CLIskills subparser功能测试。
+- 验证功能：命令行skills subparser功能
+- 关键场景：配置、执行、验证
+- 业务影响：skills subparser命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Test that skills subparser doesn't conflict (regression test for #898)."""
 
 import argparse
 

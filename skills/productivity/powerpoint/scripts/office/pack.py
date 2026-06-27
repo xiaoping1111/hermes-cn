@@ -1,4 +1,12 @@
-"""Pack a directory into a DOCX, PPTX, or XLSX file.
+"""Office 文件打包
+
+【产品经理理解要点】
+Office Open XML 文件的打包和解包工具。
+- OOXML 结构处理
+- ZIP 包操作
+
+─────────────────────────────────────────────────────────────────
+Pack a directory into a DOCX, PPTX, or XLSX file.
 
 Validates with auto-repair, condenses XML formatting, and creates the Office file.
 

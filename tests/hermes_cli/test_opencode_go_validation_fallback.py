@@ -1,4 +1,13 @@
-"""Tests for the static-catalog fallback in validate_requested_model.
+"""CLIopencode go validation fallback测试
+
+【产品经理理解要点】
+CLIopencode go validation fallback功能测试。
+- 验证功能：命令行opencode go validation fallback功能
+- 关键场景：配置、执行、验证
+- 业务影响：opencode go validation fallback命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the static-catalog fallback in validate_requested_model.
 
 OpenCode Go and OpenCode Zen publish an OpenAI-compatible API at paths that do
 NOT expose ``/models`` (the path returns the marketing site's HTML 404).  This
@@ -9,8 +18,7 @@ gateway's ``/model <name> --provider opencode-go`` command never write to
 
 These tests cover the catalog-fallback path: when ``fetch_api_models`` returns
 ``None``, the validator must consult ``provider_model_ids()`` for the provider
-(populated from ``_PROVIDER_MODELS``) rather than rejecting outright.
-"""
+(populated from ``_PROVIDER_MODELS``) rather than rejecting outright."""
 
 from unittest.mock import patch
 

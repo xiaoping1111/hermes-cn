@@ -1,11 +1,19 @@
-"""Regression tests for stream consumer thread/topic routing fix.
+"""网关stream consumer thread routing测试
+
+【产品经理理解要点】
+网关stream consumer thread routing功能测试。
+- 验证功能：网关stream consumer thread routing处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：stream consumer thread routing功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for stream consumer thread/topic routing fix.
 
 Verifies that GatewayStreamConsumer correctly passes reply_to on the first
 message send, ensuring messages land in the correct topic/thread instead of
 the main group chat.
 
-Covers: #6969, #9916, #7355
-"""
+Covers: #6969, #9916, #7355"""
 from unittest.mock import AsyncMock, MagicMock
 from types import SimpleNamespace
 

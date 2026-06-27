@@ -1,4 +1,13 @@
-"""Tests for the ``/reload-skills`` gateway slash command handler.
+"""重载技能命令
+
+【产品经理理解要点】
+技能重载命令。
+- 验证功能：技能热重载命令处理
+- 关键场景：技能发现、重载、缓存刷新
+- 业务影响：技能更新后不生效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the ``/reload-skills`` gateway slash command handler.
 
 Verifies:
   * dispatcher routes ``/reload-skills`` to ``_handle_reload_skills_command``
@@ -10,8 +19,7 @@ Verifies:
     consumes and clears it on the next user turn — see ``gateway/run.py``
     near the ``_has_fresh_tool_tail`` block)
   * the handler does NOT append to the session transcript out-of-band —
-    message alternation must not be broken by a phantom user turn
-"""
+    message alternation must not be broken by a phantom user turn"""
 
 from datetime import datetime
 from types import SimpleNamespace

@@ -1,4 +1,13 @@
-"""Tests for plugins.platforms.feishu.adapter — Feishu scan-to-create registration."""
+"""飞书入驻
+
+【产品经理理解要点】
+飞书入驻流程。
+- 验证功能：飞书平台入驻引导流程
+- 关键场景：入驻验证、配置初始化
+- 业务影响：飞书入驻流程失败
+
+─────────────────────────────────────────────────────────────────────────
+Tests for plugins.platforms.feishu.adapter — Feishu scan-to-create registration."""
 
 import json
 from unittest.mock import patch, MagicMock

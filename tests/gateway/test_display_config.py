@@ -1,4 +1,13 @@
-"""Tests for gateway.display_config — per-platform display/verbosity resolver."""
+"""显示配置
+
+【产品经理理解要点】
+显示配置。
+- 验证功能：消息显示相关的配置
+- 关键场景：格式设置、模板选择、自定义
+- 业务影响：消息显示格式不符合预期
+
+─────────────────────────────────────────────────────────────────────────
+Tests for gateway.display_config — per-platform display/verbosity resolver."""
 
 
 # ---------------------------------------------------------------------------

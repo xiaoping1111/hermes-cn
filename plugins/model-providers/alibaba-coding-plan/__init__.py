@@ -1,4 +1,12 @@
-"""Alibaba Cloud Coding Plan provider profile.
+"""阿里云编码计划模型提供者
+
+【产品经理理解要点】
+对接阿里云百炼编码专用模型。
+- 面向代码生成的专用模型
+- 阿里云 API 认证
+
+─────────────────────────────────────────────────────────────────
+Alibaba Cloud Coding Plan provider profile.
 
 Separate from the standard `alibaba` profile because it hits a different
 endpoint (coding-intl.dashscope.aliyuncs.com) with a dedicated API key tier.

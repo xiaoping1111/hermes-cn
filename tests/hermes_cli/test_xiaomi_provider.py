@@ -1,4 +1,13 @@
-"""Tests for Xiaomi MiMo provider support."""
+"""CLIxiaomi provider测试
+
+【产品经理理解要点】
+CLIxiaomi provider功能测试。
+- 验证功能：命令行xiaomi provider功能
+- 关键场景：配置、执行、验证
+- 业务影响：xiaomi provider命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Xiaomi MiMo provider support."""
 
 
 import pytest

@@ -1,4 +1,13 @@
-"""Tests for the codex MCP plugin migration helper."""
+"""CLIcodex runtime plugin migration测试
+
+【产品经理理解要点】
+CLIcodex runtime plugin migration功能测试。
+- 验证功能：命令行codex runtime plugin migration功能
+- 关键场景：配置、执行、验证
+- 业务影响：codex runtime plugin migration命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the codex MCP plugin migration helper."""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""Local OpenAI-compatible proxy that forwards to OAuth-authenticated upstreams.
+"""本地API代理入口
+
+【产品经理理解要点】
+本地OpenAI兼容代理，让外部应用复用用户的OAuth认证。
+- 127.0.0.1本地代理，外部应用无需API Key
+- 自动附加用户已登录的OAuth凭证
+- 凭证即将过期时自动刷新
+
+────────────────────────────────────────────────────────────────
+Local OpenAI-compatible proxy that forwards to OAuth-authenticated upstreams.
 
 Lets external apps (OpenViking, Karakeep, Open WebUI, ...) ride the user's
 already-logged-in provider subscription instead of needing a static API key
@@ -12,8 +21,7 @@ automatically when it approaches expiry.
 First-class adapter:
   - ``nous`` — Nous Portal (https://inference-api.nousresearch.com/v1)
 
-Future adapters can plug in by implementing ``UpstreamAdapter``.
-"""
+Future adapters can plug in by implementing ``UpstreamAdapter``."""
 
 from hermes_cli.proxy.adapters.base import UpstreamAdapter
 

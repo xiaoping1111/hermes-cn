@@ -1,3 +1,11 @@
+"""CLIsetup hermes script测试
+
+【产品经理理解要点】
+CLIsetup hermes script功能测试。
+- 验证功能：命令行setup hermes script功能
+- 关键场景：配置、执行、验证
+- 业务影响：setup hermes script命令行功能失效"""
+
 from pathlib import Path
 import subprocess
 

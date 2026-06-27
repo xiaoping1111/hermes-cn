@@ -1,4 +1,12 @@
-"""Firecrawl web search + extract — plugin form.
+"""Firecrawl 搜索提供者
+
+【产品经理理解要点】
+Firecrawl 搜索/抓取的具体实现。
+- Firecrawl API 集成
+- 网页内容提取和转换
+
+─────────────────────────────────────────────────────────────────
+Firecrawl web search + extract — plugin form.
 
 Subclasses :class:`agent.web_search_provider.WebSearchProvider`. This is
 the largest provider migrated in this PR; it captures the full inline

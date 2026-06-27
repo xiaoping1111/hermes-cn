@@ -1,4 +1,13 @@
 """
+会话洞察引擎
+
+【产品经理理解要点】
+分析历史会话数据生成使用洞察：Token 消耗、成本估算、工具和活动趋势。
+- 核心职责：Token/成本/工具/平台/模型维度的使用分析、趋势图表数据
+- 关键业务概念：用量洞察、成本估算、工具使用模式、平台/模型分布
+- 在系统中的位置：/insights 斜杠命令的数据分析引擎
+
+─────────────────────────────────────────────────────────────────
 Session Insights Engine for Hermes Agent.
 
 Analyzes historical session data from the SQLite state database to produce

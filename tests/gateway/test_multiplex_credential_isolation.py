@@ -1,10 +1,18 @@
-"""End-to-end credential isolation proof for multiplex mode (Workstream A).
+"""网关multiplex credential isolation测试
+
+【产品经理理解要点】
+网关multiplex credential isolation功能测试。
+- 验证功能：网关multiplex credential isolation处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：multiplex credential isolation功能异常
+
+─────────────────────────────────────────────────────────────────────────
+End-to-end credential isolation proof for multiplex mode (Workstream A).
 
 These exercise the REAL resolution path (runtime_provider, secret scope, MCP
 interpolation) rather than mocking it, proving the property that matters: two
 profiles with different keys never see each other's, and an unscoped read in
-multiplex mode fails closed instead of leaking.
-"""
+multiplex mode fails closed instead of leaking."""
 import pytest
 
 from agent import secret_scope as ss

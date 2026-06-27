@@ -1,4 +1,13 @@
-"""Tests for /save — the conversation snapshot slash command.
+"""CLI终端测试 - save conversation location
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的save conversation location验证。
+- 验证功能：save conversation location功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：save conversation location功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for /save — the conversation snapshot slash command.
 
 Regression: the old implementation wrote ``hermes_conversation_<ts>.json``
 to the current working directory (CWD). Users who ran /save expected the

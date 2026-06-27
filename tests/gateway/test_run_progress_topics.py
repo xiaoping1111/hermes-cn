@@ -1,4 +1,13 @@
-"""Tests for topic-aware gateway progress updates."""
+"""网关run progress topics测试
+
+【产品经理理解要点】
+网关run progress topics功能测试。
+- 验证功能：网关run progress topics处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：run progress topics功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for topic-aware gateway progress updates."""
 
 import asyncio
 import importlib

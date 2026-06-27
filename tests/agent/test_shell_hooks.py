@@ -1,4 +1,13 @@
-"""Tests for the shell-hooks subprocess bridge (agent.shell_hooks).
+"""Agent核心测试 - shell hooks
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的shell hooks验证。
+- 验证功能：shell hooks功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：shell hooks功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the shell-hooks subprocess bridge (agent.shell_hooks).
 
 These tests focus on the pure translation layer — JSON serialisation,
 JSON parsing, matcher behaviour, block-schema correctness, and the

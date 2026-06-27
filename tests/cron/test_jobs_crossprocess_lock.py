@@ -1,4 +1,13 @@
-"""Regression test for the jobs.json cross-process lock.
+"""定时任务管理
+
+【产品经理理解要点】
+定时任务CRUD与生命周期。
+- 验证功能：任务增删改查与持久化
+- 关键场景：任务创建、更新、删除、查询
+- 业务影响：定时任务无法被管理或执行
+
+─────────────────────────────────────────────────────────────────────────
+Regression test for the jobs.json cross-process lock.
 
 Background: ``hermes cron pause`` runs in its own process (CLI → cronjob tool →
 ``pause_job`` → ``update_job`` → ``save_jobs``), entirely separate from the
@@ -10,8 +19,7 @@ firing even though the CLI reported "Paused".
 
 ``_jobs_lock()`` closes that gap with a short-held cross-process advisory file
 lock. This test proves the lock actually excludes a *separate process*, which an
-in-process ``threading.Lock`` cannot do.
-"""
+in-process ``threading.Lock`` cannot do."""
 
 import os
 import subprocess

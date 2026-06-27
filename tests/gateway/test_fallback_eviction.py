@@ -1,9 +1,17 @@
-"""Tests for fallback-eviction gating on failed runs (#7130).
+"""网关fallback eviction测试
+
+【产品经理理解要点】
+网关fallback eviction功能测试。
+- 验证功能：网关fallback eviction处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：fallback eviction功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for fallback-eviction gating on failed runs (#7130).
 
 When a run fails, the gateway must NOT evict the cached agent — doing so
 forces MCP reinit on the next message, creating a CPU-burning restart loop.
-Eviction should only happen on successful runs where fallback activated.
-"""
+Eviction should only happen on successful runs where fallback activated."""
 
 import sys
 from pathlib import Path

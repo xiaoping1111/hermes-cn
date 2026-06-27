@@ -1,4 +1,13 @@
-"""Tests for the gateway /steer command handler.
+"""网关steer command测试
+
+【产品经理理解要点】
+网关steer command功能测试。
+- 验证功能：网关steer command处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：steer command功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the gateway /steer command handler.
 
 /steer injects a user message into the agent's next tool result without
 interrupting. The gateway runner must:
@@ -8,8 +17,7 @@ interrupting. The gateway runner must:
   2. When the agent is the PENDING sentinel → fall back to /queue
      semantics (store in ``adapter._pending_messages``).
   3. When no agent is active → strip the slash prefix and let the normal
-     prompt pipeline handle it as a regular user message.
-"""
+     prompt pipeline handle it as a regular user message."""
 from __future__ import annotations
 
 from datetime import datetime

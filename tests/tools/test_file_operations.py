@@ -1,4 +1,14 @@
-"""Tests for tools/file_operations.py — deny list, result dataclasses, helpers."""
+"""工具系统测试 - file operations
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的file operations验证。
+- 验证功能：file operations功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：file operations功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for tools/file_operations.py — deny list, result dataclasses, helpers.
+"""
 
 import os
 import re

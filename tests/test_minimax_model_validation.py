@@ -1,4 +1,13 @@
-"""Tests for MiniMax model validation via static catalog (issues #12611, #12460, #12399, #12547).
+"""测试 - minimax model validation
+
+【产品经理理解要点】
+功能验证中的minimax model validation验证。
+- 验证功能：minimax model validation功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：minimax model validation功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for MiniMax model validation via static catalog (issues #12611, #12460, #12399, #12547).
 
 MiniMax and MiniMax-CN providers don't expose /v1/models, so validate_requested_model()
 must validate against the static catalog instead of probing the live API.

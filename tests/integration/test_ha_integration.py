@@ -1,4 +1,13 @@
-"""Integration tests for Home Assistant (tool + gateway).
+"""高可用集成
+
+【产品经理理解要点】
+主备切换与故障恢复。
+- 验证功能：服务连续性保障
+- 关键场景：主备切换、故障检测
+- 业务影响：服务中断无法恢复
+
+─────────────────────────────────────────────────────────────────────────
+Integration tests for Home Assistant (tool + gateway).
 
 Spins up a real in-process fake HA server (HTTP + WebSocket) and exercises
 the full adapter and tool handler paths over real TCP connections.

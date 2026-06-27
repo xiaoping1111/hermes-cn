@@ -1,11 +1,19 @@
-"""Managed scope must reach cli.py's independent config loader (CLI_CONFIG).
+"""CLImanaged scope cli config测试
+
+【产品经理理解要点】
+CLImanaged scope cli config功能测试。
+- 验证功能：命令行managed scope cli config功能
+- 关键场景：配置、执行、验证
+- 业务影响：managed scope cli config命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Managed scope must reach cli.py's independent config loader (CLI_CONFIG).
 
 cli.py's load_cli_config() builds config separately from
 hermes_cli.config._load_config_impl, so the managed-scope merge has to be
 applied in BOTH places or the interactive CLI/TUI surface (skin, display prefs)
 silently ignores administrator-pinned values while `hermes config`/`doctor`
-honor them. This locks the cli.py path.
-"""
+honor them. This locks the cli.py path."""
 import importlib
 
 import pytest

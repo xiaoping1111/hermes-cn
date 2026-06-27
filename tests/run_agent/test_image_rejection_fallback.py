@@ -1,4 +1,13 @@
-"""Tests for the image-rejection fallback in run_agent.
+"""Agent运行引擎测试 - image rejection fallback
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的image rejection fallback验证。
+- 验证功能：image rejection fallback功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：image rejection fallback功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the image-rejection fallback in run_agent.
 
 When a server rejects image content (e.g. text-only endpoints), the agent
 strips image parts from message history and retries text-only.  These tests

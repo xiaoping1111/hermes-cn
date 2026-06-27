@@ -1,4 +1,13 @@
-"""Tests for `hermes photon setup`'s access auto-configuration.
+"""插件系统测试 - setup access
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的setup access验证。
+- 验证功能：setup access功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：setup access功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for `hermes photon setup`'s access auto-configuration.
 
 `_autoconfigure_access` allowlists the operator and points the cron home
 channel at their DM, writing to the per-test ~/.hermes/.env (the hermetic

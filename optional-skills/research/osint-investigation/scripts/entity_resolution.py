@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Cross-source entity resolution (stdlib-only).
+"""实体消歧与关联
+
+【产品经理理解要点】
+跨数据源的实体消歧和关联分析。
+- 名称相似度匹配
+- 跨源实体合并
+
+─────────────────────────────────────────────────────────────────
+Cross-source entity resolution (stdlib-only).
 
 Given two CSV files with name columns, find candidate matches using three
 tiers of normalization:

@@ -1,4 +1,12 @@
-"""Tavily web search + content extraction — plugin form.
+"""Tavily 搜索提供者
+
+【产品经理理解要点】
+Tavily AI 搜索的具体实现。
+- API Key 认证
+- AI 优化的结果提取
+
+─────────────────────────────────────────────────────────────────
+Tavily web search + content extraction — plugin form.
 
 Subclasses :class:`agent.web_search_provider.WebSearchProvider`. Two
 capabilities advertised:

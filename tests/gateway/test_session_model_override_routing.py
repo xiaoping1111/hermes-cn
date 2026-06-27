@@ -1,10 +1,18 @@
-"""Regression tests for session-scoped model/provider overrides in gateway agents.
+"""网关session model override routing测试
+
+【产品经理理解要点】
+网关session model override routing功能测试。
+- 验证功能：网关session model override routing处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：session model override routing功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for session-scoped model/provider overrides in gateway agents.
 
 These cover the bug where `/model ...` stored a session override, but fresh
 agent constructions still resolved model/provider from global config/runtime.
 That let helper agents (and cache-miss main agents) route GPT-5.4 to the wrong
-provider, e.g. Nous instead of OpenAI Codex.
-"""
+provider, e.g. Nous instead of OpenAI Codex."""
 
 import asyncio
 import sys

@@ -1,5 +1,16 @@
 """Post-loop turn finalization for ``run_conversation``.
 
+轮次终结器
+
+【产品经理理解要点】
+每轮对话结束后的收尾工作：保存轨迹、持久会话、触发后台审查等。
+- 核心职责：预算耗尽摘要、轨迹保存、会话持久化、轮次诊断、内存/技能审查触发
+- 关键业务概念：轮次后处理、结果字典组装、后台审查触发
+- 在系统中的位置：对话循环 while 循环退出后的终结环节
+
+─────────────────────────────────────────────────────────────────
+
+
 Extracted from ``agent/conversation_loop.py`` as part of the god-file
 decomposition campaign (``~/.hermes/plans/god-file-decomposition.md``, Phase 1
 step 4 — the post-loop ``TurnFinalizer`` seam). ``run_conversation``'s tail

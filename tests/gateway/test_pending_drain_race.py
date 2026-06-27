@@ -1,4 +1,13 @@
-"""Regression tests: pending-drain + finally-cleanup races must not spawn
+"""挂起排空竞态
+
+【产品经理理解要点】
+挂起消息排空竞态。
+- 验证功能：挂起消息排空的竞态条件处理
+- 关键场景：并发排空、去重、顺序保证
+- 业务影响：并发排空导致消息丢失
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests: pending-drain + finally-cleanup races must not spawn
 duplicate agents OR silently drop messages that arrived during cleanup.
 
 Two related races in gateway/platforms/base.py:_process_message_background:
@@ -18,8 +27,7 @@ Two related races in gateway/platforms/base.py:_process_message_background:
 Fix: keep the _active_sessions entry live across the turn chain and
 clear the Event instead of deleting; in finally, drain any
 late-arrival pending message by spawning a task instead of
-dropping it.
-"""
+dropping it."""
 
 import asyncio
 from unittest.mock import AsyncMock

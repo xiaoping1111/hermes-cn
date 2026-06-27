@@ -1,9 +1,17 @@
-"""Tests for hermes_cli.mcp_catalog and hermes_cli.mcp_picker.
+"""CLImcp catalog测试
+
+【产品经理理解要点】
+CLImcp catalog功能测试。
+- 验证功能：命令行mcp catalog功能
+- 关键场景：配置、执行、验证
+- 业务影响：mcp catalog命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.mcp_catalog and hermes_cli.mcp_picker.
 
 Manifest parsing, install/uninstall config writes, and picker plumbing
 are exercised here. Anything that would actually clone a repo or
-launch an MCP is mocked.
-"""
+launch an MCP is mocked."""
 
 from __future__ import annotations
 

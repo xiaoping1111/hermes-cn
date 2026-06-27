@@ -1,4 +1,13 @@
-"""Tests for AIAgent._anthropic_prompt_cache_policy().
+"""Agent运行引擎测试 - anthropic prompt cache policy
+
+【产品经理理解要点】
+智能体运行时的核心逻辑：流式响应、工具调用、上下文压缩、模型切换、中断处理等中的anthropic prompt cache policy验证。
+- 验证功能：anthropic prompt cache policy功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：anthropic prompt cache policy功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for AIAgent._anthropic_prompt_cache_policy().
 
 The policy returns ``(should_cache, use_native_layout)`` for five endpoint
 classes. The test matrix pins the decision for each so a regression (e.g.

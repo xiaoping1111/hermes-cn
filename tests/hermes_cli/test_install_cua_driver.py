@@ -1,4 +1,13 @@
-"""Tests for ``install_cua_driver`` upgrade semantics.
+"""CLI install cua driver测试
+
+【产品经理理解要点】
+CLI install cua driver功能测试。
+- 验证功能：命令行install cua driver功能
+- 关键场景：配置、执行、验证
+- 业务影响：install cua driver命令行功能失效
+
+─────────────────────────────────────────────────────────────────
+Tests for ``install_cua_driver`` upgrade semantics.
 
 The cua-driver upstream installer always pulls the latest release tag, so
 re-running it is the canonical upgrade path. ``install_cua_driver(upgrade=True)``

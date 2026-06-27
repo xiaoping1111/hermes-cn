@@ -1,5 +1,16 @@
 """Coding-context awareness — base Hermes, every interactive surface.
 
+编码上下文感知
+
+【产品经理理解要点】
+检测用户是否在代码工作区中使用 Hermes，自动切换为编码姿态。
+- 核心职责：决定运行模式(coding/general)、影响工具集/系统提示/模型路由
+- 关键业务概念：RuntimeMode、ContextProfile(coding/general)、编码姿态传播
+- 在系统中的位置：系统提示和工具集选择的上游决策者
+
+─────────────────────────────────────────────────────────────────
+
+
 When the user runs Hermes inside a code workspace (CLI, TUI, desktop app, or an
 editor over ACP), Hermes shifts into a **coding posture**. This module is the
 single place that decides whether we're in that posture and what it implies,

@@ -1,4 +1,13 @@
-"""Shared fixtures for docker-image integration tests.
+"""Docker部署测试 - conftest
+
+【产品经理理解要点】
+Docker容器化部署：权限、网关、僵尸进程回收、不可变安装等运维正确性中的conftest验证。
+- 验证功能：conftest功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：conftest功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Shared fixtures for docker-image integration tests.
 
 Tests in this directory build the image with the current ``Dockerfile``
 and exercise it via ``docker run``. They skip when Docker is unavailable

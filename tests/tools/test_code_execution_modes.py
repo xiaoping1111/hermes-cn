@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Tests for execute_code's strict / project execution modes.
+"""工具系统测试 - code execution modes
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的code execution modes验证。
+- 验证功能：code execution modes功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：code execution modes功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for execute_code's strict / project execution modes.
 
 The mode switch controls two things:
   - working directory: staging tmpdir (strict) vs session CWD (project)

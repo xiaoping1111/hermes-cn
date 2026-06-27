@@ -1,8 +1,16 @@
-"""Tests for Discord thread participation persistence.
+"""Discord网关测试
+
+【产品经理理解要点】
+Discord平台网关功能测试。
+- 验证功能：Discord平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Discord平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Discord thread participation persistence.
 
 Verifies that _threads (ThreadParticipationTracker) survives adapter restarts by
-being persisted to ~/.hermes/discord_threads.json.
-"""
+being persisted to ~/.hermes/discord_threads.json."""
 
 import json
 import os

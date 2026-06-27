@@ -1,4 +1,13 @@
-"""Regression guard for #15421 bug 1 — Slack channel session scoping.
+"""Slack渠道会话
+
+【产品经理理解要点】
+Slack渠道会话范围。
+- 验证功能：Slack渠道与会话的映射范围
+- 关键场景：渠道隔离、会话绑定
+- 业务影响：不同渠道消息串会话
+
+─────────────────────────────────────────────────────────────────────────
+Regression guard for #15421 bug 1 — Slack channel session scoping.
 
 Before this fix, every top-level Slack channel message got a unique
 ``thread_id`` (the message's own ``ts``) stamped onto its
@@ -19,8 +28,7 @@ These tests drive the real ``SlackAdapter._handle_slack_message`` code
 path with mocked aiohttp / user-resolution so the ``MessageEvent``
 that reaches ``handle_message`` exposes exactly what the session store
 will key on.  Asserting on the event keeps the seam tight against the
-production function's behaviour rather than a re-implementation.
-"""
+production function's behaviour rather than a re-implementation."""
 from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest

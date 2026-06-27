@@ -1,5 +1,16 @@
 """Async/sync bridging helpers.
 
+异步/同步桥接工具
+
+【产品经理理解要点】
+安全地将协程调度到事件循环，避免未 await 的协程泄露和运行时警告。
+- 核心职责：包装 asyncio.run_coroutine_threadsafe、调度失败时关闭协程、返回 None
+- 关键业务概念：协程泄露防护、事件循环调度、安全降级
+- 在系统中的位置：约30个跨线程异步调度点的安全包装
+
+─────────────────────────────────────────────────────────────────
+
+
 The codebase has ~30 sites that schedule a coroutine onto an event loop from a
 worker thread via :func:`asyncio.run_coroutine_threadsafe`.  That function can
 raise :class:`RuntimeError` (e.g. the loop was closed during a shutdown race),

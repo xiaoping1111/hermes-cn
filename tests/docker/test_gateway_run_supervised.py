@@ -1,4 +1,13 @@
-"""Harness: `docker run <image> gateway run` redirects to supervised mode.
+"""Docker部署测试 - gateway run supervised
+
+【产品经理理解要点】
+Docker容器化部署：权限、网关、僵尸进程回收、不可变安装等运维正确性中的gateway run supervised验证。
+- 验证功能：gateway run supervised功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：gateway run supervised功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Harness: `docker run <image> gateway run` redirects to supervised mode.
 
 Before the s6 migration, ``docker run nousresearch/hermes-agent gateway
 run`` was the standard pattern — the gateway ran as the container's

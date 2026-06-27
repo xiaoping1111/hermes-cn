@@ -1,11 +1,19 @@
-"""Tests for cron job script injection feature.
+"""Cron脚本
+
+【产品经理理解要点】
+Cron脚本执行。
+- 验证功能：定时脚本加载与执行
+- 关键场景：脚本发现、加载、沙箱执行
+- 业务影响：定时脚本无法运行
+
+─────────────────────────────────────────────────────────────────────────
+Tests for cron job script injection feature.
 
 Tests cover:
 - Script field in job creation / storage / update
 - Script execution and output injection into prompts
 - Error handling (missing script, timeout, non-zero exit)
-- Path resolution (absolute, relative to HERMES_HOME/scripts/)
-"""
+- Path resolution (absolute, relative to HERMES_HOME/scripts/)"""
 
 import json
 import os

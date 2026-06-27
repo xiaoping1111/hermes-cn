@@ -1,10 +1,18 @@
-"""Contract test for DashboardAuthProvider implementations.
+"""CLIdashboard auth provider base测试
+
+【产品经理理解要点】
+CLIdashboard auth provider base功能测试。
+- 验证功能：命令行dashboard auth provider base功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard auth provider base命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Contract test for DashboardAuthProvider implementations.
 
 Every provider plugin should call ``assert_protocol_compliance`` on its
 provider class in its own unit test. This module tests the abstract base
 itself: dataclass fields, ABC rejection of partial impls, and the
-protocol-compliance helper.
-"""
+protocol-compliance helper."""
 from __future__ import annotations
 
 import pytest

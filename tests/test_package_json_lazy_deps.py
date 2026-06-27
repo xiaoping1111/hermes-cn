@@ -1,4 +1,13 @@
-"""Invariants for what is eager vs lazy in the root ``package.json``.
+"""测试 - package json lazy deps
+
+【产品经理理解要点】
+功能验证中的package json lazy deps验证。
+- 验证功能：package json lazy deps功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：package json lazy deps功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Invariants for what is eager vs lazy in the root ``package.json``.
 
 The root ``package.json`` is installed by ``hermes update`` on every user,
 including users who never opted into a given browser backend. Anything

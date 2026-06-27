@@ -1,3 +1,14 @@
+
+"""whatsapp子命令解析器
+
+【产品经理理解要点】
+hermes whatsapp子命令的argparse解析器构建。
+- WhatsApp集成子命令参数定义
+- 从main.py提取（god-file Phase 2）
+- 处理器通过依赖注入传入
+
+────────────────────────────────────────────────────────────────"""
+
 """``hermes whatsapp`` subcommand parser.
 
 Extracted verbatim from ``hermes_cli/main.py:main()`` (god-file Phase 2).

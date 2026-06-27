@@ -1,4 +1,13 @@
-"""Tests for the ACP Registry version-lockstep bump in scripts/release.py.
+"""脚本测试 - release acp registry
+
+【产品经理理解要点】
+发布脚本和构建索引的健康检查逻辑中的release acp registry验证。
+- 验证功能：release acp registry功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：release acp registry功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the ACP Registry version-lockstep bump in scripts/release.py.
 
 The official ACP Registry manifest must match ``pyproject.toml`` exactly —
 ``tests/acp/test_registry_manifest.py`` enforces this at lint time, and the

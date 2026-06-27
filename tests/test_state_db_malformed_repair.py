@@ -1,4 +1,13 @@
-"""Recovery from a malformed state.db schema (duplicate sqlite_master rows).
+"""测试 - state db malformed repair
+
+【产品经理理解要点】
+功能验证中的state db malformed repair验证。
+- 验证功能：state db malformed repair功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：state db malformed repair功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Recovery from a malformed state.db schema (duplicate sqlite_master rows).
 
 This is the corruption class behind the user-reported symptom where Desktop /
 Dashboard show "no sessions yet" while hundreds of session JSON files sit on

@@ -1,4 +1,14 @@
-"""Tests for agent.auxiliary_client resolution chain, provider overrides, and model overrides."""
+"""Agent核心测试 - auxiliary client
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的auxiliary client验证。
+- 验证功能：auxiliary client功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：auxiliary client功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for agent.auxiliary_client resolution chain, provider overrides, and model overrides.
+"""
 
 import base64
 import json

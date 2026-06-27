@@ -1,4 +1,13 @@
-"""Pin the semantics of SUMMARY_PREFIX so the compaction handoff doesn't
+"""Agent核心测试 - summary prefix semantics
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的summary prefix semantics验证。
+- 验证功能：summary prefix semantics功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：summary prefix semantics功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Pin the semantics of SUMMARY_PREFIX so the compaction handoff doesn't
 re-introduce conflicting instructions.
 
 Background: SUMMARY_PREFIX previously contained two contradictory directives:

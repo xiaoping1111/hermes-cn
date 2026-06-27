@@ -1,12 +1,19 @@
-"""
+"""备份与导入命令
+
+【产品经理理解要点】
+hermes backup创建~/.hermes/目录的zip归档，hermes import从备份恢复。
+- 全量备份：将配置、会话、记忆等打包为zip
+- 增量导入：从备份zip覆盖到当前HERMES_HOME
+- 迁移场景：换机器或重装时的数据迁移工具
+
+────────────────────────────────────────────────────────────────
 Backup and import commands for hermes CLI.
 
 `hermes backup` creates a zip archive of the entire ~/.hermes/ directory
 (excluding the hermes-agent repo and transient files).
 
 `hermes import` restores from a backup zip, overlaying onto the current
-HERMES_HOME root.
-"""
+HERMES_HOME root."""
 
 import json
 import logging

@@ -1,3 +1,14 @@
+
+"""ACP子命令解析器
+
+【产品经理理解要点】
+hermes acp子命令的argparse解析器构建。
+- ACP（Agent Communication Protocol）相关子命令
+- 从main.py提取（god-file Phase 2）
+- 处理器通过依赖注入传入
+
+────────────────────────────────────────────────────────────────"""
+
 """``hermes acp`` subcommand parser.
 
 Extracted from ``hermes_cli/main.py:main()`` (god-file Phase 2 follow-up).

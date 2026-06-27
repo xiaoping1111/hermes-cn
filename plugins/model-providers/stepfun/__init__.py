@@ -1,4 +1,11 @@
-"""StepFun provider profile."""
+"""阶跃星辰 模型提供者
+
+【产品经理理解要点】
+对接阶跃星辰（StepFun）大模型服务。
+- StepFun API 集成
+
+─────────────────────────────────────────────────────────────────
+StepFun provider profile."""
 
 from providers import register_provider
 from providers.base import ProviderProfile

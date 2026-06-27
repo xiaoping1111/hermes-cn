@@ -1,4 +1,12 @@
-"""
+"""测试 - yuanbao markdown
+
+【产品经理理解要点】
+功能验证中的yuanbao markdown验证。
+- 验证功能：yuanbao markdown功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：yuanbao markdown功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
 test_yuanbao_markdown.py - Unit tests for yuanbao_markdown.py
 
 Run (no pytest needed):

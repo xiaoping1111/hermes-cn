@@ -1,4 +1,13 @@
-"""Tests for Chromium-presence detection in browser_tool.
+"""工具系统测试 - browser chromium check
+
+【产品经理理解要点】
+工具层（MCP/浏览器/文件/图片/搜索/终端/TTS/审批等）的安全性与功能正确性中的browser chromium check验证。
+- 验证功能：browser chromium check功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：browser chromium check功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Chromium-presence detection in browser_tool.
 
 Regression guard for the "browser tool advertised but Chromium missing"
 class of bug — where ``agent-browser`` CLI is discoverable but no

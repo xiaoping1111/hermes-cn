@@ -1,3 +1,11 @@
+"""CLIsystem stats platform测试
+
+【产品经理理解要点】
+CLIsystem stats platform功能测试。
+- 验证功能：命令行system stats platform功能
+- 关键场景：配置、执行、验证
+- 业务影响：system stats platform命令行功能失效"""
+
 from hermes_cli.web_server import _display_system_platform
 
 

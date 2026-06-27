@@ -1,4 +1,13 @@
-"""Derive ACP session-provenance metadata from the existing compression chain.
+"""ACP 会话溯源
+
+【产品经理理解要点】
+当对话过长触发上下文压缩时，会话会"续接"到新内部 ID，本模块让客户端能追踪完整链路。
+- 核心职责：从 sessions 表的压缩链中派生 ACP 会话的溯源元数据（前序/当前/根会话 ID）
+- 关键概念：上下文压缩会轮换内部会话 ID，但 ACP 对外会话 ID 保持不变；溯源数据放在 _meta.hermes 扩展字段
+- 系统定位：可观测性层，帮助客户端理解会话压缩后的 ID 变化，避免困惑
+
+─────────────────────────────────────────────────────────────────────────
+Derive ACP session-provenance metadata from the existing compression chain.
 
 This is an additive Hermes extension surfaced under ACP ``_meta.hermes`` so
 existing ACP clients ignore it. It carries no new persisted state: everything

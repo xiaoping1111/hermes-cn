@@ -1,10 +1,18 @@
-"""Tests for SIGHUP protection and stdout mirroring in ``hermes update``.
+"""CLIupdate hangup protection测试
+
+【产品经理理解要点】
+CLIupdate hangup protection功能测试。
+- 验证功能：命令行update hangup protection功能
+- 关键场景：配置、执行、验证
+- 业务影响：update hangup protection命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for SIGHUP protection and stdout mirroring in ``hermes update``.
 
 Covers ``_UpdateOutputStream``, ``_install_hangup_protection``, and
 ``_finalize_update_output`` in ``hermes_cli/main.py``.  These exist so
 that ``hermes update`` survives a terminal disconnect mid-install
-(SSH drop, shell close) without leaving the venv half-installed.
-"""
+(SSH drop, shell close) without leaving the venv half-installed."""
 
 from __future__ import annotations
 

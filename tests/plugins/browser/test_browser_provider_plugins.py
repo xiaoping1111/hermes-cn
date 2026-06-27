@@ -1,4 +1,13 @@
-"""Plugin-side tests for the browser provider migration (PR #25214).
+"""插件系统测试 - browser provider plugins
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的browser provider plugins验证。
+- 验证功能：browser provider plugins功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：browser provider plugins功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Plugin-side tests for the browser provider migration (PR #25214).
 
 Covers:
 

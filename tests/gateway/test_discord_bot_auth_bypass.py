@@ -1,4 +1,13 @@
-"""Regression guard for #4466: DISCORD_ALLOW_BOTS works without DISCORD_ALLOWED_USERS.
+"""Discord网关测试
+
+【产品经理理解要点】
+Discord平台网关功能测试。
+- 验证功能：Discord平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Discord平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Regression guard for #4466: DISCORD_ALLOW_BOTS works without DISCORD_ALLOWED_USERS.
 
 The bug had two sequential gates both rejecting bot messages:
 
@@ -10,8 +19,7 @@ The bug had two sequential gates both rejecting bot messages:
   gateway level even if they somehow reached that layer.
 
 These tests assert both gates now pass a bot message through when
-DISCORD_ALLOW_BOTS permits it AND no user allowlist entry exists.
-"""
+DISCORD_ALLOW_BOTS permits it AND no user allowlist entry exists."""
 
 from types import SimpleNamespace
 

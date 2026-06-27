@@ -1,4 +1,13 @@
-"""xAI Grok-Imagine video generation backend.
+"""xAI Grok 视频生成后端
+
+【产品经理理解要点】
+对接 xAI 的视频生成接口，支持文生视频和图生视频（动画化输入图片）。
+- 使用 /videos/generations 端点
+- 支持 xAI OAuth 或 XAI_API_KEY 认证
+- 输出为 CDN URL，网关下载后投递
+
+─────────────────────────────────────────────────────────────────
+xAI Grok-Imagine video generation backend.
 
 Surface: text-to-video and image-to-video (animate an input image)
 through xAI's ``/videos/generations`` endpoint. Edit and extend are not

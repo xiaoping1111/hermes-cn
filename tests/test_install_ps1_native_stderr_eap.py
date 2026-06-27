@@ -1,4 +1,13 @@
-"""Regression tests for #48352: Windows PowerShell 5.1 native stderr.
+"""测试 - install ps1 native stderr eap
+
+【产品经理理解要点】
+功能验证中的install ps1 native stderr eap验证。
+- 验证功能：install ps1 native stderr eap功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：install ps1 native stderr eap功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for #48352: Windows PowerShell 5.1 native stderr.
 
 PowerShell 5.1 turns stderr from native commands into ``NativeCommandError``
 records when ``$ErrorActionPreference = "Stop"``.  ``scripts/install.ps1`` has a

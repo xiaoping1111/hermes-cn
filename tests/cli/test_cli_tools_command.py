@@ -1,4 +1,14 @@
-"""Tests for /tools slash command handler in the interactive CLI."""
+"""CLI终端测试 - cli tools command
+
+【产品经理理解要点】
+命令行交互界面：斜杠命令、会话管理、压缩、编辑器、状态栏、快捷键等用户体验中的cli tools command验证。
+- 验证功能：cli tools command功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：cli tools command功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for /tools slash command handler in the interactive CLI.
+"""
 
 from unittest.mock import MagicMock, patch
 

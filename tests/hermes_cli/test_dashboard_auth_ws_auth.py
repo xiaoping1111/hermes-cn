@@ -1,4 +1,13 @@
-"""Tests for the WS-upgrade auth helper (Phase 5 task 5.2).
+"""CLIdashboard auth ws auth测试
+
+【产品经理理解要点】
+CLIdashboard auth ws auth功能测试。
+- 验证功能：命令行dashboard auth ws auth功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard auth ws auth命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the WS-upgrade auth helper (Phase 5 task 5.2).
 
 The dashboard's four WS endpoints (``/api/pty``, ``/api/ws``, ``/api/pub``,
 ``/api/events``) share an auth gate: ``_ws_auth_ok``. In loopback mode it
@@ -8,8 +17,7 @@ accepts ``?token=<_SESSION_TOKEN>``; in gated mode it accepts a single-use
 These tests exercise the helper at the unit level (no actual WS upgrade)
 plus the ticket-mint endpoint under realistic gated-mode setup. We don't
 test the full WS upgrade because the starlette TestClient WS path has a
-pre-existing regression unrelated to dashboard-auth.
-"""
+pre-existing regression unrelated to dashboard-auth."""
 
 from __future__ import annotations
 

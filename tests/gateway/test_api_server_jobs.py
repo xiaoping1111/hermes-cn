@@ -1,4 +1,12 @@
-"""
+"""定时任务管理
+
+【产品经理理解要点】
+定时任务CRUD与生命周期。
+- 验证功能：任务增删改查与持久化
+- 关键场景：任务创建、更新、删除、查询
+- 业务影响：定时任务无法被管理或执行
+
+─────────────────────────────────────────────────────────────────────────
 Tests for the Cron Jobs API endpoints on the API server adapter.
 
 Covers:
@@ -7,8 +15,7 @@ Covers:
 - Input validation (missing name, name too long, prompt too long, invalid repeat)
 - Job ID validation (invalid hex)
 - Auth enforcement (401 when API_SERVER_KEY is set)
-- Cron module unavailability (501 when _CRON_AVAILABLE is False)
-"""
+- Cron module unavailability (501 when _CRON_AVAILABLE is False)"""
 
 import logging
 from unittest.mock import MagicMock, patch

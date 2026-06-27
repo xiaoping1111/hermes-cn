@@ -1,11 +1,19 @@
-"""Tests for hermes_cli.kanban_diagnostics — rule-engine that produces
+"""CLIkanban diagnostics测试
+
+【产品经理理解要点】
+CLIkanban diagnostics功能测试。
+- 验证功能：命令行kanban diagnostics功能
+- 关键场景：配置、执行、验证
+- 业务影响：kanban diagnostics命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for hermes_cli.kanban_diagnostics — rule-engine that produces
 structured distress signals (diagnostics) for kanban tasks.
 
 These tests exercise each rule in isolation using minimal in-memory
 task/event/run fixtures (no DB) plus a few integration-style cases
 that round-trip through the real kanban_db to make sure the rule
-engine works on sqlite3.Row objects as well as dataclasses.
-"""
+engine works on sqlite3.Row objects as well as dataclasses."""
 
 from __future__ import annotations
 

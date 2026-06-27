@@ -1,12 +1,20 @@
-"""Tests for the Phase 4 s6 hooks in hermes_cli.profiles.
+"""CLIprofiles s6 hooks测试
+
+【产品经理理解要点】
+CLIprofiles s6 hooks功能测试。
+- 验证功能：命令行profiles s6 hooks功能
+- 关键场景：配置、执行、验证
+- 业务影响：profiles s6 hooks命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Phase 4 s6 hooks in hermes_cli.profiles.
 
 Specifically: _maybe_register_gateway_service,
 _maybe_unregister_gateway_service. The integration with
 create_profile and delete_profile is covered indirectly by the
 existing TestCreateProfile and TestDeleteProfile classes in
 tests/hermes_cli/test_profiles.py; here we only exercise the new
-helper surface that doesn't touch the filesystem.
-"""
+helper surface that doesn't touch the filesystem."""
 from __future__ import annotations
 
 from typing import Any

@@ -1,4 +1,12 @@
-"""
+"""Telegram网关测试
+
+【产品经理理解要点】
+Telegram平台网关功能测试。
+- 验证功能：Telegram平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
 Tests for #24870 — Telegram: audio file attachments must NOT be routed to STT.
 
 Telegram distinguishes three kinds of audio payloads:
@@ -9,8 +17,7 @@ Telegram distinguishes three kinds of audio payloads:
 These tests confirm that:
   1. MessageType.VOICE events still flow through the STT pipeline.
   2. MessageType.AUDIO events bypass STT and get a file-path context note instead.
-  3. Mixed media lists (voice + audio) split correctly.
-"""
+  3. Mixed media lists (voice + audio) split correctly."""
 
 from unittest.mock import patch
 

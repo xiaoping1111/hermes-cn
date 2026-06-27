@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""
+"""Hermes命令行主入口
+
+【产品经理理解要点】
+Hermes Agent的CLI主入口，所有子命令的调度中心和进程起点。
+- 命令调度：解析hermes <subcommand>并路由到对应处理函数
+- 生命周期管理：CLI进程的启动、信号处理和清理
+- 集成中枢：汇聚所有子命令（chat/gateway/setup/model等）的注册与分发
+
+────────────────────────────────────────────────────────────────
 Hermes CLI - Main entry point.
 
 Usage:
@@ -40,8 +48,7 @@ Usage:
     hermes acp                 Run as an ACP server for editor integration
     hermes sessions browse     Interactive session picker with search
 
-    hermes claw migrate --dry-run  # Preview migration without changes
-"""
+    hermes claw migrate --dry-run  # Preview migration without changes"""
 
 # IMPORTANT: hermes_bootstrap must be the very first import — it sets up
 # UTF-8 stdio on Windows so print()/subprocess children don't hit

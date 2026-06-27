@@ -1,11 +1,19 @@
-"""Regression test for issue #27970 Bug 2.
+"""网关send voice reply notify测试
+
+【产品经理理解要点】
+网关send voice reply notify功能测试。
+- 验证功能：网关send voice reply notify处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：send voice reply notify功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Regression test for issue #27970 Bug 2.
 
 The auto Telegram voice reply (``GatewayRunner._send_voice_reply``) is the
 final response of a turn. It must mark its metadata as ``notify=True`` so
 adapters that gate push notifications (Telegram's "important" mode) deliver
 it as a normal push instead of a silent message — mirroring the existing
-final-text path in ``gateway/platforms/base.py``.
-"""
+final-text path in ``gateway/platforms/base.py``."""
 
 import json
 import os

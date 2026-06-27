@@ -1,10 +1,18 @@
-"""Regression tests for #21582 — per-profile concurrency cap in dispatcher.
+"""CLIkanban per profile cap测试
+
+【产品经理理解要点】
+CLIkanban per profile cap功能测试。
+- 验证功能：命令行kanban per profile cap功能
+- 关键场景：配置、执行、验证
+- 业务影响：kanban per profile cap命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for #21582 — per-profile concurrency cap in dispatcher.
 
 When ``kanban.max_in_progress_per_profile`` is set, no single profile
 gets more than N workers running at once even if the global
 ``max_in_progress`` cap would allow it. Prevents one profile's local
-model / API quota / browser pool from being overwhelmed by a fan-out.
-"""
+model / API quota / browser pool from being overwhelmed by a fan-out."""
 from __future__ import annotations
 
 import os

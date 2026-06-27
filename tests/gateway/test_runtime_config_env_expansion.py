@@ -1,4 +1,13 @@
-"""Regression tests for gateway runtime config env-var expansion."""
+"""运行时配置展开
+
+【产品经理理解要点】
+运行时配置环境变量展开。
+- 验证功能：运行时配置中环境变量的展开
+- 关键场景：变量替换、嵌套展开、默认值
+- 业务影响：配置中环境变量未正确替换
+
+─────────────────────────────────────────────────────────────────────────
+Regression tests for gateway runtime config env-var expansion."""
 
 from __future__ import annotations
 

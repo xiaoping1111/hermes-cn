@@ -1,9 +1,17 @@
-"""Tests for the pre_gateway_dispatch plugin hook.
+"""网关pre gateway dispatch测试
+
+【产品经理理解要点】
+网关pre gateway dispatch功能测试。
+- 验证功能：网关pre gateway dispatch处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：pre gateway dispatch功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the pre_gateway_dispatch plugin hook.
 
 The hook allows plugins to intercept incoming messages before auth and
 agent dispatch. It runs in _handle_message and acts on returned action
-dicts: {"action": "skip"|"rewrite"|"allow"}.
-"""
+dicts: {"action": "skip"|"rewrite"|"allow"}."""
 
 from types import SimpleNamespace
 from unittest.mock import AsyncMock, MagicMock

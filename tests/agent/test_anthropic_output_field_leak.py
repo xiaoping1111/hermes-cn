@@ -1,4 +1,13 @@
-"""Regression: output-only SDK fields must not leak into Anthropic request input.
+"""Agent核心测试 - anthropic output field leak
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的anthropic output field leak验证。
+- 验证功能：anthropic output field leak功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：anthropic output field leak功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression: output-only SDK fields must not leak into Anthropic request input.
 
 Reproduces HTTP 400 `messages.N.content.M.text.parsed_output: Extra inputs are
 not permitted`. Anthropic SDK response blocks carry output-only attributes

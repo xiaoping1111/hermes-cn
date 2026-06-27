@@ -1,8 +1,16 @@
-"""The plugin context exposes register_dashboard_auth_provider.
+"""CLIdashboard auth plugin hook测试
+
+【产品经理理解要点】
+CLIdashboard auth plugin hook功能测试。
+- 验证功能：命令行dashboard auth plugin hook功能
+- 关键场景：配置、执行、验证
+- 业务影响：dashboard auth plugin hook命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+The plugin context exposes register_dashboard_auth_provider.
 
 Mirrors the image-gen / memory-provider hooks (see plugins.py:531 for prior
-art).
-"""
+art)."""
 from __future__ import annotations
 
 import pytest

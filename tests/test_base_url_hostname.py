@@ -1,4 +1,13 @@
-"""Targeted tests for ``utils.base_url_hostname`` and ``base_url_host_matches``.
+"""测试 - base url hostname
+
+【产品经理理解要点】
+功能验证中的base url hostname验证。
+- 验证功能：base url hostname功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：base url hostname功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Targeted tests for ``utils.base_url_hostname`` and ``base_url_host_matches``.
 
 These helpers are used across provider routing, auxiliary client, setup
 wizards, billing routes, and the trajectory compressor to avoid the

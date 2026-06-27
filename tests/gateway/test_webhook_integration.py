@@ -1,11 +1,19 @@
-"""Integration tests for the generic webhook platform adapter.
+"""Webhook网关测试
+
+【产品经理理解要点】
+Webhook平台网关功能测试。
+- 验证功能：Webhook平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Webhook平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Integration tests for the generic webhook platform adapter.
 
 These tests exercise end-to-end flows through the webhook adapter:
 1. GitHub PR webhook → agent MessageEvent created
 2. Skills config injects skill content into the prompt
 3. Cross-platform delivery routes to a mock Telegram adapter
-4. GitHub comment delivery invokes ``gh`` CLI (mocked subprocess)
-"""
+4. GitHub comment delivery invokes ``gh`` CLI (mocked subprocess)"""
 
 import asyncio
 import hashlib

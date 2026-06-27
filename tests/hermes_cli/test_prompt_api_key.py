@@ -1,9 +1,17 @@
-"""Tests for ``_prompt_api_key`` — the shared Keep/Replace/Clear menu used by
+"""CLIprompt api key测试
+
+【产品经理理解要点】
+CLIprompt api key功能测试。
+- 验证功能：命令行prompt api key功能
+- 关键场景：配置、执行、验证
+- 业务影响：prompt api key命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Tests for ``_prompt_api_key`` — the shared Keep/Replace/Clear menu used by
 ``hermes setup`` / ``hermes model`` when an API key already exists in ``.env``.
 
 Regression coverage for #16394: the wizard used to silently skip the key prompt
-when any value was present (even malformed junk), leaving users stuck.
-"""
+when any value was present (even malformed junk), leaving users stuck."""
 from __future__ import annotations
 
 from pathlib import Path

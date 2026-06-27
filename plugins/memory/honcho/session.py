@@ -1,4 +1,12 @@
-"""Honcho-based session management for conversation history."""
+"""Honcho 会话管理
+
+【产品经理理解要点】
+管理 Honcho 记忆系统的会话生命周期。
+- 会话的创建、切换和状态追踪
+- 对话上下文的组装和传递
+
+─────────────────────────────────────────────────────────────────
+Honcho-based session management for conversation history."""
 
 from __future__ import annotations
 

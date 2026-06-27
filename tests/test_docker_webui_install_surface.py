@@ -1,4 +1,14 @@
-"""Guards for the multi-container Hermes WebUI install surface."""
+"""测试 - docker webui install surface
+
+【产品经理理解要点】
+功能验证中的docker webui install surface验证。
+- 验证功能：docker webui install surface功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：docker webui install surface功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Guards for the multi-container Hermes WebUI install surface.
+"""
 
 from __future__ import annotations
 

@@ -1,4 +1,13 @@
-"""FAL.ai image generation backend.
+"""FAL.ai 图像生成后端
+
+【产品经理理解要点】
+对接 FAL.ai 的 18 款图像模型（FLUX 2、Z-Image、Nano Banana、GPT Image 等），支持文生图和图编辑。
+- 本插件为注册适配器，核心逻辑复用 tools.image_generation_tool 中的统一实现
+- 支持直连 FAL_KEY 和托管 Nous 网关两种认证方式
+- 部分模型支持图生图编辑（edit_endpoint），能力声明随模型选择动态变化
+
+─────────────────────────────────────────────────────────────────
+FAL.ai image generation backend.
 
 Wraps the 18-model FAL catalog (FLUX 2, Z-Image, Nano Banana, GPT
 Image 1.5, Recraft, Imagen 4, Qwen, Ideogram, …) as an

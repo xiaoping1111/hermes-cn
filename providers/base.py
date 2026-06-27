@@ -1,4 +1,13 @@
-"""Provider profile base class.
+"""模型提供方基类
+
+【产品经理理解要点】
+定义模型推理提供方的统一配置模板，所有提供方（OpenRouter、Azure、Kimi 等）均基于此模板声明自身特性。
+- 核心职责：声明提供方的身份、认证方式、API 端点、客户端行为差异等全部配置
+- 关键概念：配置是声明式的——只描述提供方行为，不负责客户端构建/凭证轮换/流式传输（这些由 AIAgent 处理）
+- 系统定位：配置模板层，提供方子类继承 → 填充特有配置 → 注册到注册中心供 Agent 使用
+
+─────────────────────────────────────────────────────────────────────────
+Provider profile base class.
 
 A ProviderProfile declares everything about an inference provider in one place:
 auth, endpoints, client quirks, request-time quirks. The transport reads this

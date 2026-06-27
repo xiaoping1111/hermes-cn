@@ -1,9 +1,17 @@
-"""Tests for Telegram MarkdownV2 formatting in gateway/platforms/telegram.py.
+"""Telegram网关测试
+
+【产品经理理解要点】
+Telegram平台网关功能测试。
+- 验证功能：Telegram平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：Telegram平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for Telegram MarkdownV2 formatting in gateway/platforms/telegram.py.
 
 Covers: _escape_mdv2 (pure function), format_message (markdown-to-MarkdownV2
 conversion pipeline), and edge cases that could produce invalid MarkdownV2
-or corrupt user-visible content.
-"""
+or corrupt user-visible content."""
 
 import re
 import sys

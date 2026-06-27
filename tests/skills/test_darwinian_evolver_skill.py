@@ -1,4 +1,12 @@
-"""
+"""达尔文进化器技能
+
+【产品经理理解要点】
+技能自动进化。
+- 验证功能：技能迭代优化逻辑
+- 关键场景：进化、评估、迭代
+- 业务影响：技能无法自动优化
+
+─────────────────────────────────────────────────────────────────────────
 Smoke tests for the darwinian-evolver optional skill.
 
 We can't actually run the evolution loop in CI (it needs network + a paid LLM),

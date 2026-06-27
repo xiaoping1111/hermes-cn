@@ -1,4 +1,13 @@
-"""Reaction (tapback) tests for PhotonAdapter.
+"""插件系统测试 - reactions
+
+【产品经理理解要点】
+各类插件（TTS/视频/图片/浏览器/记忆/看板/Google Meet等）的正确注册与运行中的reactions验证。
+- 验证功能：reactions功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：reactions功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Reaction (tapback) tests for PhotonAdapter.
 
 Outbound reactions go through the sidecar's ``/react`` / ``/unreact``
 endpoints; these tests stub ``_sidecar_call`` to assert endpoint + body

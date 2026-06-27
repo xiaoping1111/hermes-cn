@@ -1,4 +1,13 @@
-"""Tests for the shared httpx.Limits helper that all long-lived platform
+"""网关platform http client limits测试
+
+【产品经理理解要点】
+网关platform http client limits功能测试。
+- 验证功能：网关platform http client limits处理
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：platform http client limits功能异常
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the shared httpx.Limits helper that all long-lived platform
 adapters use to tighten their keep-alive pool.
 
 Context: #18451 — on macOS behind Cloudflare Warp, httpx's default
@@ -7,8 +16,7 @@ multiple long-lived gateway adapters (QQ Bot, Feishu, WeCom, DingTalk,
 Signal, BlueBubbles, WeCom-callback) until the process hit the default
 256 fd limit.  These tests just verify the helper returns sensibly
 tuned limits and respects env-var overrides; the actual fd-pressure
-behaviour is only observable at runtime under load.
-"""
+behaviour is only observable at runtime under load."""
 
 from __future__ import annotations
 

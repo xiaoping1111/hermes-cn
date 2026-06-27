@@ -1,11 +1,19 @@
-"""Tests that internal synthetic events (e.g. background process completion)
+"""配对
+
+【产品经理理解要点】
+设备配对。
+- 验证功能：设备/用户的配对流程
+- 关键场景：配对请求、验证、完成
+- 业务影响：设备无法完成配对
+
+─────────────────────────────────────────────────────────────────────────
+Tests that internal synthetic events (e.g. background process completion)
 bypass user authorization and do not trigger DM pairing.
 
 Regression test for the bug where ``_run_process_watcher`` with
 ``notify_on_complete=True`` injected a ``MessageEvent`` without ``user_id``,
 causing ``_is_user_authorized`` to reject it and the gateway to send a
-pairing code to the chat.
-"""
+pairing code to the chat."""
 
 import asyncio
 from types import SimpleNamespace

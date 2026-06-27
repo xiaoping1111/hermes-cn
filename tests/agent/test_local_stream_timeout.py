@@ -1,4 +1,13 @@
-"""Tests for local provider stream read timeout auto-detection.
+"""Agent核心测试 - local stream timeout
+
+【产品经理理解要点】
+Agent核心模块：Prompt构建、上下文压缩、模型路由、凭证池、记忆、LSP等中的local stream timeout验证。
+- 验证功能：local stream timeout功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：local stream timeout功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Tests for local provider stream read timeout auto-detection.
 
 When a local LLM provider is detected (Ollama, llama.cpp, vLLM, etc.),
 the httpx stream read timeout should be automatically increased from the

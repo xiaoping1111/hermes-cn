@@ -1,4 +1,13 @@
-"""Regression: installer fails when the existing checkout has an unmerged index.
+"""测试 - install unmerged index
+
+【产品经理理解要点】
+功能验证中的install unmerged index验证。
+- 验证功能：install unmerged index功能正确性验证
+- 关键场景：核心逻辑、边界条件、错误处理
+- 业务影响：install unmerged index功能异常或存在安全隐患
+
+─────────────────────────────────────────────────────────────────────────
+Regression: installer fails when the existing checkout has an unmerged index.
 
 A previously interrupted update can leave ``$INSTALL_DIR`` with unmerged index
 entries (files in a conflicted, "needs merge" state). In that state the update

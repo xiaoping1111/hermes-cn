@@ -1,4 +1,13 @@
-"""Env integration tests — managed .env applied last with override."""
+"""CLImanaged scope env测试
+
+【产品经理理解要点】
+CLImanaged scope env功能测试。
+- 验证功能：命令行managed scope env功能
+- 关键场景：配置、执行、验证
+- 业务影响：managed scope env命令行功能失效
+
+─────────────────────────────────────────────────────────────────────────
+Env integration tests — managed .env applied last with override."""
 import os
 
 import pytest

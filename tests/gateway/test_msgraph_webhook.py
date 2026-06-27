@@ -1,4 +1,13 @@
-"""Tests for the Microsoft Graph webhook adapter."""
+"""MSGraph网关测试
+
+【产品经理理解要点】
+MSGraph平台网关功能测试。
+- 验证功能：MSGraph平台消息网关适配
+- 关键场景：消息收发、连接管理、错误处理
+- 业务影响：MSGraph平台功能不可用
+
+─────────────────────────────────────────────────────────────────────────
+Tests for the Microsoft Graph webhook adapter."""
 
 import asyncio
 
