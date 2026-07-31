@@ -32,6 +32,8 @@ import os
 from collections import Counter
 from typing import Any, Iterable, List, Mapping, Optional, Sequence, Tuple
 
+from tools.ansi_strip import sanitize_display_text
+
 # How many recent user/assistant turns we consider "recent activity".
 _RECENT_TURN_WINDOW = 20
 
@@ -238,6 +240,10 @@ def _summarise_tool_activity(
 
 
 def _truncate(text: str, limit: int) -> str:
+    # Stored history is untrusted for display — remove escape sequences and
+    # control chars so a recap line can't clear the screen / retitle the
+    # window when echoed to a terminal (openai/codex#31494 bug class).
+    text = sanitize_display_text(text)
     text = " ".join(text.split())  # collapse newlines for a compact one-liner
     if len(text) <= limit:
         return text

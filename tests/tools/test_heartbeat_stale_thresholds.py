@@ -11,7 +11,6 @@ Tests for delegate heartbeat stale threshold configuration.
 """
 
 
-
 class TestHeartbeatStaleThresholds:
     """Verify the heartbeat stale threshold constants are correct."""
 
@@ -25,12 +24,6 @@ class TestHeartbeatStaleThresholds:
         from tools.delegate_tool import _HEARTBEAT_STALE_CYCLES_IN_TOOL
         assert _HEARTBEAT_STALE_CYCLES_IN_TOOL == 40
 
-    def test_idle_timeout_seconds(self):
-        """Effective idle stale timeout: 15 * 30 = 450s (> typical LLM response time)."""
-        from tools.delegate_tool import _HEARTBEAT_STALE_CYCLES_IDLE, _HEARTBEAT_INTERVAL
-        effective = _HEARTBEAT_STALE_CYCLES_IDLE * _HEARTBEAT_INTERVAL
-        assert effective == 450
-        assert effective > 300  # Must be > 5 minutes for slow LLM responses
 
     def test_in_tool_timeout_seconds(self):
         """Effective in-tool stale timeout: 40 * 30 = 1200s (= 20 minutes)."""

@@ -109,6 +109,7 @@ emitted by each built-in hook site.
     child_role      – role string of the child agent
     child_summary   – summary of the child's work
     child_status    – exit status string (e.g. "success", "error")
+    tool_call_history – redacted tool name/input summary/byte counts/status list
     duration_ms     – wall-clock time of the child run in milliseconds
 """
 
@@ -130,6 +131,8 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable, Dict, Iterator, List, Optional, Set, Tuple
+
+from hermes_cli._subprocess_compat import IS_WINDOWS, windows_hide_flags
 
 try:
     import fcntl  # POSIX only; Windows falls back to best-effort without flock.
@@ -231,6 +234,15 @@ def register_from_config(
     if not isinstance(cfg, dict):
         return []
 
+    # Safe mode (--safe-mode / HERMES_SAFE_MODE=1): shell hooks are user
+    # customizations too — skip registration entirely so a troubleshooting
+    # run fires zero user-configured code (plugins, MCP, AND hooks).
+    from utils import env_var_enabled
+
+    if env_var_enabled("HERMES_SAFE_MODE"):
+        logger.info("HERMES_SAFE_MODE=1 — shell-hook registration skipped")
+        return []
+
     effective_accept = _resolve_effective_accept(cfg, accept_hooks)
 
     specs = _parse_hooks_block(cfg.get("hooks"))
@@ -314,6 +326,11 @@ def _parse_hooks_block(hooks_cfg: Any) -> List[ShellHookSpec]:
     specs: List[ShellHookSpec] = []
 
     for event_name, entries in hooks_cfg.items():
+        # Reserved sub-keys that aren't event names — skip silently. These
+        # are config sub-sections nested under `hooks:` for related
+        # functionality (e.g. output-spill budgets).
+        if event_name in ("output_spill",):
+            continue
         if event_name not in VALID_HOOKS:
             suggestion = difflib.get_close_matches(
                 str(event_name), VALID_HOOKS, n=1, cutoff=0.6,
@@ -450,14 +467,16 @@ def _spawn(spec: ShellHookSpec, stdin_json: str) -> Dict[str, Any]:
         return result
 
     t0 = time.monotonic()
+    _popen_kwargs = {"creationflags": windows_hide_flags()} if IS_WINDOWS else {}
     try:
         proc = subprocess.run(
             argv,
             input=stdin_json,
             capture_output=True,
             timeout=spec.timeout,
-            text=True,
+            text=True, encoding='utf-8', errors='replace',
             shell=False,
+            **_popen_kwargs,
         )
     except subprocess.TimeoutExpired:
         result["timed_out"] = True
@@ -593,6 +612,17 @@ def _parse_response(event: str, stdout: str) -> Optional[Dict[str, Any]]:
             return {"action": "block", "message": _block_message(data.get("reason"), data.get("message"))}
         return None
 
+    if event == "pre_verify":
+        # "continue" (Hermes) / "block" (Claude-Code Stop: block the stop) both
+        # mean keep going; the message/reason is the follow-up for the model. A
+        # continue with no message is a no-op — let the turn finish.
+        action = str(data.get("action") or data.get("decision") or "").strip().lower()
+        if action in {"continue", "block"}:
+            message = data.get("message") or data.get("reason")
+            if isinstance(message, str) and message.strip():
+                return {"action": "continue", "message": message.strip()}
+        return None
+
     context = data.get("context")
     if isinstance(context, str) and context.strip():
         return {"context": context}
@@ -612,7 +642,7 @@ def allowlist_path() -> Path:
 def load_allowlist() -> Dict[str, Any]:
     """Return the parsed allowlist, or an empty skeleton if absent."""
     try:
-        raw = json.loads(allowlist_path().read_text())
+        raw = json.loads(allowlist_path().read_text(encoding="utf-8"))
     except (FileNotFoundError, json.JSONDecodeError, OSError):
         return {"approvals": []}
     if not isinstance(raw, dict):

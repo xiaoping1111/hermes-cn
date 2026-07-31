@@ -11,7 +11,7 @@
 Build the Hermes Skills Index — a centralized JSON catalog of all skills.
 
 This script crawls every skill source (skills.sh, GitHub taps, official,
-clawhub, lobehub, claude-marketplace) and writes a JSON index with resolved
+clawhub, lobehub) and writes a JSON index with resolved
 GitHub paths. The index is served as a static file on the docs site so that
 `hermes skills search/install` can use it without hitting the GitHub API.
 
@@ -47,7 +47,6 @@ from tools.skills_hub import (
     OptionalSkillSource,
     WellKnownSkillSource,
     ClawHubSource,
-    ClaudeMarketplaceSource,
     LobeHubSource,
     BrowseShSource,
     SkillMeta,
@@ -265,7 +264,6 @@ def main():
         "well-known": WellKnownSkillSource(),
         "github": GitHubSource(auth=auth),
         "clawhub": ClawHubSource(),
-        "claude-marketplace": ClaudeMarketplaceSource(auth=auth),
         "lobehub": LobeHubSource(),
         "browse-sh": BrowseShSource(),
     }
@@ -286,7 +284,6 @@ def main():
         "clawhub": 0,
         "lobehub": 100_000,
         "browse-sh": 5_000,
-        "claude-marketplace": 5_000,
         "github": 5_000,
         "well-known": 5_000,
         "official": 5_000,
@@ -308,9 +305,9 @@ def main():
     all_skills = batch_resolve_paths(all_skills, auth)
 
     # Collect which sources hit a GitHub API rate limit during the crawl.
-    # github / claude-marketplace / well-known all read api.github.com, so a
-    # rate-limited token zeroes all three at once — surfaced below so the
-    # failure message names the real cause instead of "source returned 0".
+    # github / well-known both read api.github.com, so a rate-limited token
+    # zeroes both at once — surfaced below so the failure message names the
+    # real cause instead of "source returned 0".
     rate_limited_sources = {
         name for name, source in sources.items()
         if getattr(source, "is_rate_limited", False)
@@ -333,7 +330,7 @@ def main():
     # Sort
     source_order = {"official": 0, "skills-sh": 1, "skills.sh": 1,
                     "github": 2, "well-known": 3, "clawhub": 4,
-                    "browse-sh": 5, "claude-marketplace": 6, "lobehub": 7}
+                    "browse-sh": 5, "lobehub": 6}
     deduped.sort(key=lambda s: (source_order.get(s["source"], 99), s["name"]))
 
     from collections import Counter
@@ -394,8 +391,8 @@ def main():
                 "\nGitHub API rate limit was hit during this crawl for: "
                 + ", ".join(sorted(rate_limited_sources))
                 + ". This is the usual cause of an all-GitHub-tap collapse "
-                "(github / claude-marketplace / well-known dropping to zero "
-                "together). Re-run with a higher-quota GITHUB_TOKEN.",
+                "(github / well-known dropping to zero together). "
+                "Re-run with a higher-quota GITHUB_TOKEN.",
                 file=sys.stderr,
             )
         print(
