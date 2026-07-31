@@ -2,6 +2,9 @@
 
 Handler bodies are byte-identical to their pre-split server.py form; they
 are rebound onto server.py's globals at install time — see method_ctx.py.
+
+# 【产品经理理解要点】TUI 会话方法，处理终端界面中的会话创建、恢复、切换
+
 """
 
 from .method_ctx import HandlerRegistry

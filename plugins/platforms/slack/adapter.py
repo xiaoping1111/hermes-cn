@@ -6,6 +6,9 @@ Uses slack-bolt (Python) with Socket Mode for:
 - Sending responses back
 - Handling slash commands
 - Thread support
+
+# 【产品经理理解要点】Slack 平台适配器，处理工作空间消息、线程回复、App Home 交互
+
 """
 
 import asyncio

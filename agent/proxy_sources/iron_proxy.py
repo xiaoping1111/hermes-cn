@@ -53,6 +53,9 @@ This module is intentionally subprocess-driven rather than depending on any
 iron-proxy Python bindings — a single cross-platform binary is easier to
 lazy-install than a wheels-with-extension dependency, and we keep maintenance
 to a "bump the pinned version" loop.
+
+# 【产品经理理解要点】Iron 代理源，管理多个 API Key 的轮换和负载均衡，提升服务可用性
+
 """
 
 from __future__ import annotations

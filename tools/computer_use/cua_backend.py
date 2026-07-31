@@ -31,6 +31,9 @@ SLPSPostEventRecordTo, _AXObserverAddNotificationAndCheckRemote) that aren't
 Apple-public and can break on OS updates. The Windows path in cua-driver-rs
 uses stable Win32 APIs (SendInput + UI Automation) — not subject to the
 same SPI breakage class.
+
+# 【产品经理理解要点】Computer Use 后端，实现浏览器和桌面的自动化操控协议
+
 """
 
 from __future__ import annotations
@@ -429,6 +432,7 @@ class _EmbeddedCuaDaemon:
             pass
 
     def start(self) -> None:
+# 启动服务
         if self._process is not None and self._process.poll() is None:
             return
         from tools.environments.local import _sanitize_subprocess_env
@@ -503,6 +507,7 @@ class _EmbeddedCuaDaemon:
         ]
 
     def stop(self) -> None:
+# 停止服务
         process = self._process
         self._process = None
         if process is not None and process.poll() is None:
@@ -1023,6 +1028,7 @@ class _AsyncBridge:
         self._ready = threading.Event()
 
     def start(self) -> None:
+# 启动服务
         if self._thread and self._thread.is_alive():
             return
         self._ready.clear()
@@ -1045,6 +1051,7 @@ class _AsyncBridge:
             raise RuntimeError("cua-driver asyncio bridge failed to start")
 
     def run(self, coro, timeout: Optional[float] = 30.0) -> Any:
+# 主运行入口
         from agent.async_utils import safe_schedule_threadsafe
         if not self._loop or not self._thread or not self._thread.is_alive():
             if asyncio.iscoroutine(coro):
@@ -1056,6 +1063,7 @@ class _AsyncBridge:
         return fut.result(timeout=timeout)
 
     def stop(self) -> None:
+# 停止服务
         if self._loop and self._loop.is_running():
             self._loop.call_soon_threadsafe(self._loop.stop)
         if self._thread:
@@ -1262,6 +1270,7 @@ class _CuaDriverSession:
             logger.debug("cua-driver tools/list capability discovery failed: %s", e)
 
     def start(self) -> None:
+# 启动服务
         with self._lock:
             if self._started:
                 return
@@ -1307,6 +1316,7 @@ class _CuaDriverSession:
             ) from self._setup_error
 
     def stop(self) -> None:
+# 停止服务
         with self._lock:
             if not self._started:
                 return
@@ -1971,6 +1981,7 @@ class CuaDriverBackend(ComputerUseBackend):
 
     # ── Lifecycle ──────────────────────────────────────────────────
     def start(self) -> None:
+# 启动服务
         _maybe_nudge_update()
         # The MCP client SDK (`mcp`) is an optional dependency (the
         # `computer-use` / `mcp` extras), not part of Hermes' minimal core.

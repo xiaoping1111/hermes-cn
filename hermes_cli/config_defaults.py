@@ -2,6 +2,9 @@
 
 Pure-data leaf module: DEFAULT_CONFIG and OPTIONAL_ENV_VARS, extracted
 verbatim from hermes_cli/config.py. Must not import from hermes_cli.config.
+
+# 【产品经理理解要点】配置默认值定义，列出所有可配置项及其默认值和校验规则
+
 """
 
 DEFAULT_CONFIG = {

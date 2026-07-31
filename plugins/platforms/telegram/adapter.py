@@ -5,6 +5,9 @@ Uses python-telegram-bot library for:
 - Receiving messages from users/groups
 - Sending responses back
 - Handling media and commands
+
+# 【产品经理理解要点】Telegram 平台适配器，处理 Bot 消息收发、群组管理、内联键盘交互
+
 """
 
 import asyncio

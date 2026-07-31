@@ -11,6 +11,9 @@ Design: Uses the edit transport (send initial message, then editMessageText).
 This is universally supported across Telegram, Discord, and Slack.
 
 Credit: jobless0x (#774, #1312), OutThisLife (#798), clicksingh (#697).
+
+# 【产品经理理解要点】流式消息消费器，从 LLM 接收 SSE 流式响应并分发给各平台适配器
+
 """
 
 from __future__ import annotations

@@ -6,6 +6,9 @@ This module is the single source of truth for the dangerous command system:
 - Approval prompting (CLI interactive + gateway async)
 - Smart approval via auxiliary LLM (auto-approve low-risk commands)
 - Permanent allowlist persistence (config.yaml)
+
+# 【产品经理理解要点】审批工具，对敏感操作（文件写入、命令执行等）进行人工审批确认
+
 """
 
 import contextvars

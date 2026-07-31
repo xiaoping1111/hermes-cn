@@ -3,6 +3,9 @@ Cron job storage and management.
 
 Jobs are stored in ~/.hermes/cron/jobs.json
 Output is saved to ~/.hermes/cron/output/{job_id}/{timestamp}.md
+
+# 【产品经理理解要点】定时任务定义，包含预设的自动化任务模板和执行逻辑
+
 """
 
 import contextlib

@@ -25,6 +25,9 @@ Configuration in config.yaml:
           groups:
             group_id_1:
               allow_from: ["user_id_1"]
+
+# 【产品经理理解要点】企业微信适配器，处理企业微信应用消息和回调
+
 """
 
 from __future__ import annotations

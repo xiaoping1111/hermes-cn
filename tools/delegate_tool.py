@@ -15,6 +15,9 @@ Each child gets:
 
 The parent's context only sees the delegation call and the summary result,
 never the child's intermediate tool calls or reasoning.
+
+# 【产品经理理解要点】子智能体委派工具，将子任务分配给子智能体执行并收集结果
+
 """
 
 import enum

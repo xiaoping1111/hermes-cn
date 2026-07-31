@@ -47,6 +47,9 @@ Usage:
 
     # Click an element
     browser_click("@e5", task_id="task_123")
+
+# 【产品经理理解要点】浏览器操控工具，支持网页浏览、截图、点击等自动化操作
+
 """
 
 import atexit

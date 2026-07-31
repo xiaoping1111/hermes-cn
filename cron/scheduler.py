@@ -6,6 +6,9 @@ calls this every 60 seconds from a background thread.
 
 Uses a file-based lock (~/.hermes/cron/.tick.lock) so only one tick
 runs at a time if multiple processes overlap.
+
+# 【产品经理理解要点】定时任务调度器，按 cron 表达式触发预设任务（日报生成、定时提醒等）
+
 """
 
 import asyncio
@@ -2751,6 +2754,7 @@ def _guard_job_credential_exfil(job: dict) -> None:
 
 
 def run_job(
+# 执行定时任务
     job: dict, *, defer_agent_teardown: Optional[list] = None
 ) -> tuple[bool, str, str, Optional[str]]:
     """

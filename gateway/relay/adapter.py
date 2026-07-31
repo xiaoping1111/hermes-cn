@@ -14,6 +14,9 @@ The gateway sees an ordinary ``MessageEvent`` in and calls ``adapter.send`` out.
 
 EXPERIMENTAL: the transport protocol and descriptor schema may change without a
 deprecation cycle until >=2 Class-1 platforms validate them.
+
+# 【产品经理理解要点】Relay 中继适配器，支持多实例 Gateway 之间的消息转发和负载均衡
+
 """
 
 from __future__ import annotations

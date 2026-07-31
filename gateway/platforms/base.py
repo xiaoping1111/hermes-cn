@@ -3,6 +3,9 @@ Base platform adapter interface.
 
 All platform adapters (Telegram, Discord, WhatsApp, Weixin, and more) inherit from this
 and implement the required methods.
+
+# 【产品经理理解要点】平台适配器基类，定义所有平台（Discord/Telegram/Slack 等）的统一接口规范
+
 """
 
 import asyncio

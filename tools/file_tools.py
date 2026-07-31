@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+
+# 【产品经理理解要点】文件工具扩展，支持批量文件操作和文件安全校验
+
 """File Tools Module - LLM agent file manipulation tools."""
 
 import errno

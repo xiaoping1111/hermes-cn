@@ -1,3 +1,6 @@
+
+# 【产品经理理解要点】本地执行环境，直接在宿主机上运行命令（受安全策略约束）
+
 """Local execution environment — spawn-per-call with session snapshot."""
 
 import logging

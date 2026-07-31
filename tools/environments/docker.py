@@ -3,6 +3,9 @@
 Security hardened (cap-drop ALL, no-new-privileges, PID limits),
 configurable resource limits (CPU, memory, disk), and optional filesystem
 persistence via bind mounts.
+
+# 【产品经理理解要点】Docker 执行环境，在容器中隔离运行代码和命令
+
 """
 
 import hashlib

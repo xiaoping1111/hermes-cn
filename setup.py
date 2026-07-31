@@ -22,6 +22,9 @@ Hermes package derivation, so only that build may create an artifact.
 Editable installs (``uv sync``, ``pip install -e .``, ``nix develop``)
 use ``build_editable``, which does NOT call ``bdist_wheel`` — it calls
 ``build_ext`` in editable mode. So the guard does not affect development.
+
+# 【产品经理理解要点】Python 包安装配置，定义依赖、入口点和打包元数据
+
 """
 
 import os
@@ -46,6 +49,7 @@ _BLOCK_MESSAGE = (
 
 class _GuardedSdist(sdist):
     def run(self, *args, **kwargs):
+# 主运行入口
         if not _IN_NIX_BUILD:
             raise RuntimeError(_BLOCK_MESSAGE)
         return super().run(*args, **kwargs)
@@ -63,6 +67,7 @@ try:
 
     class _GuardedBdistWheel(bdist_wheel):
         def run(self, *args, **kwargs):
+# 主运行入口
             if not _IN_NIX_BUILD:
                 raise RuntimeError(_BLOCK_MESSAGE)
             return super().run(*args, **kwargs)

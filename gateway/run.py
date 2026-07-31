@@ -11,6 +11,9 @@ Usage:
     
     # Or from CLI
     python cli.py --gateway
+
+# 【产品经理理解要点】Gateway 主运行入口，负责启动、关闭、信号处理和主循环，是整个 Hermes 后台服务的心脏
+
 """
 
 # IMPORTANT: hermes_bootstrap must be the very first import — UTF-8 stdio
@@ -11904,6 +11907,7 @@ class GatewayRunner(GatewayAuthorizationMixin, GatewayKanbanWatchersMixin, Gatew
         await watchdog.stop()
 
     async def stop(
+# 停止服务
         self,
         *,
         restart: bool = False,

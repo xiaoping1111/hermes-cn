@@ -30,6 +30,9 @@ Directory layout for user skills:
     └── category-name/
         └── another-skill/
             └── SKILL.md
+
+# 【产品经理理解要点】技能管理器扩展，支持技能的注册、发现和生命周期管理
+
 """
 
 import json

@@ -64,6 +64,9 @@ Usage:
 
     # View a reference file within a skill (loads linked file)
     content = skill_view("axolotl", "references/dataset-formats.md")
+
+# 【产品经理理解要点】技能管理工具，动态加载、执行和卸载技能模块
+
 """
 
 import json

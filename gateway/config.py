@@ -6,6 +6,9 @@ Handles loading and validating configuration for:
 - Home channels for each platform
 - Session reset policies
 - Delivery preferences
+
+# 【产品经理理解要点】Gateway 配置加载与校验，管理所有运行时参数（模型、平台、安全策略等）
+
 """
 
 import logging

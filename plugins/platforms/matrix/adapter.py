@@ -47,6 +47,9 @@ Environment variables:
                               when requester metadata is available (default: true)
     MATRIX_APPROVAL_TIMEOUT_SECONDS
                               Reaction approval/model-picker timeout (default: 300)
+
+# 【产品经理理解要点】Matrix 协议适配器，支持去中心化即时通讯 Matrix 协议
+
 """
 
 from __future__ import annotations

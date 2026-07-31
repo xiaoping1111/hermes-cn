@@ -3,6 +3,9 @@
 Sends a message to a user or channel on any connected messaging platform
 (Telegram, Discord, Slack). Supports listing available targets and resolving
 human-friendly channel names to IDs. Works in both CLI and gateway contexts.
+
+# 【产品经理理解要点】消息发送工具，让智能体主动向用户发送消息和通知
+
 """
 
 import asyncio

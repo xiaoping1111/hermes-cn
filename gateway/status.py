@@ -9,6 +9,9 @@ The PID file lives at ``{HERMES_HOME}/gateway.pid``.  HERMES_HOME defaults to
 separate HERMES_HOME directories naturally get separate PID files — a property
 that will be useful when we add named profiles (multiple agents running
 concurrently under distinct configurations).
+
+# 【产品经理理解要点】系统状态面板，展示当前会话、模型、配额等运行信息
+
 """
 
 import copy

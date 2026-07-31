@@ -24,6 +24,9 @@ Configuration in config.yaml:
         extra:
           client_id: "your-app-key"      # or DINGTALK_CLIENT_ID env var
           client_secret: "your-secret"   # or DINGTALK_CLIENT_SECRET env var
+
+# 【产品经理理解要点】钉钉适配器，处理钉钉机器人消息和事件回调
+
 """
 
 import asyncio

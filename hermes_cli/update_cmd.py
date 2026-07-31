@@ -21,6 +21,9 @@ byte-identical.
 Imports are one-way: ``hermes_cli.main`` imports this module, never the reverse
 at import time (``_m()`` resolves lazily at call time, when main.py is fully
 loaded, so there is no import cycle).
+
+# 【产品经理理解要点】更新命令，检查并安装 Hermes 新版本，支持自动升级
+
 """
 
 import hashlib

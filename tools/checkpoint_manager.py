@@ -46,6 +46,9 @@ recorded working directory no longer exists (orphan) or whose last touch is
 older than ``retention_days`` (stale), then runs ``git gc --prune=now`` to
 reclaim object storage.  A size-cap pass drops the oldest checkpoints per
 project until total store size is under ``max_total_size_mb``.
+
+# 【产品经理理解要点】检查点管理器，保存和恢复会话快照，支持回退到历史状态
+
 """
 
 import hashlib

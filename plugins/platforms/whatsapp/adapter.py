@@ -13,6 +13,9 @@ This adapter supports multiple backends:
 
 For simplicity, we'll implement a generic interface that can work
 with different backends via a bridge pattern.
+
+# 【产品经理理解要点】WhatsApp 桥接适配器，通过本地桥接处理 WhatsApp 消息
+
 """
 
 import asyncio

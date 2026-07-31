@@ -3,6 +3,9 @@
 This module backs ``hermes console`` and is intentionally narrower than the
 full Hermes CLI. It exposes a curated set of native adapters that can later be
 shared by the dashboard console websocket without becoming a raw shell.
+
+# 【产品经理理解要点】控制台渲染引擎，管理 TUI 终端界面的布局、主题和交互
+
 """
 
 from __future__ import annotations
@@ -488,6 +491,7 @@ class HermesConsoleEngine:
         self._register_defaults()
 
     def execute(self, line: str, *, confirmed: bool = False) -> ConsoleResult:
+# 执行操作
         raw_line = line.strip()
         if not raw_line:
             return ConsoleResult("ok")

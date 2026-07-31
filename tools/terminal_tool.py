@@ -31,6 +31,9 @@ Usage:
 
     # Execute in background
     result = terminal_tool("python server.py", background=True)
+
+# 【产品经理理解要点】终端工具，在沙箱环境中执行 shell 命令并返回输出
+
 """
 
 import importlib.util

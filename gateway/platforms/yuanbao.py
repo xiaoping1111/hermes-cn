@@ -13,6 +13,9 @@ Configuration in config.yaml (or via env vars):
           bot_id: "..."              # or YUANBAO_BOT_ID  (optional, returned by sign-token)
           ws_url: "wss://..."        # or YUANBAO_WS_URL
           api_domain: "https://..."  # or YUANBAO_API_DOMAIN
+
+# 【产品经理理解要点】腾讯元宝平台适配器，接入腾讯元宝用户的消息收发
+
 """
 
 from __future__ import annotations

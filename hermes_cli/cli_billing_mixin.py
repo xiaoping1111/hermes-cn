@@ -11,6 +11,9 @@ Import discipline mirrors ``hermes_cli.cli_commands_mixin``:
     display constants) are imported LAZILY inside each method via
     ``from cli import ...``. The mixin never imports ``cli`` at module load
     time, avoiding the cycle created when ``cli.py`` imports this mixin.
+
+# 【产品经理理解要点】计费混入模块，在 CLI 中展示用量和账单信息
+
 """
 
 from __future__ import annotations

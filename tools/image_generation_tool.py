@@ -18,6 +18,9 @@ Architecture:
 
 Pricing shown in UI strings is as-of the initial commit; we accept drift and
 update when it's noticed.
+
+# 【产品经理理解要点】图像生成工具，调用 AI 模型生成图片
+
 """
 
 import json

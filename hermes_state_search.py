@@ -6,6 +6,9 @@ own; methods access the host's attributes (``self._conn``, ``self.db_path``,
 ``self._execute_write`` and other SessionDB methods) established by
 ``SessionDB.__init__``. It must never import hermes_state (cycle) — shared
 module-level constants live in hermes_state_common.
+
+# 【产品经理理解要点】会话状态搜索引擎，支持全文检索历史会话和对话内容
+
 """
 
 import logging

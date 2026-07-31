@@ -25,6 +25,9 @@ Humans continue to use the CLI (``hermes kanban …``), the dashboard
 three bypass the agent entirely. The tools are for dispatcher-spawned
 worker handoffs and for configured orchestrator profiles that route work
 through the board.
+
+# 【产品经理理解要点】看板工具，管理任务卡片的状态流转和看板视图
+
 """
 from __future__ import annotations
 

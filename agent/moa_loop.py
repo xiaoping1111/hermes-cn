@@ -4,6 +4,9 @@ The slash command is deliberately not a model tool. It marks one user turn as
 MoA-enabled; the normal Hermes agent loop still owns tool calling and turn
 termination, while this module gathers reference-model context before each model
 iteration.
+
+# 【产品经理理解要点】MoA（混合智能体）循环，编排多个专业子智能体协同完成任务
+
 """
 
 from __future__ import annotations

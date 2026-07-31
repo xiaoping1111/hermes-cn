@@ -87,6 +87,9 @@ Thread safety:
     background thread and caller threads.  All mutations are protected by
     _lock so the code is safe regardless of GIL presence (e.g. Python 3.13+
     free-threading).
+
+# 【产品经理理解要点】MCP 工具执行器，调用外部 MCP 服务器提供的工具能力（文件操作、搜索等）
+
 """
 
 import asyncio

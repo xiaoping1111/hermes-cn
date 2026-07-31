@@ -26,6 +26,9 @@ tool results never enter the context window.
 
 Platform: Linux / macOS only (Unix domain sockets for local). Disabled on Windows.
 Remote execution additionally requires Python 3 in the terminal backend.
+
+# 【产品经理理解要点】代码执行工具，在隔离环境中运行用户提交的代码片段
+
 """
 
 import base64

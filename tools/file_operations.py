@@ -23,6 +23,9 @@ Usage:
     
     # Search for content
     result = file_ops.search("TODO", path=".", file_glob="*.py")
+
+# 【产品经理理解要点】文件操作工具集，提供读、写、搜索、编辑文件的能力
+
 """
 
 import os

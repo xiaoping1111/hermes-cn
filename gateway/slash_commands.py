@@ -11,6 +11,9 @@ Module-level run.py helpers a handler needs (``_hermes_home``,
 ``_load_gateway_config``, ``_resolve_gateway_model``, etc.) are imported lazily
 inside the handler body — a deferred ``from gateway.run import ...`` resolves at
 call time (run.py fully loaded by then), avoiding an import cycle.
+
+# 【产品经理理解要点】斜杠命令处理（/help, /model, /compress 等），用户通过命令控制智能体行为
+
 """
 
 from __future__ import annotations

@@ -51,6 +51,9 @@ opted in on one device becomes opted in on the others. The plane manifest is
 authoritative; the local flag is just the editable intent. Only agent-created +
 user-authored skills under ``~/.hermes/skills/`` are eligible; bundled and
 hub-installed skills are excluded.
+
+# 【产品经理理解要点】技能同步客户端，从远程仓库同步和更新技能包
+
 """
 
 from __future__ import annotations

@@ -6,6 +6,9 @@ Handles:
 - Session storage (conversations persisted to disk)
 - Reset policy evaluation (when to start fresh)
 - Dynamic system prompt injection (agent knows its context)
+
+# 【产品经理理解要点】会话生命周期管理，负责创建、切换、销毁对话会话，以及会话状态持久化
+
 """
 
 import asyncio

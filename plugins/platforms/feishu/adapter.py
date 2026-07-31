@@ -43,6 +43,9 @@ de-facto unique user identifier since there is only one app context.
 Session-key participant isolation prefers ``union_id`` (via user_id_alt)
 over ``open_id`` (via user_id) so that sessions stay stable if the same
 user is seen through different apps in the future.
+
+# 【产品经理理解要点】飞书平台适配器，处理飞书机器人消息、卡片交互、事件订阅
+
 """
 
 from __future__ import annotations

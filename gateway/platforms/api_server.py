@@ -37,6 +37,9 @@ as the webhook adapter:
 
 Requires:
 - aiohttp (already available in the gateway)
+
+# 【产品经理理解要点】HTTP API 服务端，提供 REST 接口供外部系统调用 Hermes 智能体
+
 """
 
 import asyncio
