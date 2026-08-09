@@ -475,7 +475,7 @@ Complete the user's task step by step."""
 
                     response = self.client.chat.completions.create(**api_kwargs)
                 except Exception as e:
-                    self.logger.error(f"API call failed: {e}")
+                    self.logger.error("API call failed: %s", e)
                     break
                 
                 assistant_message = response.choices[0].message
@@ -615,7 +615,7 @@ Complete the user's task step by step."""
                     print(f"✅ Task {i} completed (api_calls={result['api_calls']})")
                     
                 except Exception as e:
-                    self.logger.error(f"Error on task {i}: {e}")
+                    self.logger.error("Error on task %s: %s", i, e)
                     error_result = {
                         "conversations": [],
                         "completed": False,

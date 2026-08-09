@@ -35,6 +35,7 @@ Session metadata contract (preserved from the legacy ``CloudBrowserProvider``)::
         "session_name": str,        # unique name for agent-browser --session
         "bb_session_id": str,       # provider session ID (for close/cleanup)
         "cdp_url": str,             # CDP websocket URL
+        "expires_at": str,          # optional provider-authoritative ISO timestamp
         "features": dict,           # feature flags that were enabled
         "external_call_id": str,    # optional, managed-gateway billing key
     }
@@ -105,6 +106,7 @@ class BrowserProvider(abc.ABC):
                 "session_name": str,    # unique name for agent-browser --session
                 "bb_session_id": str,   # provider session ID (for close/cleanup)
                 "cdp_url": str,         # CDP websocket URL
+                "expires_at": str,      # optional provider-authoritative ISO timestamp
                 "features": dict,       # feature flags that were enabled
             }
 
